@@ -1,0 +1,183 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:52:22Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/commands/cargo-build.md:1
+msgid "cargo-build(1)"
+msgstr ""
+
+#: src/commands/cargo-build.md:2
+msgid "NAME"
+msgstr ""
+
+#: src/commands/cargo-build.md:4
+msgid "cargo-build --- Compile the current package"
+msgstr ""
+
+#: src/commands/cargo-build.md:6
+msgid "SYNOPSIS"
+msgstr ""
+
+#: src/commands/cargo-build.md:8
+msgid "`cargo build` \\[_options_\\]"
+msgstr ""
+
+#: src/commands/cargo-build.md:10
+msgid "DESCRIPTION"
+msgstr ""
+
+#: src/commands/cargo-build.md:12
+msgid "Compile local packages and all of their dependencies."
+msgstr ""
+
+#: src/commands/cargo-build.md:14
+msgid "OPTIONS"
+msgstr ""
+
+#: src/commands/cargo-build.md:16
+msgid "Package Selection"
+msgstr ""
+
+#: src/commands/cargo-build.md:18
+msgid ""
+"By default, when no package selection options are given, the packages "
+"selected depend on the selected manifest file (based on the current working "
+"directory if `--manifest-path` is not given). If the manifest is the root of "
+"a workspace then the workspaces default members are selected, otherwise only "
+"the package defined by the manifest will be selected."
+msgstr ""
+
+#: src/commands/cargo-build.md:24
+msgid ""
+"The default members of a workspace can be set explicitly with the `workspace."
+"default-members` key in the root manifest. If this is not set, a virtual "
+"workspace will include all workspace members (equivalent to passing `--"
+"workspace`), and a non-virtual workspace will include only the root crate "
+"itself."
+msgstr ""
+
+#: src/commands/cargo-build.md:58
+msgid "Target Selection"
+msgstr ""
+
+#: src/commands/cargo-build.md:60
+msgid ""
+"When no target selection options are given, `cargo build` will build all "
+"binary and library targets of the selected packages. Binaries are skipped if "
+"they have `required-features` that are missing."
+msgstr ""
+
+#: src/commands/cargo-build.md:64
+msgid ""
+"Binary targets are automatically built if there is an integration test or "
+"benchmark being selected to build. This allows an integration test to "
+"execute the binary to exercise and test its behavior. The "
+"`CARGO_BIN_EXE_<name>` [environment variable](../reference/environment-"
+"variables.html#environment-variables-cargo-sets-for-crates) is set when the "
+"integration test is built so that it can use the [`env` macro](https://doc."
+"rust-lang.org/std/macro.env.html) to locate the executable."
+msgstr ""
+
+#: src/commands/cargo-build.md:73
+msgid "Passing target selection flags will build only the specified targets."
+msgstr ""
+
+#: src/commands/cargo-build.md:76
+msgid ""
+"Note that `--bin`, `--example`, `--test` and `--bench` flags also support "
+"common Unix glob patterns like `*`, `?` and `[]`. However, to avoid your "
+"shell accidentally expanding glob patterns before Cargo handles them, you "
+"must use single quotes or double quotes around each glob pattern."
+msgstr ""
+
+#: src/commands/cargo-build.md:141
+msgid "Feature Selection"
+msgstr ""
+
+#: src/commands/cargo-build.md:143
+msgid ""
+"The feature flags allow you to control which features are enabled. When no "
+"feature options are given, the `default` feature is activated for every "
+"selected package."
+msgstr ""
+
+#: src/commands/cargo-build.md:147
+msgid ""
+"See [the features documentation](../reference/features.html#command-line-"
+"feature-options) for more details."
+msgstr ""
+
+#: src/commands/cargo-build.md:169
+msgid "Compilation Options"
+msgstr ""
+
+#: src/commands/cargo-build.md:215
+msgid "Output Options"
+msgstr ""
+
+#: src/commands/cargo-build.md:235
+msgid "Display Options"
+msgstr ""
+
+#: src/commands/cargo-build.md:298
+msgid "Manifest Options"
+msgstr ""
+
+#: src/commands/cargo-build.md:340
+msgid "Common Options"
+msgstr ""
+
+#: src/commands/cargo-build.md:380
+msgid "Miscellaneous Options"
+msgstr ""
+
+#: src/commands/cargo-build.md:408
+msgid "ENVIRONMENT"
+msgstr ""
+
+#: src/commands/cargo-build.md:410
+msgid ""
+"See [the reference](../reference/environment-variables.html) for details on "
+"environment variables that Cargo reads."
+msgstr ""
+
+#: src/commands/cargo-build.md:413
+msgid "EXIT STATUS"
+msgstr ""
+
+#: src/commands/cargo-build.md:415
+msgid "`0`: Cargo succeeded."
+msgstr ""
+
+#: src/commands/cargo-build.md:416
+msgid "`101`: Cargo failed to complete."
+msgstr ""
+
+#: src/commands/cargo-build.md:418
+msgid "EXAMPLES"
+msgstr ""
+
+#: src/commands/cargo-build.md:420
+msgid "Build the local package and all of its dependencies:"
+msgstr ""
+
+#: src/commands/cargo-build.md:424
+msgid "Build with optimizations:"
+msgstr ""
+
+#: src/commands/cargo-build.md:428
+msgid "SEE ALSO"
+msgstr ""
+
+#: src/commands/cargo-build.md:429
+msgid "[cargo(1)](cargo.html), [cargo-rustc(1)](cargo-rustc.html)"
+msgstr ""
