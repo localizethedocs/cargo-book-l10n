@@ -1,0 +1,587 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:45:01Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/workspaces.md:1
+msgid "Workspaces"
+msgstr ""
+
+#: src/reference/workspaces.md:3
+msgid ""
+"A _workspace_ is a collection of one or more packages, called _workspace "
+"members_, that are managed together."
+msgstr ""
+
+#: src/reference/workspaces.md:6
+msgid "The key points of workspaces are:"
+msgstr ""
+
+#: src/reference/workspaces.md:8
+msgid ""
+"Common commands can run across all workspace members, like `cargo check --"
+"workspace`."
+msgstr ""
+
+#: src/reference/workspaces.md:9
+msgid ""
+"All packages share a common [`Cargo.lock`](../guide/cargo-toml-vs-cargo-lock."
+"md) file which resides in the _workspace root_."
+msgstr ""
+
+#: src/reference/workspaces.md:11
+msgid ""
+"All packages share a common [output directory](build-cache.md), which "
+"defaults to a directory named `target` in the _workspace root_."
+msgstr ""
+
+#: src/reference/workspaces.md:13
+msgid ""
+"Sharing package metadata, like with [`workspace.package`](#the-package-"
+"table)."
+msgstr ""
+
+#: src/reference/workspaces.md:14
+msgid ""
+"The [`[patch]`](overriding-dependencies.md#the-patch-section), [`[replace]`]"
+"(overriding-dependencies.md#the-replace-section) and [`[profile.*]`]"
+"(profiles.md) sections in `Cargo.toml` are only recognized in the _root_ "
+"manifest, and ignored in member crates' manifests."
+msgstr ""
+
+#: src/reference/workspaces.md:18
+msgid "The root `Cargo.toml` of a workspace supports the following sections:"
+msgstr ""
+
+#: src/reference/workspaces.md:20
+msgid "[`[workspace]`](#the-workspace-section) --- Defines a workspace."
+msgstr ""
+
+#: src/reference/workspaces.md:21
+msgid ""
+"[`resolver`](resolver.md#resolver-versions) --- Sets the dependency resolver "
+"to use."
+msgstr ""
+
+#: src/reference/workspaces.md:22
+msgid ""
+"[`members`](#the-members-and-exclude-fields) --- Packages to include in the "
+"workspace."
+msgstr ""
+
+#: src/reference/workspaces.md:23
+msgid ""
+"[`exclude`](#the-members-and-exclude-fields) --- Packages to exclude from "
+"the workspace."
+msgstr ""
+
+#: src/reference/workspaces.md:24
+msgid ""
+"[`default-members`](#the-default-members-field) --- Packages to operate on "
+"when a specific package wasn't selected."
+msgstr ""
+
+#: src/reference/workspaces.md:25
+msgid "[`package`](#the-package-table) --- Keys for inheriting in packages."
+msgstr ""
+
+#: src/reference/workspaces.md:26
+msgid ""
+"[`dependencies`](#the-dependencies-table) --- Keys for inheriting in package "
+"dependencies."
+msgstr ""
+
+#: src/reference/workspaces.md:27
+msgid "[`lints`](#the-lints-table) --- Keys for inheriting in package lints."
+msgstr ""
+
+#: src/reference/workspaces.md:28
+msgid ""
+"[`metadata`](#the-metadata-table) --- Extra settings for external tools."
+msgstr ""
+
+#: src/reference/workspaces.md:29
+msgid ""
+"[`[patch]`](overriding-dependencies.md#the-patch-section) --- Override "
+"dependencies."
+msgstr ""
+
+#: src/reference/workspaces.md:30
+msgid ""
+"[`[replace]`](overriding-dependencies.md#the-replace-section) --- Override "
+"dependencies (deprecated)."
+msgstr ""
+
+#: src/reference/workspaces.md:31
+msgid "[`[profile]`](profiles.md) --- Compiler settings and optimizations."
+msgstr ""
+
+#: src/reference/workspaces.md:33
+msgid "The `[workspace]` section"
+msgstr ""
+
+#: src/reference/workspaces.md:35
+msgid ""
+"To create a workspace, you add the `[workspace]` table to a `Cargo.toml`:"
+msgstr ""
+
+#: src/reference/workspaces.md:41
+msgid ""
+"At minimum, a workspace has to have a member, either with a root package or "
+"as a virtual manifest."
+msgstr ""
+
+#: src/reference/workspaces.md:44
+msgid "Root package"
+msgstr ""
+
+#: src/reference/workspaces.md:46
+msgid ""
+"If the [`[workspace]` section](#the-workspace-section) is added to a `Cargo."
+"toml` that already defines a `[package]`, the package is the _root package_ "
+"of the workspace. The _workspace root_ is the directory where the "
+"workspace's `Cargo.toml` is located."
+msgstr ""
+
+#: src/reference/workspaces.md:51
+msgid ""
+"```toml\n"
+"[workspace]\n"
+"\n"
+"[package]\n"
+"name = \"hello_world\" # the name of the package\n"
+"version = \"0.1.0\"    # the current version, obeying semver\n"
+"authors = [\"Alice <a@example.com>\", \"Bob <b@example.com>\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/workspaces.md:60
+msgid "Virtual workspace"
+msgstr ""
+
+#: src/reference/workspaces.md:62
+msgid ""
+"Alternatively, a `Cargo.toml` file can be created with a `[workspace]` "
+"section but without a [`[package]` section](manifest.md#the-package-"
+"section). This is called a _virtual manifest_. This is typically useful when "
+"there isn't a \"primary\" package, or you want to keep all the packages "
+"organized in separate directories."
+msgstr ""
+
+#: src/reference/workspaces.md:67
+msgid ""
+"```toml\n"
+"# [PROJECT_DIR]/Cargo.toml\n"
+"[workspace]\n"
+"members = [\"hello_world\"]\n"
+"resolver = \"2\"\n"
+"```"
+msgstr ""
+
+#: src/reference/workspaces.md:74
+msgid ""
+"```toml\n"
+"# [PROJECT_DIR]/hello_world/Cargo.toml\n"
+"[package]\n"
+"name = \"hello_world\" # the name of the package\n"
+"version = \"0.1.0\"    # the current version, obeying semver\n"
+"edition = \"2021\"     # the edition, will have no effect on a resolver used "
+"in the workspace\n"
+"authors = [\"Alice <a@example.com>\", \"Bob <b@example.com>\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/workspaces.md:83
+msgid "By having a workspace without a root package,"
+msgstr ""
+
+#: src/reference/workspaces.md:85
+msgid ""
+"[`resolver`](resolver.md#resolver-versions) must be set explicitly in "
+"virtual workspaces as they have no [`package.edition`](manifest.md#the-"
+"edition-field) to infer it from [resolver version](resolver.md#resolver-"
+"versions)."
+msgstr ""
+
+#: src/reference/workspaces.md:89
+msgid ""
+"Commands run in the workspace root will run against all workspace members by "
+"default, see [`default-members`](#the-default-members-field)."
+msgstr ""
+
+#: src/reference/workspaces.md:92
+msgid "The `members` and `exclude` fields"
+msgstr ""
+
+#: src/reference/workspaces.md:94
+msgid ""
+"The `members` and `exclude` fields define which packages are members of the "
+"workspace:"
+msgstr ""
+
+#: src/reference/workspaces.md:97
+msgid ""
+"```toml\n"
+"[workspace]\n"
+"members = [\"member1\", \"path/to/member2\", \"crates/*\"]\n"
+"exclude = [\"crates/foo\", \"path/to/other\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/workspaces.md:103
+msgid ""
+"All [`path` dependencies](specifying-dependencies.md#specifying-path-"
+"dependencies) residing in the workspace directory automatically become "
+"members. Additional members can be listed with the `members` key, which "
+"should be an array of strings containing directories with `Cargo.toml` files."
+msgstr ""
+
+#: src/reference/workspaces.md:107
+msgid ""
+"The `members` list also supports [globs](https://docs.rs/glob/0.3.0/glob/"
+"struct.Pattern.html) to match multiple paths, using typical filename glob "
+"patterns like `*` and `?`."
+msgstr ""
+
+#: src/reference/workspaces.md:110
+msgid ""
+"The `exclude` key can be used to prevent paths from being included in a "
+"workspace. This can be useful if some path dependencies aren't desired to be "
+"in the workspace at all, or using a glob pattern and you want to remove a "
+"directory."
+msgstr ""
+
+#: src/reference/workspaces.md:115
+msgid ""
+"When inside a subdirectory within the workspace, Cargo will automatically "
+"search the parent directories for a `Cargo.toml` file with a `[workspace]` "
+"definition to determine which workspace to use. The [`package.workspace`]"
+"(manifest.md#the-workspace-field) manifest key can be used in member crates "
+"to point at a workspace's root to override this automatic search. The manual "
+"setting can be useful if the member is not inside a subdirectory of the "
+"workspace root."
+msgstr ""
+
+#: src/reference/workspaces.md:122
+msgid "Package selection"
+msgstr ""
+
+#: src/reference/workspaces.md:124
+msgid ""
+"In a workspace, package-related Cargo commands like [`cargo build`](../"
+"commands/cargo-build.md) can use the `-p` / `--package` or `--workspace` "
+"command-line flags to determine which packages to operate on. If neither of "
+"those flags are specified, Cargo will use the package in the current working "
+"directory. However, if the current directory is a workspace root, the "
+"[`default-members`](#the-default-members-field) will be used."
+msgstr ""
+
+#: src/reference/workspaces.md:130
+msgid "The `default-members` field"
+msgstr ""
+
+#: src/reference/workspaces.md:132
+msgid ""
+"The `default-members` field specifies paths of [members](#the-members-and-"
+"exclude-fields) to operate on when in the workspace root and the package "
+"selection flags are not used:"
+msgstr ""
+
+#: src/reference/workspaces.md:136
+msgid ""
+"```toml\n"
+"[workspace]\n"
+"members = [\"path/to/member1\", \"path/to/member2\", \"path/to/member3/*\"]\n"
+"default-members = [\"path/to/member2\", \"path/to/member3/foo\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/workspaces.md:142
+msgid ""
+"Note: when a [root package](#root-package) is present, you can only operate "
+"on it using `--package` and `--workspace` flags."
+msgstr ""
+
+#: src/reference/workspaces.md:145
+msgid ""
+"When unspecified, the [root package](#root-package) will be used. In the "
+"case of a [virtual workspace](#virtual-workspace), all members will be used "
+"(as if `--workspace` were specified on the command-line)."
+msgstr ""
+
+#: src/reference/workspaces.md:149
+msgid "The `package` table"
+msgstr ""
+
+#: src/reference/workspaces.md:151
+msgid ""
+"The `workspace.package` table is where you define keys that can be inherited "
+"by members of a workspace. These keys can be inherited by defining them in "
+"the member package with `{key}.workspace = true`."
+msgstr ""
+
+#: src/reference/workspaces.md:155
+msgid "Keys that are supported:"
+msgstr ""
+
+#: src/reference/workspaces.md:159
+msgid "`authors`"
+msgstr ""
+
+#: src/reference/workspaces.md:159
+msgid "`categories`"
+msgstr ""
+
+#: src/reference/workspaces.md:160
+msgid "`description`"
+msgstr ""
+
+#: src/reference/workspaces.md:160
+msgid "`documentation`"
+msgstr ""
+
+#: src/reference/workspaces.md:161
+msgid "`edition`"
+msgstr ""
+
+#: src/reference/workspaces.md:161
+msgid "`exclude`"
+msgstr ""
+
+#: src/reference/workspaces.md:162
+msgid "`homepage`"
+msgstr ""
+
+#: src/reference/workspaces.md:162
+msgid "`include`"
+msgstr ""
+
+#: src/reference/workspaces.md:163
+msgid "`keywords`"
+msgstr ""
+
+#: src/reference/workspaces.md:163
+msgid "`license`"
+msgstr ""
+
+#: src/reference/workspaces.md:164
+msgid "`license-file`"
+msgstr ""
+
+#: src/reference/workspaces.md:164
+msgid "`publish`"
+msgstr ""
+
+#: src/reference/workspaces.md:165
+msgid "`readme`"
+msgstr ""
+
+#: src/reference/workspaces.md:165
+msgid "`repository`"
+msgstr ""
+
+#: src/reference/workspaces.md:166
+msgid "`rust-version`"
+msgstr ""
+
+#: src/reference/workspaces.md:166
+msgid "`version`"
+msgstr ""
+
+#: src/reference/workspaces.md:168
+msgid "`license-file` and `readme` are relative to the workspace root"
+msgstr ""
+
+#: src/reference/workspaces.md:169
+msgid "`include` and `exclude` are relative to your package root"
+msgstr ""
+
+#: src/reference/workspaces.md:171 src/reference/workspaces.md:207
+#: src/reference/workspaces.md:243
+msgid "Example:"
+msgstr ""
+
+#: src/reference/workspaces.md:172
+msgid ""
+"```toml\n"
+"# [PROJECT_DIR]/Cargo.toml\n"
+"[workspace]\n"
+"members = [\"bar\"]\n"
+"\n"
+"[workspace.package]\n"
+"version = \"1.2.3\"\n"
+"authors = [\"Nice Folks\"]\n"
+"description = \"A short description of my package\"\n"
+"documentation = \"https://example.com/bar\"\n"
+"```"
+msgstr ""
+
+#: src/reference/workspaces.md:184
+msgid ""
+"```toml\n"
+"# [PROJECT_DIR]/bar/Cargo.toml\n"
+"[package]\n"
+"name = \"bar\"\n"
+"version.workspace = true\n"
+"authors.workspace = true\n"
+"description.workspace = true\n"
+"documentation.workspace = true\n"
+"```"
+msgstr ""
+
+#: src/reference/workspaces.md:194 src/reference/workspaces.md:235
+msgid "**MSRV:** Requires 1.64+"
+msgstr ""
+
+#: src/reference/workspaces.md:196
+msgid "The `dependencies` table"
+msgstr ""
+
+#: src/reference/workspaces.md:198
+msgid ""
+"The `workspace.dependencies` table is where you define dependencies to be "
+"inherited by members of a workspace."
+msgstr ""
+
+#: src/reference/workspaces.md:201
+msgid ""
+"Specifying a workspace dependency is similar to [package dependencies]"
+"(specifying-dependencies.md) except:"
+msgstr ""
+
+#: src/reference/workspaces.md:202
+msgid "Dependencies from this table cannot be declared as `optional`"
+msgstr ""
+
+#: src/reference/workspaces.md:203
+msgid ""
+"[`features`](features.md) declared in this table are additive with the "
+"`features` from `[dependencies]`"
+msgstr ""
+
+#: src/reference/workspaces.md:205
+msgid ""
+"You can then [inherit the workspace dependency as a package dependency]"
+"(specifying-dependencies.md#inheriting-a-dependency-from-a-workspace)"
+msgstr ""
+
+#: src/reference/workspaces.md:208
+msgid ""
+"```toml\n"
+"# [PROJECT_DIR]/Cargo.toml\n"
+"[workspace]\n"
+"members = [\"bar\"]\n"
+"\n"
+"[workspace.dependencies]\n"
+"cc = \"1.0.73\"\n"
+"rand = \"0.8.5\"\n"
+"regex = { version = \"1.6.0\", default-features = false, features = "
+"[\"std\"] }\n"
+"```"
+msgstr ""
+
+#: src/reference/workspaces.md:219
+msgid ""
+"```toml\n"
+"# [PROJECT_DIR]/bar/Cargo.toml\n"
+"[package]\n"
+"name = \"bar\"\n"
+"version = \"0.2.0\"\n"
+"\n"
+"[dependencies]\n"
+"regex = { workspace = true, features = [\"unicode\"] }\n"
+"\n"
+"[build-dependencies]\n"
+"cc.workspace = true\n"
+"\n"
+"[dev-dependencies]\n"
+"rand.workspace = true\n"
+"```"
+msgstr ""
+
+#: src/reference/workspaces.md:237
+msgid "The `lints` table"
+msgstr ""
+
+#: src/reference/workspaces.md:239
+msgid ""
+"The `workspace.lints` table is where you define lint configuration to be "
+"inherited by members of a workspace."
+msgstr ""
+
+#: src/reference/workspaces.md:241
+msgid ""
+"Specifying a workspace lint configuration is similar to [package lints]"
+"(manifest.md#the-lints-section)."
+msgstr ""
+
+#: src/reference/workspaces.md:245
+msgid ""
+"```toml\n"
+"# [PROJECT_DIR]/Cargo.toml\n"
+"[workspace]\n"
+"members = [\"crates/*\"]\n"
+"\n"
+"[workspace.lints.rust]\n"
+"unsafe_code = \"forbid\"\n"
+"```"
+msgstr ""
+
+#: src/reference/workspaces.md:254
+msgid ""
+"```toml\n"
+"# [PROJECT_DIR]/crates/bar/Cargo.toml\n"
+"[package]\n"
+"name = \"bar\"\n"
+"version = \"0.1.0\"\n"
+"\n"
+"[lints]\n"
+"workspace = true\n"
+"```"
+msgstr ""
+
+#: src/reference/workspaces.md:264
+msgid "**MSRV:** Respected as of 1.74"
+msgstr ""
+
+#: src/reference/workspaces.md:266
+msgid "The `metadata` table"
+msgstr ""
+
+#: src/reference/workspaces.md:268
+msgid ""
+"The `workspace.metadata` table is ignored by Cargo and will not be warned "
+"about. This section can be used for tools that would like to store workspace "
+"configuration in `Cargo.toml`. For example:"
+msgstr ""
+
+#: src/reference/workspaces.md:272
+msgid ""
+"```toml\n"
+"[workspace]\n"
+"members = [\"member1\", \"member2\"]\n"
+"\n"
+"[workspace.metadata.webcontents]\n"
+"root = \"path/to/webproject\"\n"
+"tool = [\"npm\", \"run\", \"build\"]\n"
+"# ...\n"
+"```"
+msgstr ""
+
+#: src/reference/workspaces.md:282
+msgid ""
+"There is a similar set of tables at the package level at [`package.metadata`]"
+"(manifest.md#the-metadata-table). While cargo does not specify a format for "
+"the content of either of these tables, it is suggested that external tools "
+"may wish to use them in a consistent fashion, such as referring to the data "
+"in `workspace.metadata` if data is missing from `package.metadata`, if that "
+"makes sense for the tool in question."
+msgstr ""
