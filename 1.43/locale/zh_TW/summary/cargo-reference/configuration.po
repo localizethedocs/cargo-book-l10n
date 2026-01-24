@@ -1,0 +1,1666 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:51:26Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/config.md:1
+msgid "Configuration"
+msgstr ""
+
+#: src/reference/config.md:3
+msgid ""
+"This document explains how Cargo’s configuration system works, as well as "
+"available keys or configuration. For configuration of a package through its "
+"manifest, see the [manifest format](manifest.md)."
+msgstr ""
+
+#: src/reference/config.md:7
+msgid "Hierarchical structure"
+msgstr ""
+
+#: src/reference/config.md:9
+msgid ""
+"Cargo allows local configuration for a particular package as well as global "
+"configuration. It looks for configuration files in the current directory and "
+"all parent directories. If, for example, Cargo were invoked in `/projects/"
+"foo/bar/baz`, then the following configuration files would be probed for and "
+"unified in this order:"
+msgstr ""
+
+#: src/reference/config.md:15
+msgid "`/projects/foo/bar/baz/.cargo/config`"
+msgstr ""
+
+#: src/reference/config.md:16
+msgid "`/projects/foo/bar/.cargo/config`"
+msgstr ""
+
+#: src/reference/config.md:17
+msgid "`/projects/foo/.cargo/config`"
+msgstr ""
+
+#: src/reference/config.md:18
+msgid "`/projects/.cargo/config`"
+msgstr ""
+
+#: src/reference/config.md:19
+msgid "`/.cargo/config`"
+msgstr ""
+
+#: src/reference/config.md:20
+msgid "`$CARGO_HOME/config` which defaults to:"
+msgstr ""
+
+#: src/reference/config.md:21
+msgid "Windows: `%USERPROFILE%\\.cargo\\config`"
+msgstr ""
+
+#: src/reference/config.md:22
+msgid "Unix: `$HOME/.cargo/config`"
+msgstr ""
+
+#: src/reference/config.md:24
+msgid ""
+"With this structure, you can specify configuration per-package, and even "
+"possibly check it into version control. You can also specify personal "
+"defaults with a configuration file in your home directory."
+msgstr ""
+
+#: src/reference/config.md:28
+msgid ""
+"If a key is specified in multiple config files, the values will get merged "
+"together. Numbers, strings, and booleans will use the value in the deeper "
+"config directory taking precedence over ancestor directories, where the home "
+"directory is the lowest priority. Arrays will be joined together."
+msgstr ""
+
+#: src/reference/config.md:33
+msgid "Configuration format"
+msgstr ""
+
+#: src/reference/config.md:35
+msgid ""
+"Configuration files are written in the [TOML format](https://github.com/toml-"
+"lang/toml) (like the manifest), with simple key-value pairs inside of "
+"sections (tables). The following is a quick overview of all settings, with "
+"detailed descriptions found below."
+msgstr ""
+
+#: src/reference/config.md:40
+msgid ""
+"```toml\n"
+"paths = [\"/path/to/override\"] # path dependency overrides\n"
+"\n"
+"[alias]     # command aliases\n"
+"b = \"build\"\n"
+"c = \"check\"\n"
+"t = \"test\"\n"
+"r = \"run\"\n"
+"rr = \"run --release\"\n"
+"space_example = [\"run\", \"--release\", \"--\", \"\\\"command list\\\"\"]\n"
+"\n"
+"[build]\n"
+"jobs = 1                  # number of parallel jobs, defaults to # of CPUs\n"
+"rustc = \"rustc\"           # the rust compiler tool\n"
+"rustc-wrapper = \"…\"       # run this wrapper instead of `rustc`\n"
+"rustdoc = \"rustdoc\"       # the doc generator tool\n"
+"target = \"triple\"         # build for the target triple (ignored by `cargo "
+"install`)\n"
+"target-dir = \"target\"     # path of where to place all generated "
+"artifacts\n"
+"rustflags = [\"…\", \"…\"]    # custom flags to pass to all compiler "
+"invocations\n"
+"rustdocflags = [\"…\", \"…\"] # custom flags to pass to rustdoc\n"
+"incremental = true        # whether or not to enable incremental "
+"compilation\n"
+"dep-info-basedir = \"…\"    # path for the base directory for targets in "
+"depfiles\n"
+"pipelining = true         # rustc pipelining\n"
+"\n"
+"[cargo-new]\n"
+"name = \"Your Name\"        # name to use in `authors` field\n"
+"email = \"you@example.com\" # email address to use in `authors` field\n"
+"vcs = \"none\"              # VCS to use ('git', 'hg', 'pijul', 'fossil', "
+"'none')\n"
+"\n"
+"[http]\n"
+"debug = false               # HTTP debugging\n"
+"proxy = \"host:port\"         # HTTP proxy in libcurl format\n"
+"ssl-version = \"tlsv1.3\"     # TLS version to use\n"
+"ssl-version.max = \"tlsv1.3\" # maximum TLS version\n"
+"ssl-version.min = \"tlsv1.1\" # minimum TLS version\n"
+"timeout = 30                # timeout for each HTTP request, in seconds\n"
+"low-speed-limit = 10        # network timeout threshold (bytes/sec)\n"
+"cainfo = \"cert.pem\"         # path to Certificate Authority (CA) bundle\n"
+"check-revoke = true         # check for SSL certificate revocation\n"
+"multiplexing = true         # HTTP/2 multiplexing\n"
+"user-agent = \"…\"            # the user-agent header\n"
+"\n"
+"[install]\n"
+"root = \"/some/path\"         # `cargo install` destination directory\n"
+"\n"
+"[net]\n"
+"retry = 2                   # network retries\n"
+"git-fetch-with-cli = true   # use the `git` executable for git operations\n"
+"offline = false             # do not access the network\n"
+"\n"
+"[profile.<name>]         # Modify profile settings via config.\n"
+"opt-level = 0            # Optimization level.\n"
+"debug = true             # Include debug info.\n"
+"debug-assertions = true  # Enables debug assertions.\n"
+"overflow-checks = true   # Enables runtime integer overflow checks.\n"
+"lto = false              # Sets link-time optimization.\n"
+"panic = 'unwind'         # The panic strategy.\n"
+"incremental = true       # Incremental compilation.\n"
+"codegen-units = 16       # Number of code generation units.\n"
+"rpath = false            # Sets the rpath linking option.\n"
+"[profile.<name>.build-override]  # Overrides build-script settings.\n"
+"# Same keys for a normal profile.\n"
+"[profile.<name>.package.<name>]  # Override profile for a package.\n"
+"# Same keys for a normal profile (minus `panic`, `lto`, and `rpath`).\n"
+"\n"
+"[registries.<name>]  # registries other than crates.io\n"
+"index = \"…\"          # URL of the registry index\n"
+"token = \"…\"          # authentication token for the registry\n"
+"\n"
+"[registry]\n"
+"default = \"…\"        # name of the default registry\n"
+"token = \"…\"          # authentication token for crates.io\n"
+"\n"
+"[source.<name>]      # source definition and replacement\n"
+"replace-with = \"…\"   # replace this source with the given named source\n"
+"directory = \"…\"      # path to a directory source\n"
+"registry = \"…\"       # URL to a registry source\n"
+"local-registry = \"…\" # path to a local registry source\n"
+"git = \"…\"            # URL of a git repository source\n"
+"branch = \"…\"         # branch name for the git repository\n"
+"tag = \"…\"            # tag name for the git repository\n"
+"rev = \"…\"            # revision for the git repository\n"
+"\n"
+"[target.<triple>]\n"
+"linker = \"…\"            # linker to use\n"
+"runner = \"…\"            # wrapper to run executables\n"
+"rustflags = [\"…\", \"…\"]  # custom flags for `rustc`\n"
+"\n"
+"[target.<cfg>]\n"
+"runner = \"…\"            # wrapper to run executables\n"
+"rustflags = [\"…\", \"…\"]  # custom flags for `rustc`\n"
+"\n"
+"[target.<triple>.<links>] # `links` build script override\n"
+"rustc-link-lib = [\"foo\"]\n"
+"rustc-link-search = [\"/path/to/foo\"]\n"
+"rustc-flags = [\"-L\", \"/some/path\"]\n"
+"rustc-cfg = ['key=\"value\"']\n"
+"rustc-env = {key = \"value\"}\n"
+"rustc-cdylib-link-arg = [\"…\"]\n"
+"metadata_key1 = \"value\"\n"
+"metadata_key2 = \"value\"\n"
+"\n"
+"[term]\n"
+"verbose = false        # whether cargo provides verbose output\n"
+"color = 'auto'         # whether cargo colorizes output\n"
+"```"
+msgstr ""
+
+#: src/reference/config.md:147
+msgid "Environment variables"
+msgstr ""
+
+#: src/reference/config.md:149
+msgid ""
+"Cargo can also be configured through environment variables in addition to "
+"the TOML configuration files. For each configuration key of the form `foo."
+"bar` the environment variable `CARGO_FOO_BAR` can also be used to define the "
+"value. Keys are converted to uppercase, dots and dashes are converted to "
+"underscores. For example the `target.x86_64-unknown-linux-gnu.runner` key "
+"can also be defined by the `CARGO_TARGET_X86_64_UNKNOWN_LINUX_GNU_RUNNER` "
+"environment variable."
+msgstr ""
+
+#: src/reference/config.md:157
+msgid ""
+"Environment variables will take precedence over TOML configuration files. "
+"Currently only integer, boolean, string and some array values are supported "
+"to be defined by environment variables. Descriptions below indicate which "
+"keys support environment variables."
+msgstr ""
+
+#: src/reference/config.md:162
+msgid ""
+"In addition to the system above, Cargo recognizes a few other specific "
+"[environment variables](environment-variables.md)."
+msgstr ""
+
+#: src/reference/config.md:165
+msgid "Config-relative paths"
+msgstr ""
+
+#: src/reference/config.md:167
+msgid ""
+"Paths in config files may be absolute, relative, or a bare name without any "
+"path separators. Paths for executables without a path separator will use the "
+"`PATH` environment variable to search for the executable. Paths for non-"
+"executables will be relative to where the config value is defined. For "
+"config files, that is relative to the parent directory of the `.cargo` "
+"directory where the value was defined. For environment variables it is "
+"relative to the current working directory."
+msgstr ""
+
+#: src/reference/config.md:175
+msgid ""
+"```toml\n"
+"# Relative path examples.\n"
+"\n"
+"[target.x86_64-unknown-linux-gnu]\n"
+"runner = \"foo\"  # Searches `PATH` for `foo`.\n"
+"\n"
+"[source.vendored-sources]\n"
+"# Directory is relative to the parent where `.cargo/config` is located.\n"
+"# For example, `/my/project/.cargo/config` would result in `/my/project/"
+"vendor`.\n"
+"directory = \"vendor\"\n"
+"```"
+msgstr ""
+
+#: src/reference/config.md:187
+msgid "Credentials"
+msgstr ""
+
+#: src/reference/config.md:189
+msgid ""
+"Configuration values with sensitive information are stored in the "
+"`$CARGO_HOME/credentials` file. This file is automatically created and "
+"updated by [`cargo login`](../commands/cargo-login.md). It follows the same "
+"format as Cargo config files."
+msgstr ""
+
+#: src/reference/config.md:193
+msgid ""
+"```toml\n"
+"[registry]\n"
+"token = \"…\"   # Access token for crates.io\n"
+"\n"
+"[registries.<name>]\n"
+"token = \"…\"   # Access token for the named registry\n"
+"```"
+msgstr ""
+
+#: src/reference/config.md:201
+msgid ""
+"Tokens are used by some Cargo commands such as [`cargo publish`](../commands/"
+"cargo-publish.md) for authenticating with remote registries. Care should be "
+"taken to protect the tokens and to keep them secret."
+msgstr ""
+
+#: src/reference/config.md:205
+msgid ""
+"As with most other config values, tokens may be specified with environment "
+"variables. The token for [crates.io](https://crates.io/) may be specified "
+"with the `CARGO_REGISTRY_TOKEN` environment variable. Tokens for other "
+"registries may be specified with environment variables of the form "
+"`CARGO_REGISTRIES_<name>_TOKEN` where `<name>` is the name of the registry "
+"in all capital letters."
+msgstr ""
+
+#: src/reference/config.md:212
+msgid "Configuration keys"
+msgstr ""
+
+#: src/reference/config.md:214
+msgid ""
+"This section documents all configuration keys. The description for keys with "
+"variable parts are annotated with angled brackets like `target.<triple>` "
+"where the `<triple>` part can be any target triple like `target.x86_64-pc-"
+"windows-msvc`."
+msgstr ""
+
+#: src/reference/config.md:219
+msgid "`paths`"
+msgstr ""
+
+#: src/reference/config.md:220
+msgid "Type: array of strings (paths)"
+msgstr ""
+
+#: src/reference/config.md:221 src/reference/config.md:272
+#: src/reference/config.md:308 src/reference/config.md:334
+#: src/reference/config.md:363 src/reference/config.md:438
+#: src/reference/config.md:456 src/reference/config.md:472
+#: src/reference/config.md:661 src/reference/config.md:668
+#: src/reference/config.md:698 src/reference/config.md:716
+#: src/reference/config.md:723 src/reference/config.md:730
+#: src/reference/config.md:737 src/reference/config.md:744
+#: src/reference/config.md:751 src/reference/config.md:760
+#: src/reference/config.md:769 src/reference/config.md:809
+#: src/reference/config.md:817 src/reference/config.md:840
+msgid "Default: none"
+msgstr ""
+
+#: src/reference/config.md:222 src/reference/config.md:584
+#: src/reference/config.md:717 src/reference/config.md:724
+#: src/reference/config.md:731 src/reference/config.md:738
+#: src/reference/config.md:745 src/reference/config.md:752
+#: src/reference/config.md:761 src/reference/config.md:770
+msgid "Environment: not supported"
+msgstr ""
+
+#: src/reference/config.md:224
+msgid ""
+"An array of paths to local packages which are to be used as overrides for "
+"dependencies. For more information see the [Overriding Dependencies guide]"
+"(overriding-dependencies.md#paths-overrides)."
+msgstr ""
+
+#: src/reference/config.md:228
+msgid "`[alias]`"
+msgstr ""
+
+#: src/reference/config.md:229 src/reference/config.md:307
+#: src/reference/config.md:333 src/reference/config.md:839
+msgid "Type: string or array of strings"
+msgstr ""
+
+#: src/reference/config.md:230
+msgid "Default: see below"
+msgstr ""
+
+#: src/reference/config.md:231
+msgid "Environment: `CARGO_ALIAS_<name>`"
+msgstr ""
+
+#: src/reference/config.md:233
+msgid ""
+"The `[alias]` table defines CLI command aliases. For example, running `cargo "
+"b` is an alias for running `cargo build`. Each key in the table is the "
+"subcommand, and the value is the actual command to run. The value may be an "
+"array of strings, where the first element is the command and the following "
+"are arguments. It may also be a string, which will be split on spaces into "
+"subcommand and arguments. The following aliases are built-in to Cargo:"
+msgstr ""
+
+#: src/reference/config.md:240
+msgid ""
+"```toml\n"
+"[alias]\n"
+"b = \"build\"\n"
+"c = \"check\"\n"
+"t = \"test\"\n"
+"r = \"run\"\n"
+"```"
+msgstr ""
+
+#: src/reference/config.md:248
+msgid "Aliases are not allowed to redefine existing built-in commands."
+msgstr ""
+
+#: src/reference/config.md:250
+msgid "`[build]`"
+msgstr ""
+
+#: src/reference/config.md:252
+msgid ""
+"The `[build]` table controls build-time operations and compiler settings."
+msgstr ""
+
+#: src/reference/config.md:254
+msgid "`build.jobs`"
+msgstr ""
+
+#: src/reference/config.md:255 src/reference/config.md:448
+#: src/reference/config.md:487 src/reference/config.md:536
+#: src/reference/config.md:591
+msgid "Type: integer"
+msgstr ""
+
+#: src/reference/config.md:256
+msgid "Default: number of logical CPUs"
+msgstr ""
+
+#: src/reference/config.md:257
+msgid "Environment: `CARGO_BUILD_JOBS`"
+msgstr ""
+
+#: src/reference/config.md:259
+msgid "Sets the maximum number of compiler processes to run in parallel."
+msgstr ""
+
+#: src/reference/config.md:261
+msgid "Can be overridden with the `--jobs` CLI option."
+msgstr ""
+
+#: src/reference/config.md:263
+msgid "`build.rustc`"
+msgstr ""
+
+#: src/reference/config.md:264 src/reference/config.md:271
+#: src/reference/config.md:279 src/reference/config.md:808
+msgid "Type: string (program path)"
+msgstr ""
+
+#: src/reference/config.md:265
+msgid "Default: \"rustc\""
+msgstr ""
+
+#: src/reference/config.md:266
+msgid "Environment: `CARGO_BUILD_RUSTC` or `RUSTC`"
+msgstr ""
+
+#: src/reference/config.md:268
+msgid "Sets the executable to use for `rustc`."
+msgstr ""
+
+#: src/reference/config.md:270
+msgid "`build.rustc-wrapper`"
+msgstr ""
+
+#: src/reference/config.md:273
+msgid "Environment: `CARGO_BUILD_RUSTC_WRAPPER` or `RUSTC_WRAPPER`"
+msgstr ""
+
+#: src/reference/config.md:275
+msgid ""
+"Sets a wrapper to execute instead of `rustc`. The first argument passed to "
+"the wrapper is the path to the actual `rustc`."
+msgstr ""
+
+#: src/reference/config.md:278
+msgid "`build.rustdoc`"
+msgstr ""
+
+#: src/reference/config.md:280
+msgid "Default: \"rustdoc\""
+msgstr ""
+
+#: src/reference/config.md:281
+msgid "Environment: `CARGO_BUILD_RUSTDOC` or `RUSTDOC`"
+msgstr ""
+
+#: src/reference/config.md:283
+msgid "Sets the executable to use for `rustdoc`."
+msgstr ""
+
+#: src/reference/config.md:285
+msgid "`build.target`"
+msgstr ""
+
+#: src/reference/config.md:286 src/reference/config.md:388
+#: src/reference/config.md:398 src/reference/config.md:409
+#: src/reference/config.md:437 src/reference/config.md:507
+#: src/reference/config.md:640 src/reference/config.md:667
+#: src/reference/config.md:687 src/reference/config.md:697
+#: src/reference/config.md:715 src/reference/config.md:750
+#: src/reference/config.md:759 src/reference/config.md:768
+#: src/reference/config.md:888
+msgid "Type: string"
+msgstr ""
+
+#: src/reference/config.md:287
+msgid "Default: host platform"
+msgstr ""
+
+#: src/reference/config.md:288
+msgid "Environment: `CARGO_BUILD_TARGET`"
+msgstr ""
+
+#: src/reference/config.md:290
+msgid "The default target platform triple to compile to."
+msgstr ""
+
+#: src/reference/config.md:292
+msgid "This may also be a relative path to a `.json` target spec file."
+msgstr ""
+
+#: src/reference/config.md:294
+msgid "Can be overridden with the `--target` CLI option."
+msgstr ""
+
+#: src/reference/config.md:296
+msgid "`build.target-dir`"
+msgstr ""
+
+#: src/reference/config.md:297 src/reference/config.md:362
+#: src/reference/config.md:455 src/reference/config.md:519
+#: src/reference/config.md:722 src/reference/config.md:736
+msgid "Type: string (path)"
+msgstr ""
+
+#: src/reference/config.md:298
+msgid "Default: \"target\""
+msgstr ""
+
+#: src/reference/config.md:299
+msgid "Environment: `CARGO_BUILD_TARGET_DIR` or `CARGO_TARGET_DIR`"
+msgstr ""
+
+#: src/reference/config.md:301
+msgid ""
+"The path to where all compiler output is placed. The default if not "
+"specified is a directory named `target` located at the root of the workspace."
+msgstr ""
+
+#: src/reference/config.md:304
+msgid "Can be overridden with the `--target-dir` CLI option."
+msgstr ""
+
+#: src/reference/config.md:306
+msgid "`build.rustflags`"
+msgstr ""
+
+#: src/reference/config.md:309
+msgid "Environment: `CARGO_BUILD_RUSTFLAGS` or `RUSTFLAGS`"
+msgstr ""
+
+#: src/reference/config.md:311
+msgid ""
+"Extra command-line flags to pass to `rustc`. The value may be a array of "
+"strings or a space-separated string."
+msgstr ""
+
+#: src/reference/config.md:314
+msgid ""
+"There are three mutually exclusive sources of extra flags. They are checked "
+"in order, with the first one being used:"
+msgstr ""
+
+#: src/reference/config.md:317
+msgid "`RUSTFLAGS` environment variable."
+msgstr ""
+
+#: src/reference/config.md:318
+msgid ""
+"All matching `target.<triple>.rustflags` and `target.<cfg>.rustflags` config "
+"entries joined together."
+msgstr ""
+
+#: src/reference/config.md:320
+msgid "`build.rustflags` config value."
+msgstr ""
+
+#: src/reference/config.md:322
+msgid ""
+"Additional flags may also be passed with the [`cargo rustc`](../commands/"
+"cargo-rustc.md) command."
+msgstr ""
+
+#: src/reference/config.md:324
+msgid ""
+"If the `--target` flag (or [`build.target`](#buildtarget)) is used, then the "
+"flags will only be passed to the compiler for the target. Things being built "
+"for the host, such as build scripts or proc macros, will not receive the "
+"args. Without `--target`, the flags will be passed to all compiler "
+"invocations (including build scripts and proc macros) because dependencies "
+"are shared. If you have args that you do not want to pass to build scripts "
+"or proc macros and are building for the host, pass `--target` with the host "
+"triple."
+msgstr ""
+
+#: src/reference/config.md:332
+msgid "`build.rustdocflags`"
+msgstr ""
+
+#: src/reference/config.md:335
+msgid "Environment: `CARGO_BUILD_RUSTDOCFLAGS` or `RUSTDOCFLAGS`"
+msgstr ""
+
+#: src/reference/config.md:337
+msgid ""
+"Extra command-line flags to pass to `rustdoc`. The value may be a array of "
+"strings or a space-separated string."
+msgstr ""
+
+#: src/reference/config.md:340
+msgid ""
+"There are two mutually exclusive sources of extra flags. They are checked in "
+"order, with the first one being used:"
+msgstr ""
+
+#: src/reference/config.md:343
+msgid "`RUSTDOCFLAGS` environment variable."
+msgstr ""
+
+#: src/reference/config.md:344
+msgid "`build.rustdocflags` config value."
+msgstr ""
+
+#: src/reference/config.md:346
+msgid ""
+"Additional flags may also be passed with the [`cargo rustdoc`](../commands/"
+"cargo-rustdoc.md) command."
+msgstr ""
+
+#: src/reference/config.md:348
+msgid "`build.incremental`"
+msgstr ""
+
+#: src/reference/config.md:349
+msgid "Type: bool"
+msgstr ""
+
+#: src/reference/config.md:350
+msgid "Default: from profile"
+msgstr ""
+
+#: src/reference/config.md:351
+msgid "Environment: `CARGO_BUILD_INCREMENTAL` or `CARGO_INCREMENTAL`"
+msgstr ""
+
+#: src/reference/config.md:353
+msgid ""
+"Whether or not to perform [incremental compilation](profiles."
+"md#incremental). The default if not set is to use the value from the "
+"[profile](profiles.md). Otherwise this overrides the setting of all profiles."
+msgstr ""
+
+#: src/reference/config.md:357
+msgid ""
+"The `CARGO_INCREMENTAL` environment variable can be set to `1` to force "
+"enable incremental compilation for all profiles, or `0` to disable it. This "
+"env var overrides the config setting."
+msgstr ""
+
+#: src/reference/config.md:361
+msgid "`build.dep-info-basedir`"
+msgstr ""
+
+#: src/reference/config.md:364
+msgid "Environment: `CARGO_BUILD_DEP_INFO_BASEDIR`"
+msgstr ""
+
+#: src/reference/config.md:366
+msgid ""
+"Strips the given path prefix from [dep info](../guide/build-cache.md#dep-"
+"info-files) file paths. This config setting is intended to convert absolute "
+"paths to relative paths for tools that require relative paths."
+msgstr ""
+
+#: src/reference/config.md:371
+msgid ""
+"The setting itself is a config-relative path. So, for example, a value of "
+"`\".\"` would strip all paths starting with the parent directory of the `."
+"cargo` directory."
+msgstr ""
+
+#: src/reference/config.md:375
+msgid "`build.pipelining`"
+msgstr ""
+
+#: src/reference/config.md:376 src/reference/config.md:424
+#: src/reference/config.md:463 src/reference/config.md:497
+#: src/reference/config.md:543 src/reference/config.md:557
+#: src/reference/config.md:605 src/reference/config.md:612
+#: src/reference/config.md:626 src/reference/config.md:647
+#: src/reference/config.md:878
+msgid "Type: boolean"
+msgstr ""
+
+#: src/reference/config.md:377 src/reference/config.md:498
+msgid "Default: true"
+msgstr ""
+
+#: src/reference/config.md:378
+msgid "Environment: `CARGO_BUILD_PIPELINING`"
+msgstr ""
+
+#: src/reference/config.md:380
+msgid ""
+"Controls whether or not build pipelining is used. This allows Cargo to "
+"schedule overlapping invocations of `rustc` in parallel when possible."
+msgstr ""
+
+#: src/reference/config.md:383
+msgid "`[cargo-new]`"
+msgstr ""
+
+#: src/reference/config.md:385
+msgid ""
+"The `[cargo-new]` table defines defaults for the [`cargo new`](../commands/"
+"cargo-new.md) command."
+msgstr ""
+
+#: src/reference/config.md:387
+msgid "`cargo-new.name`"
+msgstr ""
+
+#: src/reference/config.md:389 src/reference/config.md:399
+msgid "Default: from environment"
+msgstr ""
+
+#: src/reference/config.md:390
+msgid "Environment: `CARGO_NAME` or `CARGO_CARGO_NEW_NAME`"
+msgstr ""
+
+#: src/reference/config.md:392
+msgid ""
+"Defines the name to use in the `authors` field when creating a new `Cargo."
+"toml` file. If not specified in the config, Cargo searches the environment "
+"or your `git` configuration as described in the [`cargo new`](../commands/"
+"cargo-new.md) documentation."
+msgstr ""
+
+#: src/reference/config.md:397
+msgid "`cargo-new.email`"
+msgstr ""
+
+#: src/reference/config.md:400
+msgid "Environment: `CARGO_EMAIL` or `CARGO_CARGO_NEW_EMAIL`"
+msgstr ""
+
+#: src/reference/config.md:402
+msgid ""
+"Defines the email address used in the `authors` field when creating a new "
+"`Cargo.toml` file. If not specified in the config, Cargo searches the "
+"environment or your `git` configuration as described in the [`cargo new`](../"
+"commands/cargo-new.md) documentation. The `email` value may be set to an "
+"empty string to prevent Cargo from placing an address in the authors field."
+msgstr ""
+
+#: src/reference/config.md:408
+msgid "`cargo-new.vcs`"
+msgstr ""
+
+#: src/reference/config.md:410
+msgid "Default: \"git\" or \"none\""
+msgstr ""
+
+#: src/reference/config.md:411
+msgid "Environment: `CARGO_CARGO_NEW_VCS`"
+msgstr ""
+
+#: src/reference/config.md:413
+msgid ""
+"Specifies the source control system to use for initializing a new "
+"repository. Valid values are `git`, `hg` (for Mercurial), `pijul`, `fossil` "
+"or `none` to disable this behavior. Defaults to `git`, or `none` if already "
+"inside a VCS repository. Can be overridden with the `--vcs` CLI option."
+msgstr ""
+
+#: src/reference/config.md:418
+msgid "`[http]`"
+msgstr ""
+
+#: src/reference/config.md:420
+msgid ""
+"The `[http]` table defines settings for HTTP behavior. This includes "
+"fetching crate dependencies and accessing remote git repositories."
+msgstr ""
+
+#: src/reference/config.md:423
+msgid "`http.debug`"
+msgstr ""
+
+#: src/reference/config.md:425 src/reference/config.md:544
+#: src/reference/config.md:558 src/reference/config.md:879
+msgid "Default: false"
+msgstr ""
+
+#: src/reference/config.md:426
+msgid "Environment: `CARGO_HTTP_DEBUG`"
+msgstr ""
+
+#: src/reference/config.md:428
+msgid ""
+"If `true`, enables debugging of HTTP requests. The debug information can be "
+"seen by setting the `CARGO_LOG=cargo::ops::registry=debug` environment "
+"variable (or use `trace` for even more information)."
+msgstr ""
+
+#: src/reference/config.md:432
+msgid ""
+"Be wary when posting logs from this output in a public location. The output "
+"may include headers with authentication tokens which you don't want to leak! "
+"Be sure to review logs before posting them."
+msgstr ""
+
+#: src/reference/config.md:436
+msgid "`http.proxy`"
+msgstr ""
+
+#: src/reference/config.md:439
+msgid ""
+"Environment: `CARGO_HTTP_PROXY` or `HTTPS_PROXY` or `https_proxy` or "
+"`http_proxy`"
+msgstr ""
+
+#: src/reference/config.md:441
+msgid ""
+"Sets an HTTP and HTTPS proxy to use. The format is in [libcurl format]"
+"(https://ec.haxx.se/usingcurl-proxies.html) as in `[protocol://]host[:"
+"port]`. If not set, Cargo will also check the `http.proxy` setting in your "
+"global git configuration. If none of those are set, the `HTTPS_PROXY` or "
+"`https_proxy` environment variables set the proxy for HTTPS requests, and "
+"`http_proxy` sets it for HTTP requests."
+msgstr ""
+
+#: src/reference/config.md:447
+msgid "`http.timeout`"
+msgstr ""
+
+#: src/reference/config.md:449
+msgid "Default: 30"
+msgstr ""
+
+#: src/reference/config.md:450
+msgid "Environment: `CARGO_HTTP_TIMEOUT` or `HTTP_TIMEOUT`"
+msgstr ""
+
+#: src/reference/config.md:452
+msgid "Sets the timeout for each HTTP request, in seconds."
+msgstr ""
+
+#: src/reference/config.md:454
+msgid "`http.cainfo`"
+msgstr ""
+
+#: src/reference/config.md:457
+msgid "Environment: `CARGO_HTTP_CAINFO`"
+msgstr ""
+
+#: src/reference/config.md:459
+msgid ""
+"Path to a Certificate Authority (CA) bundle file, used to verify TLS "
+"certificates. If not specified, Cargo attempts to use the system "
+"certificates."
+msgstr ""
+
+#: src/reference/config.md:462
+msgid "`http.check-revoke`"
+msgstr ""
+
+#: src/reference/config.md:464
+msgid "Default: true (Windows) false (all others)"
+msgstr ""
+
+#: src/reference/config.md:465
+msgid "Environment: `CARGO_HTTP_CHECK_REVOKE`"
+msgstr ""
+
+#: src/reference/config.md:467
+msgid ""
+"This determines whether or not TLS certificate revocation checks should be "
+"performed. This only works on Windows."
+msgstr ""
+
+#: src/reference/config.md:470
+msgid "`http.ssl-version`"
+msgstr ""
+
+#: src/reference/config.md:471
+msgid "Type: string or min/max table"
+msgstr ""
+
+#: src/reference/config.md:473
+msgid "Environment: `CARGO_HTTP_SSL_VERSION`"
+msgstr ""
+
+#: src/reference/config.md:475
+msgid ""
+"This sets the minimum TLS version to use. It takes a string, with one of the "
+"possible values of \"default\", \"tlsv1\", \"tlsv1.0\", \"tlsv1.1\", "
+"\"tlsv1.2\", or \"tlsv1.3\"."
+msgstr ""
+
+#: src/reference/config.md:479
+msgid ""
+"This may alternatively take a table with two keys, `min` and `max`, which "
+"each take a string value of the same kind that specifies the minimum and "
+"maximum range of TLS versions to use."
+msgstr ""
+
+#: src/reference/config.md:483
+msgid ""
+"The default is a minimum version of \"tlsv1.0\" and a max of the newest "
+"version supported on your platform, typically \"tlsv1.3\"."
+msgstr ""
+
+#: src/reference/config.md:486
+msgid "`http.low-speed-limit`"
+msgstr ""
+
+#: src/reference/config.md:488
+msgid "Default: 10"
+msgstr ""
+
+#: src/reference/config.md:489
+msgid "Environment: `CARGO_HTTP_LOW_SPEED_LIMIT`"
+msgstr ""
+
+#: src/reference/config.md:491
+msgid ""
+"This setting controls timeout behavior for slow connections. If the average "
+"transfer speed in bytes per second is below the given value for [`http."
+"timeout`](#httptimeout) seconds (default 30 seconds), then the connection is "
+"considered too slow and Cargo will abort and retry."
+msgstr ""
+
+#: src/reference/config.md:496
+msgid "`http.multiplexing`"
+msgstr ""
+
+#: src/reference/config.md:499
+msgid "Environment: `CARGO_HTTP_MULTIPLEXING`"
+msgstr ""
+
+#: src/reference/config.md:501
+msgid ""
+"When `true`, Cargo will attempt to use the HTTP2 protocol with multiplexing. "
+"This allows multiple requests to use the same connection, usually improving "
+"performance when fetching multiple files. If `false`, Cargo will use HTTP "
+"1.1 without pipelining."
+msgstr ""
+
+#: src/reference/config.md:506
+msgid "`http.user-agent`"
+msgstr ""
+
+#: src/reference/config.md:508
+msgid "Default: Cargo's version"
+msgstr ""
+
+#: src/reference/config.md:509
+msgid "Environment: `CARGO_HTTP_USER_AGENT`"
+msgstr ""
+
+#: src/reference/config.md:511
+msgid ""
+"Specifies a custom user-agent header to use. The default if not specified is "
+"a string that includes Cargo's version."
+msgstr ""
+
+#: src/reference/config.md:514
+msgid "`[install]`"
+msgstr ""
+
+#: src/reference/config.md:516
+msgid ""
+"The `[install]` table defines defaults for the [`cargo install`](../commands/"
+"cargo-install.md) command."
+msgstr ""
+
+#: src/reference/config.md:518
+msgid "`install.root`"
+msgstr ""
+
+#: src/reference/config.md:520
+msgid "Default: Cargo's home directory"
+msgstr ""
+
+#: src/reference/config.md:521
+msgid "Environment: `CARGO_INSTALL_ROOT`"
+msgstr ""
+
+#: src/reference/config.md:523
+msgid ""
+"Sets the path to the root directory for installing executables for [`cargo "
+"install`](../commands/cargo-install.md). Executables go into a `bin` "
+"directory underneath the root."
+msgstr ""
+
+#: src/reference/config.md:526
+msgid ""
+"The default if not specified is Cargo's home directory (default `.cargo` in "
+"your home directory)."
+msgstr ""
+
+#: src/reference/config.md:529
+msgid "Can be overridden with the `--root` command-line option."
+msgstr ""
+
+#: src/reference/config.md:531
+msgid "`[net]`"
+msgstr ""
+
+#: src/reference/config.md:533
+msgid "The `[net]` table controls networking configuration."
+msgstr ""
+
+#: src/reference/config.md:535
+msgid "`net.retry`"
+msgstr ""
+
+#: src/reference/config.md:537
+msgid "Default: 2"
+msgstr ""
+
+#: src/reference/config.md:538
+msgid "Environment: `CARGO_NET_RETRY`"
+msgstr ""
+
+#: src/reference/config.md:540
+msgid "Number of times to retry possibly spurious network errors."
+msgstr ""
+
+#: src/reference/config.md:542
+msgid "`net.git-fetch-with-cli`"
+msgstr ""
+
+#: src/reference/config.md:545
+msgid "Environment: `CARGO_NET_GIT_FETCH_WITH_CLI`"
+msgstr ""
+
+#: src/reference/config.md:547
+msgid ""
+"If this is `true`, then Cargo will use the `git` executable to fetch "
+"registry indexes and git dependencies. If `false`, then it uses a built-in "
+"`git` library."
+msgstr ""
+
+#: src/reference/config.md:551
+msgid ""
+"Setting this to `true` can be helpful if you have special authentication "
+"requirements that Cargo does not support. See [Git Authentication](../"
+"appendix/git-authentication.md) for more information about setting up git "
+"authentication."
+msgstr ""
+
+#: src/reference/config.md:556
+msgid "`net.offline`"
+msgstr ""
+
+#: src/reference/config.md:559
+msgid "Environment: `CARGO_NET_OFFLINE`"
+msgstr ""
+
+#: src/reference/config.md:561
+msgid ""
+"If this is `true`, then Cargo will avoid accessing the network, and attempt "
+"to proceed with locally cached data. If `false`, Cargo will access the "
+"network as needed, and generate an error if it encounters a network error."
+msgstr ""
+
+#: src/reference/config.md:565
+msgid "Can be overridden with the `--offline` command-line option."
+msgstr ""
+
+#: src/reference/config.md:567
+msgid "`[profile]`"
+msgstr ""
+
+#: src/reference/config.md:569
+msgid ""
+"The `[profile]` table can be used to globally change profile settings, and "
+"override settings specified in `Cargo.toml`. It has the same syntax and "
+"options as profiles specified in `Cargo.toml`. See the [Profiles chapter]"
+"(profiles.md) for details about the options."
+msgstr ""
+
+#: src/reference/config.md:576
+msgid "`[profile.<name>.build-override]`"
+msgstr ""
+
+#: src/reference/config.md:577
+msgid "Environment: `CARGO_PROFILE_<name>_BUILD_OVERRIDE_<key>`"
+msgstr ""
+
+#: src/reference/config.md:579
+msgid ""
+"The build-override table overrides settings for build scripts, proc macros, "
+"and their dependencies. It has the same keys as a normal profile. See the "
+"[overrides section](profiles.md#overrides) for more details."
+msgstr ""
+
+#: src/reference/config.md:583
+msgid "`[profile.<name>.package.<name>]`"
+msgstr ""
+
+#: src/reference/config.md:586
+msgid ""
+"The package table overrides settings for specific packages. It has the same "
+"keys as a normal profile, minus the `panic`, `lto`, and `rpath` settings. "
+"See the [overrides section](profiles.md#overrides) for more details."
+msgstr ""
+
+#: src/reference/config.md:590
+msgid "`profile.<name>.codegen-units`"
+msgstr ""
+
+#: src/reference/config.md:592 src/reference/config.md:599
+#: src/reference/config.md:606 src/reference/config.md:613
+#: src/reference/config.md:620 src/reference/config.md:627
+#: src/reference/config.md:634
+msgid "Default: See profile docs."
+msgstr ""
+
+#: src/reference/config.md:593
+msgid "Environment: `CARGO_PROFILE_<name>_CODEGEN_UNITS`"
+msgstr ""
+
+#: src/reference/config.md:595
+msgid "See [codegen-units](profiles.md#codegen-units)."
+msgstr ""
+
+#: src/reference/config.md:597
+msgid "`profile.<name>.debug`"
+msgstr ""
+
+#: src/reference/config.md:598
+msgid "Type: integer or boolean"
+msgstr ""
+
+#: src/reference/config.md:600
+msgid "Environment: `CARGO_PROFILE_<name>_DEBUG`"
+msgstr ""
+
+#: src/reference/config.md:602
+msgid "See [debug](profiles.md#debug)."
+msgstr ""
+
+#: src/reference/config.md:604
+msgid "`profile.<name>.debug-assertions`"
+msgstr ""
+
+#: src/reference/config.md:607
+msgid "Environment: `CARGO_PROFILE_<name>_DEBUG_ASSERTIONS`"
+msgstr ""
+
+#: src/reference/config.md:609
+msgid "See [debug-assertions](profiles.md#debug-assertions)."
+msgstr ""
+
+#: src/reference/config.md:611
+msgid "`profile.<name>.incremental`"
+msgstr ""
+
+#: src/reference/config.md:614
+msgid "Environment: `CARGO_PROFILE_<name>_INCREMENTAL`"
+msgstr ""
+
+#: src/reference/config.md:616
+msgid "See [incremental](profiles.md#incremental)."
+msgstr ""
+
+#: src/reference/config.md:618
+msgid "`profile.<name>.lto`"
+msgstr ""
+
+#: src/reference/config.md:619
+msgid "Type: string or boolean"
+msgstr ""
+
+#: src/reference/config.md:621
+msgid "Environment: `CARGO_PROFILE_<name>_LTO`"
+msgstr ""
+
+#: src/reference/config.md:623
+msgid "See [lto](profiles.md#lto)."
+msgstr ""
+
+#: src/reference/config.md:625
+msgid "`profile.<name>.overflow-checks`"
+msgstr ""
+
+#: src/reference/config.md:628
+msgid "Environment: `CARGO_PROFILE_<name>_OVERFLOW_CHECKS`"
+msgstr ""
+
+#: src/reference/config.md:630
+msgid "See [overflow-checks](profiles.md#overflow-checks)."
+msgstr ""
+
+#: src/reference/config.md:632
+msgid "`profile.<name>.opt-level`"
+msgstr ""
+
+#: src/reference/config.md:633
+msgid "Type: integer or string"
+msgstr ""
+
+#: src/reference/config.md:635
+msgid "Environment: `CARGO_PROFILE_<name>_OPT_LEVEL`"
+msgstr ""
+
+#: src/reference/config.md:637
+msgid "See [opt-level](profiles.md#opt-level)."
+msgstr ""
+
+#: src/reference/config.md:639
+msgid "`profile.<name>.panic`"
+msgstr ""
+
+#: src/reference/config.md:641 src/reference/config.md:648
+msgid "default: See profile docs."
+msgstr ""
+
+#: src/reference/config.md:642
+msgid "Environment: `CARGO_PROFILE_<name>_PANIC`"
+msgstr ""
+
+#: src/reference/config.md:644
+msgid "See [panic](profiles.md#panic)."
+msgstr ""
+
+#: src/reference/config.md:646
+msgid "`profile.<name>.rpath`"
+msgstr ""
+
+#: src/reference/config.md:649
+msgid "Environment: `CARGO_PROFILE_<name>_RPATH`"
+msgstr ""
+
+#: src/reference/config.md:651
+msgid "See [rpath](profiles.md#rpath)."
+msgstr ""
+
+#: src/reference/config.md:654
+msgid "`[registries]`"
+msgstr ""
+
+#: src/reference/config.md:656
+msgid ""
+"The `[registries]` table is used for specifying additional [registries]"
+"(registries.md). It consists of a sub-table for each named registry."
+msgstr ""
+
+#: src/reference/config.md:659
+msgid "`registries.<name>.index`"
+msgstr ""
+
+#: src/reference/config.md:660 src/reference/config.md:729
+#: src/reference/config.md:743
+msgid "Type: string (url)"
+msgstr ""
+
+#: src/reference/config.md:662
+msgid "Environment: `CARGO_REGISTRIES_<name>_INDEX`"
+msgstr ""
+
+#: src/reference/config.md:664
+msgid "Specifies the URL of the git index for the registry."
+msgstr ""
+
+#: src/reference/config.md:666
+msgid "`registries.<name>.token`"
+msgstr ""
+
+#: src/reference/config.md:669
+msgid "Environment: `CARGO_REGISTRIES_<name>_TOKEN`"
+msgstr ""
+
+#: src/reference/config.md:671
+msgid ""
+"Specifies the authentication token for the given registry. This value should "
+"only appear in the [credentials](#credentials) file. This is used for "
+"registry commands like [`cargo publish`](../commands/cargo-publish.md) that "
+"require authentication."
+msgstr ""
+
+#: src/reference/config.md:675 src/reference/config.md:705
+msgid "Can be overridden with the `--token` command-line option."
+msgstr ""
+
+#: src/reference/config.md:677
+msgid "`[registry]`"
+msgstr ""
+
+#: src/reference/config.md:679
+msgid ""
+"The `[registry]` table controls the default registry used when one is not "
+"specified."
+msgstr ""
+
+#: src/reference/config.md:682
+msgid "`registry.index`"
+msgstr ""
+
+#: src/reference/config.md:684
+msgid "This value is deprecated and should not be used."
+msgstr ""
+
+#: src/reference/config.md:686
+msgid "`registry.default`"
+msgstr ""
+
+#: src/reference/config.md:688
+msgid "Default: `\"crates-io\"`"
+msgstr ""
+
+#: src/reference/config.md:689
+msgid "Environment: `CARGO_REGISTRY_DEFAULT`"
+msgstr ""
+
+#: src/reference/config.md:691
+msgid ""
+"The name of the registry (from the [`registries` table](#registries)) to use "
+"by default for registry commands like [`cargo publish`](../commands/cargo-"
+"publish.md)."
+msgstr ""
+
+#: src/reference/config.md:694
+msgid "Can be overridden with the `--registry` command-line option."
+msgstr ""
+
+#: src/reference/config.md:696
+msgid "`registry.token`"
+msgstr ""
+
+#: src/reference/config.md:699
+msgid "Environment: `CARGO_REGISTRY_TOKEN`"
+msgstr ""
+
+#: src/reference/config.md:701
+msgid ""
+"Specifies the authentication token for [crates.io](https://crates.io/). This "
+"value should only appear in the [credentials](#credentials) file. This is "
+"used for registry commands like [`cargo publish`](../commands/cargo-publish."
+"md) that require authentication."
+msgstr ""
+
+#: src/reference/config.md:707
+msgid "`[source]`"
+msgstr ""
+
+#: src/reference/config.md:709
+msgid ""
+"The `[source]` table defines the registry sources available. See [Source "
+"Replacement](source-replacement.md) for more information. It consists of a "
+"sub-table for each named source. A source should only define one kind "
+"(directory, registry, local-registry, or git)."
+msgstr ""
+
+#: src/reference/config.md:714
+msgid "`source.<name>.replace-with`"
+msgstr ""
+
+#: src/reference/config.md:719
+msgid "If set, replace this source with the given named source."
+msgstr ""
+
+#: src/reference/config.md:721
+msgid "`source.<name>.directory`"
+msgstr ""
+
+#: src/reference/config.md:726
+msgid "Sets the path to a directory to use as a directory source."
+msgstr ""
+
+#: src/reference/config.md:728
+msgid "`source.<name>.registry`"
+msgstr ""
+
+#: src/reference/config.md:733
+msgid "Sets the URL to use for a registry source."
+msgstr ""
+
+#: src/reference/config.md:735
+msgid "`source.<name>.local-registry`"
+msgstr ""
+
+#: src/reference/config.md:740
+msgid "Sets the path to a directory to use as a local registry source."
+msgstr ""
+
+#: src/reference/config.md:742
+msgid "`source.<name>.git`"
+msgstr ""
+
+#: src/reference/config.md:747
+msgid "Sets the URL to use for a git repository source."
+msgstr ""
+
+#: src/reference/config.md:749
+msgid "`source.<name>.branch`"
+msgstr ""
+
+#: src/reference/config.md:754
+msgid "Sets the branch name to use for a git repository."
+msgstr ""
+
+#: src/reference/config.md:756 src/reference/config.md:765
+#: src/reference/config.md:774
+msgid ""
+"If none of `branch`, `tag`, or `rev` is set, defaults to the `master` branch."
+msgstr ""
+
+#: src/reference/config.md:758
+msgid "`source.<name>.tag`"
+msgstr ""
+
+#: src/reference/config.md:763
+msgid "Sets the tag name to use for a git repository."
+msgstr ""
+
+#: src/reference/config.md:767
+msgid "`source.<name>.rev`"
+msgstr ""
+
+#: src/reference/config.md:772
+msgid ""
+"Sets the [revision](https://git-scm.com/docs/gitrevisions) to use for a git "
+"repository."
+msgstr ""
+
+#: src/reference/config.md:777
+msgid "`[target]`"
+msgstr ""
+
+#: src/reference/config.md:779
+msgid ""
+"The `[target]` table is used for specifying settings for specific platform "
+"targets. It consists of a sub-table which is either a platform triple or a "
+"[`cfg()` expression](../../reference/conditional-compilation.html). The "
+"given values will be used if the target platform matches either the "
+"`<triple>` value or the `<cfg>` expression."
+msgstr ""
+
+#: src/reference/config.md:784
+msgid ""
+"```toml\n"
+"[target.thumbv7m-none-eabi]\n"
+"linker = \"arm-none-eabi-gcc\"\n"
+"runner = \"my-emulator\"\n"
+"rustflags = [\"…\", \"…\"]\n"
+"\n"
+"[target.'cfg(all(target_arch = \"arm\", target_os = \"none\"))']\n"
+"runner = \"my-arm-wrapper\"\n"
+"rustflags = [\"…\", \"…\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/config.md:795
+msgid ""
+"`cfg` values come from those built-in to the compiler (run `rustc --"
+"print=cfg` to view), values set by [build scripts](build-scripts.md), and "
+"extra `--cfg` flags passed to `rustc` (such as those defined in "
+"`RUSTFLAGS`). Do not try to match on `debug_assertions` or Cargo features "
+"like `feature=\"foo\"`."
+msgstr ""
+
+#: src/reference/config.md:800
+msgid ""
+"If using a target spec JSON file, the `<triple>` value is the filename stem. "
+"For example `--target foo/bar.json` would match `[target.bar]`."
+msgstr ""
+
+#: src/reference/config.md:803
+msgid "`target.<triple>.ar`"
+msgstr ""
+
+#: src/reference/config.md:805
+msgid "This option is deprecated and unused."
+msgstr ""
+
+#: src/reference/config.md:807
+msgid "`target.<triple>.linker`"
+msgstr ""
+
+#: src/reference/config.md:810
+msgid "Environment: `CARGO_TARGET_<triple>_LINKER`"
+msgstr ""
+
+#: src/reference/config.md:812
+msgid ""
+"Specifies the linker which is passed to `rustc` (via [`-C linker`](../../"
+"rustc/codegen-options/index.md#linker)) when the `<triple>` is being "
+"compiled for. By default, the linker is not overridden."
+msgstr ""
+
+#: src/reference/config.md:815
+msgid "`target.<triple>.runner`"
+msgstr ""
+
+#: src/reference/config.md:816
+msgid "Type: string or array of strings (program path and args)"
+msgstr ""
+
+#: src/reference/config.md:818
+msgid "Environment: `CARGO_TARGET_<triple>_RUNNER`"
+msgstr ""
+
+#: src/reference/config.md:820
+msgid ""
+"If a runner is provided, executables for the target `<triple>` will be "
+"executed by invoking the specified runner with the actual executable passed "
+"as an argument. This applies to [`cargo run`](../commands/cargo-run.md), "
+"[`cargo test`](../commands/cargo-test.md) and [`cargo bench`](../commands/"
+"cargo-bench.md) commands. By default, compiled executables are executed "
+"directly."
+msgstr ""
+
+#: src/reference/config.md:825
+msgid ""
+"The value may be an array of strings like `['/path/to/program', 'somearg']` "
+"or a space-separated string like `'/path/to/program somearg'`. The arguments "
+"will be passed to the runner with the executable to run as the last "
+"argument. If the runner program does not have path separators, it will "
+"search `PATH` for the runner executable."
+msgstr ""
+
+#: src/reference/config.md:831
+msgid "`target.<cfg>.runner`"
+msgstr ""
+
+#: src/reference/config.md:833
+msgid ""
+"This is similar to the [target runner](#targettriplerunner), but using a "
+"[`cfg()` expression](../../reference/conditional-compilation.html). If both "
+"a `<triple>` and `<cfg>` runner match, the `<triple>` will take precedence. "
+"It is an error if more than one `<cfg>` runner matches the current target."
+msgstr ""
+
+#: src/reference/config.md:838
+msgid "`target.<triple>.rustflags`"
+msgstr ""
+
+#: src/reference/config.md:841
+msgid "Environment: `CARGO_TARGET_<triple>_RUSTFLAGS`"
+msgstr ""
+
+#: src/reference/config.md:843
+msgid ""
+"Passes a set of custom flags to the compiler for this `<triple>`. The value "
+"may be a array of strings or a space-separated string."
+msgstr ""
+
+#: src/reference/config.md:846
+msgid ""
+"See [`build.rustflags`](#buildrustflags) for more details on the different "
+"ways to specific extra flags."
+msgstr ""
+
+#: src/reference/config.md:849
+msgid "`target.<cfg>.rustflags`"
+msgstr ""
+
+#: src/reference/config.md:851
+msgid ""
+"This is similar to the [target rustflags](#targettriplerustflags), but using "
+"a [`cfg()` expression](../../reference/conditional-compilation.html). If "
+"several `<cfg>` and `<triple>` entries match the current target, the flags "
+"are joined together."
+msgstr ""
+
+#: src/reference/config.md:855
+msgid "`target.<triple>.<links>`"
+msgstr ""
+
+#: src/reference/config.md:857
+msgid ""
+"The links sub-table provides a way to [override a build script](build-"
+"scripts.md#overriding-build-scripts). When specified, the build script for "
+"the given `links` library will not be run, and the given values will be used "
+"instead."
+msgstr ""
+
+#: src/reference/config.md:861
+msgid ""
+"```toml\n"
+"[target.x86_64-unknown-linux-gnu.foo]\n"
+"rustc-link-lib = [\"foo\"]\n"
+"rustc-link-search = [\"/path/to/foo\"]\n"
+"rustc-flags = \"-L /some/path\"\n"
+"rustc-cfg = ['key=\"value\"']\n"
+"rustc-env = {key = \"value\"}\n"
+"rustc-cdylib-link-arg = [\"…\"]\n"
+"metadata_key1 = \"value\"\n"
+"metadata_key2 = \"value\"\n"
+"```"
+msgstr ""
+
+#: src/reference/config.md:873
+msgid "`[term]`"
+msgstr ""
+
+#: src/reference/config.md:875
+msgid "The `[term]` table controls terminal output and interaction."
+msgstr ""
+
+#: src/reference/config.md:877
+msgid "`term.verbose`"
+msgstr ""
+
+#: src/reference/config.md:880
+msgid "Environment: `CARGO_TERM_VERBOSE`"
+msgstr ""
+
+#: src/reference/config.md:882
+msgid "Controls whether or not extra detailed messages are displayed by Cargo."
+msgstr ""
+
+#: src/reference/config.md:884
+msgid ""
+"Specifying the `--quiet` flag will override and disable verbose output. "
+"Specifying the `--verbose` flag will override and force verbose output."
+msgstr ""
+
+#: src/reference/config.md:887
+msgid "`term.color`"
+msgstr ""
+
+#: src/reference/config.md:889
+msgid "Default: \"auto\""
+msgstr ""
+
+#: src/reference/config.md:890
+msgid "Environment: `CARGO_TERM_COLOR`"
+msgstr ""
+
+#: src/reference/config.md:892
+msgid ""
+"Controls whether or not colored output is used in the terminal. Possible "
+"values:"
+msgstr ""
+
+#: src/reference/config.md:894
+msgid ""
+"`auto` (default): Automatically detect if color support is available on the "
+"terminal."
+msgstr ""
+
+#: src/reference/config.md:896
+msgid "`always`: Always display colors."
+msgstr ""
+
+#: src/reference/config.md:897
+msgid "`never`: Never display colors."
+msgstr ""
+
+#: src/reference/config.md:899
+msgid "Can be overridden with the `--color` command-line option."
+msgstr ""
