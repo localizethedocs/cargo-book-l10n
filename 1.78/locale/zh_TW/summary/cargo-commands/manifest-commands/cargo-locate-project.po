@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/commands/cargo-locate-project.md:1
@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-locate-project.md:3
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-locate-project.md:5
 msgid ""
@@ -27,7 +27,7 @@ msgstr ""
 
 #: src/commands/cargo-locate-project.md:7
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-locate-project.md:9
 msgid "`cargo locate-project` \\[_options_\\]"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: src/commands/cargo-locate-project.md:11
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-locate-project.md:13
 msgid ""
@@ -55,15 +55,15 @@ msgstr ""
 
 #: src/commands/cargo-locate-project.md:22
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-locate-project.md:33
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-locate-project.md:73
 msgid "Manifest Options"
-msgstr ""
+msgstr "清單選項"
 
 #: src/commands/cargo-locate-project.md:82
 msgid "Common Options"
@@ -71,7 +71,7 @@ msgstr ""
 
 #: src/commands/cargo-locate-project.md:122
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-locate-project.md:124
 msgid ""
@@ -81,19 +81,19 @@ msgstr ""
 
 #: src/commands/cargo-locate-project.md:127
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-locate-project.md:129
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-locate-project.md:130
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-locate-project.md:132
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-locate-project.md:134
 msgid "Display the path to the manifest based on the current directory:"
@@ -101,7 +101,7 @@ msgstr ""
 
 #: src/commands/cargo-locate-project.md:138
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-locate-project.md:139
 msgid "[cargo(1)](cargo.html), [cargo-metadata(1)](cargo-metadata.html)"
