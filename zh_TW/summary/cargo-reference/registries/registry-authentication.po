@@ -1,0 +1,271 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:28:13Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/registry-authentication.md:1
+msgid "Registry Authentication"
+msgstr ""
+
+#: src/reference/registry-authentication.md:2
+msgid ""
+"Cargo authenticates to registries with credential providers. These "
+"credential providers are external executables or built-in providers that "
+"Cargo uses to store and retrieve credentials."
+msgstr ""
+
+#: src/reference/registry-authentication.md:6
+msgid ""
+"Using alternative registries with authentication _requires_ a credential "
+"provider to be configured to avoid unknowingly storing unencrypted "
+"credentials on disk. For historical reasons, public (non-authenticated) "
+"registries do not require credential provider configuration, and the `cargo:"
+"token` provider is used if no providers are configured."
+msgstr ""
+
+#: src/reference/registry-authentication.md:11
+msgid ""
+"Cargo also includes platform-specific providers that use the operating "
+"system to securely store tokens. The `cargo:token` provider is also included "
+"which stores credentials in unencrypted plain text in the [credentials]"
+"(config.md#credentials) file."
+msgstr ""
+
+#: src/reference/registry-authentication.md:15
+msgid "Recommended configuration"
+msgstr ""
+
+#: src/reference/registry-authentication.md:16
+msgid ""
+"It's recommended to configure a global credential provider list in "
+"`$CARGO_HOME/config.toml` which defaults to:"
+msgstr ""
+
+#: src/reference/registry-authentication.md:18
+msgid "Windows: `%USERPROFILE%\\.cargo\\config.toml`"
+msgstr ""
+
+#: src/reference/registry-authentication.md:19
+msgid "Unix: `~/.cargo/config.toml`"
+msgstr ""
+
+#: src/reference/registry-authentication.md:21
+msgid ""
+"This recommended configuration uses the operating system provider, with a "
+"fallback to `cargo:token` to look in Cargo's [credentials](config."
+"md#credentials) file or environment variables."
+msgstr ""
+
+#: src/reference/registry-authentication.md:24
+msgid ""
+"Some private registries may also recommend a registry-specific credential-"
+"provider. Check your registry's documentation to see if this is the case."
+msgstr ""
+
+#: src/reference/registry-authentication.md:27
+msgid "macOS configuration"
+msgstr ""
+
+#: src/reference/registry-authentication.md:28
+msgid ""
+"```toml\n"
+"# ~/.cargo/config.toml\n"
+"[registry]\n"
+"global-credential-providers = [\"cargo:token\", \"cargo:macos-keychain\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/registry-authentication.md:34
+msgid "Linux (libsecret) configuration"
+msgstr ""
+
+#: src/reference/registry-authentication.md:35
+msgid ""
+"```toml\n"
+"# ~/.cargo/config.toml\n"
+"[registry]\n"
+"global-credential-providers = [\"cargo:token\", \"cargo:libsecret\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/registry-authentication.md:41
+msgid "Windows configuration"
+msgstr ""
+
+#: src/reference/registry-authentication.md:42
+msgid ""
+"```toml\n"
+"# %USERPROFILE%\\.cargo\\config.toml\n"
+"[registry]\n"
+"global-credential-providers = [\"cargo:token\", \"cargo:wincred\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/registry-authentication.md:48
+msgid ""
+"See [`registry.global-credential-providers`](config.md#registryglobal-"
+"credential-providers) for more details."
+msgstr ""
+
+#: src/reference/registry-authentication.md:51
+msgid "Built-in providers"
+msgstr ""
+
+#: src/reference/registry-authentication.md:52
+msgid ""
+"Cargo includes several built-in credential providers. The available built-in "
+"providers may change in future Cargo releases (though there are currently no "
+"plans to do so)."
+msgstr ""
+
+#: src/reference/registry-authentication.md:55
+msgid "`cargo:token`"
+msgstr ""
+
+#: src/reference/registry-authentication.md:56
+msgid ""
+"Uses Cargo's [credentials](config.md#credentials) file to store tokens "
+"unencrypted in plain text. When retrieving tokens, checks the "
+"`CARGO_REGISTRIES_<NAME>_TOKEN` environment variable. If this credential "
+"provider is not listed, then the `*_TOKEN` environment variables will not "
+"work."
+msgstr ""
+
+#: src/reference/registry-authentication.md:60
+msgid "`cargo:wincred`"
+msgstr ""
+
+#: src/reference/registry-authentication.md:61
+msgid "Uses the Windows Credential Manager to store tokens."
+msgstr ""
+
+#: src/reference/registry-authentication.md:63
+msgid ""
+"The credentials are stored as `cargo-registry:<index-url>` in the Credential "
+"Manager under \"Windows Credentials\"."
+msgstr ""
+
+#: src/reference/registry-authentication.md:66
+msgid "`cargo:macos-keychain`"
+msgstr ""
+
+#: src/reference/registry-authentication.md:67
+msgid "Uses the macOS Keychain to store tokens."
+msgstr ""
+
+#: src/reference/registry-authentication.md:69
+msgid "The Keychain Access app can be used to view stored tokens."
+msgstr ""
+
+#: src/reference/registry-authentication.md:71
+msgid "`cargo:libsecret`"
+msgstr ""
+
+#: src/reference/registry-authentication.md:72
+msgid ""
+"Uses [libsecret](https://wiki.gnome.org/Projects/Libsecret) to store tokens."
+msgstr ""
+
+#: src/reference/registry-authentication.md:74
+msgid ""
+"On GNOME, credentials can be viewed using [GNOME Keyring](https://wiki.gnome."
+"org/Projects/GnomeKeyring) applications."
+msgstr ""
+
+#: src/reference/registry-authentication.md:77
+msgid "`cargo:token-from-stdout <command> <args>`"
+msgstr ""
+
+#: src/reference/registry-authentication.md:78
+msgid ""
+"Launch a subprocess that returns a token on stdout. Newlines will be trimmed."
+msgstr ""
+
+#: src/reference/registry-authentication.md:79
+msgid "The process inherits the user's stdin and stderr."
+msgstr ""
+
+#: src/reference/registry-authentication.md:80
+msgid "It should exit 0 on success, and nonzero on error."
+msgstr ""
+
+#: src/reference/registry-authentication.md:81
+msgid ""
+"[`cargo login`](../commands/cargo-login.md) and [`cargo logout`](../commands/"
+"cargo-logout.md) are not supported and return an error if used."
+msgstr ""
+
+#: src/reference/registry-authentication.md:83
+msgid ""
+"The following environment variables will be provided to the executed command:"
+msgstr ""
+
+#: src/reference/registry-authentication.md:85
+msgid "`CARGO` --- Path to the `cargo` binary executing the command."
+msgstr ""
+
+#: src/reference/registry-authentication.md:86
+msgid "`CARGO_REGISTRY_INDEX_URL` --- The URL of the registry index."
+msgstr ""
+
+#: src/reference/registry-authentication.md:87
+msgid ""
+"`CARGO_REGISTRY_NAME_OPT` --- Optional name of the registry. Should not be "
+"used as a lookup key."
+msgstr ""
+
+#: src/reference/registry-authentication.md:89
+msgid "Arguments will be passed on to the subcommand."
+msgstr ""
+
+#: src/reference/registry-authentication.md:94
+msgid "Credential plugins"
+msgstr ""
+
+#: src/reference/registry-authentication.md:95
+msgid ""
+"For credential provider plugins that follow Cargo's [credential provider "
+"protocol](credential-provider-protocol.md), the configuration value should "
+"be a string with the path to the executable (or the executable name if on "
+"the `PATH`)."
+msgstr ""
+
+#: src/reference/registry-authentication.md:98
+msgid ""
+"For example, to install [cargo-credential-1password](https://crates.io/"
+"crates/cargo-credential-1password) from crates.io do the following:"
+msgstr ""
+
+#: src/reference/registry-authentication.md:101
+msgid "Install the provider with `cargo install cargo-credential-1password`"
+msgstr ""
+
+#: src/reference/registry-authentication.md:103
+msgid ""
+"In the config, add to (or create) `registry.global-credential-providers`:"
+msgstr ""
+
+#: src/reference/registry-authentication.md:104
+msgid ""
+"```toml\n"
+"[registry]\n"
+"global-credential-providers = [\"cargo:token\", \"cargo-credential-1password "
+"--account my.1password.com\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/registry-authentication.md:109
+msgid ""
+"The values in `global-credential-providers` are split on spaces into path "
+"and command-line arguments. To define a global credential provider where the "
+"path or arguments contain spaces, use the [`[credential-alias]` table]"
+"(config.md#credential-alias)."
+msgstr ""
