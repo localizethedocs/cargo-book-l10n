@@ -1,0 +1,220 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:52:54Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/pkgid-spec.md:1
+msgid "Package ID Specifications"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:3
+msgid "Package ID specifications"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:5
+msgid ""
+"Subcommands of Cargo frequently need to refer to a particular package within "
+"a dependency graph for various operations like updating, cleaning, building, "
+"etc. To solve this problem, Cargo supports _Package ID Specifications_. A "
+"specification is a string which is used to uniquely refer to one package "
+"within a graph of packages."
+msgstr ""
+
+#: src/reference/pkgid-spec.md:11
+msgid ""
+"The specification may be fully qualified, such as `https://github.com/rust-"
+"lang/crates.io-index#regex@1.4.3` or it may be abbreviated, such as `regex`. "
+"The abbreviated form may be used as long as it uniquely identifies a single "
+"package in the dependency graph. If there is ambiguity, additional "
+"qualifiers can be added to make it unique. For example, if there are two "
+"versions of the `regex` package in the graph, then it can be qualified with "
+"a version to make it unique, such as `regex@1.4.3`."
+msgstr ""
+
+#: src/reference/pkgid-spec.md:19
+msgid "Specification grammar"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:21
+msgid "The formal grammar for a Package Id Specification is:"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:23
+msgid ""
+"```notrust\n"
+"spec := pkgname |\n"
+"        [ kind \"+\" ] proto \"://\" hostname-and-path [ \"?\" query] "
+"[ \"#\" ( pkgname | semver ) ]\n"
+"query = ( \"branch\" | \"tag\" | \"rev\" ) \"=\" ref\n"
+"pkgname := name [ (\"@\" | \":\" ) semver ]\n"
+"semver := digits [ \".\" digits [ \".\" digits [ \"-\" prerelease ] [ \"+\" "
+"build ]]]\n"
+"\n"
+"kind = \"registry\" | \"git\" | \"file\"\n"
+"proto := \"http\" | \"git\" | ...\n"
+"```"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:34
+msgid "Here, brackets indicate that the contents are optional."
+msgstr ""
+
+#: src/reference/pkgid-spec.md:36
+msgid ""
+"The URL form can be used for git dependencies, or to differentiate packages "
+"that come from different sources such as different registries."
+msgstr ""
+
+#: src/reference/pkgid-spec.md:39
+msgid "Example specifications"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:41
+msgid "The following are references to the `regex` package on `crates.io`:"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:43 src/reference/pkgid-spec.md:54
+#: src/reference/pkgid-spec.md:64
+msgid "Spec"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:43 src/reference/pkgid-spec.md:54
+#: src/reference/pkgid-spec.md:64
+msgid "Name"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:43 src/reference/pkgid-spec.md:54
+#: src/reference/pkgid-spec.md:64
+msgid "Version"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:45 src/reference/pkgid-spec.md:46
+#: src/reference/pkgid-spec.md:47 src/reference/pkgid-spec.md:48
+#: src/reference/pkgid-spec.md:49 src/reference/pkgid-spec.md:50
+#: src/reference/pkgid-spec.md:58 src/reference/pkgid-spec.md:59
+#: src/reference/pkgid-spec.md:60
+msgid "`regex`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:45 src/reference/pkgid-spec.md:48
+#: src/reference/pkgid-spec.md:66
+msgid "`*`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:46
+msgid "`regex@1.4`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:46
+msgid "`1.4.*`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:47
+msgid "`regex@1.4.3`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:47 src/reference/pkgid-spec.md:49
+#: src/reference/pkgid-spec.md:50 src/reference/pkgid-spec.md:58
+#: src/reference/pkgid-spec.md:59 src/reference/pkgid-spec.md:60
+msgid "`1.4.3`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:48
+msgid "`https://github.com/rust-lang/crates.io-index#regex`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:49
+msgid "`https://github.com/rust-lang/crates.io-index#regex@1.4.3`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:50
+msgid "`registry+https://github.com/rust-lang/crates.io-index#regex@1.4.3`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:52
+msgid ""
+"The following are some examples of specs for several different git "
+"dependencies:"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:56
+msgid "`https://github.com/rust-lang/cargo#0.52.0`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:56
+msgid "`cargo`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:56
+msgid "`0.52.0`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:57
+msgid "`https://github.com/rust-lang/cargo#cargo-platform@0.1.2`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:57
+msgid "<nobr>`cargo-platform`</nobr>"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:57
+msgid "`0.1.2`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:58
+msgid "`ssh://git@github.com/rust-lang/regex.git#regex@1.4.3`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:59
+msgid "`git+ssh://git@github.com/rust-lang/regex.git#regex@1.4.3`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:60
+msgid "`git+ssh://git@github.com/rust-lang/regex.git?branch=dev#regex@1.4.3`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:62
+msgid ""
+"Local packages on the filesystem can use `file://` URLs to reference them:"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:66
+msgid "`file:///path/to/my/project/foo`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:66 src/reference/pkgid-spec.md:67
+#: src/reference/pkgid-spec.md:68
+msgid "`foo`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:67
+msgid "`file:///path/to/my/project/foo#1.1.8`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:67 src/reference/pkgid-spec.md:68
+msgid "`1.1.8`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:68
+msgid "`path+file:///path/to/my/project/foo#1.1.8`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:70
+msgid "Brevity of specifications"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:72
+msgid ""
+"The goal of this is to enable both succinct and exhaustive syntaxes for "
+"referring to packages in a dependency graph. Ambiguous references may refer "
+"to one or more packages. Most commands generate an error if more than one "
+"package could be referred to with the same specification."
+msgstr ""
