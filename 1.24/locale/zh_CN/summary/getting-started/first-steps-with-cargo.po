@@ -1,0 +1,100 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:28:01Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/getting-started/first-steps.md:1
+msgid "First Steps with Cargo"
+msgstr ""
+
+#: src/getting-started/first-steps.md:3
+msgid "To start a new project with Cargo, use `cargo new`:"
+msgstr ""
+
+#: src/getting-started/first-steps.md:9
+msgid ""
+"We’re passing `--bin` because we’re making a binary program: if we were "
+"making a library, we’d leave it off."
+msgstr ""
+
+#: src/getting-started/first-steps.md:12
+msgid "Let’s check out what Cargo has generated for us:"
+msgstr ""
+
+#: src/getting-started/first-steps.md:25
+msgid ""
+"This is all we need to get started. First, let’s check out `Cargo.toml`:"
+msgstr ""
+
+#: src/getting-started/first-steps.md:27
+msgid ""
+"```toml\n"
+"[package]\n"
+"name = \"hello_world\"\n"
+"version = \"0.1.0\"\n"
+"authors = [\"Your Name <you@example.com>\"]\n"
+"```"
+msgstr ""
+
+#: src/getting-started/first-steps.md:34
+msgid ""
+"This is called a **manifest**, and it contains all of the metadata that "
+"Cargo needs to compile your project."
+msgstr ""
+
+#: src/getting-started/first-steps.md:37
+msgid "Here’s what’s in `src/main.rs`:"
+msgstr ""
+
+#: src/getting-started/first-steps.md:41
+msgid "\"Hello, world!\""
+msgstr ""
+
+#: src/getting-started/first-steps.md:45
+msgid "Cargo generated a “hello world” for us. Let’s compile it:"
+msgstr ""
+
+#: src/getting-started/first-steps.md:47
+msgid ""
+"```shell\n"
+"$ cargo build\n"
+"   Compiling hello_world v0.1.0 (file:///path/to/project/hello_world)\n"
+"```"
+msgstr ""
+
+#: src/getting-started/first-steps.md:52
+msgid "And then run it:"
+msgstr ""
+
+#: src/getting-started/first-steps.md:59
+msgid ""
+"We can also use `cargo run` to compile and then run it, all in one step:"
+msgstr ""
+
+#: src/getting-started/first-steps.md:61
+msgid ""
+"```shell\n"
+"$ cargo run\n"
+"     Fresh hello_world v0.1.0 (file:///path/to/project/hello_world)\n"
+"   Running `target/hello_world`\n"
+"Hello, world!\n"
+"```"
+msgstr ""
+
+#: src/getting-started/first-steps.md:68
+msgid "Going further"
+msgstr ""
+
+#: src/getting-started/first-steps.md:70
+msgid ""
+"For more details on using Cargo, check out the [Cargo Guide](guide/index."
+"html)"
+msgstr ""
