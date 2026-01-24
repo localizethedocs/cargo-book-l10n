@@ -1,0 +1,1199 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:28:21Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/registries.md:1
+msgid "Registries"
+msgstr ""
+
+#: src/reference/registries.md:3
+msgid ""
+"Cargo installs crates and fetches dependencies from a \"registry\". The "
+"default registry is [crates.io](https://crates.io/). A registry contains an "
+"\"index\" which contains a searchable list of available crates. A registry "
+"may also provide a web API to support publishing new crates directly from "
+"Cargo."
+msgstr ""
+
+#: src/reference/registries.md:8
+msgid ""
+"Note: If you are interested in mirroring or vendoring an existing registry, "
+"take a look at [Source Replacement](source-replacement.md)."
+msgstr ""
+
+#: src/reference/registries.md:11
+msgid "Using an Alternate Registry"
+msgstr ""
+
+#: src/reference/registries.md:13
+msgid ""
+"To use a registry other than [crates.io](https://crates.io/), the name and "
+"index URL of the registry must be added to a [`.cargo/config.toml` file]"
+"(config.md). The `registries` table has a key for each registry, for example:"
+msgstr ""
+
+#: src/reference/registries.md:17
+msgid ""
+"```toml\n"
+"[registries]\n"
+"my-registry = { index = \"https://my-intranet:8080/git/index\" }\n"
+"```"
+msgstr ""
+
+#: src/reference/registries.md:22
+msgid ""
+"The `index` key should be a URL to a git repository with the registry's "
+"index. A crate can then depend on a crate from another registry by "
+"specifying the `registry` key and a value of the registry's name in that "
+"dependency's entry in `Cargo.toml`:"
+msgstr ""
+
+#: src/reference/registries.md:27
+msgid ""
+"```toml\n"
+"# Sample Cargo.toml\n"
+"[package]\n"
+"name = \"my-project\"\n"
+"version = \"0.1.0\"\n"
+"\n"
+"[dependencies]\n"
+"other-crate = { version = \"1.0\", registry = \"my-registry\" }\n"
+"```"
+msgstr ""
+
+#: src/reference/registries.md:37
+msgid ""
+"As with most config values, the index may be specified with an environment "
+"variable instead of a config file. For example, setting the following "
+"environment variable will accomplish the same thing as defining a config "
+"file:"
+msgstr ""
+
+#: src/reference/registries.md:41
+msgid ""
+"```ignore\n"
+"CARGO_REGISTRIES_MY_REGISTRY_INDEX=https://my-intranet:8080/git/index\n"
+"```"
+msgstr ""
+
+#: src/reference/registries.md:45
+msgid ""
+"Note: [crates.io](https://crates.io/) does not accept packages that depend "
+"on crates from other registries."
+msgstr ""
+
+#: src/reference/registries.md:48
+msgid "Publishing to an Alternate Registry"
+msgstr ""
+
+#: src/reference/registries.md:50
+msgid ""
+"If the registry supports web API access, then packages can be published "
+"directly to the registry from Cargo. Several of Cargo's commands such as "
+"[`cargo publish`](../commands/cargo-publish.md) take a `--registry` command-"
+"line flag to indicate which registry to use. For example, to publish the "
+"package in the current directory:"
+msgstr ""
+
+#: src/reference/registries.md:55
+msgid "`cargo login --registry=my-registry`"
+msgstr ""
+
+#: src/reference/registries.md:57
+msgid ""
+"This only needs to be done once. You must enter the secret API token "
+"retrieved from the registry's website. Alternatively the token may be passed "
+"directly to the `publish` command with the `--token` command-line flag or an "
+"environment variable with the name of the registry such as "
+"`CARGO_REGISTRIES_MY_REGISTRY_TOKEN`."
+msgstr ""
+
+#: src/reference/registries.md:63
+msgid "`cargo publish --registry=my-registry`"
+msgstr ""
+
+#: src/reference/registries.md:65
+msgid ""
+"Instead of always passing the `--registry` command-line option, the default "
+"registry may be set in [`.cargo/config.toml`](config.md) with the `registry."
+"default` key."
+msgstr ""
+
+#: src/reference/registries.md:69
+msgid ""
+"Setting the `package.publish` key in the `Cargo.toml` manifest restricts "
+"which registries the package is allowed to be published to. This is useful "
+"to prevent accidentally publishing a closed-source package to [crates.io]"
+"(https://crates.io/). The value may be a list of registry names, for example:"
+msgstr ""
+
+#: src/reference/registries.md:74
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"publish = [\"my-registry\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/registries.md:80
+msgid ""
+"The `publish` value may also be `false` to restrict all publishing, which is "
+"the same as an empty list."
+msgstr ""
+
+#: src/reference/registries.md:83
+msgid ""
+"The authentication information saved by [`cargo login`](../commands/cargo-"
+"login.md) is stored in the `credentials.toml` file in the Cargo home "
+"directory (default `$HOME/.cargo`). It has a separate table for each "
+"registry, for example:"
+msgstr ""
+
+#: src/reference/registries.md:87
+msgid ""
+"```toml\n"
+"[registries.my-registry]\n"
+"token = \"854DvwSlUwEHtIo3kWy6x7UCPKHfzCmy\"\n"
+"```"
+msgstr ""
+
+#: src/reference/registries.md:92
+msgid "Running a Registry"
+msgstr ""
+
+#: src/reference/registries.md:94
+msgid ""
+"A minimal registry can be implemented by having a git repository that "
+"contains an index, and a server that contains the compressed `.crate` files "
+"created by [`cargo package`](../commands/cargo-package.md). Users won't be "
+"able to use Cargo to publish to it, but this may be sufficient for closed "
+"environments."
+msgstr ""
+
+#: src/reference/registries.md:99
+msgid ""
+"A full-featured registry that supports publishing will additionally need to "
+"have a web API service that conforms to the API used by Cargo. The web API "
+"is documented below."
+msgstr ""
+
+#: src/reference/registries.md:103
+msgid ""
+"Commercial and community projects are available for building and running a "
+"registry. See <https://github.com/rust-lang/cargo/wiki/Third-party-"
+"registries> for a list of what is available."
+msgstr ""
+
+#: src/reference/registries.md:107
+msgid "Index Format"
+msgstr ""
+
+#: src/reference/registries.md:109
+msgid ""
+"The following defines the format of the index. New features are occasionally "
+"added, which are only understood starting with the version of Cargo that "
+"introduced them. Older versions of Cargo may not be able to use packages "
+"that make use of new features. However, the format for older packages should "
+"not change, so older versions of Cargo should be able to use them."
+msgstr ""
+
+#: src/reference/registries.md:115
+msgid ""
+"The index is stored in a git repository so that Cargo can efficiently fetch "
+"incremental updates to the index. In the root of the repository is a file "
+"named `config.json` which contains JSON information used by Cargo for "
+"accessing the registry. This is an example of what the [crates.io](https://"
+"crates.io/) config file looks like:"
+msgstr ""
+
+#: src/reference/registries.md:123
+msgid "\"dl\""
+msgstr ""
+
+#: src/reference/registries.md:123
+msgid "\"https://crates.io/api/v1/crates\""
+msgstr ""
+
+#: src/reference/registries.md:124
+msgid "\"api\""
+msgstr ""
+
+#: src/reference/registries.md:124
+msgid "\"https://crates.io\""
+msgstr ""
+
+#: src/reference/registries.md:128
+msgid "The keys are:"
+msgstr ""
+
+#: src/reference/registries.md:129
+msgid ""
+"`dl`: This is the URL for downloading crates listed in the index. The value "
+"may have the following markers which will be replaced with their "
+"corresponding value:"
+msgstr ""
+
+#: src/reference/registries.md:133
+msgid "`{crate}`: The name of crate."
+msgstr ""
+
+#: src/reference/registries.md:134
+msgid "`{version}`: The crate version."
+msgstr ""
+
+#: src/reference/registries.md:135
+msgid ""
+"`{prefix}`: A directory prefix computed from the crate name. For example, a "
+"crate named `cargo` has a prefix of `ca/rg`. See below for details."
+msgstr ""
+
+#: src/reference/registries.md:137
+msgid "`{lowerprefix}`: Lowercase variant of `{prefix}`."
+msgstr ""
+
+#: src/reference/registries.md:138
+msgid "`{sha256-checksum}`: The crate's sha256 checksum."
+msgstr ""
+
+#: src/reference/registries.md:140
+msgid ""
+"If none of the markers are present, then the value `/{crate}/{version}/"
+"download` is appended to the end."
+msgstr ""
+
+#: src/reference/registries.md:142
+msgid ""
+"`api`: This is the base URL for the web API. This key is optional, but if it "
+"is not specified, commands such as [`cargo publish`](../commands/cargo-"
+"publish.md) will not work. The web API is described below."
+msgstr ""
+
+#: src/reference/registries.md:146
+msgid ""
+"The download endpoint should send the `.crate` file for the requested "
+"package. Cargo supports https, http, and file URLs, HTTP redirects, HTTP1 "
+"and HTTP2. The exact specifics of TLS support depend on the platform that "
+"Cargo is running on, the version of Cargo, and how it was compiled."
+msgstr ""
+
+#: src/reference/registries.md:151
+msgid ""
+"The rest of the index repository contains one file for each package, where "
+"the filename is the name of the package in lowercase. Each version of the "
+"package has a separate line in the file. The files are organized in a tier "
+"of directories:"
+msgstr ""
+
+#: src/reference/registries.md:156
+msgid "Packages with 1 character names are placed in a directory named `1`."
+msgstr ""
+
+#: src/reference/registries.md:157
+msgid "Packages with 2 character names are placed in a directory named `2`."
+msgstr ""
+
+#: src/reference/registries.md:158
+msgid ""
+"Packages with 3 character names are placed in the directory `3/{first-"
+"character}` where `{first-character}` is the first character of the package "
+"name."
+msgstr ""
+
+#: src/reference/registries.md:161
+msgid ""
+"All other packages are stored in directories named `{first-two}/{second-two}"
+"` where the top directory is the first two characters of the package name, "
+"and the next subdirectory is the third and fourth characters of the package "
+"name. For example, `cargo` would be stored in a file named `ca/rg/cargo`."
+msgstr ""
+
+#: src/reference/registries.md:167
+msgid ""
+"Note: Although the index filenames are in lowercase, the fields that contain "
+"package names in `Cargo.toml` and the index JSON data are case-sensitive and "
+"may contain upper and lower case characters."
+msgstr ""
+
+#: src/reference/registries.md:171
+msgid ""
+"The directory name above is calculated based on the package name converted "
+"to lowercase; it is represented by the marker `{lowerprefix}`.  When the "
+"original package name is used without case conversion, the resulting "
+"directory name is represented by the marker `{prefix}`.  For example, the "
+"package `MyCrate` would have a `{prefix}` of `My/Cr` and a `{lowerprefix}` "
+"of `my/cr`.  In general, using `{prefix}` is recommended over `{lowerprefix}"
+"`, but there are pros and cons to each choice.  Using `{prefix}` on case-"
+"insensitive filesystems results in (harmless-but-inelegant) directory "
+"aliasing.  For example, `crate` and `CrateTwo` have `{prefix}` values of `cr/"
+"at` and `Cr/at`; these are distinct on Unix machines but alias to the same "
+"directory on Windows.  Using directories with normalized case avoids "
+"aliasing, but on case-sensitive filesystems it's harder to support older "
+"versions of Cargo that lack `{prefix}`/`{lowerprefix}`. For example, nginx "
+"rewrite rules can easily construct `{prefix}` but can't perform case-"
+"conversion to construct `{lowerprefix}`."
+msgstr ""
+
+#: src/reference/registries.md:186
+msgid ""
+"Registries should consider enforcing limitations on package names added to "
+"their index. Cargo itself allows names with any [alphanumeric](../../std/"
+"primitive.char.html#method.is_alphanumeric), `-`, or `_` characters. [crates."
+"io](https://crates.io/) imposes its own limitations, including the following:"
+msgstr ""
+
+#: src/reference/registries.md:190
+msgid "Only allows ASCII characters."
+msgstr ""
+
+#: src/reference/registries.md:191
+msgid "Only alphanumeric, `-`, and `_` characters."
+msgstr ""
+
+#: src/reference/registries.md:192
+msgid "First character must be alphabetic."
+msgstr ""
+
+#: src/reference/registries.md:193
+msgid "Case-insensitive collision detection."
+msgstr ""
+
+#: src/reference/registries.md:194
+msgid "Prevent differences of `-` vs `_`."
+msgstr ""
+
+#: src/reference/registries.md:195
+msgid "Under a specific length (max 64)."
+msgstr ""
+
+#: src/reference/registries.md:196
+msgid "Rejects reserved names, such as Windows special filenames like \"nul\"."
+msgstr ""
+
+#: src/reference/registries.md:198
+msgid ""
+"Registries should consider incorporating similar restrictions, and consider "
+"the security implications, such as [IDN homograph attacks](https://en."
+"wikipedia.org/wiki/IDN_homograph_attack) and other concerns in [UTR36]"
+"(https://www.unicode.org/reports/tr36/) and [UTS39](https://www.unicode.org/"
+"reports/tr39/)."
+msgstr ""
+
+#: src/reference/registries.md:204
+msgid ""
+"Each line in a package file contains a JSON object that describes a "
+"published version of the package. The following is a pretty-printed example "
+"with comments explaining the format of the entry."
+msgstr ""
+
+#: src/reference/registries.md:210
+msgid ""
+"// The name of the package.\n"
+"    // This must only contain alphanumeric, `-`, or `_` characters.\n"
+"    \"name\""
+msgstr ""
+
+#: src/reference/registries.md:212 src/reference/registries.md:384
+msgid "\"foo\""
+msgstr ""
+
+#: src/reference/registries.md:213
+msgid ""
+"// The version of the package this row is describing.\n"
+"    // This must be a valid version number according to the Semantic\n"
+"    // Versioning 2.0.0 spec at https://semver.org/.\n"
+"    \"vers\""
+msgstr ""
+
+#: src/reference/registries.md:216 src/reference/registries.md:386
+msgid "\"0.1.0\""
+msgstr ""
+
+#: src/reference/registries.md:217 src/reference/registries.md:387
+msgid ""
+"// Array of direct dependencies of the package.\n"
+"    \"deps\""
+msgstr ""
+
+#: src/reference/registries.md:220
+msgid ""
+"// Name of the dependency.\n"
+"            // If the dependency is renamed from the original package name,\n"
+"            // this is the new name. The original package name is stored in\n"
+"            // the `package` field.\n"
+"            \"name\""
+msgstr ""
+
+#: src/reference/registries.md:224 src/reference/registries.md:394
+#: src/reference/registries.md:635
+msgid "\"rand\""
+msgstr ""
+
+#: src/reference/registries.md:225
+msgid ""
+"// The SemVer requirement for this dependency.\n"
+"            // This must be a valid version requirement defined at\n"
+"            // https://doc.rust-lang.org/cargo/reference/specifying-"
+"dependencies.html.\n"
+"            \"req\""
+msgstr ""
+
+#: src/reference/registries.md:228 src/reference/registries.md:396
+msgid "\"^0.6\""
+msgstr ""
+
+#: src/reference/registries.md:229 src/reference/registries.md:397
+msgid ""
+"// Array of features (as strings) enabled for this dependency.\n"
+"            \"features\""
+msgstr ""
+
+#: src/reference/registries.md:230 src/reference/registries.md:398
+msgid "\"i128_support\""
+msgstr ""
+
+#: src/reference/registries.md:231 src/reference/registries.md:399
+msgid ""
+"// Boolean of whether or not this is an optional dependency.\n"
+"            \"optional\""
+msgstr ""
+
+#: src/reference/registries.md:233 src/reference/registries.md:401
+msgid ""
+"// Boolean of whether or not default features are enabled.\n"
+"            \"default_features\""
+msgstr ""
+
+#: src/reference/registries.md:235 src/reference/registries.md:403
+msgid ""
+"// The target platform for the dependency.\n"
+"            // null if not a target dependency.\n"
+"            // Otherwise, a string such as \"cfg(windows)\".\n"
+"            \"target\""
+msgstr ""
+
+#: src/reference/registries.md:239
+msgid ""
+"// The dependency kind.\n"
+"            // \"dev\", \"build\", or \"normal\".\n"
+"            // Note: this is a required field, but a small number of "
+"entries\n"
+"            // exist in the crates.io index with either a missing or null\n"
+"            // `kind` field due to implementation bugs.\n"
+"            \"kind\""
+msgstr ""
+
+#: src/reference/registries.md:244 src/reference/registries.md:409
+msgid "\"normal\""
+msgstr ""
+
+#: src/reference/registries.md:245 src/reference/registries.md:410
+msgid ""
+"// The URL of the index of the registry where this dependency is\n"
+"            // from as a string. If not specified or null, it is assumed "
+"the\n"
+"            // dependency is in the current registry.\n"
+"            \"registry\""
+msgstr ""
+
+#: src/reference/registries.md:249
+msgid ""
+"// If the dependency is renamed, this is a string of the actual\n"
+"            // package name. If not specified or null, this dependency is "
+"not\n"
+"            // renamed.\n"
+"            \"package\""
+msgstr ""
+
+#: src/reference/registries.md:255
+msgid ""
+"// A SHA256 checksum of the `.crate` file.\n"
+"    \"cksum\""
+msgstr ""
+
+#: src/reference/registries.md:256
+msgid "\"d867001db0e2b6e0496f9fac96930e2d42233ecd3ca0413e0753d4c7695d289c\""
+msgstr ""
+
+#: src/reference/registries.md:257
+msgid ""
+"// Set of features defined for the package.\n"
+"    // Each feature maps to an array of features or dependencies it "
+"enables.\n"
+"    \"features\""
+msgstr ""
+
+#: src/reference/registries.md:260 src/reference/registries.md:425
+msgid "\"extras\""
+msgstr ""
+
+#: src/reference/registries.md:260 src/reference/registries.md:425
+msgid "\"rand/simd_support\""
+msgstr ""
+
+#: src/reference/registries.md:262
+msgid ""
+"// Boolean of whether or not this version has been yanked.\n"
+"    \"yanked\""
+msgstr ""
+
+#: src/reference/registries.md:264 src/reference/registries.md:467
+msgid ""
+"// The `links` string value from the package's manifest, or null if not\n"
+"    // specified. This field is optional and defaults to null.\n"
+"    \"links\""
+msgstr ""
+
+#: src/reference/registries.md:267
+msgid ""
+"// An unsigned 32-bit integer value indicating the schema version of this\n"
+"    // entry.\n"
+"    //\n"
+"    // If this not specified, it should be interpreted as the default of 1.\n"
+"    //\n"
+"    // Cargo (starting with version 1.51) will ignore versions it does not\n"
+"    // recognize. This provides a method to safely introduce changes to "
+"index\n"
+"    // entries and allow older versions of cargo to ignore newer entries it\n"
+"    // doesn't understand. Versions older than 1.51 ignore this field, and\n"
+"    // thus may misinterpret the meaning of the index entry.\n"
+"    //\n"
+"    // The current values are:\n"
+"    //\n"
+"    // * 1: The schema as documented here, not including newer additions.\n"
+"    //      This is honored in Rust version 1.51 and newer.\n"
+"    // * 2: The addition of the `features2` field.\n"
+"    //      This is honored in Rust version 1.60 and newer.\n"
+"    \"v\""
+msgstr ""
+
+#: src/reference/registries.md:285
+msgid ""
+"// This optional field contains features with new, extended syntax.\n"
+"    // Specifically, namespaced features (`dep:`) and weak dependencies\n"
+"    // (`pkg?/feat`).\n"
+"    //\n"
+"    // This is separated from `features` because versions older than 1.19\n"
+"    // will fail to load due to not being able to parse the new syntax, "
+"even\n"
+"    // with a `Cargo.lock` file.\n"
+"    //\n"
+"    // Cargo will merge any values listed here with the \"features\" field.\n"
+"    //\n"
+"    // If this field is included, the \"v\" field should be set to at least "
+"2.\n"
+"    //\n"
+"    // Registries are not required to use this field for extended feature\n"
+"    // syntax, they are allowed to include those in the \"features\" field.\n"
+"    // Using this is only necessary if the registry wants to support cargo\n"
+"    // versions older than 1.19, which in practice is only crates.io since\n"
+"    // those older versions do not support other registries.\n"
+"    \"features2\""
+msgstr ""
+
+#: src/reference/registries.md:303
+msgid "\"serde\""
+msgstr ""
+
+#: src/reference/registries.md:303
+msgid "\"dep:serde\""
+msgstr ""
+
+#: src/reference/registries.md:303
+msgid "\"chrono?/serde\""
+msgstr ""
+
+#: src/reference/registries.md:308
+msgid ""
+"The JSON objects should not be modified after they are added except for the "
+"`yanked` field whose value may change at any time."
+msgstr ""
+
+#: src/reference/registries.md:311
+msgid "Web API"
+msgstr ""
+
+#: src/reference/registries.md:313
+msgid ""
+"A registry may host a web API at the location defined in `config.json` to "
+"support any of the actions listed below."
+msgstr ""
+
+#: src/reference/registries.md:316
+msgid ""
+"Cargo includes the `Authorization` header for requests that require "
+"authentication. The header value is the API token. The server should respond "
+"with a 403 response code if the token is not valid. Users are expected to "
+"visit the registry's website to obtain a token, and Cargo can store the "
+"token using the [`cargo login`](../commands/cargo-login.md) command, or by "
+"passing the token on the command-line."
+msgstr ""
+
+#: src/reference/registries.md:323
+msgid ""
+"Responses use the 200 response code for success. Errors should use an "
+"appropriate response code, such as 404. Failure responses should have a JSON "
+"object with the following structure:"
+msgstr ""
+
+#: src/reference/registries.md:330
+msgid ""
+"// Array of errors to display to the user.\n"
+"    \"errors\""
+msgstr ""
+
+#: src/reference/registries.md:333
+msgid ""
+"// The error message as a string.\n"
+"            \"detail\""
+msgstr ""
+
+#: src/reference/registries.md:334
+msgid "\"error message text\""
+msgstr ""
+
+#: src/reference/registries.md:340
+msgid ""
+"If the response has this structure Cargo will display the detailed message "
+"to the user, even if the response code is 200. If the response code "
+"indicates an error and the content does not have this structure, Cargo will "
+"display to the user a message intended to help debugging the server error. A "
+"server returning an `errors` object allows a registry to provide a more "
+"detailed or user-centric error message."
+msgstr ""
+
+#: src/reference/registries.md:345
+msgid ""
+"For backwards compatibility, servers should ignore any unexpected query "
+"parameters or JSON fields. If a JSON field is missing, it should be assumed "
+"to be null. The endpoints are versioned with the `v1` component of the path, "
+"and Cargo is responsible for handling backwards compatibility fallbacks "
+"should any be required in the future."
+msgstr ""
+
+#: src/reference/registries.md:351
+msgid "Cargo sets the following headers for all requests:"
+msgstr ""
+
+#: src/reference/registries.md:353
+msgid "`Content-Type`: `application/json`"
+msgstr ""
+
+#: src/reference/registries.md:354
+msgid "`Accept`: `application/json`"
+msgstr ""
+
+#: src/reference/registries.md:355
+msgid ""
+"`User-Agent`: The Cargo version such as `cargo 1.32.0 (8610973aa "
+"2019-01-02)`. This may be modified by the user in a configuration value. "
+"Added in 1.29."
+msgstr ""
+
+#: src/reference/registries.md:359
+msgid "Publish"
+msgstr ""
+
+#: src/reference/registries.md:361
+msgid "Endpoint: `/api/v1/crates/new`"
+msgstr ""
+
+#: src/reference/registries.md:362 src/reference/registries.md:510
+#: src/reference/registries.md:563
+msgid "Method: PUT"
+msgstr ""
+
+#: src/reference/registries.md:363 src/reference/registries.md:493
+#: src/reference/registries.md:511 src/reference/registries.md:537
+#: src/reference/registries.md:564 src/reference/registries.md:595
+msgid "Authorization: Included"
+msgstr ""
+
+#: src/reference/registries.md:365
+msgid ""
+"The publish endpoint is used to publish a new version of a crate. The server "
+"should validate the crate, make it available for download, and add it to the "
+"index."
+msgstr ""
+
+#: src/reference/registries.md:369
+msgid "The body of the data sent by Cargo is:"
+msgstr ""
+
+#: src/reference/registries.md:371
+msgid "32-bit unsigned little-endian integer of the length of JSON data."
+msgstr ""
+
+#: src/reference/registries.md:372
+msgid "Metadata of the package as a JSON object."
+msgstr ""
+
+#: src/reference/registries.md:373
+msgid ""
+"32-bit unsigned little-endian integer of the length of the `.crate` file."
+msgstr ""
+
+#: src/reference/registries.md:374
+msgid "The `.crate` file."
+msgstr ""
+
+#: src/reference/registries.md:376
+msgid ""
+"The following is a commented example of the JSON object. Some notes of some "
+"restrictions imposed by [crates.io](https://crates.io/) are included only to "
+"illustrate some suggestions on types of validation that may be done, and "
+"should not be considered as an exhaustive list of restrictions [crates.io]"
+"(https://crates.io/) imposes."
+msgstr ""
+
+#: src/reference/registries.md:383
+msgid ""
+"// The name of the package.\n"
+"    \"name\""
+msgstr ""
+
+#: src/reference/registries.md:385
+msgid ""
+"// The version of the package being published.\n"
+"    \"vers\""
+msgstr ""
+
+#: src/reference/registries.md:390
+msgid ""
+"// Name of the dependency.\n"
+"            // If the dependency is renamed from the original package name,\n"
+"            // this is the original name. The new package name is stored in\n"
+"            // the `explicit_name_in_toml` field.\n"
+"            \"name\""
+msgstr ""
+
+#: src/reference/registries.md:395
+msgid ""
+"// The semver requirement for this dependency.\n"
+"            \"version_req\""
+msgstr ""
+
+#: src/reference/registries.md:407
+msgid ""
+"// The dependency kind.\n"
+"            // \"dev\", \"build\", or \"normal\".\n"
+"            \"kind\""
+msgstr ""
+
+#: src/reference/registries.md:414
+msgid ""
+"// If the dependency is renamed, this is a string of the new\n"
+"            // package name. If not specified or null, this dependency is "
+"not\n"
+"            // renamed.\n"
+"            \"explicit_name_in_toml\""
+msgstr ""
+
+#: src/reference/registries.md:420
+msgid ""
+"// Set of features defined for the package.\n"
+"    // Each feature maps to an array of features or dependencies it "
+"enables.\n"
+"    // Cargo does not impose limitations on feature names, but crates.io\n"
+"    // requires alphanumeric ASCII, `_` or `-` characters.\n"
+"    \"features\""
+msgstr ""
+
+#: src/reference/registries.md:427
+msgid ""
+"// List of strings of the authors.\n"
+"    // May be empty.\n"
+"    \"authors\""
+msgstr ""
+
+#: src/reference/registries.md:429
+msgid "\"Alice <a@example.com>\""
+msgstr ""
+
+#: src/reference/registries.md:430
+msgid ""
+"// Description field from the manifest.\n"
+"    // May be null. crates.io requires at least some content.\n"
+"    \"description\""
+msgstr ""
+
+#: src/reference/registries.md:433
+msgid ""
+"// String of the URL to the website for this package's documentation.\n"
+"    // May be null.\n"
+"    \"documentation\""
+msgstr ""
+
+#: src/reference/registries.md:436
+msgid ""
+"// String of the URL to the website for this package's home page.\n"
+"    // May be null.\n"
+"    \"homepage\""
+msgstr ""
+
+#: src/reference/registries.md:439
+msgid ""
+"// String of the content of the README file.\n"
+"    // May be null.\n"
+"    \"readme\""
+msgstr ""
+
+#: src/reference/registries.md:442
+msgid ""
+"// String of a relative path to a README file in the crate.\n"
+"    // May be null.\n"
+"    \"readme_file\""
+msgstr ""
+
+#: src/reference/registries.md:445
+msgid ""
+"// Array of strings of keywords for the package.\n"
+"    \"keywords\""
+msgstr ""
+
+#: src/reference/registries.md:447
+msgid ""
+"// Array of strings of categories for the package.\n"
+"    \"categories\""
+msgstr ""
+
+#: src/reference/registries.md:449
+msgid ""
+"// String of the license for the package.\n"
+"    // May be null. crates.io requires either `license` or `license_file` to "
+"be set.\n"
+"    \"license\""
+msgstr ""
+
+#: src/reference/registries.md:452
+msgid ""
+"// String of a relative path to a license file in the crate.\n"
+"    // May be null.\n"
+"    \"license_file\""
+msgstr ""
+
+#: src/reference/registries.md:455
+msgid ""
+"// String of the URL to the website for the source repository of this "
+"package.\n"
+"    // May be null.\n"
+"    \"repository\""
+msgstr ""
+
+#: src/reference/registries.md:458
+msgid ""
+"// Optional object of \"status\" badges. Each value is an object of\n"
+"    // arbitrary string to string mappings.\n"
+"    // crates.io has special interpretation of the format of the badges.\n"
+"    \"badges\""
+msgstr ""
+
+#: src/reference/registries.md:462
+msgid "\"travis-ci\""
+msgstr ""
+
+#: src/reference/registries.md:463
+msgid "\"branch\""
+msgstr ""
+
+#: src/reference/registries.md:463
+msgid "\"master\""
+msgstr ""
+
+#: src/reference/registries.md:464
+msgid "\"repository\""
+msgstr ""
+
+#: src/reference/registries.md:464
+msgid "\"rust-lang/cargo\""
+msgstr ""
+
+#: src/reference/registries.md:473 src/reference/registries.md:498
+#: src/reference/registries.md:516 src/reference/registries.md:541
+#: src/reference/registries.md:580 src/reference/registries.md:607
+#: src/reference/registries.md:627
+msgid "A successful response includes the JSON object:"
+msgstr ""
+
+#: src/reference/registries.md:477
+msgid ""
+"// Optional object of warnings to display to the user.\n"
+"    \"warnings\""
+msgstr ""
+
+#: src/reference/registries.md:479
+msgid ""
+"// Array of strings of categories that are invalid and ignored.\n"
+"        \"invalid_categories\""
+msgstr ""
+
+#: src/reference/registries.md:481
+msgid ""
+"// Array of strings of badge names that are invalid and ignored.\n"
+"        \"invalid_badges\""
+msgstr ""
+
+#: src/reference/registries.md:483
+msgid ""
+"// Array of strings of arbitrary warnings to display to the user.\n"
+"        \"other\""
+msgstr ""
+
+#: src/reference/registries.md:489
+msgid "Yank"
+msgstr ""
+
+#: src/reference/registries.md:491
+msgid "Endpoint: `/api/v1/crates/{crate_name}/{version}/yank`"
+msgstr ""
+
+#: src/reference/registries.md:492 src/reference/registries.md:594
+msgid "Method: DELETE"
+msgstr ""
+
+#: src/reference/registries.md:495
+msgid ""
+"The yank endpoint will set the `yank` field of the given version of a crate "
+"to `true` in the index."
+msgstr ""
+
+#: src/reference/registries.md:502 src/reference/registries.md:520
+msgid ""
+"// Indicates the delete succeeded, always true.\n"
+"    \"ok\""
+msgstr ""
+
+#: src/reference/registries.md:507
+msgid "Unyank"
+msgstr ""
+
+#: src/reference/registries.md:509
+msgid "Endpoint: `/api/v1/crates/{crate_name}/{version}/unyank`"
+msgstr ""
+
+#: src/reference/registries.md:513
+msgid ""
+"The unyank endpoint will set the `yank` field of the given version of a "
+"crate to `false` in the index."
+msgstr ""
+
+#: src/reference/registries.md:525
+msgid "Owners"
+msgstr ""
+
+#: src/reference/registries.md:527
+msgid ""
+"Cargo does not have an inherent notion of users and owners, but it does "
+"provide the `owner` command to assist managing who has authorization to "
+"control a crate. It is up to the registry to decide exactly how users and "
+"owners are handled. See the [publishing documentation](publishing.md#cargo-"
+"owner) for a description of how [crates.io](https://crates.io/) handles "
+"owners via GitHub users and teams."
+msgstr ""
+
+#: src/reference/registries.md:533
+msgid "Owners: List"
+msgstr ""
+
+#: src/reference/registries.md:535 src/reference/registries.md:562
+#: src/reference/registries.md:593
+msgid "Endpoint: `/api/v1/crates/{crate_name}/owners`"
+msgstr ""
+
+#: src/reference/registries.md:536 src/reference/registries.md:619
+msgid "Method: GET"
+msgstr ""
+
+#: src/reference/registries.md:539
+msgid "The owners endpoint returns a list of owners of the crate."
+msgstr ""
+
+#: src/reference/registries.md:545
+msgid ""
+"// Array of owners of the crate.\n"
+"    \"users\""
+msgstr ""
+
+#: src/reference/registries.md:548
+msgid ""
+"// Unique unsigned 32-bit integer of the owner.\n"
+"            \"id\""
+msgstr ""
+
+#: src/reference/registries.md:550
+msgid ""
+"// The unique username of the owner.\n"
+"            \"login\""
+msgstr ""
+
+#: src/reference/registries.md:551
+msgid "\"github:rust-lang:core\""
+msgstr ""
+
+#: src/reference/registries.md:552
+msgid ""
+"// Name of the owner.\n"
+"            // This is optional and may be null.\n"
+"            \"name\""
+msgstr ""
+
+#: src/reference/registries.md:554
+msgid "\"Core\""
+msgstr ""
+
+#: src/reference/registries.md:560
+msgid "Owners: Add"
+msgstr ""
+
+#: src/reference/registries.md:566
+msgid ""
+"A PUT request will send a request to the registry to add a new owner to a "
+"crate. It is up to the registry how to handle the request. For example, "
+"[crates.io](https://crates.io/) sends an invite to the user that they must "
+"accept before being added."
+msgstr ""
+
+#: src/reference/registries.md:571
+msgid "The request should include the following JSON object:"
+msgstr ""
+
+#: src/reference/registries.md:575
+msgid ""
+"// Array of `login` strings of owners to add.\n"
+"    \"users\""
+msgstr ""
+
+#: src/reference/registries.md:576 src/reference/registries.md:603
+msgid "\"login_name\""
+msgstr ""
+
+#: src/reference/registries.md:584
+msgid ""
+"// Indicates the add succeeded, always true.\n"
+"    \"ok\""
+msgstr ""
+
+#: src/reference/registries.md:586
+msgid ""
+"// A string to be displayed to the user.\n"
+"    \"msg\""
+msgstr ""
+
+#: src/reference/registries.md:587
+msgid "\"user ehuss has been invited to be an owner of crate cargo\""
+msgstr ""
+
+#: src/reference/registries.md:591
+msgid "Owners: Remove"
+msgstr ""
+
+#: src/reference/registries.md:597
+msgid ""
+"A DELETE request will remove an owner from a crate. The request should "
+"include the following JSON object:"
+msgstr ""
+
+#: src/reference/registries.md:602
+msgid ""
+"// Array of `login` strings of owners to remove.\n"
+"    \"users\""
+msgstr ""
+
+#: src/reference/registries.md:611
+msgid ""
+"// Indicates the remove succeeded, always true.\n"
+"    \"ok\""
+msgstr ""
+
+#: src/reference/registries.md:616
+msgid "Search"
+msgstr ""
+
+#: src/reference/registries.md:618
+msgid "Endpoint: `/api/v1/crates`"
+msgstr ""
+
+#: src/reference/registries.md:620
+msgid "Query Parameters:"
+msgstr ""
+
+#: src/reference/registries.md:621
+msgid "`q`: The search query string."
+msgstr ""
+
+#: src/reference/registries.md:622
+msgid "`per_page`: Number of results, default 10, max 100."
+msgstr ""
+
+#: src/reference/registries.md:624
+msgid ""
+"The search request will perform a search for crates, using criteria defined "
+"on the server."
+msgstr ""
+
+#: src/reference/registries.md:631
+msgid ""
+"// Array of results.\n"
+"    \"crates\""
+msgstr ""
+
+#: src/reference/registries.md:634
+msgid ""
+"// Name of the crate.\n"
+"            \"name\""
+msgstr ""
+
+#: src/reference/registries.md:636
+msgid ""
+"// The highest version available.\n"
+"            \"max_version\""
+msgstr ""
+
+#: src/reference/registries.md:637
+msgid "\"0.6.1\""
+msgstr ""
+
+#: src/reference/registries.md:638
+msgid ""
+"// Textual description of the crate.\n"
+"            \"description\""
+msgstr ""
+
+#: src/reference/registries.md:639
+msgid "\"Random number generators and other randomness functionality.\\n\""
+msgstr ""
+
+#: src/reference/registries.md:642
+msgid "\"meta\""
+msgstr ""
+
+#: src/reference/registries.md:643
+msgid ""
+"// Total number of results available on the server.\n"
+"        \"total\""
+msgstr ""
+
+#: src/reference/registries.md:649
+msgid "Login"
+msgstr ""
+
+#: src/reference/registries.md:651
+msgid "Endpoint: `/me`"
+msgstr ""
+
+#: src/reference/registries.md:653
+msgid ""
+"The \"login\" endpoint is not an actual API request. It exists solely for "
+"the [`cargo login`](../commands/cargo-login.md) command to display a URL to "
+"instruct a user to visit in a web browser to log in and retrieve an API "
+"token."
+msgstr ""
