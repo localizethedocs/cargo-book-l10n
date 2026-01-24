@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/commands/cargo-publish.md:1
@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-publish.md:5
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-publish.md:7
 msgid "cargo-publish - Upload a package to the registry"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/commands/cargo-publish.md:9
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-publish.md:11
 msgid "`cargo publish` \\[_options_\\]"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: src/commands/cargo-publish.md:13
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-publish.md:15
 msgid ""
@@ -79,7 +79,7 @@ msgstr ""
 
 #: src/commands/cargo-publish.md:33
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-publish.md:35
 msgid "Publish Options"
@@ -97,7 +97,7 @@ msgstr ""
 
 #: src/commands/cargo-publish.md:96
 msgid "Compilation Options"
-msgstr ""
+msgstr "編譯選項"
 
 #: src/commands/cargo-publish.md:122
 msgid "Feature Selection"
@@ -118,7 +118,7 @@ msgstr ""
 
 #: src/commands/cargo-publish.md:151
 msgid "Manifest Options"
-msgstr ""
+msgstr "清單選項"
 
 #: src/commands/cargo-publish.md:188
 msgid "Miscellaneous Options"
@@ -126,7 +126,7 @@ msgstr ""
 
 #: src/commands/cargo-publish.md:208
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-publish.md:240
 msgid "Common Options"
@@ -134,7 +134,7 @@ msgstr ""
 
 #: src/commands/cargo-publish.md:270
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-publish.md:272
 msgid ""
@@ -144,19 +144,19 @@ msgstr ""
 
 #: src/commands/cargo-publish.md:276
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-publish.md:278
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-publish.md:279
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-publish.md:282
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-publish.md:284
 msgid "Publish the current package:"
@@ -164,7 +164,7 @@ msgstr ""
 
 #: src/commands/cargo-publish.md:288
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-publish.md:289
 msgid ""
