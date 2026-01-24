@@ -1,0 +1,414 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:37:45Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/rust-version.md:1
+msgid "Rust Version"
+msgstr ""
+
+#: src/reference/rust-version.md:3
+msgid ""
+"The `rust-version` field is an optional key that tells cargo what version of "
+"the Rust toolchain you support for your package."
+msgstr ""
+
+#: src/reference/rust-version.md:6
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"rust-version = \"1.56\"\n"
+"```"
+msgstr ""
+
+#: src/reference/rust-version.md:12
+msgid ""
+"The Rust version must be a bare version number with at least one component; "
+"it cannot include semver operators or pre-release identifiers. Compiler pre-"
+"release identifiers such as -nightly will be ignored while checking the Rust "
+"version."
+msgstr ""
+
+#: src/reference/rust-version.md:16
+msgid "**MSRV:** Respected as of 1.56"
+msgstr ""
+
+#: src/reference/rust-version.md:18
+msgid "Uses"
+msgstr ""
+
+#: src/reference/rust-version.md:20
+msgid "**Diagnostics:**"
+msgstr ""
+
+#: src/reference/rust-version.md:22
+msgid ""
+"When your package is compiled on an unsupported toolchain, Cargo will report "
+"that as an error to the user. This makes the support expectations clear and "
+"avoids reporting a less direct diagnostic like invalid syntax or missing "
+"functionality in the standard library. This affects all [Cargo targets]"
+"(cargo-targets.md) in the package, including binaries, examples, test "
+"suites, benchmarks, etc. A user can opt-in to an unsupported build of a "
+"package with the `--ignore-rust-version` flag."
+msgstr ""
+
+#: src/reference/rust-version.md:28
+msgid "**Development aid:**"
+msgstr ""
+
+#: src/reference/rust-version.md:30
+msgid ""
+"`cargo add` will auto-select the dependency's version requirement to be the "
+"latest version compatible with your `rust-version`. If that isn't the latest "
+"version, `cargo add` will inform users so they can make the choice on "
+"whether to keep it or update your `rust-version`."
+msgstr ""
+
+#: src/reference/rust-version.md:33
+msgid ""
+"The [resolver](resolver.md#rust-version) may take Rust version into account "
+"when picking dependencies."
+msgstr ""
+
+#: src/reference/rust-version.md:35
+msgid ""
+"Other tools may also take advantage of it, like `cargo clippy`'s "
+"[`incompatible_msrv` lint](https://rust-lang.github.io/rust-clippy/stable/"
+"index.html#/incompatible_msrv)."
+msgstr ""
+
+#: src/reference/rust-version.md:38
+msgid ""
+"**Note:** The `rust-version` may be ignored using the `--ignore-rust-"
+"version` option."
+msgstr ""
+
+#: src/reference/rust-version.md:40
+msgid "Support Expectations"
+msgstr ""
+
+#: src/reference/rust-version.md:42
+msgid ""
+"These are general expectations; some packages may document when they do not "
+"follow these."
+msgstr ""
+
+#: src/reference/rust-version.md:44
+msgid "**Complete:**"
+msgstr ""
+
+#: src/reference/rust-version.md:46
+msgid ""
+"All functionality, including binaries and API, are available on the "
+"supported Rust versions under every [feature](features.md)."
+msgstr ""
+
+#: src/reference/rust-version.md:48
+msgid "**Verified:**"
+msgstr ""
+
+#: src/reference/rust-version.md:50
+msgid ""
+"A package's functionality is verified on its supported Rust versions, "
+"including automated testing. See also our [Rust version CI guide](../guide/"
+"continuous-integration.md#verifying-rust-version)."
+msgstr ""
+
+#: src/reference/rust-version.md:54
+msgid "**Patchable:**"
+msgstr ""
+
+#: src/reference/rust-version.md:56
+msgid ""
+"When licenses allow it, users can [override their local dependency]"
+"(overriding-dependencies.md) with a fork of your package. In this situation, "
+"Cargo may load the entire workspace for the patched dependency which should "
+"work on the supported Rust versions, even if other packages in the workspace "
+"have different supported Rust versions."
+msgstr ""
+
+#: src/reference/rust-version.md:60
+msgid "**Dependency Support:**"
+msgstr ""
+
+#: src/reference/rust-version.md:62
+msgid ""
+"In support of the above, it is expected that each dependency's version-"
+"requirement supports at least one version compatible with your `rust-"
+"version`. However, it is **not** expected that the dependency specification "
+"excludes versions incompatible with your `rust-version`. In fact, supporting "
+"both allows you to balance the needs of users that support older Rust "
+"versions with those that don't."
+msgstr ""
+
+#: src/reference/rust-version.md:68
+msgid "Setting and Updating Rust Version"
+msgstr ""
+
+#: src/reference/rust-version.md:70
+msgid "What Rust versions to support is a trade off between"
+msgstr ""
+
+#: src/reference/rust-version.md:71
+msgid ""
+"Costs for the maintainer in not using newer features of the Rust toolchain "
+"or their dependencies"
+msgstr ""
+
+#: src/reference/rust-version.md:72
+msgid ""
+"Costs to users who would benefit from a package using newer features of a "
+"toolchain, e.g. reducing build times by migrating to a feature in the "
+"standard library from a polyfill"
+msgstr ""
+
+#: src/reference/rust-version.md:73
+msgid "Availability of a package to users supporting older Rust versions"
+msgstr ""
+
+#: src/reference/rust-version.md:75
+msgid ""
+"**Note:** [Changing `rust-version`](semver.md#env-new-rust) is assumed to be "
+"a minor incompatibility"
+msgstr ""
+
+#: src/reference/rust-version.md:77
+msgid ""
+"**Recommendation:** Choose a policy for what Rust versions to support and "
+"when that is changed so users can compare it with their own policy and, if "
+"it isn't compatible, decide whether the loss of general improvements or the "
+"risk of a blocking bug that won't be fixed is acceptable or not."
+msgstr ""
+
+#: src/reference/rust-version.md:81
+msgid ""
+"The simplest policy to support is to always use the latest Rust version."
+msgstr ""
+
+#: src/reference/rust-version.md:83
+msgid ""
+"Depending on your risk profile, the next simplest approach is to continue to "
+"support old major or minor versions of your package that support older Rust "
+"versions."
+msgstr ""
+
+#: src/reference/rust-version.md:85
+msgid "Selecting supported Rust versions"
+msgstr ""
+
+#: src/reference/rust-version.md:87
+msgid ""
+"Users of your package are most likely to track their supported Rust versions "
+"to:"
+msgstr ""
+
+#: src/reference/rust-version.md:88
+msgid ""
+"Their Rust toolchain vendor's support policy, e.g. The Rust Project or a "
+"Linux distribution"
+msgstr ""
+
+#: src/reference/rust-version.md:89
+msgid ""
+"Note: the Rust Project only offers bug fixes and security updates for the "
+"latest version."
+msgstr ""
+
+#: src/reference/rust-version.md:90
+msgid ""
+"A fixed schedule for users to re-verify their packages with the new "
+"toolchain, e.g. the first release of the year, every 5 releases."
+msgstr ""
+
+#: src/reference/rust-version.md:92
+msgid ""
+"In addition, users are unlikely to be using the new Rust version immediately "
+"but need time to notice and re-verify or might not be aligned on the exact "
+"same schedule.."
+msgstr ""
+
+#: src/reference/rust-version.md:94
+msgid "Example version policies:"
+msgstr ""
+
+#: src/reference/rust-version.md:95
+msgid ""
+"\"N-2\", meaning \"latest version with a 2 release grace window for "
+"updating\""
+msgstr ""
+
+#: src/reference/rust-version.md:96
+msgid "Every even release with a 2 release grace window for updating"
+msgstr ""
+
+#: src/reference/rust-version.md:97
+msgid ""
+"Every version from this calendar year with a one year grace window for "
+"updating"
+msgstr ""
+
+#: src/reference/rust-version.md:99
+msgid ""
+"**Note:** To find the minimum `rust-version` compatible with your project as-"
+"is, you can use third-party tools like [`cargo-msrv`](https://crates.io/"
+"crates/cargo-msrv)."
+msgstr ""
+
+#: src/reference/rust-version.md:101
+msgid "Update timeline"
+msgstr ""
+
+#: src/reference/rust-version.md:103
+msgid ""
+"When your policy specifies you no longer need to support a Rust version, you "
+"can update `rust-version` immediately or when needed."
+msgstr ""
+
+#: src/reference/rust-version.md:105
+msgid ""
+"By allowing `rust-version` to drift from your policy, you offer users more "
+"of a grace window for upgrading. However, this is too unpredictable to be "
+"relied on for aligning with the Rust version users track."
+msgstr ""
+
+#: src/reference/rust-version.md:109
+msgid ""
+"The further `rust-version` drifts from your specified policy, the more "
+"likely users are to infer a policy you did not intend, leading to "
+"frustration at the unmet expectations."
+msgstr ""
+
+#: src/reference/rust-version.md:113
+msgid ""
+"When drift is allowed, there is the question of what is \"justifiable "
+"enough\" to drop supported Versions. Each person can come to a reasonably "
+"different justification; working through that discussion can be frustrating "
+"for the involved parties. This will disempower those who would want to avoid "
+"that type of conflict, which is particularly the case for new or casual "
+"contributors who either feel that they are not in a position to raise the "
+"question or that the conflict may hurt the chance of their change being "
+"merged."
+msgstr ""
+
+#: src/reference/rust-version.md:122
+msgid "Multiple Policies in a Workspace"
+msgstr ""
+
+#: src/reference/rust-version.md:124
+msgid "Cargo allows supporting multiple policies within one workspace."
+msgstr ""
+
+#: src/reference/rust-version.md:126
+msgid ""
+"Verifying specific packages under specific Rust versions can get "
+"complicated. Tools like [`cargo-hack`](https://crates.io/crates/cargo-hack) "
+"can help."
+msgstr ""
+
+#: src/reference/rust-version.md:129
+msgid ""
+"For any dependency shared across policies, the lowest common versions must "
+"be used as Cargo [unifies SemVer-compatible versions](resolver.md#semver-"
+"compatibility), potentially limiting access to features of the shared "
+"dependency for the workspace member with the higher `rust-version`."
+msgstr ""
+
+#: src/reference/rust-version.md:134
+msgid ""
+"To allow users to patch a dependency on one of your workspace members, every "
+"package in the workspace would need to be loadable in the oldest Rust "
+"version supported by the workspace."
+msgstr ""
+
+#: src/reference/rust-version.md:137
+msgid ""
+"When using [`incompatible-rust-versions = \"fallback\"`](config."
+"md#resolverincompatible-rust-versions), the Rust version of one package can "
+"affect dependency versions selected for another package with a different "
+"Rust version. See the [resolver](resolver.md#rust-version) chapter for more "
+"details."
+msgstr ""
+
+#: src/reference/rust-version.md:141
+msgid "One or More Policies"
+msgstr ""
+
+#: src/reference/rust-version.md:143
+msgid ""
+"One way to mitigate the downsides of supporting older Rust versions is to "
+"apply your policy to older major or minor versions of your package that you "
+"continue to support. You likely still need a policy for what Rust versions "
+"the development branch support compared to the release branches for those "
+"major or minor versions."
+msgstr ""
+
+#: src/reference/rust-version.md:146
+msgid ""
+"Only updating the development branch when \"needed\"' can help reduce the "
+"number of supported release branches."
+msgstr ""
+
+#: src/reference/rust-version.md:148
+msgid ""
+"There is the question of what can be backported into these release branches. "
+"By backporting new functionality between minor versions, the next available "
+"version would be missing it which could be considered a breaking change, "
+"violating SemVer. Backporting changes also comes with the risk of "
+"introducing bugs."
+msgstr ""
+
+#: src/reference/rust-version.md:153
+msgid ""
+"Supporting older versions comes at a cost. This cost is dependent on the "
+"risk and impact of bugs within the package and what is acceptable for "
+"backporting. Creating the release branches on-demand and putting the "
+"backport burden on the community are ways to balance this cost."
+msgstr ""
+
+#: src/reference/rust-version.md:157
+msgid ""
+"There is not yet a way for dependency management tools to report that a non-"
+"latest version is still supported, shifting the responsibility to users to "
+"notice this in documentation."
+msgstr ""
+
+#: src/reference/rust-version.md:160
+msgid "For example, a Rust version support policy could look like:"
+msgstr ""
+
+#: src/reference/rust-version.md:161
+msgid ""
+"The development branch tracks to the latest stable release from the Rust "
+"Project, updated when needed"
+msgstr ""
+
+#: src/reference/rust-version.md:162
+msgid "The minor version will be raised when changing `rust-version`"
+msgstr ""
+
+#: src/reference/rust-version.md:163
+msgid ""
+"The project supports every version for this calendar year, with another year "
+"grace window"
+msgstr ""
+
+#: src/reference/rust-version.md:164
+msgid ""
+"The last minor version that supports a supported Rust version will receive "
+"community provided bug fixes"
+msgstr ""
+
+#: src/reference/rust-version.md:165
+msgid ""
+"Fixes must be backported to all supported minor releases between the "
+"development branch and the needed supported Rust version"
+msgstr ""
