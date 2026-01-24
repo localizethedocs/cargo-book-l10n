@@ -1,0 +1,138 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:36:13Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/pkgid-spec.md:1
+msgid "Package ID Specifications"
+msgstr "軟體包 ID 規範"
+
+#: src/reference/pkgid-spec.md:3
+msgid "Package ID specifications"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:5
+msgid ""
+"Subcommands of Cargo frequently need to refer to a particular package within "
+"a dependency graph for various operations like updating, cleaning, building, "
+"etc. To solve this problem, Cargo supports Package ID Specifications. A "
+"specification is a string which is used to uniquely refer to one package "
+"within a graph of packages."
+msgstr ""
+
+#: src/reference/pkgid-spec.md:11
+msgid "Specification grammar"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:13
+msgid "The formal grammar for a Package Id Specification is:"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:15
+msgid ""
+"```notrust\n"
+"pkgid := pkgname\n"
+"       | [ proto \"://\" ] hostname-and-path [ \"#\" ( pkgname | semver ) ]\n"
+"pkgname := name [ \":\" semver ]\n"
+"\n"
+"proto := \"http\" | \"git\" | ...\n"
+"```"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:23
+msgid "Here, brackets indicate that the contents are optional."
+msgstr ""
+
+#: src/reference/pkgid-spec.md:25
+msgid "Example specifications"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:27
+msgid ""
+"These could all be references to a package `foo` version `1.2.3` from the "
+"registry at `crates.io`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:30
+msgid "pkgid"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:30
+msgid "name"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:30
+msgid "version"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:30
+msgid "url"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:32 src/reference/pkgid-spec.md:33
+#: src/reference/pkgid-spec.md:34 src/reference/pkgid-spec.md:35
+#: src/reference/pkgid-spec.md:36 src/reference/pkgid-spec.md:37
+msgid "`foo`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:32 src/reference/pkgid-spec.md:33
+#: src/reference/pkgid-spec.md:34
+msgid "`*`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:33
+msgid "`foo:1.2.3`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:33 src/reference/pkgid-spec.md:35
+#: src/reference/pkgid-spec.md:36 src/reference/pkgid-spec.md:37
+msgid "`1.2.3`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:34
+msgid "`crates.io/foo`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:34 src/reference/pkgid-spec.md:35
+msgid "`*://crates.io/foo`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:35
+msgid "`crates.io/foo#1.2.3`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:36
+msgid "`crates.io/bar#foo:1.2.3`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:36
+msgid "`*://crates.io/bar`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:37
+msgid "`http://crates.io/foo#1.2.3`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:37
+msgid "`http://crates.io/foo`"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:39
+msgid "Brevity of specifications"
+msgstr ""
+
+#: src/reference/pkgid-spec.md:41
+msgid ""
+"The goal of this is to enable both succinct and exhaustive syntaxes for "
+"referring to packages in a dependency graph. Ambiguous references may refer "
+"to one or more packages. Most commands generate an error if more than one "
+"package could be referred to with the same specification."
+msgstr ""
