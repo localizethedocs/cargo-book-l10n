@@ -1,0 +1,623 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:28:45Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/cargo-targets.md:1
+msgid "Cargo Targets"
+msgstr ""
+
+#: src/reference/cargo-targets.md:3
+msgid ""
+"Cargo packages consist of _targets_ which correspond to source files which "
+"can be compiled into a crate. Packages can have [library](#library), [binary]"
+"(#binaries), [example](#examples), [test](#tests), and [benchmark]"
+"(#benchmarks) targets. The list of targets can be configured in the `Cargo."
+"toml` manifest, often [inferred automatically](#target-auto-discovery) by "
+"the [directory layout](../guide/project-layout.md) of the source files."
+msgstr ""
+
+#: src/reference/cargo-targets.md:10
+msgid ""
+"See [Configuring a target](#configuring-a-target) below for details on "
+"configuring the settings for a target."
+msgstr ""
+
+#: src/reference/cargo-targets.md:13
+msgid "Library"
+msgstr ""
+
+#: src/reference/cargo-targets.md:15
+msgid ""
+"The library target defines a \"library\" that can be used and linked by "
+"other libraries and executables. The filename defaults to `src/lib.rs`, and "
+"the name of the library defaults to the name of the package, with any dashes "
+"replaced with underscores. A package can have only one library. The settings "
+"for the library can be [customized](#configuring-a-target) in the `[lib]` "
+"table in `Cargo.toml`."
+msgstr ""
+
+#: src/reference/cargo-targets.md:21
+msgid ""
+"```toml\n"
+"# Example of customizing the library in Cargo.toml.\n"
+"[lib]\n"
+"crate-type = [\"cdylib\"]\n"
+"bench = false\n"
+"```"
+msgstr ""
+
+#: src/reference/cargo-targets.md:28
+msgid "Binaries"
+msgstr ""
+
+#: src/reference/cargo-targets.md:30
+msgid ""
+"Binary targets are executable programs that can be run after being compiled. "
+"A binary's source can be `src/main.rs` and/or stored in the [`src/bin/` "
+"directory](../guide/project-layout.md). For `src/main.rs`, the default "
+"binary name is the package name. The settings for each binary can be "
+"[customized](#configuring-a-target) in the`[[bin]]` tables in `Cargo.toml`."
+msgstr ""
+
+#: src/reference/cargo-targets.md:36
+msgid ""
+"Binaries can use the public API of the package's library. They are also "
+"linked with the [`[dependencies]`](specifying-dependencies.md) defined in "
+"`Cargo.toml`."
+msgstr ""
+
+#: src/reference/cargo-targets.md:39
+msgid ""
+"You can run individual binaries with the [`cargo run`](../commands/cargo-run."
+"md) command with the `--bin <bin-name>` option. [`cargo install`](../"
+"commands/cargo-install.md) can be used to copy the executable to a common "
+"location."
+msgstr ""
+
+#: src/reference/cargo-targets.md:43
+msgid ""
+"```toml\n"
+"# Example of customizing binaries in Cargo.toml.\n"
+"[[bin]]\n"
+"name = \"cool-tool\"\n"
+"test = false\n"
+"bench = false\n"
+"\n"
+"[[bin]]\n"
+"name = \"frobnicator\"\n"
+"required-features = [\"frobnicate\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/cargo-targets.md:55
+msgid "Examples"
+msgstr ""
+
+#: src/reference/cargo-targets.md:57
+msgid ""
+"Files located under the [`examples` directory](../guide/project-layout.md) "
+"are example uses of the functionality provided by the library. When "
+"compiled, they are placed in the [`target/debug/examples` directory](build-"
+"cache.md)."
+msgstr ""
+
+#: src/reference/cargo-targets.md:61
+msgid ""
+"Examples can use the public API of the package's library. They are also "
+"linked with the [`[dependencies]`](specifying-dependencies.md) and [`[dev-"
+"dependencies]`](specifying-dependencies.md#development-dependencies) defined "
+"in `Cargo.toml`."
+msgstr ""
+
+#: src/reference/cargo-targets.md:65
+msgid ""
+"By default, examples are executable binaries (with a `main()` function). You "
+"can specify the [`crate-type` field](#the-crate-type-field) to make an "
+"example be compiled as a library:"
+msgstr ""
+
+#: src/reference/cargo-targets.md:69
+msgid ""
+"```toml\n"
+"[[example]]\n"
+"name = \"foo\"\n"
+"crate-type = [\"staticlib\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/cargo-targets.md:75
+msgid ""
+"You can run individual executable examples with the [`cargo run`](../"
+"commands/cargo-run.md) command with the `--example <example-name>` option. "
+"Library examples can be built with [`cargo build`](../commands/cargo-build."
+"md) with the `--example <example-name>` option. [`cargo install`](../"
+"commands/cargo-install.md) with the `--example <example-name>` option can be "
+"used to copy executable binaries to a common location. Examples are compiled "
+"by [`cargo test`](../commands/cargo-test.md) by default to protect them from "
+"bit-rotting. Set [the `test` field](#the-test-field) to `true` if you have "
+"`#[test]` functions in the example that you want to run with [`cargo test`]"
+"(../commands/cargo-test.md)."
+msgstr ""
+
+#: src/reference/cargo-targets.md:84
+msgid "Tests"
+msgstr ""
+
+#: src/reference/cargo-targets.md:86
+msgid "There are two styles of tests within a Cargo project:"
+msgstr ""
+
+#: src/reference/cargo-targets.md:88
+msgid ""
+"_Unit tests_ which are functions marked with the [`#[test]` attribute](../../"
+"reference/attributes/testing.html#the-test-attribute) located within your "
+"library or binaries (or any target enabled with [the `test` field](#the-test-"
+"field)). These tests have access to private APIs located within the target "
+"they are defined in."
+msgstr ""
+
+#: src/reference/cargo-targets.md:92
+msgid ""
+"_Integration tests_ which is a separate executable binary, also containing "
+"`#[test]` functions, which is linked with the project's library and has "
+"access to its _public_ API."
+msgstr ""
+
+#: src/reference/cargo-targets.md:96
+msgid ""
+"Tests are run with the [`cargo test`](../commands/cargo-test.md) command. By "
+"default, Cargo and `rustc` use the [libtest harness](../../rustc/tests/index."
+"html) which is responsible for collecting functions annotated with the "
+"[`#[test]` attribute](../../reference/attributes/testing.html#the-test-"
+"attribute) and executing them in parallel, reporting the success and failure "
+"of each test. See [the `harness` field](#the-harness-field) if you want to "
+"use a different harness or test strategy."
+msgstr ""
+
+#: src/reference/cargo-targets.md:103
+msgid ""
+"**Note**: There is another special style of test in Cargo: [documentation "
+"tests](../../rustdoc/documentation-tests.html). They are handled by "
+"`rustdoc` and have a slightly different execution model. For more "
+"information, please see [`cargo test`](../commands/cargo-test."
+"md#documentation-tests)."
+msgstr ""
+
+#: src/reference/cargo-targets.md:111
+msgid "Integration tests"
+msgstr ""
+
+#: src/reference/cargo-targets.md:113
+msgid ""
+"Files located under the [`tests` directory](../guide/project-layout.md) are "
+"integration tests. When you run [`cargo test`](../commands/cargo-test.md), "
+"Cargo will compile each of these files as a separate crate, and execute them."
+msgstr ""
+
+#: src/reference/cargo-targets.md:117
+msgid ""
+"Integration tests can use the public API of the package's library. They are "
+"also linked with the [`[dependencies]`](specifying-dependencies.md) and "
+"[`[dev-dependencies]`](specifying-dependencies.md#development-dependencies) "
+"defined in `Cargo.toml`."
+msgstr ""
+
+#: src/reference/cargo-targets.md:121
+msgid ""
+"If you want to share code among multiple integration tests, you can place it "
+"in a separate module such as `tests/common/mod.rs` and then put `mod common;"
+"` in each test to import it."
+msgstr ""
+
+#: src/reference/cargo-targets.md:125
+msgid ""
+"Each integration test results in a separate executable binary, and [`cargo "
+"test`](../commands/cargo-test.md) will run them serially. In some cases this "
+"can be inefficient, as it can take longer to compile, and may not make full "
+"use of multiple CPUs when running the tests. If you have a lot of "
+"integration tests, you may want to consider creating a single integration "
+"test, and split the tests into multiple modules. The libtest harness will "
+"automatically find all of the `#[test]` annotated functions and run them in "
+"parallel. You can pass module names to [`cargo test`](../commands/cargo-test."
+"md) to only run the tests within that module."
+msgstr ""
+
+#: src/reference/cargo-targets.md:134
+msgid ""
+"Binary targets are automatically built if there is an integration test. This "
+"allows an integration test to execute the binary to exercise and test its "
+"behavior. The `CARGO_BIN_EXE_<name>` [environment variable](environment-"
+"variables.md#environment-variables-cargo-sets-for-crates) is set when the "
+"integration test is built so that it can use the [`env` macro](../../std/"
+"macro.env.html) to locate the executable."
+msgstr ""
+
+#: src/reference/cargo-targets.md:143
+msgid "Benchmarks"
+msgstr ""
+
+#: src/reference/cargo-targets.md:145
+msgid ""
+"Benchmarks provide a way to test the performance of your code using the "
+"[`cargo bench`](../commands/cargo-bench.md) command. They follow the same "
+"structure as [tests](#tests), with each benchmark function annotated with "
+"the `#[bench]` attribute. Similarly to tests:"
+msgstr ""
+
+#: src/reference/cargo-targets.md:150
+msgid ""
+"Benchmarks are placed in the [`benches` directory](../guide/project-layout."
+"md)."
+msgstr ""
+
+#: src/reference/cargo-targets.md:151
+msgid ""
+"Benchmark functions defined in libraries and binaries have access to the "
+"_private_ API within the target they are defined in. Benchmarks in the "
+"`benches` directory may use the _public_ API."
+msgstr ""
+
+#: src/reference/cargo-targets.md:154
+msgid ""
+"[The `bench` field](#the-bench-field) can be used to define which targets "
+"are benchmarked by default."
+msgstr ""
+
+#: src/reference/cargo-targets.md:156
+msgid ""
+"[The `harness` field](#the-harness-field) can be used to disable the built-"
+"in harness."
+msgstr ""
+
+#: src/reference/cargo-targets.md:159
+msgid ""
+"**Note**: The [`#[bench]` attribute](../../unstable-book/library-features/"
+"test.html) is currently unstable and only available on the [nightly channel]"
+"(../../book/appendix-07-nightly-rust.html). There are some packages "
+"available on [crates.io](https://crates.io/keywords/benchmark) that may help "
+"with running benchmarks on the stable channel, such as [Criterion](https://"
+"crates.io/crates/criterion)."
+msgstr ""
+
+#: src/reference/cargo-targets.md:166
+msgid "Configuring a target"
+msgstr ""
+
+#: src/reference/cargo-targets.md:168
+msgid ""
+"All of the  `[lib]`, `[[bin]]`, `[[example]]`, `[[test]]`, and `[[bench]]` "
+"sections in `Cargo.toml` support similar configuration for specifying how a "
+"target should be built. The double-bracket sections like `[[bin]]` are "
+"[array-of-table of TOML](https://toml.io/en/v1.0.0-rc.3#array-of-tables), "
+"which means you can write more than one `[[bin]]` section to make several "
+"executables in your crate. You can only specify one library, so `[lib]` is a "
+"normal TOML table."
+msgstr ""
+
+#: src/reference/cargo-targets.md:176
+msgid ""
+"The following is an overview of the TOML settings for each target, with each "
+"field described in detail below."
+msgstr ""
+
+#: src/reference/cargo-targets.md:179
+msgid ""
+"```toml\n"
+"[lib]\n"
+"name = \"foo\"           # The name of the target.\n"
+"path = \"src/lib.rs\"    # The source file of the target.\n"
+"test = true            # Is tested by default.\n"
+"doctest = true         # Documentation examples are tested by default.\n"
+"bench = true           # Is benchmarked by default.\n"
+"doc = true             # Is documented by default.\n"
+"proc-macro = false     # Set to `true` for a proc-macro library.\n"
+"harness = true         # Use libtest harness.\n"
+"crate-type = [\"lib\"]   # The crate types to generate.\n"
+"required-features = [] # Features required to build this target (N/A for "
+"lib).\n"
+"```"
+msgstr ""
+
+#: src/reference/cargo-targets.md:193
+msgid "The `name` field"
+msgstr ""
+
+#: src/reference/cargo-targets.md:195
+msgid ""
+"The `name` field specifies the name of the target, which corresponds to the "
+"filename of the artifact that will be generated. For a library, this is the "
+"crate name that dependencies will use to reference it."
+msgstr ""
+
+#: src/reference/cargo-targets.md:199
+msgid ""
+"For the library target, this defaults to the name of the package , with any "
+"dashes replaced with underscores. For the default binary (`src/main.rs`), it "
+"also defaults to the name of the package, with no replacement for dashes. "
+"For [auto discovered](#target-auto-discovery) targets, it defaults to the "
+"directory or file name."
+msgstr ""
+
+#: src/reference/cargo-targets.md:205
+msgid "This is required for all targets except `[lib]`."
+msgstr ""
+
+#: src/reference/cargo-targets.md:207
+msgid "The `path` field"
+msgstr ""
+
+#: src/reference/cargo-targets.md:209
+msgid ""
+"The `path` field specifies where the source for the crate is located, "
+"relative to the `Cargo.toml` file."
+msgstr ""
+
+#: src/reference/cargo-targets.md:212
+msgid ""
+"If not specified, the [inferred path](#target-auto-discovery) is used based "
+"on the target name."
+msgstr ""
+
+#: src/reference/cargo-targets.md:215
+msgid "The `test` field"
+msgstr ""
+
+#: src/reference/cargo-targets.md:217
+msgid ""
+"The `test` field indicates whether or not the target is tested by default by "
+"[`cargo test`](../commands/cargo-test.md). The default is `true` for lib, "
+"bins, and tests."
+msgstr ""
+
+#: src/reference/cargo-targets.md:220
+msgid ""
+"**Note**: Examples are built by [`cargo test`](../commands/cargo-test.md) by "
+"default to ensure they continue to compile, but they are not _tested_ by "
+"default. Setting `test = true` for an example will also build it as a test "
+"and run any [`#[test]`](../../reference/attributes/testing.html#the-test-"
+"attribute) functions defined in the example."
+msgstr ""
+
+#: src/reference/cargo-targets.md:225
+msgid "The `doctest` field"
+msgstr ""
+
+#: src/reference/cargo-targets.md:227
+msgid ""
+"The `doctest` field indicates whether or not [documentation examples](../../"
+"rustdoc/documentation-tests.html) are tested by default by [`cargo test`](../"
+"commands/cargo-test.md). This is only relevant for libraries, it has no "
+"effect on other sections. The default is `true` for the library."
+msgstr ""
+
+#: src/reference/cargo-targets.md:231
+msgid "The `bench` field"
+msgstr ""
+
+#: src/reference/cargo-targets.md:233
+msgid ""
+"The `bench` field indicates whether or not the target is benchmarked by "
+"default by [`cargo bench`](../commands/cargo-bench.md). The default is "
+"`true` for lib, bins, and benchmarks."
+msgstr ""
+
+#: src/reference/cargo-targets.md:237
+msgid "The `doc` field"
+msgstr ""
+
+#: src/reference/cargo-targets.md:239
+msgid ""
+"The `doc` field indicates whether or not the target is included in the "
+"documentation generated by [`cargo doc`](../commands/cargo-doc.md) by "
+"default. The default is `true` for libraries and binaries."
+msgstr ""
+
+#: src/reference/cargo-targets.md:243
+msgid ""
+"**Note**: The binary will be skipped if its name is the same as the lib "
+"target."
+msgstr ""
+
+#: src/reference/cargo-targets.md:246
+msgid "The `plugin` field"
+msgstr ""
+
+#: src/reference/cargo-targets.md:248
+msgid "This option is deprecated and unused."
+msgstr ""
+
+#: src/reference/cargo-targets.md:250
+msgid "The `proc-macro` field"
+msgstr ""
+
+#: src/reference/cargo-targets.md:252
+msgid ""
+"The `proc-macro` field indicates that the library is a [procedural macro]"
+"(../../book/ch19-06-macros.html) ([reference](../../reference/procedural-"
+"macros.html)). This is only valid for the `[lib]` target."
+msgstr ""
+
+#: src/reference/cargo-targets.md:256
+msgid "The `harness` field"
+msgstr ""
+
+#: src/reference/cargo-targets.md:258
+msgid ""
+"The `harness` field indicates that the [`--test` flag](../../rustc/command-"
+"line-arguments.html#option-test) will be passed to `rustc` which will "
+"automatically include the libtest library which is the driver for collecting "
+"and running tests marked with the [`#[test]` attribute](../../reference/"
+"attributes/testing.html#the-test-attribute) or benchmarks with the "
+"`#[bench]` attribute. The default is `true` for all targets."
+msgstr ""
+
+#: src/reference/cargo-targets.md:264
+msgid ""
+"If set to `false`, then you are responsible for defining a `main()` function "
+"to run tests and benchmarks."
+msgstr ""
+
+#: src/reference/cargo-targets.md:267
+msgid ""
+"Tests have the [`cfg(test)` conditional expression](../../reference/"
+"conditional-compilation.html#test) enabled whether or not the harness is "
+"enabled."
+msgstr ""
+
+#: src/reference/cargo-targets.md:270
+msgid "The `crate-type` field"
+msgstr ""
+
+#: src/reference/cargo-targets.md:272
+msgid ""
+"The `crate-type` field defines the [crate types](../../reference/linkage."
+"html) that will be generated by the target. It is an array of strings, "
+"allowing you to specify multiple crate types for a single target. This can "
+"only be specified for libraries and examples. Binaries, tests, and "
+"benchmarks are always the \"bin\" crate type. The defaults are:"
+msgstr ""
+
+#: src/reference/cargo-targets.md:278
+msgid "Target"
+msgstr ""
+
+#: src/reference/cargo-targets.md:278
+msgid "Crate Type"
+msgstr ""
+
+#: src/reference/cargo-targets.md:280
+msgid "Normal library"
+msgstr ""
+
+#: src/reference/cargo-targets.md:280
+msgid "`\"lib\"`"
+msgstr ""
+
+#: src/reference/cargo-targets.md:281
+msgid "Proc-macro library"
+msgstr ""
+
+#: src/reference/cargo-targets.md:281
+msgid "`\"proc-macro\"`"
+msgstr ""
+
+#: src/reference/cargo-targets.md:282
+msgid "Example"
+msgstr ""
+
+#: src/reference/cargo-targets.md:282
+msgid "`\"bin\"`"
+msgstr ""
+
+#: src/reference/cargo-targets.md:284
+msgid ""
+"The available options are `bin`, `lib`, `rlib`, `dylib`, `cdylib`, "
+"`staticlib`, and `proc-macro`. You can read more about the different crate "
+"types in the [Rust Reference Manual](../../reference/linkage.html)."
+msgstr ""
+
+#: src/reference/cargo-targets.md:288
+msgid "The `required-features` field"
+msgstr ""
+
+#: src/reference/cargo-targets.md:290
+msgid ""
+"The `required-features` field specifies which [features](features.md) the "
+"target needs in order to be built. If any of the required features are not "
+"enabled, the target will be skipped. This is only relevant for the "
+"`[[bin]]`, `[[bench]]`, `[[test]]`, and `[[example]]` sections, it has no "
+"effect on `[lib]`."
+msgstr ""
+
+#: src/reference/cargo-targets.md:295
+msgid ""
+"```toml\n"
+"[features]\n"
+"# ...\n"
+"postgres = []\n"
+"sqlite = []\n"
+"tools = []\n"
+"\n"
+"[[bin]]\n"
+"name = \"my-pg-tool\"\n"
+"required-features = [\"postgres\", \"tools\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/cargo-targets.md:307
+msgid "The `edition` field"
+msgstr ""
+
+#: src/reference/cargo-targets.md:309
+msgid ""
+"The `edition` field defines the [Rust edition](../../edition-guide/index."
+"html) the target will use. If not specified, it defaults to the [`edition` "
+"field](manifest.md#the-edition-field) for the `[package]`."
+msgstr ""
+
+#: src/reference/cargo-targets.md:313
+msgid ""
+"**Note:** This field is deprecated and will be removed in a future Edition"
+msgstr ""
+
+#: src/reference/cargo-targets.md:315
+msgid "Target auto-discovery"
+msgstr ""
+
+#: src/reference/cargo-targets.md:317
+msgid ""
+"By default, Cargo automatically determines the targets to build based on the "
+"[layout of the files](../guide/project-layout.md) on the filesystem. The "
+"target configuration tables, such as `[lib]`, `[[bin]]`, `[[test]]`, "
+"`[[bench]]`, or `[[example]]`, can be used to add additional targets that "
+"don't follow the standard directory layout."
+msgstr ""
+
+#: src/reference/cargo-targets.md:323
+msgid ""
+"The automatic target discovery can be disabled so that only manually "
+"configured targets will be built. Setting the keys `autolib`, `autobins`, "
+"`autoexamples`, `autotests`, or `autobenches` to `false` in the `[package]` "
+"section will disable auto-discovery of the corresponding target type."
+msgstr ""
+
+#: src/reference/cargo-targets.md:338
+msgid ""
+"Disabling automatic discovery should only be needed for specialized "
+"situations. For example, if you have a library where you want a _module_ "
+"named `bin`, this would present a problem because Cargo would usually "
+"attempt to compile anything in the `bin` directory as an executable. Here is "
+"a sample layout of this scenario:"
+msgstr ""
+
+#: src/reference/cargo-targets.md:352
+msgid ""
+"To prevent Cargo from inferring `src/bin/mod.rs` as an executable, set "
+"`autobins = false` in `Cargo.toml` to disable auto-discovery:"
+msgstr ""
+
+#: src/reference/cargo-targets.md:361
+msgid ""
+"**Note**: For packages with the 2015 edition, the default for auto-discovery "
+"is `false` if at least one target is manually defined in `Cargo.toml`. "
+"Beginning with the 2018 edition, the default is always `true`."
+msgstr ""
+
+#: src/reference/cargo-targets.md:365
+msgid ""
+"**MSRV:** Respected as of 1.27 for `autobins`, `autoexamples`, `autotests`, "
+"and `autobenches`"
+msgstr ""
+
+#: src/reference/cargo-targets.md:367
+msgid "**MSRV:** Respected as of 1.83 for `autolib`"
+msgstr ""
