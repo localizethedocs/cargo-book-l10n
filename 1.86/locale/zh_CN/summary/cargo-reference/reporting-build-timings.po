@@ -1,0 +1,149 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:53:39Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/timings.md:1
+msgid "Reporting build timings"
+msgstr ""
+
+#: src/reference/timings.md:2
+msgid ""
+"The `--timings` option gives some information about how long each "
+"compilation takes, and tracks concurrency information over time."
+msgstr ""
+
+#: src/reference/timings.md:9
+msgid ""
+"This writes an HTML report in `target/cargo-timings/cargo-timing.html`. This "
+"also writes a copy of the report to the same directory with a timestamp in "
+"the filename, if you want to look at older runs."
+msgstr ""
+
+#: src/reference/timings.md:13
+msgid "Reading the graphs"
+msgstr ""
+
+#: src/reference/timings.md:15
+msgid "There are two tables and two graphs in the output."
+msgstr ""
+
+#: src/reference/timings.md:17
+msgid ""
+"The first table displays the build information of the project, including the "
+"number of units built, the maximum number of concurrency, build time, and "
+"the version information of the currently used compiler."
+msgstr ""
+
+#: src/reference/timings.md:21
+msgid "![build-info](../images/build-info.png)"
+msgstr ""
+
+#: src/reference/timings.md:23
+msgid ""
+"The \"unit\" graph shows the duration of each unit over time. A \"unit\" is "
+"a single compiler invocation. There are lines that show which additional "
+"units are \"unlocked\" when a unit finishes. That is, it shows the new units "
+"that are now allowed to run because their dependencies are all finished. "
+"Hover the mouse over a unit to highlight the lines. This can help visualize "
+"the critical path of dependencies. This may change between runs because the "
+"units may finish in different orders."
+msgstr ""
+
+#: src/reference/timings.md:31
+msgid ""
+"The \"codegen\" times are highlighted in a lavender color. In some cases, "
+"build pipelining allows units to start when their dependencies are "
+"performing code generation. This information is not always displayed (for "
+"example, binary units do not show when code generation starts)."
+msgstr ""
+
+#: src/reference/timings.md:36
+msgid ""
+"The \"custom build\" units are `build.rs` scripts, which when run are "
+"highlighted in orange."
+msgstr ""
+
+#: src/reference/timings.md:39
+msgid "![build-unit-time](../images/build-unit-time.png)"
+msgstr ""
+
+#: src/reference/timings.md:41
+msgid ""
+"The second graph shows Cargo's concurrency over time. The background "
+"indicates CPU usage. The three lines are:"
+msgstr ""
+
+#: src/reference/timings.md:43
+msgid ""
+"\"Waiting\" (red) --- This is the number of units waiting for a CPU slot to "
+"open."
+msgstr ""
+
+#: src/reference/timings.md:45
+msgid ""
+"\"Inactive\" (blue) --- This is the number of units that are waiting for "
+"their dependencies to finish."
+msgstr ""
+
+#: src/reference/timings.md:47
+msgid "\"Active\" (green) --- This is the number of units currently running."
+msgstr ""
+
+#: src/reference/timings.md:49
+msgid ""
+"![cargo-concurrency-over-time](../images/cargo-concurrency-over-time.png)"
+msgstr ""
+
+#: src/reference/timings.md:51
+msgid ""
+"Note: This does not show the concurrency in the compiler itself. `rustc` "
+"coordinates with Cargo via the \"job server\" to stay within the concurrency "
+"limit. This currently mostly applies to the code generation phase."
+msgstr ""
+
+#: src/reference/timings.md:55
+msgid "Tips for addressing compile times:"
+msgstr ""
+
+#: src/reference/timings.md:56
+msgid "Look for slow dependencies."
+msgstr ""
+
+#: src/reference/timings.md:57
+msgid "Check if they have features that you may wish to consider disabling."
+msgstr ""
+
+#: src/reference/timings.md:58
+msgid "Consider trying to remove the dependency completely."
+msgstr ""
+
+#: src/reference/timings.md:59
+msgid ""
+"Look for a crate being built multiple times with different versions. Try to "
+"remove the older versions from the dependency graph."
+msgstr ""
+
+#: src/reference/timings.md:61
+msgid "Split large crates into smaller pieces."
+msgstr ""
+
+#: src/reference/timings.md:62
+msgid ""
+"If there are a large number of crates bottlenecked on a single crate, focus "
+"your attention on improving that one crate to improve parallelism."
+msgstr ""
+
+#: src/reference/timings.md:65
+msgid ""
+"The last table lists the total time and \"codegen\" time spent on each unit, "
+"as well as the features that were enabled during each unit's compilation."
+msgstr ""
