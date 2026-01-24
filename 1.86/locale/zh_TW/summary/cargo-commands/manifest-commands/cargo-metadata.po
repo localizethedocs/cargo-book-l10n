@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/commands/cargo-metadata.md:1
@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:3
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-metadata.md:5
 msgid "cargo-metadata --- Machine-readable metadata about the current package"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:7
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-metadata.md:9
 msgid "`cargo metadata` \\[_options_\\]"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:11
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-metadata.md:13
 msgid ""
@@ -57,7 +57,7 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:24
 msgid "OUTPUT FORMAT"
-msgstr ""
+msgstr "輸出格式"
 
 #: src/commands/cargo-metadata.md:26
 msgid "Compatibility"
@@ -865,11 +865,11 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:344
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-metadata.md:346
 msgid "Output Options"
-msgstr ""
+msgstr "輸出選項"
 
 #: src/commands/cargo-metadata.md:371
 msgid "Feature Selection"
@@ -890,11 +890,11 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:399
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-metadata.md:430
 msgid "Manifest Options"
-msgstr ""
+msgstr "清單選項"
 
 #: src/commands/cargo-metadata.md:480
 msgid "Common Options"
@@ -902,7 +902,7 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:520
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-metadata.md:522
 msgid ""
@@ -912,19 +912,19 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:525
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-metadata.md:527
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-metadata.md:528
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-metadata.md:530
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-metadata.md:532
 msgid "Output JSON about the current package:"
@@ -932,7 +932,7 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:536
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-metadata.md:538
 msgid ""
