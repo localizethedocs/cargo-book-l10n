@@ -5,27 +5,27 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/SUMMARY.md:1
 msgid "Summary"
-msgstr ""
+msgstr "摘要"
 
 #: src/SUMMARY.md:3
 msgid "Introduction"
-msgstr ""
+msgstr "介紹"
 
 #: src/SUMMARY.md:5
 msgid "Getting Started"
-msgstr ""
+msgstr "開始使用"
 
 #: src/SUMMARY.md:6
 msgid "Installation"
-msgstr ""
+msgstr "安裝"
 
 #: src/SUMMARY.md:7
 msgid "First Steps with Cargo"
@@ -33,15 +33,15 @@ msgstr ""
 
 #: src/SUMMARY.md:9
 msgid "Cargo Guide"
-msgstr ""
+msgstr "Cargo 指南"
 
 #: src/SUMMARY.md:10
 msgid "Why Cargo Exists"
-msgstr ""
+msgstr "為什麼 Cargo 會存在"
 
 #: src/SUMMARY.md:11
 msgid "Creating a New Package"
-msgstr ""
+msgstr "建立新軟體包"
 
 #: src/SUMMARY.md:12
 msgid "Working on an Existing Package"
@@ -53,7 +53,7 @@ msgstr ""
 
 #: src/SUMMARY.md:14
 msgid "Package Layout"
-msgstr ""
+msgstr "軟體包配置"
 
 #: src/SUMMARY.md:15
 msgid "Cargo.toml vs Cargo.lock"
@@ -61,11 +61,11 @@ msgstr ""
 
 #: src/SUMMARY.md:16
 msgid "Tests"
-msgstr ""
+msgstr "測試"
 
 #: src/SUMMARY.md:17
 msgid "Continuous Integration"
-msgstr ""
+msgstr "持續整合"
 
 #: src/SUMMARY.md:18
 msgid "Cargo Home"
@@ -73,11 +73,11 @@ msgstr ""
 
 #: src/SUMMARY.md:19
 msgid "Build Cache"
-msgstr ""
+msgstr "建置快取"
 
 #: src/SUMMARY.md:21
 msgid "Cargo Reference"
-msgstr ""
+msgstr "Cargo 參考"
 
 #: src/SUMMARY.md:22
 msgid "Specifying Dependencies"
@@ -89,15 +89,15 @@ msgstr ""
 
 #: src/SUMMARY.md:24
 msgid "The Manifest Format"
-msgstr ""
+msgstr "清單格式"
 
 #: src/SUMMARY.md:25
 msgid "Cargo Targets"
-msgstr ""
+msgstr "Cargo 目標"
 
 #: src/SUMMARY.md:26
 msgid "Workspaces"
-msgstr ""
+msgstr "工作空間"
 
 #: src/SUMMARY.md:27
 msgid "Features"
@@ -113,27 +113,27 @@ msgstr ""
 
 #: src/SUMMARY.md:30
 msgid "Configuration"
-msgstr ""
+msgstr "組態"
 
 #: src/SUMMARY.md:31
 msgid "Environment Variables"
-msgstr ""
+msgstr "環境變數"
 
 #: src/SUMMARY.md:32
 msgid "Build Scripts"
-msgstr ""
+msgstr "建置腳本"
 
 #: src/SUMMARY.md:33
 msgid "Build Script Examples"
-msgstr ""
+msgstr "建置腳本範例"
 
 #: src/SUMMARY.md:34
 msgid "Publishing on crates.io"
-msgstr ""
+msgstr "在 creates.io 上發佈"
 
 #: src/SUMMARY.md:35
 msgid "Package ID Specifications"
-msgstr ""
+msgstr "軟體包 ID 規範"
 
 #: src/SUMMARY.md:36
 msgid "Source Replacement"
@@ -141,7 +141,7 @@ msgstr ""
 
 #: src/SUMMARY.md:37
 msgid "External Tools"
-msgstr ""
+msgstr "外部工具"
 
 #: src/SUMMARY.md:38
 msgid "Registries"
@@ -165,103 +165,103 @@ msgstr ""
 
 #: src/SUMMARY.md:44
 msgid "Cargo Commands"
-msgstr ""
+msgstr "Cargo 命令"
 
 #: src/SUMMARY.md:45
 msgid "General Commands"
-msgstr ""
+msgstr "一般命令"
 
 #: src/SUMMARY.md:46
 msgid "cargo"
-msgstr ""
+msgstr "cargo"
 
 #: src/SUMMARY.md:47
 msgid "cargo help"
-msgstr ""
+msgstr "cargo help"
 
 #: src/SUMMARY.md:48
 msgid "cargo version"
-msgstr ""
+msgstr "cargo version"
 
 #: src/SUMMARY.md:49
 msgid "Build Commands"
-msgstr ""
+msgstr "建置命令"
 
 #: src/SUMMARY.md:50
 msgid "cargo bench"
-msgstr ""
+msgstr "cargo bench"
 
 #: src/SUMMARY.md:51
 msgid "cargo build"
-msgstr ""
+msgstr "cargo build"
 
 #: src/SUMMARY.md:52
 msgid "cargo check"
-msgstr ""
+msgstr "cargo check"
 
 #: src/SUMMARY.md:53
 msgid "cargo clean"
-msgstr ""
+msgstr "cargo clean"
 
 #: src/SUMMARY.md:54
 msgid "cargo doc"
-msgstr ""
+msgstr "cargo doc"
 
 #: src/SUMMARY.md:55
 msgid "cargo fetch"
-msgstr ""
+msgstr "cargo fetch"
 
 #: src/SUMMARY.md:56
 msgid "cargo fix"
-msgstr ""
+msgstr "cargo fix"
 
 #: src/SUMMARY.md:57
 msgid "cargo run"
-msgstr ""
+msgstr "cargo run"
 
 #: src/SUMMARY.md:58
 msgid "cargo rustc"
-msgstr ""
+msgstr "cargo rustc"
 
 #: src/SUMMARY.md:59
 msgid "cargo rustdoc"
-msgstr ""
+msgstr "cargo rustdoc"
 
 #: src/SUMMARY.md:60
 msgid "cargo test"
-msgstr ""
+msgstr "cargo test"
 
 #: src/SUMMARY.md:61
 msgid "cargo report"
-msgstr ""
+msgstr "cargo report"
 
 #: src/SUMMARY.md:62
 msgid "Manifest Commands"
-msgstr ""
+msgstr "清單命令"
 
 #: src/SUMMARY.md:63
 msgid "cargo generate-lockfile"
-msgstr ""
+msgstr "cargo generate-lockfile"
 
 #: src/SUMMARY.md:64
 msgid "cargo locate-project"
-msgstr ""
+msgstr "cargo locate-project"
 
 #: src/SUMMARY.md:65
 msgid "cargo metadata"
-msgstr ""
+msgstr "cargo metadata"
 
 #: src/SUMMARY.md:66
 msgid "cargo pkgid"
-msgstr ""
+msgstr "cargo pkgid"
 
 #: src/SUMMARY.md:67
 msgid "cargo tree"
-msgstr ""
+msgstr "cargo tree"
 
 #: src/SUMMARY.md:68
 msgid "cargo update"
-msgstr ""
+msgstr "cargo update"
 
 #: src/SUMMARY.md:69
 msgid "cargo vendor"
@@ -297,7 +297,7 @@ msgstr ""
 
 #: src/SUMMARY.md:77
 msgid "Publishing Commands"
-msgstr ""
+msgstr "發布命令"
 
 #: src/SUMMARY.md:78
 msgid "cargo login"
