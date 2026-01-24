@@ -1,0 +1,705 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:28:18Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/profiles.md:1
+msgid "Profiles"
+msgstr ""
+
+#: src/reference/profiles.md:3
+msgid ""
+"Profiles provide a way to alter the compiler settings, influencing things "
+"like optimizations and debugging symbols."
+msgstr ""
+
+#: src/reference/profiles.md:6
+msgid ""
+"Cargo has 4 built-in profiles: `dev`, `release`, `test`, and `bench`. The "
+"profile is automatically chosen based on which command is being run if a "
+"profile is not specified on the command-line. In addition to the built-in "
+"profiles, custom user-defined profiles can also be specified."
+msgstr ""
+
+#: src/reference/profiles.md:11
+msgid ""
+"Profile settings can be changed in [`Cargo.toml`](manifest.md) with the "
+"`[profile]` table. Within each named profile, individual settings can be "
+"changed with key/value pairs like this:"
+msgstr ""
+
+#: src/reference/profiles.md:21
+msgid ""
+"Cargo only looks at the profile settings in the `Cargo.toml` manifest at the "
+"root of the workspace. Profile settings defined in dependencies will be "
+"ignored."
+msgstr ""
+
+#: src/reference/profiles.md:25
+msgid ""
+"Additionally, profiles can be overridden from a [config](config.md) "
+"definition. Specifying a profile in a config file or environment variable "
+"will override the settings from `Cargo.toml`."
+msgstr ""
+
+#: src/reference/profiles.md:31
+msgid "Profile settings"
+msgstr ""
+
+#: src/reference/profiles.md:33
+msgid ""
+"The following is a list of settings that can be controlled in a profile."
+msgstr ""
+
+#: src/reference/profiles.md:35
+msgid "opt-level"
+msgstr ""
+
+#: src/reference/profiles.md:37
+msgid ""
+"The `opt-level` setting controls the [`-C opt-level` flag](../../rustc/"
+"codegen-options/index.html#opt-level) which controls the level of "
+"optimization. Higher optimization levels may produce faster runtime code at "
+"the expense of longer compiler times. Higher levels may also change and "
+"rearrange the compiled code which may make it harder to use with a debugger."
+msgstr ""
+
+#: src/reference/profiles.md:42 src/reference/profiles.md:68
+#: src/reference/profiles.md:127 src/reference/profiles.md:142
+#: src/reference/profiles.md:156 src/reference/profiles.md:180
+#: src/reference/profiles.md:207
+msgid "The valid options are:"
+msgstr ""
+
+#: src/reference/profiles.md:44
+msgid "`0`: no optimizations"
+msgstr ""
+
+#: src/reference/profiles.md:45
+msgid "`1`: basic optimizations"
+msgstr ""
+
+#: src/reference/profiles.md:46
+msgid "`2`: some optimizations"
+msgstr ""
+
+#: src/reference/profiles.md:47
+msgid "`3`: all optimizations"
+msgstr ""
+
+#: src/reference/profiles.md:48
+msgid "`\"s\"`: optimize for binary size"
+msgstr ""
+
+#: src/reference/profiles.md:49
+msgid ""
+"`\"z\"`: optimize for binary size, but also turn off loop vectorization."
+msgstr ""
+
+#: src/reference/profiles.md:51
+msgid ""
+"It is recommended to experiment with different levels to find the right "
+"balance for your project. There may be surprising results, such as level `3` "
+"being slower than `2`, or the `\"s\"` and `\"z\"` levels not being "
+"necessarily smaller. You may also want to reevaluate your settings over time "
+"as newer versions of `rustc` changes optimization behavior."
+msgstr ""
+
+#: src/reference/profiles.md:57
+msgid ""
+"See also [Profile Guided Optimization](../../rustc/profile-guided-"
+"optimization.html) for more advanced optimization techniques."
+msgstr ""
+
+#: src/reference/profiles.md:63
+msgid "debug"
+msgstr ""
+
+#: src/reference/profiles.md:65
+msgid ""
+"The `debug` setting controls the [`-C debuginfo` flag](../../rustc/codegen-"
+"options/index.html#debuginfo) which controls the amount of debug information "
+"included in the compiled binary."
+msgstr ""
+
+#: src/reference/profiles.md:70
+msgid "`0` or `false`: no debug info at all"
+msgstr ""
+
+#: src/reference/profiles.md:71
+msgid "`1`: line tables only"
+msgstr ""
+
+#: src/reference/profiles.md:72
+msgid "`2` or `true`: full debug info"
+msgstr ""
+
+#: src/reference/profiles.md:74
+msgid ""
+"You may wish to also configure the [`split-debuginfo`](#split-debuginfo) "
+"option depending on your needs as well."
+msgstr ""
+
+#: src/reference/profiles.md:79
+msgid "split-debuginfo"
+msgstr ""
+
+#: src/reference/profiles.md:81
+msgid ""
+"The `split-debuginfo` setting controls the [`-C split-debuginfo` flag](../../"
+"rustc/codegen-options/index.html#split-debuginfo) which controls whether "
+"debug information, if generated, is either placed in the executable itself "
+"or adjacent to it."
+msgstr ""
+
+#: src/reference/profiles.md:85
+msgid ""
+"This option is a string and acceptable values are the same as those the "
+"[compiler accepts](../../rustc/codegen-options/index.html#split-debuginfo). "
+"The default value for this option is `unpacked` on macOS for profiles that "
+"have debug information otherwise enabled. Otherwise the default for this "
+"option is [documented with rustc](../../rustc/codegen-options/index."
+"html#split-debuginfo) and is platform-specific. Some options are only "
+"available on the [nightly channel](../../book/appendix-07-nightly-rust."
+"html). The Cargo default may change in the future once more testing has been "
+"performed, and support for DWARF is stabilized."
+msgstr ""
+
+#: src/reference/profiles.md:96
+msgid "strip"
+msgstr ""
+
+#: src/reference/profiles.md:98
+msgid ""
+"The `strip` option controls the [`-C strip` flag](../../rustc/codegen-"
+"options/index.html#strip), which directs rustc to strip either symbols or "
+"debuginfo from a binary. This can be enabled like so:"
+msgstr ""
+
+#: src/reference/profiles.md:101
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"\n"
+"[profile.release]\n"
+"strip = \"debuginfo\"\n"
+"```"
+msgstr ""
+
+#: src/reference/profiles.md:109
+msgid ""
+"Possible string values of `strip` are `\"none\"`, `\"debuginfo\"`, and "
+"`\"symbols\"`. The default is `\"none\"`."
+msgstr ""
+
+#: src/reference/profiles.md:112
+msgid ""
+"You can also configure this option with the boolean values `true` or "
+"`false`. `strip = true` is equivalent to `strip = \"symbols\"`. `strip = "
+"false` is equivalent to `strip = \"none\"` and disables `strip` completely."
+msgstr ""
+
+#: src/reference/profiles.md:118
+msgid "debug-assertions"
+msgstr ""
+
+#: src/reference/profiles.md:120
+msgid ""
+"The `debug-assertions` setting controls the [`-C debug-assertions` flag]"
+"(../../rustc/codegen-options/index.html#debug-assertions) which turns "
+"`cfg(debug_assertions)` [conditional compilation](../../reference/"
+"conditional-compilation.md#debug_assertions) on or off. Debug assertions are "
+"intended to include runtime validation which is only available in debug/"
+"development builds. These may be things that are too expensive or otherwise "
+"undesirable in a release build. Debug assertions enables the [`debug_assert!"
+"` macro](../../std/macro.debug_assert.html) in the standard library."
+msgstr ""
+
+#: src/reference/profiles.md:129 src/reference/profiles.md:144
+#: src/reference/profiles.md:209
+msgid "`true`: enabled"
+msgstr ""
+
+#: src/reference/profiles.md:130 src/reference/profiles.md:145
+#: src/reference/profiles.md:210
+msgid "`false`: disabled"
+msgstr ""
+
+#: src/reference/profiles.md:136
+msgid "overflow-checks"
+msgstr ""
+
+#: src/reference/profiles.md:138
+msgid ""
+"The `overflow-checks` setting controls the [`-C overflow-checks` flag](../../"
+"rustc/codegen-options/index.html#overflow-checks) which controls the "
+"behavior of [runtime integer overflow](../../reference/expressions/operator-"
+"expr.md#overflow). When overflow-checks are enabled, a panic will occur on "
+"overflow."
+msgstr ""
+
+#: src/reference/profiles.md:150
+msgid "lto"
+msgstr ""
+
+#: src/reference/profiles.md:152
+msgid ""
+"The `lto` setting controls the [`-C lto` flag](../../rustc/codegen-options/"
+"index.html#lto) which controls LLVM's [link time optimizations](https://llvm."
+"org/docs/LinkTimeOptimization.html). LTO can produce better optimized code, "
+"using whole-program analysis, at the cost of longer linking time."
+msgstr ""
+
+#: src/reference/profiles.md:158
+msgid ""
+"`false`: Performs \"thin local LTO\" which performs \"thin\" LTO on the "
+"local crate only across its [codegen units](#codegen-units). No LTO is "
+"performed if codegen units is 1 or [opt-level](#opt-level) is 0."
+msgstr ""
+
+#: src/reference/profiles.md:161
+msgid ""
+"`true` or `\"fat\"`: Performs \"fat\" LTO which attempts to perform "
+"optimizations across all crates within the dependency graph."
+msgstr ""
+
+#: src/reference/profiles.md:163
+msgid ""
+"`\"thin\"`: Performs [\"thin\" LTO](http://blog.llvm.org/2016/06/thinlto-"
+"scalable-and-incremental-lto.html). This is similar to \"fat\", but takes "
+"substantially less time to run while still achieving performance gains "
+"similar to \"fat\"."
+msgstr ""
+
+#: src/reference/profiles.md:166
+msgid "`\"off\"`: Disables LTO."
+msgstr ""
+
+#: src/reference/profiles.md:168
+msgid ""
+"See also the [`-C linker-plugin-lto`](../../rustc/codegen-options/index."
+"html#linker-plugin-lto) `rustc` flag for cross-language LTO."
+msgstr ""
+
+#: src/reference/profiles.md:175
+msgid "panic"
+msgstr ""
+
+#: src/reference/profiles.md:177
+msgid ""
+"The `panic` setting controls the [`-C panic` flag](../../rustc/codegen-"
+"options/index.html#panic) which controls which panic strategy to use."
+msgstr ""
+
+#: src/reference/profiles.md:182
+msgid "`\"unwind\"`: Unwind the stack upon panic."
+msgstr ""
+
+#: src/reference/profiles.md:183
+msgid "`\"abort\"`: Terminate the process upon panic."
+msgstr ""
+
+#: src/reference/profiles.md:185
+msgid ""
+"When set to `\"unwind\"`, the actual value depends on the default of the "
+"target platform. For example, the NVPTX platform does not support unwinding, "
+"so it always uses `\"abort\"`."
+msgstr ""
+
+#: src/reference/profiles.md:189
+msgid ""
+"Tests, benchmarks, build scripts, and proc macros ignore the `panic` "
+"setting. The `rustc` test harness currently requires `unwind` behavior. See "
+"the [`panic-abort-tests`](unstable.md#panic-abort-tests) unstable flag which "
+"enables `abort` behavior."
+msgstr ""
+
+#: src/reference/profiles.md:193
+msgid ""
+"Additionally, when using the `abort` strategy and building a test, all of "
+"the dependencies will also be forced to build with the `unwind` strategy."
+msgstr ""
+
+#: src/reference/profiles.md:199
+msgid "incremental"
+msgstr ""
+
+#: src/reference/profiles.md:201
+msgid ""
+"The `incremental` setting controls the [`-C incremental` flag](../../rustc/"
+"codegen-options/index.html#incremental) which controls whether or not "
+"incremental compilation is enabled. Incremental compilation causes `rustc` "
+"to save additional information to disk which will be reused when recompiling "
+"the crate, improving re-compile times. The additional information is stored "
+"in the `target` directory."
+msgstr ""
+
+#: src/reference/profiles.md:212
+msgid ""
+"Incremental compilation is only used for workspace members and \"path\" "
+"dependencies."
+msgstr ""
+
+#: src/reference/profiles.md:215
+msgid ""
+"The incremental value can be overridden globally with the "
+"`CARGO_INCREMENTAL` [environment variable](environment-variables.md) or the "
+"[`build.incremental`](config.md#buildincremental) config variable."
+msgstr ""
+
+#: src/reference/profiles.md:222
+msgid "codegen-units"
+msgstr ""
+
+#: src/reference/profiles.md:224
+msgid ""
+"The `codegen-units` setting controls the [`-C codegen-units` flag](../../"
+"rustc/codegen-options/index.html#codegen-units) which controls how many "
+"\"code generation units\" a crate will be split into. More code generation "
+"units allows more of a crate to be processed in parallel possibly reducing "
+"compile time, but may produce slower code."
+msgstr ""
+
+#: src/reference/profiles.md:229
+msgid "This option takes an integer greater than 0."
+msgstr ""
+
+#: src/reference/profiles.md:231
+msgid ""
+"The default is 256 for [incremental](#incremental) builds, and 16 for non-"
+"incremental builds."
+msgstr ""
+
+#: src/reference/profiles.md:236
+msgid "rpath"
+msgstr ""
+
+#: src/reference/profiles.md:238
+msgid ""
+"The `rpath` setting controls the [`-C rpath` flag](../../rustc/codegen-"
+"options/index.html#rpath) which controls whether or not [`rpath`](https://en."
+"wikipedia.org/wiki/Rpath) is enabled."
+msgstr ""
+
+#: src/reference/profiles.md:244
+msgid "Default profiles"
+msgstr ""
+
+#: src/reference/profiles.md:246
+msgid "dev"
+msgstr ""
+
+#: src/reference/profiles.md:248
+msgid ""
+"The `dev` profile is used for normal development and debugging. It is the "
+"default for build commands like [`cargo build`](../commands/cargo-build.md), "
+"and is used for `cargo install --debug`."
+msgstr ""
+
+#: src/reference/profiles.md:251
+msgid "The default settings for the `dev` profile are:"
+msgstr ""
+
+#: src/reference/profiles.md:267
+msgid "release"
+msgstr ""
+
+#: src/reference/profiles.md:269
+msgid ""
+"The `release` profile is intended for optimized artifacts used for releases "
+"and in production. This profile is used when the `--release` flag is used, "
+"and is the default for [`cargo install`](../commands/cargo-install.md)."
+msgstr ""
+
+#: src/reference/profiles.md:273
+msgid "The default settings for the `release` profile are:"
+msgstr ""
+
+#: src/reference/profiles.md:289
+msgid "test"
+msgstr ""
+
+#: src/reference/profiles.md:291
+msgid ""
+"The `test` profile is the default profile used by [`cargo test`](../commands/"
+"cargo-test.md). The `test` profile inherits the settings from the [`dev`]"
+"(#dev) profile."
+msgstr ""
+
+#: src/reference/profiles.md:294
+msgid "bench"
+msgstr ""
+
+#: src/reference/profiles.md:296
+msgid ""
+"The `bench` profile is the default profile used by [`cargo bench`](../"
+"commands/cargo-bench.md). The `bench` profile inherits the settings from the "
+"[`release`](#release) profile."
+msgstr ""
+
+#: src/reference/profiles.md:299
+msgid "Build Dependencies"
+msgstr ""
+
+#: src/reference/profiles.md:301
+msgid ""
+"To compile quickly, all profiles, by default, do not optimize build "
+"dependencies (build scripts, proc macros, and their dependencies), and avoid "
+"computing debug info when a build dependency is not used as a runtime "
+"dependency. The default settings for build overrides are:"
+msgstr ""
+
+#: src/reference/profiles.md:317
+msgid ""
+"However, if errors occur while running build dependencies, turning full "
+"debug info on will improve backtraces and debuggability when needed:"
+msgstr ""
+
+#: src/reference/profiles.md:324
+msgid ""
+"Build dependencies otherwise inherit settings from the active profile in "
+"use, as described in [Profile selection](#profile-selection)."
+msgstr ""
+
+#: src/reference/profiles.md:327
+msgid "Custom profiles"
+msgstr ""
+
+#: src/reference/profiles.md:329
+msgid ""
+"In addition to the built-in profiles, additional custom profiles can be "
+"defined. These may be useful for setting up multiple workflows and build "
+"modes. When defining a custom profile, you must specify the `inherits` key "
+"to specify which profile the custom profile inherits settings from when the "
+"setting is not specified."
+msgstr ""
+
+#: src/reference/profiles.md:335
+msgid ""
+"For example, let's say you want to compare a normal release build with a "
+"release build with [LTO](#lto) optimizations, you can specify something like "
+"the following in `Cargo.toml`:"
+msgstr ""
+
+#: src/reference/profiles.md:339
+msgid ""
+"```toml\n"
+"[profile.release-lto]\n"
+"inherits = \"release\"\n"
+"lto = true\n"
+"```"
+msgstr ""
+
+#: src/reference/profiles.md:345
+msgid "The `--profile` flag can then be used to choose this custom profile:"
+msgstr ""
+
+#: src/reference/profiles.md:351
+msgid ""
+"The output for each profile will be placed in a directory of the same name "
+"as the profile in the [`target` directory](../guide/build-cache.md). As in "
+"the example above, the output would go into the `target/release-lto` "
+"directory."
+msgstr ""
+
+#: src/reference/profiles.md:357
+msgid "Profile selection"
+msgstr ""
+
+#: src/reference/profiles.md:359
+msgid ""
+"The profile used depends on the command, the command-line flags like `--"
+"release` or `--profile`, and the package (in the case of [overrides]"
+"(#overrides)). The default profile if none is specified is:"
+msgstr ""
+
+#: src/reference/profiles.md:363
+msgid "Command"
+msgstr ""
+
+#: src/reference/profiles.md:363
+msgid "Default Profile"
+msgstr ""
+
+#: src/reference/profiles.md:365
+msgid ""
+"[`cargo run`](../commands/cargo-run.md), [`cargo build`](../commands/cargo-"
+"build.md),<br>[`cargo check`](../commands/cargo-check.md), [`cargo rustc`]"
+"(../commands/cargo-rustc.md)"
+msgstr ""
+
+#: src/reference/profiles.md:365
+msgid "[`dev` profile](#dev)"
+msgstr ""
+
+#: src/reference/profiles.md:366
+msgid "[`cargo test`](../commands/cargo-test.md)"
+msgstr ""
+
+#: src/reference/profiles.md:366
+msgid "[`test` profile](#test)"
+msgstr ""
+
+#: src/reference/profiles.md:367
+msgid "[`cargo bench`](../commands/cargo-bench.md)"
+msgstr ""
+
+#: src/reference/profiles.md:367
+msgid "[`bench` profile](#bench)"
+msgstr ""
+
+#: src/reference/profiles.md:368
+msgid "[`cargo install`](../commands/cargo-install.md)"
+msgstr ""
+
+#: src/reference/profiles.md:368
+msgid "[`release` profile](#release)"
+msgstr ""
+
+#: src/reference/profiles.md:370
+msgid ""
+"You can switch to a different profile using the `--profile=NAME` option "
+"which will used the given profile. The `--release` flag is equivalent to `--"
+"profile=release`."
+msgstr ""
+
+#: src/reference/profiles.md:373
+msgid ""
+"The selected profile applies to all Cargo targets, including [library](./"
+"cargo-targets.md#library), [binary](./cargo-targets.md#binaries), [example]"
+"(./cargo-targets.md#examples), [test](./cargo-targets.md#tests), and "
+"[benchmark](./cargo-targets.md#benchmarks)."
+msgstr ""
+
+#: src/reference/profiles.md:380
+msgid ""
+"The profile for specific packages can be specified with [overrides]"
+"(#overrides), described below."
+msgstr ""
+
+#: src/reference/profiles.md:391
+msgid "Overrides"
+msgstr ""
+
+#: src/reference/profiles.md:393
+msgid ""
+"Profile settings can be overridden for specific packages and build-time "
+"crates. To override the settings for a specific package, use the `package` "
+"table to change the settings for the named package:"
+msgstr ""
+
+#: src/reference/profiles.md:403
+msgid ""
+"The package name is actually a [Package ID Spec](pkgid-spec.md), so you can "
+"target individual versions of a package with syntax such as `[profile.dev."
+"package.\"foo:2.1.0\"]`."
+msgstr ""
+
+#: src/reference/profiles.md:407
+msgid ""
+"To override the settings for all dependencies (but not any workspace "
+"member), use the `\"*\"` package name:"
+msgstr ""
+
+#: src/reference/profiles.md:410
+msgid ""
+"```toml\n"
+"# Set the default for dependencies.\n"
+"[profile.dev.package.\"*\"]\n"
+"opt-level = 2\n"
+"```"
+msgstr ""
+
+#: src/reference/profiles.md:416
+msgid ""
+"To override the settings for build scripts, proc macros, and their "
+"dependencies, use the `build-override` table:"
+msgstr ""
+
+#: src/reference/profiles.md:425
+msgid ""
+"Note: When a dependency is both a normal dependency and a build dependency, "
+"Cargo will try to only build it once when `--target` is not specified. When "
+"using `build-override`, the dependency may need to be built twice, once as a "
+"normal dependency and once with the overridden build settings. This may "
+"increase initial build times."
+msgstr ""
+
+#: src/reference/profiles.md:431
+msgid ""
+"The precedence for which value is used is done in the following order (first "
+"match wins):"
+msgstr ""
+
+#: src/reference/profiles.md:434
+msgid "`[profile.dev.package.name]` --- A named package."
+msgstr ""
+
+#: src/reference/profiles.md:435
+msgid "`[profile.dev.package.\"*\"]` --- For any non-workspace member."
+msgstr ""
+
+#: src/reference/profiles.md:436
+msgid ""
+"`[profile.dev.build-override]` --- Only for build scripts, proc macros, and "
+"their dependencies."
+msgstr ""
+
+#: src/reference/profiles.md:438
+msgid "`[profile.dev]` --- Settings in `Cargo.toml`."
+msgstr ""
+
+#: src/reference/profiles.md:439
+msgid "Default values built-in to Cargo."
+msgstr ""
+
+#: src/reference/profiles.md:441
+msgid "Overrides cannot specify the `panic`, `lto`, or `rpath` settings."
+msgstr ""
+
+#: src/reference/profiles.md:443
+msgid "Overrides and generics"
+msgstr ""
+
+#: src/reference/profiles.md:445
+msgid ""
+"The location where generic code is instantiated will influence the "
+"optimization settings used for that generic code. This can cause subtle "
+"interactions when using profile overrides to change the optimization level "
+"of a specific crate. If you attempt to raise the optimization level of a "
+"dependency which defines generic functions, those generic functions may not "
+"be optimized when used in your local crate. This is because the code may be "
+"generated in the crate where it is instantiated, and thus may use the "
+"optimization settings of that crate."
+msgstr ""
+
+#: src/reference/profiles.md:454
+msgid ""
+"For example, [nalgebra](https://crates.io/crates/nalgebra) is a library "
+"which defines vectors and matrices making heavy use of generic parameters. "
+"If your local code defines concrete nalgebra types like `Vector4<f64>` and "
+"uses their methods, the corresponding nalgebra code will be instantiated and "
+"built within your crate. Thus, if you attempt to increase the optimization "
+"level of `nalgebra` using a profile override, it may not result in faster "
+"performance."
+msgstr ""
+
+#: src/reference/profiles.md:461
+msgid ""
+"Further complicating the issue, `rustc` has some optimizations where it will "
+"attempt to share monomorphized generics between crates. If the opt-level is "
+"2 or 3, then a crate will not use monomorphized generics from other crates, "
+"nor will it export locally defined monomorphized items to be shared with "
+"other crates. When experimenting with optimizing dependencies for "
+"development, consider trying opt-level 1, which will apply some "
+"optimizations while still allowing monomorphized items to be shared."
+msgstr ""
