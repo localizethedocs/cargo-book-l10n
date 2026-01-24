@@ -13,22 +13,22 @@
     },
     "zh_CN" : 
     {
-      "branch" : "",
+      "branch" : "stable",
       "commit" : 
       {
-        "date" : "",
-        "hash" : "",
-        "title" : ""
+        "date" : "2026-01-19 16:34:28 +0000",
+        "hash" : "254b59607d4417e9dffbc307138ae5c86280fe4c",
+        "title" : "Auto merge of #151369 - Mark-Simulacrum:stable-next, r=Mark-Simulacrum"
       }
     },
     "zh_TW" : 
     {
-      "branch" : "",
+      "branch" : "stable",
       "commit" : 
       {
-        "date" : "",
-        "hash" : "",
-        "title" : ""
+        "date" : "2026-01-19 16:34:28 +0000",
+        "hash" : "254b59607d4417e9dffbc307138ae5c86280fe4c",
+        "title" : "Auto merge of #151369 - Mark-Simulacrum:stable-next, r=Mark-Simulacrum"
       }
     }
   },

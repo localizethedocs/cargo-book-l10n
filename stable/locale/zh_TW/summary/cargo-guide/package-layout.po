@@ -1,0 +1,89 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:27:47Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/guide/project-layout.md:1
+msgid "Package Layout"
+msgstr ""
+
+#: src/guide/project-layout.md:3
+msgid ""
+"Cargo uses conventions for file placement to make it easy to dive into a new "
+"Cargo [package](../appendix/glossary.md#package \"\\\"package\\\" (glossary "
+"entry)\"):"
+msgstr ""
+
+#: src/guide/project-layout.md:36
+msgid ""
+"`Cargo.toml` and `Cargo.lock` are stored in the root of your package "
+"(_package root_)."
+msgstr ""
+
+#: src/guide/project-layout.md:38
+msgid "Source code goes in the `src` directory."
+msgstr ""
+
+#: src/guide/project-layout.md:39
+msgid "The default library file is `src/lib.rs`."
+msgstr ""
+
+#: src/guide/project-layout.md:40
+msgid "The default executable file is `src/main.rs`."
+msgstr ""
+
+#: src/guide/project-layout.md:41
+msgid "Other executables can be placed in `src/bin/`."
+msgstr ""
+
+#: src/guide/project-layout.md:42
+msgid "Benchmarks go in the `benches` directory."
+msgstr ""
+
+#: src/guide/project-layout.md:43
+msgid "Examples go in the `examples` directory."
+msgstr ""
+
+#: src/guide/project-layout.md:44
+msgid "Integration tests go in the `tests` directory."
+msgstr ""
+
+#: src/guide/project-layout.md:46
+msgid ""
+"If a binary, example, bench, or integration test consists of multiple source "
+"files, place a `main.rs` file along with the extra [_modules_](../appendix/"
+"glossary.md#module \"\\\"module\\\" (glossary entry)\") within a "
+"subdirectory of the `src/bin`, `examples`, `benches`, or `tests` directory. "
+"The name of the executable will be the directory name."
+msgstr ""
+
+#: src/guide/project-layout.md:51
+msgid ""
+"**Note:** By convention, binaries, examples, benches and integration tests "
+"follow `kebab-case` naming style, unless there are compatibility reasons to "
+"do otherwise (e.g. compatibility with a pre-existing binary name). Modules "
+"within those targets are `snake_case` following the [Rust standard](https://"
+"rust-lang.github.io/rfcs/0430-finalizing-naming-conventions.html)."
+msgstr ""
+
+#: src/guide/project-layout.md:53
+msgid ""
+"You can learn more about Rust's module system in [the book](../../book/"
+"ch07-00-managing-growing-projects-with-packages-crates-and-modules.html)."
+msgstr ""
+
+#: src/guide/project-layout.md:55
+msgid ""
+"See [Configuring a target](../reference/cargo-targets.md#configuring-a-"
+"target) for more details on manually configuring targets. See [Target auto-"
+"discovery](../reference/cargo-targets.md#target-auto-discovery) for more "
+"information on controlling how Cargo automatically infers target names."
+msgstr ""
