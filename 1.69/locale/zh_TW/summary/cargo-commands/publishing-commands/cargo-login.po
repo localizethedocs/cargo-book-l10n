@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/commands/cargo-login.md:1
@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-login.md:3
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-login.md:5
 msgid "cargo-login --- Save an API token from the registry locally"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/commands/cargo-login.md:7
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-login.md:9
 msgid "`cargo login` \\[_options_\\] \\[_token_\\]"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: src/commands/cargo-login.md:11
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-login.md:13
 msgid ""
@@ -59,7 +59,7 @@ msgstr ""
 
 #: src/commands/cargo-login.md:24
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-login.md:26
 msgid "Login Options"
@@ -67,7 +67,7 @@ msgstr ""
 
 #: src/commands/cargo-login.md:38
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-login.md:70
 msgid "Common Options"
@@ -75,7 +75,7 @@ msgstr ""
 
 #: src/commands/cargo-login.md:110
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-login.md:112
 msgid ""
@@ -85,19 +85,19 @@ msgstr ""
 
 #: src/commands/cargo-login.md:116
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-login.md:118
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-login.md:119
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-login.md:122
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-login.md:124
 msgid "Save the API token to disk:"
@@ -105,7 +105,7 @@ msgstr ""
 
 #: src/commands/cargo-login.md:128
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-login.md:129
 msgid "[cargo(1)](cargo.html), [cargo-publish(1)](cargo-publish.html)"

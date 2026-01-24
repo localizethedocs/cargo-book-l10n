@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/commands/cargo-bench.md:1
@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-bench.md:6
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-bench.md:8
 msgid "cargo-bench --- Execute benchmarks of a package"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/commands/cargo-bench.md:10
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-bench.md:12
 msgid ""
@@ -34,7 +34,7 @@ msgstr ""
 
 #: src/commands/cargo-bench.md:14
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-bench.md:16
 msgid "Compile and execute benchmarks."
@@ -96,7 +96,7 @@ msgstr ""
 
 #: src/commands/cargo-bench.md:59
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-bench.md:61
 msgid "Benchmark Options"
@@ -209,15 +209,15 @@ msgstr ""
 
 #: src/commands/cargo-bench.md:252
 msgid "Compilation Options"
-msgstr ""
+msgstr "編譯選項"
 
 #: src/commands/cargo-bench.md:301
 msgid "Output Options"
-msgstr ""
+msgstr "輸出選項"
 
 #: src/commands/cargo-bench.md:313
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-bench.md:315
 msgid ""
@@ -228,7 +228,7 @@ msgstr ""
 
 #: src/commands/cargo-bench.md:377
 msgid "Manifest Options"
-msgstr ""
+msgstr "清單選項"
 
 #: src/commands/cargo-bench.md:412
 msgid "Common Options"
@@ -247,7 +247,7 @@ msgstr ""
 
 #: src/commands/cargo-bench.md:476
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-bench.md:478
 msgid ""
@@ -257,19 +257,19 @@ msgstr ""
 
 #: src/commands/cargo-bench.md:482
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-bench.md:484
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-bench.md:485
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-bench.md:488
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-bench.md:490
 msgid "Build and execute all the benchmarks of the current package:"
@@ -281,7 +281,7 @@ msgstr ""
 
 #: src/commands/cargo-bench.md:498
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-bench.md:499
 msgid "[cargo(1)](cargo.html), [cargo-test(1)](cargo-test.html)"
