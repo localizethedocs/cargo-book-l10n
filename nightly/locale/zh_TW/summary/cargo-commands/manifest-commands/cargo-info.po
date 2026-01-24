@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-info.md:3
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-info.md:5
 msgid "cargo-info --- Display information about a package."
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/commands/cargo-info.md:7
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-info.md:9
 msgid "`cargo info` \\[_options_\\] _spec_"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: src/commands/cargo-info.md:11
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-info.md:13
 msgid ""
@@ -43,7 +43,7 @@ msgstr ""
 
 #: src/commands/cargo-info.md:16
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-info.md:18
 msgid "Info Options"
@@ -51,11 +51,11 @@ msgstr ""
 
 #: src/commands/cargo-info.md:43
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-info.md:77
 msgid "Manifest Options"
-msgstr ""
+msgstr "清單選項"
 
 #: src/commands/cargo-info.md:113
 msgid "Common Options"
@@ -63,7 +63,7 @@ msgstr ""
 
 #: src/commands/cargo-info.md:158
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-info.md:160
 msgid ""
@@ -73,19 +73,19 @@ msgstr ""
 
 #: src/commands/cargo-info.md:163
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-info.md:165
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-info.md:166
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-info.md:168
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-info.md:170
 msgid "Inspect the `serde` package from crates.io:"
@@ -101,7 +101,7 @@ msgstr ""
 
 #: src/commands/cargo-info.md:180
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-info.md:182
 msgid "[cargo(1)](cargo.html), [cargo-search(1)](cargo-search.html)"

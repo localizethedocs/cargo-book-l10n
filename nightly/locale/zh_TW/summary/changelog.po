@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/CHANGELOG.md:1
 msgid "Changelog"
-msgstr ""
+msgstr "變更日誌"
 
 #: src/CHANGELOG.md:3
 msgid "Cargo 1.94 (2026-03-05)"

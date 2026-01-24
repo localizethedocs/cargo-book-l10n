@@ -323,7 +323,7 @@ msgstr ""
 
 #: src/guide/continuous-integration.md:122
 msgid "cargo test"
-msgstr ""
+msgstr "cargo test"
 
 #: src/guide/continuous-integration.md:125
 msgid ""

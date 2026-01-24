@@ -364,7 +364,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:181
 msgid "Target"
-msgstr ""
+msgstr "目標"
 
 #: src/appendix/glossary.md:183
 msgid "The meaning of the term _target_ depends on the context:"

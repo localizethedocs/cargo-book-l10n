@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/commands/build-commands.md:1
 msgid "Build Commands"
-msgstr ""
+msgstr "建置命令"
 
 #: src/commands/build-commands.md:2
 msgid "[cargo bench](cargo-bench.md)"

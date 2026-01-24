@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-search.md:3
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-search.md:5
 msgid ""
@@ -27,7 +27,7 @@ msgstr ""
 
 #: src/commands/cargo-search.md:7
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-search.md:9
 msgid "`cargo search` \\[_options_\\] \\[_query_...\\]"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: src/commands/cargo-search.md:11
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-search.md:13
 msgid ""
@@ -46,7 +46,7 @@ msgstr ""
 
 #: src/commands/cargo-search.md:17
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-search.md:19
 msgid "Search Options"
@@ -54,7 +54,7 @@ msgstr ""
 
 #: src/commands/cargo-search.md:43
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-search.md:77
 msgid "Common Options"
@@ -62,7 +62,7 @@ msgstr ""
 
 #: src/commands/cargo-search.md:122
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-search.md:124
 msgid ""
@@ -72,19 +72,19 @@ msgstr ""
 
 #: src/commands/cargo-search.md:127
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-search.md:129
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-search.md:130
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-search.md:132
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-search.md:134
 msgid "Search for a package from crates.io:"
@@ -92,7 +92,7 @@ msgstr ""
 
 #: src/commands/cargo-search.md:138
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-search.md:140
 msgid ""

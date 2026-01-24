@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-test.md:2
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-test.md:4
 msgid "cargo-test --- Execute unit and integration tests of a package"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/commands/cargo-test.md:6
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-test.md:8
 msgid "`cargo test` \\[_options_\\] \\[_testname_\\] \\[`--` _test-options_\\]"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: src/commands/cargo-test.md:10
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-test.md:12
 msgid "Compile and execute unit, integration, and documentation tests."
@@ -131,7 +131,7 @@ msgstr ""
 
 #: src/commands/cargo-test.md:71
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-test.md:73
 msgid "Test Options"
@@ -273,15 +273,15 @@ msgstr ""
 
 #: src/commands/cargo-test.md:297
 msgid "Compilation Options"
-msgstr ""
+msgstr "編譯選項"
 
 #: src/commands/cargo-test.md:344
 msgid "Output Options"
-msgstr ""
+msgstr "輸出選項"
 
 #: src/commands/cargo-test.md:356
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-test.md:358
 msgid ""
@@ -292,7 +292,7 @@ msgstr ""
 
 #: src/commands/cargo-test.md:422
 msgid "Manifest Options"
-msgstr ""
+msgstr "清單選項"
 
 #: src/commands/cargo-test.md:472
 msgid "Common Options"
@@ -319,7 +319,7 @@ msgstr ""
 
 #: src/commands/cargo-test.md:554
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-test.md:556
 msgid ""
@@ -329,19 +329,19 @@ msgstr ""
 
 #: src/commands/cargo-test.md:559
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-test.md:561
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-test.md:562
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-test.md:564
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-test.md:566
 msgid "Execute all the unit and integration tests of the current package:"
@@ -357,7 +357,7 @@ msgstr ""
 
 #: src/commands/cargo-test.md:578
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-test.md:579
 msgid ""

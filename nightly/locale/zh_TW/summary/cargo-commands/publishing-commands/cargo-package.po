@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:2
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-package.md:4
 msgid ""
@@ -26,7 +26,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:6
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-package.md:8
 msgid "`cargo package` \\[_options_\\]"
@@ -34,7 +34,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:10
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-package.md:12
 msgid ""
@@ -179,7 +179,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:73
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-package.md:75
 msgid "Package Options"
@@ -209,7 +209,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:211
 msgid "Compilation Options"
-msgstr ""
+msgstr "編譯選項"
 
 #: src/commands/cargo-package.md:241
 msgid "Feature Selection"
@@ -230,7 +230,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:272
 msgid "Manifest Options"
-msgstr ""
+msgstr "清單選項"
 
 #: src/commands/cargo-package.md:317
 msgid "Miscellaneous Options"
@@ -238,7 +238,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:342
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-package.md:376
 msgid "Common Options"
@@ -246,7 +246,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:421
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-package.md:423
 msgid ""
@@ -256,19 +256,19 @@ msgstr ""
 
 #: src/commands/cargo-package.md:426
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-package.md:428
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-package.md:429
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-package.md:431
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-package.md:433
 msgid "Create a compressed `.crate` file of the current package:"
@@ -276,7 +276,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:437
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-package.md:438
 msgid "[cargo(1)](cargo.html), [cargo-publish(1)](cargo-publish.html)"

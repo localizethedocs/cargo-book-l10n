@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:3
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-metadata.md:5
 msgid "cargo-metadata --- Machine-readable metadata about the current package"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:7
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-metadata.md:9
 msgid "`cargo metadata` \\[_options_\\]"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:11
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-metadata.md:13
 msgid ""
@@ -57,7 +57,7 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:24
 msgid "OUTPUT FORMAT"
-msgstr ""
+msgstr "輸出格式"
 
 #: src/commands/cargo-metadata.md:26
 msgid "Compatibility"
@@ -880,11 +880,11 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:346
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-metadata.md:348
 msgid "Output Options"
-msgstr ""
+msgstr "輸出選項"
 
 #: src/commands/cargo-metadata.md:377
 msgid "Feature Selection"
@@ -905,11 +905,11 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:408
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-metadata.md:442
 msgid "Manifest Options"
-msgstr ""
+msgstr "清單選項"
 
 #: src/commands/cargo-metadata.md:485
 msgid "Common Options"
@@ -917,7 +917,7 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:530
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-metadata.md:532
 msgid ""
@@ -927,19 +927,19 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:535
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-metadata.md:537
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-metadata.md:538
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-metadata.md:540
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-metadata.md:542
 msgid "Output JSON about the current package:"
@@ -947,7 +947,7 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:546
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-metadata.md:548
 msgid ""

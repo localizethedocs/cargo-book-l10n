@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-rustc.md:2
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-rustc.md:4
 msgid ""
@@ -27,7 +27,7 @@ msgstr ""
 
 #: src/commands/cargo-rustc.md:6
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-rustc.md:8
 msgid "`cargo rustc` \\[_options_\\] \\[`--` _args_\\]"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: src/commands/cargo-rustc.md:10
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-rustc.md:12
 msgid ""
@@ -70,7 +70,7 @@ msgstr ""
 
 #: src/commands/cargo-rustc.md:31
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-rustc.md:33
 msgid "Package Selection"
@@ -135,19 +135,19 @@ msgstr ""
 
 #: src/commands/cargo-rustc.md:173
 msgid "Compilation Options"
-msgstr ""
+msgstr "編譯選項"
 
 #: src/commands/cargo-rustc.md:243
 msgid "Output Options"
-msgstr ""
+msgstr "輸出選項"
 
 #: src/commands/cargo-rustc.md:255
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-rustc.md:315
 msgid "Manifest Options"
-msgstr ""
+msgstr "清單選項"
 
 #: src/commands/cargo-rustc.md:365
 msgid "Common Options"
@@ -159,7 +159,7 @@ msgstr ""
 
 #: src/commands/cargo-rustc.md:441
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-rustc.md:443
 msgid ""
@@ -169,19 +169,19 @@ msgstr ""
 
 #: src/commands/cargo-rustc.md:446
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-rustc.md:448
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-rustc.md:449
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-rustc.md:451
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-rustc.md:453
 msgid "Check if your package (not including dependencies) uses unsafe code:"
@@ -199,7 +199,7 @@ msgstr ""
 
 #: src/commands/cargo-rustc.md:466
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-rustc.md:467
 msgid ""

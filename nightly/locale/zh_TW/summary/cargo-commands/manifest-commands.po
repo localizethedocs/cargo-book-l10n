@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/commands/manifest-commands.md:1
 msgid "Manifest Commands"
-msgstr ""
+msgstr "清單命令"
 
 #: src/commands/manifest-commands.md:3
 msgid "[cargo add](cargo-add.md)"

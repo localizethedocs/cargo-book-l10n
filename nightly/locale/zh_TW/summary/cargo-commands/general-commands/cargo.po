@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo.md:3
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo.md:5
 msgid "cargo --- The Rust package manager"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/commands/cargo.md:7
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo.md:9
 msgid ""
@@ -38,7 +38,7 @@ msgstr ""
 
 #: src/commands/cargo.md:15
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo.md:17
 msgid ""
@@ -48,11 +48,11 @@ msgstr ""
 
 #: src/commands/cargo.md:20
 msgid "COMMANDS"
-msgstr ""
+msgstr "命令"
 
 #: src/commands/cargo.md:22
 msgid "Build Commands"
-msgstr ""
+msgstr "建置命令"
 
 #: src/commands/cargo.md:24
 msgid ""
@@ -65,6 +65,8 @@ msgid ""
 "[cargo-build(1)](cargo-build.html)  \n"
 "    Compile a package."
 msgstr ""
+"[cargo-build(1)](cargo-build.html)  \n"
+"    編譯軟體包。"
 
 #: src/commands/cargo.md:30
 msgid ""
@@ -122,7 +124,7 @@ msgstr ""
 
 #: src/commands/cargo.md:57
 msgid "Manifest Commands"
-msgstr ""
+msgstr "清單命令"
 
 #: src/commands/cargo.md:59
 msgid ""
@@ -221,7 +223,7 @@ msgstr ""
 
 #: src/commands/cargo.md:106
 msgid "Publishing Commands"
-msgstr ""
+msgstr "發布命令"
 
 #: src/commands/cargo.md:108
 msgid ""
@@ -277,19 +279,19 @@ msgstr ""
 
 #: src/commands/cargo.md:134
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo.md:136
 msgid "Special Options"
-msgstr ""
+msgstr "特殊選項"
 
 #: src/commands/cargo.md:161
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo.md:197
 msgid "Manifest Options"
-msgstr ""
+msgstr "清單選項"
 
 #: src/commands/cargo.md:233
 msgid "Common Options"
@@ -297,7 +299,7 @@ msgstr ""
 
 #: src/commands/cargo.md:278
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo.md:280
 msgid ""
@@ -307,15 +309,15 @@ msgstr ""
 
 #: src/commands/cargo.md:283
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo.md:285
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo.md:286
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo.md:288
 msgid "FILES"
@@ -379,7 +381,7 @@ msgstr ""
 
 #: src/commands/cargo.md:323
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo.md:325
 msgid "Build a local package and all of its dependencies:"
@@ -415,7 +417,7 @@ msgstr ""
 
 #: src/commands/cargo.md:354
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo.md:356
 msgid ""

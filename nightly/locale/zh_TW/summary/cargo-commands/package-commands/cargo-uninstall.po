@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-uninstall.md:3
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-uninstall.md:5
 msgid "cargo-uninstall --- Remove a Rust binary"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/commands/cargo-uninstall.md:7
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-uninstall.md:9
 msgid "`cargo uninstall` \\[_options_\\] \\[_spec_...\\]"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: src/commands/cargo-uninstall.md:11
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-uninstall.md:13
 msgid ""
@@ -74,15 +74,15 @@ msgstr ""
 
 #: src/commands/cargo-uninstall.md:28
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-uninstall.md:30
 msgid "Uninstall Options"
-msgstr ""
+msgstr "解除安裝選項"
 
 #: src/commands/cargo-uninstall.md:52
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-uninstall.md:88
 msgid "Common Options"
@@ -90,7 +90,7 @@ msgstr ""
 
 #: src/commands/cargo-uninstall.md:133
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-uninstall.md:135
 msgid ""
@@ -100,19 +100,19 @@ msgstr ""
 
 #: src/commands/cargo-uninstall.md:138
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-uninstall.md:140
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-uninstall.md:141
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-uninstall.md:143
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-uninstall.md:145
 msgid "Uninstall a previously installed package."
@@ -120,7 +120,7 @@ msgstr ""
 
 #: src/commands/cargo-uninstall.md:149
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-uninstall.md:150
 msgid "[cargo(1)](cargo.html), [cargo-install(1)](cargo-install.html)"

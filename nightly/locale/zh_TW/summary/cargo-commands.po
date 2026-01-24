@@ -29,7 +29,7 @@ msgstr "[清單命令](manifest-commands.md)"
 
 #: src/commands/index.md:5
 msgid "[Package Commands](package-commands.md)"
-msgstr ""
+msgstr "[軟體包命令](package-commands.md)"
 
 #: src/commands/index.md:6
 msgid "[Publishing Commands](publishing-commands.md)"

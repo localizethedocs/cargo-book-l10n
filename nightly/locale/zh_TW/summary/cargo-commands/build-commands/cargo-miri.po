@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-miri.md:3
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-miri.md:5
 msgid "cargo-miri --- Runs binary crates and tests in Miri"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/commands/cargo-miri.md:7
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-miri.md:9
 msgid ""
@@ -48,7 +48,7 @@ msgstr ""
 
 #: src/commands/cargo-miri.md:17
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-miri.md:19
 msgid ""

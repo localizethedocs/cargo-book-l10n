@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-new.md:3
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-new.md:5
 msgid "cargo-new --- Create a new Cargo package"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/commands/cargo-new.md:7
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-new.md:9
 msgid "`cargo new` \\[_options_\\] _path_"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: src/commands/cargo-new.md:11
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-new.md:13
 msgid ""
@@ -51,7 +51,7 @@ msgstr ""
 
 #: src/commands/cargo-new.md:21
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-new.md:23
 msgid "New Options"
@@ -59,7 +59,7 @@ msgstr ""
 
 #: src/commands/cargo-new.md:70
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-new.md:104
 msgid "Common Options"
@@ -67,7 +67,7 @@ msgstr ""
 
 #: src/commands/cargo-new.md:149
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-new.md:151
 msgid ""
@@ -77,19 +77,19 @@ msgstr ""
 
 #: src/commands/cargo-new.md:154
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-new.md:156
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-new.md:157
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-new.md:159
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-new.md:161
 msgid "Create a binary Cargo package in the given directory:"
@@ -97,7 +97,7 @@ msgstr ""
 
 #: src/commands/cargo-new.md:165
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-new.md:166
 msgid "[cargo(1)](cargo.html), [cargo-init(1)](cargo-init.html)"

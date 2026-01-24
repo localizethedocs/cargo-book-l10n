@@ -213,115 +213,115 @@ msgstr "cargo"
 
 #: src/SUMMARY.md:56
 msgid "cargo help"
-msgstr ""
+msgstr "cargo help"
 
 #: src/SUMMARY.md:57
 msgid "cargo version"
-msgstr ""
+msgstr "cargo version"
 
 #: src/SUMMARY.md:58
 msgid "Build Commands"
-msgstr ""
+msgstr "建置命令"
 
 #: src/SUMMARY.md:59
 msgid "cargo bench"
-msgstr ""
+msgstr "cargo bench"
 
 #: src/SUMMARY.md:60
 msgid "cargo build"
-msgstr ""
+msgstr "cargo build"
 
 #: src/SUMMARY.md:61
 msgid "cargo check"
-msgstr ""
+msgstr "cargo check"
 
 #: src/SUMMARY.md:62
 msgid "cargo clean"
-msgstr ""
+msgstr "cargo clean"
 
 #: src/SUMMARY.md:63
 msgid "cargo clippy"
-msgstr ""
+msgstr "cargo clippy"
 
 #: src/SUMMARY.md:64
 msgid "cargo doc"
-msgstr ""
+msgstr "cargo doc"
 
 #: src/SUMMARY.md:65
 msgid "cargo fetch"
-msgstr ""
+msgstr "cargo fetch"
 
 #: src/SUMMARY.md:66
 msgid "cargo fix"
-msgstr ""
+msgstr "cargo fix"
 
 #: src/SUMMARY.md:67
 msgid "cargo fmt"
-msgstr ""
+msgstr "cargo fmt"
 
 #: src/SUMMARY.md:68
 msgid "cargo miri"
-msgstr ""
+msgstr "cargo miri"
 
 #: src/SUMMARY.md:69
 msgid "cargo report"
-msgstr ""
+msgstr "cargo report"
 
 #: src/SUMMARY.md:70
 msgid "cargo run"
-msgstr ""
+msgstr "cargo run"
 
 #: src/SUMMARY.md:71
 msgid "cargo rustc"
-msgstr ""
+msgstr "cargo rustc"
 
 #: src/SUMMARY.md:72
 msgid "cargo rustdoc"
-msgstr ""
+msgstr "cargo rustdoc"
 
 #: src/SUMMARY.md:73
 msgid "cargo test"
-msgstr ""
+msgstr "cargo test"
 
 #: src/SUMMARY.md:74
 msgid "Manifest Commands"
-msgstr ""
+msgstr "清單命令"
 
 #: src/SUMMARY.md:75
 msgid "cargo add"
-msgstr ""
+msgstr "cargo add"
 
 #: src/SUMMARY.md:76
 msgid "cargo generate-lockfile"
-msgstr ""
+msgstr "cargo generate-lockfile"
 
 #: src/SUMMARY.md:77
 msgid "cargo info"
-msgstr ""
+msgstr "cargo info"
 
 #: src/SUMMARY.md:78
 msgid "cargo locate-project"
-msgstr ""
+msgstr "cargo locate-project"
 
 #: src/SUMMARY.md:79
 msgid "cargo metadata"
-msgstr ""
+msgstr "cargo metadata"
 
 #: src/SUMMARY.md:80
 msgid "cargo pkgid"
-msgstr ""
+msgstr "cargo pkgid"
 
 #: src/SUMMARY.md:81
 msgid "cargo remove"
-msgstr ""
+msgstr "cargo remove"
 
 #: src/SUMMARY.md:82
 msgid "cargo tree"
-msgstr ""
+msgstr "cargo tree"
 
 #: src/SUMMARY.md:83
 msgid "cargo update"
-msgstr ""
+msgstr "cargo update"
 
 #: src/SUMMARY.md:84
 msgid "cargo vendor"
@@ -353,7 +353,7 @@ msgstr ""
 
 #: src/SUMMARY.md:91
 msgid "Publishing Commands"
-msgstr ""
+msgstr "發布命令"
 
 #: src/SUMMARY.md:92
 msgid "cargo login"
@@ -389,7 +389,7 @@ msgstr ""
 
 #: src/SUMMARY.md:101
 msgid "Changelog"
-msgstr ""
+msgstr "變更日誌"
 
 #: src/SUMMARY.md:102
 msgid "Appendix: Glossary"

@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-build.md:2
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-build.md:4
 msgid "cargo-build --- Compile the current package"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/commands/cargo-build.md:6
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-build.md:8
 msgid "`cargo build` \\[_options_\\]"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: src/commands/cargo-build.md:10
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-build.md:12
 msgid "Compile local packages and all of their dependencies."
@@ -41,7 +41,7 @@ msgstr ""
 
 #: src/commands/cargo-build.md:14
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-build.md:16
 msgid "Package Selection"
@@ -119,19 +119,19 @@ msgstr ""
 
 #: src/commands/cargo-build.md:187
 msgid "Compilation Options"
-msgstr ""
+msgstr "編譯選項"
 
 #: src/commands/cargo-build.md:234
 msgid "Output Options"
-msgstr ""
+msgstr "輸出選項"
 
 #: src/commands/cargo-build.md:256
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-build.md:315
 msgid "Manifest Options"
-msgstr ""
+msgstr "清單選項"
 
 #: src/commands/cargo-build.md:363
 msgid "Common Options"
@@ -143,7 +143,7 @@ msgstr ""
 
 #: src/commands/cargo-build.md:439
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-build.md:441
 msgid ""
@@ -153,19 +153,19 @@ msgstr ""
 
 #: src/commands/cargo-build.md:444
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-build.md:446
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-build.md:447
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-build.md:449
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-build.md:451
 msgid "Build the local package and all of its dependencies:"
@@ -177,7 +177,7 @@ msgstr ""
 
 #: src/commands/cargo-build.md:459
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-build.md:460
 msgid "[cargo(1)](cargo.html), [cargo-rustc(1)](cargo-rustc.html)"

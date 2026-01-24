@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-fetch.md:2
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-fetch.md:4
 msgid "cargo-fetch --- Fetch dependencies of a package from the network"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/commands/cargo-fetch.md:6
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-fetch.md:8
 msgid "`cargo fetch` \\[_options_\\]"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: src/commands/cargo-fetch.md:10
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-fetch.md:12
 msgid ""
@@ -63,7 +63,7 @@ msgstr ""
 
 #: src/commands/cargo-fetch.md:26
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-fetch.md:28
 msgid "Fetch options"
@@ -71,11 +71,11 @@ msgstr ""
 
 #: src/commands/cargo-fetch.md:48
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-fetch.md:82
 msgid "Manifest Options"
-msgstr ""
+msgstr "清單選項"
 
 #: src/commands/cargo-fetch.md:123
 msgid "Common Options"
@@ -83,7 +83,7 @@ msgstr ""
 
 #: src/commands/cargo-fetch.md:168
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-fetch.md:170
 msgid ""
@@ -93,19 +93,19 @@ msgstr ""
 
 #: src/commands/cargo-fetch.md:173
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-fetch.md:175
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-fetch.md:176
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-fetch.md:178
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-fetch.md:180
 msgid "Fetch all dependencies:"
@@ -113,7 +113,7 @@ msgstr ""
 
 #: src/commands/cargo-fetch.md:184
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-fetch.md:185
 msgid ""
