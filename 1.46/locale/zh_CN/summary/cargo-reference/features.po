@@ -1,0 +1,253 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:27:55Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/features.md:1
+msgid "Features"
+msgstr ""
+
+#: src/reference/features.md:3
+msgid "Cargo supports features to allow expression of:"
+msgstr ""
+
+#: src/reference/features.md:5
+msgid "conditional compilation options (usable through `cfg` attributes);"
+msgstr ""
+
+#: src/reference/features.md:6
+msgid ""
+"optional dependencies, which enhance a package, but are not required; and"
+msgstr ""
+
+#: src/reference/features.md:7
+msgid ""
+"clusters of optional dependencies, such as `postgres-all`, that would "
+"include the `postgres` package, the `postgres-macros` package, and possibly "
+"other packages (such as development-time mocking libraries, debugging tools, "
+"etc.)."
+msgstr ""
+
+#: src/reference/features.md:11
+msgid ""
+"A feature of a package is either an optional dependency, or a set of other "
+"features."
+msgstr ""
+
+#: src/reference/features.md:14
+msgid "The `[features]` section"
+msgstr ""
+
+#: src/reference/features.md:16
+msgid ""
+"Features are defined in the `[features]` table of `Cargo.toml`. The format "
+"for specifying features is:"
+msgstr ""
+
+#: src/reference/features.md:19
+msgid ""
+"```toml\n"
+"[package]\n"
+"name = \"awesome\"\n"
+"\n"
+"[features]\n"
+"# The default set of optional packages. Most people will want to use these\n"
+"# packages, but they are strictly optional. Note that `session` is not a "
+"package\n"
+"# but rather another feature listed in this manifest.\n"
+"default = [\"jquery\", \"uglifier\", \"session\"]\n"
+"\n"
+"# A feature with no dependencies is used mainly for conditional "
+"compilation,\n"
+"# like `#[cfg(feature = \"go-faster\")]`.\n"
+"go-faster = []\n"
+"\n"
+"# The `secure-password` feature depends on the bcrypt package. This "
+"aliasing\n"
+"# will allow people to talk about the feature in a higher-level way and "
+"allow\n"
+"# this package to add more requirements to the feature in the future.\n"
+"secure-password = [\"bcrypt\"]\n"
+"\n"
+"# Features can be used to reexport features of other packages. The "
+"`session`\n"
+"# feature of package `awesome` will ensure that the `session` feature of "
+"the\n"
+"# package `cookie` is also enabled.\n"
+"session = [\"cookie/session\"]\n"
+"\n"
+"[dependencies]\n"
+"# These packages are mandatory and form the core of this package’s "
+"distribution.\n"
+"cookie = \"1.2.0\"\n"
+"oauth = \"1.1.0\"\n"
+"route-recognizer = \"=2.1.0\"\n"
+"\n"
+"# A list of all of the optional dependencies, some of which are included in "
+"the\n"
+"# above `features`. They can be opted into by apps.\n"
+"jquery = { version = \"1.0.2\", optional = true }\n"
+"uglifier = { version = \"1.5.3\", optional = true }\n"
+"bcrypt = { version = \"*\", optional = true }\n"
+"civet = { version = \"*\", optional = true }\n"
+"```"
+msgstr ""
+
+#: src/reference/features.md:57
+msgid "To use the package `awesome`:"
+msgstr ""
+
+#: src/reference/features.md:59
+msgid ""
+"```toml\n"
+"[dependencies.awesome]\n"
+"version = \"1.3.5\"\n"
+"default-features = false # do not include the default features, and "
+"optionally\n"
+"                         # cherry-pick individual features\n"
+"features = [\"secure-password\", \"civet\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/features.md:67
+msgid "Rules"
+msgstr ""
+
+#: src/reference/features.md:69
+msgid "The usage of features is subject to a few rules:"
+msgstr ""
+
+#: src/reference/features.md:71
+msgid ""
+"Feature names must not conflict with other package names in the manifest. "
+"This is because they are opted into via `features = [...]`, which only has a "
+"single namespace."
+msgstr ""
+
+#: src/reference/features.md:74
+msgid ""
+"With the exception of the `default` feature, all features are opt-in. To opt "
+"out of the default feature, use `default-features = false` and cherry-pick "
+"individual features."
+msgstr ""
+
+#: src/reference/features.md:77
+msgid "Feature groups are not allowed to cyclically depend on one another."
+msgstr ""
+
+#: src/reference/features.md:78
+msgid "Dev-dependencies cannot be optional."
+msgstr ""
+
+#: src/reference/features.md:79
+msgid "Features groups can only reference optional dependencies."
+msgstr ""
+
+#: src/reference/features.md:80
+msgid ""
+"When a feature is selected, Cargo will call `rustc` with `--cfg "
+"feature=\"${feature_name}\"`. If a feature group is included, it and all of "
+"its individual features will be included. This can be tested in code via "
+"`#[cfg(feature = \"foo\")]`."
+msgstr ""
+
+#: src/reference/features.md:85
+msgid ""
+"Note that it is explicitly allowed for features to not actually activate any "
+"optional dependencies. This allows packages to internally enable/disable "
+"features without requiring a new dependency."
+msgstr ""
+
+#: src/reference/features.md:89
+msgid ""
+"**Note**: [crates.io](https://crates.io/) requires feature names to only "
+"contain ASCII letters, digits, `_`, or `-`."
+msgstr ""
+
+#: src/reference/features.md:92
+msgid "Usage in end products"
+msgstr ""
+
+#: src/reference/features.md:94
+msgid ""
+"One major use-case for this feature is specifying optional features in end-"
+"products. For example, the Servo package may want to include optional "
+"features that people can enable or disable when they build it."
+msgstr ""
+
+#: src/reference/features.md:98
+msgid ""
+"In that case, Servo will describe features in its `Cargo.toml` and they can "
+"be enabled using command-line flags:"
+msgstr ""
+
+#: src/reference/features.md:101
+msgid ""
+"```console\n"
+"$ cargo build --release --features \"shumway pdf\"\n"
+"```"
+msgstr ""
+
+#: src/reference/features.md:105
+msgid "Default features could be excluded using `--no-default-features`."
+msgstr ""
+
+#: src/reference/features.md:107
+msgid "Usage in packages"
+msgstr ""
+
+#: src/reference/features.md:109
+msgid ""
+"In most cases, the concept of _optional dependency_ in a library is best "
+"expressed as a separate package that the top-level application depends on."
+msgstr ""
+
+#: src/reference/features.md:112
+msgid ""
+"However, high-level packages, like Iron or Piston, may want the ability to "
+"curate a number of packages for easy installation. The current Cargo system "
+"allows them to curate a number of mandatory dependencies into a single "
+"package for easy installation."
+msgstr ""
+
+#: src/reference/features.md:117
+msgid ""
+"In some cases, packages may want to provide additional curation for optional "
+"dependencies:"
+msgstr ""
+
+#: src/reference/features.md:120
+msgid ""
+"grouping a number of low-level optional dependencies together into a single "
+"high-level feature;"
+msgstr ""
+
+#: src/reference/features.md:122
+msgid ""
+"specifying packages that are recommended (or suggested) to be included by "
+"users of the package; and"
+msgstr ""
+
+#: src/reference/features.md:124
+msgid ""
+"including a feature (like `secure-password` in the motivating example) that "
+"will only work if an optional dependency is available, and would be "
+"difficult to implement as a separate package (for example, it may be overly "
+"difficult to design an IO package to be completely decoupled from OpenSSL, "
+"with opt-in via the inclusion of a separate package)."
+msgstr ""
+
+#: src/reference/features.md:130
+msgid ""
+"In almost all cases, it is an antipattern to use these features outside of "
+"high-level packages that are designed for curation. If a feature is "
+"optional, it can almost certainly be expressed as a separate package."
+msgstr ""
