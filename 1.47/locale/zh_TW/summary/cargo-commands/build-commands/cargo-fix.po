@@ -1,0 +1,271 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:47:45Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/commands/cargo-fix.md:1
+msgid "cargo-fix(1)"
+msgstr ""
+
+#: src/commands/cargo-fix.md:4
+msgid "NAME"
+msgstr ""
+
+#: src/commands/cargo-fix.md:6
+msgid "cargo-fix - Automatically fix lint warnings reported by rustc"
+msgstr ""
+
+#: src/commands/cargo-fix.md:8
+msgid "SYNOPSIS"
+msgstr ""
+
+#: src/commands/cargo-fix.md:10
+msgid "`cargo fix` \\[_options_\\]"
+msgstr ""
+
+#: src/commands/cargo-fix.md:12
+msgid "DESCRIPTION"
+msgstr ""
+
+#: src/commands/cargo-fix.md:14
+msgid ""
+"This Cargo subcommand will automatically take rustc's suggestions from "
+"diagnostics like warnings and apply them to your source code. This is "
+"intended to help automate tasks that rustc itself already knows how to tell "
+"you to fix! The `cargo fix` subcommand is also being developed for the Rust "
+"2018 edition to provide code the ability to easily opt-in to the new edition "
+"without having to worry about any breakage."
+msgstr ""
+
+#: src/commands/cargo-fix.md:21
+msgid ""
+"Executing `cargo fix` will under the hood execute [cargo-check(1)](cargo-"
+"check.md). Any warnings applicable to your crate will be automatically fixed "
+"(if possible) and all remaining warnings will be displayed when the check "
+"process is finished. For example if you'd like to prepare for the 2018 "
+"edition, you can do so by executing:"
+msgstr ""
+
+#: src/commands/cargo-fix.md:29
+msgid "which behaves the same as `cargo check --all-targets`."
+msgstr ""
+
+#: src/commands/cargo-fix.md:31
+msgid ""
+"`cargo fix` is only capable of fixing code that is normally compiled with "
+"`cargo check`. If code is conditionally enabled with optional features, you "
+"will need to enable those features for that code to be analyzed:"
+msgstr ""
+
+#: src/commands/cargo-fix.md:37
+msgid ""
+"Similarly, other `cfg` expressions like platform-specific code will need to "
+"pass `--target` to fix code for the given target."
+msgstr ""
+
+#: src/commands/cargo-fix.md:42
+msgid ""
+"If you encounter any problems with `cargo fix` or otherwise have any "
+"questions or feature requests please don't hesitate to file an issue at "
+"<https://github.com/rust-lang/cargo>"
+msgstr ""
+
+#: src/commands/cargo-fix.md:46
+msgid "OPTIONS"
+msgstr ""
+
+#: src/commands/cargo-fix.md:48
+msgid "Fix options"
+msgstr ""
+
+#: src/commands/cargo-fix.md:83
+msgid "Package Selection"
+msgstr ""
+
+#: src/commands/cargo-fix.md:85
+msgid ""
+"By default, when no package selection options are given, the packages "
+"selected depend on the selected manifest file (based on the current working "
+"directory if `--manifest-path` is not given). If the manifest is the root of "
+"a workspace then the workspaces default members are selected, otherwise only "
+"the package defined by the manifest will be selected."
+msgstr ""
+
+#: src/commands/cargo-fix.md:91
+msgid ""
+"The default members of a workspace can be set explicitly with the `workspace."
+"default-members` key in the root manifest. If this is not set, a virtual "
+"workspace will include all workspace members (equivalent to passing `--"
+"workspace`), and a non-virtual workspace will include only the root crate "
+"itself."
+msgstr ""
+
+#: src/commands/cargo-fix.md:122
+msgid "Target Selection"
+msgstr ""
+
+#: src/commands/cargo-fix.md:124
+msgid ""
+"When no target selection options are given, `cargo fix` will fix all targets "
+"(`--all-targets` implied). Binaries are skipped if they have `required-"
+"features` that are missing."
+msgstr ""
+
+#: src/commands/cargo-fix.md:128
+msgid "Passing target selection flags will fix only the specified targets."
+msgstr ""
+
+#: src/commands/cargo-fix.md:190
+msgid "Feature Selection"
+msgstr ""
+
+#: src/commands/cargo-fix.md:192
+msgid ""
+"The feature flags allow you to control the enabled features for the "
+"\"current\" package. The \"current\" package is the package in the current "
+"directory, or the one specified in `--manifest-path`. If running in the root "
+"of a virtual workspace, then the default features are selected for all "
+"workspace members, or all features if `--all-features` is specified."
+msgstr ""
+
+#: src/commands/cargo-fix.md:198
+msgid ""
+"When no feature options are given, the `default` feature is activated for "
+"every selected package."
+msgstr ""
+
+#: src/commands/cargo-fix.md:221
+msgid "Compilation Options"
+msgstr ""
+
+#: src/commands/cargo-fix.md:256
+msgid "Output Options"
+msgstr ""
+
+#: src/commands/cargo-fix.md:268
+msgid "Display Options"
+msgstr ""
+
+#: src/commands/cargo-fix.md:320
+msgid "Manifest Options"
+msgstr ""
+
+#: src/commands/cargo-fix.md:355
+msgid "Common Options"
+msgstr ""
+
+#: src/commands/cargo-fix.md:379
+msgid "Miscellaneous Options"
+msgstr ""
+
+#: src/commands/cargo-fix.md:391
+msgid "PROFILES"
+msgstr ""
+
+#: src/commands/cargo-fix.md:393
+msgid ""
+"Profiles may be used to configure compiler options such as optimization "
+"levels and debug settings. See [the reference](../reference/profiles.html) "
+"for more details."
+msgstr ""
+
+#: src/commands/cargo-fix.md:397
+msgid ""
+"Profile selection depends on the target and crate being built. By default "
+"the `dev` or `test` profiles are used. If the `--release` flag is given, "
+"then the `release` or `bench` profiles are used."
+msgstr ""
+
+#: src/commands/cargo-fix.md:401
+msgid "Target"
+msgstr ""
+
+#: src/commands/cargo-fix.md:401
+msgid "Default Profile"
+msgstr ""
+
+#: src/commands/cargo-fix.md:401
+msgid "`--release` Profile"
+msgstr ""
+
+#: src/commands/cargo-fix.md:403
+msgid "lib, bin, example"
+msgstr ""
+
+#: src/commands/cargo-fix.md:403
+msgid "`dev`"
+msgstr ""
+
+#: src/commands/cargo-fix.md:403
+msgid "`release`"
+msgstr ""
+
+#: src/commands/cargo-fix.md:404
+msgid "test, bench, or any target in \"test\" or \"bench\" mode"
+msgstr ""
+
+#: src/commands/cargo-fix.md:404
+msgid "`test`"
+msgstr ""
+
+#: src/commands/cargo-fix.md:404
+msgid "`bench`"
+msgstr ""
+
+#: src/commands/cargo-fix.md:406
+msgid "Dependencies use the `dev`/`release` profiles."
+msgstr ""
+
+#: src/commands/cargo-fix.md:409
+msgid "ENVIRONMENT"
+msgstr ""
+
+#: src/commands/cargo-fix.md:411
+msgid ""
+"See [the reference](../reference/environment-variables.html) for details on "
+"environment variables that Cargo reads."
+msgstr ""
+
+#: src/commands/cargo-fix.md:415
+msgid "EXIT STATUS"
+msgstr ""
+
+#: src/commands/cargo-fix.md:417
+msgid "`0`: Cargo succeeded."
+msgstr ""
+
+#: src/commands/cargo-fix.md:418
+msgid "`101`: Cargo failed to complete."
+msgstr ""
+
+#: src/commands/cargo-fix.md:421
+msgid "EXAMPLES"
+msgstr ""
+
+#: src/commands/cargo-fix.md:423
+msgid "Apply compiler suggestions to the local package:"
+msgstr ""
+
+#: src/commands/cargo-fix.md:427
+msgid "Convert a 2015 edition to 2018:"
+msgstr ""
+
+#: src/commands/cargo-fix.md:431
+msgid "Apply suggested idioms for the current edition:"
+msgstr ""
+
+#: src/commands/cargo-fix.md:435
+msgid "SEE ALSO"
+msgstr ""
+
+#: src/commands/cargo-fix.md:436
+msgid "[cargo(1)](cargo.md), [cargo-check(1)](cargo-check.md)"
+msgstr ""
