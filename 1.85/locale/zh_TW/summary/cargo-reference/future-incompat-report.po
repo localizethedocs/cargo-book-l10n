@@ -1,0 +1,64 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:29:12Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/future-incompat-report.md:1
+msgid "Future incompat report"
+msgstr ""
+
+#: src/reference/future-incompat-report.md:3
+msgid ""
+"Cargo checks for future-incompatible warnings in all dependencies. These are "
+"warnings for changes that may become hard errors in the future, causing the "
+"dependency to stop building in a future version of rustc. If any warnings "
+"are found, a small notice is displayed indicating that the warnings were "
+"found, and provides instructions on how to display a full report."
+msgstr ""
+
+#: src/reference/future-incompat-report.md:9
+msgid "For example, you may see something like this at the end of a build:"
+msgstr ""
+
+#: src/reference/future-incompat-report.md:18
+msgid ""
+"A full report can be displayed with the `cargo report future-"
+"incompatibilities --id ID` command, or by running the build again with the "
+"`--future-incompat-report` flag. The developer should then update their "
+"dependencies to a version where the issue is fixed, or work with the "
+"developers of the dependencies to help resolve the issue."
+msgstr ""
+
+#: src/reference/future-incompat-report.md:24
+msgid "Configuration"
+msgstr ""
+
+#: src/reference/future-incompat-report.md:26
+msgid ""
+"This feature can be configured through a [`[future-incompat-report]`](config."
+"md#future-incompat-report) section in `.cargo/config.toml`. Currently, the "
+"supported options are:"
+msgstr ""
+
+#: src/reference/future-incompat-report.md:29
+msgid ""
+"```toml\n"
+"[future-incompat-report]\n"
+"frequency = \"always\"\n"
+"```"
+msgstr ""
+
+#: src/reference/future-incompat-report.md:34
+msgid ""
+"The supported values for the frequency are `\"always\"` and `\"never\"`, "
+"which control whether or not a message is printed out at the end of `cargo "
+"build` / `cargo check`."
+msgstr ""
