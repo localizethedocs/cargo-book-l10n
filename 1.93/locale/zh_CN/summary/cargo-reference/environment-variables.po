@@ -1,0 +1,1041 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:28:55Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/environment-variables.md:1
+msgid "Environment Variables"
+msgstr ""
+
+#: src/reference/environment-variables.md:3
+msgid ""
+"Cargo sets and reads a number of environment variables which your code can "
+"detect or override. Here is a list of the variables Cargo sets, organized by "
+"when it interacts with them:"
+msgstr ""
+
+#: src/reference/environment-variables.md:7
+msgid "Environment variables Cargo reads"
+msgstr ""
+
+#: src/reference/environment-variables.md:9
+msgid ""
+"You can override these environment variables to change Cargo's behavior on "
+"your system:"
+msgstr ""
+
+#: src/reference/environment-variables.md:12
+msgid ""
+"`CARGO_LOG` --- Cargo uses the [`tracing`](https://docs.rs/tracing) crate to "
+"display debug log messages. The `CARGO_LOG` environment variable can be set "
+"to enable debug logging, with a value such as `trace`, `debug`, or `warn`. "
+"Usually it is only used during debugging. For more details refer to the "
+"[Debug logging](https://doc.crates.io/contrib/implementation/debugging."
+"html#logging)."
+msgstr ""
+
+#: src/reference/environment-variables.md:17
+msgid ""
+"`CARGO_HOME` --- Cargo maintains a local cache of the registry index and of "
+"git checkouts of crates. By default these are stored under `$HOME/.cargo` "
+"(`%USERPROFILE%\\.cargo` on Windows), but this variable overrides the "
+"location of this directory. Once a crate is cached it is not removed by the "
+"clean command. For more details refer to the [guide](../guide/cargo-home.md)."
+msgstr ""
+
+#: src/reference/environment-variables.md:23
+msgid ""
+"`CARGO_TARGET_DIR` --- Location of where to place all generated artifacts, "
+"relative to the current working directory. See [`build.target-dir`](config."
+"md#buildtarget-dir) to set via config."
+msgstr ""
+
+#: src/reference/environment-variables.md:26
+msgid ""
+"`CARGO` --- If set, Cargo will forward this value instead of setting it to "
+"its own auto-detected path when it builds crates and when it executes build "
+"scripts and external subcommands. This value is not directly executed by "
+"Cargo, and should always point at a command that behaves exactly like "
+"`cargo`, as that's what users of the variable will be expecting."
+msgstr ""
+
+#: src/reference/environment-variables.md:32
+msgid ""
+"`RUSTC` --- Instead of running `rustc`, Cargo will execute this specified "
+"compiler instead. See [`build.rustc`](config.md#buildrustc) to set via "
+"config."
+msgstr ""
+
+#: src/reference/environment-variables.md:34
+msgid ""
+"`RUSTC_WRAPPER` --- Instead of simply running `rustc`, Cargo will execute "
+"this specified wrapper, passing as its command-line arguments the rustc "
+"invocation, with the first argument being the path to the actual rustc. "
+"Useful to set up a build cache tool such as `sccache`. See [`build.rustc-"
+"wrapper`](config.md#buildrustc-wrapper) to set via config. Setting this to "
+"the empty string overwrites the config and resets cargo to not use a wrapper."
+msgstr ""
+
+#: src/reference/environment-variables.md:40
+msgid ""
+"`RUSTC_WORKSPACE_WRAPPER` --- Instead of simply running `rustc`, for "
+"workspace members Cargo will execute this specified wrapper, passing as its "
+"command-line arguments the rustc invocation, with the first argument being "
+"the path to the actual rustc. When building a single-package project without "
+"workspaces, that package is considered to be the workspace. It affects the "
+"filename hash so that artifacts produced by the wrapper are cached "
+"separately. See [`build.rustc-workspace-wrapper`](config.md#buildrustc-"
+"workspace-wrapper) to set via config. Setting this to the empty string "
+"overwrites the config and resets cargo to not use a wrapper for workspace "
+"members. If both `RUSTC_WRAPPER` and `RUSTC_WORKSPACE_WRAPPER` are set, then "
+"they will be nested: the final invocation is `$RUSTC_WRAPPER "
+"$RUSTC_WORKSPACE_WRAPPER $RUSTC`."
+msgstr ""
+
+#: src/reference/environment-variables.md:49
+msgid ""
+"`RUSTDOC` --- Instead of running `rustdoc`, Cargo will execute this "
+"specified `rustdoc` instance instead. See [`build.rustdoc`](config."
+"md#buildrustdoc) to set via config."
+msgstr ""
+
+#: src/reference/environment-variables.md:51
+msgid ""
+"`RUSTDOCFLAGS` --- A space-separated list of custom flags to pass to all "
+"`rustdoc` invocations that Cargo performs. In contrast with [`cargo rustdoc`]"
+"(../commands/cargo-rustdoc.md), this is useful for passing a flag to _all_ "
+"`rustdoc` instances. See [`build.rustdocflags`](config.md#buildrustdocflags) "
+"for some more ways to set flags. This string is split by whitespace; for a "
+"more robust encoding of multiple arguments, see `CARGO_ENCODED_RUSTDOCFLAGS`."
+msgstr ""
+
+#: src/reference/environment-variables.md:57
+msgid ""
+"`CARGO_ENCODED_RUSTDOCFLAGS` ---  A list of custom flags separated by `0x1f` "
+"(ASCII Unit Separator) to pass to all `rustdoc` invocations that Cargo "
+"performs."
+msgstr ""
+
+#: src/reference/environment-variables.md:59
+msgid ""
+"`RUSTFLAGS` --- A space-separated list of custom flags to pass to all "
+"compiler invocations that Cargo performs. In contrast with [`cargo rustc`]"
+"(../commands/cargo-rustc.md), this is useful for passing a flag to _all_ "
+"compiler instances. See [`build.rustflags`](config.md#buildrustflags) for "
+"some more ways to set flags. This string is split by whitespace; for a more "
+"robust encoding of multiple arguments, see `CARGO_ENCODED_RUSTFLAGS`."
+msgstr ""
+
+#: src/reference/environment-variables.md:65
+msgid ""
+"`CARGO_ENCODED_RUSTFLAGS` --- A list of custom flags separated by `0x1f` "
+"(ASCII Unit Separator) to pass to all compiler invocations that Cargo "
+"performs."
+msgstr ""
+
+#: src/reference/environment-variables.md:67
+msgid ""
+"`CARGO_INCREMENTAL` --- If this is set to 1 then Cargo will force "
+"[incremental compilation](profiles.md#incremental) to be enabled for the "
+"current compilation, and when set to 0 it will force disabling it. If this "
+"env var isn't present then cargo's defaults will otherwise be used. See also "
+"[`build.incremental`](config.md#buildincremental) config value."
+msgstr ""
+
+#: src/reference/environment-variables.md:71
+msgid ""
+"`CARGO_CACHE_RUSTC_INFO` --- If this is set to 0 then Cargo will not try to "
+"cache compiler version information."
+msgstr ""
+
+#: src/reference/environment-variables.md:73
+msgid ""
+"`HTTPS_PROXY` or `https_proxy` or `http_proxy` --- The HTTP proxy to use, "
+"see [`http.proxy`](config.md#httpproxy) for more detail."
+msgstr ""
+
+#: src/reference/environment-variables.md:75
+msgid ""
+"`HTTP_TIMEOUT` --- The HTTP timeout in seconds, see [`http.timeout`](config."
+"md#httptimeout) for more detail."
+msgstr ""
+
+#: src/reference/environment-variables.md:77
+msgid "`TERM` --- If this is set to `dumb`, it disables the progress bar."
+msgstr ""
+
+#: src/reference/environment-variables.md:78
+msgid ""
+"`BROWSER` --- The web browser to execute to open documentation with [`cargo "
+"doc`](../commands/cargo-doc.md)'s `--open` flag, see [`doc.browser`](config."
+"md#docbrowser) for more details."
+msgstr ""
+
+#: src/reference/environment-variables.md:80
+msgid ""
+"`RUSTFMT` --- Instead of running `rustfmt`, [`cargo fmt`](https://github.com/"
+"rust-lang/rustfmt) will execute this specified `rustfmt` instance instead."
+msgstr ""
+
+#: src/reference/environment-variables.md:84
+msgid "Configuration environment variables"
+msgstr ""
+
+#: src/reference/environment-variables.md:86
+msgid ""
+"Cargo reads environment variables for some configuration values. See the "
+"[configuration chapter](config.md#environment-variables) for more details. "
+"In summary, the supported environment variables are:"
+msgstr ""
+
+#: src/reference/environment-variables.md:90
+msgid ""
+"`CARGO_ALIAS_<name>` --- Command aliases, see [`alias`](config.md#alias)."
+msgstr ""
+
+#: src/reference/environment-variables.md:91
+msgid ""
+"`CARGO_BUILD_JOBS` --- Number of parallel jobs, see [`build.jobs`](config."
+"md#buildjobs)."
+msgstr ""
+
+#: src/reference/environment-variables.md:92
+msgid ""
+"`CARGO_BUILD_RUSTC` --- The `rustc` executable, see [`build.rustc`](config."
+"md#buildrustc)."
+msgstr ""
+
+#: src/reference/environment-variables.md:93
+msgid ""
+"`CARGO_BUILD_RUSTC_WRAPPER` --- The `rustc` wrapper, see [`build.rustc-"
+"wrapper`](config.md#buildrustc-wrapper)."
+msgstr ""
+
+#: src/reference/environment-variables.md:94
+msgid ""
+"`CARGO_BUILD_RUSTC_WORKSPACE_WRAPPER` --- The `rustc` wrapper for workspace "
+"members only, see [`build.rustc-workspace-wrapper`](config.md#buildrustc-"
+"workspace-wrapper)."
+msgstr ""
+
+#: src/reference/environment-variables.md:95
+msgid ""
+"`CARGO_BUILD_RUSTDOC` --- The `rustdoc` executable, see [`build.rustdoc`]"
+"(config.md#buildrustdoc)."
+msgstr ""
+
+#: src/reference/environment-variables.md:96
+msgid ""
+"`CARGO_BUILD_TARGET` --- The default target platform, see [`build.target`]"
+"(config.md#buildtarget)."
+msgstr ""
+
+#: src/reference/environment-variables.md:97
+msgid ""
+"`CARGO_BUILD_TARGET_DIR` --- The default output directory, see [`build."
+"target-dir`](config.md#buildtarget-dir)."
+msgstr ""
+
+#: src/reference/environment-variables.md:98
+msgid ""
+"`CARGO_BUILD_BUILD_DIR` --- The default build directory, see [`build.build-"
+"dir`](config.md#buildbuild-dir)."
+msgstr ""
+
+#: src/reference/environment-variables.md:99
+msgid ""
+"`CARGO_BUILD_RUSTFLAGS` --- Extra `rustc` flags, see [`build.rustflags`]"
+"(config.md#buildrustflags)."
+msgstr ""
+
+#: src/reference/environment-variables.md:100
+msgid ""
+"`CARGO_BUILD_RUSTDOCFLAGS` --- Extra `rustdoc` flags, see [`build."
+"rustdocflags`](config.md#buildrustdocflags)."
+msgstr ""
+
+#: src/reference/environment-variables.md:101
+msgid ""
+"`CARGO_BUILD_INCREMENTAL` --- Incremental compilation, see [`build."
+"incremental`](config.md#buildincremental)."
+msgstr ""
+
+#: src/reference/environment-variables.md:102
+msgid ""
+"`CARGO_BUILD_DEP_INFO_BASEDIR` --- Dep-info relative directory, see [`build."
+"dep-info-basedir`](config.md#builddep-info-basedir)."
+msgstr ""
+
+#: src/reference/environment-variables.md:103
+msgid ""
+"`CARGO_CACHE_AUTO_CLEAN_FREQUENCY` --- Configures how often automatic cache "
+"cleaning runs, see [`cache.auto-clean-frequency`](config.md#cacheauto-clean-"
+"frequency)."
+msgstr ""
+
+#: src/reference/environment-variables.md:104
+msgid ""
+"`CARGO_CARGO_NEW_VCS` --- The default source control system with [`cargo "
+"new`](../commands/cargo-new.md), see [`cargo-new.vcs`](config.md#cargo-"
+"newvcs)."
+msgstr ""
+
+#: src/reference/environment-variables.md:105
+msgid ""
+"`CARGO_FUTURE_INCOMPAT_REPORT_FREQUENCY` --- How often we should generate a "
+"future incompat report notification, see [`future-incompat-report.frequency`]"
+"(config.md#future-incompat-reportfrequency)."
+msgstr ""
+
+#: src/reference/environment-variables.md:106
+msgid ""
+"`CARGO_HTTP_DEBUG` --- Enables HTTP debugging, see [`http.debug`](config."
+"md#httpdebug)."
+msgstr ""
+
+#: src/reference/environment-variables.md:107
+msgid ""
+"`CARGO_HTTP_PROXY` --- Enables HTTP proxy, see [`http.proxy`](config."
+"md#httpproxy)."
+msgstr ""
+
+#: src/reference/environment-variables.md:108
+msgid ""
+"`CARGO_HTTP_TIMEOUT` --- The HTTP timeout, see [`http.timeout`](config."
+"md#httptimeout)."
+msgstr ""
+
+#: src/reference/environment-variables.md:109
+msgid ""
+"`CARGO_HTTP_CAINFO` --- The TLS certificate Certificate Authority file, see "
+"[`http.cainfo`](config.md#httpcainfo)."
+msgstr ""
+
+#: src/reference/environment-variables.md:110
+msgid ""
+"`CARGO_HTTP_PROXY_CAINFO` --- The proxy TLS certificate Certificate "
+"Authority file, see [`http.proxy-cainfo`](config.md#httpproxy-cainfo)."
+msgstr ""
+
+#: src/reference/environment-variables.md:111
+msgid ""
+"`CARGO_HTTP_CHECK_REVOKE` --- Disables TLS certificate revocation checks, "
+"see [`http.check-revoke`](config.md#httpcheck-revoke)."
+msgstr ""
+
+#: src/reference/environment-variables.md:112
+msgid ""
+"`CARGO_HTTP_SSL_VERSION` --- The TLS version to use, see [`http.ssl-version`]"
+"(config.md#httpssl-version)."
+msgstr ""
+
+#: src/reference/environment-variables.md:113
+msgid ""
+"`CARGO_HTTP_LOW_SPEED_LIMIT` --- The HTTP low-speed limit, see [`http.low-"
+"speed-limit`](config.md#httplow-speed-limit)."
+msgstr ""
+
+#: src/reference/environment-variables.md:114
+msgid ""
+"`CARGO_HTTP_MULTIPLEXING` --- Whether HTTP/2 multiplexing is used, see "
+"[`http.multiplexing`](config.md#httpmultiplexing)."
+msgstr ""
+
+#: src/reference/environment-variables.md:115
+msgid ""
+"`CARGO_HTTP_USER_AGENT` --- The HTTP user-agent header, see [`http.user-"
+"agent`](config.md#httpuser-agent)."
+msgstr ""
+
+#: src/reference/environment-variables.md:116
+msgid ""
+"`CARGO_INSTALL_ROOT` --- The default directory for [`cargo install`](../"
+"commands/cargo-install.md), see [`install.root`](config.md#installroot)."
+msgstr ""
+
+#: src/reference/environment-variables.md:117
+msgid ""
+"`CARGO_NET_RETRY` --- Number of times to retry network errors, see [`net."
+"retry`](config.md#netretry)."
+msgstr ""
+
+#: src/reference/environment-variables.md:118
+msgid ""
+"`CARGO_NET_GIT_FETCH_WITH_CLI` --- Enables the use of the `git` executable "
+"to fetch, see [`net.git-fetch-with-cli`](config.md#netgit-fetch-with-cli)."
+msgstr ""
+
+#: src/reference/environment-variables.md:119
+msgid ""
+"`CARGO_NET_OFFLINE` --- Offline mode, see [`net.offline`](config."
+"md#netoffline)."
+msgstr ""
+
+#: src/reference/environment-variables.md:120
+msgid ""
+"`CARGO_PROFILE_<name>_BUILD_OVERRIDE_<key>` --- Override build script "
+"profile, see [`profile.<name>.build-override`](config.md#profilenamebuild-"
+"override)."
+msgstr ""
+
+#: src/reference/environment-variables.md:121
+msgid ""
+"`CARGO_PROFILE_<name>_CODEGEN_UNITS` --- Set code generation units, see "
+"[`profile.<name>.codegen-units`](config.md#profilenamecodegen-units)."
+msgstr ""
+
+#: src/reference/environment-variables.md:122
+msgid ""
+"`CARGO_PROFILE_<name>_DEBUG` --- What kind of debug info to include, see "
+"[`profile.<name>.debug`](config.md#profilenamedebug)."
+msgstr ""
+
+#: src/reference/environment-variables.md:123
+msgid ""
+"`CARGO_PROFILE_<name>_DEBUG_ASSERTIONS` --- Enable/disable debug assertions, "
+"see [`profile.<name>.debug-assertions`](config.md#profilenamedebug-"
+"assertions)."
+msgstr ""
+
+#: src/reference/environment-variables.md:124
+msgid ""
+"`CARGO_PROFILE_<name>_INCREMENTAL` --- Enable/disable incremental "
+"compilation, see [`profile.<name>.incremental`](config."
+"md#profilenameincremental)."
+msgstr ""
+
+#: src/reference/environment-variables.md:125
+msgid ""
+"`CARGO_PROFILE_<name>_LTO` --- Link-time optimization, see [`profile.<name>."
+"lto`](config.md#profilenamelto)."
+msgstr ""
+
+#: src/reference/environment-variables.md:126
+msgid ""
+"`CARGO_PROFILE_<name>_OVERFLOW_CHECKS` --- Enable/disable overflow checks, "
+"see [`profile.<name>.overflow-checks`](config.md#profilenameoverflow-checks)."
+msgstr ""
+
+#: src/reference/environment-variables.md:127
+msgid ""
+"`CARGO_PROFILE_<name>_OPT_LEVEL` --- Set the optimization level, see "
+"[`profile.<name>.opt-level`](config.md#profilenameopt-level)."
+msgstr ""
+
+#: src/reference/environment-variables.md:128
+msgid ""
+"`CARGO_PROFILE_<name>_PANIC` --- The panic strategy to use, see [`profile."
+"<name>.panic`](config.md#profilenamepanic)."
+msgstr ""
+
+#: src/reference/environment-variables.md:129
+msgid ""
+"`CARGO_PROFILE_<name>_RPATH` --- The rpath linking option, see [`profile."
+"<name>.rpath`](config.md#profilenamerpath)."
+msgstr ""
+
+#: src/reference/environment-variables.md:130
+msgid ""
+"`CARGO_PROFILE_<name>_SPLIT_DEBUGINFO` --- Controls debug file output "
+"behavior, see [`profile.<name>.split-debuginfo`](config.md#profilenamesplit-"
+"debuginfo)."
+msgstr ""
+
+#: src/reference/environment-variables.md:131
+msgid ""
+"`CARGO_PROFILE_<name>_STRIP` --- Controls stripping of symbols and/or "
+"debuginfos, see [`profile.<name>.strip`](config.md#profilenamestrip)."
+msgstr ""
+
+#: src/reference/environment-variables.md:132
+msgid ""
+"`CARGO_REGISTRIES_<name>_CREDENTIAL_PROVIDER` --- Credential provider for a "
+"registry, see [`registries.<name>.credential-provider`](config."
+"md#registriesnamecredential-provider)."
+msgstr ""
+
+#: src/reference/environment-variables.md:133
+msgid ""
+"`CARGO_REGISTRIES_<name>_INDEX` --- URL of a registry index, see "
+"[`registries.<name>.index`](config.md#registriesnameindex)."
+msgstr ""
+
+#: src/reference/environment-variables.md:134
+msgid ""
+"`CARGO_REGISTRIES_<name>_TOKEN` --- Authentication token of a registry, see "
+"[`registries.<name>.token`](config.md#registriesnametoken)."
+msgstr ""
+
+#: src/reference/environment-variables.md:135
+msgid ""
+"`CARGO_REGISTRY_CREDENTIAL_PROVIDER` --- Credential provider for [crates.io]"
+"(https://crates.io/), see [`registry.credential-provider`](config."
+"md#registrycredential-provider)."
+msgstr ""
+
+#: src/reference/environment-variables.md:136
+msgid ""
+"`CARGO_REGISTRY_DEFAULT` --- Default registry for the `--registry` flag, see "
+"[`registry.default`](config.md#registrydefault)."
+msgstr ""
+
+#: src/reference/environment-variables.md:137
+msgid ""
+"`CARGO_REGISTRY_GLOBAL_CREDENTIAL_PROVIDERS` --- Credential providers for "
+"registries that do not have a specific provider defined. See [`registry."
+"global-credential-providers`](config.md#registryglobal-credential-providers)."
+msgstr ""
+
+#: src/reference/environment-variables.md:138
+msgid ""
+"`CARGO_REGISTRY_TOKEN` --- Authentication token for [crates.io](https://"
+"crates.io/), see [`registry.token`](config.md#registrytoken)."
+msgstr ""
+
+#: src/reference/environment-variables.md:139
+msgid ""
+"`CARGO_TARGET_<triple>_LINKER` --- The linker to use, see [`target.<triple>."
+"linker`](config.md#targettriplelinker). The triple must be [converted to "
+"uppercase and underscores](config.md#environment-variables)."
+msgstr ""
+
+#: src/reference/environment-variables.md:140
+msgid ""
+"`CARGO_TARGET_<triple>_RUNNER` --- The executable runner, see [`target."
+"<triple>.runner`](config.md#targettriplerunner)."
+msgstr ""
+
+#: src/reference/environment-variables.md:141
+msgid ""
+"`CARGO_TARGET_<triple>_RUSTFLAGS` --- Extra `rustc` flags for a target, see "
+"[`target.<triple>.rustflags`](config.md#targettriplerustflags)."
+msgstr ""
+
+#: src/reference/environment-variables.md:142
+msgid ""
+"`CARGO_TERM_QUIET` --- Quiet mode, see [`term.quiet`](config.md#termquiet)."
+msgstr ""
+
+#: src/reference/environment-variables.md:143
+msgid ""
+"`CARGO_TERM_VERBOSE` --- The default terminal verbosity, see [`term.verbose`]"
+"(config.md#termverbose)."
+msgstr ""
+
+#: src/reference/environment-variables.md:144
+msgid ""
+"`CARGO_TERM_COLOR` --- The default color mode, see [`term.color`](config."
+"md#termcolor)."
+msgstr ""
+
+#: src/reference/environment-variables.md:145
+msgid ""
+"`CARGO_TERM_PROGRESS_WHEN` --- The default progress bar showing mode, see "
+"[`term.progress.when`](config.md#termprogresswhen)."
+msgstr ""
+
+#: src/reference/environment-variables.md:146
+msgid ""
+"`CARGO_TERM_PROGRESS_WIDTH` --- The default progress bar width, see [`term."
+"progress.width`](config.md#termprogresswidth)."
+msgstr ""
+
+#: src/reference/environment-variables.md:217
+msgid "Environment variables Cargo sets for crates"
+msgstr ""
+
+#: src/reference/environment-variables.md:219
+msgid ""
+"Cargo exposes these environment variables to your crate when it is compiled. "
+"Note that this applies for running binaries with `cargo run` and `cargo "
+"test` as well. To get the value of any of these variables in a Rust program, "
+"do this:"
+msgstr ""
+
+#: src/reference/environment-variables.md:225
+msgid "\"CARGO_PKG_VERSION\""
+msgstr ""
+
+#: src/reference/environment-variables.md:228
+msgid "`version` will now contain the value of `CARGO_PKG_VERSION`."
+msgstr ""
+
+#: src/reference/environment-variables.md:230
+msgid ""
+"Note that if one of these values is not provided in the manifest, the "
+"corresponding environment variable is set to the empty string, `\"\"`."
+msgstr ""
+
+#: src/reference/environment-variables.md:233
+#: src/reference/environment-variables.md:326
+#: src/reference/environment-variables.md:431
+msgid "`CARGO` --- Path to the `cargo` binary performing the build."
+msgstr ""
+
+#: src/reference/environment-variables.md:234
+msgid ""
+"`CARGO_MANIFEST_DIR` --- The directory containing the manifest of your "
+"package."
+msgstr ""
+
+#: src/reference/environment-variables.md:235
+#: src/reference/environment-variables.md:330
+msgid "`CARGO_MANIFEST_PATH` --- The path to the manifest of your package."
+msgstr ""
+
+#: src/reference/environment-variables.md:236
+msgid "`CARGO_PKG_VERSION` --- The full version of your package."
+msgstr ""
+
+#: src/reference/environment-variables.md:237
+msgid "`CARGO_PKG_VERSION_MAJOR` --- The major version of your package."
+msgstr ""
+
+#: src/reference/environment-variables.md:238
+msgid "`CARGO_PKG_VERSION_MINOR` --- The minor version of your package."
+msgstr ""
+
+#: src/reference/environment-variables.md:239
+msgid "`CARGO_PKG_VERSION_PATCH` --- The patch version of your package."
+msgstr ""
+
+#: src/reference/environment-variables.md:240
+msgid "`CARGO_PKG_VERSION_PRE` --- The pre-release version of your package."
+msgstr ""
+
+#: src/reference/environment-variables.md:241
+msgid ""
+"`CARGO_PKG_AUTHORS` --- Colon separated list of authors from the manifest of "
+"your package."
+msgstr ""
+
+#: src/reference/environment-variables.md:242
+msgid "`CARGO_PKG_NAME` --- The name of your package."
+msgstr ""
+
+#: src/reference/environment-variables.md:243
+msgid ""
+"`CARGO_PKG_DESCRIPTION` --- The description from the manifest of your "
+"package."
+msgstr ""
+
+#: src/reference/environment-variables.md:244
+msgid ""
+"`CARGO_PKG_HOMEPAGE` --- The home page from the manifest of your package."
+msgstr ""
+
+#: src/reference/environment-variables.md:245
+msgid ""
+"`CARGO_PKG_REPOSITORY` --- The repository from the manifest of your package."
+msgstr ""
+
+#: src/reference/environment-variables.md:246
+msgid "`CARGO_PKG_LICENSE` --- The license from the manifest of your package."
+msgstr ""
+
+#: src/reference/environment-variables.md:247
+msgid ""
+"`CARGO_PKG_LICENSE_FILE` --- The license file from the manifest of your "
+"package."
+msgstr ""
+
+#: src/reference/environment-variables.md:248
+msgid ""
+"`CARGO_PKG_RUST_VERSION` --- The Rust version from the manifest of your "
+"package. Note that this is the minimum Rust version supported by the "
+"package, not the current Rust version."
+msgstr ""
+
+#: src/reference/environment-variables.md:251
+msgid "`CARGO_PKG_README` --- Path to the README file of your package."
+msgstr ""
+
+#: src/reference/environment-variables.md:252
+msgid ""
+"`CARGO_CRATE_NAME` --- The name of the crate that is currently being "
+"compiled. It is the name of the [Cargo target](cargo-targets.md) with `-` "
+"converted to `_`, such as the name of the library, binary, example, "
+"integration test, or benchmark."
+msgstr ""
+
+#: src/reference/environment-variables.md:253
+msgid ""
+"`CARGO_BIN_NAME` --- The name of the binary that is currently being "
+"compiled. Only set for [binaries](cargo-targets.md#binaries) or binary "
+"[examples](cargo-targets.md#examples). This name does not include any file "
+"extension, such as `.exe`."
+msgstr ""
+
+#: src/reference/environment-variables.md:256
+msgid ""
+"`OUT_DIR` --- If the package has a build script, this is set to the folder "
+"where the build script should place its output. See below for more "
+"information. (Only set during compilation.)"
+msgstr ""
+
+#: src/reference/environment-variables.md:259
+msgid ""
+"`CARGO_BIN_EXE_<name>` --- The absolute path to a binary target's "
+"executable. This is only set when building an [integration test](cargo-"
+"targets.md#integration-tests) or benchmark. This may be used with the [`env` "
+"macro](../../std/macro.env.html) to find the executable to run for testing "
+"purposes. The `<name>` is the name of the binary target, exactly as-is. For "
+"example, `CARGO_BIN_EXE_my-program` for a binary named `my-program`. "
+"Binaries are automatically built when the test is built, unless the binary "
+"has required features that are not enabled."
+msgstr ""
+
+#: src/reference/environment-variables.md:266
+msgid ""
+"`CARGO_PRIMARY_PACKAGE` --- This environment variable will be set if the "
+"package being built is primary. Primary packages are the ones the user "
+"selected on the command-line, either with `-p` flags or the defaults based "
+"on the current directory and the default workspace members. This variable "
+"will not be set when building dependencies, unless a dependency is also a "
+"workspace member that was also selected on the command-line. This is only "
+"set when compiling the package (not when running binaries or tests)."
+msgstr ""
+
+#: src/reference/environment-variables.md:273
+msgid ""
+"`CARGO_TARGET_TMPDIR` --- Only set when building [integration test](cargo-"
+"targets.md#integration-tests) or benchmark code. This is a path to a "
+"directory inside the target directory where integration tests or benchmarks "
+"are free to put any data needed by the tests/benches. Cargo initially "
+"creates this directory but doesn't manage its content in any way, this is "
+"the responsibility of the test code."
+msgstr ""
+
+#: src/reference/environment-variables.md:285
+msgid "Dynamic library paths"
+msgstr ""
+
+#: src/reference/environment-variables.md:287
+msgid ""
+"Cargo also sets the dynamic library path when compiling and running binaries "
+"with commands like `cargo run` and `cargo test`. This helps with locating "
+"shared libraries that are part of the build process. The variable name "
+"depends on the platform:"
+msgstr ""
+
+#: src/reference/environment-variables.md:292
+msgid "Windows: `PATH`"
+msgstr ""
+
+#: src/reference/environment-variables.md:293
+msgid "macOS: `DYLD_FALLBACK_LIBRARY_PATH`"
+msgstr ""
+
+#: src/reference/environment-variables.md:294
+msgid "Unix: `LD_LIBRARY_PATH`"
+msgstr ""
+
+#: src/reference/environment-variables.md:295
+msgid "AIX: `LIBPATH`"
+msgstr ""
+
+#: src/reference/environment-variables.md:297
+msgid ""
+"The value is extended from the existing value when Cargo starts. macOS has "
+"special consideration where if `DYLD_FALLBACK_LIBRARY_PATH` is not already "
+"set, it will add the default `$HOME/lib:/usr/local/lib:/usr/lib`."
+msgstr ""
+
+#: src/reference/environment-variables.md:301
+msgid "Cargo includes the following paths:"
+msgstr ""
+
+#: src/reference/environment-variables.md:303
+msgid ""
+"Search paths included from any build script with the [`rustc-link-search` "
+"instruction](build-scripts.md#rustc-link-search). Paths outside of the "
+"`target` directory are removed. It is the responsibility of the user running "
+"Cargo to properly set the environment if additional libraries on the system "
+"are needed in the search path."
+msgstr ""
+
+#: src/reference/environment-variables.md:308
+msgid ""
+"The base output directory, such as `target/debug`, and the \"deps\" "
+"directory. This is mostly for support of proc-macros."
+msgstr ""
+
+#: src/reference/environment-variables.md:310
+msgid ""
+"The rustc sysroot library path. This generally is not important to most "
+"users."
+msgstr ""
+
+#: src/reference/environment-variables.md:313
+msgid "Environment variables Cargo sets for build scripts"
+msgstr ""
+
+#: src/reference/environment-variables.md:315
+msgid ""
+"Cargo sets several environment variables when build scripts are run. Because "
+"these variables are not yet set when the build script is compiled, the above "
+"example using `env!` won't work and instead you'll need to retrieve the "
+"values when the build script is run:"
+msgstr ""
+
+#: src/reference/environment-variables.md:321
+msgid "\"OUT_DIR\""
+msgstr ""
+
+#: src/reference/environment-variables.md:324
+msgid "`out_dir` will now contain the value of `OUT_DIR`."
+msgstr ""
+
+#: src/reference/environment-variables.md:327
+msgid ""
+"`CARGO_MANIFEST_DIR` --- The directory containing the manifest for the "
+"package being built (the package containing the build script). Also note "
+"that this is the value of the current working directory of the build script "
+"when it starts."
+msgstr ""
+
+#: src/reference/environment-variables.md:331
+msgid "`CARGO_MANIFEST_LINKS` --- the manifest `links` value."
+msgstr ""
+
+#: src/reference/environment-variables.md:332
+msgid ""
+"`CARGO_MAKEFLAGS` --- Contains parameters needed for Cargo's [jobserver]"
+"(https://www.gnu.org/software/make/manual/html_node/Job-Slots.html) "
+"implementation to parallelize subprocesses. Rustc or cargo invocations from "
+"build.rs can already read `CARGO_MAKEFLAGS`, but GNU Make requires the flags "
+"to be specified either directly as arguments, or through the `MAKEFLAGS` "
+"environment variable. Currently Cargo doesn't set the `MAKEFLAGS` variable, "
+"but it's free for build scripts invoking GNU Make to set it to the contents "
+"of `CARGO_MAKEFLAGS`."
+msgstr ""
+
+#: src/reference/environment-variables.md:339
+msgid ""
+"`CARGO_FEATURE_<name>` --- For each activated feature of the package being "
+"built, this environment variable will be present where `<name>` is the name "
+"of the feature uppercased and having `-` translated to `_`."
+msgstr ""
+
+#: src/reference/environment-variables.md:342
+msgid ""
+"`CARGO_CFG_<cfg>` --- For each [configuration option](../../reference/"
+"conditional-compilation.html) of the package being built, this environment "
+"variable will contain the value of the configuration, where `<cfg>` is the "
+"name of the configuration uppercased and having `-` translated to `_`. "
+"Boolean configurations are present if they are set, and not present "
+"otherwise. Configurations with multiple values are joined to a single "
+"variable with the values delimited by `,`. This includes values built-in to "
+"the compiler (which can be seen with `rustc --print=cfg`) and values set by "
+"build scripts and extra flags passed to `rustc` (such as those defined in "
+"`RUSTFLAGS`). Some examples of what these variables are:"
+msgstr ""
+
+#: src/reference/environment-variables.md:351
+msgid ""
+"`CARGO_CFG_FEATURE` --- Each activated feature of the package being built."
+msgstr ""
+
+#: src/reference/environment-variables.md:352
+msgid ""
+"`CARGO_CFG_UNIX` --- Set on [unix-like platforms](../../reference/"
+"conditional-compilation.html#unix-and-windows)."
+msgstr ""
+
+#: src/reference/environment-variables.md:353
+msgid ""
+"`CARGO_CFG_WINDOWS` --- Set on [windows-like platforms](../../reference/"
+"conditional-compilation.html#unix-and-windows)."
+msgstr ""
+
+#: src/reference/environment-variables.md:354
+msgid ""
+"`CARGO_CFG_TARGET_FAMILY=unix,wasm` --- The [target family](../../reference/"
+"conditional-compilation.html#target_family)."
+msgstr ""
+
+#: src/reference/environment-variables.md:355
+msgid ""
+"`CARGO_CFG_TARGET_OS=macos` --- The [target operating system](../../"
+"reference/conditional-compilation.html#target_os)."
+msgstr ""
+
+#: src/reference/environment-variables.md:356
+msgid ""
+"`CARGO_CFG_TARGET_ARCH=x86_64` --- The CPU [target architecture](../../"
+"reference/conditional-compilation.html#target_arch)."
+msgstr ""
+
+#: src/reference/environment-variables.md:357
+msgid ""
+"`CARGO_CFG_TARGET_VENDOR=apple` --- The [target vendor](../../reference/"
+"conditional-compilation.html#target_vendor)."
+msgstr ""
+
+#: src/reference/environment-variables.md:358
+msgid ""
+"`CARGO_CFG_TARGET_ENV=gnu` --- The [target environment](../../reference/"
+"conditional-compilation.html#target_env) ABI."
+msgstr ""
+
+#: src/reference/environment-variables.md:359
+msgid ""
+"`CARGO_CFG_TARGET_ABI=eabihf` --- The [target ABI](../../reference/"
+"conditional-compilation.html#target_abi)."
+msgstr ""
+
+#: src/reference/environment-variables.md:360
+msgid ""
+"`CARGO_CFG_TARGET_POINTER_WIDTH=64` --- The CPU [pointer width](../../"
+"reference/conditional-compilation.html#target_pointer_width)."
+msgstr ""
+
+#: src/reference/environment-variables.md:361
+msgid ""
+"`CARGO_CFG_TARGET_ENDIAN=little` --- The CPU [target endianness](../../"
+"reference/conditional-compilation.html#target_endian)."
+msgstr ""
+
+#: src/reference/environment-variables.md:362
+msgid ""
+"`CARGO_CFG_TARGET_FEATURE=mmx,sse` --- List of CPU [target features](../../"
+"reference/conditional-compilation.html#target_feature) enabled."
+msgstr ""
+
+#: src/reference/environment-variables.md:363
+msgid ""
+"Note that different [target triples](../appendix/glossary.md#target) have "
+"different sets of `cfg` values, hence variables present in one target triple "
+"might not be available in the other."
+msgstr ""
+
+#: src/reference/environment-variables.md:366
+msgid "Some cfg values like `test` are not available."
+msgstr ""
+
+#: src/reference/environment-variables.md:367
+msgid ""
+"`OUT_DIR` --- the folder in which all output and intermediate artifacts "
+"should be placed. This folder is inside the build directory for the package "
+"being built, and it is unique for the package in question."
+msgstr ""
+
+#: src/reference/environment-variables.md:370
+msgid ""
+"`TARGET` --- the target triple that is being compiled for. Native code "
+"should be compiled for this triple. See the [Target Triple](../appendix/"
+"glossary.md#target) description for more information."
+msgstr ""
+
+#: src/reference/environment-variables.md:372
+msgid "`HOST` --- the host triple of the Rust compiler."
+msgstr ""
+
+#: src/reference/environment-variables.md:373
+msgid ""
+"`NUM_JOBS` --- the parallelism specified as the top-level parallelism. This "
+"can be useful to pass a `-j` parameter to a system like `make`. Note that "
+"care should be taken when interpreting this environment variable. For "
+"historical purposes this is still provided but recent versions of Cargo, for "
+"example, do not need to run `make -j`, and instead can set the `MAKEFLAGS` "
+"env var to the content of `CARGO_MAKEFLAGS` to activate the use of Cargo's "
+"GNU Make compatible [jobserver](https://www.gnu.org/software/make/manual/"
+"html_node/Job-Slots.html) for sub-make invocations."
+msgstr ""
+
+#: src/reference/environment-variables.md:380
+msgid ""
+"`OPT_LEVEL`, `DEBUG` --- values of the corresponding variables for the "
+"profile currently being built."
+msgstr ""
+
+#: src/reference/environment-variables.md:381
+msgid ""
+"`PROFILE` --- `release` for release builds, `debug` for other builds. This "
+"is determined based on if the [profile](profiles.md) inherits from the "
+"[`dev`](profiles.md#dev) or [`release`](profiles.md#release) profile. Using "
+"this environment variable is not recommended. Using other environment "
+"variables like `OPT_LEVEL` provide a more correct view of the actual "
+"settings being used."
+msgstr ""
+
+#: src/reference/environment-variables.md:386
+msgid ""
+"`DEP_<links>_<key>` --- For more information about this set of environment "
+"variables, see build script documentation about [`links`](build-scripts."
+"md#the-links-manifest-key)."
+msgstr ""
+
+#: src/reference/environment-variables.md:388
+msgid ""
+"`RUSTC`, `RUSTDOC` --- the compiler and documentation generator that Cargo "
+"has resolved to use, passed to the build script so it might use it as well."
+msgstr ""
+
+#: src/reference/environment-variables.md:390
+msgid ""
+"`RUSTC_WRAPPER` --- the `rustc` wrapper, if any, that Cargo is using. See "
+"[`build.rustc-wrapper`](config.md#buildrustc-wrapper)."
+msgstr ""
+
+#: src/reference/environment-variables.md:391
+msgid ""
+"`RUSTC_WORKSPACE_WRAPPER` --- the `rustc` wrapper, if any, that Cargo is "
+"using for workspace members. See [`build.rustc-workspace-wrapper`](config."
+"md#buildrustc-workspace-wrapper)."
+msgstr ""
+
+#: src/reference/environment-variables.md:393
+msgid ""
+"`RUSTC_LINKER` --- The path to the linker binary that Cargo has resolved to "
+"use for the current target, if specified. The linker can be changed by "
+"editing `.cargo/config.toml`; see the documentation about [cargo "
+"configuration](config.md) for more information."
+msgstr ""
+
+#: src/reference/environment-variables.md:397
+msgid ""
+"`CARGO_ENCODED_RUSTFLAGS` --- extra flags that Cargo invokes `rustc` with, "
+"separated by a `0x1f` character (ASCII Unit Separator). See [`build."
+"rustflags`](config.md#buildrustflags). Note that since Rust 1.55, "
+"`RUSTFLAGS` is removed from the environment; scripts should use "
+"`CARGO_ENCODED_RUSTFLAGS` instead."
+msgstr ""
+
+#: src/reference/environment-variables.md:401
+msgid ""
+"`CARGO_PKG_<var>` --- The package information variables, with the same names "
+"and values as are [provided during crate building](#environment-variables-"
+"cargo-sets-for-crates)."
+msgstr ""
+
+#: src/reference/environment-variables.md:426
+msgid "Environment variables Cargo sets for 3rd party subcommands"
+msgstr ""
+
+#: src/reference/environment-variables.md:428
+msgid ""
+"Cargo exposes this environment variable to 3rd party subcommands (ie. "
+"programs named `cargo-foobar` placed in `$PATH`):"
+msgstr ""
+
+#: src/reference/environment-variables.md:432
+msgid ""
+"`CARGO_MAKEFLAGS` --- Contains parameters needed for Cargo's [jobserver]"
+"(https://www.gnu.org/software/make/manual/html_node/Job-Slots.html) "
+"implementation to parallelize subprocesses. This is set only when Cargo "
+"detects the existence of a jobserver."
+msgstr ""
+
+#: src/reference/environment-variables.md:436
+msgid ""
+"For extended information about your environment you may run `cargo metadata`."
+msgstr ""

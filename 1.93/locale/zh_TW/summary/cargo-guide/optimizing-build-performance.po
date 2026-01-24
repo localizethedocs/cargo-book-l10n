@@ -1,0 +1,439 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:28:55Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/guide/build-performance.md:1
+msgid "Optimizing Build Performance"
+msgstr ""
+
+#: src/guide/build-performance.md:3
+msgid ""
+"Cargo configuration options and source code organization patterns can help "
+"improve build performance, by prioritizing it over other aspects which may "
+"not be as important for your circumstances."
+msgstr ""
+
+#: src/guide/build-performance.md:5
+msgid ""
+"Same as when optimizing runtime performance, be sure to measure these "
+"changes against the workflows you actually care about, as we provide general "
+"guidelines and your circumstances may be different, it is possible that some "
+"of these approaches might actually make build performance worse for your use-"
+"case."
+msgstr ""
+
+#: src/guide/build-performance.md:7
+msgid "Example workflows to consider include:"
+msgstr ""
+
+#: src/guide/build-performance.md:8
+msgid ""
+"Compiler feedback as you develop (`cargo check` after making a code change)"
+msgstr ""
+
+#: src/guide/build-performance.md:9
+msgid "Test feedback as you develop (`cargo test` after making a code change)"
+msgstr ""
+
+#: src/guide/build-performance.md:10
+msgid "CI builds"
+msgstr ""
+
+#: src/guide/build-performance.md:12
+msgid "Cargo and Compiler Configuration"
+msgstr ""
+
+#: src/guide/build-performance.md:14
+msgid ""
+"Cargo uses configuration defaults that try to balance several aspects, "
+"including debuggability, runtime performance, build performance, binary size "
+"and others. This section describes several approaches for changing these "
+"defaults that should be designed to maximize build performance."
+msgstr ""
+
+#: src/guide/build-performance.md:16
+msgid "Common locations to override defaults are:"
+msgstr ""
+
+#: src/guide/build-performance.md:17
+msgid "[`Cargo.toml` manifest](../reference/profiles.md)"
+msgstr ""
+
+#: src/guide/build-performance.md:18 src/guide/build-performance.md:21
+msgid "Available to all developers contributing to your project"
+msgstr ""
+
+#: src/guide/build-performance.md:19
+msgid ""
+"Limited in what configuration is supported (see [\\#12738](https://github."
+"com/rust-lang/cargo/issues/12738) for expanding this)"
+msgstr ""
+
+#: src/guide/build-performance.md:20
+msgid ""
+"[`$WORKSPACE_ROOT/.cargo/config.toml` configuration file](../reference/"
+"config.md)"
+msgstr ""
+
+#: src/guide/build-performance.md:22
+msgid ""
+"Unlike `Cargo.toml`, this is sensitive to what directory you invoke `cargo` "
+"from (see [\\#2930](https://github.com/rust-lang/cargo/issues/2930))"
+msgstr ""
+
+#: src/guide/build-performance.md:23
+msgid ""
+"[`$CARGO_HOME/.cargo/config.toml` configuration file](../reference/config.md)"
+msgstr ""
+
+#: src/guide/build-performance.md:24
+msgid "For a developer to control the defaults for their development"
+msgstr ""
+
+#: src/guide/build-performance.md:26
+msgid "Reduce amount of generated debug information"
+msgstr ""
+
+#: src/guide/build-performance.md:28
+msgid "Recommendation: Add to your `Cargo.toml` or `.cargo/config.toml`:"
+msgstr ""
+
+#: src/guide/build-performance.md:30
+msgid ""
+"```toml\n"
+"[profile.dev]\n"
+"debug = \"line-tables-only\"\n"
+"\n"
+"[profile.dev.package.\"*\"]\n"
+"debug = false\n"
+"\n"
+"[profile.debugging]\n"
+"inherits = \"dev\"\n"
+"debug = true\n"
+"```"
+msgstr ""
+
+#: src/guide/build-performance.md:42
+msgid "This will:"
+msgstr ""
+
+#: src/guide/build-performance.md:43
+msgid ""
+"Change the [`dev` profile](../reference/profiles.md#dev) (default for "
+"development commands) to:"
+msgstr ""
+
+#: src/guide/build-performance.md:44
+msgid ""
+"Limit [debug information](../reference/profiles.md#debug) for workspace "
+"members to what is needed for useful panic backtraces"
+msgstr ""
+
+#: src/guide/build-performance.md:45
+msgid "Avoid generating any debug information for dependencies"
+msgstr ""
+
+#: src/guide/build-performance.md:46
+msgid ""
+"Provide an opt-in for when debugging via [`--profile debugging`](../"
+"reference/profiles.md#custom-profiles)"
+msgstr ""
+
+#: src/guide/build-performance.md:48
+msgid ""
+"**Note:** re-evaluating the `dev` profile is being tracked in [\\#15931]"
+"(https://github.com/rust-lang/cargo/issues/15931)."
+msgstr ""
+
+#: src/guide/build-performance.md:50 src/guide/build-performance.md:74
+#: src/guide/build-performance.md:95 src/guide/build-performance.md:119
+#: src/guide/build-performance.md:141 src/guide/build-performance.md:164
+#: src/guide/build-performance.md:182
+msgid "Trade-offs:"
+msgstr ""
+
+#: src/guide/build-performance.md:51 src/guide/build-performance.md:75
+msgid "✅ Faster code generation (`cargo build`)"
+msgstr ""
+
+#: src/guide/build-performance.md:52 src/guide/build-performance.md:120
+msgid "✅ Faster link times"
+msgstr ""
+
+#: src/guide/build-performance.md:53
+msgid "✅ Smaller disk usage of the `target` directory"
+msgstr ""
+
+#: src/guide/build-performance.md:54
+msgid "❌ Requires a full rebuild to have a high-quality debugger experience"
+msgstr ""
+
+#: src/guide/build-performance.md:56
+msgid "Use an alternative codegen backend"
+msgstr ""
+
+#: src/guide/build-performance.md:58
+msgid "Recommendation:"
+msgstr ""
+
+#: src/guide/build-performance.md:60
+msgid "Install the Cranelift codegen backend rustup component"
+msgstr ""
+
+#: src/guide/build-performance.md:64
+msgid "Add to your `Cargo.toml` or `.cargo/config.toml`:"
+msgstr ""
+
+#: src/guide/build-performance.md:65
+msgid ""
+"```toml\n"
+"[profile.dev]\n"
+"codegen-backend = \"cranelift\"\n"
+"```"
+msgstr ""
+
+#: src/guide/build-performance.md:69
+msgid ""
+"Run Cargo with `-Z codegen-backend` or enable the [`codegen-backend`](../"
+"reference/unstable.md#codegen-backend) feature in `.cargo/config.toml`."
+msgstr ""
+
+#: src/guide/build-performance.md:70
+msgid "This is required because this is currently an unstable feature."
+msgstr ""
+
+#: src/guide/build-performance.md:72
+msgid ""
+"This will change the [`dev` profile](../reference/profiles.md#dev) to use "
+"the [Cranelift codegen backend](https://github.com/rust-lang/"
+"rustc_codegen_cranelift) for generating machine code, instead of the default "
+"LLVM backend. The Cranelift backend should generate code faster than LLVM, "
+"which should result in improved build performance."
+msgstr ""
+
+#: src/guide/build-performance.md:76
+msgid ""
+"❌ **Requires using nightly Rust and an [unstable Cargo feature](../"
+"reference/unstable.md#codegen-backend)**"
+msgstr ""
+
+#: src/guide/build-performance.md:77
+msgid "❌ Worse runtime performance of the generated code"
+msgstr ""
+
+#: src/guide/build-performance.md:78
+msgid ""
+"Speeds up build part of `cargo test`, but might increase its test execution "
+"part"
+msgstr ""
+
+#: src/guide/build-performance.md:79
+msgid ""
+"❌ Only available for [certain targets](https://github.com/rust-lang/"
+"rustc_codegen_cranelift?tab=readme-ov-file#platform-support)"
+msgstr ""
+
+#: src/guide/build-performance.md:80
+msgid "❌ Might not support all Rust features (e.g. unwinding)"
+msgstr ""
+
+#: src/guide/build-performance.md:84
+msgid "Enable the experimental parallel frontend"
+msgstr ""
+
+#: src/guide/build-performance.md:86
+msgid "Recommendation: Add to your `.cargo/config.toml`:"
+msgstr ""
+
+#: src/guide/build-performance.md:88
+msgid ""
+"```toml\n"
+"[build]\n"
+"rustflags = \"-Zthreads=8\"\n"
+"```"
+msgstr ""
+
+#: src/guide/build-performance.md:93
+msgid ""
+"This [`rustflags`](../reference/config.md#buildrustflags) will enable the "
+"[parallel frontend](https://blog.rust-lang.org/2023/11/09/parallel-rustc/) "
+"of the Rust compiler, and tell it to use `n` threads. The value of `n` "
+"should be chosen according to the number of cores available on your system, "
+"although there are diminishing returns. We recommend using at most `8` "
+"threads."
+msgstr ""
+
+#: src/guide/build-performance.md:96
+msgid "✅ Faster build times (both `cargo check` and `cargo build`)"
+msgstr ""
+
+#: src/guide/build-performance.md:97
+msgid ""
+"❌ **Requires using nightly Rust and an [unstable Rust feature](https://"
+"github.com/rust-lang/rust/issues/113349)**"
+msgstr ""
+
+#: src/guide/build-performance.md:103
+msgid "Use an alternative linker"
+msgstr ""
+
+#: src/guide/build-performance.md:105
+msgid ""
+"Consider: installing and configuring an alternative linker, like [LLD]"
+"(https://lld.llvm.org/), [mold](https://github.com/rui314/mold) or [wild]"
+"(https://github.com/davidlattimore/wild). For example, to configure mold on "
+"Linux, you can add to your `.cargo/config.toml`:"
+msgstr ""
+
+#: src/guide/build-performance.md:107
+msgid ""
+"```toml\n"
+"[target.'cfg(target_os = \"linux\")']\n"
+"# mold, if you have GCC 12+\n"
+"rustflags = [\"-C\", \"link-arg=-fuse-ld=mold\"]\n"
+"\n"
+"# mold, otherwise\n"
+"linker = \"clang\"\n"
+"rustflags = [\"-C\", \"link-arg=-fuse-ld=/path/to/mold\"]\n"
+"```"
+msgstr ""
+
+#: src/guide/build-performance.md:117
+msgid ""
+"While dependencies may be built in parallel, linking all of your "
+"dependencies happens at once at the end of your build, which can make "
+"linking dominate your build times, especially for incremental rebuilds. "
+"Often, the linker Rust uses is already fairly fast and the gains from "
+"switching may not be worth it, but it is not always the case. For example, "
+"Linux targets besides `x86_64-unknown-linux-gnu` still use the Linux system "
+"linker which is quite slow (see [rust#39915](https://github.com/rust-lang/"
+"rust/issues/39915) for more details)."
+msgstr ""
+
+#: src/guide/build-performance.md:121
+msgid ""
+"❌ Might not support all use-cases, in particular if you depend on C or C++ "
+"dependencies"
+msgstr ""
+
+#: src/guide/build-performance.md:123
+msgid "Resolve features for the whole workspace"
+msgstr ""
+
+#: src/guide/build-performance.md:125
+msgid "Consider: adding to your project's `.cargo/config.toml`"
+msgstr ""
+
+#: src/guide/build-performance.md:127
+msgid ""
+"```toml\n"
+"[resolver]\n"
+"feature-unification = \"workspace\"\n"
+"```"
+msgstr ""
+
+#: src/guide/build-performance.md:132
+msgid ""
+"When invoking `cargo`, [features get activated](../reference/resolver."
+"md#features) based on which workspace members you have selected. However, "
+"when contributing to an application, you may need to build and test various "
+"packages within the application, which can cause extraneous rebuilds because "
+"different sets of features may be activated for common dependencies. With "
+"[`feature-unification`](../reference/unstable.md#feature-unification), you "
+"can reuse more dependency builds by ensuring the same set of dependency "
+"features are activated, independent of which package you are currently "
+"building and testing."
+msgstr ""
+
+#: src/guide/build-performance.md:142
+msgid "✅ Fewer rebuilds when building different packages in a workspace"
+msgstr ""
+
+#: src/guide/build-performance.md:143
+msgid ""
+"❌ **Requires using nightly Rust and an [unstable Cargo feature](../"
+"reference/unstable.md#feature-unification)**"
+msgstr ""
+
+#: src/guide/build-performance.md:144
+msgid ""
+"❌ A package activating a feature can mask bugs in other packages that "
+"should activate it but don't"
+msgstr ""
+
+#: src/guide/build-performance.md:145
+msgid ""
+"❌ If the feature unification from `--workspace` doesn't work for you, then "
+"this won't either"
+msgstr ""
+
+#: src/guide/build-performance.md:150
+msgid "Reducing built code"
+msgstr ""
+
+#: src/guide/build-performance.md:152
+msgid "Removing unused dependencies"
+msgstr ""
+
+#: src/guide/build-performance.md:154
+msgid ""
+"Recommendation: Periodically review unused dependencies for removal using "
+"third-party tools like [cargo-machete](https://crates.io/crates/cargo-"
+"machete), [cargo-udeps](https://crates.io/crates/cargo-udeps), [cargo-shear]"
+"(https://crates.io/crates/cargo-shear)."
+msgstr ""
+
+#: src/guide/build-performance.md:159
+msgid ""
+"When changing code, it can be easy to miss that a dependency is no longer "
+"used and can be removed."
+msgstr ""
+
+#: src/guide/build-performance.md:162
+msgid ""
+"**Note:** native support for this in Cargo is being tracked in [\\#15813]"
+"(https://github.com/rust-lang/cargo/issues/15813)."
+msgstr ""
+
+#: src/guide/build-performance.md:165 src/guide/build-performance.md:183
+msgid "✅ Faster full build and link times"
+msgstr ""
+
+#: src/guide/build-performance.md:166
+msgid "❌ May incorrectly flag dependencies as unused or miss some"
+msgstr ""
+
+#: src/guide/build-performance.md:168
+msgid "Removing unused features from dependencies"
+msgstr ""
+
+#: src/guide/build-performance.md:170
+msgid ""
+"Recommendation: Periodically review unused features from dependencies for "
+"removal using third-party tools like [cargo-features-manager](https://crates."
+"io/crates/cargo-features-manager), [cargo-unused-features](https://crates.io/"
+"crates/cargo-unused-features)."
+msgstr ""
+
+#: src/guide/build-performance.md:174
+msgid ""
+"When changing code, it can be easy to miss that a dependency's feature is no "
+"longer used and can be removed. This can reduce the number of transitive "
+"dependencies being built or reduce the amount of code within a crate being "
+"built. When removing features, extra caution is needed because features may "
+"also be used for desired behavior or performance changes which may not "
+"always be obvious from compiling or testing."
+msgstr ""
+
+#: src/guide/build-performance.md:184
+msgid "❌ May incorrectly flag features as unused"
+msgstr ""
