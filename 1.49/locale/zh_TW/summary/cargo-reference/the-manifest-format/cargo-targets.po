@@ -5,15 +5,15 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/reference/cargo-targets.md:1
 msgid "Cargo Targets"
-msgstr ""
+msgstr "Cargo 目標"
 
 #: src/reference/cargo-targets.md:3
 msgid ""
@@ -99,7 +99,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:55
 msgid "Examples"
-msgstr ""
+msgstr "範例"
 
 #: src/reference/cargo-targets.md:57
 msgid ""
@@ -149,7 +149,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:84
 msgid "Tests"
-msgstr ""
+msgstr "測試"
 
 #: src/reference/cargo-targets.md:86
 msgid "There are two styles of tests within a Cargo project:"
@@ -321,7 +321,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:187
 msgid "The `name` field"
-msgstr ""
+msgstr "`name` 欄位"
 
 #: src/reference/cargo-targets.md:189
 msgid ""
@@ -344,7 +344,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:200
 msgid "The `path` field"
-msgstr ""
+msgstr "`path` 欄位"
 
 #: src/reference/cargo-targets.md:202
 msgid ""
@@ -360,7 +360,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:208
 msgid "The `test` field"
-msgstr ""
+msgstr "`test` 欄位"
 
 #: src/reference/cargo-targets.md:210
 msgid ""
@@ -380,7 +380,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:218
 msgid "The `doctest` field"
-msgstr ""
+msgstr "`doctest` 欄位"
 
 #: src/reference/cargo-targets.md:220
 msgid ""
@@ -392,7 +392,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:224
 msgid "The `bench` field"
-msgstr ""
+msgstr "`bench` 欄位"
 
 #: src/reference/cargo-targets.md:226
 msgid ""
@@ -403,7 +403,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:230
 msgid "The `doc` field"
-msgstr ""
+msgstr "`doc` 欄位"
 
 #: src/reference/cargo-targets.md:232
 msgid ""
@@ -420,7 +420,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:239
 msgid "The `plugin` field"
-msgstr ""
+msgstr "`plugin` 欄位"
 
 #: src/reference/cargo-targets.md:241
 msgid "This field is used for `rustc` plugins, which are being deprecated."
@@ -428,7 +428,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:243
 msgid "The `proc-macro` field"
-msgstr ""
+msgstr "`proc-macro` 欄位"
 
 #: src/reference/cargo-targets.md:245
 msgid ""
@@ -439,7 +439,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:249
 msgid "The `harness` field"
-msgstr ""
+msgstr "`harness` 欄位"
 
 #: src/reference/cargo-targets.md:251
 msgid ""
@@ -466,7 +466,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:263
 msgid "The `edition` field"
-msgstr ""
+msgstr "`edition` 欄位"
 
 #: src/reference/cargo-targets.md:265
 msgid ""
@@ -479,7 +479,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:271
 msgid "The `crate-type` field"
-msgstr ""
+msgstr "`crate-type` 欄位"
 
 #: src/reference/cargo-targets.md:273
 msgid ""
@@ -492,7 +492,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:279
 msgid "Target"
-msgstr ""
+msgstr "目標"
 
 #: src/reference/cargo-targets.md:279
 msgid "Crate Type"
@@ -531,7 +531,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:289
 msgid "The `required-features` field"
-msgstr ""
+msgstr "`required-features` 欄位"
 
 #: src/reference/cargo-targets.md:291
 msgid ""
