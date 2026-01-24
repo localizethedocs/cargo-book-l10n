@@ -1,0 +1,47 @@
+{
+  "po" : 
+  {
+    "en_US" : 
+    {
+      "branch" : "",
+      "commit" : 
+      {
+        "date" : "",
+        "hash" : "",
+        "title" : ""
+      }
+    },
+    "zh_CN" : 
+    {
+      "branch" : "",
+      "commit" : 
+      {
+        "date" : "",
+        "hash" : "",
+        "title" : ""
+      }
+    },
+    "zh_TW" : 
+    {
+      "branch" : "",
+      "commit" : 
+      {
+        "date" : "",
+        "hash" : "",
+        "title" : ""
+      }
+    }
+  },
+  "pot" : 
+  {
+    "branch" : "main",
+    "commit" : 
+    {
+      "date" : "2026-01-23 14:57:31 +0000",
+      "hash" : "d222ddc4d90743dfc1e53b610be8fc9d95893d2c",
+      "title" : "Auto merge of #151501 - flip1995:clippy-subtree-update, r=Manishearth"
+    }
+  },
+  "type" : "branch",
+  "version" : "nightly"
+}
