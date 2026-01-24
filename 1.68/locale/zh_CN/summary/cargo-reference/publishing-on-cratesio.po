@@ -1,0 +1,443 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:37:50Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/publishing.md:1
+msgid "Publishing on crates.io"
+msgstr ""
+
+#: src/reference/publishing.md:3
+msgid ""
+"Once you've got a library that you'd like to share with the world, it's time "
+"to publish it on [crates.io](https://crates.io/)! Publishing a crate is when "
+"a specific version is uploaded to be hosted on [crates.io](https://crates."
+"io/)."
+msgstr ""
+
+#: src/reference/publishing.md:7
+msgid ""
+"Take care when publishing a crate, because a publish is **permanent**. The "
+"version can never be overwritten, and the code cannot be deleted. There is "
+"no limit to the number of versions which can be published, however."
+msgstr ""
+
+#: src/reference/publishing.md:11
+msgid "Before your first publish"
+msgstr ""
+
+#: src/reference/publishing.md:13
+msgid ""
+"First things first, you’ll need an account on [crates.io](https://crates."
+"io/) to acquire an API token. To do so, [visit the home page](https://crates."
+"io/) and log in via a GitHub account (required for now). After this, visit "
+"your [Account Settings](https://crates.io/me) page and run the [`cargo "
+"login`](../commands/cargo-login.md) command."
+msgstr ""
+
+#: src/reference/publishing.md:22
+msgid "Then at the prompt put in the token specified."
+msgstr ""
+
+#: src/reference/publishing.md:23
+msgid ""
+"```console\n"
+"please paste the API Token found on https://crates.io/me below\n"
+"abcdefghijklmnopqrstuvwxyz012345\n"
+"```"
+msgstr ""
+
+#: src/reference/publishing.md:28
+msgid ""
+"This command will inform Cargo of your API token and store it locally in "
+"your `~/.cargo/credentials.toml`. Note that this token is a **secret** and "
+"should not be shared with anyone else. If it leaks for any reason, you "
+"should revoke it immediately."
+msgstr ""
+
+#: src/reference/publishing.md:33
+msgid "Before publishing a new crate"
+msgstr ""
+
+#: src/reference/publishing.md:35
+msgid ""
+"Keep in mind that crate names on [crates.io](https://crates.io/) are "
+"allocated on a first-come-first-serve basis. Once a crate name is taken, it "
+"cannot be used for another crate."
+msgstr ""
+
+#: src/reference/publishing.md:38
+msgid ""
+"Check out the [metadata you can specify](manifest.md) in `Cargo.toml` to "
+"ensure your crate can be discovered more easily! Before publishing, make "
+"sure you have filled out the following fields:"
+msgstr ""
+
+#: src/reference/publishing.md:42
+msgid ""
+"[`license` or `license-file`](manifest.md#the-license-and-license-file-"
+"fields)"
+msgstr ""
+
+#: src/reference/publishing.md:43
+msgid "[`description`](manifest.md#the-description-field)"
+msgstr ""
+
+#: src/reference/publishing.md:44
+msgid "[`homepage`](manifest.md#the-homepage-field)"
+msgstr ""
+
+#: src/reference/publishing.md:45
+msgid "[`documentation`](manifest.md#the-documentation-field)"
+msgstr ""
+
+#: src/reference/publishing.md:46
+msgid "[`repository`](manifest.md#the-repository-field)"
+msgstr ""
+
+#: src/reference/publishing.md:47
+msgid "[`readme`](manifest.md#the-readme-field)"
+msgstr ""
+
+#: src/reference/publishing.md:49
+msgid ""
+"It would also be a good idea to include some [`keywords`](manifest.md#the-"
+"keywords-field) and [`categories`](manifest.md#the-categories-field), though "
+"they are not required."
+msgstr ""
+
+#: src/reference/publishing.md:52
+msgid ""
+"If you are publishing a library, you may also want to consult the [Rust API "
+"Guidelines](https://rust-lang.github.io/api-guidelines/)."
+msgstr ""
+
+#: src/reference/publishing.md:55
+msgid "Packaging a crate"
+msgstr ""
+
+#: src/reference/publishing.md:57
+msgid ""
+"The next step is to package up your crate and upload it to [crates.io]"
+"(https://crates.io/). For this we’ll use the [`cargo publish`](../commands/"
+"cargo-publish.md) subcommand. This command performs the following steps:"
+msgstr ""
+
+#: src/reference/publishing.md:61
+msgid "Perform some verification checks on your package."
+msgstr ""
+
+#: src/reference/publishing.md:62
+msgid "Compress your source code into a `.crate` file."
+msgstr ""
+
+#: src/reference/publishing.md:63
+msgid ""
+"Extract the `.crate` file into a temporary directory and verify that it "
+"compiles."
+msgstr ""
+
+#: src/reference/publishing.md:65
+msgid "Upload the `.crate` file to [crates.io](https://crates.io/)."
+msgstr ""
+
+#: src/reference/publishing.md:66
+msgid ""
+"The registry will perform some additional checks on the uploaded package "
+"before adding it."
+msgstr ""
+
+#: src/reference/publishing.md:69
+msgid ""
+"It is recommended that you first run `cargo publish --dry-run` (or [`cargo "
+"package`](../commands/cargo-package.md) which is equivalent) to ensure there "
+"aren't any warnings or errors before publishing. This will perform the first "
+"three steps listed above."
+msgstr ""
+
+#: src/reference/publishing.md:77
+msgid ""
+"You can inspect the generated `.crate` file in the `target/package` "
+"directory. [crates.io](https://crates.io/) currently has a 10MB size limit "
+"on the `.crate` file. You may want to check the size of the `.crate` file to "
+"ensure you didn't accidentally package up large assets that are not required "
+"to build your package, such as test data, website documentation, or code "
+"generation. You can check which files are included with the following "
+"command:"
+msgstr ""
+
+#: src/reference/publishing.md:88
+msgid ""
+"Cargo will automatically ignore files ignored by your version control system "
+"when packaging, but if you want to specify an extra set of files to ignore "
+"you can use the [`exclude` key](manifest.md#the-exclude-and-include-fields) "
+"in the manifest:"
+msgstr ""
+
+#: src/reference/publishing.md:93
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"exclude = [\n"
+"    \"public/assets/*\",\n"
+"    \"videos/*\",\n"
+"]\n"
+"```"
+msgstr ""
+
+#: src/reference/publishing.md:102
+msgid ""
+"If you’d rather explicitly list the files to include, Cargo also supports an "
+"`include` key, which if set, overrides the `exclude` key:"
+msgstr ""
+
+#: src/reference/publishing.md:105
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"include = [\n"
+"    \"**/*.rs\",\n"
+"    \"Cargo.toml\",\n"
+"]\n"
+"```"
+msgstr ""
+
+#: src/reference/publishing.md:114
+msgid "Uploading the crate"
+msgstr ""
+
+#: src/reference/publishing.md:116
+msgid ""
+"When you are ready to publish, use the [`cargo publish`](../commands/cargo-"
+"publish.md) command to upload to [crates.io](https://crates.io/):"
+msgstr ""
+
+#: src/reference/publishing.md:123
+msgid "And that’s it, you’ve now published your first crate!"
+msgstr ""
+
+#: src/reference/publishing.md:125
+msgid "Publishing a new version of an existing crate"
+msgstr ""
+
+#: src/reference/publishing.md:127
+msgid ""
+"In order to release a new version, change [the `version` value](manifest."
+"md#the-version-field) specified in your `Cargo.toml` manifest. Keep in mind "
+"[the SemVer rules](semver.md) which provide guidelines on what is a "
+"compatible change. Then run [`cargo publish`](../commands/cargo-publish.md) "
+"as described above to upload the new version."
+msgstr ""
+
+#: src/reference/publishing.md:131
+msgid "Managing a crates.io-based crate"
+msgstr ""
+
+#: src/reference/publishing.md:133
+msgid ""
+"Management of crates is primarily done through the command line `cargo` tool "
+"rather than the [crates.io](https://crates.io/) web interface. For this, "
+"there are a few subcommands to manage a crate."
+msgstr ""
+
+#: src/reference/publishing.md:137
+msgid "`cargo yank`"
+msgstr ""
+
+#: src/reference/publishing.md:139
+msgid ""
+"Occasions may arise where you publish a version of a crate that actually "
+"ends up being broken for one reason or another (syntax error, forgot to "
+"include a file, etc.). For situations such as this, Cargo supports a “yank” "
+"of a version of a crate."
+msgstr ""
+
+#: src/reference/publishing.md:149
+msgid ""
+"A yank **does not** delete any code. This feature is not intended for "
+"deleting accidentally uploaded secrets, for example. If that happens, you "
+"must reset those secrets immediately."
+msgstr ""
+
+#: src/reference/publishing.md:153
+msgid ""
+"The semantics of a yanked version are that no new dependencies can be "
+"created against that version, but all existing dependencies continue to "
+"work. One of the major goals of [crates.io](https://crates.io/) is to act as "
+"a permanent archive of crates that does not change over time, and allowing "
+"deletion of a version would go against this goal. Essentially a yank means "
+"that all packages with a `Cargo.lock` will not break, while any future "
+"`Cargo.lock` files generated will not list the yanked version."
+msgstr ""
+
+#: src/reference/publishing.md:161
+msgid "`cargo owner`"
+msgstr ""
+
+#: src/reference/publishing.md:163
+msgid ""
+"A crate is often developed by more than one person, or the primary "
+"maintainer may change over time! The owner of a crate is the only person "
+"allowed to publish new versions of the crate, but an owner may designate "
+"additional owners."
+msgstr ""
+
+#: src/reference/publishing.md:174
+msgid ""
+"The owner IDs given to these commands must be GitHub user names or GitHub "
+"teams."
+msgstr ""
+
+#: src/reference/publishing.md:176
+msgid ""
+"If a user name is given to `--add`, that user is invited as a “named” owner, "
+"with full rights to the crate. In addition to being able to publish or yank "
+"versions of the crate, they have the ability to add or remove owners, "
+"_including_ the owner that made _them_ an owner. Needless to say, you "
+"shouldn’t make people you don’t fully trust into a named owner. In order to "
+"become a named owner, a user must have logged into [crates.io](https://"
+"crates.io/) previously."
+msgstr ""
+
+#: src/reference/publishing.md:183
+msgid ""
+"If a team name is given to `--add`, that team is invited as a “team” owner, "
+"with restricted right to the crate. While they have permission to publish or "
+"yank versions of the crate, they _do not_ have the ability to add or remove "
+"owners. In addition to being more convenient for managing groups of owners, "
+"teams are just a bit more secure against owners becoming malicious."
+msgstr ""
+
+#: src/reference/publishing.md:189
+msgid ""
+"The syntax for teams is currently `github:org:team` (see examples above). In "
+"order to invite a team as an owner one must be a member of that team. No "
+"such restriction applies to removing a team as an owner."
+msgstr ""
+
+#: src/reference/publishing.md:193
+msgid "GitHub permissions"
+msgstr ""
+
+#: src/reference/publishing.md:195
+msgid ""
+"Team membership is not something GitHub provides simple public access to, "
+"and it is likely for you to encounter the following message when working "
+"with them:"
+msgstr ""
+
+#: src/reference/publishing.md:198
+msgid ""
+"It looks like you don’t have permission to query a necessary property from "
+"GitHub to complete this request. You may need to re-authenticate on [crates."
+"io](https://crates.io/) to grant permission to read GitHub org memberships."
+msgstr ""
+
+#: src/reference/publishing.md:202
+msgid ""
+"This is basically a catch-all for “you tried to query a team, and one of the "
+"five levels of membership access control denied this”. That is not an "
+"exaggeration. GitHub’s support for team access control is Enterprise Grade."
+msgstr ""
+
+#: src/reference/publishing.md:206
+msgid ""
+"The most likely cause of this is simply that you last logged in before this "
+"feature was added. We originally requested _no_ permissions from GitHub when "
+"authenticating users, because we didn’t actually ever use the user’s token "
+"for anything other than logging them in. However to query team membership on "
+"your behalf, we now require [the `read:org` scope](https://developer.github."
+"com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/)."
+msgstr ""
+
+#: src/reference/publishing.md:212
+msgid ""
+"You are free to deny us this scope, and everything that worked before teams "
+"were introduced will keep working. However you will never be able to add a "
+"team as an owner, or publish a crate as a team owner. If you ever attempt to "
+"do this, you will get the error above. You may also see this error if you "
+"ever try to publish a crate that you don’t own at all, but otherwise happens "
+"to have a team."
+msgstr ""
+
+#: src/reference/publishing.md:218
+msgid ""
+"If you ever change your mind, or just aren’t sure if [crates.io](https://"
+"crates.io/) has sufficient permission, you can always go to <https://crates."
+"io/> and re-authenticate, which will prompt you for permission if [crates.io]"
+"(https://crates.io/) doesn’t have all the scopes it would like to."
+msgstr ""
+
+#: src/reference/publishing.md:223
+msgid ""
+"An additional barrier to querying GitHub is that the organization may be "
+"actively denying third party access. To check this, you can go to:"
+msgstr ""
+
+#: src/reference/publishing.md:226
+msgid ""
+"```text\n"
+"https://github.com/organizations/:org/settings/oauth_application_policy\n"
+"```"
+msgstr ""
+
+#: src/reference/publishing.md:230
+msgid ""
+"where `:org` is the name of the organization (e.g., `rust-lang`). You may "
+"see something like:"
+msgstr ""
+
+#: src/reference/publishing.md:233
+msgid "![Organization Access Control](../images/org-level-acl.png)"
+msgstr ""
+
+#: src/reference/publishing.md:235
+msgid ""
+"Where you may choose to explicitly remove [crates.io](https://crates.io/) "
+"from your organization’s blacklist, or simply press the “Remove "
+"Restrictions” button to allow all third party applications to access this "
+"data."
+msgstr ""
+
+#: src/reference/publishing.md:239
+msgid ""
+"Alternatively, when [crates.io](https://crates.io/) requested the `read:org` "
+"scope, you could have explicitly whitelisted [crates.io](https://crates.io/) "
+"querying the org in question by pressing the “Grant Access” button next to "
+"its name:"
+msgstr ""
+
+#: src/reference/publishing.md:243
+msgid "![Authentication Access Control](../images/auth-level-acl.png)"
+msgstr ""
+
+#: src/reference/publishing.md:245
+msgid "Troubleshooting GitHub team access errors"
+msgstr ""
+
+#: src/reference/publishing.md:247
+msgid ""
+"When trying to add a GitHub team as crate owner, you may see an error like:"
+msgstr ""
+
+#: src/reference/publishing.md:252
+msgid ""
+"In that case, you should go to [the GitHub Application settings page]"
+"(https://github.com/settings/applications) and check if crates.io is listed "
+"in the `Authorized OAuth Apps` tab. If it isn't, you should go to <https://"
+"crates.io/> and authorize it. Then go back to the Application Settings page "
+"on GitHub, click on the crates.io application in the list, and make sure you "
+"or your organization is listed in the \"Organization access\" list with a "
+"green check mark. If there's a button labeled `Grant` or `Request`, you "
+"should grant the access or request the org owner to do so."
+msgstr ""
