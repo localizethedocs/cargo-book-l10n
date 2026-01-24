@@ -1,0 +1,1033 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:36:23Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/manifest.md:1
+msgid "The Manifest Format"
+msgstr ""
+
+#: src/reference/manifest.md:3
+msgid ""
+"The `Cargo.toml` file for each package is called its _manifest_. Every "
+"manifest file consists of the following sections:"
+msgstr ""
+
+#: src/reference/manifest.md:6
+msgid "[`cargo-features`](unstable.md) — Unstable, nightly-only features."
+msgstr ""
+
+#: src/reference/manifest.md:7
+msgid "[`[package]`](#the-package-section) — Defines a package."
+msgstr ""
+
+#: src/reference/manifest.md:8
+msgid "[`name`](#the-name-field) — The name of the package."
+msgstr ""
+
+#: src/reference/manifest.md:9
+msgid "[`version`](#the-version-field) — The version of the package."
+msgstr ""
+
+#: src/reference/manifest.md:10
+msgid "[`authors`](#the-authors-field) — The authors of the package."
+msgstr ""
+
+#: src/reference/manifest.md:11
+msgid "[`edition`](#the-edition-field) — The Rust edition."
+msgstr ""
+
+#: src/reference/manifest.md:12
+msgid "[`description`](#the-description-field) — A description of the package."
+msgstr ""
+
+#: src/reference/manifest.md:13
+msgid ""
+"[`documentation`](#the-documentation-field) — URL of the package "
+"documentation."
+msgstr ""
+
+#: src/reference/manifest.md:14
+msgid "[`readme`](#the-readme-field) — Path to the package's README file."
+msgstr ""
+
+#: src/reference/manifest.md:15
+msgid "[`homepage`](#the-homepage-field) — URL of the package homepage."
+msgstr ""
+
+#: src/reference/manifest.md:16
+msgid ""
+"[`repository`](#the-repository-field) — URL of the package source repository."
+msgstr ""
+
+#: src/reference/manifest.md:17
+msgid ""
+"[`license`](#the-license-and-license-file-fields) — The package license."
+msgstr ""
+
+#: src/reference/manifest.md:18
+msgid ""
+"[`license-file`](#the-license-and-license-file-fields) — Path to the text of "
+"the license."
+msgstr ""
+
+#: src/reference/manifest.md:19
+msgid "[`keywords`](#the-keywords-field) — Keywords for the package."
+msgstr ""
+
+#: src/reference/manifest.md:20
+msgid "[`categories`](#the-categories-field) — Categories of the package."
+msgstr ""
+
+#: src/reference/manifest.md:21
+msgid ""
+"[`workspace`](#the-workspace-field) — Path to the workspace for the package."
+msgstr ""
+
+#: src/reference/manifest.md:22
+msgid "[`build`](#the-build-field) — Path to the package build script."
+msgstr ""
+
+#: src/reference/manifest.md:23
+msgid ""
+"[`links`](#the-links-field) — Name of the native library the package links "
+"with."
+msgstr ""
+
+#: src/reference/manifest.md:24
+msgid ""
+"[`exclude`](#the-exclude-and-include-fields) — Files to exclude when "
+"publishing."
+msgstr ""
+
+#: src/reference/manifest.md:25
+msgid ""
+"[`include`](#the-exclude-and-include-fields) — Files to include when "
+"publishing."
+msgstr ""
+
+#: src/reference/manifest.md:26
+msgid ""
+"[`publish`](#the-publish-field) — Can be used to prevent publishing the "
+"package."
+msgstr ""
+
+#: src/reference/manifest.md:27
+msgid "[`metadata`](#the-metadata-table) — Extra settings for external tools."
+msgstr ""
+
+#: src/reference/manifest.md:28
+msgid ""
+"[`default-run`](#the-default-run-field) — The default binary to run by "
+"[`cargo run`](../commands/cargo-run.md)."
+msgstr ""
+
+#: src/reference/manifest.md:29
+msgid ""
+"[`autobins`](cargo-targets.md#target-auto-discovery) — Disables binary auto "
+"discovery."
+msgstr ""
+
+#: src/reference/manifest.md:30
+msgid ""
+"[`autoexamples`](cargo-targets.md#target-auto-discovery) — Disables example "
+"auto discovery."
+msgstr ""
+
+#: src/reference/manifest.md:31
+msgid ""
+"[`autotests`](cargo-targets.md#target-auto-discovery) — Disables test auto "
+"discovery."
+msgstr ""
+
+#: src/reference/manifest.md:32
+msgid ""
+"[`autobenches`](cargo-targets.md#target-auto-discovery) — Disables bench "
+"auto discovery."
+msgstr ""
+
+#: src/reference/manifest.md:33
+msgid ""
+"Target tables: (see [configuration](cargo-targets.md#configuring-a-target) "
+"for settings)"
+msgstr ""
+
+#: src/reference/manifest.md:34
+msgid "[`[lib]`](cargo-targets.md#library) — Library target settings."
+msgstr ""
+
+#: src/reference/manifest.md:35
+msgid "[`[[bin]]`](cargo-targets.md#binaries) — Binary target settings."
+msgstr ""
+
+#: src/reference/manifest.md:36
+msgid "[`[[example]]`](cargo-targets.md#examples) — Example target settings."
+msgstr ""
+
+#: src/reference/manifest.md:37
+msgid "[`[[test]]`](cargo-targets.md#tests) — Test target settings."
+msgstr ""
+
+#: src/reference/manifest.md:38
+msgid "[`[[bench]]`](cargo-targets.md#benchmarks) — Benchmark target settings."
+msgstr ""
+
+#: src/reference/manifest.md:39
+msgid "Dependency tables:"
+msgstr ""
+
+#: src/reference/manifest.md:40
+msgid ""
+"[`[dependencies]`](specifying-dependencies.md) — Package library "
+"dependencies."
+msgstr ""
+
+#: src/reference/manifest.md:41
+msgid ""
+"[`[dev-dependencies]`](specifying-dependencies.md#development-dependencies) "
+"— Dependencies for examples, tests, and benchmarks."
+msgstr ""
+
+#: src/reference/manifest.md:42
+msgid ""
+"[`[build-dependencies]`](specifying-dependencies.md#build-dependencies) "
+"— Dependencies for build scripts."
+msgstr ""
+
+#: src/reference/manifest.md:43
+msgid ""
+"[`[target]`](specifying-dependencies.md#platform-specific-dependencies) "
+"— Platform-specific dependencies."
+msgstr ""
+
+#: src/reference/manifest.md:44
+msgid "[`[badges]`](#the-badges-section) — Badges to display on a registry."
+msgstr ""
+
+#: src/reference/manifest.md:45
+msgid "[`[features]`](features.md) — Conditional compilation features."
+msgstr ""
+
+#: src/reference/manifest.md:46
+msgid ""
+"[`[patch]`](overriding-dependencies.md#the-patch-section) — Override "
+"dependencies."
+msgstr ""
+
+#: src/reference/manifest.md:47
+msgid ""
+"[`[replace]`](overriding-dependencies.md#the-replace-section) — Override "
+"dependencies (deprecated)."
+msgstr ""
+
+#: src/reference/manifest.md:48
+msgid "[`[profile]`](profiles.md) — Compiler settings and optimizations."
+msgstr ""
+
+#: src/reference/manifest.md:49
+msgid "[`[workspace]`](workspaces.md) — The workspace definition."
+msgstr ""
+
+#: src/reference/manifest.md:51
+msgid "<a id=\"package-metadata\"></a>"
+msgstr ""
+
+#: src/reference/manifest.md:52
+msgid "The `[package]` section"
+msgstr ""
+
+#: src/reference/manifest.md:54
+msgid "The first section in a `Cargo.toml` is `[package]`."
+msgstr ""
+
+#: src/reference/manifest.md:56
+msgid ""
+"```toml\n"
+"[package]\n"
+"name = \"hello_world\" # the name of the package\n"
+"version = \"0.1.0\"    # the current version, obeying semver\n"
+"authors = [\"Alice <a@example.com>\", \"Bob <b@example.com>\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/manifest.md:63
+msgid ""
+"The only fields required by Cargo are [`name`](#the-name-field) and "
+"[`version`](#the-version-field). If publishing to a registry, the registry "
+"may require additional fields. See the notes below and [the publishing "
+"chapter](publishing.md) for requirements for publishing to [crates.io]"
+"(https://crates.io/)."
+msgstr ""
+
+#: src/reference/manifest.md:68
+msgid "The `name` field"
+msgstr ""
+
+#: src/reference/manifest.md:70
+msgid ""
+"The package name is an identifier used to refer to the package. It is used "
+"when listed as a dependency in another package, and as the default name of "
+"inferred lib and bin targets."
+msgstr ""
+
+#: src/reference/manifest.md:74
+msgid ""
+"The name must use only [alphanumeric](../../std/primitive.char.html#method."
+"is_alphanumeric) characters or `-` or `_`, and cannot be empty. Note that "
+"[`cargo new`](../commands/cargo-new.md) and [`cargo init`](../commands/cargo-"
+"init.md) impose some additional restrictions on the package name, such as "
+"enforcing that it is a valid Rust identifier and not a keyword. [crates.io]"
+"(https://crates.io/) imposes even more restrictions, such as enforcing only "
+"ASCII characters, not a reserved name, not a special Windows name such as "
+"\"nul\", is not too long, etc."
+msgstr ""
+
+#: src/reference/manifest.md:83
+msgid "The `version` field"
+msgstr ""
+
+#: src/reference/manifest.md:85
+msgid ""
+"Cargo bakes in the concept of [Semantic Versioning](https://semver.org/), so "
+"make sure you follow some basic rules:"
+msgstr ""
+
+#: src/reference/manifest.md:88
+msgid ""
+"Before you reach 1.0.0, anything goes, but if you make breaking changes, "
+"increment the minor version. In Rust, breaking changes include adding fields "
+"to structs or variants to enums."
+msgstr ""
+
+#: src/reference/manifest.md:91
+msgid ""
+"After 1.0.0, only make breaking changes when you increment the major "
+"version. Don’t break the build."
+msgstr ""
+
+#: src/reference/manifest.md:93
+msgid ""
+"After 1.0.0, don’t add any new public API (no new `pub` anything) in patch-"
+"level versions. Always increment the minor version if you add any new `pub` "
+"structs, traits, fields, types, functions, methods or anything else."
+msgstr ""
+
+#: src/reference/manifest.md:96
+msgid ""
+"Use version numbers with three numeric parts such as 1.0.0 rather than 1.0."
+msgstr ""
+
+#: src/reference/manifest.md:98
+msgid ""
+"See the [Resolver](resolver.md) chapter for more information on how Cargo "
+"uses versions to resolve dependencies, and for guidelines on setting your "
+"own version. See the [Semver compatibility](semver.md) chapter for more "
+"details on exactly what constitutes a breaking change."
+msgstr ""
+
+#: src/reference/manifest.md:106
+msgid "<a id=\"the-authors-field-optional\"></a>"
+msgstr ""
+
+#: src/reference/manifest.md:107
+msgid "The `authors` field"
+msgstr ""
+
+#: src/reference/manifest.md:109
+msgid ""
+"The `authors` field lists people or organizations that are considered the "
+"\"authors\" of the package. The exact meaning is open to interpretation — it "
+"may list the original or primary authors, current maintainers, or owners of "
+"the package. These names will be listed on the crate's page on [crates.io]"
+"(https://crates.io/). An optional email address may be included within "
+"angled brackets at the end of each author."
+msgstr ""
+
+#: src/reference/manifest.md:116
+msgid ""
+"**Note**: [crates.io](https://crates.io/) requires at least one author to be "
+"listed."
+msgstr ""
+
+#: src/reference/manifest.md:118
+msgid "<a id=\"the-edition-field-optional\"></a>"
+msgstr ""
+
+#: src/reference/manifest.md:119
+msgid "The `edition` field"
+msgstr ""
+
+#: src/reference/manifest.md:121
+msgid ""
+"You can opt in to a specific [Rust Edition](../../edition-guide/index.html) "
+"for your package with the `edition` key in `Cargo.toml`. If you don't "
+"specify the edition, it will default to 2015."
+msgstr ""
+
+#: src/reference/manifest.md:131
+msgid ""
+"The `edition` key affects which edition your package is compiled with. Cargo "
+"will always generate packages via [`cargo new`](../commands/cargo-new.md) "
+"with the `edition` key set to the latest edition. Setting the `edition` key "
+"in `[package]` will affect all targets/crates in the package, including test "
+"suites, benchmarks, binaries, examples, etc."
+msgstr ""
+
+#: src/reference/manifest.md:137
+msgid "The `description` field"
+msgstr ""
+
+#: src/reference/manifest.md:139
+msgid ""
+"The description is a short blurb about the package. [crates.io](https://"
+"crates.io/) will display this with your package. This should be plain text "
+"(not Markdown)."
+msgstr ""
+
+#: src/reference/manifest.md:142
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"description = \"A short description of my package\"\n"
+"```"
+msgstr ""
+
+#: src/reference/manifest.md:148
+msgid ""
+"**Note**: [crates.io](https://crates.io/) requires the `description` to be "
+"set."
+msgstr ""
+
+#: src/reference/manifest.md:150
+msgid "<a id=\"the-documentation-field-optional\"></a>"
+msgstr ""
+
+#: src/reference/manifest.md:151
+msgid "The `documentation` field"
+msgstr ""
+
+#: src/reference/manifest.md:153
+msgid ""
+"The `documentation` field specifies a URL to a website hosting the crate's "
+"documentation. If no URL is specified in the manifest file, [crates.io]"
+"(https://crates.io/) will automatically link your crate to the corresponding "
+"[docs.rs](https://docs.rs/) page."
+msgstr ""
+
+#: src/reference/manifest.md:157
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"documentation = \"https://docs.rs/bitflags\"\n"
+"```"
+msgstr ""
+
+#: src/reference/manifest.md:163
+msgid "The `readme` field"
+msgstr ""
+
+#: src/reference/manifest.md:165
+msgid ""
+"The `readme` field should be the path to a file in the package root "
+"(relative to this `Cargo.toml`) that contains general information about the "
+"package. This file will be transferred to the registry when you publish. "
+"[crates.io](https://crates.io/) will interpret it as Markdown and render it "
+"on the crate's page."
+msgstr ""
+
+#: src/reference/manifest.md:170
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"readme = \"README.md\"\n"
+"```"
+msgstr ""
+
+#: src/reference/manifest.md:176
+msgid ""
+"If no value is specified for this field, and a file named `README.md`, "
+"`README.txt` or `README` exists in the package root, then the name of that "
+"file will be used. You can suppress this behavior by setting this field to "
+"`false`. If the field is set to `true`, a default value of `README.md` will "
+"be assumed."
+msgstr ""
+
+#: src/reference/manifest.md:182
+msgid "The `homepage` field"
+msgstr ""
+
+#: src/reference/manifest.md:184
+msgid ""
+"The `homepage` field should be a URL to a site that is the home page for "
+"your package."
+msgstr ""
+
+#: src/reference/manifest.md:187
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"homepage = \"https://serde.rs/\"\n"
+"```"
+msgstr ""
+
+#: src/reference/manifest.md:193
+msgid "The `repository` field"
+msgstr ""
+
+#: src/reference/manifest.md:195
+msgid ""
+"The `repository` field should be a URL to the source repository for your "
+"package."
+msgstr ""
+
+#: src/reference/manifest.md:198
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"repository = \"https://github.com/rust-lang/cargo/\"\n"
+"```"
+msgstr ""
+
+#: src/reference/manifest.md:204
+msgid "The `license` and `license-file` fields"
+msgstr ""
+
+#: src/reference/manifest.md:206
+msgid ""
+"The `license` field contains the name of the software license that the "
+"package is released under. The `license-file` field contains the path to a "
+"file containing the text of the license (relative to this `Cargo.toml`)."
+msgstr ""
+
+#: src/reference/manifest.md:210
+msgid ""
+"[crates.io](https://crates.io/) interprets the `license` field as an [SPDX "
+"2.1 license expression](https://spdx.org/spdx-specification-21-web-version#h."
+"jxpfx0ykyb60). The name must be a known license from the [SPDX license list "
+"3.6](https://github.com/spdx/license-list-data/tree/v3.6). Parentheses are "
+"not currently supported. See the [SPDX site](https://spdx.org/license-list) "
+"for more information."
+msgstr ""
+
+#: src/reference/manifest.md:215
+msgid ""
+"SPDX license expressions support AND and OR operators to combine multiple "
+"licenses.[^slash]"
+msgstr ""
+
+#: src/reference/manifest.md:218
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"license = \"MIT OR Apache-2.0\"\n"
+"```"
+msgstr ""
+
+#: src/reference/manifest.md:224
+msgid ""
+"Using `OR` indicates the user may choose either license. Using `AND` "
+"indicates the user must comply with both licenses simultaneously. The `WITH` "
+"operator indicates a license with a special exception. Some examples:"
+msgstr ""
+
+#: src/reference/manifest.md:228
+msgid "`MIT OR Apache-2.0`"
+msgstr ""
+
+#: src/reference/manifest.md:229
+msgid "`LGPL-2.1-only AND MIT AND BSD-2-Clause`"
+msgstr ""
+
+#: src/reference/manifest.md:230
+msgid "`GPL-2.0-or-later WITH Bison-exception-2.2`"
+msgstr ""
+
+#: src/reference/manifest.md:232
+msgid ""
+"If a package is using a nonstandard license, then the `license-file` field "
+"may be specified in lieu of the `license` field."
+msgstr ""
+
+#: src/reference/manifest.md:235
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"license-file = \"LICENSE.txt\"\n"
+"```"
+msgstr ""
+
+#: src/reference/manifest.md:241
+msgid ""
+"**Note**: [crates.io](https://crates.io/) requires either `license` or "
+"`license-file` to be set."
+msgstr ""
+
+#: src/reference/manifest.md:243
+msgid ""
+"Previously multiple licenses could be separated with a `/`, but that usage "
+"is deprecated."
+msgstr ""
+
+#: src/reference/manifest.md:246
+msgid "The `keywords` field"
+msgstr ""
+
+#: src/reference/manifest.md:248
+msgid ""
+"The `keywords` field is an array of strings that describe this package. This "
+"can help when searching for the package on a registry, and you may choose "
+"any words that would help someone find this crate."
+msgstr ""
+
+#: src/reference/manifest.md:252
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"keywords = [\"gamedev\", \"graphics\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/manifest.md:258
+msgid ""
+"**Note**: [crates.io](https://crates.io/) has a maximum of 5 keywords. Each "
+"keyword must be ASCII text, start with a letter, and only contain letters, "
+"numbers, `_` or `-`, and have at most 20 characters."
+msgstr ""
+
+#: src/reference/manifest.md:262
+msgid "The `categories` field"
+msgstr ""
+
+#: src/reference/manifest.md:264
+msgid ""
+"The `categories` field is an array of strings of the categories this package "
+"belongs to."
+msgstr ""
+
+#: src/reference/manifest.md:267
+msgid ""
+"```toml\n"
+"categories = [\"command-line-utilities\", \"development-tools::cargo-"
+"plugins\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/manifest.md:271
+msgid ""
+"**Note**: [crates.io](https://crates.io/) has a maximum of 5 categories. "
+"Each category should match one of the strings available at <https://crates."
+"io/category_slugs>, and must match exactly."
+msgstr ""
+
+#: src/reference/manifest.md:275
+msgid "<a id=\"the-workspace--field-optional\"></a>"
+msgstr ""
+
+#: src/reference/manifest.md:276
+msgid "The `workspace` field"
+msgstr ""
+
+#: src/reference/manifest.md:278
+msgid ""
+"The `workspace` field can be used to configure the workspace that this "
+"package will be a member of. If not specified this will be inferred as the "
+"first Cargo.toml with `[workspace]` upwards in the filesystem. Setting this "
+"is useful if the member is not inside a subdirectory of the workspace root."
+msgstr ""
+
+#: src/reference/manifest.md:283
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"workspace = \"path/to/workspace/root\"\n"
+"```"
+msgstr ""
+
+#: src/reference/manifest.md:289
+msgid ""
+"This field cannot be specified if the manifest already has a `[workspace]` "
+"table defined. That is, a crate cannot both be a root crate in a workspace "
+"(contain `[workspace]`) and also be a member crate of another workspace "
+"(contain `package.workspace`)."
+msgstr ""
+
+#: src/reference/manifest.md:294
+msgid "For more information, see the [workspaces chapter](workspaces.md)."
+msgstr ""
+
+#: src/reference/manifest.md:296
+msgid "<a id=\"package-build\"></a> <a id=\"the-build-field-optional\"></a>"
+msgstr ""
+
+#: src/reference/manifest.md:298
+msgid "The `build` field"
+msgstr ""
+
+#: src/reference/manifest.md:300
+msgid ""
+"The `build` field specifies a file in the package root which is a [build "
+"script](build-scripts.md) for building native code. More information can be "
+"found in the [build script guide](build-scripts.md)."
+msgstr ""
+
+#: src/reference/manifest.md:306
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"build = \"build.rs\"\n"
+"```"
+msgstr ""
+
+#: src/reference/manifest.md:312
+msgid ""
+"The default is `\"build.rs\"`, which loads the script from a file named "
+"`build.rs` in the root of the package. Use `build = \"custom_build_name."
+"rs\"` to specify a path to a different file or `build = false` to disable "
+"automatic detection of the build script."
+msgstr ""
+
+#: src/reference/manifest.md:317
+msgid "<a id=\"the-links-field-optional\"></a>"
+msgstr ""
+
+#: src/reference/manifest.md:318
+msgid "The `links` field"
+msgstr ""
+
+#: src/reference/manifest.md:320
+msgid ""
+"The `links` field specifies the name of a native library that is being "
+"linked to. More information can be found in the [`links`](build-scripts."
+"md#the-links-manifest-key) section of the build script guide."
+msgstr ""
+
+#: src/reference/manifest.md:326
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"links = \"foo\"\n"
+"```"
+msgstr ""
+
+#: src/reference/manifest.md:332
+msgid "<a id=\"the-exclude-and-include-fields-optional\"></a>"
+msgstr ""
+
+#: src/reference/manifest.md:333
+msgid "The `exclude` and `include` fields"
+msgstr ""
+
+#: src/reference/manifest.md:335
+msgid ""
+"You can explicitly specify that a set of file patterns should be ignored or "
+"included for the purposes of packaging. The patterns specified in the "
+"`exclude` field identify a set of files that are not included, and the "
+"patterns in `include` specify files that are explicitly included."
+msgstr ""
+
+#: src/reference/manifest.md:340
+msgid ""
+"The patterns should be [gitignore](https://git-scm.com/docs/gitignore)\\-"
+"style patterns. Briefly:"
+msgstr ""
+
+#: src/reference/manifest.md:342
+msgid ""
+"`foo` matches any file or directory with the name `foo` anywhere in the "
+"package. This is equivalent to the pattern `**/foo`."
+msgstr ""
+
+#: src/reference/manifest.md:344
+msgid ""
+"`/foo` matches any file or directory with the name `foo` only in the root of "
+"the package."
+msgstr ""
+
+#: src/reference/manifest.md:346
+msgid ""
+"`foo/` matches any _directory_ with the name `foo` anywhere in the package."
+msgstr ""
+
+#: src/reference/manifest.md:347
+msgid "Common glob patterns like `*`, `?`, and `[]` are supported:"
+msgstr ""
+
+#: src/reference/manifest.md:348
+msgid ""
+"`*` matches zero or more characters except `/`.  For example, `*.html` "
+"matches any file or directory with the `.html` extension anywhere in the "
+"package."
+msgstr ""
+
+#: src/reference/manifest.md:351
+msgid ""
+"`?` matches any character except `/`. For example, `foo?` matches `food`, "
+"but not `foo`."
+msgstr ""
+
+#: src/reference/manifest.md:353
+msgid ""
+"`[]` allows for matching a range of characters. For example, `[ab]` matches "
+"either `a` or `b`. `[a-z]` matches letters a through z."
+msgstr ""
+
+#: src/reference/manifest.md:355
+msgid ""
+"`**/` prefix matches in any directory. For example, `**/foo/bar` matches the "
+"file or directory `bar` anywhere that is directly under directory `foo`."
+msgstr ""
+
+#: src/reference/manifest.md:357
+msgid ""
+"`/**` suffix matches everything inside. For example, `foo/**` matches all "
+"files inside directory `foo`, including all files in subdirectories below "
+"`foo`."
+msgstr ""
+
+#: src/reference/manifest.md:360
+msgid ""
+"`/**/` matches zero or more directories. For example, `a/**/b` matches `a/"
+"b`, `a/x/b`, `a/x/y/b`, and so on."
+msgstr ""
+
+#: src/reference/manifest.md:362
+msgid ""
+"`!` prefix negates a pattern. For example, a pattern of `src/**.rs` and `!"
+"foo.rs` would match all files with the `.rs` extension inside the `src` "
+"directory, except for any file named `foo.rs`."
+msgstr ""
+
+#: src/reference/manifest.md:366
+msgid ""
+"If git is being used for a package, the `exclude` field will be seeded with "
+"the `gitignore` settings from the repository."
+msgstr ""
+
+#: src/reference/manifest.md:369
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"exclude = [\"build/**/*.o\", \"doc/**/*.html\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/manifest.md:375
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"include = [\"src/**/*\", \"Cargo.toml\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/manifest.md:381
+msgid ""
+"The options are mutually exclusive: setting `include` will override an "
+"`exclude`. Note that `include` must be an exhaustive list of files as "
+"otherwise necessary source files may not be included. The package's `Cargo."
+"toml` is automatically included."
+msgstr ""
+
+#: src/reference/manifest.md:386
+msgid ""
+"The include/exclude list is also used for change tracking in some "
+"situations. For targets built with `rustdoc`, it is used to determine the "
+"list of files to track to determine if the target should be rebuilt. If the "
+"package has a [build script](build-scripts.md) that does not emit any `rerun-"
+"if-*` directives, then the include/exclude list is used for tracking if the "
+"build script should be re-run if any of those files change."
+msgstr ""
+
+#: src/reference/manifest.md:395
+msgid "<a id=\"the-publish--field-optional\"></a>"
+msgstr ""
+
+#: src/reference/manifest.md:396
+msgid "The `publish` field"
+msgstr ""
+
+#: src/reference/manifest.md:398
+msgid ""
+"The `publish` field can be used to prevent a package from being published to "
+"a package registry (like _crates.io_) by mistake, for instance to keep a "
+"package private in a company."
+msgstr ""
+
+#: src/reference/manifest.md:408
+msgid ""
+"The value may also be an array of strings which are registry names that are "
+"allowed to be published to."
+msgstr ""
+
+#: src/reference/manifest.md:411
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"publish = [\"some-registry-name\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/manifest.md:417
+msgid ""
+"If publish array contains a single registry, `cargo publish` command will "
+"use it when `--registry` flag is not specified."
+msgstr ""
+
+#: src/reference/manifest.md:420
+msgid "<a id=\"the-metadata-table-optional\"></a>"
+msgstr ""
+
+#: src/reference/manifest.md:421
+msgid "The `metadata` table"
+msgstr ""
+
+#: src/reference/manifest.md:423
+msgid ""
+"Cargo by default will warn about unused keys in `Cargo.toml` to assist in "
+"detecting typos and such. The `package.metadata` table, however, is "
+"completely ignored by Cargo and will not be warned about. This section can "
+"be used for tools which would like to store package configuration in `Cargo."
+"toml`. For example:"
+msgstr ""
+
+#: src/reference/manifest.md:429
+msgid ""
+"```toml\n"
+"[package]\n"
+"name = \"...\"\n"
+"# ...\n"
+"\n"
+"# Metadata used when generating an Android APK, for example.\n"
+"[package.metadata.android]\n"
+"package-name = \"my-awesome-android-app\"\n"
+"assets = \"path/to/static\"\n"
+"```"
+msgstr ""
+
+#: src/reference/manifest.md:440
+msgid ""
+"There is a similar table at the workspace level at [`workspace.metadata`]"
+"(workspaces.md#the-workspacemetadata-table). While cargo does not specify a "
+"format for the content of either of these tables, it is suggested that "
+"external tools may wish to use them in a consistent fashion, such as "
+"referring to the data in `workspace.metadata` if data is missing from "
+"`package.metadata`, if that makes sense for the tool in question."
+msgstr ""
+
+#: src/reference/manifest.md:449
+msgid "The `default-run` field"
+msgstr ""
+
+#: src/reference/manifest.md:451
+msgid ""
+"The `default-run` field in the `[package]` section of the manifest can be "
+"used to specify a default binary picked by [`cargo run`](../commands/cargo-"
+"run.md). For example, when there is both `src/bin/a.rs` and `src/bin/b.rs`:"
+msgstr ""
+
+#: src/reference/manifest.md:455
+msgid ""
+"```toml\n"
+"[package]\n"
+"default-run = \"a\"\n"
+"```"
+msgstr ""
+
+#: src/reference/manifest.md:460
+msgid "The `[badges]` section"
+msgstr ""
+
+#: src/reference/manifest.md:462
+msgid ""
+"The `[badges]` section is for specifying status badges that can be displayed "
+"on a registry website when the package is published."
+msgstr ""
+
+#: src/reference/manifest.md:465
+msgid ""
+"Note: [crates.io](https://crates.io/) previously displayed badges next to a "
+"crate on its website, but that functionality has been removed. Packages "
+"should place badges in its README file which will be displayed on [crates.io]"
+"(https://crates.io/) (see [the `readme` field](#the-readme-field))."
+msgstr ""
+
+#: src/reference/manifest.md:470
+msgid ""
+"```toml\n"
+"[badges]\n"
+"# The `maintenance` table indicates the status of the maintenance of\n"
+"# the crate. This may be used by a registry, but is currently not\n"
+"# used by crates.io. See https://github.com/rust-lang/crates.io/issues/2437\n"
+"# and https://github.com/rust-lang/crates.io/issues/2438 for more details.\n"
+"#\n"
+"# The `status` field is required. Available options are:\n"
+"# - `actively-developed`: New features are being added and bugs are being "
+"fixed.\n"
+"# - `passively-maintained`: There are no plans for new features, but the "
+"maintainer intends to\n"
+"#   respond to issues that get filed.\n"
+"# - `as-is`: The crate is feature complete, the maintainer does not intend "
+"to continue working on\n"
+"#   it or providing support, but it works for the purposes it was designed "
+"for.\n"
+"# - `experimental`: The author wants to share it with the community but is "
+"not intending to meet\n"
+"#   anyone's particular use case.\n"
+"# - `looking-for-maintainer`: The current maintainer would like to transfer "
+"the crate to someone\n"
+"#   else.\n"
+"# - `deprecated`: The maintainer does not recommend using this crate (the "
+"description of the crate\n"
+"#   can describe why, there could be a better solution available or there "
+"could be problems with\n"
+"#   the crate that the author does not want to fix).\n"
+"# - `none`: Displays no badge on crates.io, since the maintainer has not "
+"chosen to specify\n"
+"#   their intentions, potential crate users will need to investigate on "
+"their own.\n"
+"maintenance = { status = \"...\" }\n"
+"```"
+msgstr ""
+
+#: src/reference/manifest.md:495
+msgid "Dependency sections"
+msgstr ""
+
+#: src/reference/manifest.md:497
+msgid ""
+"See the [specifying dependencies page](specifying-dependencies.md) for "
+"information on the `[dependencies]`, `[dev-dependencies]`, `[build-"
+"dependencies]`, and target-specific `[target.*.dependencies]` sections."
+msgstr ""
+
+#: src/reference/manifest.md:501
+msgid "The `[profile.*]` sections"
+msgstr ""
+
+#: src/reference/manifest.md:503
+msgid ""
+"The `[profile]` tables provide a way to customize compiler settings such as "
+"optimizations and debug settings. See [the Profiles chapter](profiles.md) "
+"for more detail."
+msgstr ""

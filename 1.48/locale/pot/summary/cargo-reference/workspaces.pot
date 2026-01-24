@@ -1,0 +1,210 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:36:23Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/workspaces.md:1
+msgid "Workspaces"
+msgstr ""
+
+#: src/reference/workspaces.md:3
+msgid ""
+"A _workspace_ is a collection of one or more packages that share common "
+"dependency resolution (with a shared `Cargo.lock`), output directory, and "
+"various settings such as profiles. Packages that are part of a workspaces "
+"are called _workspace members_. There are two flavours of workspaces: as "
+"root package or as virtual manifest."
+msgstr ""
+
+#: src/reference/workspaces.md:9
+msgid "Root package"
+msgstr ""
+
+#: src/reference/workspaces.md:11
+msgid ""
+"A workspace can be created by adding a [`[workspace]` section](#the-"
+"workspace-section) to `Cargo.toml`. This can be added to a `Cargo.toml` that "
+"already defines a `[package]`, in which case the package is the _root "
+"package_ of the workspace. The _workspace root_ is the directory where the "
+"workspace's `Cargo.toml` is located."
+msgstr ""
+
+#: src/reference/workspaces.md:17
+msgid "Virtual manifest"
+msgstr ""
+
+#: src/reference/workspaces.md:19
+msgid ""
+"Alternatively, a `Cargo.toml` file can be created with a `[workspace]` "
+"section but without a [`[package]` section](manifest.md#the-package-"
+"section). This is called a _virtual manifest_. This is typically useful when "
+"there isn't a \"primary\" package, or you want to keep all the packages "
+"organized in separate directories."
+msgstr ""
+
+#: src/reference/workspaces.md:24
+msgid "Key features"
+msgstr ""
+
+#: src/reference/workspaces.md:26
+msgid "The key points of workspaces are:"
+msgstr ""
+
+#: src/reference/workspaces.md:28
+msgid ""
+"All packages share a common `Cargo.lock` file which resides in the "
+"_workspace root_."
+msgstr ""
+
+#: src/reference/workspaces.md:30
+msgid ""
+"All packages share a common [output directory](../guide/build-cache.md), "
+"which defaults to a directory named `target` in the _workspace root_."
+msgstr ""
+
+#: src/reference/workspaces.md:32
+msgid ""
+"The [`[patch]`](overriding-dependencies.md#the-patch-section), [`[replace]`]"
+"(overriding-dependencies.md#the-replace-section) and [`[profile.*]`]"
+"(profiles.md) sections in `Cargo.toml` are only recognized in the _root_ "
+"manifest, and ignored in member crates' manifests."
+msgstr ""
+
+#: src/reference/workspaces.md:36
+msgid "The `[workspace]` section"
+msgstr ""
+
+#: src/reference/workspaces.md:38
+msgid ""
+"The `[workspace]` table in `Cargo.toml` defines which packages are members "
+"of the workspace:"
+msgstr ""
+
+#: src/reference/workspaces.md:41
+msgid ""
+"```toml\n"
+"[workspace]\n"
+"members = [\"member1\", \"path/to/member2\", \"crates/*\"]\n"
+"exclude = [\"crates/foo\", \"path/to/other\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/workspaces.md:47
+msgid ""
+"All [`path` dependencies](specifying-dependencies.md#specifying-path-"
+"dependencies) residing in the workspace directory automatically become "
+"members. Additional members can be listed with the `members` key, which "
+"should be an array of strings containing directories with `Cargo.toml` files."
+msgstr ""
+
+#: src/reference/workspaces.md:51
+msgid ""
+"The `members` list also supports [globs](https://docs.rs/glob/0.3.0/glob/"
+"struct.Pattern.html) to match multiple paths, using typical filename glob "
+"patterns like `*` and `?`."
+msgstr ""
+
+#: src/reference/workspaces.md:54
+msgid ""
+"The `exclude` key can be used to prevent paths from being included in a "
+"workspace. This can be useful if some path dependencies aren't desired to be "
+"in the workspace at all, or using a glob pattern and you want to remove a "
+"directory."
+msgstr ""
+
+#: src/reference/workspaces.md:59
+msgid ""
+"An empty `[workspace]` table can be used with a `[package]` to conveniently "
+"create a workspace with the package and all of its path dependencies."
+msgstr ""
+
+#: src/reference/workspaces.md:62
+msgid "Workspace selection"
+msgstr ""
+
+#: src/reference/workspaces.md:64
+msgid ""
+"When inside a subdirectory within the workspace, Cargo will automatically "
+"search the parent directories for a `Cargo.toml` file with a `[workspace]` "
+"definition to determine which workspace to use. The [`package.workspace`]"
+"(manifest.md#the-workspace-field) manifest key can be used in member crates "
+"to point at a workspace's root to override this automatic search. The manual "
+"setting can be useful if the member is not inside a subdirectory of the "
+"workspace root."
+msgstr ""
+
+#: src/reference/workspaces.md:71
+msgid "Package selection"
+msgstr ""
+
+#: src/reference/workspaces.md:73
+msgid ""
+"In a workspace, package-related cargo commands like [`cargo build`](../"
+"commands/cargo-build.md) can use the `-p` / `--package` or `--workspace` "
+"command-line flags to determine which packages to operate on. If neither of "
+"those flags are specified, Cargo will use the package in the current working "
+"directory. If the current directory is a virtual workspace, it will apply to "
+"all members (as if `--workspace` were specified on the command-line)."
+msgstr ""
+
+#: src/reference/workspaces.md:80
+msgid ""
+"The optional `default-members` key can be specified to set the members to "
+"operate on when in the workspace root and the package selection flags are "
+"not used:"
+msgstr ""
+
+#: src/reference/workspaces.md:84
+msgid ""
+"```toml\n"
+"[workspace]\n"
+"members = [\"path/to/member1\", \"path/to/member2\", \"path/to/member3/*\"]\n"
+"default-members = [\"path/to/member2\", \"path/to/member3/foo\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/workspaces.md:90
+msgid "When specified, `default-members` must expand to a subset of `members`."
+msgstr ""
+
+#: src/reference/workspaces.md:92
+msgid "The `workspace.metadata` table"
+msgstr ""
+
+#: src/reference/workspaces.md:94
+msgid ""
+"The `workspace.metadata` table is ignored by Cargo and will not be warned "
+"about. This section can be used for tools that would like to store workspace "
+"configuration in `Cargo.toml`. For example:"
+msgstr ""
+
+#: src/reference/workspaces.md:98
+msgid ""
+"```toml\n"
+"[workspace]\n"
+"members = [\"member1\", \"member2\"]\n"
+"\n"
+"[workspace.metadata.webcontents]\n"
+"root = \"path/to/webproject\"\n"
+"tool = [\"npm\", \"run\", \"build\"]\n"
+"# ...\n"
+"```"
+msgstr ""
+
+#: src/reference/workspaces.md:108
+msgid ""
+"There is a similar set of tables at the package level at [`package.metadata`]"
+"(manifest.md#the-metadata-table). While cargo does not specify a format for "
+"the content of either of these tables, it is suggested that external tools "
+"may wish to use them in a consistent fashion, such as referring to the data "
+"in `workspace.metadata` if data is missing from `package.metadata`, if that "
+"makes sense for the tool in question."
+msgstr ""
