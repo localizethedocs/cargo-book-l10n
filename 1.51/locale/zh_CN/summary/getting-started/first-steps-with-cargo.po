@@ -1,0 +1,117 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:35:43Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/getting-started/first-steps.md:1
+msgid "First Steps with Cargo"
+msgstr ""
+
+#: src/getting-started/first-steps.md:3
+msgid ""
+"This section provides a quick sense for the `cargo` command line tool. We "
+"demonstrate its ability to generate a new [_**package**_](../appendix/"
+"glossary.md#package \"\\\"package\\\" (glossary entry)\") for us, its "
+"ability to compile the [_**crate**_](../appendix/glossary.md#crate \"\\"
+"\"crate\\\" (glossary entry)\") within the package, and its ability to run "
+"the resulting program."
+msgstr ""
+
+#: src/getting-started/first-steps.md:8
+msgid "To start a new package with Cargo, use `cargo new`:"
+msgstr ""
+
+#: src/getting-started/first-steps.md:14
+msgid ""
+"Cargo defaults to `--bin` to make a binary program. To make a library, we "
+"would pass `--lib`, instead."
+msgstr ""
+
+#: src/getting-started/first-steps.md:17
+msgid "Let’s check out what Cargo has generated for us:"
+msgstr ""
+
+#: src/getting-started/first-steps.md:30
+msgid ""
+"This is all we need to get started. First, let’s check out `Cargo.toml`:"
+msgstr ""
+
+#: src/getting-started/first-steps.md:32
+msgid ""
+"```toml\n"
+"[package]\n"
+"name = \"hello_world\"\n"
+"version = \"0.1.0\"\n"
+"authors = [\"Your Name <you@example.com>\"]\n"
+"edition = \"2018\"\n"
+"\n"
+"[dependencies]\n"
+"```"
+msgstr ""
+
+#: src/getting-started/first-steps.md:42
+msgid ""
+"This is called a [_**manifest**_](../appendix/glossary.md#manifest \"\\"
+"\"manifest\\\" (glossary entry)\"), and it contains all of the metadata that "
+"Cargo needs to compile your package."
+msgstr ""
+
+#: src/getting-started/first-steps.md:45
+msgid "Here’s what’s in `src/main.rs`:"
+msgstr ""
+
+#: src/getting-started/first-steps.md:49
+msgid "\"Hello, world!\""
+msgstr ""
+
+#: src/getting-started/first-steps.md:53
+msgid ""
+"Cargo generated a “hello world” program for us, otherwise known as a "
+"[_**binary crate**_](../appendix/glossary.md#crate \"\\\"crate\\\" (glossary "
+"entry)\"). Let’s compile it:"
+msgstr ""
+
+#: src/getting-started/first-steps.md:56
+msgid ""
+"```console\n"
+"$ cargo build\n"
+"   Compiling hello_world v0.1.0 (file:///path/to/package/hello_world)\n"
+"```"
+msgstr ""
+
+#: src/getting-started/first-steps.md:61
+msgid "And then run it:"
+msgstr ""
+
+#: src/getting-started/first-steps.md:68
+msgid ""
+"We can also use `cargo run` to compile and then run it, all in one step:"
+msgstr ""
+
+#: src/getting-started/first-steps.md:70
+msgid ""
+"```console\n"
+"$ cargo run\n"
+"     Fresh hello_world v0.1.0 (file:///path/to/package/hello_world)\n"
+"   Running `target/hello_world`\n"
+"Hello, world!\n"
+"```"
+msgstr ""
+
+#: src/getting-started/first-steps.md:77
+msgid "Going further"
+msgstr ""
+
+#: src/getting-started/first-steps.md:79
+msgid ""
+"For more details on using Cargo, check out the [Cargo Guide](../guide/index."
+"md)"
+msgstr ""
