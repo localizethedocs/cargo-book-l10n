@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:50:35Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/index.md:1
+msgid "Cargo Reference"
+msgstr ""
+
+#: src/reference/index.md:3
+msgid "The reference covers the details of various areas of Cargo."
+msgstr ""
+
+#: src/reference/index.md:5
+msgid "[Specifying Dependencies](reference/specifying-dependencies.html)"
+msgstr ""
+
+#: src/reference/index.md:6
+msgid "[The Manifest Format](reference/manifest.html)"
+msgstr ""
+
+#: src/reference/index.md:7
+msgid "[Configuration](reference/config.html)"
+msgstr ""
+
+#: src/reference/index.md:8
+msgid "[Environment Variables](reference/environment-variables.html)"
+msgstr ""
+
+#: src/reference/index.md:9
+msgid "[Build Scripts](reference/build-scripts.html)"
+msgstr ""
+
+#: src/reference/index.md:10
+msgid "[Publishing on crates.io](reference/publishing.html)"
+msgstr ""
+
+#: src/reference/index.md:11
+msgid "[Package ID Specifications](reference/pkgid-spec.html)"
+msgstr ""
+
+#: src/reference/index.md:12
+msgid "[Source Replacement](reference/source-replacement.html)"
+msgstr ""
+
+#: src/reference/index.md:13
+msgid "[External Tools](reference/external-tools.html)"
+msgstr ""
+
+#: src/reference/index.md:14
+msgid "[Unstable Features](reference/unstable.html)"
+msgstr ""
