@@ -1,0 +1,239 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:43:56Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/commands/cargo-yank.md:1
+msgid "cargo-yank(1)"
+msgstr ""
+
+#: src/commands/cargo-yank.md:3
+msgid "NAME"
+msgstr ""
+
+#: src/commands/cargo-yank.md:5
+msgid "cargo-yank --- Remove a pushed crate from the index"
+msgstr ""
+
+#: src/commands/cargo-yank.md:7
+msgid "SYNOPSIS"
+msgstr ""
+
+#: src/commands/cargo-yank.md:9
+msgid ""
+"`cargo yank` \\[_options_\\] _crate_@_version_  \n"
+"`cargo yank` \\[_options_\\] `--version` _version_ \\[_crate_\\]"
+msgstr ""
+
+#: src/commands/cargo-yank.md:12
+msgid "DESCRIPTION"
+msgstr ""
+
+#: src/commands/cargo-yank.md:14
+msgid ""
+"The yank command removes a previously published crate's version from the "
+"server's index. This command does not delete any data, and the crate will "
+"still be available for download via the registry's download link."
+msgstr ""
+
+#: src/commands/cargo-yank.md:18
+msgid ""
+"Cargo will not use a yanked version for any new project or checkout without "
+"a pre-existing lockfile, and will generate an error if there are no longer "
+"any compatible versions for your crate."
+msgstr ""
+
+#: src/commands/cargo-yank.md:22
+msgid ""
+"This command requires you to be authenticated with either the `--token` "
+"option or using [cargo-login(1)](cargo-login.html)."
+msgstr ""
+
+#: src/commands/cargo-yank.md:25
+msgid ""
+"If the crate name is not specified, it will use the package name from the "
+"current directory."
+msgstr ""
+
+#: src/commands/cargo-yank.md:28
+msgid "How yank works"
+msgstr ""
+
+#: src/commands/cargo-yank.md:30
+msgid ""
+"For example, the `foo` crate published version `1.5.0` and another crate "
+"`bar` declared a dependency on version `foo = \"1.5\"`. Now `foo` releases a "
+"new, but not semver compatible, version `2.0.0`, and finds a critical issue "
+"with `1.5.0`. If `1.5.0` is yanked, no new project or checkout without an "
+"existing lockfile will be able to use crate `bar` as it relies on `1.5`."
+msgstr ""
+
+#: src/commands/cargo-yank.md:36
+msgid ""
+"In this case, the maintainers of `foo` should first publish a semver "
+"compatible version such as `1.5.1` prior to yanking `1.5.0` so that `bar` "
+"and all projects that depend on `bar` will continue to work."
+msgstr ""
+
+#: src/commands/cargo-yank.md:40
+msgid ""
+"As another example, consider a crate `bar` with published versions `1.5.0`, "
+"`1.5.1`, `1.5.2`, `2.0.0` and `3.0.0`. The following table identifies the "
+"versions cargo could use in the absence of a lockfile for different SemVer "
+"requirements, following a given release being yanked:"
+msgstr ""
+
+#: src/commands/cargo-yank.md:45
+msgid "Yanked Version / SemVer requirement"
+msgstr ""
+
+#: src/commands/cargo-yank.md:45
+msgid "`bar = \"1.5.0\"`"
+msgstr ""
+
+#: src/commands/cargo-yank.md:45
+msgid "`bar = \"=1.5.0\"`"
+msgstr ""
+
+#: src/commands/cargo-yank.md:45
+msgid "`bar = \"2.0.0\"`"
+msgstr ""
+
+#: src/commands/cargo-yank.md:47
+msgid "`1.5.0`"
+msgstr ""
+
+#: src/commands/cargo-yank.md:47
+msgid "Use either `1.5.1` or `1.5.2`"
+msgstr ""
+
+#: src/commands/cargo-yank.md:47 src/commands/cargo-yank.md:49
+msgid "**Return Error**"
+msgstr ""
+
+#: src/commands/cargo-yank.md:47 src/commands/cargo-yank.md:48
+msgid "Use `2.0.0`"
+msgstr ""
+
+#: src/commands/cargo-yank.md:48
+msgid "`1.5.1`"
+msgstr ""
+
+#: src/commands/cargo-yank.md:48
+msgid "Use either `1.5.0` or `1.5.2`"
+msgstr ""
+
+#: src/commands/cargo-yank.md:48 src/commands/cargo-yank.md:49
+msgid "Use `1.5.0`"
+msgstr ""
+
+#: src/commands/cargo-yank.md:49
+msgid "`2.0.0`"
+msgstr ""
+
+#: src/commands/cargo-yank.md:49
+msgid "Use either `1.5.0`, `1.5.1` or `0.22.2`"
+msgstr ""
+
+#: src/commands/cargo-yank.md:51
+msgid "When to yank"
+msgstr ""
+
+#: src/commands/cargo-yank.md:53
+msgid ""
+"Crates should only be yanked in exceptional circumstances, for example, an "
+"accidental publish, an unintentional SemVer breakages, or a significantly "
+"broken and unusable crate. In the case of security vulnerabilities, [RustSec]"
+"(https://rustsec.org/) is typically a less disruptive mechanism to inform "
+"users and encourage them to upgrade, and avoids the possibility of "
+"significant downstream disruption irrespective of susceptibility to the "
+"vulnerability in question."
+msgstr ""
+
+#: src/commands/cargo-yank.md:60
+msgid ""
+"A common workflow is to yank a crate having already published a semver "
+"compatible version, to reduce the probability of preventing dependent crates "
+"from compiling."
+msgstr ""
+
+#: src/commands/cargo-yank.md:64
+msgid ""
+"When addressing copyright, licensing, or personal data issues with a "
+"published crate, simply yanking it may not suffice. In such cases, contact "
+"the maintainers of the registry you used. For crates.io, refer to their "
+"[policies](https://crates.io/policies) and contact them at <help@crates.io>."
+msgstr ""
+
+#: src/commands/cargo-yank.md:69
+msgid ""
+"If credentials have been leaked, the recommended course of action is to "
+"revoke them immediately. Once a crate has been published, it is impossible "
+"to determine if the leaked credentials have been copied. Yanking the crate "
+"only prevents new users from downloading it, but cannot stop those who have "
+"already downloaded it from keeping or even spreading the leaked credentials."
+msgstr ""
+
+#: src/commands/cargo-yank.md:78
+msgid "OPTIONS"
+msgstr ""
+
+#: src/commands/cargo-yank.md:80
+msgid "Yank Options"
+msgstr ""
+
+#: src/commands/cargo-yank.md:120
+msgid "Display Options"
+msgstr ""
+
+#: src/commands/cargo-yank.md:154
+msgid "Common Options"
+msgstr ""
+
+#: src/commands/cargo-yank.md:195
+msgid "ENVIRONMENT"
+msgstr ""
+
+#: src/commands/cargo-yank.md:197
+msgid ""
+"See [the reference](../reference/environment-variables.html) for details on "
+"environment variables that Cargo reads."
+msgstr ""
+
+#: src/commands/cargo-yank.md:201
+msgid "EXIT STATUS"
+msgstr ""
+
+#: src/commands/cargo-yank.md:203
+msgid "`0`: Cargo succeeded."
+msgstr ""
+
+#: src/commands/cargo-yank.md:204
+msgid "`101`: Cargo failed to complete."
+msgstr ""
+
+#: src/commands/cargo-yank.md:207
+msgid "EXAMPLES"
+msgstr ""
+
+#: src/commands/cargo-yank.md:209
+msgid "Yank a crate from the index:"
+msgstr ""
+
+#: src/commands/cargo-yank.md:213
+msgid "SEE ALSO"
+msgstr ""
+
+#: src/commands/cargo-yank.md:214
+msgid ""
+"[cargo(1)](cargo.html), [cargo-login(1)](cargo-login.html), [cargo-"
+"publish(1)](cargo-publish.html)"
+msgstr ""
