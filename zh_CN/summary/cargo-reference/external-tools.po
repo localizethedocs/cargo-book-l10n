@@ -1,0 +1,628 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:37:37Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/external-tools.md:1
+msgid "External tools"
+msgstr ""
+
+#: src/reference/external-tools.md:3
+msgid ""
+"One of the goals of Cargo is simple integration with third-party tools, like "
+"IDEs and other build systems. To make integration easier, Cargo has several "
+"facilities:"
+msgstr ""
+
+#: src/reference/external-tools.md:7
+msgid ""
+"a [`cargo metadata`](../commands/cargo-metadata.md) command, which outputs "
+"package structure and dependencies information in JSON,"
+msgstr ""
+
+#: src/reference/external-tools.md:10
+msgid ""
+"a `--message-format` flag, which outputs information about a particular "
+"build, and"
+msgstr ""
+
+#: src/reference/external-tools.md:13
+msgid "support for custom subcommands."
+msgstr ""
+
+#: src/reference/external-tools.md:16
+msgid "Information about package structure"
+msgstr ""
+
+#: src/reference/external-tools.md:18
+msgid ""
+"You can use [`cargo metadata`](../commands/cargo-metadata.md) command to get "
+"information about package structure and dependencies. See the [`cargo "
+"metadata`](../commands/cargo-metadata.md) documentation for details on the "
+"format of the output."
+msgstr ""
+
+#: src/reference/external-tools.md:22
+msgid ""
+"The format is stable and versioned. When calling `cargo metadata`, you "
+"should pass `--format-version` flag explicitly to avoid forward "
+"incompatibility hazard."
+msgstr ""
+
+#: src/reference/external-tools.md:26
+msgid ""
+"If you are using Rust, the [cargo_metadata](https://crates.io/crates/"
+"cargo_metadata) crate can be used to parse the output."
+msgstr ""
+
+#: src/reference/external-tools.md:32
+msgid "JSON messages"
+msgstr ""
+
+#: src/reference/external-tools.md:34
+msgid ""
+"When passing `--message-format=json`, Cargo will output the following "
+"information during the build:"
+msgstr ""
+
+#: src/reference/external-tools.md:37
+msgid "compiler errors and warnings,"
+msgstr ""
+
+#: src/reference/external-tools.md:39
+msgid "produced artifacts,"
+msgstr ""
+
+#: src/reference/external-tools.md:41
+msgid "results of the build scripts (for example, native dependencies)."
+msgstr ""
+
+#: src/reference/external-tools.md:43
+msgid ""
+"The output goes to stdout in the JSON object per line format. The `reason` "
+"field distinguishes different kinds of messages."
+msgstr ""
+
+#: src/reference/external-tools.md:46
+msgid ""
+"The `--message-format` option can also take additional formatting values "
+"which alter the way the JSON messages are computed and rendered. See the "
+"description of the `--message-format` option in the [build command "
+"documentation](../commands/cargo-build.md) for more details."
+msgstr ""
+
+#: src/reference/external-tools.md:51
+msgid ""
+"If you are using Rust, the [cargo_metadata](https://crates.io/crates/"
+"cargo_metadata) crate can be used to parse these messages."
+msgstr ""
+
+#: src/reference/external-tools.md:57
+msgid "Compiler messages"
+msgstr ""
+
+#: src/reference/external-tools.md:59
+msgid ""
+"The \"compiler-message\" message includes output from the compiler, such as "
+"warnings and errors. See the [rustc JSON chapter](../../rustc/json.md) for "
+"details on `rustc`'s message format, which is embedded in the following "
+"structure:"
+msgstr ""
+
+#: src/reference/external-tools.md:66 src/reference/external-tools.md:130
+#: src/reference/external-tools.md:197 src/reference/external-tools.md:235
+msgid "/* The \"reason\" indicates the kind of message. */"
+msgstr ""
+
+#: src/reference/external-tools.md:67 src/reference/external-tools.md:131
+#: src/reference/external-tools.md:198 src/reference/external-tools.md:236
+msgid "\"reason\""
+msgstr ""
+
+#: src/reference/external-tools.md:67
+msgid "\"compiler-message\""
+msgstr ""
+
+#: src/reference/external-tools.md:68 src/reference/external-tools.md:132
+#: src/reference/external-tools.md:199
+msgid "/* The Package ID, a unique identifier for referring to the package. */"
+msgstr ""
+
+#: src/reference/external-tools.md:69 src/reference/external-tools.md:133
+#: src/reference/external-tools.md:200
+msgid "\"package_id\""
+msgstr ""
+
+#: src/reference/external-tools.md:69 src/reference/external-tools.md:133
+#: src/reference/external-tools.md:200
+msgid "\"my-package 0.1.0 (path+file:///path/to/my-package)\""
+msgstr ""
+
+#: src/reference/external-tools.md:70 src/reference/external-tools.md:134
+msgid "/* Absolute path to the package manifest. */"
+msgstr ""
+
+#: src/reference/external-tools.md:71 src/reference/external-tools.md:135
+msgid "\"manifest_path\""
+msgstr ""
+
+#: src/reference/external-tools.md:71 src/reference/external-tools.md:135
+msgid "\"/path/to/my-package/Cargo.toml\""
+msgstr ""
+
+#: src/reference/external-tools.md:72
+msgid ""
+"/* The Cargo target (lib, bin, example, etc.) that generated the message. */"
+msgstr ""
+
+#: src/reference/external-tools.md:73 src/reference/external-tools.md:139
+msgid "\"target\""
+msgstr ""
+
+#: src/reference/external-tools.md:74
+msgid ""
+"/* Array of target kinds.\n"
+"           - lib targets list the `crate-type` values from the\n"
+"             manifest such as \"lib\", \"rlib\", \"dylib\",\n"
+"             \"proc-macro\", etc. (default [\"lib\"])\n"
+"           - binary is [\"bin\"]\n"
+"           - example is [\"example\"]\n"
+"           - integration test is [\"test\"]\n"
+"           - benchmark is [\"bench\"]\n"
+"           - build script is [\"custom-build\"]\n"
+"        */"
+msgstr ""
+
+#: src/reference/external-tools.md:84 src/reference/external-tools.md:140
+msgid "\"kind\""
+msgstr ""
+
+#: src/reference/external-tools.md:85 src/reference/external-tools.md:94
+#: src/reference/external-tools.md:141 src/reference/external-tools.md:144
+msgid "\"lib\""
+msgstr ""
+
+#: src/reference/external-tools.md:87
+msgid ""
+"/* Array of crate types.\n"
+"           - lib and example libraries list the `crate-type` values\n"
+"             from the manifest such as \"lib\", \"rlib\", \"dylib\",\n"
+"             \"proc-macro\", etc. (default [\"lib\"])\n"
+"           - all other target kinds are [\"bin\"]\n"
+"        */"
+msgstr ""
+
+#: src/reference/external-tools.md:93 src/reference/external-tools.md:143
+msgid "\"crate_types\""
+msgstr ""
+
+#: src/reference/external-tools.md:96
+msgid "/* The name of the target. */"
+msgstr ""
+
+#: src/reference/external-tools.md:97 src/reference/external-tools.md:146
+msgid "\"name\""
+msgstr ""
+
+#: src/reference/external-tools.md:97 src/reference/external-tools.md:146
+msgid "\"my-package\""
+msgstr ""
+
+#: src/reference/external-tools.md:98
+msgid "/* Absolute path to the root source file of the target. */"
+msgstr ""
+
+#: src/reference/external-tools.md:99 src/reference/external-tools.md:147
+msgid "\"src_path\""
+msgstr ""
+
+#: src/reference/external-tools.md:99 src/reference/external-tools.md:147
+msgid "\"/path/to/my-package/src/lib.rs\""
+msgstr ""
+
+#: src/reference/external-tools.md:100
+msgid ""
+"/* The Rust edition of the target.\n"
+"           Defaults to the package edition.\n"
+"        */"
+msgstr ""
+
+#: src/reference/external-tools.md:103 src/reference/external-tools.md:148
+msgid "\"edition\""
+msgstr ""
+
+#: src/reference/external-tools.md:103 src/reference/external-tools.md:148
+msgid "\"2018\""
+msgstr ""
+
+#: src/reference/external-tools.md:104
+msgid ""
+"/* Array of required features.\n"
+"           This property is not included if no required features are set.\n"
+"        */"
+msgstr ""
+
+#: src/reference/external-tools.md:107
+msgid "\"required-features\""
+msgstr ""
+
+#: src/reference/external-tools.md:107 src/reference/external-tools.md:168
+msgid "\"feat1\""
+msgstr ""
+
+#: src/reference/external-tools.md:108
+msgid ""
+"/* Whether or not this target has doc tests enabled, and\n"
+"           the target is compatible with doc testing.\n"
+"        */"
+msgstr ""
+
+#: src/reference/external-tools.md:111 src/reference/external-tools.md:149
+msgid "\"doctest\""
+msgstr ""
+
+#: src/reference/external-tools.md:113
+msgid ""
+"/* The message emitted by the compiler.\n"
+"\n"
+"    See https://doc.rust-lang.org/rustc/json.html for details.\n"
+"    */"
+msgstr ""
+
+#: src/reference/external-tools.md:117
+msgid "\"message\""
+msgstr ""
+
+#: src/reference/external-tools.md:118
+msgid "/* ... */"
+msgstr ""
+
+#: src/reference/external-tools.md:123
+msgid "Artifact messages"
+msgstr ""
+
+#: src/reference/external-tools.md:125
+msgid ""
+"For every compilation step, a \"compiler-artifact\" message is emitted with "
+"the following structure:"
+msgstr ""
+
+#: src/reference/external-tools.md:131
+msgid "\"compiler-artifact\""
+msgstr ""
+
+#: src/reference/external-tools.md:136
+msgid ""
+"/* The Cargo target (lib, bin, example, etc.) that generated the artifacts.\n"
+"       See the definition above for `compiler-message` for details.\n"
+"    */"
+msgstr ""
+
+#: src/reference/external-tools.md:150 src/reference/external-tools.md:165
+msgid "\"test\""
+msgstr ""
+
+#: src/reference/external-tools.md:152
+msgid "/* The profile indicates which compiler settings were used. */"
+msgstr ""
+
+#: src/reference/external-tools.md:153
+msgid "\"profile\""
+msgstr ""
+
+#: src/reference/external-tools.md:154
+msgid "/* The optimization level. */"
+msgstr ""
+
+#: src/reference/external-tools.md:155
+msgid "\"opt_level\""
+msgstr ""
+
+#: src/reference/external-tools.md:155
+msgid "\"0\""
+msgstr ""
+
+#: src/reference/external-tools.md:156
+msgid ""
+"/* The debug level, an integer of 0, 1, or 2. If `null`, it implies\n"
+"           rustc's default of 0.\n"
+"        */"
+msgstr ""
+
+#: src/reference/external-tools.md:159
+msgid "\"debuginfo\""
+msgstr ""
+
+#: src/reference/external-tools.md:160
+msgid "/* Whether or not debug assertions are enabled. */"
+msgstr ""
+
+#: src/reference/external-tools.md:161
+msgid "\"debug_assertions\""
+msgstr ""
+
+#: src/reference/external-tools.md:162
+msgid "/* Whether or not overflow checks are enabled. */"
+msgstr ""
+
+#: src/reference/external-tools.md:163
+msgid "\"overflow_checks\""
+msgstr ""
+
+#: src/reference/external-tools.md:164
+msgid "/* Whether or not the `--test` flag is used. */"
+msgstr ""
+
+#: src/reference/external-tools.md:167
+msgid "/* Array of features enabled. */"
+msgstr ""
+
+#: src/reference/external-tools.md:168
+msgid "\"features\""
+msgstr ""
+
+#: src/reference/external-tools.md:168
+msgid "\"feat2\""
+msgstr ""
+
+#: src/reference/external-tools.md:169
+msgid "/* Array of files generated by this step. */"
+msgstr ""
+
+#: src/reference/external-tools.md:170
+msgid "\"filenames\""
+msgstr ""
+
+#: src/reference/external-tools.md:171
+msgid "\"/path/to/my-package/target/debug/libmy_package.rlib\""
+msgstr ""
+
+#: src/reference/external-tools.md:172
+msgid ""
+"\"/path/to/my-package/target/debug/deps/libmy_package-be9f3faac0a26ef0."
+"rmeta\""
+msgstr ""
+
+#: src/reference/external-tools.md:174
+msgid ""
+"/* A string of the path to the executable that was created, or null if\n"
+"       this step did not generate an executable.\n"
+"    */"
+msgstr ""
+
+#: src/reference/external-tools.md:177
+msgid "\"executable\""
+msgstr ""
+
+#: src/reference/external-tools.md:178
+msgid ""
+"/* Whether or not this step was actually executed.\n"
+"       When `true`, this means that the pre-existing artifacts were\n"
+"       up-to-date, and `rustc` was not executed. When `false`, this means "
+"that\n"
+"       `rustc` was run to generate the artifacts.\n"
+"    */"
+msgstr ""
+
+#: src/reference/external-tools.md:183
+msgid "\"fresh\""
+msgstr ""
+
+#: src/reference/external-tools.md:188
+msgid "Build script output"
+msgstr ""
+
+#: src/reference/external-tools.md:190
+msgid ""
+"The \"build-script-executed\" message includes the parsed output of a build "
+"script. Note that this is emitted even if the build script is not run; it "
+"will display the previously cached value. More details about build script "
+"output may be found in [the chapter on build scripts](build-scripts.md)."
+msgstr ""
+
+#: src/reference/external-tools.md:198
+msgid "\"build-script-executed\""
+msgstr ""
+
+#: src/reference/external-tools.md:201
+msgid ""
+"/* Array of libraries to link, as indicated by the `cargo:rustc-link-lib`\n"
+"       instruction. Note that this may include a \"KIND=\" prefix in the "
+"string\n"
+"       where KIND is the library kind.\n"
+"    */"
+msgstr ""
+
+#: src/reference/external-tools.md:205
+msgid "\"linked_libs\""
+msgstr ""
+
+#: src/reference/external-tools.md:205
+msgid "\"foo\""
+msgstr ""
+
+#: src/reference/external-tools.md:205
+msgid "\"static=bar\""
+msgstr ""
+
+#: src/reference/external-tools.md:206
+msgid ""
+"/* Array of paths to include in the library search path, as indicated by\n"
+"       the `cargo:rustc-link-search` instruction. Note that this may include "
+"a\n"
+"       \"KIND=\" prefix in the string where KIND is the library kind.\n"
+"    */"
+msgstr ""
+
+#: src/reference/external-tools.md:210
+msgid "\"linked_paths\""
+msgstr ""
+
+#: src/reference/external-tools.md:210
+msgid "\"/some/path\""
+msgstr ""
+
+#: src/reference/external-tools.md:210
+msgid "\"native=/another/path\""
+msgstr ""
+
+#: src/reference/external-tools.md:211
+msgid ""
+"/* Array of cfg values to enable, as indicated by the `cargo:rustc-cfg`\n"
+"       instruction.\n"
+"    */"
+msgstr ""
+
+#: src/reference/external-tools.md:214
+msgid "\"cfgs\""
+msgstr ""
+
+#: src/reference/external-tools.md:214
+msgid "\"cfg1\""
+msgstr ""
+
+#: src/reference/external-tools.md:214
+msgid "\"cfg2=\\\"string\\\"\""
+msgstr ""
+
+#: src/reference/external-tools.md:215
+msgid ""
+"/* Array of [KEY, VALUE] arrays of environment variables to set, as\n"
+"       indicated by the `cargo:rustc-env` instruction.\n"
+"    */"
+msgstr ""
+
+#: src/reference/external-tools.md:218
+msgid "\"env\""
+msgstr ""
+
+#: src/reference/external-tools.md:219
+msgid "\"SOME_KEY\""
+msgstr ""
+
+#: src/reference/external-tools.md:219
+msgid "\"some value\""
+msgstr ""
+
+#: src/reference/external-tools.md:220
+msgid "\"ANOTHER_KEY\""
+msgstr ""
+
+#: src/reference/external-tools.md:220
+msgid "\"another value\""
+msgstr ""
+
+#: src/reference/external-tools.md:222
+msgid ""
+"/* An absolute path which is used as a value of `OUT_DIR` environmental\n"
+"       variable when compiling current package.\n"
+"    */"
+msgstr ""
+
+#: src/reference/external-tools.md:225
+msgid "\"out_dir\""
+msgstr ""
+
+#: src/reference/external-tools.md:225
+msgid "\"/some/path/in/target/dir\""
+msgstr ""
+
+#: src/reference/external-tools.md:229
+msgid "Build finished"
+msgstr ""
+
+#: src/reference/external-tools.md:231
+msgid "The \"build-finished\" message is emitted at the end of the build."
+msgstr ""
+
+#: src/reference/external-tools.md:236
+msgid "\"build-finished\""
+msgstr ""
+
+#: src/reference/external-tools.md:237
+msgid "/* Whether or not the build finished successfully. */"
+msgstr ""
+
+#: src/reference/external-tools.md:238
+msgid "\"success\""
+msgstr ""
+
+#: src/reference/external-tools.md:242
+msgid ""
+"This message can be helpful for tools to know when to stop reading JSON "
+"messages. Commands such as `cargo test` or `cargo run` can produce "
+"additional output after the build has finished. This message lets a tool "
+"know that Cargo will not produce additional JSON messages, but there may be "
+"additional output that may be generated afterwards (such as the output "
+"generated by the program executed by `cargo run`)."
+msgstr ""
+
+#: src/reference/external-tools.md:249
+msgid ""
+"Note: There is experimental nightly-only support for JSON output for tests, "
+"so additional test-specific JSON messages may begin arriving after the "
+"\"build-finished\" message if that is enabled."
+msgstr ""
+
+#: src/reference/external-tools.md:253
+msgid "Custom subcommands"
+msgstr ""
+
+#: src/reference/external-tools.md:255
+msgid ""
+"Cargo is designed to be extensible with new subcommands without having to "
+"modify Cargo itself. This is achieved by translating a cargo invocation of "
+"the form cargo `(?<command>[^ ]+)` into an invocation of an external tool "
+"`cargo-${command}`. The external tool must be present in one of the user's "
+"`$PATH` directories."
+msgstr ""
+
+#: src/reference/external-tools.md:261
+msgid ""
+"When Cargo invokes a custom subcommand, the first argument to the subcommand "
+"will be the filename of the custom subcommand, as usual. The second argument "
+"will be the subcommand name itself. For example, the second argument would "
+"be `${command}` when invoking `cargo-${command}`. Any additional arguments "
+"on the command line will be forwarded unchanged."
+msgstr ""
+
+#: src/reference/external-tools.md:267
+msgid ""
+"Cargo can also display the help output of a custom subcommand with `cargo "
+"help ${command}`. Cargo assumes that the subcommand will print a help "
+"message if its third argument is `--help`. So, `cargo help ${command}` would "
+"invoke `cargo-${command} ${command} --help`."
+msgstr ""
+
+#: src/reference/external-tools.md:272
+msgid ""
+"Custom subcommands may use the `CARGO` environment variable to call back to "
+"Cargo. Alternatively, it can link to `cargo` crate as a library, but this "
+"approach has drawbacks:"
+msgstr ""
+
+#: src/reference/external-tools.md:276
+msgid "Cargo as a library is unstable: the  API may change without deprecation"
+msgstr ""
+
+#: src/reference/external-tools.md:277
+msgid ""
+"versions of the linked Cargo library may be different from the Cargo binary"
+msgstr ""
+
+#: src/reference/external-tools.md:279
+msgid ""
+"Instead, it is encouraged to use the CLI interface to drive Cargo. The "
+"[`cargo metadata`](../commands/cargo-metadata.md) command can be used to "
+"obtain information about the current project (the [`cargo_metadata`](https://"
+"crates.io/crates/cargo_metadata) crate provides a Rust interface to this "
+"command)."
+msgstr ""
