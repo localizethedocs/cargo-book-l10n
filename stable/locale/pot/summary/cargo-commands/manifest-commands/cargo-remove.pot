@@ -1,0 +1,114 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:27:48Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/commands/cargo-remove.md:1
+msgid "cargo-remove(1)"
+msgstr ""
+
+#: src/commands/cargo-remove.md:2
+msgid "NAME"
+msgstr ""
+
+#: src/commands/cargo-remove.md:4
+msgid "cargo-remove --- Remove dependencies from a Cargo.toml manifest file"
+msgstr ""
+
+#: src/commands/cargo-remove.md:6
+msgid "SYNOPSIS"
+msgstr ""
+
+#: src/commands/cargo-remove.md:8
+msgid "`cargo remove` \\[_options_\\] _dependency_..."
+msgstr ""
+
+#: src/commands/cargo-remove.md:10
+msgid "DESCRIPTION"
+msgstr ""
+
+#: src/commands/cargo-remove.md:12
+msgid "Remove one or more dependencies from a `Cargo.toml` manifest."
+msgstr ""
+
+#: src/commands/cargo-remove.md:14
+msgid "OPTIONS"
+msgstr ""
+
+#: src/commands/cargo-remove.md:16
+msgid "Section options"
+msgstr ""
+
+#: src/commands/cargo-remove.md:38
+msgid "Miscellaneous Options"
+msgstr ""
+
+#: src/commands/cargo-remove.md:49
+msgid "Display Options"
+msgstr ""
+
+#: src/commands/cargo-remove.md:83
+msgid "Manifest Options"
+msgstr ""
+
+#: src/commands/cargo-remove.md:138
+msgid "Package Selection"
+msgstr ""
+
+#: src/commands/cargo-remove.md:150
+msgid "Common Options"
+msgstr ""
+
+#: src/commands/cargo-remove.md:195
+msgid "ENVIRONMENT"
+msgstr ""
+
+#: src/commands/cargo-remove.md:197
+msgid ""
+"See [the reference](../reference/environment-variables.html) for details on "
+"environment variables that Cargo reads."
+msgstr ""
+
+#: src/commands/cargo-remove.md:200
+msgid "EXIT STATUS"
+msgstr ""
+
+#: src/commands/cargo-remove.md:202
+msgid "`0`: Cargo succeeded."
+msgstr ""
+
+#: src/commands/cargo-remove.md:203
+msgid "`101`: Cargo failed to complete."
+msgstr ""
+
+#: src/commands/cargo-remove.md:205
+msgid "EXAMPLES"
+msgstr ""
+
+#: src/commands/cargo-remove.md:207
+msgid "Remove `regex` as a dependency"
+msgstr ""
+
+#: src/commands/cargo-remove.md:211
+msgid "Remove `trybuild` as a dev-dependency"
+msgstr ""
+
+#: src/commands/cargo-remove.md:215
+msgid "Remove `nom` from the `x86_64-pc-windows-gnu` dependencies table"
+msgstr ""
+
+#: src/commands/cargo-remove.md:219
+msgid "SEE ALSO"
+msgstr ""
+
+#: src/commands/cargo-remove.md:220
+msgid "[cargo(1)](cargo.html), [cargo-add(1)](cargo-add.html)"
+msgstr ""
