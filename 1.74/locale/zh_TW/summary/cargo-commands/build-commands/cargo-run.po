@@ -1,0 +1,164 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:35:21Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/commands/cargo-run.md:1
+msgid "cargo-run(1)"
+msgstr ""
+
+#: src/commands/cargo-run.md:3
+msgid "NAME"
+msgstr ""
+
+#: src/commands/cargo-run.md:5
+msgid "cargo-run --- Run the current package"
+msgstr ""
+
+#: src/commands/cargo-run.md:7
+msgid "SYNOPSIS"
+msgstr ""
+
+#: src/commands/cargo-run.md:9
+msgid "`cargo run` \\[_options_\\] \\[`--` _args_\\]"
+msgstr ""
+
+#: src/commands/cargo-run.md:11
+msgid "DESCRIPTION"
+msgstr ""
+
+#: src/commands/cargo-run.md:13
+msgid "Run a binary or example of the local package."
+msgstr ""
+
+#: src/commands/cargo-run.md:15
+msgid ""
+"All the arguments following the two dashes (`--`) are passed to the binary "
+"to run. If you're passing arguments to both Cargo and the binary, the ones "
+"after `--` go to the binary, the ones before go to Cargo."
+msgstr ""
+
+#: src/commands/cargo-run.md:19
+msgid ""
+"Unlike [cargo-test(1)](cargo-test.html) and [cargo-bench(1)](cargo-bench."
+"html), `cargo run` sets the working directory of the binary executed to the "
+"current working directory, same as if it was executed in the shell directly."
+msgstr ""
+
+#: src/commands/cargo-run.md:23
+msgid "OPTIONS"
+msgstr ""
+
+#: src/commands/cargo-run.md:25
+msgid "Package Selection"
+msgstr ""
+
+#: src/commands/cargo-run.md:27
+msgid ""
+"By default, the package in the current working directory is selected. The `-"
+"p` flag can be used to choose a different package in a workspace."
+msgstr ""
+
+#: src/commands/cargo-run.md:41
+msgid "Target Selection"
+msgstr ""
+
+#: src/commands/cargo-run.md:43
+msgid ""
+"When no target selection options are given, `cargo run` will run the binary "
+"target. If there are multiple binary targets, you must pass a target flag to "
+"choose one. Or, the `default-run` field may be specified in the `[package]` "
+"section of `Cargo.toml` to choose the name of the binary to run by default."
+msgstr ""
+
+#: src/commands/cargo-run.md:60
+msgid "Feature Selection"
+msgstr ""
+
+#: src/commands/cargo-run.md:62
+msgid ""
+"The feature flags allow you to control which features are enabled. When no "
+"feature options are given, the `default` feature is activated for every "
+"selected package."
+msgstr ""
+
+#: src/commands/cargo-run.md:66
+msgid ""
+"See [the features documentation](../reference/features.html#command-line-"
+"feature-options) for more details."
+msgstr ""
+
+#: src/commands/cargo-run.md:89
+msgid "Compilation Options"
+msgstr ""
+
+#: src/commands/cargo-run.md:145
+msgid "Output Options"
+msgstr ""
+
+#: src/commands/cargo-run.md:157
+msgid "Display Options"
+msgstr ""
+
+#: src/commands/cargo-run.md:215
+msgid "Manifest Options"
+msgstr ""
+
+#: src/commands/cargo-run.md:252
+msgid "Common Options"
+msgstr ""
+
+#: src/commands/cargo-run.md:293
+msgid "Miscellaneous Options"
+msgstr ""
+
+#: src/commands/cargo-run.md:318
+msgid "ENVIRONMENT"
+msgstr ""
+
+#: src/commands/cargo-run.md:320
+msgid ""
+"See [the reference](../reference/environment-variables.html) for details on "
+"environment variables that Cargo reads."
+msgstr ""
+
+#: src/commands/cargo-run.md:324
+msgid "EXIT STATUS"
+msgstr ""
+
+#: src/commands/cargo-run.md:326
+msgid "`0`: Cargo succeeded."
+msgstr ""
+
+#: src/commands/cargo-run.md:327
+msgid "`101`: Cargo failed to complete."
+msgstr ""
+
+#: src/commands/cargo-run.md:330
+msgid "EXAMPLES"
+msgstr ""
+
+#: src/commands/cargo-run.md:332
+msgid ""
+"Build the local package and run its main target (assuming only one binary):"
+msgstr ""
+
+#: src/commands/cargo-run.md:336
+msgid "Run an example with extra arguments:"
+msgstr ""
+
+#: src/commands/cargo-run.md:340
+msgid "SEE ALSO"
+msgstr ""
+
+#: src/commands/cargo-run.md:341
+msgid "[cargo(1)](cargo.html), [cargo-build(1)](cargo-build.html)"
+msgstr ""
