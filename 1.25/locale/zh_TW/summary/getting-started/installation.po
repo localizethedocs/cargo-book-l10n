@@ -5,15 +5,15 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/getting-started/installation.md:1
 msgid "Installation"
-msgstr ""
+msgstr "安裝"
 
 #: src/getting-started/installation.md:3
 msgid "Install Stable Rust and Cargo"
@@ -111,10 +111,12 @@ msgstr ""
 
 #: src/getting-started/installation.md:27
 msgid "Build and Install Cargo from Source"
-msgstr ""
+msgstr "從來源碼建置並安裝 Cargo"
 
 #: src/getting-started/installation.md:29
 msgid ""
 "Alternatively, you can [build Cargo from source](https://github.com/rust-"
 "lang/cargo#compiling-from-source)."
 msgstr ""
+"或者，您可以[從來源碼建置 Cargo](https://github.com/rust-lang/"
+"cargo#compiling-from-source)。"
