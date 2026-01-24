@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/commands/cargo-init.md:1
@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-init.md:3
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-init.md:5
 msgid "cargo-init - Create a new Cargo package in an existing directory"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/commands/cargo-init.md:7
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-init.md:9
 msgid "`cargo init` \\[_options_\\] \\[_path_\\]"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: src/commands/cargo-init.md:11
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-init.md:13
 msgid ""
@@ -135,7 +135,7 @@ msgstr ""
 
 #: src/commands/cargo-init.md:52
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-init.md:54
 msgid "Init Options"
@@ -143,7 +143,7 @@ msgstr ""
 
 #: src/commands/cargo-init.md:96
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-init.md:126
 msgid "Common Options"
@@ -151,7 +151,7 @@ msgstr ""
 
 #: src/commands/cargo-init.md:150
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-init.md:152
 msgid ""
@@ -161,19 +161,19 @@ msgstr ""
 
 #: src/commands/cargo-init.md:156
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-init.md:158
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-init.md:159
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-init.md:162
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-init.md:164
 msgid "Create a binary Cargo package in the current directory:"
@@ -181,7 +181,7 @@ msgstr ""
 
 #: src/commands/cargo-init.md:168
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-init.md:169
 msgid "[cargo(1)](cargo.md), [cargo-new(1)](cargo-new.md)"

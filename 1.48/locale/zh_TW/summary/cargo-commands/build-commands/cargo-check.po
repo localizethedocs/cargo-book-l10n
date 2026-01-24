@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/commands/cargo-check.md:1
@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-check.md:4
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-check.md:6
 msgid "cargo-check - Check the current package"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/commands/cargo-check.md:8
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-check.md:10
 msgid "`cargo check` \\[_options_\\]"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: src/commands/cargo-check.md:12
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-check.md:14
 msgid ""
@@ -48,7 +48,7 @@ msgstr ""
 
 #: src/commands/cargo-check.md:21
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-check.md:23
 msgid "Package Selection"
@@ -108,19 +108,19 @@ msgstr ""
 
 #: src/commands/cargo-check.md:161
 msgid "Compilation Options"
-msgstr ""
+msgstr "編譯選項"
 
 #: src/commands/cargo-check.md:196
 msgid "Output Options"
-msgstr ""
+msgstr "輸出選項"
 
 #: src/commands/cargo-check.md:208
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-check.md:260
 msgid "Manifest Options"
-msgstr ""
+msgstr "清單選項"
 
 #: src/commands/cargo-check.md:295
 msgid "Common Options"
@@ -190,7 +190,7 @@ msgstr ""
 
 #: src/commands/cargo-check.md:349
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-check.md:351
 msgid ""
@@ -200,19 +200,19 @@ msgstr ""
 
 #: src/commands/cargo-check.md:355
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-check.md:357
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-check.md:358
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-check.md:361
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-check.md:363
 msgid "Check the local package for errors:"
@@ -224,7 +224,7 @@ msgstr ""
 
 #: src/commands/cargo-check.md:371
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-check.md:372
 msgid "[cargo(1)](cargo.md), [cargo-build(1)](cargo-build.md)"
