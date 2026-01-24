@@ -1,0 +1,306 @@
+{
+  "dev" : [
+    {
+      "VERSION" : "nightly",
+      "VERSION_COMPENDIUM" : ""
+    },
+    {
+      "VERSION" : "beta",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "stable",
+      "VERSION_COMPENDIUM" : "nightly"
+    }
+  ],
+  "rel" : [
+    {
+      "VERSION" : "1.93",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.92",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.91",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.90",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.89",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.88",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.87",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.86",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.85",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.84",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.83",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.82",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.81",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.80",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.79",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.78",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.77",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.76",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.75",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.74",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.73",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.72",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.71",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.70",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.69",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.68",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.67",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.66",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.65",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.64",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.63",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.62",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.61",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.60",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.59",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.58",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.57",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.56",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.55",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.54",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.53",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.52",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.51",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.50",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.49",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.48",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.47",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.46",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.45",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.44",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.43",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.42",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.41",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.40",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.39",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.38",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.37",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.36",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.35",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.34",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.33",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.32",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.31",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.30",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.29",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.28",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.27",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.26",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.25",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.24",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.23",
+      "VERSION_COMPENDIUM" : "nightly"
+    },
+    {
+      "VERSION" : "1.22",
+      "VERSION_COMPENDIUM" : "nightly"
+    }
+  ]
+}
