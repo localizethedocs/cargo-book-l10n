@@ -1,0 +1,303 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:27:45Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/lints.md:1
+msgid "Lints"
+msgstr ""
+
+#: src/reference/lints.md:3
+msgid ""
+"Note: [Cargo's linting system is unstable](unstable.md#lintscargo) and can "
+"only be used on nightly toolchains"
+msgstr ""
+
+#: src/reference/lints.md:7
+msgid "Group"
+msgstr ""
+
+#: src/reference/lints.md:7
+msgid "Description"
+msgstr ""
+
+#: src/reference/lints.md:7
+msgid "Default level"
+msgstr ""
+
+#: src/reference/lints.md:9
+msgid "`cargo::complexity`"
+msgstr ""
+
+#: src/reference/lints.md:9
+msgid "code that does something simple but in a complex way"
+msgstr ""
+
+#: src/reference/lints.md:9 src/reference/lints.md:13 src/reference/lints.md:15
+#: src/reference/lints.md:16
+msgid "warn"
+msgstr ""
+
+#: src/reference/lints.md:10
+msgid "`cargo::correctness`"
+msgstr ""
+
+#: src/reference/lints.md:10
+msgid "code that is outright wrong or useless"
+msgstr ""
+
+#: src/reference/lints.md:10
+msgid "deny"
+msgstr ""
+
+#: src/reference/lints.md:11
+msgid "`cargo::nursery`"
+msgstr ""
+
+#: src/reference/lints.md:11
+msgid "new lints that are still under development"
+msgstr ""
+
+#: src/reference/lints.md:11 src/reference/lints.md:12
+#: src/reference/lints.md:14
+msgid "allow"
+msgstr ""
+
+#: src/reference/lints.md:12
+msgid "`cargo::pedantic`"
+msgstr ""
+
+#: src/reference/lints.md:12
+msgid "lints which are rather strict or have occasional false positives"
+msgstr ""
+
+#: src/reference/lints.md:13
+msgid "`cargo::perf`"
+msgstr ""
+
+#: src/reference/lints.md:13
+msgid "code that can be written to run faster"
+msgstr ""
+
+#: src/reference/lints.md:14
+msgid "`cargo::restriction`"
+msgstr ""
+
+#: src/reference/lints.md:14
+msgid "lints which prevent the use of Cargo features"
+msgstr ""
+
+#: src/reference/lints.md:15
+msgid "`cargo::style`"
+msgstr ""
+
+#: src/reference/lints.md:15
+msgid "code that should be written in a more idiomatic way"
+msgstr ""
+
+#: src/reference/lints.md:16
+msgid "`cargo::suspicious`"
+msgstr ""
+
+#: src/reference/lints.md:16
+msgid "code that is most likely wrong or useless"
+msgstr ""
+
+#: src/reference/lints.md:19
+msgid "Allowed-by-default"
+msgstr ""
+
+#: src/reference/lints.md:21
+msgid "These lints are all set to the 'allow' level by default."
+msgstr ""
+
+#: src/reference/lints.md:22
+msgid "[`implicit_minimum_version_req`](#implicit_minimum_version_req)"
+msgstr ""
+
+#: src/reference/lints.md:24
+msgid "Warn-by-default"
+msgstr ""
+
+#: src/reference/lints.md:26
+msgid "These lints are all set to the 'warn' level by default."
+msgstr ""
+
+#: src/reference/lints.md:27
+msgid "[`blanket_hint_mostly_unused`](#blanket_hint_mostly_unused)"
+msgstr ""
+
+#: src/reference/lints.md:28
+msgid "[`unknown_lints`](#unknown_lints)"
+msgstr ""
+
+#: src/reference/lints.md:30
+msgid "`blanket_hint_mostly_unused`"
+msgstr ""
+
+#: src/reference/lints.md:31 src/reference/lints.md:112
+msgid "Group: `suspicious`"
+msgstr ""
+
+#: src/reference/lints.md:33 src/reference/lints.md:114
+msgid "Level: `warn`"
+msgstr ""
+
+#: src/reference/lints.md:35 src/reference/lints.md:65
+#: src/reference/lints.md:116
+msgid "What it does"
+msgstr ""
+
+#: src/reference/lints.md:36
+msgid "Checks if `hint-mostly-unused` being applied to all dependencies."
+msgstr ""
+
+#: src/reference/lints.md:38 src/reference/lints.md:74
+#: src/reference/lints.md:119
+msgid "Why it is bad"
+msgstr ""
+
+#: src/reference/lints.md:39
+msgid ""
+"`hint-mostly-unused` indicates that most of a crate's API surface will go "
+"unused by anything depending on it; this hint can speed up the build by "
+"attempting to minimize compilation time for items that aren't used at all. "
+"Misapplication to crates that don't fit that criteria will slow down the "
+"build rather than speeding it up. It should be selectively applied to "
+"dependencies that meet these criteria. Applying it globally is always a "
+"misapplication and will likely slow down the build."
+msgstr ""
+
+#: src/reference/lints.md:47 src/reference/lints.md:96
+#: src/reference/lints.md:125
+msgid "Example"
+msgstr ""
+
+#: src/reference/lints.md:48
+msgid ""
+"```toml\n"
+"[profile.dev.package.\"*\"]\n"
+"hint-mostly-unused = true\n"
+"```"
+msgstr ""
+
+#: src/reference/lints.md:53
+msgid "Should instead be:"
+msgstr ""
+
+#: src/reference/lints.md:60
+msgid "`implicit_minimum_version_req`"
+msgstr ""
+
+#: src/reference/lints.md:61
+msgid "Group: `pedantic`"
+msgstr ""
+
+#: src/reference/lints.md:63
+msgid "Level: `allow`"
+msgstr ""
+
+#: src/reference/lints.md:67
+msgid ""
+"Checks for dependency version requirements that do not explicitly specify a "
+"full `major.minor.patch` version requirement, such as `serde = \"1\"` or "
+"`serde = \"1.0\"`."
+msgstr ""
+
+#: src/reference/lints.md:71
+msgid ""
+"This lint currently only applies to caret requirements (the [default "
+"requirements](specifying-dependencies.md#default-requirements))."
+msgstr ""
+
+#: src/reference/lints.md:76
+msgid ""
+"Version requirements without an explicit full version can be misleading "
+"about the actual minimum supported version. For example, `serde = \"1\"` has "
+"an implicit minimum bound of `1.0.0`. If your code actually requires "
+"features from `1.0.219`, the implicit minimum bound of `1.0.0` gives a false "
+"impression about compatibility."
+msgstr ""
+
+#: src/reference/lints.md:83
+msgid "Specifying the full version helps with:"
+msgstr ""
+
+#: src/reference/lints.md:85
+msgid "Accurate minimum version documentation"
+msgstr ""
+
+#: src/reference/lints.md:86
+msgid "Better compatibility with `-Z minimal-versions`"
+msgstr ""
+
+#: src/reference/lints.md:87
+msgid "Clearer dependency constraints for consumers"
+msgstr ""
+
+#: src/reference/lints.md:89
+msgid "Drawbacks"
+msgstr ""
+
+#: src/reference/lints.md:91
+msgid ""
+"Even with a fully specified version, the minimum bound might still be "
+"incorrect if untested. This lint helps make the minimum version requirement "
+"explicit but doesn't guarantee correctness."
+msgstr ""
+
+#: src/reference/lints.md:98
+msgid ""
+"```toml\n"
+"[dependencies]\n"
+"serde = \"1\"\n"
+"```"
+msgstr ""
+
+#: src/reference/lints.md:103
+msgid "Should be written as a full specific version:"
+msgstr ""
+
+#: src/reference/lints.md:105
+msgid ""
+"```toml\n"
+"[dependencies]\n"
+"serde = \"1.0.219\"\n"
+"```"
+msgstr ""
+
+#: src/reference/lints.md:111
+msgid "`unknown_lints`"
+msgstr ""
+
+#: src/reference/lints.md:117
+msgid "Checks for unknown lints in the `[lints.cargo]` table"
+msgstr ""
+
+#: src/reference/lints.md:120
+msgid ""
+"The lint name could be misspelled, leading to confusion as to why it is not "
+"working as expected"
+msgstr ""
+
+#: src/reference/lints.md:122
+msgid ""
+"The unknown lint could end up causing an error if `cargo` decides to make a "
+"lint with the same name in the future"
+msgstr ""
+
+#: src/reference/lints.md:126
+msgid ""
+"```toml\n"
+"[lints.cargo]\n"
+"this-lint-does-not-exist = \"warn\"\n"
+"```"
+msgstr ""
