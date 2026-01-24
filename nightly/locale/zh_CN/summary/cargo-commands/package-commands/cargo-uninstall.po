@@ -1,0 +1,127 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:28:08Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/commands/cargo-uninstall.md:1
+msgid "cargo-uninstall(1)"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:3
+msgid "NAME"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:5
+msgid "cargo-uninstall --- Remove a Rust binary"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:7
+msgid "SYNOPSIS"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:9
+msgid "`cargo uninstall` \\[_options_\\] \\[_spec_...\\]"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:11
+msgid "DESCRIPTION"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:13
+msgid ""
+"This command removes a package installed with [cargo-install(1)](cargo-"
+"install.html). The _spec_ argument is a package ID specification of the "
+"package to remove (see [cargo-pkgid(1)](cargo-pkgid.html))."
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:17
+msgid ""
+"By default all binaries are removed for a crate but the `--bin` and `--"
+"example` flags can be used to only remove particular binaries."
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:20
+msgid "The installation root is determined, in order of precedence:"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:22
+msgid "`--root` option"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:23
+msgid "`CARGO_INSTALL_ROOT` environment variable"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:24
+msgid "`install.root` Cargo [config value](../reference/config.html)"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:25
+msgid "`CARGO_HOME` environment variable"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:26
+msgid "`$HOME/.cargo`"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:28
+msgid "OPTIONS"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:30
+msgid "Uninstall Options"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:52
+msgid "Display Options"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:88
+msgid "Common Options"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:133
+msgid "ENVIRONMENT"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:135
+msgid ""
+"See [the reference](../reference/environment-variables.html) for details on "
+"environment variables that Cargo reads."
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:138
+msgid "EXIT STATUS"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:140
+msgid "`0`: Cargo succeeded."
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:141
+msgid "`101`: Cargo failed to complete."
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:143
+msgid "EXAMPLES"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:145
+msgid "Uninstall a previously installed package."
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:149
+msgid "SEE ALSO"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:150
+msgid "[cargo(1)](cargo.html), [cargo-install(1)](cargo-install.html)"
+msgstr ""

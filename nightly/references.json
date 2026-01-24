@@ -13,22 +13,22 @@
     },
     "zh_CN" : 
     {
-      "branch" : "",
+      "branch" : "main",
       "commit" : 
       {
-        "date" : "",
-        "hash" : "",
-        "title" : ""
+        "date" : "2026-01-23 14:57:31 +0000",
+        "hash" : "d222ddc4d90743dfc1e53b610be8fc9d95893d2c",
+        "title" : "Auto merge of #151501 - flip1995:clippy-subtree-update, r=Manishearth"
       }
     },
     "zh_TW" : 
     {
-      "branch" : "",
+      "branch" : "main",
       "commit" : 
       {
-        "date" : "",
-        "hash" : "",
-        "title" : ""
+        "date" : "2026-01-23 14:57:31 +0000",
+        "hash" : "d222ddc4d90743dfc1e53b610be8fc9d95893d2c",
+        "title" : "Auto merge of #151501 - flip1995:clippy-subtree-update, r=Manishearth"
       }
     }
   },
