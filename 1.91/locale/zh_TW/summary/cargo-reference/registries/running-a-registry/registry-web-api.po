@@ -1,0 +1,706 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:38:21Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/registry-web-api.md:1
+msgid "Web API"
+msgstr ""
+
+#: src/reference/registry-web-api.md:3
+msgid ""
+"A registry may host a web API at the location defined in `config.json` to "
+"support any of the actions listed below."
+msgstr ""
+
+#: src/reference/registry-web-api.md:6
+msgid ""
+"Cargo includes the `Authorization` header for requests that require "
+"authentication. The header value is the API token. The server should respond "
+"with a 403 response code if the token is not valid. Users are expected to "
+"visit the registry's website to obtain a token, and Cargo can store the "
+"token using the [`cargo login`](../commands/cargo-login.md) command, or by "
+"passing the token on the command-line."
+msgstr ""
+
+#: src/reference/registry-web-api.md:13
+msgid ""
+"Responses use a 2xx response code for success. Errors should use an "
+"appropriate response code, such as 404. Failure responses should have a JSON "
+"object with the following structure:"
+msgstr ""
+
+#: src/reference/registry-web-api.md:20
+msgid ""
+"// Array of errors to display to the user.\n"
+"    \"errors\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:23
+msgid ""
+"// The error message as a string.\n"
+"            \"detail\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:24
+msgid "\"error message text\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:30
+msgid ""
+"If the response has this structure Cargo will display the detailed message "
+"to the user, even if the response code is 200. If the response code "
+"indicates an error and the content does not have this structure, Cargo will "
+"display to the user a message intended to help debugging the server error. A "
+"server returning an `errors` object allows a registry to provide a more "
+"detailed or user-centric error message."
+msgstr ""
+
+#: src/reference/registry-web-api.md:35
+msgid ""
+"For backwards compatibility, servers should ignore any unexpected query "
+"parameters or JSON fields. If a JSON field is missing, it should be assumed "
+"to be null. The endpoints are versioned with the `v1` component of the path, "
+"and Cargo is responsible for handling backwards compatibility fallbacks "
+"should any be required in the future."
+msgstr ""
+
+#: src/reference/registry-web-api.md:41
+msgid "Cargo sets the following headers for all requests:"
+msgstr ""
+
+#: src/reference/registry-web-api.md:43
+msgid "`Content-Type`: `application/json` (for requests with a body payload)"
+msgstr ""
+
+#: src/reference/registry-web-api.md:44
+msgid "`Accept`: `application/json`"
+msgstr ""
+
+#: src/reference/registry-web-api.md:45
+msgid ""
+"`User-Agent`: The Cargo version such as `cargo/1.32.0 (8610973aa "
+"2019-01-02)`. This may be modified by the user in a configuration value. "
+"Added in 1.29."
+msgstr ""
+
+#: src/reference/registry-web-api.md:49
+msgid "Publish"
+msgstr ""
+
+#: src/reference/registry-web-api.md:51
+msgid "Endpoint: `/api/v1/crates/new`"
+msgstr ""
+
+#: src/reference/registry-web-api.md:52 src/reference/registry-web-api.md:207
+#: src/reference/registry-web-api.md:260
+msgid "Method: PUT"
+msgstr ""
+
+#: src/reference/registry-web-api.md:53 src/reference/registry-web-api.md:190
+#: src/reference/registry-web-api.md:208 src/reference/registry-web-api.md:234
+#: src/reference/registry-web-api.md:261 src/reference/registry-web-api.md:292
+msgid "Authorization: Included"
+msgstr ""
+
+#: src/reference/registry-web-api.md:55
+msgid ""
+"The publish endpoint is used to publish a new version of a crate. The server "
+"should validate the crate, make it available for download, and add it to the "
+"index."
+msgstr ""
+
+#: src/reference/registry-web-api.md:59
+msgid ""
+"It is not required for the index to be updated before the successful "
+"response is sent. After a successful response, Cargo will poll the index for "
+"a short period of time to identify that the new crate has been added. If the "
+"crate does not appear in the index after a short period of time, then Cargo "
+"will display a warning letting the user know that the new crate is not yet "
+"available."
+msgstr ""
+
+#: src/reference/registry-web-api.md:63
+msgid "The body of the data sent by Cargo is:"
+msgstr ""
+
+#: src/reference/registry-web-api.md:65
+msgid "32-bit unsigned little-endian integer of the length of JSON data."
+msgstr ""
+
+#: src/reference/registry-web-api.md:66
+msgid "Metadata of the package as a JSON object."
+msgstr ""
+
+#: src/reference/registry-web-api.md:67
+msgid ""
+"32-bit unsigned little-endian integer of the length of the `.crate` file."
+msgstr ""
+
+#: src/reference/registry-web-api.md:68
+msgid "The `.crate` file."
+msgstr ""
+
+#: src/reference/registry-web-api.md:70
+msgid ""
+"The following is a commented example of the JSON object. Some notes of some "
+"restrictions imposed by [crates.io](https://crates.io/) are included only to "
+"illustrate some suggestions on types of validation that may be done, and "
+"should not be considered as an exhaustive list of restrictions [crates.io]"
+"(https://crates.io/) imposes."
+msgstr ""
+
+#: src/reference/registry-web-api.md:77
+msgid ""
+"// The name of the package.\n"
+"    \"name\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:78
+msgid "\"foo\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:79
+msgid ""
+"// The version of the package being published.\n"
+"    \"vers\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:80
+msgid "\"0.1.0\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:81
+msgid ""
+"// Array of direct dependencies of the package.\n"
+"    \"deps\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:84
+msgid ""
+"// Name of the dependency.\n"
+"            // If the dependency is renamed from the original package name,\n"
+"            // this is the original name. The new package name is stored in\n"
+"            // the `explicit_name_in_toml` field.\n"
+"            \"name\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:88 src/reference/registry-web-api.md:334
+msgid "\"rand\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:89
+msgid ""
+"// The semver requirement for this dependency.\n"
+"            \"version_req\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:90
+msgid "\"^0.6\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:91
+msgid ""
+"// Array of features (as strings) enabled for this dependency.\n"
+"            \"features\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:92
+msgid "\"i128_support\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:93
+msgid ""
+"// Boolean of whether or not this is an optional dependency.\n"
+"            \"optional\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:95
+msgid ""
+"// Boolean of whether or not default features are enabled.\n"
+"            \"default_features\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:97
+msgid ""
+"// The target platform for the dependency.\n"
+"            // null if not a target dependency.\n"
+"            // Otherwise, a string such as \"cfg(windows)\".\n"
+"            \"target\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:101
+msgid ""
+"// The dependency kind.\n"
+"            // \"dev\", \"build\", or \"normal\".\n"
+"            \"kind\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:103
+msgid "\"normal\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:104
+msgid ""
+"// The URL of the index of the registry where this dependency is\n"
+"            // from as a string. If not specified or null, it is assumed "
+"the\n"
+"            // dependency is in the current registry.\n"
+"            \"registry\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:108
+msgid ""
+"// If the dependency is renamed, this is a string of the new\n"
+"            // package name. If not specified or null, this dependency is "
+"not\n"
+"            // renamed.\n"
+"            \"explicit_name_in_toml\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:114
+msgid ""
+"// Set of features defined for the package.\n"
+"    // Each feature maps to an array of features or dependencies it "
+"enables.\n"
+"    // Cargo does not impose limitations on feature names, but crates.io\n"
+"    // requires alphanumeric ASCII, `_` or `-` characters.\n"
+"    \"features\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:119
+msgid "\"extras\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:119
+msgid "\"rand/simd_support\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:121
+msgid ""
+"// List of strings of the authors.\n"
+"    // May be empty.\n"
+"    \"authors\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:123
+msgid "\"Alice <a@example.com>\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:124
+msgid ""
+"// Description field from the manifest.\n"
+"    // May be null. crates.io requires at least some content.\n"
+"    \"description\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:127
+msgid ""
+"// String of the URL to the website for this package's documentation.\n"
+"    // May be null.\n"
+"    \"documentation\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:130
+msgid ""
+"// String of the URL to the website for this package's home page.\n"
+"    // May be null.\n"
+"    \"homepage\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:133
+msgid ""
+"// String of the content of the README file.\n"
+"    // May be null.\n"
+"    \"readme\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:136
+msgid ""
+"// String of a relative path to a README file in the crate.\n"
+"    // May be null.\n"
+"    \"readme_file\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:139
+msgid ""
+"// Array of strings of keywords for the package.\n"
+"    \"keywords\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:141
+msgid ""
+"// Array of strings of categories for the package.\n"
+"    \"categories\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:143
+msgid ""
+"// String of the license for the package.\n"
+"    // May be null. crates.io requires either `license` or `license_file` to "
+"be set.\n"
+"    \"license\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:146
+msgid ""
+"// String of a relative path to a license file in the crate.\n"
+"    // May be null.\n"
+"    \"license_file\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:149
+msgid ""
+"// String of the URL to the website for the source repository of this "
+"package.\n"
+"    // May be null.\n"
+"    \"repository\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:152
+msgid ""
+"// Optional object of \"status\" badges. Each value is an object of\n"
+"    // arbitrary string to string mappings.\n"
+"    // crates.io has special interpretation of the format of the badges.\n"
+"    \"badges\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:156
+msgid "\"travis-ci\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:157
+msgid "\"branch\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:157
+msgid "\"master\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:158
+msgid "\"repository\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:158
+msgid "\"rust-lang/cargo\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:161
+msgid ""
+"// The `links` string value from the package's manifest, or null if not\n"
+"    // specified. This field is optional and defaults to null.\n"
+"    \"links\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:164
+msgid ""
+"// The minimal supported Rust version (optional)\n"
+"    // This must be a valid version requirement without an operator (e.g. no "
+"`=`)\n"
+"    \"rust_version\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:170 src/reference/registry-web-api.md:195
+#: src/reference/registry-web-api.md:213 src/reference/registry-web-api.md:238
+#: src/reference/registry-web-api.md:277 src/reference/registry-web-api.md:304
+#: src/reference/registry-web-api.md:326
+msgid "A successful response includes the JSON object:"
+msgstr ""
+
+#: src/reference/registry-web-api.md:174
+msgid ""
+"// Optional object of warnings to display to the user.\n"
+"    \"warnings\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:176
+msgid ""
+"// Array of strings of categories that are invalid and ignored.\n"
+"        \"invalid_categories\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:178
+msgid ""
+"// Array of strings of badge names that are invalid and ignored.\n"
+"        \"invalid_badges\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:180
+msgid ""
+"// Array of strings of arbitrary warnings to display to the user.\n"
+"        \"other\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:186
+msgid "Yank"
+msgstr ""
+
+#: src/reference/registry-web-api.md:188
+msgid "Endpoint: `/api/v1/crates/{crate_name}/{version}/yank`"
+msgstr ""
+
+#: src/reference/registry-web-api.md:189 src/reference/registry-web-api.md:291
+msgid "Method: DELETE"
+msgstr ""
+
+#: src/reference/registry-web-api.md:192
+msgid ""
+"The yank endpoint will set the `yank` field of the given version of a crate "
+"to `true` in the index."
+msgstr ""
+
+#: src/reference/registry-web-api.md:199
+msgid ""
+"// Indicates the yank succeeded, always true.\n"
+"    \"ok\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:204
+msgid "Unyank"
+msgstr ""
+
+#: src/reference/registry-web-api.md:206
+msgid "Endpoint: `/api/v1/crates/{crate_name}/{version}/unyank`"
+msgstr ""
+
+#: src/reference/registry-web-api.md:210
+msgid ""
+"The unyank endpoint will set the `yank` field of the given version of a "
+"crate to `false` in the index."
+msgstr ""
+
+#: src/reference/registry-web-api.md:217
+msgid ""
+"// Indicates the unyank succeeded, always true.\n"
+"    \"ok\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:222
+msgid "Owners"
+msgstr ""
+
+#: src/reference/registry-web-api.md:224
+msgid ""
+"Cargo does not have an inherent notion of users and owners, but it does "
+"provide the `owner` command to assist managing who has authorization to "
+"control a crate. It is up to the registry to decide exactly how users and "
+"owners are handled. See the [publishing documentation](publishing.md#cargo-"
+"owner) for a description of how [crates.io](https://crates.io/) handles "
+"owners via GitHub users and teams."
+msgstr ""
+
+#: src/reference/registry-web-api.md:230
+msgid "Owners: List"
+msgstr ""
+
+#: src/reference/registry-web-api.md:232 src/reference/registry-web-api.md:259
+#: src/reference/registry-web-api.md:290
+msgid "Endpoint: `/api/v1/crates/{crate_name}/owners`"
+msgstr ""
+
+#: src/reference/registry-web-api.md:233 src/reference/registry-web-api.md:318
+msgid "Method: GET"
+msgstr ""
+
+#: src/reference/registry-web-api.md:236
+msgid "The owners endpoint returns a list of owners of the crate."
+msgstr ""
+
+#: src/reference/registry-web-api.md:242
+msgid ""
+"// Array of owners of the crate.\n"
+"    \"users\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:245
+msgid ""
+"// Unique unsigned 32-bit integer of the owner.\n"
+"            \"id\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:247
+msgid ""
+"// The unique username of the owner.\n"
+"            \"login\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:248
+msgid "\"github:rust-lang:core\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:249
+msgid ""
+"// Name of the owner.\n"
+"            // This is optional and may be null.\n"
+"            \"name\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:251
+msgid "\"Core\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:257
+msgid "Owners: Add"
+msgstr ""
+
+#: src/reference/registry-web-api.md:263
+msgid ""
+"A PUT request will send a request to the registry to add a new owner to a "
+"crate. It is up to the registry how to handle the request. For example, "
+"[crates.io](https://crates.io/) sends an invite to the user that they must "
+"accept before being added."
+msgstr ""
+
+#: src/reference/registry-web-api.md:268
+msgid "The request should include the following JSON object:"
+msgstr ""
+
+#: src/reference/registry-web-api.md:272
+msgid ""
+"// Array of `login` strings of owners to add.\n"
+"    \"users\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:273 src/reference/registry-web-api.md:300
+msgid "\"login_name\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:281
+msgid ""
+"// Indicates the add succeeded, always true.\n"
+"    \"ok\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:283
+msgid ""
+"// A string to be displayed to the user.\n"
+"    \"msg\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:284
+msgid "\"user ehuss has been invited to be an owner of crate cargo\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:288
+msgid "Owners: Remove"
+msgstr ""
+
+#: src/reference/registry-web-api.md:294
+msgid ""
+"A DELETE request will remove an owner from a crate. The request should "
+"include the following JSON object:"
+msgstr ""
+
+#: src/reference/registry-web-api.md:299
+msgid ""
+"// Array of `login` strings of owners to remove.\n"
+"    \"users\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:308
+msgid ""
+"// Indicates the remove succeeded, always true.\n"
+"    \"ok\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:310
+msgid ""
+"// A string to be displayed to the user. Currently ignored by cargo.\n"
+"    \"msg\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:311
+msgid "\"owners successfully removed\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:315
+msgid "Search"
+msgstr ""
+
+#: src/reference/registry-web-api.md:317
+msgid "Endpoint: `/api/v1/crates`"
+msgstr ""
+
+#: src/reference/registry-web-api.md:319
+msgid "Query Parameters:"
+msgstr ""
+
+#: src/reference/registry-web-api.md:320
+msgid "`q`: The search query string."
+msgstr ""
+
+#: src/reference/registry-web-api.md:321
+msgid "`per_page`: Number of results, default 10, max 100."
+msgstr ""
+
+#: src/reference/registry-web-api.md:323
+msgid ""
+"The search request will perform a search for crates, using criteria defined "
+"on the server."
+msgstr ""
+
+#: src/reference/registry-web-api.md:330
+msgid ""
+"// Array of results.\n"
+"    \"crates\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:333
+msgid ""
+"// Name of the crate.\n"
+"            \"name\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:335
+msgid ""
+"// The highest version available.\n"
+"            \"max_version\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:336
+msgid "\"0.6.1\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:337
+msgid ""
+"// Textual description of the crate.\n"
+"            \"description\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:338
+msgid "\"Random number generators and other randomness functionality.\\n\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:341
+msgid "\"meta\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:342
+msgid ""
+"// Total number of results available on the server.\n"
+"        \"total\""
+msgstr ""
+
+#: src/reference/registry-web-api.md:348
+msgid "Login"
+msgstr ""
+
+#: src/reference/registry-web-api.md:350
+msgid "Endpoint: `/me`"
+msgstr ""
+
+#: src/reference/registry-web-api.md:352
+msgid ""
+"The \"login\" endpoint is not an actual API request. It exists solely for "
+"the [`cargo login`](../commands/cargo-login.md) command to display a URL to "
+"instruct a user to visit in a web browser to log in and retrieve an API "
+"token."
+msgstr ""
