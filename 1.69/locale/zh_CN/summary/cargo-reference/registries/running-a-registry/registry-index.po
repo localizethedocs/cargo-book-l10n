@@ -1,0 +1,550 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:44:12Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/registry-index.md:1
+msgid "Index Format"
+msgstr ""
+
+#: src/reference/registry-index.md:3
+msgid ""
+"The following defines the format of the index. New features are occasionally "
+"added, which are only understood starting with the version of Cargo that "
+"introduced them. Older versions of Cargo may not be able to use packages "
+"that make use of new features. However, the format for older packages should "
+"not change, so older versions of Cargo should be able to use them."
+msgstr ""
+
+#: src/reference/registry-index.md:9
+msgid "Index Configuration"
+msgstr ""
+
+#: src/reference/registry-index.md:10
+msgid ""
+"The root of the index contains a file named `config.json` which contains "
+"JSON information used by Cargo for accessing the registry. This is an "
+"example of what the [crates.io](https://crates.io/) config file looks like:"
+msgstr ""
+
+#: src/reference/registry-index.md:16
+msgid "\"dl\""
+msgstr ""
+
+#: src/reference/registry-index.md:16
+msgid "\"https://crates.io/api/v1/crates\""
+msgstr ""
+
+#: src/reference/registry-index.md:17
+msgid "\"api\""
+msgstr ""
+
+#: src/reference/registry-index.md:17
+msgid "\"https://crates.io\""
+msgstr ""
+
+#: src/reference/registry-index.md:21
+msgid "The keys are:"
+msgstr ""
+
+#: src/reference/registry-index.md:22
+msgid ""
+"`dl`: This is the URL for downloading crates listed in the index. The value "
+"may have the following markers which will be replaced with their "
+"corresponding value:"
+msgstr ""
+
+#: src/reference/registry-index.md:26
+msgid "`{crate}`: The name of crate."
+msgstr ""
+
+#: src/reference/registry-index.md:27
+msgid "`{version}`: The crate version."
+msgstr ""
+
+#: src/reference/registry-index.md:28
+msgid ""
+"`{prefix}`: A directory prefix computed from the crate name. For example, a "
+"crate named `cargo` has a prefix of `ca/rg`. See below for details."
+msgstr ""
+
+#: src/reference/registry-index.md:30
+msgid "`{lowerprefix}`: Lowercase variant of `{prefix}`."
+msgstr ""
+
+#: src/reference/registry-index.md:31
+msgid "`{sha256-checksum}`: The crate's sha256 checksum."
+msgstr ""
+
+#: src/reference/registry-index.md:33
+msgid ""
+"If none of the markers are present, then the value `/{crate}/{version}/"
+"download` is appended to the end."
+msgstr ""
+
+#: src/reference/registry-index.md:35
+msgid ""
+"`api`: This is the base URL for the web API. This key is optional, but if it "
+"is not specified, commands such as [`cargo publish`](../commands/cargo-"
+"publish.md) will not work. The web API is described below."
+msgstr ""
+
+#: src/reference/registry-index.md:40
+msgid "Download Endpoint"
+msgstr ""
+
+#: src/reference/registry-index.md:41
+msgid ""
+"The download endpoint should send the `.crate` file for the requested "
+"package. Cargo supports https, http, and file URLs, HTTP redirects, HTTP1 "
+"and HTTP2. The exact specifics of TLS support depend on the platform that "
+"Cargo is running on, the version of Cargo, and how it was compiled."
+msgstr ""
+
+#: src/reference/registry-index.md:47
+msgid "Index files"
+msgstr ""
+
+#: src/reference/registry-index.md:48
+msgid ""
+"The rest of the index repository contains one file for each package, where "
+"the filename is the name of the package in lowercase. Each version of the "
+"package has a separate line in the file. The files are organized in a tier "
+"of directories:"
+msgstr ""
+
+#: src/reference/registry-index.md:53
+msgid "Packages with 1 character names are placed in a directory named `1`."
+msgstr ""
+
+#: src/reference/registry-index.md:54
+msgid "Packages with 2 character names are placed in a directory named `2`."
+msgstr ""
+
+#: src/reference/registry-index.md:55
+msgid ""
+"Packages with 3 character names are placed in the directory `3/{first-"
+"character}` where `{first-character}` is the first character of the package "
+"name."
+msgstr ""
+
+#: src/reference/registry-index.md:58
+msgid ""
+"All other packages are stored in directories named `{first-two}/{second-two}"
+"` where the top directory is the first two characters of the package name, "
+"and the next subdirectory is the third and fourth characters of the package "
+"name. For example, `cargo` would be stored in a file named `ca/rg/cargo`."
+msgstr ""
+
+#: src/reference/registry-index.md:64
+msgid ""
+"Note: Although the index filenames are in lowercase, the fields that contain "
+"package names in `Cargo.toml` and the index JSON data are case-sensitive and "
+"may contain upper and lower case characters."
+msgstr ""
+
+#: src/reference/registry-index.md:68
+msgid ""
+"The directory name above is calculated based on the package name converted "
+"to lowercase; it is represented by the marker `{lowerprefix}`.  When the "
+"original package name is used without case conversion, the resulting "
+"directory name is represented by the marker `{prefix}`.  For example, the "
+"package `MyCrate` would have a `{prefix}` of `My/Cr` and a `{lowerprefix}` "
+"of `my/cr`.  In general, using `{prefix}` is recommended over `{lowerprefix}"
+"`, but there are pros and cons to each choice.  Using `{prefix}` on case-"
+"insensitive filesystems results in (harmless-but-inelegant) directory "
+"aliasing.  For example, `crate` and `CrateTwo` have `{prefix}` values of `cr/"
+"at` and `Cr/at`; these are distinct on Unix machines but alias to the same "
+"directory on Windows.  Using directories with normalized case avoids "
+"aliasing, but on case-sensitive filesystems it's harder to support older "
+"versions of Cargo that lack `{prefix}`/`{lowerprefix}`. For example, nginx "
+"rewrite rules can easily construct `{prefix}` but can't perform case-"
+"conversion to construct `{lowerprefix}`."
+msgstr ""
+
+#: src/reference/registry-index.md:83
+msgid ""
+"Registries should consider enforcing limitations on package names added to "
+"their index. Cargo itself allows names with any [alphanumeric](../../std/"
+"primitive.char.html#method.is_alphanumeric), `-`, or `_` characters. [crates."
+"io](https://crates.io/) imposes its own limitations, including the following:"
+msgstr ""
+
+#: src/reference/registry-index.md:87
+msgid "Only allows ASCII characters."
+msgstr ""
+
+#: src/reference/registry-index.md:88
+msgid "Only alphanumeric, `-`, and `_` characters."
+msgstr ""
+
+#: src/reference/registry-index.md:89
+msgid "First character must be alphabetic."
+msgstr ""
+
+#: src/reference/registry-index.md:90
+msgid "Case-insensitive collision detection."
+msgstr ""
+
+#: src/reference/registry-index.md:91
+msgid "Prevent differences of `-` vs `_`."
+msgstr ""
+
+#: src/reference/registry-index.md:92
+msgid "Under a specific length (max 64)."
+msgstr ""
+
+#: src/reference/registry-index.md:93
+msgid "Rejects reserved names, such as Windows special filenames like \"nul\"."
+msgstr ""
+
+#: src/reference/registry-index.md:95
+msgid ""
+"Registries should consider incorporating similar restrictions, and consider "
+"the security implications, such as [IDN homograph attacks](https://en."
+"wikipedia.org/wiki/IDN_homograph_attack) and other concerns in [UTR36]"
+"(https://www.unicode.org/reports/tr36/) and [UTS39](https://www.unicode.org/"
+"reports/tr39/)."
+msgstr ""
+
+#: src/reference/registry-index.md:101
+msgid ""
+"Each line in a package file contains a JSON object that describes a "
+"published version of the package. The following is a pretty-printed example "
+"with comments explaining the format of the entry."
+msgstr ""
+
+#: src/reference/registry-index.md:107
+msgid ""
+"// The name of the package.\n"
+"    // This must only contain alphanumeric, `-`, or `_` characters.\n"
+"    \"name\""
+msgstr ""
+
+#: src/reference/registry-index.md:109
+msgid "\"foo\""
+msgstr ""
+
+#: src/reference/registry-index.md:110
+msgid ""
+"// The version of the package this row is describing.\n"
+"    // This must be a valid version number according to the Semantic\n"
+"    // Versioning 2.0.0 spec at https://semver.org/.\n"
+"    \"vers\""
+msgstr ""
+
+#: src/reference/registry-index.md:113
+msgid "\"0.1.0\""
+msgstr ""
+
+#: src/reference/registry-index.md:114
+msgid ""
+"// Array of direct dependencies of the package.\n"
+"    \"deps\""
+msgstr ""
+
+#: src/reference/registry-index.md:117
+msgid ""
+"// Name of the dependency.\n"
+"            // If the dependency is renamed from the original package name,\n"
+"            // this is the new name. The original package name is stored in\n"
+"            // the `package` field.\n"
+"            \"name\""
+msgstr ""
+
+#: src/reference/registry-index.md:121
+msgid "\"rand\""
+msgstr ""
+
+#: src/reference/registry-index.md:122
+msgid ""
+"// The SemVer requirement for this dependency.\n"
+"            // This must be a valid version requirement defined at\n"
+"            // https://doc.rust-lang.org/cargo/reference/specifying-"
+"dependencies.html.\n"
+"            \"req\""
+msgstr ""
+
+#: src/reference/registry-index.md:125
+msgid "\"^0.6\""
+msgstr ""
+
+#: src/reference/registry-index.md:126
+msgid ""
+"// Array of features (as strings) enabled for this dependency.\n"
+"            \"features\""
+msgstr ""
+
+#: src/reference/registry-index.md:127
+msgid "\"i128_support\""
+msgstr ""
+
+#: src/reference/registry-index.md:128
+msgid ""
+"// Boolean of whether or not this is an optional dependency.\n"
+"            \"optional\""
+msgstr ""
+
+#: src/reference/registry-index.md:130
+msgid ""
+"// Boolean of whether or not default features are enabled.\n"
+"            \"default_features\""
+msgstr ""
+
+#: src/reference/registry-index.md:132
+msgid ""
+"// The target platform for the dependency.\n"
+"            // null if not a target dependency.\n"
+"            // Otherwise, a string such as \"cfg(windows)\".\n"
+"            \"target\""
+msgstr ""
+
+#: src/reference/registry-index.md:136
+msgid ""
+"// The dependency kind.\n"
+"            // \"dev\", \"build\", or \"normal\".\n"
+"            // Note: this is a required field, but a small number of "
+"entries\n"
+"            // exist in the crates.io index with either a missing or null\n"
+"            // `kind` field due to implementation bugs.\n"
+"            \"kind\""
+msgstr ""
+
+#: src/reference/registry-index.md:141
+msgid "\"normal\""
+msgstr ""
+
+#: src/reference/registry-index.md:142
+msgid ""
+"// The URL of the index of the registry where this dependency is\n"
+"            // from as a string. If not specified or null, it is assumed "
+"the\n"
+"            // dependency is in the current registry.\n"
+"            \"registry\""
+msgstr ""
+
+#: src/reference/registry-index.md:146
+msgid ""
+"// If the dependency is renamed, this is a string of the actual\n"
+"            // package name. If not specified or null, this dependency is "
+"not\n"
+"            // renamed.\n"
+"            \"package\""
+msgstr ""
+
+#: src/reference/registry-index.md:152
+msgid ""
+"// A SHA256 checksum of the `.crate` file.\n"
+"    \"cksum\""
+msgstr ""
+
+#: src/reference/registry-index.md:153
+msgid "\"d867001db0e2b6e0496f9fac96930e2d42233ecd3ca0413e0753d4c7695d289c\""
+msgstr ""
+
+#: src/reference/registry-index.md:154
+msgid ""
+"// Set of features defined for the package.\n"
+"    // Each feature maps to an array of features or dependencies it "
+"enables.\n"
+"    \"features\""
+msgstr ""
+
+#: src/reference/registry-index.md:157
+msgid "\"extras\""
+msgstr ""
+
+#: src/reference/registry-index.md:157
+msgid "\"rand/simd_support\""
+msgstr ""
+
+#: src/reference/registry-index.md:159
+msgid ""
+"// Boolean of whether or not this version has been yanked.\n"
+"    \"yanked\""
+msgstr ""
+
+#: src/reference/registry-index.md:161
+msgid ""
+"// The `links` string value from the package's manifest, or null if not\n"
+"    // specified. This field is optional and defaults to null.\n"
+"    \"links\""
+msgstr ""
+
+#: src/reference/registry-index.md:164
+msgid ""
+"// An unsigned 32-bit integer value indicating the schema version of this\n"
+"    // entry.\n"
+"    //\n"
+"    // If this not specified, it should be interpreted as the default of 1.\n"
+"    //\n"
+"    // Cargo (starting with version 1.51) will ignore versions it does not\n"
+"    // recognize. This provides a method to safely introduce changes to "
+"index\n"
+"    // entries and allow older versions of cargo to ignore newer entries it\n"
+"    // doesn't understand. Versions older than 1.51 ignore this field, and\n"
+"    // thus may misinterpret the meaning of the index entry.\n"
+"    //\n"
+"    // The current values are:\n"
+"    //\n"
+"    // * 1: The schema as documented here, not including newer additions.\n"
+"    //      This is honored in Rust version 1.51 and newer.\n"
+"    // * 2: The addition of the `features2` field.\n"
+"    //      This is honored in Rust version 1.60 and newer.\n"
+"    \"v\""
+msgstr ""
+
+#: src/reference/registry-index.md:182
+msgid ""
+"// This optional field contains features with new, extended syntax.\n"
+"    // Specifically, namespaced features (`dep:`) and weak dependencies\n"
+"    // (`pkg?/feat`).\n"
+"    //\n"
+"    // This is separated from `features` because versions older than 1.19\n"
+"    // will fail to load due to not being able to parse the new syntax, "
+"even\n"
+"    // with a `Cargo.lock` file.\n"
+"    //\n"
+"    // Cargo will merge any values listed here with the \"features\" field.\n"
+"    //\n"
+"    // If this field is included, the \"v\" field should be set to at least "
+"2.\n"
+"    //\n"
+"    // Registries are not required to use this field for extended feature\n"
+"    // syntax, they are allowed to include those in the \"features\" field.\n"
+"    // Using this is only necessary if the registry wants to support cargo\n"
+"    // versions older than 1.19, which in practice is only crates.io since\n"
+"    // those older versions do not support other registries.\n"
+"    \"features2\""
+msgstr ""
+
+#: src/reference/registry-index.md:200
+msgid "\"serde\""
+msgstr ""
+
+#: src/reference/registry-index.md:200
+msgid "\"dep:serde\""
+msgstr ""
+
+#: src/reference/registry-index.md:200
+msgid "\"chrono?/serde\""
+msgstr ""
+
+#: src/reference/registry-index.md:205
+msgid ""
+"The JSON objects should not be modified after they are added except for the "
+"`yanked` field whose value may change at any time."
+msgstr ""
+
+#: src/reference/registry-index.md:208
+msgid "Index Protocols"
+msgstr ""
+
+#: src/reference/registry-index.md:209
+msgid ""
+"Cargo supports two remote registry protocols: `git` and `sparse`. The `git` "
+"protocol stores index files in a git repository and the `sparse` protocol "
+"fetches individual files over HTTP."
+msgstr ""
+
+#: src/reference/registry-index.md:213
+msgid "Git Protocol"
+msgstr ""
+
+#: src/reference/registry-index.md:214
+msgid ""
+"The git protocol has no protocol prefix in the index url. For example the "
+"git index URL for [crates.io](https://crates.io/) is `https://github.com/"
+"rust-lang/crates.io-index`."
+msgstr ""
+
+#: src/reference/registry-index.md:217
+msgid ""
+"Cargo caches the git repository on disk so that it can efficiently "
+"incrementally fetch updates."
+msgstr ""
+
+#: src/reference/registry-index.md:220
+msgid "Sparse Protocol"
+msgstr ""
+
+#: src/reference/registry-index.md:221
+msgid ""
+"The sparse protocol uses the `sparse+` protocol prefix in the registry URL. "
+"For example, the sparse index URL for [crates.io](https://crates.io/) is "
+"`sparse+https://index.crates.io/`."
+msgstr ""
+
+#: src/reference/registry-index.md:224
+msgid ""
+"The sparse protocol downloads each index file using an individual HTTP "
+"request. Since this results in a large number of small HTTP requests, "
+"performance is signficiantly improved with a server that supports pipelining "
+"and HTTP/2."
+msgstr ""
+
+#: src/reference/registry-index.md:228
+msgid "Caching"
+msgstr ""
+
+#: src/reference/registry-index.md:229
+msgid ""
+"Cargo caches the crate metadata files, and captures the `ETag` or `Last-"
+"Modified` HTTP header from the server for each entry. When refreshing crate "
+"metadata, Cargo sends the `If-None-Match` or `If-Modified-Since` header to "
+"allow the server to respond with HTTP 304 \"Not Modified\" if the local "
+"cache is valid, saving time and bandwidth. If both `ETag` and `Last-"
+"Modified` headers are present, Cargo uses the `ETag` only."
+msgstr ""
+
+#: src/reference/registry-index.md:235
+msgid "Cache Invalidation"
+msgstr ""
+
+#: src/reference/registry-index.md:236
+msgid ""
+"If a registry is using some kind of CDN or proxy which caches access to the "
+"index files, then it is recommended that registries implement some form of "
+"cache invalidation when the files are updated. If these caches are not "
+"updated, then users may not be able to access new crates until the cache is "
+"cleared."
+msgstr ""
+
+#: src/reference/registry-index.md:241
+msgid "Nonexistent Crates"
+msgstr ""
+
+#: src/reference/registry-index.md:242
+msgid ""
+"For crates that do not exist, the registry should respond with a 404 \"Not "
+"Found\", 410 \"Gone\" or 451 \"Unavailable For Legal Reasons\" code."
+msgstr ""
+
+#: src/reference/registry-index.md:245
+msgid "Sparse Limitations"
+msgstr ""
+
+#: src/reference/registry-index.md:246
+msgid ""
+"Since the URL of the registry is stored in the lockfile, it's not "
+"recommended to offer a registry with both protocols. Discussion about a "
+"transition plan is ongoing in issue [\\#10964](https://github.com/rust-lang/"
+"cargo/issues/10964). The [crates.io](https://crates.io/) registry is an "
+"exception, since Cargo internally substitues the equivalent git URL when the "
+"sparse protocol is used."
+msgstr ""
+
+#: src/reference/registry-index.md:251
+msgid ""
+"If a registry does offer both protocols, it's currently recommended to "
+"choose one protocol as the canonical protocol and use [source replacement]"
+"(../reference/source-replacement.md) for the other protocol."
+msgstr ""
