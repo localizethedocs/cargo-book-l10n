@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/commands/cargo-remove.md:1
@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-remove.md:2
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-remove.md:4
 msgid "cargo-remove --- Remove dependencies from a Cargo.toml manifest file"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/commands/cargo-remove.md:6
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-remove.md:8
 msgid "`cargo remove` \\[_options_\\] _dependency_..."
@@ -33,7 +33,7 @@ msgstr ""
 
 #: src/commands/cargo-remove.md:10
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-remove.md:12
 msgid "Remove one or more dependencies from a `Cargo.toml` manifest."
@@ -41,7 +41,7 @@ msgstr ""
 
 #: src/commands/cargo-remove.md:14
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-remove.md:16
 msgid "Section options"
@@ -53,11 +53,11 @@ msgstr ""
 
 #: src/commands/cargo-remove.md:45
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-remove.md:76
 msgid "Manifest Options"
-msgstr ""
+msgstr "清單選項"
 
 #: src/commands/cargo-remove.md:126
 msgid "Package Selection"
@@ -69,7 +69,7 @@ msgstr ""
 
 #: src/commands/cargo-remove.md:177
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-remove.md:179
 msgid ""
@@ -79,19 +79,19 @@ msgstr ""
 
 #: src/commands/cargo-remove.md:182
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-remove.md:184
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-remove.md:185
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-remove.md:187
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-remove.md:189
 msgid "Remove `regex` as a dependency"
@@ -107,7 +107,7 @@ msgstr ""
 
 #: src/commands/cargo-remove.md:201
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-remove.md:202
 msgid "[cargo(1)](cargo.html), [cargo-add(1)](cargo-add.html)"
