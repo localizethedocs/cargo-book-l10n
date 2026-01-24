@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/commands/cargo-new.md:1
@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-new.md:3
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-new.md:5
 msgid "cargo-new - Create a new Cargo package"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/commands/cargo-new.md:7
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-new.md:9
 msgid "`cargo new` \\[_options_\\] _path_"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: src/commands/cargo-new.md:11
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-new.md:13
 msgid ""
@@ -124,7 +124,7 @@ msgstr ""
 
 #: src/commands/cargo-new.md:47
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-new.md:49
 msgid "New Options"
@@ -132,7 +132,7 @@ msgstr ""
 
 #: src/commands/cargo-new.md:91
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-new.md:121
 msgid "Common Options"
@@ -140,7 +140,7 @@ msgstr ""
 
 #: src/commands/cargo-new.md:145
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-new.md:147
 msgid ""
@@ -150,19 +150,19 @@ msgstr ""
 
 #: src/commands/cargo-new.md:151
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-new.md:153
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-new.md:154
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-new.md:157
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-new.md:159
 msgid "Create a binary Cargo package in the given directory:"
@@ -170,7 +170,7 @@ msgstr ""
 
 #: src/commands/cargo-new.md:163
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-new.md:164
 msgid "[cargo(1)](cargo.md), [cargo-init(1)](cargo-init.md)"
