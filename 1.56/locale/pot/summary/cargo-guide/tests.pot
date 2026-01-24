@@ -1,0 +1,68 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:40:19Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/guide/tests.md:1
+msgid "Tests"
+msgstr ""
+
+#: src/guide/tests.md:3
+msgid ""
+"Cargo can run your tests with the `cargo test` command. Cargo looks for "
+"tests to run in two places: in each of your `src` files and any tests in "
+"`tests/`. Tests in your `src` files should be unit tests, and tests in "
+"`tests/` should be integration-style tests. As such, you’ll need to import "
+"your crates into the files in `tests`."
+msgstr ""
+
+#: src/guide/tests.md:9
+msgid ""
+"Here's an example of running `cargo test` in our [package](../appendix/"
+"glossary.md#package \"\\\"package\\\" (glossary entry)\"), which currently "
+"has no tests:"
+msgstr ""
+
+#: src/guide/tests.md:12
+msgid ""
+"```console\n"
+"$ cargo test\n"
+"   Compiling regex v1.5.0 (https://github.com/rust-lang/regex.git#9f9f693)\n"
+"   Compiling hello_world v0.1.0 (file:///path/to/package/hello_world)\n"
+"     Running target/test/hello_world-9c2b65bbb79eabce\n"
+"\n"
+"running 0 tests\n"
+"\n"
+"test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out\n"
+"```"
+msgstr ""
+
+#: src/guide/tests.md:23
+msgid ""
+"If our package had tests, we would see more output with the correct number "
+"of tests."
+msgstr ""
+
+#: src/guide/tests.md:26
+msgid "You can also run a specific test by passing a filter:"
+msgstr ""
+
+#: src/guide/tests.md:32
+msgid "This will run any test with `foo` in its name."
+msgstr ""
+
+#: src/guide/tests.md:34
+msgid ""
+"`cargo test` runs additional checks as well.  It will compile any examples "
+"you’ve included and will also test the examples in your documentation. "
+"Please see the [testing guide](../../book/ch11-00-testing.html) in the Rust "
+"documentation for more details."
+msgstr ""
