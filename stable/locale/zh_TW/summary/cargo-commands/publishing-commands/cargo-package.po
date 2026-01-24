@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/commands/cargo-package.md:1
@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:2
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-package.md:4
 msgid ""
@@ -26,7 +26,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:6
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-package.md:8
 msgid "`cargo package` \\[_options_\\]"
@@ -34,7 +34,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:10
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-package.md:12
 msgid ""
@@ -179,7 +179,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:73
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-package.md:75
 msgid "Package Options"
@@ -209,7 +209,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:211
 msgid "Compilation Options"
-msgstr ""
+msgstr "編譯選項"
 
 #: src/commands/cargo-package.md:241
 msgid "Feature Selection"
@@ -230,7 +230,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:272
 msgid "Manifest Options"
-msgstr ""
+msgstr "清單選項"
 
 #: src/commands/cargo-package.md:329
 msgid "Miscellaneous Options"
@@ -238,7 +238,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:354
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-package.md:388
 msgid "Common Options"
@@ -246,7 +246,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:433
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-package.md:435
 msgid ""
@@ -256,19 +256,19 @@ msgstr ""
 
 #: src/commands/cargo-package.md:438
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-package.md:440
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-package.md:441
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-package.md:443
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-package.md:445
 msgid "Create a compressed `.crate` file of the current package:"
@@ -276,7 +276,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:449
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-package.md:450
 msgid "[cargo(1)](cargo.html), [cargo-publish(1)](cargo-publish.html)"
