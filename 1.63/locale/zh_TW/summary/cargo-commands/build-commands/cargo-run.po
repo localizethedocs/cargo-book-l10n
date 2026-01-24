@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/commands/cargo-run.md:1
@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-run.md:4
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-run.md:6
 msgid "cargo-run - Run the current package"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/commands/cargo-run.md:8
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-run.md:10
 msgid "`cargo run` \\[_options_\\] \\[`--` _args_\\]"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: src/commands/cargo-run.md:12
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-run.md:14
 msgid "Run a binary or example of the local package."
@@ -48,7 +48,7 @@ msgstr ""
 
 #: src/commands/cargo-run.md:20
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-run.md:22
 msgid "Package Selection"
@@ -91,19 +91,19 @@ msgstr ""
 
 #: src/commands/cargo-run.md:86
 msgid "Compilation Options"
-msgstr ""
+msgstr "編譯選項"
 
 #: src/commands/cargo-run.md:142
 msgid "Output Options"
-msgstr ""
+msgstr "輸出選項"
 
 #: src/commands/cargo-run.md:154
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-run.md:212
 msgid "Manifest Options"
-msgstr ""
+msgstr "清單選項"
 
 #: src/commands/cargo-run.md:249
 msgid "Common Options"
@@ -115,7 +115,7 @@ msgstr ""
 
 #: src/commands/cargo-run.md:295
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-run.md:297
 msgid ""
@@ -125,19 +125,19 @@ msgstr ""
 
 #: src/commands/cargo-run.md:301
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-run.md:303
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-run.md:304
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-run.md:307
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-run.md:309
 msgid ""
@@ -150,7 +150,7 @@ msgstr ""
 
 #: src/commands/cargo-run.md:317
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-run.md:318
 msgid "[cargo(1)](cargo.html), [cargo-build(1)](cargo-build.html)"

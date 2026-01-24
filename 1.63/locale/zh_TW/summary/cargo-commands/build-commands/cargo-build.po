@@ -5,10 +5,10 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/commands/cargo-build.md:1
@@ -17,7 +17,7 @@ msgstr ""
 
 #: src/commands/cargo-build.md:4
 msgid "NAME"
-msgstr ""
+msgstr "名稱"
 
 #: src/commands/cargo-build.md:6
 msgid "cargo-build - Compile the current package"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: src/commands/cargo-build.md:8
 msgid "SYNOPSIS"
-msgstr ""
+msgstr "概要"
 
 #: src/commands/cargo-build.md:10
 msgid "`cargo build` \\[_options_\\]"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: src/commands/cargo-build.md:12
 msgid "DESCRIPTION"
-msgstr ""
+msgstr "描述"
 
 #: src/commands/cargo-build.md:14
 msgid "Compile local packages and all of their dependencies."
@@ -41,7 +41,7 @@ msgstr ""
 
 #: src/commands/cargo-build.md:16
 msgid "OPTIONS"
-msgstr ""
+msgstr "選項"
 
 #: src/commands/cargo-build.md:18
 msgid "Package Selection"
@@ -118,19 +118,19 @@ msgstr ""
 
 #: src/commands/cargo-build.md:178
 msgid "Compilation Options"
-msgstr ""
+msgstr "編譯選項"
 
 #: src/commands/cargo-build.md:234
 msgid "Output Options"
-msgstr ""
+msgstr "輸出選項"
 
 #: src/commands/cargo-build.md:255
 msgid "Display Options"
-msgstr ""
+msgstr "顯示選項"
 
 #: src/commands/cargo-build.md:320
 msgid "Manifest Options"
-msgstr ""
+msgstr "清單選項"
 
 #: src/commands/cargo-build.md:355
 msgid "Common Options"
@@ -142,7 +142,7 @@ msgstr ""
 
 #: src/commands/cargo-build.md:407
 msgid "ENVIRONMENT"
-msgstr ""
+msgstr "環境"
 
 #: src/commands/cargo-build.md:409
 msgid ""
@@ -152,19 +152,19 @@ msgstr ""
 
 #: src/commands/cargo-build.md:413
 msgid "EXIT STATUS"
-msgstr ""
+msgstr "退出狀態"
 
 #: src/commands/cargo-build.md:415
 msgid "`0`: Cargo succeeded."
-msgstr ""
+msgstr "`0`：Cargo 執行成功。"
 
 #: src/commands/cargo-build.md:416
 msgid "`101`: Cargo failed to complete."
-msgstr ""
+msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo-build.md:419
 msgid "EXAMPLES"
-msgstr ""
+msgstr "範例"
 
 #: src/commands/cargo-build.md:421
 msgid "Build the local package and all of its dependencies:"
@@ -176,7 +176,7 @@ msgstr ""
 
 #: src/commands/cargo-build.md:429
 msgid "SEE ALSO"
-msgstr ""
+msgstr "另請參見"
 
 #: src/commands/cargo-build.md:430
 msgid "[cargo(1)](cargo.html), [cargo-rustc(1)](cargo-rustc.html)"
