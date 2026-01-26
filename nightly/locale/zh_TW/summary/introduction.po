@@ -72,7 +72,7 @@ msgstr "**[Cargo 命令](commands/index.md)**"
 msgid ""
 "The commands will let you interact with Cargo using its command-line "
 "interface."
-msgstr ""
+msgstr "這些命令將讓你透過命令行介面與 Cargo 進行互動。"
 
 #: src/index.md:30
 msgid "**[Frequently Asked Questions](faq.md)**"

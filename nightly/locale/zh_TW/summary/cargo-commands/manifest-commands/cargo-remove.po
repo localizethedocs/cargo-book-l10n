@@ -61,11 +61,11 @@ msgstr "清單選項"
 
 #: src/commands/cargo-remove.md:126
 msgid "Package Selection"
-msgstr ""
+msgstr "軟體包選取"
 
 #: src/commands/cargo-remove.md:138
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-remove.md:183
 msgid "ENVIRONMENT"

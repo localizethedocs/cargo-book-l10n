@@ -57,7 +57,7 @@ msgstr ""
 
 #: src/reference/index.md:14
 msgid "[Features Examples](features-examples.md)"
-msgstr ""
+msgstr "[特性範例](features-examples.md)"
 
 #: src/reference/index.md:15
 msgid "[Profiles](profiles.md)"
@@ -109,7 +109,7 @@ msgstr ""
 
 #: src/reference/index.md:27
 msgid "[Registry Index](registry-index.md)"
-msgstr ""
+msgstr "[註冊表索引](registry-index.md)"
 
 #: src/reference/index.md:28
 msgid "[Registry Web API](registry-web-api.md)"
