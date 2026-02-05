@@ -121,4 +121,4 @@ msgstr ""
 
 #: src/SUMMARY.md:33
 msgid "Appendix: Glossary"
-msgstr ""
+msgstr "附錄：詞彙表"

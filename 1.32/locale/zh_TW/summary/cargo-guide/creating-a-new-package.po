@@ -69,6 +69,10 @@ msgid ""
 "   Compiling hello_world v0.1.0 (file:///path/to/package/hello_world)\n"
 "```"
 msgstr ""
+"```console\n"
+"$ cargo build\n"
+"   Compiling hello_world v0.1.0 (file:///path/to/package/hello_world)\n"
+"```"
 
 #: src/guide/creating-a-new-project.md:53
 msgid "And then run it:"
