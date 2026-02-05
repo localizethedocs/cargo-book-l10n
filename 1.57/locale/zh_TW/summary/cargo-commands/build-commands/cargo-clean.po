@@ -51,7 +51,7 @@ msgstr "選項"
 
 #: src/commands/cargo-clean.md:21
 msgid "Package Selection"
-msgstr ""
+msgstr "軟體包選取"
 
 #: src/commands/cargo-clean.md:23
 msgid ""
@@ -61,7 +61,7 @@ msgstr ""
 
 #: src/commands/cargo-clean.md:34
 msgid "Clean Options"
-msgstr ""
+msgstr "清理選項"
 
 #: src/commands/cargo-clean.md:74
 msgid "Display Options"
@@ -73,7 +73,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-clean.md:139
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-clean.md:163
 msgid "ENVIRONMENT"

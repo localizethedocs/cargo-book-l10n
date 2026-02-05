@@ -47,11 +47,11 @@ msgstr "選項"
 
 #: src/commands/cargo-doc.md:19
 msgid "Documentation Options"
-msgstr ""
+msgstr "文件選項"
 
 #: src/commands/cargo-doc.md:40
 msgid "Package Selection"
-msgstr ""
+msgstr "軟體包選取"
 
 #: src/commands/cargo-doc.md:42
 msgid ""
@@ -73,7 +73,7 @@ msgstr ""
 
 #: src/commands/cargo-doc.md:85
 msgid "Target Selection"
-msgstr ""
+msgstr "目標選取"
 
 #: src/commands/cargo-doc.md:87
 msgid ""
@@ -92,7 +92,7 @@ msgstr ""
 
 #: src/commands/cargo-doc.md:122
 msgid "Feature Selection"
-msgstr ""
+msgstr "特性選取"
 
 #: src/commands/cargo-doc.md:124
 msgid ""
@@ -125,7 +125,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-doc.md:288
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-doc.md:312
 msgid "Miscellaneous Options"
