@@ -130,7 +130,7 @@ msgstr ""
 
 #: src/reference/lints.md:60
 msgid "`unknown_lints`"
-msgstr ""
+msgstr "`unknown_lints`"
 
 #: src/reference/lints.md:61 src/reference/lints.md:80
 msgid "Set to `warn` by default"
@@ -159,6 +159,10 @@ msgid ""
 "this-lint-does-not-exist = \"warn\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[lints.cargo]\n"
+"this-lint-does-not-exist = \"warn\"\n"
+"```"
 
 #: src/reference/lints.md:79
 msgid "`unused_optional_dependency`"

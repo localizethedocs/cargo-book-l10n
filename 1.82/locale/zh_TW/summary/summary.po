@@ -69,7 +69,7 @@ msgstr "持續整合"
 
 #: src/SUMMARY.md:18
 msgid "Cargo Home"
-msgstr ""
+msgstr "Cargo 家目錄"
 
 #: src/SUMMARY.md:19
 msgid "Build Cache"
@@ -105,7 +105,7 @@ msgstr ""
 
 #: src/SUMMARY.md:28
 msgid "Features Examples"
-msgstr ""
+msgstr "特性範例"
 
 #: src/SUMMARY.md:29
 msgid "Profiles"
@@ -145,7 +145,7 @@ msgstr "外部工具"
 
 #: src/SUMMARY.md:38
 msgid "Registries"
-msgstr ""
+msgstr "註冊表"
 
 #: src/SUMMARY.md:39
 msgid "Registry Authentication"
@@ -161,7 +161,7 @@ msgstr ""
 
 #: src/SUMMARY.md:42
 msgid "Registry Index"
-msgstr ""
+msgstr "註冊表索引"
 
 #: src/SUMMARY.md:43
 msgid "Registry Web API"
@@ -313,27 +313,27 @@ msgstr ""
 
 #: src/SUMMARY.md:81
 msgid "Package Commands"
-msgstr ""
+msgstr "軟體包命令"
 
 #: src/SUMMARY.md:82
 msgid "cargo init"
-msgstr ""
+msgstr "cargo init"
 
 #: src/SUMMARY.md:83
 msgid "cargo install"
-msgstr ""
+msgstr "cargo install"
 
 #: src/SUMMARY.md:84
 msgid "cargo new"
-msgstr ""
+msgstr "cargo new"
 
 #: src/SUMMARY.md:85
 msgid "cargo search"
-msgstr ""
+msgstr "cargo search"
 
 #: src/SUMMARY.md:86
 msgid "cargo uninstall"
-msgstr ""
+msgstr "cargo uninstall"
 
 #: src/SUMMARY.md:87
 msgid "Publishing Commands"
@@ -341,27 +341,27 @@ msgstr "發布命令"
 
 #: src/SUMMARY.md:88
 msgid "cargo login"
-msgstr ""
+msgstr "cargo login"
 
 #: src/SUMMARY.md:89
 msgid "cargo logout"
-msgstr ""
+msgstr "cargo logout"
 
 #: src/SUMMARY.md:90
 msgid "cargo owner"
-msgstr ""
+msgstr "cargo owner"
 
 #: src/SUMMARY.md:91
 msgid "cargo package"
-msgstr ""
+msgstr "cargo package"
 
 #: src/SUMMARY.md:92
 msgid "cargo publish"
-msgstr ""
+msgstr "cargo publish"
 
 #: src/SUMMARY.md:93
 msgid "cargo yank"
-msgstr ""
+msgstr "cargo yank"
 
 #: src/SUMMARY.md:95
 msgid "FAQ"
@@ -369,7 +369,7 @@ msgstr ""
 
 #: src/SUMMARY.md:96
 msgid "Appendix: Glossary"
-msgstr ""
+msgstr "附錄：詞彙表"
 
 #: src/SUMMARY.md:97
 msgid "Appendix: Git Authentication"
