@@ -347,7 +347,7 @@ msgstr ""
 
 #: src/reference/unstable.md:106
 msgid "Registries"
-msgstr ""
+msgstr "註冊表"
 
 #: src/reference/unstable.md:107
 msgid ""
