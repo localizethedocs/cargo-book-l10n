@@ -52,7 +52,7 @@ msgstr "選項"
 
 #: src/commands/cargo-check.md:24
 msgid "Package Selection"
-msgstr ""
+msgstr "軟體包選取"
 
 #: src/commands/cargo-check.md:26
 msgid ""
@@ -74,7 +74,7 @@ msgstr ""
 
 #: src/commands/cargo-check.md:69
 msgid "Target Selection"
-msgstr ""
+msgstr "目標選取"
 
 #: src/commands/cargo-check.md:71
 msgid ""
@@ -97,7 +97,7 @@ msgstr ""
 
 #: src/commands/cargo-check.md:145
 msgid "Feature Selection"
-msgstr ""
+msgstr "特性選取"
 
 #: src/commands/cargo-check.md:147
 msgid ""
@@ -130,7 +130,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-check.md:337
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-check.md:367
 msgid "Miscellaneous Options"

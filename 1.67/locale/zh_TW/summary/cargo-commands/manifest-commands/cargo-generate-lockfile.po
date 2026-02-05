@@ -63,7 +63,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-generate-lockfile.md:89
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-generate-lockfile.md:119
 msgid "ENVIRONMENT"
@@ -93,7 +93,7 @@ msgstr "範例"
 
 #: src/commands/cargo-generate-lockfile.md:133
 msgid "Create or update the lockfile for the current package or workspace:"
-msgstr ""
+msgstr "建立或更新當前軟體包或工作空間的鎖定檔："
 
 #: src/commands/cargo-generate-lockfile.md:137
 msgid "SEE ALSO"
