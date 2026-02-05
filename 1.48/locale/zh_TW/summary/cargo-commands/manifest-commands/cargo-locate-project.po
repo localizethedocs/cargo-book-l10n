@@ -57,7 +57,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-locate-project.md:76
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-locate-project.md:100
 msgid "ENVIRONMENT"
