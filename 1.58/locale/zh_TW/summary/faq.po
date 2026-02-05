@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/faq.md:1
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "常見問題"
 
 #: src/faq.md:3
 msgid "Is the plan to use GitHub as a package repository?"
@@ -336,7 +336,7 @@ msgstr ""
 
 #: src/faq.md:204
 msgid "Why is Cargo rebuilding my code?"
-msgstr ""
+msgstr "為什麼 Cargo 正在重新建置我的程式碼？"
 
 #: src/faq.md:206
 msgid ""

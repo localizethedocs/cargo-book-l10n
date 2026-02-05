@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/commands/cargo-install.md:1
 msgid "cargo-install(1)"
-msgstr ""
+msgstr "cargo-install(1)"
 
 #: src/commands/cargo-install.md:5
 msgid "NAME"
@@ -53,23 +53,23 @@ msgstr ""
 
 #: src/commands/cargo-install.md:25
 msgid "`--root` option"
-msgstr ""
+msgstr "`--root` 選項"
 
 #: src/commands/cargo-install.md:26
 msgid "`CARGO_INSTALL_ROOT` environment variable"
-msgstr ""
+msgstr "`CARGO_INSTALL_ROOT` 環境變數"
 
 #: src/commands/cargo-install.md:27
 msgid "`install.root` Cargo [config value](../reference/config.html)"
-msgstr ""
+msgstr "`install.root` Cargo [組態值](../reference/config.html)"
 
 #: src/commands/cargo-install.md:28
 msgid "`CARGO_HOME` environment variable"
-msgstr ""
+msgstr "`CARGO_HOME` 環境變數"
 
 #: src/commands/cargo-install.md:29
 msgid "`$HOME/.cargo`"
-msgstr ""
+msgstr "`$HOME/.cargo`"
 
 #: src/commands/cargo-install.md:32
 msgid ""
@@ -156,11 +156,11 @@ msgstr "選項"
 
 #: src/commands/cargo-install.md:81
 msgid "Install Options"
-msgstr ""
+msgstr "安裝選項"
 
 #: src/commands/cargo-install.md:171
 msgid "Feature Selection"
-msgstr ""
+msgstr "特性選取"
 
 #: src/commands/cargo-install.md:173
 msgid ""
@@ -193,7 +193,7 @@ msgstr "顯示選項"
 
 #: src/commands/cargo-install.md:337
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-install.md:361
 msgid "ENVIRONMENT"
@@ -223,11 +223,11 @@ msgstr "範例"
 
 #: src/commands/cargo-install.md:375
 msgid "Install or upgrade a package from crates.io:"
-msgstr ""
+msgstr "從 crates.io 安裝或升級軟體包："
 
 #: src/commands/cargo-install.md:379
 msgid "Install or reinstall the package in the current directory:"
-msgstr ""
+msgstr "安裝或解除安裝當前目錄中的軟體包："
 
 #: src/commands/cargo-install.md:383
 msgid "View the list of installed packages:"
