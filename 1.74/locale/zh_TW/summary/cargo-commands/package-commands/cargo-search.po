@@ -48,7 +48,7 @@ msgstr "選項"
 
 #: src/commands/cargo-search.md:19
 msgid "Search Options"
-msgstr ""
+msgstr "搜尋選項"
 
 #: src/commands/cargo-search.md:42
 msgid "Display Options"
@@ -56,7 +56,7 @@ msgstr "顯示選項"
 
 #: src/commands/cargo-search.md:74
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-search.md:115
 msgid "ENVIRONMENT"
