@@ -21,7 +21,7 @@ msgstr "名稱"
 
 #: src/commands/cargo-fix.md:4
 msgid "cargo-fix --- Automatically fix lint warnings reported by rustc"
-msgstr ""
+msgstr "cargo-fix --- 自動修復 rustc 回報的梳理警告"
 
 #: src/commands/cargo-fix.md:6
 msgid "SYNOPSIS"
@@ -78,7 +78,7 @@ msgstr ""
 
 #: src/commands/cargo-fix.md:40
 msgid "Edition migration"
-msgstr ""
+msgstr "版次遷移"
 
 #: src/commands/cargo-fix.md:42
 msgid ""
@@ -125,11 +125,11 @@ msgstr "選項"
 
 #: src/commands/cargo-fix.md:66
 msgid "Fix options"
-msgstr ""
+msgstr "修復選項"
 
 #: src/commands/cargo-fix.md:101
 msgid "Package Selection"
-msgstr ""
+msgstr "軟體包選取"
 
 #: src/commands/cargo-fix.md:103
 msgid ""
@@ -151,7 +151,7 @@ msgstr ""
 
 #: src/commands/cargo-fix.md:143
 msgid "Target Selection"
-msgstr ""
+msgstr "目標選取"
 
 #: src/commands/cargo-fix.md:145
 msgid ""
@@ -174,7 +174,7 @@ msgstr ""
 
 #: src/commands/cargo-fix.md:217
 msgid "Feature Selection"
-msgstr ""
+msgstr "特性選取"
 
 #: src/commands/cargo-fix.md:219
 msgid ""
@@ -207,7 +207,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-fix.md:398
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-fix.md:438
 msgid "Miscellaneous Options"

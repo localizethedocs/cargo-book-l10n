@@ -72,11 +72,11 @@ msgstr ""
 
 #: src/commands/cargo-add.md:26
 msgid "Workspace members"
-msgstr ""
+msgstr "工作空間成員"
 
 #: src/commands/cargo-add.md:27
 msgid "Latest release in the registry"
-msgstr ""
+msgstr "註冊表中的最新發行版"
 
 #: src/commands/cargo-add.md:29
 msgid ""
@@ -117,7 +117,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-add.md:219
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-add.md:259
 msgid "ENVIRONMENT"
