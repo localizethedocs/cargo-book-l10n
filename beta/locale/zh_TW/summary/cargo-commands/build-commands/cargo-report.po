@@ -21,7 +21,7 @@ msgstr "名稱"
 
 #: src/commands/cargo-report.md:5
 msgid "cargo-report --- Generate and display various kinds of reports"
-msgstr ""
+msgstr "cargo-report --- 生成並顯示各種類型的報告"
 
 #: src/commands/cargo-report.md:7
 msgid "SYNOPSIS"
@@ -67,4 +67,4 @@ msgstr ""
 
 #: src/commands/cargo-report.md:45
 msgid "[cargo(1)](cargo.html)"
-msgstr ""
+msgstr "[cargo(1)](cargo.html)"

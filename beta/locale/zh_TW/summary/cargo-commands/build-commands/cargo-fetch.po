@@ -67,7 +67,7 @@ msgstr "選項"
 
 #: src/commands/cargo-fetch.md:28
 msgid "Fetch options"
-msgstr ""
+msgstr "擷取選項"
 
 #: src/commands/cargo-fetch.md:48
 msgid "Display Options"
@@ -79,7 +79,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-fetch.md:123
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-fetch.md:168
 msgid "ENVIRONMENT"

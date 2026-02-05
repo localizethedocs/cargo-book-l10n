@@ -27,7 +27,7 @@ msgstr ""
 
 #: src/reference/lints.md:7
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: src/reference/lints.md:7
 msgid "Default level"
@@ -188,6 +188,10 @@ msgid ""
 "hint-mostly-unused = true\n"
 "```"
 msgstr ""
+"```toml\n"
+"[profile.dev.package.\"*\"]\n"
+"hint-mostly-unused = true\n"
+"```"
 
 #: src/reference/lints.md:53
 msgid "Should instead be:"
@@ -261,6 +265,10 @@ msgid ""
 "serde = \"1\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[dependencies]\n"
+"serde = \"1\"\n"
+"```"
 
 #: src/reference/lints.md:103
 msgid "Should be written as a full specific version:"
@@ -273,10 +281,14 @@ msgid ""
 "serde = \"1.0.219\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[dependencies]\n"
+"serde = \"1.0.219\"\n"
+"```"
 
 #: src/reference/lints.md:111
 msgid "`unknown_lints`"
-msgstr ""
+msgstr "`unknown_lints`"
 
 #: src/reference/lints.md:117
 msgid "Checks for unknown lints in the `[lints.cargo]` table"
@@ -301,3 +313,7 @@ msgid ""
 "this-lint-does-not-exist = \"warn\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[lints.cargo]\n"
+"this-lint-does-not-exist = \"warn\"\n"
+"```"
