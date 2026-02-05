@@ -24,7 +24,7 @@ msgstr ""
 
 #: src/reference/environment-variables.md:7
 msgid "Environment variables Cargo reads"
-msgstr ""
+msgstr "Cargo 讀取的環境變數"
 
 #: src/reference/environment-variables.md:9
 msgid ""
@@ -171,7 +171,7 @@ msgstr ""
 
 #: src/reference/environment-variables.md:67
 msgid "Environment variables Cargo sets for build scripts"
-msgstr ""
+msgstr "Cargo 為建置腳本設定的環境變數"
 
 #: src/reference/environment-variables.md:69
 msgid ""
@@ -183,11 +183,11 @@ msgstr ""
 
 #: src/reference/environment-variables.md:75
 msgid "\"OUT_DIR\""
-msgstr ""
+msgstr "\"OUT_DIR\""
 
 #: src/reference/environment-variables.md:78
 msgid "`out_dir` will now contain the value of `OUT_DIR`."
-msgstr ""
+msgstr "`out_dir` 現在將包含 `OUT_DIR` 的值。"
 
 #: src/reference/environment-variables.md:81
 msgid ""
@@ -276,7 +276,7 @@ msgstr ""
 
 #: src/reference/environment-variables.md:131
 msgid "Environment variables Cargo sets for 3rd party subcommands"
-msgstr ""
+msgstr "Cargo 為第三方子命令設定的環境變數"
 
 #: src/reference/environment-variables.md:133
 msgid ""
