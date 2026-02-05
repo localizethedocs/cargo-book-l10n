@@ -13,4 +13,4 @@ msgstr ""
 
 #: src/commands/cargo-uninstall.md:1
 msgid "cargo uninstall"
-msgstr ""
+msgstr "cargo uninstall"

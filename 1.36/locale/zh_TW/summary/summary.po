@@ -113,7 +113,7 @@ msgstr "外部工具"
 
 #: src/SUMMARY.md:30
 msgid "Registries"
-msgstr ""
+msgstr "註冊表"
 
 #: src/SUMMARY.md:31
 msgid "Unstable Features"
@@ -201,7 +201,7 @@ msgstr ""
 
 #: src/SUMMARY.md:53
 msgid "Package Commands"
-msgstr ""
+msgstr "軟體包命令"
 
 #: src/SUMMARY.md:54
 msgid "init"
@@ -265,4 +265,4 @@ msgstr ""
 
 #: src/SUMMARY.md:70
 msgid "Appendix: Glossary"
-msgstr ""
+msgstr "附錄：詞彙表"

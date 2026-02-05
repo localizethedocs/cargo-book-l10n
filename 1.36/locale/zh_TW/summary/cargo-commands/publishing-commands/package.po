@@ -13,4 +13,4 @@ msgstr ""
 
 #: src/commands/cargo-package.md:1
 msgid "cargo package"
-msgstr ""
+msgstr "cargo package"
