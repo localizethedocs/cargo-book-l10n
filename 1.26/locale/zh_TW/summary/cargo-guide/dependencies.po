@@ -46,6 +46,10 @@ msgid ""
 "time = \"0.1.12\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[dependencies]\n"
+"time = \"0.1.12\"\n"
+"```"
 
 #: src/guide/dependencies.md:22
 msgid ""
@@ -122,7 +126,7 @@ msgstr ""
 
 #: src/guide/dependencies.md:79
 msgid "r\"^\\d{4}-\\d{2}-\\d{2}$\""
-msgstr ""
+msgstr "r\"^\\d{4}-\\d{2}-\\d{2}$\""
 
 #: src/guide/dependencies.md:80
 msgid "\"Did our date match? {}\""
@@ -134,4 +138,4 @@ msgstr ""
 
 #: src/guide/dependencies.md:84
 msgid "Running it will show:"
-msgstr ""
+msgstr "執行它將會顯示："
