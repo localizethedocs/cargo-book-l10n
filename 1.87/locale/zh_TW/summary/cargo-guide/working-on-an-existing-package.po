@@ -38,7 +38,7 @@ msgstr ""
 
 #: src/guide/working-on-an-existing-project.md:14
 msgid "To build, use `cargo build`:"
-msgstr ""
+msgstr "若要進行建置，請使用 `cargo build`："
 
 #: src/guide/working-on-an-existing-project.md:16
 msgid ""
@@ -47,6 +47,10 @@ msgid ""
 "   Compiling regex v1.5.0 (file:///path/to/package/regex)\n"
 "```"
 msgstr ""
+"```console\n"
+"$ cargo build\n"
+"   Compiling regex v1.5.0 (file:///path/to/package/regex)\n"
+"```"
 
 #: src/guide/working-on-an-existing-project.md:21
 msgid ""

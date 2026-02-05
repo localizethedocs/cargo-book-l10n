@@ -61,7 +61,7 @@ msgstr "輸出格式"
 
 #: src/commands/cargo-metadata.md:26
 msgid "Compatibility"
-msgstr ""
+msgstr "相容性"
 
 #: src/commands/cargo-metadata.md:28
 msgid ""
@@ -92,7 +92,7 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:41
 msgid "JSON format"
-msgstr ""
+msgstr "JSON 格式"
 
 #: src/commands/cargo-metadata.md:43
 msgid "The JSON output has the following format:"
@@ -873,7 +873,7 @@ msgstr "輸出選項"
 
 #: src/commands/cargo-metadata.md:371
 msgid "Feature Selection"
-msgstr ""
+msgstr "特性選取"
 
 #: src/commands/cargo-metadata.md:373
 msgid ""
@@ -898,7 +898,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-metadata.md:480
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-metadata.md:520
 msgid "ENVIRONMENT"

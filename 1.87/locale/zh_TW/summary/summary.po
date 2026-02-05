@@ -73,7 +73,7 @@ msgstr "在 creates.io 上發佈"
 
 #: src/SUMMARY.md:19
 msgid "Cargo Home"
-msgstr ""
+msgstr "Cargo 家目錄"
 
 #: src/SUMMARY.md:21
 msgid "Cargo Reference"
@@ -117,7 +117,7 @@ msgstr ""
 
 #: src/SUMMARY.md:31
 msgid "Features Examples"
-msgstr ""
+msgstr "特性範例"
 
 #: src/SUMMARY.md:32
 msgid "Profiles"
@@ -153,7 +153,7 @@ msgstr "外部工具"
 
 #: src/SUMMARY.md:40
 msgid "Registries"
-msgstr ""
+msgstr "註冊表"
 
 #: src/SUMMARY.md:41
 msgid "Registry Authentication"
@@ -169,7 +169,7 @@ msgstr ""
 
 #: src/SUMMARY.md:44
 msgid "Registry Index"
-msgstr ""
+msgstr "註冊表索引"
 
 #: src/SUMMARY.md:45
 msgid "Registry Web API"
@@ -325,27 +325,27 @@ msgstr ""
 
 #: src/SUMMARY.md:84
 msgid "Package Commands"
-msgstr ""
+msgstr "軟體包命令"
 
 #: src/SUMMARY.md:85
 msgid "cargo init"
-msgstr ""
+msgstr "cargo init"
 
 #: src/SUMMARY.md:86
 msgid "cargo install"
-msgstr ""
+msgstr "cargo install"
 
 #: src/SUMMARY.md:87
 msgid "cargo new"
-msgstr ""
+msgstr "cargo new"
 
 #: src/SUMMARY.md:88
 msgid "cargo search"
-msgstr ""
+msgstr "cargo search"
 
 #: src/SUMMARY.md:89
 msgid "cargo uninstall"
-msgstr ""
+msgstr "cargo uninstall"
 
 #: src/SUMMARY.md:90
 msgid "Publishing Commands"
@@ -353,27 +353,27 @@ msgstr "發布命令"
 
 #: src/SUMMARY.md:91
 msgid "cargo login"
-msgstr ""
+msgstr "cargo login"
 
 #: src/SUMMARY.md:92
 msgid "cargo logout"
-msgstr ""
+msgstr "cargo logout"
 
 #: src/SUMMARY.md:93
 msgid "cargo owner"
-msgstr ""
+msgstr "cargo owner"
 
 #: src/SUMMARY.md:94
 msgid "cargo package"
-msgstr ""
+msgstr "cargo package"
 
 #: src/SUMMARY.md:95
 msgid "cargo publish"
-msgstr ""
+msgstr "cargo publish"
 
 #: src/SUMMARY.md:96
 msgid "cargo yank"
-msgstr ""
+msgstr "cargo yank"
 
 #: src/SUMMARY.md:97
 msgid "Deprecated and Removed"
@@ -389,7 +389,7 @@ msgstr "變更日誌"
 
 #: src/SUMMARY.md:101
 msgid "Appendix: Glossary"
-msgstr ""
+msgstr "附錄：詞彙表"
 
 #: src/SUMMARY.md:102
 msgid "Appendix: Git Authentication"
