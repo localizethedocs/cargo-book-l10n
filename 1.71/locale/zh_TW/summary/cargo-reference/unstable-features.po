@@ -337,7 +337,7 @@ msgstr ""
 
 #: src/reference/unstable.md:104
 msgid "Registries"
-msgstr ""
+msgstr "註冊表"
 
 #: src/reference/unstable.md:105
 msgid ""
@@ -3083,7 +3083,7 @@ msgstr ""
 
 #: src/reference/unstable.md:1498
 msgid "Edition"
-msgstr ""
+msgstr "版次（Edition）"
 
 #: src/reference/unstable.md:1500
 msgid ""

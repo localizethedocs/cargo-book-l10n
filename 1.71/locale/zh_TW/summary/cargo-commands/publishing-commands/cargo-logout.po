@@ -62,7 +62,7 @@ msgstr "選項"
 
 #: src/commands/cargo-logout.md:28
 msgid "Logout Options"
-msgstr ""
+msgstr "登出選項"
 
 #: src/commands/cargo-logout.md:40
 msgid "Display Options"
@@ -70,7 +70,7 @@ msgstr "顯示選項"
 
 #: src/commands/cargo-logout.md:72
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-logout.md:113
 msgid "ENVIRONMENT"
@@ -100,7 +100,7 @@ msgstr "範例"
 
 #: src/commands/cargo-logout.md:127
 msgid "Remove the default registry token:"
-msgstr ""
+msgstr "移除預設的註冊表代符："
 
 #: src/commands/cargo-logout.md:131
 msgid "Remove the token for a specific registry:"
