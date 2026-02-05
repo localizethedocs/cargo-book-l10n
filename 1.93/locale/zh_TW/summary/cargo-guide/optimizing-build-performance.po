@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/guide/build-performance.md:1
 msgid "Optimizing Build Performance"
-msgstr ""
+msgstr "最佳化建置效能"
 
 #: src/guide/build-performance.md:3
 msgid ""
@@ -50,7 +50,7 @@ msgstr ""
 
 #: src/guide/build-performance.md:12
 msgid "Cargo and Compiler Configuration"
-msgstr ""
+msgstr "Cargo 與編譯器組態"
 
 #: src/guide/build-performance.md:14
 msgid ""
@@ -121,6 +121,17 @@ msgid ""
 "debug = true\n"
 "```"
 msgstr ""
+"```toml\n"
+"[profile.dev]\n"
+"debug = \"line-tables-only\"\n"
+"\n"
+"[profile.dev.package.\"*\"]\n"
+"debug = false\n"
+"\n"
+"[profile.debugging]\n"
+"inherits = \"dev\"\n"
+"debug = true\n"
+"```"
 
 #: src/guide/build-performance.md:42
 msgid "This will:"
@@ -261,6 +272,10 @@ msgid ""
 "rustflags = \"-Zthreads=8\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[build]\n"
+"rustflags = \"-Zthreads=8\"\n"
+"```"
 
 #: src/guide/build-performance.md:93
 msgid ""
