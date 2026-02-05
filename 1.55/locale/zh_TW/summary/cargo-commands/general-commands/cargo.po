@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/commands/cargo.md:1
 msgid "cargo(1)"
-msgstr ""
+msgstr "cargo(1)"
 
 #: src/commands/cargo.md:3
 msgid "NAME"
@@ -85,6 +85,8 @@ msgid ""
 "[cargo-doc(1)](cargo-doc.html)  \n"
 "    Build a package's documentation."
 msgstr ""
+"[cargo-doc(1)](cargo-doc.html)  \n"
+"    建置軟體包的文件。"
 
 #: src/commands/cargo.md:39
 msgid ""
@@ -97,6 +99,8 @@ msgid ""
 "[cargo-fix(1)](cargo-fix.html)  \n"
 "    Automatically fix lint warnings reported by rustc."
 msgstr ""
+"[cargo-fix(1)](cargo-fix.html)  \n"
+"    自動修復 rustc 回報的梳理警告。"
 
 #: src/commands/cargo.md:45
 msgid ""
@@ -109,6 +113,8 @@ msgid ""
 "[cargo-rustc(1)](cargo-rustc.html)  \n"
 "    Compile a package, and pass extra options to the compiler."
 msgstr ""
+"[cargo-rustc(1)](cargo-rustc.html)  \n"
+"    編譯軟體包，並傳遞額外選項給編譯器。"
 
 #: src/commands/cargo.md:51
 msgid ""
@@ -131,6 +137,8 @@ msgid ""
 "[cargo-generate-lockfile(1)](cargo-generate-lockfile.html)  \n"
 "    Generate `Cargo.lock` for a project."
 msgstr ""
+"[cargo-generate-lockfile(1)](cargo-generate-lockfile.html)  \n"
+"    生成專案的 `Cargo.lock`。"
 
 #: src/commands/cargo.md:62
 msgid ""
@@ -176,37 +184,47 @@ msgstr ""
 
 #: src/commands/cargo.md:83
 msgid "Package Commands"
-msgstr ""
+msgstr "軟體包命令"
 
 #: src/commands/cargo.md:85
 msgid ""
 "[cargo-init(1)](cargo-init.html)  \n"
 "    Create a new Cargo package in an existing directory."
 msgstr ""
+"[cargo-init(1)](cargo-init.html)  \n"
+"    在現有目錄中建立新的 Cargo 軟體包。"
 
 #: src/commands/cargo.md:88
 msgid ""
 "[cargo-install(1)](cargo-install.html)  \n"
 "    Build and install a Rust binary."
 msgstr ""
+"[cargo-install(1)](cargo-install.html)  \n"
+"    建置並安裝 Rust 二進位。"
 
 #: src/commands/cargo.md:91
 msgid ""
 "[cargo-new(1)](cargo-new.html)  \n"
 "    Create a new Cargo package."
 msgstr ""
+"[cargo-new(1)](cargo-new.html)  \n"
+"    建立新的 Cargo 軟體包。"
 
 #: src/commands/cargo.md:94
 msgid ""
 "[cargo-search(1)](cargo-search.html)  \n"
 "    Search packages in crates.io."
 msgstr ""
+"[cargo-search(1)](cargo-search.html)  \n"
+"    在 crates.io 中搜尋軟體包。"
 
 #: src/commands/cargo.md:97
 msgid ""
 "[cargo-uninstall(1)](cargo-uninstall.html)  \n"
 "    Remove a Rust binary."
 msgstr ""
+"[cargo-uninstall(1)](cargo-uninstall.html)  \n"
+"    移除 Rust 二進位。"
 
 #: src/commands/cargo.md:100
 msgid "Publishing Commands"
@@ -235,6 +253,8 @@ msgid ""
 "[cargo-publish(1)](cargo-publish.html)  \n"
 "    Upload a package to the registry."
 msgstr ""
+"[cargo-publish(1)](cargo-publish.html)  \n"
+"    上傳軟體包到註冊表。"
 
 #: src/commands/cargo.md:114
 msgid ""
@@ -251,12 +271,16 @@ msgid ""
 "[cargo-help(1)](cargo-help.html)  \n"
 "    Display help information about Cargo."
 msgstr ""
+"[cargo-help(1)](cargo-help.html)  \n"
+"    顯示關於 Cargo 的幫助資訊。"
 
 #: src/commands/cargo.md:122
 msgid ""
 "[cargo-version(1)](cargo-version.html)  \n"
 "    Show version information."
 msgstr ""
+"[cargo-version(1)](cargo-version.html)  \n"
+"    顯示版本資訊。"
 
 #: src/commands/cargo.md:125
 msgid "OPTIONS"
@@ -276,7 +300,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo.md:210
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo.md:234
 msgid "ENVIRONMENT"
@@ -302,7 +326,7 @@ msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo.md:246
 msgid "FILES"
-msgstr ""
+msgstr "檔案"
 
 #: src/commands/cargo.md:248
 msgid ""

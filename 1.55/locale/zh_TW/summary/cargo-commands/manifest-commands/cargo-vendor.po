@@ -69,7 +69,7 @@ msgstr "顯示選項"
 
 #: src/commands/cargo-vendor.md:123
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-vendor.md:147
 msgid "ENVIRONMENT"
@@ -115,4 +115,4 @@ msgstr "另請參見"
 
 #: src/commands/cargo-vendor.md:174
 msgid "[cargo(1)](cargo.html)"
-msgstr ""
+msgstr "[cargo(1)](cargo.html)"
