@@ -58,7 +58,7 @@ msgstr "**[Cargo 參考](reference/index.md)**"
 
 #: src/index.md:24
 msgid "The reference covers the details of various areas of Cargo."
-msgstr ""
+msgstr "此參考涵蓋了 Cargo 各個領域的詳細資訊。"
 
 #: src/index.md:26
 msgid "**[Frequently Asked Questions](faq.md)**"

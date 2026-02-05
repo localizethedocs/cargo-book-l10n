@@ -69,7 +69,7 @@ msgstr "持續整合"
 
 #: src/SUMMARY.md:18
 msgid "Cargo Home"
-msgstr ""
+msgstr "Cargo 家目錄"
 
 #: src/SUMMARY.md:19
 msgid "Build Cache"
@@ -125,7 +125,7 @@ msgstr "外部工具"
 
 #: src/SUMMARY.md:33
 msgid "Registries"
-msgstr ""
+msgstr "註冊表"
 
 #: src/SUMMARY.md:34
 msgid "Unstable Features"
@@ -217,7 +217,7 @@ msgstr ""
 
 #: src/SUMMARY.md:57
 msgid "Package Commands"
-msgstr ""
+msgstr "軟體包命令"
 
 #: src/SUMMARY.md:58
 msgid "init"
@@ -281,4 +281,4 @@ msgstr ""
 
 #: src/SUMMARY.md:74
 msgid "Appendix: Glossary"
-msgstr ""
+msgstr "附錄：詞彙表"
