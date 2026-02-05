@@ -197,7 +197,7 @@ msgstr ""
 
 #: src/SUMMARY.md:52
 msgid "Package Commands"
-msgstr ""
+msgstr "軟體包命令"
 
 #: src/SUMMARY.md:53
 msgid "init"
@@ -261,4 +261,4 @@ msgstr ""
 
 #: src/SUMMARY.md:69
 msgid "Appendix: Glossary"
-msgstr ""
+msgstr "附錄：詞彙表"
