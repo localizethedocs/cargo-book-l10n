@@ -23,7 +23,7 @@ msgstr "名稱"
 msgid ""
 "cargo-search --- Search packages in the registry. Default registry is crates."
 "io"
-msgstr ""
+msgstr "cargo-search --- 在註冊表中搜尋軟體包。預設的註冊表為 crates.io"
 
 #: src/commands/cargo-search.md:7
 msgid "SYNOPSIS"
@@ -50,7 +50,7 @@ msgstr "選項"
 
 #: src/commands/cargo-search.md:19
 msgid "Search Options"
-msgstr ""
+msgstr "搜尋選項"
 
 #: src/commands/cargo-search.md:42
 msgid "Display Options"
@@ -58,7 +58,7 @@ msgstr "顯示選項"
 
 #: src/commands/cargo-search.md:74
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-search.md:115
 msgid "ENVIRONMENT"
