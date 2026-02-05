@@ -21,7 +21,7 @@ msgstr "名稱"
 
 #: src/commands/cargo-generate-lockfile.md:5
 msgid "cargo-generate-lockfile --- Generate the lockfile for a package"
-msgstr ""
+msgstr "cargo-generate-lockfile --- 生成軟體包的鎖定檔"
 
 #: src/commands/cargo-generate-lockfile.md:7
 msgid "SYNOPSIS"
@@ -63,7 +63,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-generate-lockfile.md:95
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-generate-lockfile.md:135
 msgid "ENVIRONMENT"
@@ -93,7 +93,7 @@ msgstr "範例"
 
 #: src/commands/cargo-generate-lockfile.md:147
 msgid "Create or update the lockfile for the current package or workspace:"
-msgstr ""
+msgstr "建立或更新當前軟體包或工作空間的鎖定檔："
 
 #: src/commands/cargo-generate-lockfile.md:151
 msgid "SEE ALSO"
