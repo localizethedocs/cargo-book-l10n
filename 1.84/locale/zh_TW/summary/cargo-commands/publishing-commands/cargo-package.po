@@ -182,11 +182,11 @@ msgstr "選項"
 
 #: src/commands/cargo-package.md:75
 msgid "Package Options"
-msgstr ""
+msgstr "軟體包選項"
 
 #: src/commands/cargo-package.md:111
 msgid "Package Selection"
-msgstr ""
+msgstr "軟體包選取"
 
 #: src/commands/cargo-package.md:113
 msgid ""
@@ -212,7 +212,7 @@ msgstr "編譯選項"
 
 #: src/commands/cargo-package.md:174
 msgid "Feature Selection"
-msgstr ""
+msgstr "特性選取"
 
 #: src/commands/cargo-package.md:176
 msgid ""
@@ -241,7 +241,7 @@ msgstr "顯示選項"
 
 #: src/commands/cargo-package.md:308
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-package.md:348
 msgid "ENVIRONMENT"
