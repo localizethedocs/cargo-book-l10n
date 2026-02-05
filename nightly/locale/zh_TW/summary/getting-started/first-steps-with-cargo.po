@@ -93,6 +93,10 @@ msgid ""
 "   Compiling hello_world v0.1.0 (file:///path/to/package/hello_world)\n"
 "```"
 msgstr ""
+"```console\n"
+"$ cargo build\n"
+"   Compiling hello_world v0.1.0 (file:///path/to/package/hello_world)\n"
+"```"
 
 #: src/getting-started/first-steps.md:60
 msgid "And then run it:"
@@ -112,6 +116,12 @@ msgid ""
 "Hello, world!\n"
 "```"
 msgstr ""
+"```console\n"
+"$ cargo run\n"
+"     Fresh hello_world v0.1.0 (file:///path/to/package/hello_world)\n"
+"   Running `target/hello_world`\n"
+"Hello, world!\n"
+"```"
 
 #: src/getting-started/first-steps.md:76
 msgid "Going further"
