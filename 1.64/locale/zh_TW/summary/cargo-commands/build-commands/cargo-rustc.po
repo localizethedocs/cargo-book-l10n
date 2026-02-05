@@ -74,7 +74,7 @@ msgstr "選項"
 
 #: src/commands/cargo-rustc.md:36
 msgid "Package Selection"
-msgstr ""
+msgstr "軟體包選取"
 
 #: src/commands/cargo-rustc.md:38
 msgid ""
@@ -84,7 +84,7 @@ msgstr ""
 
 #: src/commands/cargo-rustc.md:52
 msgid "Target Selection"
-msgstr ""
+msgstr "目標選取"
 
 #: src/commands/cargo-rustc.md:54
 msgid ""
@@ -117,7 +117,7 @@ msgstr ""
 
 #: src/commands/cargo-rustc.md:137
 msgid "Feature Selection"
-msgstr ""
+msgstr "特性選取"
 
 #: src/commands/cargo-rustc.md:139
 msgid ""
@@ -150,7 +150,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-rustc.md:350
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-rustc.md:378
 msgid "Miscellaneous Options"

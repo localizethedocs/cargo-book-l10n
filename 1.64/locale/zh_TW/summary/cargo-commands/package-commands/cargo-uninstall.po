@@ -54,23 +54,23 @@ msgstr ""
 
 #: src/commands/cargo-uninstall.md:22
 msgid "`--root` option"
-msgstr ""
+msgstr "`--root` 選項"
 
 #: src/commands/cargo-uninstall.md:23
 msgid "`CARGO_INSTALL_ROOT` environment variable"
-msgstr ""
+msgstr "`CARGO_INSTALL_ROOT` 環境變數"
 
 #: src/commands/cargo-uninstall.md:24
 msgid "`install.root` Cargo [config value](../reference/config.html)"
-msgstr ""
+msgstr "`install.root` Cargo [組態值](../reference/config.html)"
 
 #: src/commands/cargo-uninstall.md:25
 msgid "`CARGO_HOME` environment variable"
-msgstr ""
+msgstr "`CARGO_HOME` 環境變數"
 
 #: src/commands/cargo-uninstall.md:26
 msgid "`$HOME/.cargo`"
-msgstr ""
+msgstr "`$HOME/.cargo`"
 
 #: src/commands/cargo-uninstall.md:29
 msgid "OPTIONS"
@@ -86,7 +86,7 @@ msgstr "顯示選項"
 
 #: src/commands/cargo-uninstall.md:84
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-uninstall.md:112
 msgid "ENVIRONMENT"
@@ -116,7 +116,7 @@ msgstr "範例"
 
 #: src/commands/cargo-uninstall.md:126
 msgid "Uninstall a previously installed package."
-msgstr ""
+msgstr "解除安裝先前安裝的軟體包。"
 
 #: src/commands/cargo-uninstall.md:130
 msgid "SEE ALSO"
