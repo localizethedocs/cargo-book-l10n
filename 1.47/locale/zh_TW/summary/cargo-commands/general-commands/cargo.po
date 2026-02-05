@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/commands/cargo.md:1
 msgid "cargo(1)"
-msgstr ""
+msgstr "cargo(1)"
 
 #: src/commands/cargo.md:3
 msgid "NAME"
@@ -174,7 +174,7 @@ msgstr ""
 
 #: src/commands/cargo.md:83
 msgid "Package Commands"
-msgstr ""
+msgstr "軟體包命令"
 
 #: src/commands/cargo.md:85
 msgid ""
@@ -274,7 +274,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo.md:210
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo.md:234
 msgid "ENVIRONMENT"
@@ -300,7 +300,7 @@ msgstr "`101`：Cargo 未能完成執行。"
 
 #: src/commands/cargo.md:246
 msgid "FILES"
-msgstr ""
+msgstr "檔案"
 
 #: src/commands/cargo.md:248
 msgid ""

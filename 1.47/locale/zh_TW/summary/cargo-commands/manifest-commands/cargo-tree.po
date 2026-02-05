@@ -89,7 +89,7 @@ msgstr ""
 
 #: src/commands/cargo-tree.md:151
 msgid "Package Selection"
-msgstr ""
+msgstr "軟體包選取"
 
 #: src/commands/cargo-tree.md:153
 msgid ""
@@ -115,7 +115,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-tree.md:223
 msgid "Feature Selection"
-msgstr ""
+msgstr "特性選取"
 
 #: src/commands/cargo-tree.md:225
 msgid ""
@@ -138,7 +138,7 @@ msgstr "顯示選項"
 
 #: src/commands/cargo-tree.md:286
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-tree.md:310
 msgid "ENVIRONMENT"

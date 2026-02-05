@@ -714,7 +714,7 @@ msgstr "輸出選項"
 
 #: src/commands/cargo-metadata.md:309
 msgid "Feature Selection"
-msgstr ""
+msgstr "特性選取"
 
 #: src/commands/cargo-metadata.md:311
 msgid ""
@@ -741,7 +741,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-metadata.md:405
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-metadata.md:429
 msgid "ENVIRONMENT"

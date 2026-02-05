@@ -49,7 +49,7 @@ msgstr "選項"
 
 #: src/commands/cargo-update.md:19
 msgid "Update Options"
-msgstr ""
+msgstr "更新選項"
 
 #: src/commands/cargo-update.md:52
 msgid "Display Options"
@@ -61,7 +61,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-update.md:119
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-update.md:143
 msgid "ENVIRONMENT"
