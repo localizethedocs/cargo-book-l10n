@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/guide/cargo-home.md:1
 msgid "Cargo Home"
-msgstr ""
+msgstr "Cargo 家目錄"
 
 #: src/guide/cargo-home.md:3
 msgid ""
@@ -39,7 +39,7 @@ msgstr ""
 
 #: src/guide/cargo-home.md:13
 msgid "Files:"
-msgstr ""
+msgstr "檔案："
 
 #: src/guide/cargo-home.md:15
 msgid ""
@@ -64,7 +64,7 @@ msgstr ""
 
 #: src/guide/cargo-home.md:24
 msgid "Directories:"
-msgstr ""
+msgstr "目錄："
 
 #: src/guide/cargo-home.md:26
 msgid ""
@@ -149,27 +149,27 @@ msgstr ""
 
 #: src/guide/cargo-home.md:65
 msgid "`.crates.toml`"
-msgstr ""
+msgstr "`.crates.toml`"
 
 #: src/guide/cargo-home.md:66
 msgid "`.crates2.json`"
-msgstr ""
+msgstr "`.crates2.json`"
 
 #: src/guide/cargo-home.md:67
 msgid "`bin/`"
-msgstr ""
+msgstr "`bin/`"
 
 #: src/guide/cargo-home.md:68
 msgid "`registry/index/`"
-msgstr ""
+msgstr "`registry/index/`"
 
 #: src/guide/cargo-home.md:69
 msgid "`registry/cache/`"
-msgstr ""
+msgstr "`registry/cache/`"
 
 #: src/guide/cargo-home.md:70
 msgid "`git/db/`"
-msgstr ""
+msgstr "`git/db/`"
 
 #: src/guide/cargo-home.md:74
 msgid "Vendoring all dependencies of a project"
@@ -181,7 +181,7 @@ msgstr ""
 
 #: src/guide/cargo-home.md:80
 msgid "Clearing the cache"
-msgstr ""
+msgstr "清除快取"
 
 #: src/guide/cargo-home.md:82
 msgid ""

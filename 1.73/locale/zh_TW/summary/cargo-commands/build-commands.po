@@ -17,39 +17,39 @@ msgstr "建置命令"
 
 #: src/commands/build-commands.md:2
 msgid "[cargo bench](cargo-bench.md)"
-msgstr ""
+msgstr "[cargo bench](cargo-bench.md)"
 
 #: src/commands/build-commands.md:3
 msgid "[cargo build](cargo-build.md)"
-msgstr ""
+msgstr "[cargo build](cargo-build.md)"
 
 #: src/commands/build-commands.md:4
 msgid "[cargo check](cargo-check.md)"
-msgstr ""
+msgstr "[cargo check](cargo-check.md)"
 
 #: src/commands/build-commands.md:5
 msgid "[cargo clean](cargo-clean.md)"
-msgstr ""
+msgstr "[cargo check](cargo-check.md)"
 
 #: src/commands/build-commands.md:6
 msgid "[cargo doc](cargo-doc.md)"
-msgstr ""
+msgstr "[cargo doc](cargo-doc.md)"
 
 #: src/commands/build-commands.md:7
 msgid "[cargo fetch](cargo-fetch.md)"
-msgstr ""
+msgstr "[cargo fetch](cargo-fetch.md)"
 
 #: src/commands/build-commands.md:8
 msgid "[cargo fix](cargo-fix.md)"
-msgstr ""
+msgstr "[cargo fix](cargo-fix.md)"
 
 #: src/commands/build-commands.md:9
 msgid "[cargo run](cargo-run.md)"
-msgstr ""
+msgstr "[cargo run](cargo-run.md)"
 
 #: src/commands/build-commands.md:10
 msgid "[cargo rustc](cargo-rustc.md)"
-msgstr ""
+msgstr "[cargo rustc](cargo-rustc.md)"
 
 #: src/commands/build-commands.md:11
 msgid "[cargo rustdoc](cargo-rustdoc.md)"
@@ -61,4 +61,4 @@ msgstr ""
 
 #: src/commands/build-commands.md:13
 msgid "[cargo report](cargo-report.md)"
-msgstr ""
+msgstr "[cargo report](cargo-report.md)"
