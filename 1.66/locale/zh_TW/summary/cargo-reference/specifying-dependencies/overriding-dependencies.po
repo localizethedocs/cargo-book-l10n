@@ -159,6 +159,10 @@ msgid ""
 "uuid = { path = \"../path/to/uuid\" }\n"
 "```"
 msgstr ""
+"```toml\n"
+"[patch.crates-io]\n"
+"uuid = { path = \"../path/to/uuid\" }\n"
+"```"
 
 #: src/reference/overriding-dependencies.md:71
 msgid ""
@@ -319,6 +323,10 @@ msgid ""
 "my-library = { path = \"../my-library/path\" }\n"
 "```"
 msgstr ""
+"```toml\n"
+"[patch.\"https://github.com/your/repository\"]\n"
+"my-library = { path = \"../my-library/path\" }\n"
+"```"
 
 #: src/reference/overriding-dependencies.md:185
 msgid "And that's it!"
@@ -561,6 +569,9 @@ msgid ""
 "paths = [\"/path/to/uuid\"]\n"
 "```"
 msgstr ""
+"```toml\n"
+"paths = [\"/path/to/uuid\"]\n"
+"```"
 
 #: src/reference/overriding-dependencies.md:338
 msgid ""
