@@ -69,7 +69,7 @@ msgstr "持續整合"
 
 #: src/SUMMARY.md:18
 msgid "Cargo Home"
-msgstr ""
+msgstr "Cargo 家目錄"
 
 #: src/SUMMARY.md:19
 msgid "Build Cache"
@@ -141,7 +141,7 @@ msgstr "外部工具"
 
 #: src/SUMMARY.md:37
 msgid "Registries"
-msgstr ""
+msgstr "註冊表"
 
 #: src/SUMMARY.md:38
 msgid "Unstable Features"
@@ -249,27 +249,27 @@ msgstr ""
 
 #: src/SUMMARY.md:65
 msgid "Package Commands"
-msgstr ""
+msgstr "軟體包命令"
 
 #: src/SUMMARY.md:66
 msgid "cargo init"
-msgstr ""
+msgstr "cargo init"
 
 #: src/SUMMARY.md:67
 msgid "cargo install"
-msgstr ""
+msgstr "cargo install"
 
 #: src/SUMMARY.md:68
 msgid "cargo new"
-msgstr ""
+msgstr "cargo new"
 
 #: src/SUMMARY.md:69
 msgid "cargo search"
-msgstr ""
+msgstr "cargo search"
 
 #: src/SUMMARY.md:70
 msgid "cargo uninstall"
-msgstr ""
+msgstr "cargo uninstall"
 
 #: src/SUMMARY.md:71
 msgid "Publishing Commands"
@@ -277,23 +277,23 @@ msgstr "發布命令"
 
 #: src/SUMMARY.md:72
 msgid "cargo login"
-msgstr ""
+msgstr "cargo login"
 
 #: src/SUMMARY.md:73
 msgid "cargo owner"
-msgstr ""
+msgstr "cargo owner"
 
 #: src/SUMMARY.md:74
 msgid "cargo package"
-msgstr ""
+msgstr "cargo package"
 
 #: src/SUMMARY.md:75
 msgid "cargo publish"
-msgstr ""
+msgstr "cargo publish"
 
 #: src/SUMMARY.md:76
 msgid "cargo yank"
-msgstr ""
+msgstr "cargo yank"
 
 #: src/SUMMARY.md:78
 msgid "FAQ"
@@ -301,7 +301,7 @@ msgstr ""
 
 #: src/SUMMARY.md:79
 msgid "Appendix: Glossary"
-msgstr ""
+msgstr "附錄：詞彙表"
 
 #: src/SUMMARY.md:80
 msgid "Appendix: Git Authentication"
