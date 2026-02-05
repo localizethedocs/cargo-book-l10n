@@ -71,7 +71,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-verify-project.md:93
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-verify-project.md:117
 msgid "ENVIRONMENT"
