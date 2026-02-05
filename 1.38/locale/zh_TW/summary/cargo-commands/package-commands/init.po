@@ -13,4 +13,4 @@ msgstr ""
 
 #: src/commands/cargo-init.md:1
 msgid "cargo init"
-msgstr ""
+msgstr "cargo init"
