@@ -79,6 +79,10 @@ msgid ""
 "hint-mostly-unused = true\n"
 "```"
 msgstr ""
+"```toml\n"
+"[profile.dev.package.\"*\"]\n"
+"hint-mostly-unused = true\n"
+"```"
 
 #: src/reference/lints.md:32
 msgid "Should instead be:"
@@ -86,7 +90,7 @@ msgstr ""
 
 #: src/reference/lints.md:39
 msgid "`unknown_lints`"
-msgstr ""
+msgstr "`unknown_lints`"
 
 #: src/reference/lints.md:43
 msgid "Checks for unknown lints in the `[lints.cargo]` table"
@@ -111,3 +115,7 @@ msgid ""
 "this-lint-does-not-exist = \"warn\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[lints.cargo]\n"
+"this-lint-does-not-exist = \"warn\"\n"
+"```"
