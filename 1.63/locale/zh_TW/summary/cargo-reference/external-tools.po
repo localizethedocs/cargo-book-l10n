@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/reference/external-tools.md:1
 msgid "External tools"
-msgstr ""
+msgstr "外部工具"
 
 #: src/reference/external-tools.md:3
 msgid ""

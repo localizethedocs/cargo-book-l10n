@@ -78,7 +78,7 @@ msgstr ""
 
 #: src/commands/cargo-fix.md:42
 msgid "Edition migration"
-msgstr ""
+msgstr "版次遷移"
 
 #: src/commands/cargo-fix.md:44
 msgid ""
@@ -125,11 +125,11 @@ msgstr "選項"
 
 #: src/commands/cargo-fix.md:68
 msgid "Fix options"
-msgstr ""
+msgstr "修復選項"
 
 #: src/commands/cargo-fix.md:103
 msgid "Package Selection"
-msgstr ""
+msgstr "軟體包選取"
 
 #: src/commands/cargo-fix.md:105
 msgid ""
@@ -151,7 +151,7 @@ msgstr ""
 
 #: src/commands/cargo-fix.md:148
 msgid "Target Selection"
-msgstr ""
+msgstr "目標選取"
 
 #: src/commands/cargo-fix.md:150
 msgid ""
@@ -174,7 +174,7 @@ msgstr ""
 
 #: src/commands/cargo-fix.md:224
 msgid "Feature Selection"
-msgstr ""
+msgstr "特性選取"
 
 #: src/commands/cargo-fix.md:226
 msgid ""
@@ -207,7 +207,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-fix.md:416
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-fix.md:444
 msgid "Miscellaneous Options"
