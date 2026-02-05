@@ -383,7 +383,7 @@ msgstr ""
 
 #: src/reference/unstable.md:202
 msgid "Edition"
-msgstr ""
+msgstr "版次（Edition）"
 
 #: src/reference/unstable.md:203
 msgid ""
