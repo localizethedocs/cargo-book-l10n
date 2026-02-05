@@ -120,7 +120,7 @@ msgstr "選項"
 
 #: src/commands/cargo-pkgid.md:38
 msgid "Package Selection"
-msgstr ""
+msgstr "軟體包選取"
 
 #: src/commands/cargo-pkgid.md:49
 msgid "Display Options"
@@ -132,7 +132,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-pkgid.md:118
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-pkgid.md:159
 msgid "ENVIRONMENT"

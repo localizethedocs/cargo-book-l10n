@@ -21,7 +21,7 @@ msgstr "名稱"
 
 #: src/commands/cargo-build.md:5
 msgid "cargo-build --- Compile the current package"
-msgstr ""
+msgstr "cargo-build --- 編譯當前軟體包"
 
 #: src/commands/cargo-build.md:7
 msgid "SYNOPSIS"
@@ -45,7 +45,7 @@ msgstr "選項"
 
 #: src/commands/cargo-build.md:17
 msgid "Package Selection"
-msgstr ""
+msgstr "軟體包選取"
 
 #: src/commands/cargo-build.md:19
 msgid ""
@@ -67,7 +67,7 @@ msgstr ""
 
 #: src/commands/cargo-build.md:62
 msgid "Target Selection"
-msgstr ""
+msgstr "目標選取"
 
 #: src/commands/cargo-build.md:64
 msgid ""
@@ -101,7 +101,7 @@ msgstr ""
 
 #: src/commands/cargo-build.md:148
 msgid "Feature Selection"
-msgstr ""
+msgstr "特性選取"
 
 #: src/commands/cargo-build.md:150
 msgid ""
@@ -134,7 +134,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-build.md:354
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-build.md:395
 msgid "Miscellaneous Options"
