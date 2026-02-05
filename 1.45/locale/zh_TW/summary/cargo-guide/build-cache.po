@@ -43,7 +43,7 @@ msgstr ""
 #: src/guide/build-cache.md:14 src/guide/build-cache.md:36
 #: src/guide/build-cache.md:44 src/guide/build-cache.md:53
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: src/guide/build-cache.md:16 src/guide/build-cache.md:38
 msgid "<code style=\"white-space: nowrap\">target/debug/</code>"

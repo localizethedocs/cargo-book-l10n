@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/commands/package-commands.md:1
 msgid "Package Commands"
-msgstr ""
+msgstr "軟體包命令"
 
 #: src/commands/package-commands.md:2
 msgid "[cargo init](cargo-init.md)"
