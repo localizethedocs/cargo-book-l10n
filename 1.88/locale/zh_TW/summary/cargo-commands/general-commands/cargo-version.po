@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/commands/cargo-version.md:1
 msgid "cargo-version(1)"
-msgstr ""
+msgstr "cargo-version(1)"
 
 #: src/commands/cargo-version.md:3
 msgid "NAME"
@@ -21,7 +21,7 @@ msgstr "名稱"
 
 #: src/commands/cargo-version.md:5
 msgid "cargo-version --- Show version information"
-msgstr ""
+msgstr "cargo-version --- 顯示版本資訊"
 
 #: src/commands/cargo-version.md:7
 msgid "SYNOPSIS"
@@ -37,7 +37,7 @@ msgstr "描述"
 
 #: src/commands/cargo-version.md:13
 msgid "Displays the version of Cargo."
-msgstr ""
+msgstr "顯示 Cargo 的版本。"
 
 #: src/commands/cargo-version.md:15
 msgid "OPTIONS"
@@ -49,7 +49,7 @@ msgstr "範例"
 
 #: src/commands/cargo-version.md:28
 msgid "Display the version:"
-msgstr ""
+msgstr "顯示版本："
 
 #: src/commands/cargo-version.md:32
 msgid "The version is also available via flags:"
@@ -57,7 +57,7 @@ msgstr ""
 
 #: src/commands/cargo-version.md:37
 msgid "Display extra version information:"
-msgstr ""
+msgstr "顯示額外的版本資訊："
 
 #: src/commands/cargo-version.md:41
 msgid "SEE ALSO"
@@ -65,4 +65,4 @@ msgstr "另請參見"
 
 #: src/commands/cargo-version.md:42
 msgid "[cargo(1)](cargo.html)"
-msgstr ""
+msgstr "[cargo(1)](cargo.html)"

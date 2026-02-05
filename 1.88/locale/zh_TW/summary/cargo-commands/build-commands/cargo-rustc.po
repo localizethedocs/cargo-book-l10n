@@ -23,7 +23,7 @@ msgstr "名稱"
 msgid ""
 "cargo-rustc --- Compile the current package, and pass extra options to the "
 "compiler"
-msgstr ""
+msgstr "cargo-rustc --- 編譯當前的軟體包，並傳遞額外的選項給編譯器"
 
 #: src/commands/cargo-rustc.md:6
 msgid "SYNOPSIS"
@@ -74,7 +74,7 @@ msgstr "選項"
 
 #: src/commands/cargo-rustc.md:33
 msgid "Package Selection"
-msgstr ""
+msgstr "軟體包選取"
 
 #: src/commands/cargo-rustc.md:35
 msgid ""
@@ -84,7 +84,7 @@ msgstr ""
 
 #: src/commands/cargo-rustc.md:48
 msgid "Target Selection"
-msgstr ""
+msgstr "目標選取"
 
 #: src/commands/cargo-rustc.md:50
 msgid ""
@@ -117,7 +117,7 @@ msgstr ""
 
 #: src/commands/cargo-rustc.md:130
 msgid "Feature Selection"
-msgstr ""
+msgstr "特性選取"
 
 #: src/commands/cargo-rustc.md:132
 msgid ""
@@ -150,7 +150,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-rustc.md:349
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-rustc.md:389
 msgid "Miscellaneous Options"
