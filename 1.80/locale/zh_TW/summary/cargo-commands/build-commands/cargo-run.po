@@ -21,7 +21,7 @@ msgstr "名稱"
 
 #: src/commands/cargo-run.md:4
 msgid "cargo-run --- Run the current package"
-msgstr ""
+msgstr "cargo-run --- 執行當前軟體包"
 
 #: src/commands/cargo-run.md:6
 msgid "SYNOPSIS"
@@ -59,7 +59,7 @@ msgstr "選項"
 
 #: src/commands/cargo-run.md:24
 msgid "Package Selection"
-msgstr ""
+msgstr "軟體包選取"
 
 #: src/commands/cargo-run.md:26
 msgid ""
@@ -69,7 +69,7 @@ msgstr ""
 
 #: src/commands/cargo-run.md:39
 msgid "Target Selection"
-msgstr ""
+msgstr "目標選取"
 
 #: src/commands/cargo-run.md:41
 msgid ""
@@ -81,7 +81,7 @@ msgstr ""
 
 #: src/commands/cargo-run.md:58
 msgid "Feature Selection"
-msgstr ""
+msgstr "特性選取"
 
 #: src/commands/cargo-run.md:60
 msgid ""
@@ -114,7 +114,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-run.md:243
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-run.md:283
 msgid "Miscellaneous Options"

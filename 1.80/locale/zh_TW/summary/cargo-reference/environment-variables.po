@@ -24,7 +24,7 @@ msgstr ""
 
 #: src/reference/environment-variables.md:7
 msgid "Environment variables Cargo reads"
-msgstr ""
+msgstr "Cargo 讀取的環境變數"
 
 #: src/reference/environment-variables.md:9
 msgid ""
@@ -187,7 +187,7 @@ msgstr ""
 
 #: src/reference/environment-variables.md:84
 msgid "Configuration environment variables"
-msgstr ""
+msgstr "組態環境變數"
 
 #: src/reference/environment-variables.md:86
 msgid ""
@@ -237,24 +237,32 @@ msgid ""
 "`CARGO_BUILD_TARGET` --- The default target platform, see [`build.target`]"
 "(config.md#buildtarget)."
 msgstr ""
+"`CARGO_BUILD_TARGET` --- 預設的目標平臺，請參見 [`build.target`](config."
+"md#buildtarget)。"
 
 #: src/reference/environment-variables.md:97
 msgid ""
 "`CARGO_BUILD_TARGET_DIR` --- The default output directory, see [`build."
 "target-dir`](config.md#buildtarget-dir)."
 msgstr ""
+"`CARGO_BUILD_TARGET_DIR` --- 預設的輸出目錄，請參見 [`build.target-dir`]"
+"(config.md#buildtarget-dir)。"
 
 #: src/reference/environment-variables.md:98
 msgid ""
 "`CARGO_BUILD_RUSTFLAGS` --- Extra `rustc` flags, see [`build.rustflags`]"
 "(config.md#buildrustflags)."
 msgstr ""
+"`CARGO_BUILD_RUSTFLAGS` --- 額外的 `rustc` 旗標，請參見 [`build.rustflags`]"
+"(config.md#buildrustflags)。"
 
 #: src/reference/environment-variables.md:99
 msgid ""
 "`CARGO_BUILD_RUSTDOCFLAGS` --- Extra `rustdoc` flags, see [`build."
 "rustdocflags`](config.md#buildrustdocflags)."
 msgstr ""
+"`CARGO_BUILD_RUSTDOCFLAGS` --- 額外的 `rustdoc` 旗標，請參見 [`build."
+"rustdocflags`](config.md#buildrustdocflags)。"
 
 #: src/reference/environment-variables.md:100
 msgid ""
@@ -287,12 +295,16 @@ msgid ""
 "`CARGO_HTTP_DEBUG` --- Enables HTTP debugging, see [`http.debug`](config."
 "md#httpdebug)."
 msgstr ""
+"`CARGO_HTTP_DEBUG` --- 啟用 HTTP 除錯，請參見 [`http.debug`](config."
+"md#httpdebug)。"
 
 #: src/reference/environment-variables.md:105
 msgid ""
 "`CARGO_HTTP_PROXY` --- Enables HTTP proxy, see [`http.proxy`](config."
 "md#httpproxy)."
 msgstr ""
+"`CARGO_HTTP_PROXY` --- 啟用 HTTP 代理，請參見 [`http.proxy`](config."
+"md#httpproxy)。"
 
 #: src/reference/environment-variables.md:106
 msgid ""
@@ -317,6 +329,8 @@ msgid ""
 "`CARGO_HTTP_SSL_VERSION` --- The TLS version to use, see [`http.ssl-version`]"
 "(config.md#httpssl-version)."
 msgstr ""
+"`CARGO_HTTP_SSL_VERSION` --- 使用的 TLS 版本，請參見 [`http.ssl-version`]"
+"(config.md#httpssl-version)。"
 
 #: src/reference/environment-variables.md:110
 msgid ""
@@ -341,6 +355,8 @@ msgid ""
 "`CARGO_INSTALL_ROOT` --- The default directory for [`cargo install`](../"
 "commands/cargo-install.md), see [`install.root`](config.md#installroot)."
 msgstr ""
+"`CARGO_INSTALL_ROOT` --- [`cargo install`](../commands/cargo-install.md) 的預"
+"設目錄，請參見 [`install.root`](config.md#installroot)。"
 
 #: src/reference/environment-variables.md:114
 msgid ""
@@ -359,6 +375,8 @@ msgid ""
 "`CARGO_NET_OFFLINE` --- Offline mode, see [`net.offline`](config."
 "md#netoffline)."
 msgstr ""
+"`CARGO_NET_OFFLINE` --- 離線模式，請參見 [`net.offline`](config."
+"md#netoffline)。"
 
 #: src/reference/environment-variables.md:117
 msgid ""
@@ -499,6 +517,8 @@ msgid ""
 "`CARGO_TARGET_<triple>_RUSTFLAGS` --- Extra `rustc` flags for a target, see "
 "[`target.<triple>.rustflags`](config.md#targettriplerustflags)."
 msgstr ""
+"`CARGO_TARGET_<triple>_RUSTFLAGS` --- 目標額外的 `rustc` 旗標，請參見 "
+"[`target.<triple>.rustflags`](config.md#targettriplerustflags)。"
 
 #: src/reference/environment-variables.md:139
 msgid ""
@@ -559,7 +579,7 @@ msgstr ""
 #: src/reference/environment-variables.md:319
 #: src/reference/environment-variables.md:418
 msgid "`CARGO` --- Path to the `cargo` binary performing the build."
-msgstr ""
+msgstr "`CARGO` --- 執行建置的 `cargo` 二進位路徑。"
 
 #: src/reference/environment-variables.md:228
 msgid ""
@@ -569,23 +589,23 @@ msgstr ""
 
 #: src/reference/environment-variables.md:229
 msgid "`CARGO_PKG_VERSION` --- The full version of your package."
-msgstr ""
+msgstr "`CARGO_PKG_VERSION` --- 軟體包的完整版本。"
 
 #: src/reference/environment-variables.md:230
 msgid "`CARGO_PKG_VERSION_MAJOR` --- The major version of your package."
-msgstr ""
+msgstr "`CARGO_PKG_VERSION_MAJOR` --- 軟體包的主要版本。"
 
 #: src/reference/environment-variables.md:231
 msgid "`CARGO_PKG_VERSION_MINOR` --- The minor version of your package."
-msgstr ""
+msgstr "`CARGO_PKG_VERSION_MINOR` --- 軟體包的次要版本。"
 
 #: src/reference/environment-variables.md:232
 msgid "`CARGO_PKG_VERSION_PATCH` --- The patch version of your package."
-msgstr ""
+msgstr "`CARGO_PKG_VERSION_PATCH` --- 軟體包的補釘版本。"
 
 #: src/reference/environment-variables.md:233
 msgid "`CARGO_PKG_VERSION_PRE` --- The pre-release version of your package."
-msgstr ""
+msgstr "`CARGO_PKG_VERSION_PRE` --- 軟體包的預發行版本。"
 
 #: src/reference/environment-variables.md:234
 msgid ""
@@ -595,7 +615,7 @@ msgstr ""
 
 #: src/reference/environment-variables.md:235
 msgid "`CARGO_PKG_NAME` --- The name of your package."
-msgstr ""
+msgstr "`CARGO_PKG_NAME` --- 軟體包的名稱。"
 
 #: src/reference/environment-variables.md:236
 msgid ""
@@ -632,7 +652,7 @@ msgstr ""
 
 #: src/reference/environment-variables.md:244
 msgid "`CARGO_PKG_README` --- Path to the README file of your package."
-msgstr ""
+msgstr "`CARGO_PKG_README` --- 您的軟體包中 README 檔案的路徑。"
 
 #: src/reference/environment-variables.md:245
 msgid ""
@@ -697,7 +717,7 @@ msgstr ""
 
 #: src/reference/environment-variables.md:278
 msgid "Dynamic library paths"
-msgstr ""
+msgstr "動態程式庫路徑"
 
 #: src/reference/environment-variables.md:280
 msgid ""
@@ -709,19 +729,19 @@ msgstr ""
 
 #: src/reference/environment-variables.md:285
 msgid "Windows: `PATH`"
-msgstr ""
+msgstr "Windows：`PATH`"
 
 #: src/reference/environment-variables.md:286
 msgid "macOS: `DYLD_FALLBACK_LIBRARY_PATH`"
-msgstr ""
+msgstr "macOS：`DYLD_FALLBACK_LIBRARY_PATH`"
 
 #: src/reference/environment-variables.md:287
 msgid "Unix: `LD_LIBRARY_PATH`"
-msgstr ""
+msgstr "Unix：`LD_LIBRARY_PATH`"
 
 #: src/reference/environment-variables.md:288
 msgid "AIX: `LIBPATH`"
-msgstr ""
+msgstr "AIX：`LIBPATH`"
 
 #: src/reference/environment-variables.md:290
 msgid ""
@@ -732,7 +752,7 @@ msgstr ""
 
 #: src/reference/environment-variables.md:294
 msgid "Cargo includes the following paths:"
-msgstr ""
+msgstr "Cargo 會引入以下路徑："
 
 #: src/reference/environment-variables.md:296
 msgid ""
@@ -757,7 +777,7 @@ msgstr ""
 
 #: src/reference/environment-variables.md:306
 msgid "Environment variables Cargo sets for build scripts"
-msgstr ""
+msgstr "Cargo 為建置腳本設定的環境變數"
 
 #: src/reference/environment-variables.md:308
 msgid ""
@@ -769,11 +789,11 @@ msgstr ""
 
 #: src/reference/environment-variables.md:314
 msgid "\"OUT_DIR\""
-msgstr ""
+msgstr "\"OUT_DIR\""
 
 #: src/reference/environment-variables.md:317
 msgid "`out_dir` will now contain the value of `OUT_DIR`."
-msgstr ""
+msgstr "`out_dir` 現在將包含 `OUT_DIR` 的值。"
 
 #: src/reference/environment-variables.md:320
 msgid ""
@@ -785,7 +805,7 @@ msgstr ""
 
 #: src/reference/environment-variables.md:323
 msgid "`CARGO_MANIFEST_LINKS` --- the manifest `links` value."
-msgstr ""
+msgstr "`CARGO_MANIFEST_LINKS` --- 清單 `links` 值。"
 
 #: src/reference/environment-variables.md:324
 msgid ""
@@ -843,12 +863,16 @@ msgid ""
 "`CARGO_CFG_TARGET_OS=macos` --- The [target operating system](../../"
 "reference/conditional-compilation.html#target_os)."
 msgstr ""
+"`CARGO_CFG_TARGET_OS=macos` --- [目標作業系統](../../reference/conditional-"
+"compilation.html#target_os)。"
 
 #: src/reference/environment-variables.md:347
 msgid ""
 "`CARGO_CFG_TARGET_ARCH=x86_64` --- The CPU [target architecture](../../"
 "reference/conditional-compilation.html#target_arch)."
 msgstr ""
+"`CARGO_CFG_TARGET_ARCH=x86_64` --- CPU [目標架構](../../reference/"
+"conditional-compilation.html#target_arch)。"
 
 #: src/reference/environment-variables.md:348
 msgid ""
@@ -861,6 +885,8 @@ msgid ""
 "`CARGO_CFG_TARGET_ENV=gnu` --- The [target environment](../../reference/"
 "conditional-compilation.html#target_env) ABI."
 msgstr ""
+"`CARGO_CFG_TARGET_ENV=gnu` --- [目標環境](../../reference/conditional-"
+"compilation.html#target_env) ABI。"
 
 #: src/reference/environment-variables.md:350
 msgid ""
@@ -985,7 +1011,7 @@ msgstr ""
 
 #: src/reference/environment-variables.md:413
 msgid "Environment variables Cargo sets for 3rd party subcommands"
-msgstr ""
+msgstr "Cargo 為第三方子命令設定的環境變數"
 
 #: src/reference/environment-variables.md:415
 msgid ""
