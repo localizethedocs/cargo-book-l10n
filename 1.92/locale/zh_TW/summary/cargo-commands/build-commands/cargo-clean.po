@@ -21,7 +21,7 @@ msgstr "名稱"
 
 #: src/commands/cargo-clean.md:4
 msgid "cargo-clean --- Remove generated artifacts"
-msgstr ""
+msgstr "cargo-clean --- 移除生成的製品"
 
 #: src/commands/cargo-clean.md:6
 msgid "SYNOPSIS"
@@ -51,7 +51,7 @@ msgstr "選項"
 
 #: src/commands/cargo-clean.md:19
 msgid "Package Selection"
-msgstr ""
+msgstr "軟體包選取"
 
 #: src/commands/cargo-clean.md:21
 msgid ""
@@ -61,7 +61,7 @@ msgstr ""
 
 #: src/commands/cargo-clean.md:32
 msgid "Clean Options"
-msgstr ""
+msgstr "清理選項"
 
 #: src/commands/cargo-clean.md:78
 msgid "Display Options"
@@ -73,7 +73,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-clean.md:159
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-clean.md:199
 msgid "ENVIRONMENT"
