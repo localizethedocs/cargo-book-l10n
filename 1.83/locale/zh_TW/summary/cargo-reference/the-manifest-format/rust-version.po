@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/reference/rust-version.md:1
 msgid "Rust Version"
-msgstr ""
+msgstr "Rust 版本"
 
 #: src/reference/rust-version.md:3
 msgid ""
@@ -144,7 +144,7 @@ msgstr ""
 
 #: src/reference/rust-version.md:65
 msgid "Setting and Updating Rust Version"
-msgstr ""
+msgstr "設定並更新 Rust 版本"
 
 #: src/reference/rust-version.md:67
 msgid "What Rust versions to support is a trade off between"
