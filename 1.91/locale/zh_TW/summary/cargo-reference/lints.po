@@ -35,7 +35,7 @@ msgstr ""
 
 #: src/reference/lints.md:10
 msgid "`unknown_lints`"
-msgstr ""
+msgstr "`unknown_lints`"
 
 #: src/reference/lints.md:11
 msgid "Set to `warn` by default"
@@ -76,3 +76,7 @@ msgid ""
 "this-lint-does-not-exist = \"warn\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[lints.cargo]\n"
+"this-lint-does-not-exist = \"warn\"\n"
+"```"

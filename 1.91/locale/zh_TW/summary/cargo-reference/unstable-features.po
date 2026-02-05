@@ -429,7 +429,7 @@ msgstr ""
 
 #: src/reference/unstable.md:121
 msgid "Registries"
-msgstr ""
+msgstr "註冊表"
 
 #: src/reference/unstable.md:122
 msgid ""
@@ -4151,7 +4151,7 @@ msgstr ""
 
 #: src/reference/unstable.md:1960
 msgid "Edition"
-msgstr ""
+msgstr "版次（Edition）"
 
 #: src/reference/unstable.md:1962
 msgid ""
