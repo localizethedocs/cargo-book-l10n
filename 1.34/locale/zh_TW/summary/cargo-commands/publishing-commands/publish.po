@@ -13,4 +13,4 @@ msgstr ""
 
 #: src/commands/cargo-publish.md:1
 msgid "cargo publish"
-msgstr ""
+msgstr "cargo publish"
