@@ -13,4 +13,4 @@ msgstr ""
 
 #: src/commands/cargo-search.md:1
 msgid "cargo search"
-msgstr ""
+msgstr "cargo search"
