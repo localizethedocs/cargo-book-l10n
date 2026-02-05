@@ -21,7 +21,7 @@ msgstr "名稱"
 
 #: src/commands/cargo-init.md:5
 msgid "cargo-init --- Create a new Cargo package in an existing directory"
-msgstr ""
+msgstr "cargo-init --- 在現有目錄中建立新的 Cargo 軟體包"
 
 #: src/commands/cargo-init.md:7
 msgid "SYNOPSIS"
@@ -66,7 +66,7 @@ msgstr "選項"
 
 #: src/commands/cargo-init.md:28
 msgid "Init Options"
-msgstr ""
+msgstr "初始化選項"
 
 #: src/commands/cargo-init.md:70
 msgid "Display Options"
@@ -74,7 +74,7 @@ msgstr "顯示選項"
 
 #: src/commands/cargo-init.md:102
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-init.md:142
 msgid "ENVIRONMENT"

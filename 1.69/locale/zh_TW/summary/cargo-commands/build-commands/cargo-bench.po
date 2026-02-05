@@ -38,7 +38,7 @@ msgstr "描述"
 
 #: src/commands/cargo-bench.md:16
 msgid "Compile and execute benchmarks."
-msgstr ""
+msgstr "編譯並執行基準測試。"
 
 #: src/commands/cargo-bench.md:18
 msgid ""
@@ -104,7 +104,7 @@ msgstr ""
 
 #: src/commands/cargo-bench.md:79
 msgid "Package Selection"
-msgstr ""
+msgstr "軟體包選取"
 
 #: src/commands/cargo-bench.md:81
 msgid ""
@@ -126,7 +126,7 @@ msgstr ""
 
 #: src/commands/cargo-bench.md:124
 msgid "Target Selection"
-msgstr ""
+msgstr "目標選取"
 
 #: src/commands/cargo-bench.md:126
 msgid ""
@@ -192,7 +192,7 @@ msgstr ""
 
 #: src/commands/cargo-bench.md:223
 msgid "Feature Selection"
-msgstr ""
+msgstr "特性選取"
 
 #: src/commands/cargo-bench.md:225
 msgid ""
@@ -232,7 +232,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-bench.md:412
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-bench.md:452
 msgid "Miscellaneous Options"

@@ -77,7 +77,7 @@ msgstr "顯示選項"
 
 #: src/commands/cargo-yank.md:104
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-yank.md:144
 msgid "ENVIRONMENT"
