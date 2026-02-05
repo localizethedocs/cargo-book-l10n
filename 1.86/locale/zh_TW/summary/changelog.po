@@ -140,7 +140,7 @@ msgstr ""
 #: src/CHANGELOG.md:2071 src/CHANGELOG.md:2241 src/CHANGELOG.md:2396
 #: src/CHANGELOG.md:2561 src/CHANGELOG.md:2731 src/CHANGELOG.md:2865
 msgid "Documentation"
-msgstr ""
+msgstr "文件"
 
 #: src/CHANGELOG.md:26 src/CHANGELOG.md:150 src/CHANGELOG.md:324
 #: src/CHANGELOG.md:514 src/CHANGELOG.md:634 src/CHANGELOG.md:780
