@@ -87,11 +87,11 @@ msgstr "選項"
 
 #: src/commands/cargo-test.md:47
 msgid "Test Options"
-msgstr ""
+msgstr "測試選項"
 
 #: src/commands/cargo-test.md:65
 msgid "Package Selection"
-msgstr ""
+msgstr "軟體包選取"
 
 #: src/commands/cargo-test.md:67
 msgid ""
@@ -113,7 +113,7 @@ msgstr ""
 
 #: src/commands/cargo-test.md:110
 msgid "Target Selection"
-msgstr ""
+msgstr "目標選取"
 
 #: src/commands/cargo-test.md:112
 msgid ""
@@ -192,7 +192,7 @@ msgstr ""
 
 #: src/commands/cargo-test.md:220
 msgid "Feature Selection"
-msgstr ""
+msgstr "特性選取"
 
 #: src/commands/cargo-test.md:222
 msgid ""
@@ -232,7 +232,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-test.md:391
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-test.md:415
 msgid "Miscellaneous Options"
@@ -342,7 +342,7 @@ msgstr "範例"
 
 #: src/commands/cargo-test.md:475
 msgid "Execute all the unit and integration tests of the current package:"
-msgstr ""
+msgstr "執行當前軟體包所有的單元和整合測試："
 
 #: src/commands/cargo-test.md:479
 msgid "Run only tests whose names match against a filter string:"

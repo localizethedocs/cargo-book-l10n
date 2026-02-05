@@ -50,6 +50,10 @@ msgid ""
 "time = \"0.1.12\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[dependencies]\n"
+"time = \"0.1.12\"\n"
+"```"
 
 #: src/guide/dependencies.md:23
 msgid ""
@@ -107,6 +111,23 @@ msgid ""
 "     Compiling hello_world v0.1.0 (file:///path/to/package/hello_world)\n"
 "```"
 msgstr ""
+"```console\n"
+"$ cargo build\n"
+"      Updating crates.io index\n"
+"   Downloading memchr v0.1.5\n"
+"   Downloading libc v0.1.10\n"
+"   Downloading regex-syntax v0.2.1\n"
+"   Downloading memchr v0.1.5\n"
+"   Downloading aho-corasick v0.3.0\n"
+"   Downloading regex v0.1.41\n"
+"     Compiling memchr v0.1.5\n"
+"     Compiling libc v0.1.10\n"
+"     Compiling regex-syntax v0.2.1\n"
+"     Compiling memchr v0.1.5\n"
+"     Compiling aho-corasick v0.3.0\n"
+"     Compiling regex v0.1.41\n"
+"     Compiling hello_world v0.1.0 (file:///path/to/package/hello_world)\n"
+"```"
 
 #: src/guide/dependencies.md:66
 msgid ""
@@ -126,7 +147,7 @@ msgstr ""
 
 #: src/guide/dependencies.md:78
 msgid "r\"^\\d{4}-\\d{2}-\\d{2}$\""
-msgstr ""
+msgstr "r\"^\\d{4}-\\d{2}-\\d{2}$\""
 
 #: src/guide/dependencies.md:79
 msgid "\"Did our date match? {}\""
@@ -138,4 +159,4 @@ msgstr ""
 
 #: src/guide/dependencies.md:83
 msgid "Running it will show:"
-msgstr ""
+msgstr "執行它將會顯示："
