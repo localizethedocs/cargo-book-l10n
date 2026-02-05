@@ -139,7 +139,7 @@ msgstr "選項"
 
 #: src/commands/cargo-init.md:54
 msgid "Init Options"
-msgstr ""
+msgstr "初始化選項"
 
 #: src/commands/cargo-init.md:96
 msgid "Display Options"
@@ -147,7 +147,7 @@ msgstr "顯示選項"
 
 #: src/commands/cargo-init.md:126
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-init.md:150
 msgid "ENVIRONMENT"

@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/reference/features-examples.md:1
 msgid "Features Examples"
-msgstr ""
+msgstr "特性範例"
 
 #: src/reference/features-examples.md:3
 msgid ""
@@ -240,7 +240,7 @@ msgstr ""
 
 #: src/reference/features-examples.md:175
 msgid "Experimental features"
-msgstr ""
+msgstr "實驗性特性"
 
 #: src/reference/features-examples.md:177
 msgid ""

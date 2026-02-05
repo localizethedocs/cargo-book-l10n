@@ -77,7 +77,7 @@ msgstr "顯示選項"
 
 #: src/commands/cargo-owner.md:106
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-owner.md:130
 msgid "ENVIRONMENT"

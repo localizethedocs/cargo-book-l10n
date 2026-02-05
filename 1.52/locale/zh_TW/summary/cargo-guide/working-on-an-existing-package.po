@@ -38,7 +38,7 @@ msgstr ""
 
 #: src/guide/working-on-an-existing-project.md:14
 msgid "To build, use `cargo build`:"
-msgstr ""
+msgstr "若要進行建置，請使用 `cargo build`："
 
 #: src/guide/working-on-an-existing-project.md:16
 msgid ""

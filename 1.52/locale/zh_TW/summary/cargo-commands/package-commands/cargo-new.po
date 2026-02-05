@@ -136,7 +136,7 @@ msgstr "顯示選項"
 
 #: src/commands/cargo-new.md:121
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-new.md:145
 msgid "ENVIRONMENT"
