@@ -84,11 +84,11 @@ msgstr "選項"
 
 #: src/commands/cargo-fix.md:48
 msgid "Fix options"
-msgstr ""
+msgstr "修復選項"
 
 #: src/commands/cargo-fix.md:83
 msgid "Package Selection"
-msgstr ""
+msgstr "軟體包選取"
 
 #: src/commands/cargo-fix.md:85
 msgid ""
@@ -110,7 +110,7 @@ msgstr ""
 
 #: src/commands/cargo-fix.md:128
 msgid "Target Selection"
-msgstr ""
+msgstr "目標選取"
 
 #: src/commands/cargo-fix.md:130
 msgid ""
@@ -133,7 +133,7 @@ msgstr ""
 
 #: src/commands/cargo-fix.md:204
 msgid "Feature Selection"
-msgstr ""
+msgstr "特性選取"
 
 #: src/commands/cargo-fix.md:206
 msgid ""
@@ -168,7 +168,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-fix.md:369
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-fix.md:393
 msgid "Miscellaneous Options"

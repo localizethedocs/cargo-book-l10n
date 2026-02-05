@@ -52,7 +52,7 @@ msgstr "選項"
 
 #: src/commands/cargo-run.md:22
 msgid "Package Selection"
-msgstr ""
+msgstr "軟體包選取"
 
 #: src/commands/cargo-run.md:24
 msgid ""
@@ -62,7 +62,7 @@ msgstr ""
 
 #: src/commands/cargo-run.md:38
 msgid "Target Selection"
-msgstr ""
+msgstr "目標選取"
 
 #: src/commands/cargo-run.md:40
 msgid ""
@@ -74,7 +74,7 @@ msgstr ""
 
 #: src/commands/cargo-run.md:57
 msgid "Feature Selection"
-msgstr ""
+msgstr "特性選取"
 
 #: src/commands/cargo-run.md:59
 msgid ""
@@ -109,7 +109,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-run.md:217
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-run.md:241
 msgid "Miscellaneous Options"
