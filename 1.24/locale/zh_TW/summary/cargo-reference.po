@@ -23,7 +23,7 @@ msgstr ""
 
 #: src/reference/index.md:6
 msgid "The reference covers the details of various areas of Cargo."
-msgstr ""
+msgstr "此參考涵蓋了 Cargo 各個領域的詳細資訊。"
 
 #: src/reference/index.md:8
 msgid "[Specifying Dependencies](reference/specifying-dependencies.html)"
