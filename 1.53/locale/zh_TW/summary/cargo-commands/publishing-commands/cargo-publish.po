@@ -91,7 +91,7 @@ msgstr "編譯選項"
 
 #: src/commands/cargo-publish.md:106
 msgid "Feature Selection"
-msgstr ""
+msgstr "特性選取"
 
 #: src/commands/cargo-publish.md:108
 msgid ""
@@ -120,7 +120,7 @@ msgstr "顯示選項"
 
 #: src/commands/cargo-publish.md:213
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-publish.md:237
 msgid "ENVIRONMENT"

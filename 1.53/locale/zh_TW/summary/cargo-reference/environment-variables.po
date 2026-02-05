@@ -24,7 +24,7 @@ msgstr ""
 
 #: src/reference/environment-variables.md:7
 msgid "Environment variables Cargo reads"
-msgstr ""
+msgstr "Cargo 讀取的環境變數"
 
 #: src/reference/environment-variables.md:9
 msgid ""
@@ -144,7 +144,7 @@ msgstr ""
 
 #: src/reference/environment-variables.md:60
 msgid "Configuration environment variables"
-msgstr ""
+msgstr "組態環境變數"
 
 #: src/reference/environment-variables.md:62
 msgid ""
@@ -576,7 +576,7 @@ msgstr ""
 
 #: src/reference/environment-variables.md:226
 msgid "Dynamic library paths"
-msgstr ""
+msgstr "動態程式庫路徑"
 
 #: src/reference/environment-variables.md:228
 msgid ""
@@ -588,15 +588,15 @@ msgstr ""
 
 #: src/reference/environment-variables.md:233
 msgid "Windows: `PATH`"
-msgstr ""
+msgstr "Windows：`PATH`"
 
 #: src/reference/environment-variables.md:234
 msgid "macOS: `DYLD_FALLBACK_LIBRARY_PATH`"
-msgstr ""
+msgstr "macOS：`DYLD_FALLBACK_LIBRARY_PATH`"
 
 #: src/reference/environment-variables.md:235
 msgid "Unix: `LD_LIBRARY_PATH`"
-msgstr ""
+msgstr "Unix：`LD_LIBRARY_PATH`"
 
 #: src/reference/environment-variables.md:237
 msgid ""
@@ -607,7 +607,7 @@ msgstr ""
 
 #: src/reference/environment-variables.md:241
 msgid "Cargo includes the following paths:"
-msgstr ""
+msgstr "Cargo 會引入以下路徑："
 
 #: src/reference/environment-variables.md:243
 msgid ""
@@ -632,7 +632,7 @@ msgstr ""
 
 #: src/reference/environment-variables.md:253
 msgid "Environment variables Cargo sets for build scripts"
-msgstr ""
+msgstr "Cargo 為建置腳本設定的環境變數"
 
 #: src/reference/environment-variables.md:255
 msgid ""
@@ -644,11 +644,11 @@ msgstr ""
 
 #: src/reference/environment-variables.md:261
 msgid "\"OUT_DIR\""
-msgstr ""
+msgstr "\"OUT_DIR\""
 
 #: src/reference/environment-variables.md:264
 msgid "`out_dir` will now contain the value of `OUT_DIR`."
-msgstr ""
+msgstr "`out_dir` 現在將包含 `OUT_DIR` 的值。"
 
 #: src/reference/environment-variables.md:267
 msgid ""
@@ -825,7 +825,7 @@ msgstr ""
 
 #: src/reference/environment-variables.md:352
 msgid "Environment variables Cargo sets for 3rd party subcommands"
-msgstr ""
+msgstr "Cargo 為第三方子命令設定的環境變數"
 
 #: src/reference/environment-variables.md:354
 msgid ""
