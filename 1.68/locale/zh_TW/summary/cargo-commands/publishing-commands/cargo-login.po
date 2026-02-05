@@ -71,7 +71,7 @@ msgstr "顯示選項"
 
 #: src/commands/cargo-login.md:70
 msgid "Common Options"
-msgstr ""
+msgstr "共用選項"
 
 #: src/commands/cargo-login.md:100
 msgid "ENVIRONMENT"

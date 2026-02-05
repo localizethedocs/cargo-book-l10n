@@ -91,7 +91,7 @@ msgstr ""
 
 #: src/reference/resolver.md:44
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: src/reference/resolver.md:46
 msgid "Caret"
