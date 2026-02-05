@@ -17,51 +17,51 @@ msgstr "Cargo 參考"
 
 #: src/reference/index.md:3
 msgid "The reference covers the details of various areas of Cargo."
-msgstr ""
+msgstr "此參考涵蓋了 Cargo 各個領域的詳細資訊。"
 
 #: src/reference/index.md:5
 msgid "[Specifying Dependencies](specifying-dependencies.md)"
-msgstr ""
+msgstr "[指定依賴項](specifying-dependencies.md)"
 
 #: src/reference/index.md:6
 msgid "[Overriding Dependencies](overriding-dependencies.md)"
-msgstr ""
+msgstr "[覆蓋依賴項](overriding-dependencies.md)"
 
 #: src/reference/index.md:7
 msgid "[The Manifest Format](manifest.md)"
-msgstr ""
+msgstr "[清單格式](manifest.md)"
 
 #: src/reference/index.md:8
 msgid "[Cargo Targets](cargo-targets.md)"
-msgstr ""
+msgstr "[Cargo 目標](cargo-targets.md)"
 
 #: src/reference/index.md:9
 msgid "[Workspaces](workspaces.md)"
-msgstr ""
+msgstr "[工作區](workspaces.md)"
 
 #: src/reference/index.md:10
 msgid "[Features](features.md)"
-msgstr ""
+msgstr "[特性](features.md)"
 
 #: src/reference/index.md:11
 msgid "[Profiles](profiles.md)"
-msgstr ""
+msgstr "[設定檔](profiles.md)"
 
 #: src/reference/index.md:12
 msgid "[Configuration](config.md)"
-msgstr ""
+msgstr "[配置](config.md)"
 
 #: src/reference/index.md:13
 msgid "[Environment Variables](environment-variables.md)"
-msgstr ""
+msgstr "[環境變數](environment-variables.md)"
 
 #: src/reference/index.md:14
 msgid "[Build Scripts](build-scripts.md)"
-msgstr ""
+msgstr "[建置腳本](build-scripts.md)"
 
 #: src/reference/index.md:15
 msgid "[Build Script Examples](build-script-examples.md)"
-msgstr ""
+msgstr "[建置腳本範例](build-script-examples.md)"
 
 #: src/reference/index.md:16
 msgid "[Publishing on crates.io](publishing.md)"
@@ -69,20 +69,20 @@ msgstr ""
 
 #: src/reference/index.md:17
 msgid "[Package ID Specifications](pkgid-spec.md)"
-msgstr ""
+msgstr "[套件 ID 規格](pkgid-spec.md)"
 
 #: src/reference/index.md:18
 msgid "[Source Replacement](source-replacement.md)"
-msgstr ""
+msgstr "[來源替換](source-replacement.md)"
 
 #: src/reference/index.md:19
 msgid "[External Tools](external-tools.md)"
-msgstr ""
+msgstr "[外部工具](external-tools.md)"
 
 #: src/reference/index.md:20
 msgid "[Registries](registries.md)"
-msgstr ""
+msgstr "[註冊表](registries.md)"
 
 #: src/reference/index.md:21
 msgid "[Unstable Features](unstable.md)"
-msgstr ""
+msgstr "[不穩定特性](unstable.md)"

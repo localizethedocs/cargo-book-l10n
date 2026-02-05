@@ -13,11 +13,11 @@ msgstr ""
 
 #: src/appendix/glossary.md:1
 msgid "Glossary"
-msgstr ""
+msgstr "詞彙表"
 
 #: src/appendix/glossary.md:3
 msgid "Artifact"
-msgstr ""
+msgstr "製品"
 
 #: src/appendix/glossary.md:5
 msgid ""
@@ -40,7 +40,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:15
 msgid "Edition"
-msgstr ""
+msgstr "版次（Edition）"
 
 #: src/appendix/glossary.md:17
 msgid ""
@@ -89,7 +89,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:41
 msgid "Index"
-msgstr ""
+msgstr "索引（Index）"
 
 #: src/appendix/glossary.md:43
 msgid "The index is the searchable list of crates in a registry."
@@ -97,7 +97,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:45
 msgid "Lock file"
-msgstr ""
+msgstr "鎖定檔（Lock file）"
 
 #: src/appendix/glossary.md:47
 msgid ""
@@ -109,7 +109,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:51
 msgid "Manifest"
-msgstr ""
+msgstr "清單"
 
 #: src/appendix/glossary.md:53
 msgid ""
@@ -125,7 +125,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:59
 msgid "Member"
-msgstr ""
+msgstr "成員（Member）"
 
 #: src/appendix/glossary.md:61
 msgid "A _member_ is a package that belongs to a workspace."
@@ -133,7 +133,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:63
 msgid "Package"
-msgstr ""
+msgstr "軟體包（Package）"
 
 #: src/appendix/glossary.md:65
 msgid ""
@@ -158,7 +158,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:76
 msgid "Project"
-msgstr ""
+msgstr "專案（Project）"
 
 #: src/appendix/glossary.md:78
 msgid "Another name for a [package](#package)."
@@ -166,7 +166,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:80
 msgid "Registry"
-msgstr ""
+msgstr "註冊表（Registry）"
 
 #: src/appendix/glossary.md:82
 msgid ""
