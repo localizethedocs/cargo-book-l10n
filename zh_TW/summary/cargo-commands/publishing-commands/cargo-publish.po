@@ -1,0 +1,208 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:29:12Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/commands/cargo-publish.md:1
+msgid "cargo-publish(1)"
+msgstr ""
+
+#: src/commands/cargo-publish.md:2
+msgid "NAME"
+msgstr "名稱"
+
+#: src/commands/cargo-publish.md:4
+msgid "cargo-publish --- Upload a package to the registry"
+msgstr ""
+
+#: src/commands/cargo-publish.md:6
+msgid "SYNOPSIS"
+msgstr "概要"
+
+#: src/commands/cargo-publish.md:8
+msgid "`cargo publish` \\[_options_\\]"
+msgstr ""
+
+#: src/commands/cargo-publish.md:10
+msgid "DESCRIPTION"
+msgstr "描述"
+
+#: src/commands/cargo-publish.md:12
+msgid ""
+"This command will create a distributable, compressed `.crate` file with the "
+"source code of the package in the current directory and upload it to a "
+"registry. The default registry is <https://crates.io>. This performs the "
+"following steps:"
+msgstr ""
+
+#: src/commands/cargo-publish.md:17
+msgid "Performs a few checks, including:"
+msgstr ""
+
+#: src/commands/cargo-publish.md:18
+msgid ""
+"Checks the `package.publish` key in the manifest for restrictions on which "
+"registries you are allowed to publish to."
+msgstr ""
+
+#: src/commands/cargo-publish.md:20
+msgid ""
+"Create a `.crate` file by following the steps in [cargo-package(1)](cargo-"
+"package.html)."
+msgstr ""
+
+#: src/commands/cargo-publish.md:21
+msgid ""
+"Upload the crate to the registry. The server will perform additional checks "
+"on the crate."
+msgstr ""
+
+#: src/commands/cargo-publish.md:23
+msgid ""
+"The client will poll waiting for the package to appear in the index, and may "
+"timeout. In that case, you will need to check for completion manually. This "
+"timeout does not affect the upload."
+msgstr ""
+
+#: src/commands/cargo-publish.md:27
+msgid ""
+"This command requires you to be authenticated with either the `--token` "
+"option or using [cargo-login(1)](cargo-login.html)."
+msgstr ""
+
+#: src/commands/cargo-publish.md:30
+msgid ""
+"See [the reference](../reference/publishing.html) for more details about "
+"packaging and publishing."
+msgstr ""
+
+#: src/commands/cargo-publish.md:33
+msgid "OPTIONS"
+msgstr "選項"
+
+#: src/commands/cargo-publish.md:35
+msgid "Publish Options"
+msgstr ""
+
+#: src/commands/cargo-publish.md:78
+msgid "Package Selection"
+msgstr "軟體包選取"
+
+#: src/commands/cargo-publish.md:80
+msgid ""
+"By default, when no package selection options are given, the packages "
+"selected depend on the selected manifest file (based on the current working "
+"directory if `--manifest-path` is not given). If the manifest is the root of "
+"a workspace then the workspaces default members are selected, otherwise only "
+"the package defined by the manifest will be selected."
+msgstr ""
+
+#: src/commands/cargo-publish.md:86
+msgid ""
+"The default members of a workspace can be set explicitly with the `workspace."
+"default-members` key in the root manifest. If this is not set, a virtual "
+"workspace will include all workspace members (equivalent to passing `--"
+"workspace`), and a non-virtual workspace will include only the root crate "
+"itself."
+msgstr ""
+
+#: src/commands/cargo-publish.md:91
+msgid ""
+"Selecting more than one package is unstable and available only on the "
+"[nightly channel](https://doc.rust-lang.org/book/appendix-07-nightly-rust."
+"html) and requires the `-Z package-workspace` flag to enable. See <https://"
+"github.com/rust-lang/cargo/issues/10948> for more information."
+msgstr ""
+
+#: src/commands/cargo-publish.md:108
+msgid ""
+"Selecting more than one package with this option is unstable and available "
+"only on the [nightly channel](https://doc.rust-lang.org/book/appendix-07-"
+"nightly-rust.html) and requires the `-Z package-workspace` flag to enable. "
+"See <https://github.com/rust-lang/cargo/issues/10948> for more information."
+msgstr ""
+
+#: src/commands/cargo-publish.md:136
+msgid "Compilation Options"
+msgstr "編譯選項"
+
+#: src/commands/cargo-publish.md:160
+msgid "Feature Selection"
+msgstr "特性選取"
+
+#: src/commands/cargo-publish.md:162
+msgid ""
+"The feature flags allow you to control which features are enabled. When no "
+"feature options are given, the `default` feature is activated for every "
+"selected package."
+msgstr ""
+
+#: src/commands/cargo-publish.md:166
+msgid ""
+"See [the features documentation](../reference/features.html#command-line-"
+"feature-options) for more details."
+msgstr ""
+
+#: src/commands/cargo-publish.md:188
+msgid "Manifest Options"
+msgstr "清單選項"
+
+#: src/commands/cargo-publish.md:240
+msgid "Miscellaneous Options"
+msgstr ""
+
+#: src/commands/cargo-publish.md:263
+msgid "Display Options"
+msgstr "顯示選項"
+
+#: src/commands/cargo-publish.md:294
+msgid "Common Options"
+msgstr "共用選項"
+
+#: src/commands/cargo-publish.md:334
+msgid "ENVIRONMENT"
+msgstr "環境"
+
+#: src/commands/cargo-publish.md:336
+msgid ""
+"See [the reference](../reference/environment-variables.html) for details on "
+"environment variables that Cargo reads."
+msgstr ""
+
+#: src/commands/cargo-publish.md:339
+msgid "EXIT STATUS"
+msgstr "退出狀態"
+
+#: src/commands/cargo-publish.md:341
+msgid "`0`: Cargo succeeded."
+msgstr "`0`：Cargo 執行成功。"
+
+#: src/commands/cargo-publish.md:342
+msgid "`101`: Cargo failed to complete."
+msgstr "`101`：Cargo 未能完成執行。"
+
+#: src/commands/cargo-publish.md:344
+msgid "EXAMPLES"
+msgstr "範例"
+
+#: src/commands/cargo-publish.md:346
+msgid "Publish the current package:"
+msgstr ""
+
+#: src/commands/cargo-publish.md:350
+msgid "SEE ALSO"
+msgstr "另請參見"
+
+#: src/commands/cargo-publish.md:351
+msgid ""
+"[cargo(1)](cargo.html), [cargo-package(1)](cargo-package.html), [cargo-"
+"login(1)](cargo-login.html)"
+msgstr ""
