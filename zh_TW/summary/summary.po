@@ -1,0 +1,116 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:35:15Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/SUMMARY.md:1
+msgid "Summary"
+msgstr "摘要"
+
+#: src/SUMMARY.md:3
+msgid "Introduction"
+msgstr "介紹"
+
+#: src/SUMMARY.md:5
+msgid "Getting Started"
+msgstr "開始使用"
+
+#: src/SUMMARY.md:6
+msgid "Installation"
+msgstr "安裝"
+
+#: src/SUMMARY.md:7
+msgid "First Steps with Cargo"
+msgstr ""
+
+#: src/SUMMARY.md:9
+msgid "Cargo Guide"
+msgstr "Cargo 指南"
+
+#: src/SUMMARY.md:10
+msgid "Why Cargo Exists"
+msgstr "為什麼 Cargo 會存在"
+
+#: src/SUMMARY.md:11
+msgid "Creating a New Project"
+msgstr ""
+
+#: src/SUMMARY.md:12
+msgid "Working on an Existing Project"
+msgstr ""
+
+#: src/SUMMARY.md:13
+msgid "Dependencies"
+msgstr ""
+
+#: src/SUMMARY.md:14
+msgid "Project Layout"
+msgstr ""
+
+#: src/SUMMARY.md:15
+msgid "Cargo.toml vs Cargo.lock"
+msgstr ""
+
+#: src/SUMMARY.md:16
+msgid "Tests"
+msgstr "測試"
+
+#: src/SUMMARY.md:17
+msgid "Continuous Integration"
+msgstr "持續整合"
+
+#: src/SUMMARY.md:18
+msgid "Build Cache"
+msgstr "建置快取"
+
+#: src/SUMMARY.md:20
+msgid "Cargo Reference"
+msgstr "Cargo 參考"
+
+#: src/SUMMARY.md:21
+msgid "Specifying Dependencies"
+msgstr ""
+
+#: src/SUMMARY.md:22
+msgid "The Manifest Format"
+msgstr "清單格式"
+
+#: src/SUMMARY.md:23
+msgid "Configuration"
+msgstr "組態"
+
+#: src/SUMMARY.md:24
+msgid "Environment Variables"
+msgstr "環境變數"
+
+#: src/SUMMARY.md:25
+msgid "Build Scripts"
+msgstr "建置腳本"
+
+#: src/SUMMARY.md:26
+msgid "Publishing on crates.io"
+msgstr "在 creates.io 上發佈"
+
+#: src/SUMMARY.md:27
+msgid "Package ID Specifications"
+msgstr "軟體包 ID 規範"
+
+#: src/SUMMARY.md:28
+msgid "Source Replacement"
+msgstr ""
+
+#: src/SUMMARY.md:29
+msgid "External Tools"
+msgstr "外部工具"
+
+#: src/SUMMARY.md:31
+msgid "FAQ"
+msgstr ""
