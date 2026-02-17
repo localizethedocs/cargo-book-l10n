@@ -695,23 +695,23 @@ msgstr ""
 
 #: src/reference/build-script-examples.md:473
 msgid "\"cargo::rustc-cfg=ossl101\""
-msgstr ""
+msgstr "\"cargo::rustc-cfg=ossl101\""
 
 #: src/reference/build-script-examples.md:476
 msgid "\"cargo::rustc-cfg=ossl102\""
-msgstr ""
+msgstr "\"cargo::rustc-cfg=ossl102\""
 
 #: src/reference/build-script-examples.md:479
 msgid "\"cargo::rustc-cfg=ossl110\""
-msgstr ""
+msgstr "\"cargo::rustc-cfg=ossl110\""
 
 #: src/reference/build-script-examples.md:482
 msgid "\"cargo::rustc-cfg=ossl110g\""
-msgstr ""
+msgstr "\"cargo::rustc-cfg=ossl110g\""
 
 #: src/reference/build-script-examples.md:485
 msgid "\"cargo::rustc-cfg=ossl111\""
-msgstr ""
+msgstr "\"cargo::rustc-cfg=ossl111\""
 
 #: src/reference/build-script-examples.md:490
 msgid ""

@@ -35,7 +35,7 @@ msgstr ""
 
 #: src/reference/lints.md:9
 msgid "`cargo::complexity`"
-msgstr ""
+msgstr "`cargo::complexity`"
 
 #: src/reference/lints.md:9
 msgid "code that does something simple but in a complex way"
@@ -48,7 +48,7 @@ msgstr ""
 
 #: src/reference/lints.md:10
 msgid "`cargo::correctness`"
-msgstr ""
+msgstr "`cargo::correctness`"
 
 #: src/reference/lints.md:10
 msgid "code that is outright wrong or useless"
@@ -60,7 +60,7 @@ msgstr ""
 
 #: src/reference/lints.md:11
 msgid "`cargo::nursery`"
-msgstr ""
+msgstr "`cargo::nursery`"
 
 #: src/reference/lints.md:11
 msgid "new lints that are still under development"
@@ -73,7 +73,7 @@ msgstr ""
 
 #: src/reference/lints.md:12
 msgid "`cargo::pedantic`"
-msgstr ""
+msgstr "`cargo::pedantic`"
 
 #: src/reference/lints.md:12
 msgid "lints which are rather strict or have occasional false positives"
@@ -81,7 +81,7 @@ msgstr ""
 
 #: src/reference/lints.md:13
 msgid "`cargo::perf`"
-msgstr ""
+msgstr "`cargo::perf`"
 
 #: src/reference/lints.md:13
 msgid "code that can be written to run faster"
@@ -89,7 +89,7 @@ msgstr ""
 
 #: src/reference/lints.md:14
 msgid "`cargo::restriction`"
-msgstr ""
+msgstr "`cargo::restriction`"
 
 #: src/reference/lints.md:14
 msgid "lints which prevent the use of Cargo features"
@@ -97,7 +97,7 @@ msgstr ""
 
 #: src/reference/lints.md:15
 msgid "`cargo::style`"
-msgstr ""
+msgstr "`cargo::style`"
 
 #: src/reference/lints.md:15
 msgid "code that should be written in a more idiomatic way"
@@ -105,7 +105,7 @@ msgstr ""
 
 #: src/reference/lints.md:16
 msgid "`cargo::suspicious`"
-msgstr ""
+msgstr "`cargo::suspicious`"
 
 #: src/reference/lints.md:16
 msgid "code that is most likely wrong or useless"
@@ -179,7 +179,7 @@ msgstr ""
 #: src/reference/lints.md:47 src/reference/lints.md:96
 #: src/reference/lints.md:125
 msgid "Example"
-msgstr ""
+msgstr "範例"
 
 #: src/reference/lints.md:48
 msgid ""
