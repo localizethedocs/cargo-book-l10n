@@ -50,7 +50,7 @@ msgstr ""
 msgid ""
 "The guide will give you all you need to know about how to use Cargo to "
 "develop Rust packages."
-msgstr ""
+msgstr "該指南將為您提供關於如何使用 Cargo 開發 Rust 軟體包的所有必要資訊。"
 
 #: src/index.md:22
 msgid "**[Cargo Reference](reference/index.html)**"
