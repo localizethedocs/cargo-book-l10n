@@ -1,0 +1,526 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:47:11Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/guide/continuous-integration.md:1
+msgid "Continuous Integration"
+msgstr ""
+
+#: src/guide/continuous-integration.md:3
+msgid "Getting Started"
+msgstr ""
+
+#: src/guide/continuous-integration.md:5
+msgid "A basic CI will build and test your projects:"
+msgstr ""
+
+#: src/guide/continuous-integration.md:7
+msgid "GitHub Actions"
+msgstr ""
+
+#: src/guide/continuous-integration.md:9
+msgid ""
+"To test your package on GitHub Actions, here is a sample `.github/workflows/"
+"ci.yml` file:"
+msgstr ""
+
+#: src/guide/continuous-integration.md:12
+#: src/guide/continuous-integration.md:23
+#: src/guide/continuous-integration.md:146
+msgid "name"
+msgstr ""
+
+#: src/guide/continuous-integration.md:12
+msgid "Cargo Build & Test"
+msgstr ""
+
+#: src/guide/continuous-integration.md:15
+msgid "push"
+msgstr ""
+
+#: src/guide/continuous-integration.md:16
+msgid "pull_request"
+msgstr ""
+
+#: src/guide/continuous-integration.md:17
+msgid "env"
+msgstr ""
+
+#: src/guide/continuous-integration.md:19
+msgid "CARGO_TERM_COLOR"
+msgstr ""
+
+#: src/guide/continuous-integration.md:19
+msgid "always"
+msgstr ""
+
+#: src/guide/continuous-integration.md:20
+#: src/guide/continuous-integration.md:144
+#: src/guide/continuous-integration.md:170
+msgid "jobs"
+msgstr ""
+
+#: src/guide/continuous-integration.md:22
+msgid "build_and_test"
+msgstr ""
+
+#: src/guide/continuous-integration.md:23
+msgid "Rust project - latest"
+msgstr ""
+
+#: src/guide/continuous-integration.md:24
+#: src/guide/continuous-integration.md:147
+#: src/guide/continuous-integration.md:172
+msgid "runs-on"
+msgstr ""
+
+#: src/guide/continuous-integration.md:24
+#: src/guide/continuous-integration.md:147
+#: src/guide/continuous-integration.md:172
+msgid "ubuntu-latest"
+msgstr ""
+
+#: src/guide/continuous-integration.md:25
+msgid "strategy"
+msgstr ""
+
+#: src/guide/continuous-integration.md:26
+msgid "matrix"
+msgstr ""
+
+#: src/guide/continuous-integration.md:27
+msgid "toolchain"
+msgstr ""
+
+#: src/guide/continuous-integration.md:28
+#: src/guide/continuous-integration.md:87
+msgid "stable"
+msgstr ""
+
+#: src/guide/continuous-integration.md:29
+msgid "beta"
+msgstr ""
+
+#: src/guide/continuous-integration.md:30
+#: src/guide/continuous-integration.md:92
+msgid "nightly"
+msgstr ""
+
+#: src/guide/continuous-integration.md:31
+#: src/guide/continuous-integration.md:149
+#: src/guide/continuous-integration.md:173
+msgid "steps"
+msgstr ""
+
+#: src/guide/continuous-integration.md:32
+#: src/guide/continuous-integration.md:150
+#: src/guide/continuous-integration.md:174
+#: src/guide/continuous-integration.md:175
+msgid "uses"
+msgstr ""
+
+#: src/guide/continuous-integration.md:32
+#: src/guide/continuous-integration.md:150
+msgid "actions/checkout@v3"
+msgstr ""
+
+#: src/guide/continuous-integration.md:33
+#: src/guide/continuous-integration.md:34
+#: src/guide/continuous-integration.md:35
+#: src/guide/continuous-integration.md:151
+#: src/guide/continuous-integration.md:152
+#: src/guide/continuous-integration.md:153
+#: src/guide/continuous-integration.md:154
+#: src/guide/continuous-integration.md:176
+msgid "run"
+msgstr ""
+
+#: src/guide/continuous-integration.md:33
+msgid ""
+"rustup update ${{ matrix.toolchain }} && rustup default ${{ matrix."
+"toolchain }}"
+msgstr ""
+
+#: src/guide/continuous-integration.md:34
+#: src/guide/continuous-integration.md:53
+#: src/guide/continuous-integration.md:60
+#: src/guide/continuous-integration.md:153
+msgid "cargo build --verbose"
+msgstr ""
+
+#: src/guide/continuous-integration.md:35
+#: src/guide/continuous-integration.md:54
+#: src/guide/continuous-integration.md:61
+#: src/guide/continuous-integration.md:154
+msgid "cargo test --verbose"
+msgstr ""
+
+#: src/guide/continuous-integration.md:39
+msgid ""
+"This will test all three release channels (note a failure in any toolchain "
+"version will fail the entire job). You can also click `\"Actions\" > \"new "
+"workflow\"` in the GitHub UI and select Rust to add the [default "
+"configuration](https://github.com/actions/starter-workflows/blob/main/ci/"
+"rust.yml) to your repo. See [GitHub Actions documentation](https://docs."
+"github.com/en/actions) for more information."
+msgstr ""
+
+#: src/guide/continuous-integration.md:41
+msgid "GitLab CI"
+msgstr ""
+
+#: src/guide/continuous-integration.md:43
+msgid ""
+"To test your package on GitLab CI, here is a sample `.gitlab-ci.yml` file:"
+msgstr ""
+
+#: src/guide/continuous-integration.md:46
+msgid "stages"
+msgstr ""
+
+#: src/guide/continuous-integration.md:47
+#: src/guide/continuous-integration.md:50
+#: src/guide/continuous-integration.md:57
+msgid "build"
+msgstr ""
+
+#: src/guide/continuous-integration.md:48
+msgid "rust-latest"
+msgstr ""
+
+#: src/guide/continuous-integration.md:50
+#: src/guide/continuous-integration.md:57
+msgid "stage"
+msgstr ""
+
+#: src/guide/continuous-integration.md:51
+#: src/guide/continuous-integration.md:58
+#: src/guide/continuous-integration.md:77
+msgid "image"
+msgstr ""
+
+#: src/guide/continuous-integration.md:51
+msgid "rust:latest"
+msgstr ""
+
+#: src/guide/continuous-integration.md:52
+#: src/guide/continuous-integration.md:59
+msgid "script"
+msgstr ""
+
+#: src/guide/continuous-integration.md:55
+msgid "rust-nightly"
+msgstr ""
+
+#: src/guide/continuous-integration.md:58
+msgid "rustlang/rust:nightly"
+msgstr ""
+
+#: src/guide/continuous-integration.md:62
+msgid "allow_failure"
+msgstr ""
+
+#: src/guide/continuous-integration.md:65
+msgid ""
+"This will test on the stable channel and nightly channel, but any breakage "
+"in nightly will not fail your overall build. Please see the [GitLab CI "
+"documentation](https://docs.gitlab.com/ce/ci/yaml/index.html) for more "
+"information."
+msgstr ""
+
+#: src/guide/continuous-integration.md:70
+msgid "builds.sr.ht"
+msgstr ""
+
+#: src/guide/continuous-integration.md:72
+msgid ""
+"To test your package on sr.ht, here is a sample `.build.yml` file. Be sure "
+"to change `<your repo>` and `<your project>` to the repo to clone and the "
+"directory where it was cloned."
+msgstr ""
+
+#: src/guide/continuous-integration.md:77
+msgid "archlinux"
+msgstr ""
+
+#: src/guide/continuous-integration.md:77
+msgid "packages"
+msgstr ""
+
+#: src/guide/continuous-integration.md:79
+msgid "rustup"
+msgstr ""
+
+#: src/guide/continuous-integration.md:79
+msgid "sources"
+msgstr ""
+
+#: src/guide/continuous-integration.md:81
+msgid "<your repo>"
+msgstr ""
+
+#: src/guide/continuous-integration.md:81
+msgid "tasks"
+msgstr ""
+
+#: src/guide/continuous-integration.md:83
+msgid "setup"
+msgstr ""
+
+#: src/guide/continuous-integration.md:83
+msgid ""
+"      rustup toolchain install nightly stable\n"
+"      cd <your project>/\n"
+"      rustup run stable cargo fetch\n"
+msgstr ""
+
+#: src/guide/continuous-integration.md:87
+msgid ""
+"      rustup default stable\n"
+"      cd <your project>/\n"
+"      cargo build --verbose\n"
+"      cargo test --verbose\n"
+msgstr ""
+
+#: src/guide/continuous-integration.md:92
+msgid ""
+"      rustup default nightly\n"
+"      cd <your project>/\n"
+"      cargo build --verbose ||:\n"
+"      cargo test --verbose  ||:\n"
+msgstr ""
+
+#: src/guide/continuous-integration.md:97
+msgid "docs"
+msgstr ""
+
+#: src/guide/continuous-integration.md:97
+msgid ""
+"      cd <your project>/\n"
+"      rustup run stable cargo doc --no-deps\n"
+"      rustup run nightly cargo doc --no-deps ||:\n"
+msgstr ""
+
+#: src/guide/continuous-integration.md:103
+msgid ""
+"This will test and build documentation on the stable channel and nightly "
+"channel, but any breakage in nightly will not fail your overall build. "
+"Please see the [builds.sr.ht documentation](https://man.sr.ht/builds.sr.ht/) "
+"for more information."
+msgstr ""
+
+#: src/guide/continuous-integration.md:108
+msgid "Verifying Latest Dependencies"
+msgstr ""
+
+#: src/guide/continuous-integration.md:110
+msgid ""
+"When [specifying dependencies](../reference/specifying-dependencies.md) in "
+"`Cargo.toml`, they generally match a range of versions. Exhaustively testing "
+"all version combination would be unwieldy. Verifying the latest versions "
+"would at least test for users who run [`cargo add`](../commands/cargo-add."
+"md) or [`cargo install`](../commands/cargo-install.md)."
+msgstr ""
+
+#: src/guide/continuous-integration.md:116
+msgid "When testing the latest versions some considerations are:"
+msgstr ""
+
+#: src/guide/continuous-integration.md:117
+msgid "Minimizing external factors affecting local development or CI"
+msgstr ""
+
+#: src/guide/continuous-integration.md:118
+msgid "Rate of new dependencies being published"
+msgstr ""
+
+#: src/guide/continuous-integration.md:119
+msgid "Level of risk a project is willing to accept"
+msgstr ""
+
+#: src/guide/continuous-integration.md:120
+msgid ""
+"CI costs, including indirect costs like if a CI service has a maximum for "
+"parallel runners, causing new jobs to be serialized when at the maximum."
+msgstr ""
+
+#: src/guide/continuous-integration.md:123
+msgid "Some potential solutions include:"
+msgstr ""
+
+#: src/guide/continuous-integration.md:124
+msgid ""
+"[Not checking in the `Cargo.lock`](../faq.md#why-have-cargolock-in-version-"
+"control)"
+msgstr ""
+
+#: src/guide/continuous-integration.md:125
+msgid "Depending on PR velocity, many versions may go untested"
+msgstr ""
+
+#: src/guide/continuous-integration.md:126
+msgid "This comes at the cost of determinism"
+msgstr ""
+
+#: src/guide/continuous-integration.md:127
+msgid ""
+"Have a CI job verify the latest dependencies but mark it to \"continue on "
+"failure\""
+msgstr ""
+
+#: src/guide/continuous-integration.md:128
+msgid "Depending on the CI service, failures might not be obvious"
+msgstr ""
+
+#: src/guide/continuous-integration.md:129
+msgid "Depending on PR velocity, may use more resources than necessary"
+msgstr ""
+
+#: src/guide/continuous-integration.md:130
+msgid "Have a scheduled CI job to verify latest dependencies"
+msgstr ""
+
+#: src/guide/continuous-integration.md:131
+msgid ""
+"A hosted CI service may disable scheduled jobs for repositories that haven't "
+"been touched in a while, affecting passively maintained packages"
+msgstr ""
+
+#: src/guide/continuous-integration.md:133
+msgid ""
+"Depending on the CI service, notifications might not be routed to people who "
+"can act on the failure"
+msgstr ""
+
+#: src/guide/continuous-integration.md:135
+msgid ""
+"If not balanced with dependency publish rate, may not test enough versions "
+"or may do redundant testing"
+msgstr ""
+
+#: src/guide/continuous-integration.md:137
+msgid ""
+"Regularly update dependencies through PRs, like with [Dependabot](https://"
+"docs.github.com/en/code-security/dependabot/working-with-dependabot) or "
+"[RenovateBot](https://renovatebot.com/)"
+msgstr ""
+
+#: src/guide/continuous-integration.md:138
+msgid ""
+"Can isolate dependencies to their own PR or roll them up into a single PR"
+msgstr ""
+
+#: src/guide/continuous-integration.md:139
+msgid "Only uses the resources necessary"
+msgstr ""
+
+#: src/guide/continuous-integration.md:140
+msgid ""
+"Can configure the frequency to balance CI resources and coverage of "
+"dependency versions"
+msgstr ""
+
+#: src/guide/continuous-integration.md:142
+msgid "An example CI job to verify latest dependencies, using GitHub Actions:"
+msgstr ""
+
+#: src/guide/continuous-integration.md:145
+msgid "latest_deps"
+msgstr ""
+
+#: src/guide/continuous-integration.md:146
+msgid "Latest Dependencies"
+msgstr ""
+
+#: src/guide/continuous-integration.md:148
+msgid "continue-on-error"
+msgstr ""
+
+#: src/guide/continuous-integration.md:151
+msgid "rustup update stable && rustup default stable"
+msgstr ""
+
+#: src/guide/continuous-integration.md:152
+msgid "cargo update --verbose"
+msgstr ""
+
+#: src/guide/continuous-integration.md:156
+msgid ""
+"For projects with higher risks of per-platform or per-Rust version failures, "
+"more combinations may want to be tested."
+msgstr ""
+
+#: src/guide/continuous-integration.md:159
+msgid "Verifying `rust-version`"
+msgstr ""
+
+#: src/guide/continuous-integration.md:161
+msgid ""
+"When publishing packages that specify [`rust-version`](../reference/manifest."
+"md#the-rust-version-field), it is important to verify the correctness of "
+"that field."
+msgstr ""
+
+#: src/guide/continuous-integration.md:164
+msgid "Some third-party tools that can help with this include:"
+msgstr ""
+
+#: src/guide/continuous-integration.md:165
+msgid "[`cargo-msrv`](https://crates.io/crates/cargo-msrv)"
+msgstr ""
+
+#: src/guide/continuous-integration.md:166
+msgid "[`cargo-hack`](https://crates.io/crates/cargo-hack)"
+msgstr ""
+
+#: src/guide/continuous-integration.md:168
+msgid "An example of one way to do this, using GitHub Actions:"
+msgstr ""
+
+#: src/guide/continuous-integration.md:171
+msgid "msrv"
+msgstr ""
+
+#: src/guide/continuous-integration.md:174
+msgid "actions/checkout@v4"
+msgstr ""
+
+#: src/guide/continuous-integration.md:175
+msgid "taiki-e/install-action@cargo-hack"
+msgstr ""
+
+#: src/guide/continuous-integration.md:176
+msgid ""
+"cargo hack check --rust-version --workspace --all-targets --ignore-private"
+msgstr ""
+
+#: src/guide/continuous-integration.md:178
+msgid "This tries to balance thoroughness with turnaround time:"
+msgstr ""
+
+#: src/guide/continuous-integration.md:179
+msgid ""
+"A single platform is used as most projects are platform-agnostic, trusting "
+"platform-specific dependencies to verify their behavior."
+msgstr ""
+
+#: src/guide/continuous-integration.md:180
+msgid ""
+"`cargo check` is used as most issues contributors will run into are API "
+"availability and not behavior."
+msgstr ""
+
+#: src/guide/continuous-integration.md:181
+msgid ""
+"Unpublished packages are skipped as this assumes only consumers of the "
+"verified project, through a registry, will care about `rust-version`."
+msgstr ""
