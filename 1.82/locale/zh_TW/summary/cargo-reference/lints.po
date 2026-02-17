@@ -96,7 +96,7 @@ msgstr ""
 #: src/reference/lints.md:33 src/reference/lints.md:72
 #: src/reference/lints.md:92
 msgid "Example"
-msgstr ""
+msgstr "範例"
 
 #: src/reference/lints.md:34
 msgid ""
