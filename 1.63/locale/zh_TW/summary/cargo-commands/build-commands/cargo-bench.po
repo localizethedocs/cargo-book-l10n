@@ -100,7 +100,7 @@ msgstr "選項"
 
 #: src/commands/cargo-bench.md:60
 msgid "Benchmark Options"
-msgstr ""
+msgstr "基準選項"
 
 #: src/commands/cargo-bench.md:78
 msgid "Package Selection"
