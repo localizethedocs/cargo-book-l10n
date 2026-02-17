@@ -21,7 +21,7 @@ msgstr "名稱"
 
 #: src/commands/cargo-metadata.md:5
 msgid "cargo-metadata --- Machine-readable metadata about the current package"
-msgstr ""
+msgstr "cargo-metadata --- 關於當前軟體包的機器可讀的元資料"
 
 #: src/commands/cargo-metadata.md:7
 msgid "SYNOPSIS"
