@@ -143,7 +143,7 @@ msgstr ""
 msgid ""
 "In the longer-term, we’re looking at ways to conveniently cross-compile "
 "packages using Cargo."
-msgstr ""
+msgstr "長期而言，我們正在研究如何使用 Cargo 方便地進行軟體包的跨平臺編譯。"
 
 #: src/faq.md:82
 msgid "Does Cargo support environments, like `production` or `test`?"
@@ -274,7 +274,7 @@ msgstr ""
 
 #: src/faq.md:159
 msgid "How can Cargo work offline?"
-msgstr ""
+msgstr "Cargo 如何離線運作？"
 
 #: src/faq.md:161
 msgid ""

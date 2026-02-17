@@ -37,7 +37,7 @@ msgstr "[Cargo 目標](cargo-targets.md)"
 
 #: src/reference/index.md:9
 msgid "[Workspaces](workspaces.md)"
-msgstr "[工作區](workspaces.md)"
+msgstr "[工作空間](workspaces.md)"
 
 #: src/reference/index.md:10
 msgid "[Features](features.md)"
