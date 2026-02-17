@@ -90,7 +90,7 @@ msgstr ""
 
 #: src/reference/build-cache.md:29
 msgid "Example"
-msgstr ""
+msgstr "範例"
 
 #: src/reference/build-cache.md:31
 msgid "<code style=\"white-space: nowrap\">target/\\<triple\\>/debug/</code>"
