@@ -17,7 +17,7 @@ msgstr "詞彙表"
 
 #: src/appendix/glossary.md:3
 msgid "Artifact"
-msgstr "製品"
+msgstr "製品（Artifact）"
 
 #: src/appendix/glossary.md:5
 msgid ""
@@ -95,7 +95,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:44
 msgid "Manifest"
-msgstr "清單"
+msgstr "清單（Manifest）"
 
 #: src/appendix/glossary.md:46
 msgid ""
@@ -214,7 +214,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:98
 msgid "Spec"
-msgstr ""
+msgstr "規範（Spec）"
 
 #: src/appendix/glossary.md:100
 msgid "See [package id specification](#package)."
@@ -222,7 +222,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:102
 msgid "Target"
-msgstr "目標"
+msgstr "目標（Target）"
 
 #: src/appendix/glossary.md:104
 msgid "The meaning of the term _target_ depends on the context:"
@@ -301,7 +301,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:139
 msgid "Test Targets"
-msgstr ""
+msgstr "測試目標（Test Target）"
 
 #: src/appendix/glossary.md:141
 msgid ""
@@ -330,7 +330,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:155
 msgid "Workspace"
-msgstr ""
+msgstr "工作空間（Workspace00）"
 
 #: src/appendix/glossary.md:157
 msgid ""

@@ -113,7 +113,7 @@ msgstr "外部工具"
 
 #: src/SUMMARY.md:30
 msgid "Unstable Features"
-msgstr ""
+msgstr "不穩定功能"
 
 #: src/SUMMARY.md:32
 msgid "Cargo Commands"
