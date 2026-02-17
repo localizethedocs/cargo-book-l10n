@@ -1,0 +1,169 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:28:17Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/external-tools.md:1
+msgid "External tools"
+msgstr "外部工具"
+
+#: src/reference/external-tools.md:3
+msgid ""
+"One of the goals of Cargo is simple integration with third-party tools, like "
+"IDEs and other build systems. To make integration easier, Cargo has several "
+"facilities:"
+msgstr ""
+
+#: src/reference/external-tools.md:7
+msgid ""
+"a `cargo metadata` command, which outputs project structure and dependencies "
+"information in JSON,"
+msgstr ""
+
+#: src/reference/external-tools.md:10
+msgid ""
+"a `--message-format` flag, which outputs information about a particular "
+"build, and"
+msgstr ""
+
+#: src/reference/external-tools.md:13
+msgid "support for custom subcommands."
+msgstr ""
+
+#: src/reference/external-tools.md:16
+msgid "Information about project structure"
+msgstr ""
+
+#: src/reference/external-tools.md:18
+msgid ""
+"You can use `cargo metadata` command to get information about project "
+"structure and dependencies. The output of the command looks like this:"
+msgstr ""
+
+#: src/reference/external-tools.md:21
+msgid ""
+"```text\n"
+"{\n"
+"  // Integer version number of the format.\n"
+"  \"version\": integer,\n"
+"\n"
+"  // List of packages for this workspace, including dependencies.\n"
+"  \"packages\": [\n"
+"    {\n"
+"      // Opaque package identifier.\n"
+"      \"id\": PackageId,\n"
+"\n"
+"      \"name\": string,\n"
+"\n"
+"      \"version\": string,\n"
+"\n"
+"      \"source\": SourceId,\n"
+"\n"
+"      // A list of declared dependencies, see `resolve` field for actual "
+"dependencies.\n"
+"      \"dependencies\": [ Dependency ],\n"
+"\n"
+"      \"targets: [ Target ],\n"
+"\n"
+"      // Path to Cargo.toml\n"
+"      \"manifest_path\": string,\n"
+"    }\n"
+"  ],\n"
+"\n"
+"  \"workspace_members\": [ PackageId ],\n"
+"\n"
+"  // Dependencies graph.\n"
+"  \"resolve\": {\n"
+"     \"nodes\": [\n"
+"       {\n"
+"         \"id\": PackageId,\n"
+"         \"dependencies\": [ PackageId ]\n"
+"       }\n"
+"     ]\n"
+"  }\n"
+"}\n"
+"```"
+msgstr ""
+
+#: src/reference/external-tools.md:62
+msgid ""
+"The format is stable and versioned. When calling `cargo metadata`, you "
+"should pass `--format-version` flag explicitly to avoid forward "
+"incompatibility hazard."
+msgstr ""
+
+#: src/reference/external-tools.md:66
+msgid ""
+"If you are using Rust, there is [cargo_metadata](https://crates.io/crates/"
+"cargo_metadata) crate."
+msgstr ""
+
+#: src/reference/external-tools.md:71
+msgid "Information about build"
+msgstr ""
+
+#: src/reference/external-tools.md:73
+msgid ""
+"When passing `--message-format=json`, Cargo will output the following "
+"information during the build:"
+msgstr ""
+
+#: src/reference/external-tools.md:76
+msgid "compiler errors and warnings,"
+msgstr ""
+
+#: src/reference/external-tools.md:78
+msgid "produced artifacts,"
+msgstr ""
+
+#: src/reference/external-tools.md:80
+msgid "results of the build scripts (for example, native dependencies)."
+msgstr ""
+
+#: src/reference/external-tools.md:82
+msgid ""
+"The output goes to stdout in the JSON object per line format. The `reason` "
+"field distinguishes different kinds of messages."
+msgstr ""
+
+#: src/reference/external-tools.md:85
+msgid ""
+"Information about dependencies in the Makefile-compatible format is stored "
+"in the `.d` files alongside the artifacts."
+msgstr ""
+
+#: src/reference/external-tools.md:89
+msgid "Custom subcommands"
+msgstr ""
+
+#: src/reference/external-tools.md:91
+msgid ""
+"Cargo is designed to be extensible with new subcommands without having to "
+"modify Cargo itself. This is achieved by translating a cargo invocation of "
+"the form cargo `(?<command>[^ ]+)` into an invocation of an external tool "
+"`cargo-${command}` that then needs to be present in one of the user's "
+"`$PATH` directories."
+msgstr ""
+
+#: src/reference/external-tools.md:97
+msgid ""
+"Custom subcommand may use `CARGO` environment variable to call back to "
+"Cargo. Alternatively, it can link to `cargo` crate as a library, but this "
+"approach has drawbacks:"
+msgstr ""
+
+#: src/reference/external-tools.md:101
+msgid "Cargo as a library is unstable, API changes without deprecation,"
+msgstr ""
+
+#: src/reference/external-tools.md:103
+msgid "versions of Cargo library and Cargo binary may be different."
+msgstr ""
