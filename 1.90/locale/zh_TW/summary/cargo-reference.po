@@ -33,7 +33,7 @@ msgstr "[Rust 版本](rust-version.md)"
 
 #: src/reference/index.md:8
 msgid "[Workspaces](workspaces.md)"
-msgstr "[工作區](workspaces.md)"
+msgstr "[工作空間](workspaces.md)"
 
 #: src/reference/index.md:9
 msgid "[Specifying Dependencies](specifying-dependencies.md)"

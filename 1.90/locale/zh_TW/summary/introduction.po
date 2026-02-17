@@ -31,6 +31,14 @@ msgid ""
 "You can contribute to this book on [GitHub](https://github.com/rust-lang/"
 "cargo/tree/master/src/doc)."
 msgstr ""
+"Cargo 是 [Rust](https://www.rust-lang.org/) 的[_軟體包管理器_](./appendix/"
+"glossary.md#package-manager \"\\\"package manager\\\" (glossary entry)\")。"
+"Cargo 會下載您的 Rust [軟體包](./appendix/glossary.md#package \"\\\"package\\"
+"\" (glossary entry)\")依賴項目、編譯您的軟體包、製作可散佈的軟體包，並將其上"
+"傳到 Rust 社群的[_軟體包註冊表_](./appendix/glossary.md#package-registry \"\\"
+"\"package registry\\\" (glossary entry)\") [crates.io](https://crates.io/)。"
+"您可以在 [GitHub](https://github.com/rust-lang/cargo/tree/master/src/doc) 上"
+"為本書做出貢獻。"
 
 #: src/index.md:10
 msgid "Sections"
@@ -54,7 +62,7 @@ msgstr "**[Cargo 指南](guide/index.md)**"
 msgid ""
 "The guide will give you all you need to know about how to use Cargo to "
 "develop Rust packages."
-msgstr ""
+msgstr "該指南將為您提供關於如何使用 Cargo 開發 Rust 軟體包的所有必要資訊。"
 
 #: src/index.md:22
 msgid "**[Cargo Reference](reference/index.md)**"
@@ -98,7 +106,7 @@ msgstr "**其他文件：**"
 msgid ""
 "[Changelog](CHANGELOG.md) \\--- Detailed notes about changes in Cargo in "
 "each release."
-msgstr ""
+msgstr "[變更日誌](CHANGELOG.md) \\--- 關於 Cargo 每個發行版變更的詳細備註。"
 
 #: src/index.md:39
 msgid ""

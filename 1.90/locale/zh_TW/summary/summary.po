@@ -113,7 +113,7 @@ msgstr ""
 
 #: src/SUMMARY.md:30
 msgid "Features"
-msgstr ""
+msgstr "功能"
 
 #: src/SUMMARY.md:31
 msgid "Features Examples"
@@ -193,7 +193,7 @@ msgstr ""
 
 #: src/SUMMARY.md:50
 msgid "Unstable Features"
-msgstr ""
+msgstr "不穩定功能"
 
 #: src/SUMMARY.md:52
 msgid "Cargo Commands"
@@ -321,7 +321,7 @@ msgstr "cargo update"
 
 #: src/SUMMARY.md:83
 msgid "cargo vendor"
-msgstr ""
+msgstr "cargo vendor"
 
 #: src/SUMMARY.md:84
 msgid "Package Commands"
@@ -393,4 +393,4 @@ msgstr "附錄：詞彙表"
 
 #: src/SUMMARY.md:102
 msgid "Appendix: Git Authentication"
-msgstr ""
+msgstr "附錄：Git 身份認證"
