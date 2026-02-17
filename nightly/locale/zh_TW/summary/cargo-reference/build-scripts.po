@@ -43,7 +43,7 @@ msgstr ""
 
 #: src/reference/build-scripts.md:18
 msgid "\"cargo::rerun-if-changed=src/hello.c\""
-msgstr ""
+msgstr "\"cargo::rerun-if-changed=src/hello.c\""
 
 #: src/reference/build-scripts.md:19
 msgid "// Use the `cc` crate to build a C file and statically link it.\n"
@@ -326,7 +326,7 @@ msgstr ""
 
 #: src/reference/build-scripts.md:152
 msgid "`cargo::rustc-link-arg=FLAG`"
-msgstr ""
+msgstr "`cargo::rustc-link-arg=FLAG`"
 
 #: src/reference/build-scripts.md:154
 msgid ""
@@ -339,7 +339,7 @@ msgstr ""
 
 #: src/reference/build-scripts.md:162
 msgid "`cargo::rustc-link-arg-cdylib=FLAG`"
-msgstr ""
+msgstr "`cargo::rustc-link-arg-cdylib=FLAG`"
 
 #: src/reference/build-scripts.md:164
 msgid ""
@@ -358,7 +358,7 @@ msgstr ""
 
 #: src/reference/build-scripts.md:172
 msgid "`cargo::rustc-link-arg-bin=BIN=FLAG`"
-msgstr ""
+msgstr "`cargo::rustc-link-arg-bin=BIN=FLAG`"
 
 #: src/reference/build-scripts.md:174
 msgid ""
@@ -371,7 +371,7 @@ msgstr ""
 
 #: src/reference/build-scripts.md:179
 msgid "`cargo::rustc-link-arg-bins=FLAG`"
-msgstr ""
+msgstr "`cargo::rustc-link-arg-bins=FLAG`"
 
 #: src/reference/build-scripts.md:181
 msgid ""
