@@ -493,7 +493,7 @@ msgstr ""
 
 #: src/reference/resolver.md:313
 msgid "Features"
-msgstr ""
+msgstr "功能"
 
 #: src/reference/resolver.md:315
 msgid ""

@@ -70,7 +70,7 @@ msgstr ""
 
 #: src/reference/lints.md:26 src/reference/lints.md:51
 msgid "Example"
-msgstr ""
+msgstr "範例"
 
 #: src/reference/lints.md:27
 msgid ""
