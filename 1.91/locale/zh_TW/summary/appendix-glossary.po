@@ -17,7 +17,7 @@ msgstr "詞彙表"
 
 #: src/appendix/glossary.md:3
 msgid "Artifact"
-msgstr "製品"
+msgstr "製品（Artifact）"
 
 #: src/appendix/glossary.md:5
 msgid ""
@@ -153,7 +153,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:73
 msgid "Manifest"
-msgstr "清單"
+msgstr "清單（Manifest）"
 
 #: src/appendix/glossary.md:75
 msgid ""
@@ -252,7 +252,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:126
 msgid "Package manager"
-msgstr "軟體包管理器"
+msgstr "軟體包管理器（Package manager）"
 
 #: src/appendix/glossary.md:128
 msgid ""
@@ -276,7 +276,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:142
 msgid "Package registry"
-msgstr "軟體包註冊表"
+msgstr "軟體包註冊表（Package registry）"
 
 #: src/appendix/glossary.md:144
 msgid "See [_registry_](#registry)."
@@ -356,7 +356,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:177
 msgid "Spec"
-msgstr ""
+msgstr "規範（Spec）"
 
 #: src/appendix/glossary.md:179
 msgid "See [package ID specification](#package)."
@@ -364,7 +364,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:181
 msgid "Target"
-msgstr "目標"
+msgstr "目標（Target）"
 
 #: src/appendix/glossary.md:183
 msgid "The meaning of the term _target_ depends on the context:"
@@ -444,7 +444,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:219
 msgid "Test Targets"
-msgstr ""
+msgstr "測試目標（Test Target）"
 
 #: src/appendix/glossary.md:221
 msgid ""
@@ -473,7 +473,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:235
 msgid "Workspace"
-msgstr ""
+msgstr "工作空間（Workspace00）"
 
 #: src/appendix/glossary.md:237
 msgid ""
