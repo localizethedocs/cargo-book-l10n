@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/reference/unstable.md:1
 msgid "Unstable Features"
-msgstr ""
+msgstr "不穩定功能"
 
 #: src/reference/unstable.md:3
 msgid ""
@@ -3477,7 +3477,7 @@ msgstr ""
 
 #: src/reference/unstable.md:1651
 msgid "Features"
-msgstr ""
+msgstr "功能"
 
 #: src/reference/unstable.md:1653
 msgid ""
