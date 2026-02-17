@@ -1,0 +1,114 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:35:12Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/commands/cargo-login.md:1
+msgid "cargo-login(1)"
+msgstr ""
+
+#: src/commands/cargo-login.md:3
+msgid "NAME"
+msgstr "名稱"
+
+#: src/commands/cargo-login.md:5
+msgid "cargo-login --- Save an API token from the registry locally"
+msgstr ""
+
+#: src/commands/cargo-login.md:7
+msgid "SYNOPSIS"
+msgstr "概要"
+
+#: src/commands/cargo-login.md:9
+msgid "`cargo login` \\[_options_\\] \\[_token_\\]"
+msgstr ""
+
+#: src/commands/cargo-login.md:11
+msgid "DESCRIPTION"
+msgstr "描述"
+
+#: src/commands/cargo-login.md:13
+msgid ""
+"This command will save the API token to disk so that commands that require "
+"authentication, such as [cargo-publish(1)](cargo-publish.html), will be "
+"automatically authenticated. The token is saved in `$CARGO_HOME/credentials."
+"toml`. `CARGO_HOME` defaults to `.cargo` in your home directory."
+msgstr ""
+
+#: src/commands/cargo-login.md:18
+msgid "If the _token_ argument is not specified, it will be read from stdin."
+msgstr ""
+
+#: src/commands/cargo-login.md:20
+msgid ""
+"The API token for crates.io may be retrieved from <https://crates.io/me>."
+msgstr ""
+
+#: src/commands/cargo-login.md:22
+msgid ""
+"Take care to keep the token secret, it should not be shared with anyone else."
+msgstr ""
+
+#: src/commands/cargo-login.md:24
+msgid "OPTIONS"
+msgstr "選項"
+
+#: src/commands/cargo-login.md:26
+msgid "Login Options"
+msgstr ""
+
+#: src/commands/cargo-login.md:38
+msgid "Display Options"
+msgstr "顯示選項"
+
+#: src/commands/cargo-login.md:70
+msgid "Common Options"
+msgstr "共用選項"
+
+#: src/commands/cargo-login.md:111
+msgid "ENVIRONMENT"
+msgstr "環境"
+
+#: src/commands/cargo-login.md:113
+msgid ""
+"See [the reference](../reference/environment-variables.html) for details on "
+"environment variables that Cargo reads."
+msgstr ""
+
+#: src/commands/cargo-login.md:117
+msgid "EXIT STATUS"
+msgstr "退出狀態"
+
+#: src/commands/cargo-login.md:119
+msgid "`0`: Cargo succeeded."
+msgstr "`0`：Cargo 執行成功。"
+
+#: src/commands/cargo-login.md:120
+msgid "`101`: Cargo failed to complete."
+msgstr "`101`：Cargo 未能完成執行。"
+
+#: src/commands/cargo-login.md:123
+msgid "EXAMPLES"
+msgstr "範例"
+
+#: src/commands/cargo-login.md:125
+msgid "Save the API token to disk:"
+msgstr ""
+
+#: src/commands/cargo-login.md:129
+msgid "SEE ALSO"
+msgstr "另請參見"
+
+#: src/commands/cargo-login.md:130
+msgid ""
+"[cargo(1)](cargo.html), [cargo-logout(1)](cargo-logout.html), [cargo-"
+"publish(1)](cargo-publish.html)"
+msgstr ""
