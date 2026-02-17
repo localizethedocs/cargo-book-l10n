@@ -727,6 +727,10 @@ msgid ""
 "plugins\"]\n"
 "```"
 msgstr ""
+"```toml\n"
+"categories = [\"command-line-utilities\", \"development-tools::cargo-"
+"plugins\"]\n"
+"```"
 
 #: src/reference/manifest.md:321
 msgid ""
