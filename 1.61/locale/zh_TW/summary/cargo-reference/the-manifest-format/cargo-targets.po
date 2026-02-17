@@ -516,7 +516,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:285
 msgid "Example"
-msgstr ""
+msgstr "範例"
 
 #: src/reference/cargo-targets.md:285
 msgid "`\"bin\"`"
