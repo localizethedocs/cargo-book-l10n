@@ -1,0 +1,193 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:28:45Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/commands/cargo-rustdoc.md:1
+msgid "cargo-rustdoc(1)"
+msgstr ""
+
+#: src/commands/cargo-rustdoc.md:2
+msgid "NAME"
+msgstr "名稱"
+
+#: src/commands/cargo-rustdoc.md:4
+msgid ""
+"cargo-rustdoc --- Build a package's documentation, using specified custom "
+"flags"
+msgstr "cargo-rustdoc --- 使用指定的自定旗標建置軟體包的文件"
+
+#: src/commands/cargo-rustdoc.md:6
+msgid "SYNOPSIS"
+msgstr "概要"
+
+#: src/commands/cargo-rustdoc.md:8
+msgid "`cargo rustdoc` \\[_options_\\] \\[`--` _args_\\]"
+msgstr ""
+
+#: src/commands/cargo-rustdoc.md:10
+msgid "DESCRIPTION"
+msgstr "描述"
+
+#: src/commands/cargo-rustdoc.md:12
+msgid ""
+"The specified target for the current package (or package specified by `-p` "
+"if provided) will be documented with the specified _args_ being passed to "
+"the final rustdoc invocation. Dependencies will not be documented as part of "
+"this command. Note that rustdoc will still unconditionally receive arguments "
+"such as `-L`, `--extern`, and `--crate-type`, and the specified _args_ will "
+"simply be added to the rustdoc invocation."
+msgstr ""
+
+#: src/commands/cargo-rustdoc.md:19
+msgid ""
+"See <https://doc.rust-lang.org/rustdoc/index.html> for documentation on "
+"rustdoc flags."
+msgstr ""
+
+#: src/commands/cargo-rustdoc.md:22
+msgid ""
+"This command requires that only one target is being compiled when additional "
+"arguments are provided. If more than one target is available for the current "
+"package the filters of `--lib`, `--bin`, etc, must be used to select which "
+"target is compiled."
+msgstr ""
+
+#: src/commands/cargo-rustdoc.md:27
+msgid ""
+"To pass flags to all rustdoc processes spawned by Cargo, use the "
+"`RUSTDOCFLAGS` [environment variable](../reference/environment-variables."
+"html) or the `build.rustdocflags` [config value](../reference/config.html)."
+msgstr ""
+
+#: src/commands/cargo-rustdoc.md:31
+msgid "OPTIONS"
+msgstr "選項"
+
+#: src/commands/cargo-rustdoc.md:33
+msgid "Documentation Options"
+msgstr "文件選項"
+
+#: src/commands/cargo-rustdoc.md:46
+msgid "Package Selection"
+msgstr "軟體包選取"
+
+#: src/commands/cargo-rustdoc.md:48
+msgid ""
+"By default, the package in the current working directory is selected. The `-"
+"p` flag can be used to choose a different package in a workspace."
+msgstr ""
+
+#: src/commands/cargo-rustdoc.md:61
+msgid "Target Selection"
+msgstr "目標選取"
+
+#: src/commands/cargo-rustdoc.md:63
+msgid ""
+"When no target selection options are given, `cargo rustdoc` will document "
+"all binary and library targets of the selected package. The binary will be "
+"skipped if its name is the same as the lib target. Binaries are skipped if "
+"they have `required-features` that are missing."
+msgstr ""
+
+#: src/commands/cargo-rustdoc.md:68
+msgid ""
+"Passing target selection flags will document only the specified targets."
+msgstr ""
+
+#: src/commands/cargo-rustdoc.md:71
+msgid ""
+"Note that `--bin`, `--example`, `--test` and `--bench` flags also support "
+"common Unix glob patterns like `*`, `?` and `[]`. However, to avoid your "
+"shell accidentally expanding glob patterns before Cargo handles them, you "
+"must use single quotes or double quotes around each glob pattern."
+msgstr ""
+
+#: src/commands/cargo-rustdoc.md:136
+msgid "Feature Selection"
+msgstr "特性選取"
+
+#: src/commands/cargo-rustdoc.md:138
+msgid ""
+"The feature flags allow you to control which features are enabled. When no "
+"feature options are given, the `default` feature is activated for every "
+"selected package."
+msgstr ""
+
+#: src/commands/cargo-rustdoc.md:142
+msgid ""
+"See [the features documentation](../reference/features.html#command-line-"
+"feature-options) for more details."
+msgstr ""
+
+#: src/commands/cargo-rustdoc.md:164
+msgid "Compilation Options"
+msgstr "編譯選項"
+
+#: src/commands/cargo-rustdoc.md:210
+msgid "Output Options"
+msgstr "輸出選項"
+
+#: src/commands/cargo-rustdoc.md:221
+msgid "Display Options"
+msgstr "顯示選項"
+
+#: src/commands/cargo-rustdoc.md:275
+msgid "Manifest Options"
+msgstr "清單選項"
+
+#: src/commands/cargo-rustdoc.md:329
+msgid "Common Options"
+msgstr "共用選項"
+
+#: src/commands/cargo-rustdoc.md:369
+msgid "Miscellaneous Options"
+msgstr ""
+
+#: src/commands/cargo-rustdoc.md:401
+msgid "ENVIRONMENT"
+msgstr "環境"
+
+#: src/commands/cargo-rustdoc.md:403
+msgid ""
+"See [the reference](../reference/environment-variables.html) for details on "
+"environment variables that Cargo reads."
+msgstr ""
+
+#: src/commands/cargo-rustdoc.md:406
+msgid "EXIT STATUS"
+msgstr "退出狀態"
+
+#: src/commands/cargo-rustdoc.md:408
+msgid "`0`: Cargo succeeded."
+msgstr "`0`：Cargo 執行成功。"
+
+#: src/commands/cargo-rustdoc.md:409
+msgid "`101`: Cargo failed to complete."
+msgstr "`101`：Cargo 未能完成執行。"
+
+#: src/commands/cargo-rustdoc.md:411
+msgid "EXAMPLES"
+msgstr "範例"
+
+#: src/commands/cargo-rustdoc.md:413
+msgid "Build documentation with custom CSS included from a given file:"
+msgstr ""
+
+#: src/commands/cargo-rustdoc.md:417
+msgid "SEE ALSO"
+msgstr "另請參見"
+
+#: src/commands/cargo-rustdoc.md:418
+msgid ""
+"[cargo(1)](cargo.html), [cargo-doc(1)](cargo-doc.html), [rustdoc(1)](https://"
+"doc.rust-lang.org/rustdoc/index.html)"
+msgstr ""
