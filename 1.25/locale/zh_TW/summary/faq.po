@@ -274,7 +274,7 @@ msgstr ""
 
 #: src/faq.md:159
 msgid "How can Cargo work offline?"
-msgstr ""
+msgstr "Cargo 如何離線運作？"
 
 #: src/faq.md:161
 msgid ""
