@@ -1,0 +1,174 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:52:01Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/commands/cargo-add.md:1
+msgid "cargo-add(1)"
+msgstr ""
+
+#: src/commands/cargo-add.md:2
+msgid "NAME"
+msgstr "名稱"
+
+#: src/commands/cargo-add.md:4
+msgid "cargo-add --- Add dependencies to a Cargo.toml manifest file"
+msgstr ""
+
+#: src/commands/cargo-add.md:6
+msgid "SYNOPSIS"
+msgstr "概要"
+
+#: src/commands/cargo-add.md:8
+msgid ""
+"`cargo add` \\[_options_\\] _crate_...  \n"
+"`cargo add` \\[_options_\\] `--path` _path_  \n"
+"`cargo add` \\[_options_\\] `--git` _url_ \\[_crate_...\\]"
+msgstr ""
+
+#: src/commands/cargo-add.md:13
+msgid "DESCRIPTION"
+msgstr "描述"
+
+#: src/commands/cargo-add.md:15
+msgid "This command can add or modify dependencies."
+msgstr ""
+
+#: src/commands/cargo-add.md:17
+msgid "The source for the dependency can be specified with:"
+msgstr ""
+
+#: src/commands/cargo-add.md:19
+msgid ""
+"_crate_`@`_version_: Fetch from a registry with a version constraint of "
+"\"_version_\""
+msgstr ""
+
+#: src/commands/cargo-add.md:20
+msgid "`--path` _path_: Fetch from the specified _path_"
+msgstr ""
+
+#: src/commands/cargo-add.md:21
+msgid "`--git` _url_: Pull from a git repo at _url_"
+msgstr ""
+
+#: src/commands/cargo-add.md:23
+msgid ""
+"If no source is specified, then a best effort will be made to select one, "
+"including:"
+msgstr ""
+
+#: src/commands/cargo-add.md:25
+msgid "Existing dependencies in other tables (like `dev-dependencies`)"
+msgstr ""
+
+#: src/commands/cargo-add.md:26
+msgid "Workspace members"
+msgstr "工作空間成員"
+
+#: src/commands/cargo-add.md:27
+msgid "Latest release in the registry"
+msgstr "註冊表中的最新發行版"
+
+#: src/commands/cargo-add.md:29
+msgid ""
+"When you add a package that is already present, the existing entry will be "
+"updated with the flags specified."
+msgstr ""
+
+#: src/commands/cargo-add.md:31
+msgid ""
+"Upon successful invocation, the enabled (`+`) and disabled (`-`) [features]"
+"(../reference/features.html) of the specified dependency will be listed in "
+"the command's output."
+msgstr ""
+
+#: src/commands/cargo-add.md:36
+msgid "OPTIONS"
+msgstr "選項"
+
+#: src/commands/cargo-add.md:38
+msgid "Source options"
+msgstr ""
+
+#: src/commands/cargo-add.md:76
+msgid "Section options"
+msgstr ""
+
+#: src/commands/cargo-add.md:95
+msgid "Dependency options"
+msgstr ""
+
+#: src/commands/cargo-add.md:147
+msgid "Display Options"
+msgstr "顯示選項"
+
+#: src/commands/cargo-add.md:178
+msgid "Manifest Options"
+msgstr "清單選項"
+
+#: src/commands/cargo-add.md:237
+msgid "Common Options"
+msgstr "共用選項"
+
+#: src/commands/cargo-add.md:277
+msgid "ENVIRONMENT"
+msgstr "環境"
+
+#: src/commands/cargo-add.md:279
+msgid ""
+"See [the reference](../reference/environment-variables.html) for details on "
+"environment variables that Cargo reads."
+msgstr ""
+
+#: src/commands/cargo-add.md:282
+msgid "EXIT STATUS"
+msgstr "退出狀態"
+
+#: src/commands/cargo-add.md:284
+msgid "`0`: Cargo succeeded."
+msgstr "`0`：Cargo 執行成功。"
+
+#: src/commands/cargo-add.md:285
+msgid "`101`: Cargo failed to complete."
+msgstr "`101`：Cargo 未能完成執行。"
+
+#: src/commands/cargo-add.md:287
+msgid "EXAMPLES"
+msgstr "範例"
+
+#: src/commands/cargo-add.md:289
+msgid "Add `regex` as a dependency"
+msgstr ""
+
+#: src/commands/cargo-add.md:293
+msgid "Add `trybuild` as a dev-dependency"
+msgstr ""
+
+#: src/commands/cargo-add.md:297
+msgid "Add an older version of `nom` as a dependency"
+msgstr ""
+
+#: src/commands/cargo-add.md:301
+msgid "Add support for serializing data structures to json with `derive`s"
+msgstr ""
+
+#: src/commands/cargo-add.md:305
+msgid "Add `windows` as a platform specific dependency on `cfg(windows)`"
+msgstr ""
+
+#: src/commands/cargo-add.md:309
+msgid "SEE ALSO"
+msgstr "另請參見"
+
+#: src/commands/cargo-add.md:310
+msgid "[cargo(1)](cargo.html), [cargo-remove(1)](cargo-remove.html)"
+msgstr ""
