@@ -1,0 +1,2232 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:52:22Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/semver.md:1
+msgid "SemVer Compatibility"
+msgstr ""
+
+#: src/reference/semver.md:3
+msgid ""
+"This chapter provides details on what is conventionally considered a "
+"compatible or breaking SemVer change for new releases of a package. See the "
+"[SemVer compatibility](resolver.md#semver-compatibility) section for details "
+"on what SemVer is, and how Cargo uses it to ensure compatibility of "
+"libraries."
+msgstr ""
+
+#: src/reference/semver.md:8
+msgid ""
+"These are only _guidelines_, and not necessarily hard-and-fast rules that "
+"all projects will obey. The [Change categories](#change-categories) section "
+"details how this guide classifies the level and severity of a change. Most "
+"of this guide focuses on changes that will cause `cargo` and `rustc` to fail "
+"to build something that previously worked. Almost every change carries some "
+"risk that it will negatively affect the runtime behavior, and for those "
+"cases it is usually a judgment call by the project maintainers whether or "
+"not it is a SemVer-incompatible change."
+msgstr ""
+
+#: src/reference/semver.md:20
+msgid "Change categories"
+msgstr ""
+
+#: src/reference/semver.md:22
+msgid ""
+"All of the policies listed below are categorized by the level of change:"
+msgstr ""
+
+#: src/reference/semver.md:24
+msgid "**Major change**: a change that requires a major SemVer bump."
+msgstr ""
+
+#: src/reference/semver.md:25
+msgid "**Minor change**: a change that requires only a minor SemVer bump."
+msgstr ""
+
+#: src/reference/semver.md:26
+msgid ""
+"**Possibly-breaking change**: a change that some projects may consider major "
+"and others consider minor."
+msgstr ""
+
+#: src/reference/semver.md:29
+msgid ""
+"The \"Possibly-breaking\" category covers changes that have the _potential_ "
+"to break during an update, but may not necessarily cause a breakage. The "
+"impact of these changes should be considered carefully. The exact nature "
+"will depend on the change and the principles of the project maintainers."
+msgstr ""
+
+#: src/reference/semver.md:34
+msgid ""
+"Some projects may choose to only bump the patch number on a minor change. It "
+"is encouraged to follow the SemVer spec, and only apply bug fixes in patch "
+"releases. However, a bug fix may require an API change that is marked as a "
+"\"minor change\", and shouldn't affect compatibility. This guide does not "
+"take a stance on how each individual \"minor change\" should be treated, as "
+"the difference between minor and patch changes are conventions that depend "
+"on the nature of the change."
+msgstr ""
+
+#: src/reference/semver.md:42
+msgid ""
+"Some changes are marked as \"minor\", even though they carry the potential "
+"risk of breaking a build. This is for situations where the potential is "
+"extremely low, and the potentially breaking code is unlikely to be written "
+"in idiomatic Rust, or is specifically discouraged from use."
+msgstr ""
+
+#: src/reference/semver.md:47
+msgid ""
+"This guide uses the terms \"major\" and \"minor\" assuming this relates to a "
+"\"1.0.0\" release or later. Initial development releases starting with \"0.y."
+"z\" can treat changes in \"y\" as a major release, and \"z\" as a minor "
+"release. \"0.0.z\" releases are always major changes. This is because Cargo "
+"uses the convention that only changes in the left-most non-zero component "
+"are considered incompatible."
+msgstr ""
+
+#: src/reference/semver.md:54 src/reference/semver.md:106
+msgid "API compatibility"
+msgstr ""
+
+#: src/reference/semver.md:55
+msgid "Items"
+msgstr ""
+
+#: src/reference/semver.md:56
+msgid "[Major: renaming/moving/removing any public items](#item-remove)"
+msgstr ""
+
+#: src/reference/semver.md:57
+msgid "[Minor: adding new public items](#item-new)"
+msgstr ""
+
+#: src/reference/semver.md:58
+msgid "Types"
+msgstr ""
+
+#: src/reference/semver.md:59
+msgid ""
+"[Major: Changing the alignment, layout, or size of a well-defined type]"
+"(#type-layout)"
+msgstr ""
+
+#: src/reference/semver.md:60
+msgid "Structs"
+msgstr ""
+
+#: src/reference/semver.md:61
+msgid ""
+"[Major: adding a private struct field when all current fields are public]"
+"(#struct-add-private-field-when-public)"
+msgstr ""
+
+#: src/reference/semver.md:62
+msgid ""
+"[Major: adding a public field when no private field exists](#struct-add-"
+"public-field-when-no-private)"
+msgstr ""
+
+#: src/reference/semver.md:63
+msgid ""
+"[Minor: adding or removing private fields when at least one already exists]"
+"(#struct-private-fields-with-private)"
+msgstr ""
+
+#: src/reference/semver.md:64
+msgid ""
+"[Minor: going from a tuple struct with all private fields (with at least one "
+"field) to a normal struct, or vice versa](#struct-tuple-normal-with-private)"
+msgstr ""
+
+#: src/reference/semver.md:65
+msgid "Enums"
+msgstr ""
+
+#: src/reference/semver.md:66
+msgid ""
+"[Major: adding new enum variants (without `non_exhaustive`)](#enum-variant-"
+"new)"
+msgstr ""
+
+#: src/reference/semver.md:67
+msgid "[Major: adding new fields to an enum variant](#enum-fields-new)"
+msgstr ""
+
+#: src/reference/semver.md:68
+msgid "Traits"
+msgstr ""
+
+#: src/reference/semver.md:69
+msgid "[Major: adding a non-defaulted trait item](#trait-new-item-no-default)"
+msgstr ""
+
+#: src/reference/semver.md:70
+msgid "[Major: any change to trait item signatures](#trait-item-signature)"
+msgstr ""
+
+#: src/reference/semver.md:71
+msgid ""
+"[Possibly-breaking: adding a defaulted trait item](#trait-new-default-item)"
+msgstr ""
+
+#: src/reference/semver.md:72
+msgid ""
+"[Major: adding a trait item that makes the trait non-object safe](#trait-"
+"object-safety)"
+msgstr ""
+
+#: src/reference/semver.md:73
+msgid ""
+"[Major: adding a type parameter without a default](#trait-new-parameter-no-"
+"default)"
+msgstr ""
+
+#: src/reference/semver.md:74
+msgid ""
+"[Minor: adding a defaulted trait type parameter](#trait-new-parameter-"
+"default)"
+msgstr ""
+
+#: src/reference/semver.md:75
+msgid "Implementations"
+msgstr ""
+
+#: src/reference/semver.md:76
+msgid "[Possibly-breaking change: adding any inherent items](#impl-item-new)"
+msgstr ""
+
+#: src/reference/semver.md:77
+msgid "Generics"
+msgstr ""
+
+#: src/reference/semver.md:78
+msgid "[Major: tightening generic bounds](#generic-bounds-tighten)"
+msgstr ""
+
+#: src/reference/semver.md:79
+msgid "[Minor: loosening generic bounds](#generic-bounds-loosen)"
+msgstr ""
+
+#: src/reference/semver.md:80
+msgid "[Minor: adding defaulted type parameters](#generic-new-default)"
+msgstr ""
+
+#: src/reference/semver.md:81
+msgid ""
+"[Minor: generalizing a type to use generics (with identical types)](#generic-"
+"generalize-identical)"
+msgstr ""
+
+#: src/reference/semver.md:82
+msgid ""
+"[Major: generalizing a type to use generics (with possibly different types)]"
+"(#generic-generalize-different)"
+msgstr ""
+
+#: src/reference/semver.md:83
+msgid ""
+"[Minor: changing a generic type to a more generic type](#generic-more-"
+"generic)"
+msgstr ""
+
+#: src/reference/semver.md:84
+msgid "Functions"
+msgstr ""
+
+#: src/reference/semver.md:85
+msgid "[Major: adding/removing function parameters](#fn-change-arity)"
+msgstr ""
+
+#: src/reference/semver.md:86
+msgid ""
+"[Possibly-breaking: introducing a new function type parameter](#fn-generic-"
+"new)"
+msgstr ""
+
+#: src/reference/semver.md:87
+msgid ""
+"[Minor: generalizing a function to use generics (supporting original type)]"
+"(#fn-generalize-compatible)"
+msgstr ""
+
+#: src/reference/semver.md:88
+msgid ""
+"[Major: generalizing a function to use generics with type mismatch](#fn-"
+"generalize-mismatch)"
+msgstr ""
+
+#: src/reference/semver.md:89
+msgid "[Minor: making an `unsafe` function safe](#fn-unsafe-safe)"
+msgstr ""
+
+#: src/reference/semver.md:90
+msgid "Attributes"
+msgstr ""
+
+#: src/reference/semver.md:91
+msgid ""
+"[Major: switching from `no_std` support to requiring `std`](#attr-no-std-to-"
+"std)"
+msgstr ""
+
+#: src/reference/semver.md:92
+msgid ""
+"[Major: adding `non_exhaustive` to an existing enum, variant, or struct with "
+"no private fields](#attr-adding-non-exhaustive)"
+msgstr ""
+
+#: src/reference/semver.md:93 src/reference/semver.md:1959
+msgid "Tooling and environment compatibility"
+msgstr ""
+
+#: src/reference/semver.md:94
+msgid ""
+"[Possibly-breaking: changing the minimum version of Rust required](#env-new-"
+"rust)"
+msgstr ""
+
+#: src/reference/semver.md:95
+msgid ""
+"[Possibly-breaking: changing the platform and environment requirements](#env-"
+"change-requirements)"
+msgstr ""
+
+#: src/reference/semver.md:96
+msgid "[Minor: introducing new lints](#new-lints)"
+msgstr ""
+
+#: src/reference/semver.md:97 src/reference/semver.md:2061
+msgid "Cargo"
+msgstr ""
+
+#: src/reference/semver.md:98
+msgid "[Minor: adding a new Cargo feature](#cargo-feature-add)"
+msgstr ""
+
+#: src/reference/semver.md:99
+msgid "[Major: removing a Cargo feature](#cargo-feature-remove)"
+msgstr ""
+
+#: src/reference/semver.md:100
+msgid ""
+"[Major: removing a feature from a feature list if that changes functionality "
+"or public items](#cargo-feature-remove-another)"
+msgstr ""
+
+#: src/reference/semver.md:101
+msgid ""
+"[Possibly-breaking: removing an optional dependency](#cargo-remove-opt-dep)"
+msgstr ""
+
+#: src/reference/semver.md:102
+msgid "[Minor: changing dependency features](#cargo-change-dep-feature)"
+msgstr ""
+
+#: src/reference/semver.md:103
+msgid "[Minor: adding dependencies](#cargo-dep-add)"
+msgstr ""
+
+#: src/reference/semver.md:104
+msgid "[Application compatibility](#application-compatibility)"
+msgstr ""
+
+#: src/reference/semver.md:108
+msgid ""
+"All of the examples below contain three parts: the original code, the code "
+"after it has been modified, and an example usage of the code that could "
+"appear in another project. In a minor change, the example usage should "
+"successfully build with both the before and after versions."
+msgstr ""
+
+#: src/reference/semver.md:113
+msgid "Major: renaming/moving/removing any public items"
+msgstr ""
+
+#: src/reference/semver.md:115
+msgid ""
+"The absence of a publicly exposed [item](../../reference/items.html) will "
+"cause any uses of that item to fail to compile."
+msgstr ""
+
+#: src/reference/semver.md:119 src/reference/semver.md:452
+#: src/reference/semver.md:478 src/reference/semver.md:511
+#: src/reference/semver.md:553 src/reference/semver.md:584
+#: src/reference/semver.md:634 src/reference/semver.md:672
+#: src/reference/semver.md:710 src/reference/semver.md:746
+#: src/reference/semver.md:800 src/reference/semver.md:855
+#: src/reference/semver.md:891 src/reference/semver.md:926
+#: src/reference/semver.md:956 src/reference/semver.md:990
+#: src/reference/semver.md:1056 src/reference/semver.md:1113
+#: src/reference/semver.md:1149 src/reference/semver.md:1201
+#: src/reference/semver.md:1233 src/reference/semver.md:1322
+#: src/reference/semver.md:1355 src/reference/semver.md:1456
+#: src/reference/semver.md:1573 src/reference/semver.md:1624
+#: src/reference/semver.md:1783 src/reference/semver.md:1848
+#: src/reference/semver.md:1894
+msgid "// MAJOR CHANGE\n"
+msgstr ""
+
+#: src/reference/semver.md:120 src/reference/semver.md:287
+#: src/reference/semver.md:326 src/reference/semver.md:363
+#: src/reference/semver.md:393 src/reference/semver.md:425
+#: src/reference/semver.md:453 src/reference/semver.md:479
+#: src/reference/semver.md:512 src/reference/semver.md:554
+#: src/reference/semver.md:585 src/reference/semver.md:635
+#: src/reference/semver.md:673 src/reference/semver.md:711
+#: src/reference/semver.md:747 src/reference/semver.md:801
+#: src/reference/semver.md:856 src/reference/semver.md:892
+#: src/reference/semver.md:927 src/reference/semver.md:957
+#: src/reference/semver.md:991 src/reference/semver.md:1025
+#: src/reference/semver.md:1057 src/reference/semver.md:1083
+#: src/reference/semver.md:1114 src/reference/semver.md:1150
+#: src/reference/semver.md:1202 src/reference/semver.md:1234
+#: src/reference/semver.md:1274 src/reference/semver.md:1323
+#: src/reference/semver.md:1356 src/reference/semver.md:1384
+#: src/reference/semver.md:1410 src/reference/semver.md:1457
+#: src/reference/semver.md:1486 src/reference/semver.md:1516
+#: src/reference/semver.md:1546 src/reference/semver.md:1574
+#: src/reference/semver.md:1601 src/reference/semver.md:1625
+#: src/reference/semver.md:1655 src/reference/semver.md:1687
+#: src/reference/semver.md:1720 src/reference/semver.md:1753
+#: src/reference/semver.md:1784 src/reference/semver.md:1815
+#: src/reference/semver.md:1849 src/reference/semver.md:1895
+#: src/reference/semver.md:2015
+msgid ""
+"///////////////////////////////////////////////////////////\n"
+"// Before\n"
+msgstr ""
+
+#: src/reference/semver.md:124
+msgid ""
+"///////////////////////////////////////////////////////////\n"
+"// After\n"
+"// ... item has been removed\n"
+msgstr ""
+
+#: src/reference/semver.md:128 src/reference/semver.md:185
+#: src/reference/semver.md:468 src/reference/semver.md:488
+#: src/reference/semver.md:525 src/reference/semver.md:570
+#: src/reference/semver.md:603 src/reference/semver.md:651
+#: src/reference/semver.md:689 src/reference/semver.md:727
+#: src/reference/semver.md:763 src/reference/semver.md:817
+#: src/reference/semver.md:874 src/reference/semver.md:910
+#: src/reference/semver.md:937 src/reference/semver.md:970
+#: src/reference/semver.md:1004 src/reference/semver.md:1067
+#: src/reference/semver.md:1127 src/reference/semver.md:1162
+#: src/reference/semver.md:1212 src/reference/semver.md:1249
+#: src/reference/semver.md:1284 src/reference/semver.md:1334
+#: src/reference/semver.md:1364 src/reference/semver.md:1422
+#: src/reference/semver.md:1469 src/reference/semver.md:1582
+#: src/reference/semver.md:1633 src/reference/semver.md:1663
+#: src/reference/semver.md:1765 src/reference/semver.md:1792
+#: src/reference/semver.md:1934
+msgid ""
+"///////////////////////////////////////////////////////////\n"
+"// Example usage that will break.\n"
+msgstr ""
+
+#: src/reference/semver.md:132
+msgid "// Error: cannot find function `foo`\n"
+msgstr ""
+
+#: src/reference/semver.md:136
+msgid ""
+"This includes adding any sort of [`cfg` attribute](../../reference/"
+"conditional-compilation.md#the-cfg-attribute) which can change which items "
+"or behavior is available based on [conditional compilation](../../reference/"
+"conditional-compilation.md)."
+msgstr ""
+
+#: src/reference/semver.md:139 src/reference/semver.md:1373
+#: src/reference/semver.md:1641 src/reference/semver.md:2047
+msgid "Mitigating strategies:"
+msgstr ""
+
+#: src/reference/semver.md:140
+msgid ""
+"Mark items to be removed as [deprecated](../../reference/attributes/"
+"diagnostics.html#the-deprecated-attribute), and then remove them at a later "
+"date in a SemVer-breaking release."
+msgstr ""
+
+#: src/reference/semver.md:142
+msgid ""
+"Mark renamed items as [deprecated](../../reference/attributes/diagnostics."
+"html#the-deprecated-attribute), and use a [`pub use`](../../reference/items/"
+"use-declarations.html) item to re-export to the old name."
+msgstr ""
+
+#: src/reference/semver.md:145
+msgid "Minor: adding new public items"
+msgstr ""
+
+#: src/reference/semver.md:147
+msgid ""
+"Adding new, public [items](../../reference/items.html) is a minor change."
+msgstr ""
+
+#: src/reference/semver.md:150 src/reference/semver.md:286
+#: src/reference/semver.md:325 src/reference/semver.md:362
+#: src/reference/semver.md:392 src/reference/semver.md:424
+#: src/reference/semver.md:1024 src/reference/semver.md:1082
+#: src/reference/semver.md:1383 src/reference/semver.md:1485
+#: src/reference/semver.md:1515 src/reference/semver.md:1545
+#: src/reference/semver.md:1600 src/reference/semver.md:1686
+#: src/reference/semver.md:1719 src/reference/semver.md:1814
+#: src/reference/semver.md:2014
+msgid "// MINOR CHANGE\n"
+msgstr ""
+
+#: src/reference/semver.md:151
+msgid ""
+"///////////////////////////////////////////////////////////\n"
+"// Before\n"
+"// ... absence of item\n"
+msgstr ""
+
+#: src/reference/semver.md:155 src/reference/semver.md:177
+#: src/reference/semver.md:296 src/reference/semver.md:335
+#: src/reference/semver.md:370 src/reference/semver.md:401
+#: src/reference/semver.md:430 src/reference/semver.md:460
+#: src/reference/semver.md:483 src/reference/semver.md:518
+#: src/reference/semver.md:562 src/reference/semver.md:594
+#: src/reference/semver.md:643 src/reference/semver.md:681
+#: src/reference/semver.md:719 src/reference/semver.md:755
+#: src/reference/semver.md:901 src/reference/semver.md:963
+#: src/reference/semver.md:997 src/reference/semver.md:1032
+#: src/reference/semver.md:1062 src/reference/semver.md:1088
+#: src/reference/semver.md:1120 src/reference/semver.md:1156
+#: src/reference/semver.md:1206 src/reference/semver.md:1240
+#: src/reference/semver.md:1278 src/reference/semver.md:1327
+#: src/reference/semver.md:1360 src/reference/semver.md:1388
+#: src/reference/semver.md:1414 src/reference/semver.md:1463
+#: src/reference/semver.md:1492 src/reference/semver.md:1521
+#: src/reference/semver.md:1550 src/reference/semver.md:1578
+#: src/reference/semver.md:1605 src/reference/semver.md:1629
+#: src/reference/semver.md:1659 src/reference/semver.md:1694
+#: src/reference/semver.md:1725 src/reference/semver.md:1759
+#: src/reference/semver.md:1788 src/reference/semver.md:1819
+#: src/reference/semver.md:1854 src/reference/semver.md:1911
+#: src/reference/semver.md:2019
+msgid ""
+"///////////////////////////////////////////////////////////\n"
+"// After\n"
+msgstr ""
+
+#: src/reference/semver.md:159
+msgid ""
+"///////////////////////////////////////////////////////////\n"
+"// Example use of the library that will safely work.\n"
+"// `foo` is not used since it didn't previously exist.\n"
+msgstr ""
+
+#: src/reference/semver.md:165
+msgid ""
+"Note that in some rare cases this can be a **breaking change** due to glob "
+"imports. For example, if you add a new trait, and a project has used a glob "
+"import that brings that trait into scope, and the new trait introduces an "
+"associated item that conflicts with any types it is implemented on, this can "
+"cause a compile-time error due to the ambiguity. Example:"
+msgstr ""
+
+#: src/reference/semver.md:172 src/reference/semver.md:1273
+#: src/reference/semver.md:1409 src/reference/semver.md:1654
+#: src/reference/semver.md:1752
+msgid "// Breaking change example\n"
+msgstr ""
+
+#: src/reference/semver.md:173
+msgid ""
+"///////////////////////////////////////////////////////////\n"
+"// Before\n"
+"// ... absence of trait\n"
+msgstr ""
+
+#: src/reference/semver.md:197
+msgid "// Error:  multiple applicable items in scope\n"
+msgstr ""
+
+#: src/reference/semver.md:201
+msgid ""
+"This is not considered a major change because conventionally glob imports "
+"are a known forwards-compatibility hazard. Glob imports of items from "
+"external crates should be avoided."
+msgstr ""
+
+#: src/reference/semver.md:205
+msgid "Major: Changing the alignment, layout, or size of a well-defined type"
+msgstr ""
+
+#: src/reference/semver.md:207
+msgid ""
+"It is a breaking change to change the alignment, layout, or size of a type "
+"that was previously well-defined."
+msgstr ""
+
+#: src/reference/semver.md:209
+msgid ""
+"In general, types that use the [the default representation](../../reference/"
+"type-layout.html#the-default-representation) do not have a well-defined "
+"alignment, layout, or size. The compiler is free to alter the alignment, "
+"layout, or size, so code should not make any assumptions about it."
+msgstr ""
+
+#: src/reference/semver.md:212
+msgid ""
+"**Note**: It may be possible for external crates to break if they make "
+"assumptions about the alignment, layout, or size of a type even if it is not "
+"well-defined. This is not considered a SemVer breaking change since those "
+"assumptions should not be made."
+msgstr ""
+
+#: src/reference/semver.md:215
+msgid ""
+"Some examples of changes that are not a breaking change are (assuming no "
+"other rules in this guide are violated):"
+msgstr ""
+
+#: src/reference/semver.md:217
+msgid ""
+"Adding, removing, reordering, or changing fields of a default representation "
+"struct, union, or enum in such a way that the change follows the other rules "
+"in this guide (for example, using `non_exhaustive` to allow those changes, "
+"or changes to private fields that are already private). See [struct-add-"
+"private-field-when-public](#struct-add-private-field-when-public), [struct-"
+"add-public-field-when-no-private](#struct-add-public-field-when-no-private), "
+"[struct-private-fields-with-private](#struct-private-fields-with-private), "
+"[enum-fields-new](#enum-fields-new)."
+msgstr ""
+
+#: src/reference/semver.md:219
+msgid ""
+"Adding variants to a default representation enum, if the enum uses "
+"`non_exhaustive`. This may change the alignment or size of the enumeration, "
+"but those are not well-defined. See [enum-variant-new](#enum-variant-new)."
+msgstr ""
+
+#: src/reference/semver.md:222
+msgid ""
+"Adding, removing, reordering, or changing private fields of a `repr(C)` "
+"struct, union, or enum, following the other rules in this guide (for "
+"example, using `non_exhaustive`, or adding private fields when other private "
+"fields already exist). See [repr-c-private-change](#repr-c-private-change)."
+msgstr ""
+
+#: src/reference/semver.md:224
+msgid ""
+"Adding variants to a `repr(C)` enum, if the enum uses `non_exhaustive`. See "
+"[repr-c-enum-variant-new](#repr-c-enum-variant-new)."
+msgstr ""
+
+#: src/reference/semver.md:226
+msgid ""
+"Adding `repr(C)` to a default representation struct, union, or enum. See "
+"[repr-c-add](#repr-c-add)."
+msgstr ""
+
+#: src/reference/semver.md:228
+msgid ""
+"Adding `repr(<int>)` [primitive representation](../../reference/type-layout."
+"html#primitive-representations) to an enum. See [repr-int-enum-add](#repr-"
+"int-enum-add)."
+msgstr ""
+
+#: src/reference/semver.md:230
+msgid ""
+"Adding `repr(transparent)` to a default representation struct or enum. See "
+"[repr-transparent-add](#repr-transparent-add)."
+msgstr ""
+
+#: src/reference/semver.md:233
+msgid ""
+"Types that use the [`repr` attribute](../../reference/type-layout."
+"html#representations) can be said to have an alignment and layout that is "
+"defined in some way that code may make some assumptions about that may break "
+"as a result of changing that type."
+msgstr ""
+
+#: src/reference/semver.md:235
+msgid ""
+"In some cases, types with a `repr` attribute may not have an alignment, "
+"layout, or size that is well-defined. In these cases, it may be safe to make "
+"changes to the types, though care should be exercised. For example, types "
+"with private fields that do not otherwise document their alignment, layout, "
+"or size guarantees cannot be relied upon by external crates since the public "
+"API does not fully define the alignment, layout, or size of the type."
+msgstr ""
+
+#: src/reference/semver.md:239
+msgid ""
+"A common example where a type with _private_ fields is well-defined is a "
+"type with a single private field with a generic type, using "
+"`repr(transparent)`, and the prose of the documentation discusses that it is "
+"transparent to the generic type. For example, see [`UnsafeCell`](../../std/"
+"cell/struct.UnsafeCell.html#memory-layout)."
+msgstr ""
+
+#: src/reference/semver.md:243
+msgid "Some examples of breaking changes are:"
+msgstr ""
+
+#: src/reference/semver.md:245
+msgid ""
+"Adding `repr(packed)` to a struct or union. See [repr-packed-add](#repr-"
+"packed-add)."
+msgstr ""
+
+#: src/reference/semver.md:247
+msgid ""
+"Adding `repr(align)` to a struct, union, or enum. See [repr-align-add](#repr-"
+"align-add)."
+msgstr ""
+
+#: src/reference/semver.md:249
+msgid ""
+"Removing `repr(packed)` from a struct or union. See [repr-packed-remove]"
+"(#repr-packed-remove)."
+msgstr ""
+
+#: src/reference/semver.md:251
+msgid ""
+"Changing the value N of `repr(packed(N))` if that changes the alignment or "
+"layout. See [repr-packed-n-change](#repr-packed-n-change)."
+msgstr ""
+
+#: src/reference/semver.md:253
+msgid ""
+"Changing the value N of `repr(align(N))` if that changes the alignment. See "
+"[repr-align-n-change](#repr-align-n-change)."
+msgstr ""
+
+#: src/reference/semver.md:255
+msgid ""
+"Removing `repr(align)` from a struct, union, or enum. See [repr-align-remove]"
+"(#repr-align-remove)."
+msgstr ""
+
+#: src/reference/semver.md:257
+msgid ""
+"Changing the order of public fields of a `repr(C)` type. See [repr-c-shuffle]"
+"(#repr-c-shuffle)."
+msgstr ""
+
+#: src/reference/semver.md:259
+msgid ""
+"Removing `repr(C)` from a struct, union, or enum. See [repr-c-remove](#repr-"
+"c-remove)."
+msgstr ""
+
+#: src/reference/semver.md:261
+msgid ""
+"Removing `repr(<int>)` from an enum. See [repr-int-enum-remove](#repr-int-"
+"enum-remove)."
+msgstr ""
+
+#: src/reference/semver.md:263
+msgid ""
+"Changing the primitive representation of a `repr(<int>)` enum. See [repr-int-"
+"enum-change](#repr-int-enum-change)."
+msgstr ""
+
+#: src/reference/semver.md:265
+msgid ""
+"Removing `repr(transparent)` from a struct or enum. See [repr-transparent-"
+"remove](#repr-transparent-remove)."
+msgstr ""
+
+#: src/reference/semver.md:274
+msgid "Minor: `repr(C)` add, remove, or change a private field"
+msgstr ""
+
+#: src/reference/semver.md:276
+msgid ""
+"It is usually safe to add, remove, or change a private field of a `repr(C)` "
+"struct, union, or enum, assuming it follows the other guidelines in this "
+"guide (see [struct-add-private-field-when-public](#struct-add-private-field-"
+"when-public), [struct-add-public-field-when-no-private](#struct-add-public-"
+"field-when-no-private), [struct-private-fields-with-private](#struct-private-"
+"fields-with-private), [enum-fields-new](#enum-fields-new))."
+msgstr ""
+
+#: src/reference/semver.md:278
+msgid ""
+"For example, adding private fields can only be done if there are already "
+"other private fields, or it is `non_exhaustive`. Public fields may be added "
+"if there are private fields, or it is `non_exhaustive`, and the addition "
+"does not alter the layout of the other fields."
+msgstr ""
+
+#: src/reference/semver.md:281
+msgid ""
+"However, this may change the size and alignment of the type. Care should be "
+"taken if the size or alignment changes. Code should not make assumptions "
+"about the size or alignment of types with private fields or `non_exhaustive` "
+"unless it has a documented size or alignment."
+msgstr ""
+
+#: src/reference/semver.md:294
+msgid "// a private field\n"
+msgstr ""
+
+#: src/reference/semver.md:304
+msgid "// a new field\n"
+msgstr ""
+
+#: src/reference/semver.md:306 src/reference/semver.md:345
+#: src/reference/semver.md:378 src/reference/semver.md:410
+#: src/reference/semver.md:436 src/reference/semver.md:1039
+#: src/reference/semver.md:1095 src/reference/semver.md:1392
+#: src/reference/semver.md:1498 src/reference/semver.md:1528
+#: src/reference/semver.md:1554 src/reference/semver.md:1609
+#: src/reference/semver.md:1702 src/reference/semver.md:1730
+#: src/reference/semver.md:2024
+msgid ""
+"///////////////////////////////////////////////////////////\n"
+"// Example use of the library that will safely work.\n"
+msgstr ""
+
+#: src/reference/semver.md:310
+msgid ""
+"// NOTE: Users should not make assumptions about the size or alignment\n"
+"    // since they are not documented.\n"
+msgstr ""
+
+#: src/reference/semver.md:316
+msgid "Minor: `repr(C)` add enum variant"
+msgstr ""
+
+#: src/reference/semver.md:318
+msgid ""
+"It is usually safe to add variants to a `repr(C)` enum, if the enum uses "
+"`non_exhaustive`. See [enum-variant-new](#enum-variant-new) for more "
+"discussion."
+msgstr ""
+
+#: src/reference/semver.md:321
+msgid ""
+"Note that this may be a breaking change since it changes the size and "
+"alignment of the type. See [repr-c-private-change](#repr-c-private-change) "
+"for similar concerns."
+msgstr ""
+
+#: src/reference/semver.md:343 src/reference/semver.md:373
+#: src/reference/semver.md:404 src/reference/semver.md:434
+#: src/reference/semver.md:463 src/reference/semver.md:521
+msgid "// added\n"
+msgstr ""
+
+#: src/reference/semver.md:349
+msgid ""
+"// NOTE: Users should not make assumptions about the size or alignment\n"
+"    // since they are not specified. For example, this raised the size from "
+"8\n"
+"    // to 16 bytes.\n"
+msgstr ""
+
+#: src/reference/semver.md:356
+msgid "Minor: Adding `repr(C)` to a default representation"
+msgstr ""
+
+#: src/reference/semver.md:358
+msgid ""
+"It is safe to add `repr(C)` to a struct, union, or enum with [the default "
+"representation](../../reference/type-layout.html#the-default-"
+"representation). This is safe because users should not make assumptions "
+"about the alignment, layout, or size of types with with the default "
+"representation."
+msgstr ""
+
+#: src/reference/semver.md:386
+msgid "Minor: Adding `repr(<int>)` to an enum"
+msgstr ""
+
+#: src/reference/semver.md:388
+msgid ""
+"It is safe to add `repr(<int>)` [primitive representation](../../reference/"
+"type-layout.html#primitive-representations) to an enum with [the default "
+"representation](../../reference/type-layout.html#the-default-"
+"representation). This is safe because users should not make assumptions "
+"about the alignment, layout, or size of an enum with the default "
+"representation."
+msgstr ""
+
+#: src/reference/semver.md:418
+msgid ""
+"Minor: Adding `repr(transparent)` to a default representation struct or enum"
+msgstr ""
+
+#: src/reference/semver.md:420
+msgid ""
+"It is safe to add `repr(transparent)` to a struct or enum with [the default "
+"representation](../../reference/type-layout.html#the-default-"
+"representation). This is safe because users should not make assumptions "
+"about the alignment, layout, or size of a struct or enum with the default "
+"representation."
+msgstr ""
+
+#: src/reference/semver.md:444
+msgid "Major: Adding `repr(packed)` to a struct or union"
+msgstr ""
+
+#: src/reference/semver.md:446
+msgid ""
+"It is a breaking change to add `repr(packed)` to a struct or union. Making a "
+"type `repr(packed)` makes changes that can break code, such as being invalid "
+"to take a reference to a field, or causing truncation of disjoint closure "
+"captures."
+msgstr ""
+
+#: src/reference/semver.md:473 src/reference/semver.md:658
+msgid "// Error: reference to packed field is unaligned\n"
+msgstr ""
+
+#: src/reference/semver.md:494
+msgid ""
+"// Without repr(packed), the closure precisely captures `&f.0`.\n"
+"        // With repr(packed), the closure captures `&f` to avoid undefined "
+"behavior.\n"
+msgstr ""
+
+#: src/reference/semver.md:498
+msgid "// Error: cannot assign to `f.1` because it is borrowed\n"
+msgstr ""
+
+#: src/reference/semver.md:503
+msgid "Major: Adding `repr(align)` to a struct, union, or enum"
+msgstr ""
+
+#: src/reference/semver.md:505
+msgid ""
+"It is a breaking change to add `repr(align)` to a struct, union, or enum. "
+"Making a type `repr(align)` would break any use of that type in a "
+"`repr(packed)` type because that combination is not allowed."
+msgstr ""
+
+#: src/reference/semver.md:531
+msgid ""
+"// Error: packed type cannot transitively contain a `#[repr(align)]` type\n"
+msgstr ""
+
+#: src/reference/semver.md:542
+msgid "Major: Removing `repr(packed)` from a struct or union"
+msgstr ""
+
+#: src/reference/semver.md:544
+msgid ""
+"It is a breaking change to remove `repr(packed)` from a struct or union. "
+"This may change the alignment or layout that extern crates are relying on."
+msgstr ""
+
+#: src/reference/semver.md:547
+msgid ""
+"If any fields are public, then removing `repr(packed)` may change the way "
+"disjoint closure captures work. In some cases, this can cause code to break, "
+"similar to those outlined in the [edition guide](../../edition-guide/"
+"rust-2021/disjoint-capture-in-closures.html)."
+msgstr ""
+
+#: src/reference/semver.md:565 src/reference/semver.md:597
+msgid "// removed packed\n"
+msgstr ""
+
+#: src/reference/semver.md:577
+msgid ""
+"// Some assumption about the size of the type.\n"
+"    // Without `packed`, this fails since the size is 4.\n"
+msgstr ""
+
+#: src/reference/semver.md:579 src/reference/semver.md:698
+#: src/reference/semver.md:736
+msgid "// Error: evaluation of constant value failed\n"
+msgstr ""
+
+#: src/reference/semver.md:616
+msgid ""
+"// When the structure was packed, the closure captures `p` which is Send.\n"
+"    // When `packed` is removed, this ends up capturing `p.a` which is not "
+"Send.\n"
+msgstr ""
+
+#: src/reference/semver.md:619
+msgid "// Error: cannot be sent between threads safely\n"
+msgstr ""
+
+#: src/reference/semver.md:624
+msgid ""
+"Major: Changing the value N of `repr(packed(N))` if that changes the "
+"alignment or layout"
+msgstr ""
+
+#: src/reference/semver.md:626
+msgid ""
+"It is a breaking change to change the value of N of `repr(packed(N))` if "
+"that changes the alignment or layout. This may change the alignment or "
+"layout that external crates are relying on."
+msgstr ""
+
+#: src/reference/semver.md:629
+msgid ""
+"If the value `N` is lowered below the alignment of a public field, then that "
+"would break any code that attempts to take a reference of that field."
+msgstr ""
+
+#: src/reference/semver.md:631
+msgid ""
+"Note that some changes to `N` may not change the alignment or layout, for "
+"example increasing it when the current value is already equal to the natural "
+"alignment of the type."
+msgstr ""
+
+#: src/reference/semver.md:646
+msgid "// changed to 2\n"
+msgstr ""
+
+#: src/reference/semver.md:662
+msgid ""
+"Major: Changing the value N of `repr(align(N))` if that changes the alignment"
+msgstr ""
+
+#: src/reference/semver.md:664
+msgid ""
+"It is a breaking change to change the value `N` of `repr(align(N))` if that "
+"changes the alignment. This may change the alignment that external crates "
+"are relying on."
+msgstr ""
+
+#: src/reference/semver.md:667
+msgid ""
+"This change should be safe to make if the type is not well-defined as "
+"discussed in [type layout](#type-layout) (such as having any private fields "
+"and having an undocumented alignment or layout)."
+msgstr ""
+
+#: src/reference/semver.md:669
+msgid ""
+"Note that some changes to `N` may not change the alignment or layout, for "
+"example decreasing it when the current value is already equal to or less "
+"than the natural alignment of the type."
+msgstr ""
+
+#: src/reference/semver.md:684
+msgid "// changed to 4\n"
+msgstr ""
+
+#: src/reference/semver.md:696 src/reference/semver.md:734
+msgid ""
+"// Some assumption about the size of the type.\n"
+"    // The alignment has changed from 8 to 4.\n"
+msgstr ""
+
+#: src/reference/semver.md:702
+msgid "Major: Removing `repr(align)` from a struct, union, or enum"
+msgstr ""
+
+#: src/reference/semver.md:704
+msgid ""
+"It is a breaking change to remove `repr(align)` from a struct, union, or "
+"enum, if their layout was well-defined. This may change the alignment or "
+"layout that external crates are relying on."
+msgstr ""
+
+#: src/reference/semver.md:707
+msgid ""
+"This change should be safe to make if the type is not well-defined as "
+"discussed in [type layout](#type-layout) (such as having any private fields "
+"and having an undocumented alignment)."
+msgstr ""
+
+#: src/reference/semver.md:722
+msgid "// removed align\n"
+msgstr ""
+
+#: src/reference/semver.md:740
+msgid "Major: Changing the order of public fields of a `repr(C)` type"
+msgstr ""
+
+#: src/reference/semver.md:742
+msgid ""
+"It is a breaking change to change the order of public fields of a `repr(C)` "
+"type. External crates may be relying on the specific ordering of the fields."
+msgstr ""
+
+#: src/reference/semver.md:760
+msgid "// changed order\n"
+msgstr ""
+
+#: src/reference/semver.md:768 src/reference/semver.md:822
+#: src/reference/semver.md:943
+msgid "\"C\""
+msgstr ""
+
+#: src/reference/semver.md:769 src/reference/semver.md:823
+msgid ""
+"// This C function is assuming a specific layout defined in a C header.\n"
+msgstr ""
+
+#: src/reference/semver.md:775
+msgid "// Error: value not equal to 2\n"
+msgstr ""
+
+#: src/reference/semver.md:779 src/reference/semver.md:833
+msgid ""
+"// This simulates what would normally be something included from a build "
+"script.\n"
+msgstr ""
+
+#: src/reference/semver.md:780 src/reference/semver.md:834
+msgid "// This definition would be in a C header.\n"
+msgstr ""
+
+#: src/reference/semver.md:794
+msgid "Major: Removing `repr(C)` from a struct, union, or enum"
+msgstr ""
+
+#: src/reference/semver.md:796
+msgid ""
+"It is a breaking change to remove `repr(C)` from a struct, union, or enum. "
+"External crates may be relying on the specific layout of the type."
+msgstr ""
+
+#: src/reference/semver.md:809
+msgid ""
+"///////////////////////////////////////////////////////////\n"
+"// After\n"
+"// removed repr(C)\n"
+msgstr ""
+
+#: src/reference/semver.md:824 src/reference/semver.md:944
+msgid "// Error: is not FFI-safe\n"
+msgstr ""
+
+#: src/reference/semver.md:848
+msgid "Major: Removing `repr(<int>)` from an enum"
+msgstr ""
+
+#: src/reference/semver.md:850
+msgid ""
+"It is a breaking change to remove `repr(<int>)` from an enum. External "
+"crates may be assuming that the discriminant is a specific size. For "
+"example, [`std::mem::transmute`](../../std/mem/fn.transmute.html) of an enum "
+"may fail."
+msgstr ""
+
+#: src/reference/semver.md:865
+msgid ""
+"///////////////////////////////////////////////////////////\n"
+"// After\n"
+"// removed repr(u16)\n"
+msgstr ""
+
+#: src/reference/semver.md:880 src/reference/semver.md:916
+msgid "// Error: cannot transmute between types of different sizes\n"
+msgstr ""
+
+#: src/reference/semver.md:884
+msgid "Major: Changing the primitive representation of a `repr(<int>)` enum"
+msgstr ""
+
+#: src/reference/semver.md:886
+msgid ""
+"It is a breaking change to change the primitive representation of a "
+"`repr(<int>)` enum. External crates may be assuming that the discriminant is "
+"a specific size. For example, [`std::mem::transmute`](../../std/mem/fn."
+"transmute.html) of an enum may fail."
+msgstr ""
+
+#: src/reference/semver.md:904
+msgid "// changed repr size\n"
+msgstr ""
+
+#: src/reference/semver.md:920
+msgid "Major: Removing `repr(transparent)` from a struct or enum"
+msgstr ""
+
+#: src/reference/semver.md:922
+msgid ""
+"It is a breaking change to remove `repr(transparent)` from a struct or enum. "
+"External crates may be relying on the type having the alignment, layout, or "
+"size of the transparent field."
+msgstr ""
+
+#: src/reference/semver.md:932
+msgid ""
+"///////////////////////////////////////////////////////////\n"
+"// After\n"
+"// removed repr\n"
+msgstr ""
+
+#: src/reference/semver.md:950
+msgid "Major: adding a private struct field when all current fields are public"
+msgstr ""
+
+#: src/reference/semver.md:952
+msgid ""
+"When a private field is added to a struct that previously had all public "
+"fields, this will break any code that attempts to construct it with a "
+"[struct literal](../../reference/expressions/struct-expr.html)."
+msgstr ""
+
+#: src/reference/semver.md:974
+msgid "// Error: cannot construct `Foo`\n"
+msgstr ""
+
+#: src/reference/semver.md:978 src/reference/semver.md:1012
+#: src/reference/semver.md:1139 src/reference/semver.md:1174
+#: src/reference/semver.md:1221 src/reference/semver.md:1260
+#: src/reference/semver.md:1309 src/reference/semver.md:1443
+#: src/reference/semver.md:1872 src/reference/semver.md:1954
+#: src/reference/semver.md:1976 src/reference/semver.md:2004
+#: src/reference/semver.md:2104 src/reference/semver.md:2181
+msgid "Mitigation strategies:"
+msgstr ""
+
+#: src/reference/semver.md:979
+msgid "Do not add new fields to all-public field structs."
+msgstr ""
+
+#: src/reference/semver.md:980 src/reference/semver.md:1014
+msgid ""
+"Mark structs as [`#[non_exhaustive]`](../../reference/attributes/type_system."
+"html#the-non_exhaustive-attribute) when first introducing a struct to "
+"prevent users from using struct literal syntax, and instead provide a "
+"constructor method and/or [Default](../../std/default/trait.Default.html) "
+"implementation."
+msgstr ""
+
+#: src/reference/semver.md:984
+msgid "Major: adding a public field when no private field exists"
+msgstr ""
+
+#: src/reference/semver.md:986
+msgid ""
+"When a public field is added to a struct that has all public fields, this "
+"will break any code that attempts to construct it with a [struct literal]"
+"(../../reference/expressions/struct-expr.html)."
+msgstr ""
+
+#: src/reference/semver.md:1008
+msgid "// Error: missing field `f2`\n"
+msgstr ""
+
+#: src/reference/semver.md:1013
+msgid "Do not add new new fields to all-public field structs."
+msgstr ""
+
+#: src/reference/semver.md:1018
+msgid ""
+"Minor: adding or removing private fields when at least one already exists"
+msgstr ""
+
+#: src/reference/semver.md:1020
+msgid ""
+"It is safe to add or remove private fields from a struct when the struct "
+"already has at least one private field."
+msgstr ""
+
+#: src/reference/semver.md:1043 src/reference/semver.md:1099
+msgid "// Cannot access private fields.\n"
+msgstr ""
+
+#: src/reference/semver.md:1048
+msgid ""
+"This is safe because existing code cannot use a [struct literal](../../"
+"reference/expressions/struct-expr.html) to construct it, nor exhaustively "
+"match its contents."
+msgstr ""
+
+#: src/reference/semver.md:1051
+msgid ""
+"Note that for tuple structs, this is a **major change** if the tuple "
+"contains public fields, and the addition or removal of a private field "
+"changes the index of any public field."
+msgstr ""
+
+#: src/reference/semver.md:1072
+msgid "// Error: is private\n"
+msgstr ""
+
+#: src/reference/semver.md:1076
+msgid ""
+"Minor: going from a tuple struct with all private fields (with at least one "
+"field) to a normal struct, or vice versa"
+msgstr ""
+
+#: src/reference/semver.md:1078
+msgid ""
+"Changing a tuple struct to a normal struct (or vice-versa) is safe if all "
+"fields are private."
+msgstr ""
+
+#: src/reference/semver.md:1104
+msgid ""
+"This is safe because existing code cannot use a [struct literal](../../"
+"reference/expressions/struct-expr.html) to construct it, nor match its "
+"contents."
+msgstr ""
+
+#: src/reference/semver.md:1107
+msgid "Major: adding new enum variants (without `non_exhaustive`)"
+msgstr ""
+
+#: src/reference/semver.md:1109
+msgid ""
+"It is a breaking change to add a new enum variant if the enum does not use "
+"the [`#[non_exhaustive]`](../../reference/attributes/type_system.html#the-"
+"non_exhaustive-attribute) attribute."
+msgstr ""
+
+#: src/reference/semver.md:1133
+msgid "// Error: `E::Variant2` not covered\n"
+msgstr ""
+
+#: src/reference/semver.md:1140
+msgid ""
+"When introducing the enum, mark it as [`#[non_exhaustive]`](../../reference/"
+"attributes/type_system.html#the-non_exhaustive-attribute) to force users to "
+"use [wildcard patterns](../../reference/patterns.html#wildcard-pattern) to "
+"catch new variants."
+msgstr ""
+
+#: src/reference/semver.md:1143
+msgid "Major: adding new fields to an enum variant"
+msgstr ""
+
+#: src/reference/semver.md:1145
+msgid ""
+"It is a breaking change to add new fields to an enum variant because all "
+"fields are public, and constructors and matching will fail to compile."
+msgstr ""
+
+#: src/reference/semver.md:1167 src/reference/semver.md:1169
+msgid "// Error: missing f2\n"
+msgstr ""
+
+#: src/reference/semver.md:1175
+msgid ""
+"When introducing the enum, mark the variant as [`non_exhaustive`](../../"
+"reference/attributes/type_system.html#the-non_exhaustive-attribute) so that "
+"it cannot be constructed or matched without wildcards."
+msgstr ""
+
+#: src/reference/semver.md:1183
+msgid ""
+"When introducing the enum, use an explicit struct as a value, where you can "
+"have control over the field visibility."
+msgstr ""
+
+#: src/reference/semver.md:1195
+msgid "Major: adding a non-defaulted trait item"
+msgstr ""
+
+#: src/reference/semver.md:1197
+msgid ""
+"It is a breaking change to add a non-defaulted item to a trait. This will "
+"break any implementors of the trait."
+msgstr ""
+
+#: src/reference/semver.md:1218
+msgid "// Error: not all trait items implemented\n"
+msgstr ""
+
+#: src/reference/semver.md:1222
+msgid ""
+"Always provide a default implementation or value for new associated trait "
+"items."
+msgstr ""
+
+#: src/reference/semver.md:1224 src/reference/semver.md:1263
+msgid ""
+"When introducing the trait, use the [sealed trait](https://rust-lang.github."
+"io/api-guidelines/future-proofing.html#sealed-traits-protect-against-"
+"downstream-implementations-c-sealed) technique to prevent users outside of "
+"the crate from implementing the trait."
+msgstr ""
+
+#: src/reference/semver.md:1227
+msgid "Major: any change to trait item signatures"
+msgstr ""
+
+#: src/reference/semver.md:1229
+msgid ""
+"It is a breaking change to make any change to a trait item signature. This "
+"can break external implementors of the trait."
+msgstr ""
+
+#: src/reference/semver.md:1244
+msgid ""
+"// For sealed traits or normal functions, this would be a minor change\n"
+"    // because generalizing with generics strictly expands the possible "
+"uses.\n"
+"    // But in this case, trait implementations must use the same signature.\n"
+msgstr ""
+
+#: src/reference/semver.md:1256
+msgid "// Error: trait declaration has 1 type parameter\n"
+msgstr ""
+
+#: src/reference/semver.md:1261
+msgid ""
+"Introduce new items with default implementations to cover the new "
+"functionality instead of modifying existing items."
+msgstr ""
+
+#: src/reference/semver.md:1266
+msgid "Possibly-breaking: adding a defaulted trait item"
+msgstr ""
+
+#: src/reference/semver.md:1268
+msgid ""
+"It is usually safe to add a defaulted trait item. However, this can "
+"sometimes cause a compile error. For example, this can introduce an "
+"ambiguity if a method of the same name exists in another trait."
+msgstr ""
+
+#: src/reference/semver.md:1299
+msgid "// Error: multiple applicable items in scope\n"
+msgstr ""
+
+#: src/reference/semver.md:1303
+msgid ""
+"Note that this ambiguity does _not_ exist for name collisions on [inherent "
+"implementations](../../reference/items/implementations.html#inherent-"
+"implementations), as they take priority over trait items."
+msgstr ""
+
+#: src/reference/semver.md:1306
+msgid ""
+"See [trait-object-safety](#trait-object-safety) for a special case to "
+"consider when adding trait items."
+msgstr ""
+
+#: src/reference/semver.md:1310 src/reference/semver.md:1444
+msgid ""
+"Some projects may deem this acceptable breakage, particularly if the new "
+"item name is unlikely to collide with any existing code. Choose names "
+"carefully to help avoid these collisions. Additionally, it may be acceptable "
+"to require downstream users to add [disambiguation syntax](../../reference/"
+"expressions/call-expr.html#disambiguating-function-calls) to select the "
+"correct function when updating the dependency."
+msgstr ""
+
+#: src/reference/semver.md:1316
+msgid "Major: adding a trait item that makes the trait non-object safe"
+msgstr ""
+
+#: src/reference/semver.md:1318
+msgid ""
+"It is a breaking change to add a trait item that changes the trait to not be "
+"[object safe](../../reference/items/traits.html#object-safety)."
+msgstr ""
+
+#: src/reference/semver.md:1331
+msgid "// An associated const makes the trait not object-safe.\n"
+msgstr ""
+
+#: src/reference/semver.md:1343
+msgid "// Error: cannot be made into an object\n"
+msgstr ""
+
+#: src/reference/semver.md:1347
+msgid ""
+"It is safe to do the converse (making a non-object safe trait into a safe "
+"one)."
+msgstr ""
+
+#: src/reference/semver.md:1350
+msgid "Major: adding a type parameter without a default"
+msgstr ""
+
+#: src/reference/semver.md:1352
+msgid ""
+"It is a breaking change to add a type parameter without a default to a trait."
+msgstr ""
+
+#: src/reference/semver.md:1370
+msgid "// Error: missing generics\n"
+msgstr ""
+
+#: src/reference/semver.md:1374
+msgid ""
+"See [adding a defaulted trait type parameter](#trait-new-parameter-default)."
+msgstr ""
+
+#: src/reference/semver.md:1376
+msgid "Minor: adding a defaulted trait type parameter"
+msgstr ""
+
+#: src/reference/semver.md:1378
+msgid ""
+"It is safe to add a type parameter to a trait as long as it has a default. "
+"External implementors will use the default without needing to specify the "
+"parameter."
+msgstr ""
+
+#: src/reference/semver.md:1401
+msgid "Possibly-breaking change: adding any inherent items"
+msgstr ""
+
+#: src/reference/semver.md:1403
+msgid ""
+"Usually adding inherent items to an implementation should be safe because "
+"inherent items take priority over trait items. However, in some cases the "
+"collision can cause problems if the name is the same as an implemented trait "
+"item with a different signature."
+msgstr ""
+
+#: src/reference/semver.md:1435
+msgid "// Error: this method takes 0 arguments but 1 argument was supplied\n"
+msgstr ""
+
+#: src/reference/semver.md:1439
+msgid ""
+"Note that if the signatures match, there would not be a compile-time error, "
+"but possibly a silent change in runtime behavior (because it is now "
+"executing a different function)."
+msgstr ""
+
+#: src/reference/semver.md:1450
+msgid "Major: tightening generic bounds"
+msgstr ""
+
+#: src/reference/semver.md:1452
+msgid ""
+"It is a breaking change to tighten generic bounds on a type since this can "
+"break users expecting the looser bounds."
+msgstr ""
+
+#: src/reference/semver.md:1475
+msgid "// Error: the trait bound `{float}: Eq` is not satisfied\n"
+msgstr ""
+
+#: src/reference/semver.md:1479
+msgid "Minor: loosening generic bounds"
+msgstr ""
+
+#: src/reference/semver.md:1481
+msgid ""
+"It is safe to loosen the generic bounds on a type, as it only expands what "
+"is allowed."
+msgstr ""
+
+#: src/reference/semver.md:1508
+msgid "Minor: adding defaulted type parameters"
+msgstr ""
+
+#: src/reference/semver.md:1510
+msgid ""
+"It is safe to add a type parameter to a type as long as it has a default. "
+"All existing references will use the default without needing to specify the "
+"parameter."
+msgstr ""
+
+#: src/reference/semver.md:1538
+msgid "Minor: generalizing a type to use generics (with identical types)"
+msgstr ""
+
+#: src/reference/semver.md:1540
+msgid ""
+"A struct or enum field can change from a concrete type to a generic type "
+"parameter, provided that the change results in an identical type for all "
+"existing use cases. For example, the following change is permitted:"
+msgstr ""
+
+#: src/reference/semver.md:1564
+msgid ""
+"because existing uses of `Foo` are shorthand for `Foo<u8>` which yields the "
+"identical field type."
+msgstr ""
+
+#: src/reference/semver.md:1567
+msgid ""
+"Major: generalizing a type to use generics (with possibly different types)"
+msgstr ""
+
+#: src/reference/semver.md:1569
+msgid ""
+"Changing a struct or enum field from a concrete type to a generic type "
+"parameter can break if the type can change."
+msgstr ""
+
+#: src/reference/semver.md:1588
+msgid "// Error: mismatched types\n"
+msgstr ""
+
+#: src/reference/semver.md:1592
+msgid "Minor: changing a generic type to a more generic type"
+msgstr ""
+
+#: src/reference/semver.md:1594
+msgid ""
+"It is safe to change a generic type to a more generic one. For example, the "
+"following adds a generic parameter that defaults to the original type, which "
+"is safe because all existing users will be using the same type for both "
+"fields, the defaulted parameter does not need to be specified."
+msgstr ""
+
+#: src/reference/semver.md:1619
+msgid "Major: adding/removing function parameters"
+msgstr ""
+
+#: src/reference/semver.md:1621
+msgid "Changing the arity of a function is a breaking change."
+msgstr ""
+
+#: src/reference/semver.md:1637
+msgid "// Error: this function takes 1 argument\n"
+msgstr ""
+
+#: src/reference/semver.md:1642
+msgid ""
+"Introduce a new function with the new signature and possibly [deprecate]"
+"(../../reference/attributes/diagnostics.html#the-deprecated-attribute) the "
+"old one."
+msgstr ""
+
+#: src/reference/semver.md:1644
+msgid ""
+"Introduce functions that take a struct argument, where the struct is built "
+"with the builder pattern. This allows new fields to be added to the struct "
+"in the future."
+msgstr ""
+
+#: src/reference/semver.md:1648
+msgid "Possibly-breaking: introducing a new function type parameter"
+msgstr ""
+
+#: src/reference/semver.md:1650
+msgid ""
+"Usually, adding a non-defaulted type parameter is safe, but in some cases it "
+"can be a breaking change:"
+msgstr ""
+
+#: src/reference/semver.md:1669
+msgid ""
+"// Error: function takes 2 generic arguments but 1 generic argument was "
+"supplied\n"
+msgstr ""
+
+#: src/reference/semver.md:1673
+msgid ""
+"However, such explicit calls are rare enough (and can usually be written in "
+"other ways) that this breakage is usually acceptable. One should take into "
+"account how likely it is that the function in question is being called with "
+"explicit type arguments."
+msgstr ""
+
+#: src/reference/semver.md:1678
+msgid ""
+"Minor: generalizing a function to use generics (supporting original type)"
+msgstr ""
+
+#: src/reference/semver.md:1680
+msgid ""
+"The type of a parameter to a function, or its return value, can be "
+"_generalized_ to use generics, including by introducing a new type "
+"parameter, as long as it can be instantiated to the original type. For "
+"example, the following changes are allowed:"
+msgstr ""
+
+#: src/reference/semver.md:1713
+msgid "because all existing uses are instantiations of the new signature."
+msgstr ""
+
+#: src/reference/semver.md:1715
+msgid ""
+"Perhaps somewhat surprisingly, generalization applies to trait objects as "
+"well, given that every trait implements itself:"
+msgstr ""
+
+#: src/reference/semver.md:1744
+msgid ""
+"(The use of `?Sized` is essential; otherwise you couldn't recover the "
+"original signature.)"
+msgstr ""
+
+#: src/reference/semver.md:1747
+msgid ""
+"Introducing generics in this way can potentially create type inference "
+"failures. These are usually rare, and may be acceptable breakage for some "
+"projects, as this can be fixed with additional type annotations."
+msgstr ""
+
+#: src/reference/semver.md:1771
+msgid "// Error: type annotations needed\n"
+msgstr ""
+
+#: src/reference/semver.md:1775
+msgid "Major: generalizing a function to use generics with type mismatch"
+msgstr ""
+
+#: src/reference/semver.md:1777
+msgid ""
+"It is a breaking change to change a function parameter or return type if the "
+"generic type constrains or changes the types previously allowed. For "
+"example, the following adds a generic constraint that may not be satisfied "
+"by existing code:"
+msgstr ""
+
+#: src/reference/semver.md:1798
+msgid "// Error: `Copy` is not implemented for `Vec<u8>`\n"
+msgstr ""
+
+#: src/reference/semver.md:1802
+msgid "Minor: making an `unsafe` function safe"
+msgstr ""
+
+#: src/reference/semver.md:1804
+msgid "A previously `unsafe` function can be made safe without breaking code."
+msgstr ""
+
+#: src/reference/semver.md:1806
+msgid ""
+"Note however that it may cause the [`unused_unsafe`](../../rustc/lints/"
+"listing/warn-by-default.html#unused-unsafe) lint to trigger as in the "
+"example below, which will cause local crates that have specified `#!"
+"[deny(warnings)]` to stop compiling. Per [introducing new lints](#new-"
+"lints), it is allowed for updates to introduce new warnings."
+msgstr ""
+
+#: src/reference/semver.md:1811
+msgid ""
+"Going the other way (making a safe function `unsafe`) is a breaking change."
+msgstr ""
+
+#: src/reference/semver.md:1823
+msgid ""
+"///////////////////////////////////////////////////////////\n"
+"// Example use of the library that will trigger a lint.\n"
+msgstr ""
+
+#: src/reference/semver.md:1833
+msgid "// The `unused_unsafe` lint will trigger here\n"
+msgstr ""
+
+#: src/reference/semver.md:1838
+msgid ""
+"Making a previously `unsafe` associated function or method on structs / "
+"enums safe is also a minor change, while the same is not true for associated "
+"function on traits (see [any change to trait item signatures](#trait-item-"
+"signature))."
+msgstr ""
+
+#: src/reference/semver.md:1842
+msgid "Major: switching from `no_std` support to requiring `std`"
+msgstr ""
+
+#: src/reference/semver.md:1844
+msgid ""
+"If your library specifically supports a [`no_std`](../../reference/names/"
+"preludes.html#the-no_std-attribute) environment, it is a breaking change to "
+"make a new release that requires `std`."
+msgstr ""
+
+#: src/reference/semver.md:1860
+msgid ""
+"///////////////////////////////////////////////////////////\n"
+"// Example usage that will break.\n"
+"// This will fail to link for no_std targets because they don't have a `std` "
+"crate.\n"
+msgstr ""
+
+#: src/reference/semver.md:1873
+msgid ""
+"A common idiom to avoid this is to include a `std` [Cargo feature](features."
+"md) that optionally enables `std` support, and when the feature is off, the "
+"library can be used in a `no_std` environment."
+msgstr ""
+
+#: src/reference/semver.md:1877
+msgid ""
+"Major: adding `non_exhaustive` to an existing enum, variant, or struct with "
+"no private fields"
+msgstr ""
+
+#: src/reference/semver.md:1879
+msgid ""
+"Making items [`#[non_exhaustive]`](../../reference/attributes/type_system."
+"html#the-non_exhaustive-attribute) changes how they may be used outside the "
+"crate where they are defined:"
+msgstr ""
+
+#: src/reference/semver.md:1882
+msgid ""
+"Non-exhaustive structs and enum variants cannot be constructed using [struct "
+"literal](../../reference/expressions/struct-expr.html) syntax, including "
+"[functional update syntax](../../reference/expressions/struct-expr."
+"html#functional-update-syntax)."
+msgstr ""
+
+#: src/reference/semver.md:1884
+msgid ""
+"Pattern matching on non-exhaustive structs requires `..` and matching on "
+"enums does not count towards exhaustiveness."
+msgstr ""
+
+#: src/reference/semver.md:1886
+msgid "Casting enum variants to their discriminant with `as` is not allowed."
+msgstr ""
+
+#: src/reference/semver.md:1888
+msgid ""
+"Structs with private fields cannot be constructed using [struct literal]"
+"(../../reference/expressions/struct-expr.html) syntax regardless of whether "
+"[`#[non_exhaustive]`](../../reference/attributes/type_system.html#the-"
+"non_exhaustive-attribute) is used. Adding [`#[non_exhaustive]`](../../"
+"reference/attributes/type_system.html#the-non_exhaustive-attribute) to such "
+"a struct is not a breaking change."
+msgstr ""
+
+#: src/reference/semver.md:1940
+msgid "// Error: cannot create non-exhaustive struct using struct expression\n"
+msgstr ""
+
+#: src/reference/semver.md:1942
+msgid "// Error: unit variant `X` is private\n"
+msgstr ""
+
+#: src/reference/semver.md:1943
+msgid "// Error: tuple variant `Y` is private\n"
+msgstr ""
+
+#: src/reference/semver.md:1944
+msgid ""
+"// Error: cannot create non-exhaustive variant using struct expression\n"
+msgstr ""
+
+#: src/reference/semver.md:1949
+msgid "// Error: non-exhaustive patterns: `_` not covered\n"
+msgstr ""
+
+#: src/reference/semver.md:1955
+msgid ""
+"Mark structs, enums, and enum variants as [`#[non_exhaustive]`](../../"
+"reference/attributes/type_system.html#the-non_exhaustive-attribute) when "
+"first introducing them, rather than adding [`#[non_exhaustive]`](../../"
+"reference/attributes/type_system.html#the-non_exhaustive-attribute) later on."
+msgstr ""
+
+#: src/reference/semver.md:1961
+msgid "Possibly-breaking: changing the minimum version of Rust required"
+msgstr ""
+
+#: src/reference/semver.md:1963
+msgid ""
+"Introducing the use of new features in a new release of Rust can break "
+"projects that are using older versions of Rust. This also includes using new "
+"features in a new release of Cargo, and requiring the use of a nightly-only "
+"feature in a crate that previously worked on stable."
+msgstr ""
+
+#: src/reference/semver.md:1968
+msgid ""
+"It is generally recommended to treat this as a minor change, rather than as "
+"a major change, for [various reasons](https://github.com/rust-lang/api-"
+"guidelines/discussions/231). It is usually relatively easy to update to a "
+"newer version of Rust. Rust also has a rapid 6-week release cycle, and some "
+"projects will provide compatibility within a window of releases (such as the "
+"current stable release plus N previous releases). Just keep in mind that "
+"some large projects may not be able to update their Rust toolchain rapidly."
+msgstr ""
+
+#: src/reference/semver.md:1977
+msgid "Use [Cargo features](features.md) to make the new features opt-in."
+msgstr ""
+
+#: src/reference/semver.md:1978
+msgid "Provide a large window of support for older releases."
+msgstr ""
+
+#: src/reference/semver.md:1979
+msgid ""
+"Copy the source of new standard library items if possible so that you can "
+"continue to use an older version but take advantage of the new feature."
+msgstr ""
+
+#: src/reference/semver.md:1981
+msgid ""
+"Provide a separate branch of older minor releases that can receive backports "
+"of important bugfixes."
+msgstr ""
+
+#: src/reference/semver.md:1983
+msgid ""
+"Keep an eye out for the [`[cfg(version(..))]`](https://github.com/rust-lang/"
+"rust/issues/64796) and [`#[cfg(accessible(..))]`](https://github.com/rust-"
+"lang/rust/issues/64797) features which provide an opt-in mechanism for new "
+"features. These are currently unstable and only available in the nightly "
+"channel."
+msgstr ""
+
+#: src/reference/semver.md:1988
+msgid "Possibly-breaking: changing the platform and environment requirements"
+msgstr ""
+
+#: src/reference/semver.md:1990
+msgid ""
+"There is a very wide range of assumptions a library makes about the "
+"environment that it runs in, such as the host platform, operating system "
+"version, available services, filesystem support, etc. It can be a breaking "
+"change if you make a new release that restricts what was previously "
+"supported, for example requiring a newer version of an operating system. "
+"These changes can be difficult to track, since you may not always know if a "
+"change breaks in an environment that is not automatically tested."
+msgstr ""
+
+#: src/reference/semver.md:1998
+msgid ""
+"Some projects may deem this acceptable breakage, particularly if the "
+"breakage is unlikely for most users, or the project doesn't have the "
+"resources to support all environments. Another notable situation is when a "
+"vendor discontinues support for some hardware or OS, the project may deem it "
+"reasonable to also discontinue support."
+msgstr ""
+
+#: src/reference/semver.md:2005
+msgid "Document the platforms and environments you specifically support."
+msgstr ""
+
+#: src/reference/semver.md:2006
+msgid "Test your code on a wide range of environments in CI."
+msgstr ""
+
+#: src/reference/semver.md:2008
+msgid "Minor: introducing new lints"
+msgstr ""
+
+#: src/reference/semver.md:2010
+msgid ""
+"Some changes to a library may cause new lints to be triggered in users of "
+"that library. This should generally be considered a compatible change."
+msgstr ""
+
+#: src/reference/semver.md:2029
+msgid "// Warning: use of deprecated function\n"
+msgstr ""
+
+#: src/reference/semver.md:2033
+msgid ""
+"Beware that it may be possible for this to technically cause a project to "
+"fail if they have explicitly denied the warning, and the updated crate is a "
+"direct dependency. Denying warnings should be done with care and the "
+"understanding that new lints may be introduced over time. However, library "
+"authors should be cautious about introducing new warnings and may want to "
+"consider the potential impact on their users."
+msgstr ""
+
+#: src/reference/semver.md:2037
+msgid ""
+"The following lints are examples of those that may be introduced when "
+"updating a dependency:"
+msgstr ""
+
+#: src/reference/semver.md:2039
+msgid ""
+"[`deprecated`](../../rustc/lints/listing/warn-by-default.html#deprecated) "
+"--- Introduced when a dependency adds the [`#[deprecated]` attribute](../../"
+"reference/attributes/diagnostics.html#the-deprecated-attribute) to an item "
+"you are using."
+msgstr ""
+
+#: src/reference/semver.md:2040
+msgid ""
+"[`unused_must_use`](../../rustc/lints/listing/warn-by-default.html#unused-"
+"must-use) --- Introduced when a dependency adds the [`#[must_use]` attribute]"
+"(../../reference/attributes/diagnostics.html#the-must_use-attribute) to an "
+"item where you are not consuming the result."
+msgstr ""
+
+#: src/reference/semver.md:2041
+msgid ""
+"[`unused_unsafe`](../../rustc/lints/listing/warn-by-default.html#unused-"
+"unsafe) --- Introduced when a dependency _removes_ the `unsafe` qualifier "
+"from a function, and that is the only unsafe function called in an unsafe "
+"block."
+msgstr ""
+
+#: src/reference/semver.md:2043
+msgid ""
+"Additionally, updating `rustc` to a new version may introduce new lints."
+msgstr ""
+
+#: src/reference/semver.md:2045
+msgid ""
+"Transitive dependencies which introduce new lints should not usually cause a "
+"failure because Cargo uses [`--cap-lints`](../../rustc/lints/levels."
+"html#capping-lints) to suppress all lints in dependencies."
+msgstr ""
+
+#: src/reference/semver.md:2048
+msgid ""
+"If you build with warnings denied, understand you may need to deal with "
+"resolving new warnings whenever you update your dependencies. If using "
+"RUSTFLAGS to pass `-Dwarnings`, also add the `-A` flag to allow lints that "
+"are likely to cause issues, such as `-Adeprecated`."
+msgstr ""
+
+#: src/reference/semver.md:2050
+msgid ""
+"Introduce deprecations behind a [feature](features.md). For example "
+"`#[cfg_attr(feature = \"deprecated\", deprecated=\"use bar instead\")]`. "
+"Then, when you plan to remove an item in a future SemVer breaking change, "
+"you can communicate with your users that they should enable the `deprecated` "
+"feature _before_ updating to remove the use of the deprecated items. This "
+"allows users to choose when to respond to deprecations without needing to "
+"immediately respond to them. A downside is that it can be difficult to "
+"communicate to users that they need to take these manual steps to prepare "
+"for a major update."
+msgstr ""
+
+#: src/reference/semver.md:2063
+msgid "Minor: adding a new Cargo feature"
+msgstr ""
+
+#: src/reference/semver.md:2065
+msgid ""
+"It is usually safe to add new [Cargo features](features.md). If the feature "
+"introduces new changes that cause a breaking change, this can cause "
+"difficulties for projects that have stricter backwards-compatibility needs. "
+"In that scenario, avoid adding the feature to the \"default\" list, and "
+"possibly document the consequences of enabling the feature."
+msgstr ""
+
+#: src/reference/semver.md:2085
+msgid "Major: removing a Cargo feature"
+msgstr ""
+
+#: src/reference/semver.md:2087
+msgid ""
+"It is usually a breaking change to remove [Cargo features](features.md). "
+"This will cause an error for any project that enabled the feature."
+msgstr ""
+
+#: src/reference/semver.md:2105
+msgid ""
+"Clearly document your features. If there is an internal or experimental "
+"feature, mark it as such, so that users know the status of the feature."
+msgstr ""
+
+#: src/reference/semver.md:2107
+msgid ""
+"Leave the old feature in `Cargo.toml`, but otherwise remove its "
+"functionality. Document that the feature is deprecated, and remove it in a "
+"future major SemVer release."
+msgstr ""
+
+#: src/reference/semver.md:2111
+msgid ""
+"Major: removing a feature from a feature list if that changes functionality "
+"or public items"
+msgstr ""
+
+#: src/reference/semver.md:2113
+msgid ""
+"If removing a feature from another feature, this can break existing users if "
+"they are expecting that functionality to be available through that feature."
+msgstr ""
+
+#: src/reference/semver.md:2116
+msgid ""
+"```toml\n"
+"# Breaking change example\n"
+"\n"
+"###########################################################\n"
+"# Before\n"
+"[features]\n"
+"default = [\"std\"]\n"
+"std = []\n"
+"\n"
+"###########################################################\n"
+"# After\n"
+"[features]\n"
+"default = []  # This may cause packages to fail if they are expecting std to "
+"be enabled.\n"
+"std = []\n"
+"```"
+msgstr ""
+
+#: src/reference/semver.md:2132
+msgid "Possibly-breaking: removing an optional dependency"
+msgstr ""
+
+#: src/reference/semver.md:2134
+msgid ""
+"Removing an [optional dependency](features.md#optional-dependencies) can "
+"break a project using your library because another project may be enabling "
+"that dependency via [Cargo features](features.md)."
+msgstr ""
+
+#: src/reference/semver.md:2137
+msgid ""
+"When there is an optional dependency, cargo implicitly defines a feature of "
+"the same name to provide a mechanism to enable the dependency and to check "
+"when it is enabled. This problem can be avoided by using the `dep:` syntax "
+"in the `[features]` table, which disables this implicit feature. Using `dep:"
+"` makes it possible to hide the existence of optional dependencies under "
+"more semantically-relevant names which can be more safely modified."
+msgstr ""
+
+#: src/reference/semver.md:2144
+msgid ""
+"```toml\n"
+"# Breaking change example\n"
+"\n"
+"###########################################################\n"
+"# Before\n"
+"[dependencies]\n"
+"curl = { version = \"0.4.31\", optional = true }\n"
+"\n"
+"###########################################################\n"
+"# After\n"
+"[dependencies]\n"
+"# ..curl removed\n"
+"```"
+msgstr ""
+
+#: src/reference/semver.md:2158
+msgid ""
+"```toml\n"
+"# MINOR CHANGE\n"
+"#\n"
+"# This example shows how to avoid breaking changes with optional "
+"dependencies.\n"
+"\n"
+"###########################################################\n"
+"# Before\n"
+"[dependencies]\n"
+"curl = { version = \"0.4.31\", optional = true }\n"
+"\n"
+"[features]\n"
+"networking = [\"dep:curl\"]\n"
+"\n"
+"###########################################################\n"
+"# After\n"
+"[dependencies]\n"
+"# Here, one optional dependency was replaced with another.\n"
+"hyper = { version = \"0.14.27\", optional = true }\n"
+"\n"
+"[features]\n"
+"networking = [\"dep:hyper\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/semver.md:2182
+msgid ""
+"Use the `dep:` syntax in the `[features]` table to avoid exposing optional "
+"dependencies in the first place. See [optional dependencies](features."
+"md#optional-dependencies) for more information."
+msgstr ""
+
+#: src/reference/semver.md:2185
+msgid ""
+"Clearly document your features. If the optional dependency is not included "
+"in the documented list of features, then you may decide to consider it safe "
+"to change undocumented entries."
+msgstr ""
+
+#: src/reference/semver.md:2188
+msgid ""
+"Leave the optional dependency, and just don't use it within your library."
+msgstr ""
+
+#: src/reference/semver.md:2189
+msgid ""
+"Replace the optional dependency with a [Cargo feature](features.md) that "
+"does nothing, and document that it is deprecated."
+msgstr ""
+
+#: src/reference/semver.md:2191
+msgid ""
+"Use high-level features which enable optional dependencies, and document "
+"those as the preferred way to enable the extended functionality. For "
+"example, if your library has optional support for something like "
+"\"networking\", create a generic feature name \"networking\" that enables "
+"the optional dependencies necessary to implement \"networking\". Then "
+"document the \"networking\" feature."
+msgstr ""
+
+#: src/reference/semver.md:2200
+msgid "Minor: changing dependency features"
+msgstr ""
+
+#: src/reference/semver.md:2202
+msgid ""
+"It is usually safe to change the features on a dependency, as long as the "
+"feature does not introduce a breaking change."
+msgstr ""
+
+#: src/reference/semver.md:2205
+msgid ""
+"```toml\n"
+"# MINOR CHANGE\n"
+"\n"
+"###########################################################\n"
+"# Before\n"
+"[dependencies]\n"
+"rand = { version = \"0.7.3\", features = [\"small_rng\"] }\n"
+"\n"
+"\n"
+"###########################################################\n"
+"# After\n"
+"[dependencies]\n"
+"rand = \"0.7.3\"\n"
+"```"
+msgstr ""
+
+#: src/reference/semver.md:2220
+msgid "Minor: adding dependencies"
+msgstr ""
+
+#: src/reference/semver.md:2222
+msgid ""
+"It is usually safe to add new dependencies, as long as the new dependency "
+"does not introduce new requirements that result in a breaking change. For "
+"example, adding a new dependency that requires nightly in a project that "
+"previously worked on stable is a major change."
+msgstr ""
+
+#: src/reference/semver.md:2227
+msgid ""
+"```toml\n"
+"# MINOR CHANGE\n"
+"\n"
+"###########################################################\n"
+"# Before\n"
+"[dependencies]\n"
+"# ..empty\n"
+"\n"
+"###########################################################\n"
+"# After\n"
+"[dependencies]\n"
+"log = \"0.4.11\"\n"
+"```"
+msgstr ""
+
+#: src/reference/semver.md:2241
+msgid "Application compatibility"
+msgstr ""
+
+#: src/reference/semver.md:2243
+msgid ""
+"Cargo projects may also include executable binaries which have their own "
+"interfaces (such as a CLI interface, OS-level interaction, etc.). Since "
+"these are part of the Cargo package, they often use and share the same "
+"version as the package. You will need to decide if and how you want to "
+"employ a SemVer contract with your users in the changes you make to your "
+"application. The potential breaking and compatible changes to an application "
+"are too numerous to list, so you are encouraged to use the spirit of the "
+"[SemVer](https://semver.org/) spec to guide your decisions on how to apply "
+"versioning to your application, or at least document what your commitments "
+"are."
+msgstr ""
