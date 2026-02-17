@@ -1,0 +1,127 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:50:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/commands/cargo-uninstall.md:1
+msgid "cargo-uninstall(1)"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:3
+msgid "NAME"
+msgstr "名稱"
+
+#: src/commands/cargo-uninstall.md:5
+msgid "cargo-uninstall - Remove a Rust binary"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:7
+msgid "SYNOPSIS"
+msgstr "概要"
+
+#: src/commands/cargo-uninstall.md:9
+msgid "`cargo uninstall` \\[_options_\\] \\[_spec_...\\]"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:11
+msgid "DESCRIPTION"
+msgstr "描述"
+
+#: src/commands/cargo-uninstall.md:13
+msgid ""
+"This command removes a package installed with [cargo-install(1)](cargo-"
+"install.html). The _spec_ argument is a package ID specification of the "
+"package to remove (see [cargo-pkgid(1)](cargo-pkgid.html))."
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:17
+msgid ""
+"By default all binaries are removed for a crate but the `--bin` and `--"
+"example` flags can be used to only remove particular binaries."
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:20
+msgid "The installation root is determined, in order of precedence:"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:22
+msgid "`--root` option"
+msgstr "`--root` 選項"
+
+#: src/commands/cargo-uninstall.md:23
+msgid "`CARGO_INSTALL_ROOT` environment variable"
+msgstr "`CARGO_INSTALL_ROOT` 環境變數"
+
+#: src/commands/cargo-uninstall.md:24
+msgid "`install.root` Cargo [config value](../reference/config.html)"
+msgstr "`install.root` Cargo [組態值](../reference/config.html)"
+
+#: src/commands/cargo-uninstall.md:25
+msgid "`CARGO_HOME` environment variable"
+msgstr "`CARGO_HOME` 環境變數"
+
+#: src/commands/cargo-uninstall.md:26
+msgid "`$HOME/.cargo`"
+msgstr "`$HOME/.cargo`"
+
+#: src/commands/cargo-uninstall.md:29
+msgid "OPTIONS"
+msgstr "選項"
+
+#: src/commands/cargo-uninstall.md:31
+msgid "Install Options"
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:50
+msgid "Display Options"
+msgstr "顯示選項"
+
+#: src/commands/cargo-uninstall.md:84
+msgid "Common Options"
+msgstr "共用選項"
+
+#: src/commands/cargo-uninstall.md:114
+msgid "ENVIRONMENT"
+msgstr "環境"
+
+#: src/commands/cargo-uninstall.md:116
+msgid ""
+"See [the reference](../reference/environment-variables.html) for details on "
+"environment variables that Cargo reads."
+msgstr ""
+
+#: src/commands/cargo-uninstall.md:120
+msgid "EXIT STATUS"
+msgstr "退出狀態"
+
+#: src/commands/cargo-uninstall.md:122
+msgid "`0`: Cargo succeeded."
+msgstr "`0`：Cargo 執行成功。"
+
+#: src/commands/cargo-uninstall.md:123
+msgid "`101`: Cargo failed to complete."
+msgstr "`101`：Cargo 未能完成執行。"
+
+#: src/commands/cargo-uninstall.md:126
+msgid "EXAMPLES"
+msgstr "範例"
+
+#: src/commands/cargo-uninstall.md:128
+msgid "Uninstall a previously installed package."
+msgstr "解除安裝先前安裝的軟體包。"
+
+#: src/commands/cargo-uninstall.md:132
+msgid "SEE ALSO"
+msgstr "另請參見"
+
+#: src/commands/cargo-uninstall.md:133
+msgid "[cargo(1)](cargo.html), [cargo-install(1)](cargo-install.html)"
+msgstr ""
