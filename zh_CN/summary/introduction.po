@@ -1,0 +1,107 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:44:53Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/index.md:1
+msgid "The Cargo Book"
+msgstr ""
+
+#: src/index.md:3
+msgid "![Cargo Logo](images/Cargo-Logo-Small.png)"
+msgstr ""
+
+#: src/index.md:5
+msgid ""
+"Cargo is the [Rust](https://www.rust-lang.org/) [_package manager_](./"
+"appendix/glossary.md#package-manager \"\\\"package manager\\\" (glossary "
+"entry)\"). Cargo downloads your Rust [package](./appendix/glossary."
+"md#package \"\\\"package\\\" (glossary entry)\")'s dependencies, compiles "
+"your packages, makes distributable packages, and uploads them to [crates.io]"
+"(https://crates.io/), the Rust community’s [_package registry_](./appendix/"
+"glossary.md#package-registry \"\\\"package registry\\\" (glossary entry)\"). "
+"You can contribute to this book on [GitHub](https://github.com/rust-lang/"
+"cargo/tree/master/src/doc)."
+msgstr ""
+
+#: src/index.md:10
+msgid "Sections"
+msgstr ""
+
+#: src/index.md:12
+msgid "**[Getting Started](getting-started/index.md)**"
+msgstr ""
+
+#: src/index.md:14
+msgid ""
+"To get started with Cargo, install Cargo (and Rust) and set up your first "
+"[_crate_](./appendix/glossary.md#crate \"\\\"crate\\\" (glossary entry)\")."
+msgstr ""
+
+#: src/index.md:17
+msgid "**[Cargo Guide](guide/index.md)**"
+msgstr ""
+
+#: src/index.md:19
+msgid ""
+"The guide will give you all you need to know about how to use Cargo to "
+"develop Rust packages."
+msgstr ""
+
+#: src/index.md:22
+msgid "**[Cargo Reference](reference/index.md)**"
+msgstr ""
+
+#: src/index.md:24
+msgid "The reference covers the details of various areas of Cargo."
+msgstr ""
+
+#: src/index.md:26
+msgid "**[Cargo Commands](commands/index.md)**"
+msgstr ""
+
+#: src/index.md:28
+msgid ""
+"The commands will let you interact with Cargo using its command-line "
+"interface."
+msgstr ""
+
+#: src/index.md:30
+msgid "**[Frequently Asked Questions](faq.md)**"
+msgstr ""
+
+#: src/index.md:32
+msgid "**Appendices:**"
+msgstr ""
+
+#: src/index.md:33
+msgid "[Glossary](appendix/glossary.md)"
+msgstr ""
+
+#: src/index.md:34
+msgid "[Git Authentication](appendix/git-authentication.md)"
+msgstr ""
+
+#: src/index.md:36
+msgid "**Other Documentation:**"
+msgstr ""
+
+#: src/index.md:37
+msgid ""
+"[Changelog](https://github.com/rust-lang/cargo/blob/master/CHANGELOG.md) "
+"\\--- Detailed notes about changes in Cargo in each release."
+msgstr ""
+
+#: src/index.md:39
+msgid ""
+"[Rust documentation website](https://doc.rust-lang.org/) --- Links to "
+"official Rust documentation and tools."
+msgstr ""
