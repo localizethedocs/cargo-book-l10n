@@ -129,7 +129,7 @@ msgstr "註冊表"
 
 #: src/SUMMARY.md:34
 msgid "Unstable Features"
-msgstr ""
+msgstr "不穩定功能"
 
 #: src/SUMMARY.md:36
 msgid "Cargo Commands"
