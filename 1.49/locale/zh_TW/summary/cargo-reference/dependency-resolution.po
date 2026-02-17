@@ -83,7 +83,7 @@ msgstr ""
 
 #: src/reference/resolver.md:43
 msgid "Example"
-msgstr ""
+msgstr "範例"
 
 #: src/reference/resolver.md:43
 msgid "Equivalence"
@@ -389,7 +389,7 @@ msgstr ""
 
 #: src/reference/resolver.md:194
 msgid "Features"
-msgstr ""
+msgstr "功能"
 
 #: src/reference/resolver.md:196
 msgid ""
