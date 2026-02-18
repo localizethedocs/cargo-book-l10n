@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-01-24T08:28:08Z\n"
+"POT-Creation-Date: 2026-02-17T08:57:13Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/commands/cargo.md:1
@@ -47,281 +47,314 @@ msgid ""
 msgstr ""
 
 #: src/commands/cargo.md:20
-msgid "COMMANDS"
+msgid "_command_ may be one of:"
+msgstr ""
+
+#: src/commands/cargo.md:21
+msgid "built-in commands, see below"
 msgstr ""
 
 #: src/commands/cargo.md:22
+msgid "[aliases](../reference/config.html#alias)"
+msgstr ""
+
+#: src/commands/cargo.md:23
+msgid "[external tools](../reference/external-tools.html#custom-subcommands)"
+msgstr ""
+
+#: src/commands/cargo.md:28
+msgid "COMMANDS"
+msgstr ""
+
+#: src/commands/cargo.md:30
 msgid "Build Commands"
 msgstr ""
 
-#: src/commands/cargo.md:24
+#: src/commands/cargo.md:32
 msgid ""
 "[cargo-bench(1)](cargo-bench.html)  \n"
 "    Execute benchmarks of a package."
 msgstr ""
 
-#: src/commands/cargo.md:27
+#: src/commands/cargo.md:35
 msgid ""
 "[cargo-build(1)](cargo-build.html)  \n"
 "    Compile a package."
 msgstr ""
 
-#: src/commands/cargo.md:30
+#: src/commands/cargo.md:38
 msgid ""
 "[cargo-check(1)](cargo-check.html)  \n"
 "    Check a local package and all of its dependencies for errors."
 msgstr ""
 
-#: src/commands/cargo.md:33
+#: src/commands/cargo.md:41
 msgid ""
 "[cargo-clean(1)](cargo-clean.html)  \n"
 "    Remove artifacts that Cargo has generated in the past."
 msgstr ""
 
-#: src/commands/cargo.md:36
+#: src/commands/cargo.md:44
 msgid ""
 "[cargo-doc(1)](cargo-doc.html)  \n"
 "    Build a package's documentation."
 msgstr ""
 
-#: src/commands/cargo.md:39
+#: src/commands/cargo.md:47
 msgid ""
 "[cargo-fetch(1)](cargo-fetch.html)  \n"
 "    Fetch dependencies of a package from the network."
 msgstr ""
 
-#: src/commands/cargo.md:42
+#: src/commands/cargo.md:50
 msgid ""
 "[cargo-fix(1)](cargo-fix.html)  \n"
 "    Automatically fix lint warnings reported by rustc."
 msgstr ""
 
-#: src/commands/cargo.md:45
+#: src/commands/cargo.md:53
 msgid ""
 "[cargo-run(1)](cargo-run.html)  \n"
 "    Run a binary or example of the local package."
 msgstr ""
 
-#: src/commands/cargo.md:48
+#: src/commands/cargo.md:56
 msgid ""
 "[cargo-rustc(1)](cargo-rustc.html)  \n"
 "    Compile a package, and pass extra options to the compiler."
 msgstr ""
 
-#: src/commands/cargo.md:51
+#: src/commands/cargo.md:59
 msgid ""
 "[cargo-rustdoc(1)](cargo-rustdoc.html)  \n"
 "    Build a package's documentation, using specified custom flags."
 msgstr ""
 
-#: src/commands/cargo.md:54
+#: src/commands/cargo.md:62
 msgid ""
 "[cargo-test(1)](cargo-test.html)  \n"
 "    Execute unit and integration tests of a package."
 msgstr ""
 
-#: src/commands/cargo.md:57
+#: src/commands/cargo.md:65
 msgid "Manifest Commands"
 msgstr ""
 
-#: src/commands/cargo.md:59
+#: src/commands/cargo.md:67
 msgid ""
 "[cargo-add(1)](cargo-add.html)  \n"
 "    Add dependencies to a `Cargo.toml` manifest file."
 msgstr ""
 
-#: src/commands/cargo.md:62
+#: src/commands/cargo.md:70
 msgid ""
 "[cargo-generate-lockfile(1)](cargo-generate-lockfile.html)  \n"
 "    Generate `Cargo.lock` for a project."
 msgstr ""
 
-#: src/commands/cargo.md:65
+#: src/commands/cargo.md:73
 msgid ""
 "[cargo-info(1)](cargo-info.html)  \n"
 "    Display information about a package in the registry. Default registry is "
 "crates.io."
 msgstr ""
 
-#: src/commands/cargo.md:68
+#: src/commands/cargo.md:76
 msgid ""
 "[cargo-locate-project(1)](cargo-locate-project.html)  \n"
 "    Print a JSON representation of a `Cargo.toml` file's location."
 msgstr ""
 
-#: src/commands/cargo.md:71
+#: src/commands/cargo.md:79
 msgid ""
 "[cargo-metadata(1)](cargo-metadata.html)  \n"
 "    Output the resolved dependencies of a package in machine-readable format."
 msgstr ""
 
-#: src/commands/cargo.md:74
+#: src/commands/cargo.md:82
 msgid ""
 "[cargo-pkgid(1)](cargo-pkgid.html)  \n"
 "    Print a fully qualified package specification."
 msgstr ""
 
-#: src/commands/cargo.md:77
+#: src/commands/cargo.md:85
 msgid ""
 "[cargo-remove(1)](cargo-remove.html)  \n"
 "    Remove dependencies from a `Cargo.toml` manifest file."
 msgstr ""
 
-#: src/commands/cargo.md:80
+#: src/commands/cargo.md:88
 msgid ""
 "[cargo-tree(1)](cargo-tree.html)  \n"
 "    Display a tree visualization of a dependency graph."
 msgstr ""
 
-#: src/commands/cargo.md:83
+#: src/commands/cargo.md:91
 msgid ""
 "[cargo-update(1)](cargo-update.html)  \n"
 "    Update dependencies as recorded in the local lock file."
 msgstr ""
 
-#: src/commands/cargo.md:86
+#: src/commands/cargo.md:94
 msgid ""
 "[cargo-vendor(1)](cargo-vendor.html)  \n"
 "    Vendor all dependencies locally."
 msgstr ""
 
-#: src/commands/cargo.md:89
+#: src/commands/cargo.md:97
 msgid "Package Commands"
 msgstr ""
 
-#: src/commands/cargo.md:91
+#: src/commands/cargo.md:99
 msgid ""
 "[cargo-init(1)](cargo-init.html)  \n"
 "    Create a new Cargo package in an existing directory."
 msgstr ""
 
-#: src/commands/cargo.md:94
+#: src/commands/cargo.md:102
 msgid ""
 "[cargo-install(1)](cargo-install.html)  \n"
 "    Build and install a Rust binary."
 msgstr ""
 
-#: src/commands/cargo.md:97
+#: src/commands/cargo.md:105
 msgid ""
 "[cargo-new(1)](cargo-new.html)  \n"
 "    Create a new Cargo package."
 msgstr ""
 
-#: src/commands/cargo.md:100
+#: src/commands/cargo.md:108
 msgid ""
 "[cargo-search(1)](cargo-search.html)  \n"
 "    Search packages in crates.io."
 msgstr ""
 
-#: src/commands/cargo.md:103
+#: src/commands/cargo.md:111
 msgid ""
 "[cargo-uninstall(1)](cargo-uninstall.html)  \n"
 "    Remove a Rust binary."
 msgstr ""
 
-#: src/commands/cargo.md:106
+#: src/commands/cargo.md:114
 msgid "Publishing Commands"
 msgstr ""
 
-#: src/commands/cargo.md:108
+#: src/commands/cargo.md:116
 msgid ""
 "[cargo-login(1)](cargo-login.html)  \n"
 "    Save an API token from the registry locally."
 msgstr ""
 
-#: src/commands/cargo.md:111
+#: src/commands/cargo.md:119
 msgid ""
 "[cargo-logout(1)](cargo-logout.html)  \n"
 "    Remove an API token from the registry locally."
 msgstr ""
 
-#: src/commands/cargo.md:114
+#: src/commands/cargo.md:122
 msgid ""
 "[cargo-owner(1)](cargo-owner.html)  \n"
 "    Manage the owners of a crate on the registry."
 msgstr ""
 
-#: src/commands/cargo.md:117
+#: src/commands/cargo.md:125
 msgid ""
 "[cargo-package(1)](cargo-package.html)  \n"
 "    Assemble the local package into a distributable tarball."
 msgstr ""
 
-#: src/commands/cargo.md:120
+#: src/commands/cargo.md:128
 msgid ""
 "[cargo-publish(1)](cargo-publish.html)  \n"
 "    Upload a package to the registry."
 msgstr ""
 
-#: src/commands/cargo.md:123
+#: src/commands/cargo.md:131
 msgid ""
 "[cargo-yank(1)](cargo-yank.html)  \n"
 "    Remove a pushed crate from the index."
 msgstr ""
 
-#: src/commands/cargo.md:126
+#: src/commands/cargo.md:134
+msgid "Report Commands"
+msgstr ""
+
+#: src/commands/cargo.md:136
+msgid ""
+"[cargo-report(1)](cargo-report.html)  \n"
+"    Generate and display various kinds of reports."
+msgstr ""
+
+#: src/commands/cargo.md:139
+msgid ""
+"[cargo-report-future-incompatibilities(1)](cargo-report-future-"
+"incompatibilities.html)  \n"
+"    Reports any crates which will eventually stop compiling."
+msgstr ""
+
+#: src/commands/cargo.md:142
 msgid "General Commands"
 msgstr ""
 
-#: src/commands/cargo.md:128
+#: src/commands/cargo.md:144
 msgid ""
 "[cargo-help(1)](cargo-help.html)  \n"
 "    Display help information about Cargo."
 msgstr ""
 
-#: src/commands/cargo.md:131
+#: src/commands/cargo.md:147
 msgid ""
 "[cargo-version(1)](cargo-version.html)  \n"
 "    Show version information."
 msgstr ""
 
-#: src/commands/cargo.md:134
+#: src/commands/cargo.md:150
 msgid "OPTIONS"
 msgstr ""
 
-#: src/commands/cargo.md:136
+#: src/commands/cargo.md:152
 msgid "Special Options"
 msgstr ""
 
-#: src/commands/cargo.md:161
+#: src/commands/cargo.md:177
 msgid "Display Options"
 msgstr ""
 
-#: src/commands/cargo.md:197
+#: src/commands/cargo.md:213
 msgid "Manifest Options"
 msgstr ""
 
-#: src/commands/cargo.md:233
+#: src/commands/cargo.md:249
 msgid "Common Options"
 msgstr ""
 
-#: src/commands/cargo.md:278
+#: src/commands/cargo.md:294
 msgid "ENVIRONMENT"
 msgstr ""
 
-#: src/commands/cargo.md:280
+#: src/commands/cargo.md:296
 msgid ""
 "See [the reference](../reference/environment-variables.html) for details on "
 "environment variables that Cargo reads."
 msgstr ""
 
-#: src/commands/cargo.md:283
+#: src/commands/cargo.md:299
 msgid "EXIT STATUS"
 msgstr ""
 
-#: src/commands/cargo.md:285
+#: src/commands/cargo.md:301
 msgid "`0`: Cargo succeeded."
 msgstr ""
 
-#: src/commands/cargo.md:286
+#: src/commands/cargo.md:302
 msgid "`101`: Cargo failed to complete."
 msgstr ""
 
-#: src/commands/cargo.md:288
+#: src/commands/cargo.md:304
 msgid "FILES"
 msgstr ""
 
-#: src/commands/cargo.md:290
+#: src/commands/cargo.md:306
 msgid ""
 "`~/.cargo/`  \n"
 "    Default location for Cargo's \"home\" directory where it stores various "
@@ -329,7 +362,7 @@ msgid ""
 "variable."
 msgstr ""
 
-#: src/commands/cargo.md:295
+#: src/commands/cargo.md:311
 msgid ""
 "`$CARGO_HOME/bin/`  \n"
 "    Binaries installed by [cargo-install(1)](cargo-install.html) will be "
@@ -337,14 +370,14 @@ msgid ""
 "executables distributed with Rust are also located here."
 msgstr ""
 
-#: src/commands/cargo.md:299
+#: src/commands/cargo.md:315
 msgid ""
 "`$CARGO_HOME/config.toml`  \n"
 "    The global configuration file. See [the reference](../reference/config."
 "html) for more information about configuration files."
 msgstr ""
 
-#: src/commands/cargo.md:303
+#: src/commands/cargo.md:319
 msgid ""
 "`.cargo/config.toml`  \n"
 "    Cargo automatically searches for a file named `.cargo/config.toml` in "
@@ -352,72 +385,72 @@ msgid ""
 "will be merged with the global configuration file."
 msgstr ""
 
-#: src/commands/cargo.md:308
+#: src/commands/cargo.md:324
 msgid ""
 "`$CARGO_HOME/credentials.toml`  \n"
 "    Private authentication information for logging in to a registry."
 msgstr ""
 
-#: src/commands/cargo.md:311
+#: src/commands/cargo.md:327
 msgid ""
 "`$CARGO_HOME/registry/`  \n"
 "    This directory contains cached downloads of the registry index and any "
 "downloaded dependencies."
 msgstr ""
 
-#: src/commands/cargo.md:315
+#: src/commands/cargo.md:331
 msgid ""
 "`$CARGO_HOME/git/`  \n"
 "    This directory contains cached downloads of git dependencies."
 msgstr ""
 
-#: src/commands/cargo.md:318
+#: src/commands/cargo.md:334
 msgid ""
 "Please note that the internal structure of the `$CARGO_HOME` directory is "
 "not stable yet and may be subject to change."
 msgstr ""
 
-#: src/commands/cargo.md:323
+#: src/commands/cargo.md:339
 msgid "EXAMPLES"
 msgstr ""
 
-#: src/commands/cargo.md:325
+#: src/commands/cargo.md:341
 msgid "Build a local package and all of its dependencies:"
 msgstr ""
 
-#: src/commands/cargo.md:329
+#: src/commands/cargo.md:345
 msgid "Build a package with optimizations:"
 msgstr ""
 
-#: src/commands/cargo.md:333
+#: src/commands/cargo.md:349
 msgid "Run tests for a cross-compiled target:"
 msgstr ""
 
-#: src/commands/cargo.md:337
+#: src/commands/cargo.md:353
 msgid "Create a new package that builds an executable:"
 msgstr ""
 
-#: src/commands/cargo.md:341
+#: src/commands/cargo.md:357
 msgid "Create a package in the current directory:"
 msgstr ""
 
-#: src/commands/cargo.md:346
+#: src/commands/cargo.md:362
 msgid "Learn about a command's options and usage:"
 msgstr ""
 
-#: src/commands/cargo.md:350
+#: src/commands/cargo.md:366
 msgid "BUGS"
 msgstr ""
 
-#: src/commands/cargo.md:352
+#: src/commands/cargo.md:368
 msgid "See <https://github.com/rust-lang/cargo/issues> for issues."
 msgstr ""
 
-#: src/commands/cargo.md:354
+#: src/commands/cargo.md:370
 msgid "SEE ALSO"
 msgstr ""
 
-#: src/commands/cargo.md:356
+#: src/commands/cargo.md:372
 msgid ""
 "[rustc(1)](https://doc.rust-lang.org/rustc/index.html), [rustdoc(1)](https://"
 "doc.rust-lang.org/rustdoc/index.html)"
