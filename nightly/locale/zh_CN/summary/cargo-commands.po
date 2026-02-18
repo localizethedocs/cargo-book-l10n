@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-01-24T08:28:08Z\n"
+"POT-Creation-Date: 2026-02-17T08:57:13Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -36,5 +36,9 @@ msgid "[Publishing Commands](publishing-commands.md)"
 msgstr ""
 
 #: src/commands/index.md:7
+msgid "[Report Commands](report-commands.md)"
+msgstr ""
+
+#: src/commands/index.md:8
 msgid "[Deprecated and Removed](deprecated-and-removed.md)"
 msgstr ""

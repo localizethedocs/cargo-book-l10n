@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-02-17T08:57:13Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/commands/cargo-report.md:1
+msgid "cargo-report(1)"
+msgstr ""
+
+#: src/commands/cargo-report.md:3
+msgid "NAME"
+msgstr ""
+
+#: src/commands/cargo-report.md:5
+msgid "cargo-report --- Generate and display various kinds of reports"
+msgstr ""
+
+#: src/commands/cargo-report.md:7
+msgid "SYNOPSIS"
+msgstr ""
+
+#: src/commands/cargo-report.md:9
+msgid "`cargo report` _type_ \\[_options_\\]"
+msgstr ""
+
+#: src/commands/cargo-report.md:11
+msgid "DESCRIPTION"
+msgstr ""
+
+#: src/commands/cargo-report.md:13
+msgid ""
+"Displays a report of the given _type_ --- currently, only `future-incompat` "
+"is supported"
+msgstr ""
+
+#: src/commands/cargo-report.md:15
+msgid "OPTIONS"
+msgstr ""
+
+#: src/commands/cargo-report.md:17
+msgid "Display Options"
+msgstr ""
+
+#: src/commands/cargo-report.md:51
+msgid "Manifest Options"
+msgstr ""
+
+#: src/commands/cargo-report.md:87
+msgid "Common Options"
+msgstr ""
+
+#: src/commands/cargo-report.md:132
+msgid "ENVIRONMENT"
+msgstr ""
+
+#: src/commands/cargo-report.md:134
+msgid ""
+"See [the reference](../reference/environment-variables.html) for details on "
+"environment variables that Cargo reads."
+msgstr ""
+
+#: src/commands/cargo-report.md:137
+msgid "EXIT STATUS"
+msgstr ""
+
+#: src/commands/cargo-report.md:139
+msgid "`0`: Cargo succeeded."
+msgstr ""
+
+#: src/commands/cargo-report.md:140
+msgid "`101`: Cargo failed to complete."
+msgstr ""
+
+#: src/commands/cargo-report.md:142
+msgid "EXAMPLES"
+msgstr ""
+
+#: src/commands/cargo-report.md:144
+msgid "Display the available kinds of reports:"
+msgstr ""
+
+#: src/commands/cargo-report.md:148
+msgid "SEE ALSO"
+msgstr ""
+
+#: src/commands/cargo-report.md:150
+msgid ""
+"[cargo(1)](cargo.html), [cargo-report-future-incompatibilities(1)](cargo-"
+"report-future-incompatibilities.html)"
+msgstr ""

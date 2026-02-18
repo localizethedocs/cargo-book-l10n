@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-01-24T08:28:08Z\n"
+"POT-Creation-Date: 2026-02-17T08:57:13Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -56,21 +56,17 @@ msgid "[cargo miri](cargo-miri.md)"
 msgstr ""
 
 #: src/commands/build-commands.md:12
-msgid "[cargo report](cargo-report.md)"
-msgstr ""
-
-#: src/commands/build-commands.md:13
 msgid "[cargo run](cargo-run.md)"
 msgstr ""
 
-#: src/commands/build-commands.md:14
+#: src/commands/build-commands.md:13
 msgid "[cargo rustc](cargo-rustc.md)"
 msgstr ""
 
-#: src/commands/build-commands.md:15
+#: src/commands/build-commands.md:14
 msgid "[cargo rustdoc](cargo-rustdoc.md)"
 msgstr ""
 
-#: src/commands/build-commands.md:16
+#: src/commands/build-commands.md:15
 msgid "[cargo test](cargo-test.md)"
 msgstr ""

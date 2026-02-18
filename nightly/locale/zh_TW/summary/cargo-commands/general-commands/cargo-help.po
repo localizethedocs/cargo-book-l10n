@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-01-24T08:28:08Z\n"
+"POT-Creation-Date: 2026-02-17T08:57:13Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -40,21 +40,59 @@ msgid "Prints a help message for the given command."
 msgstr ""
 
 #: src/commands/cargo-help.md:15
+msgid "OPTIONS"
+msgstr ""
+
+#: src/commands/cargo-help.md:17
+msgid "Display Options"
+msgstr ""
+
+#: src/commands/cargo-help.md:51
+msgid "Manifest Options"
+msgstr ""
+
+#: src/commands/cargo-help.md:87
+msgid "Common Options"
+msgstr ""
+
+#: src/commands/cargo-help.md:132
+msgid "ENVIRONMENT"
+msgstr ""
+
+#: src/commands/cargo-help.md:134
+msgid ""
+"See [the reference](../reference/environment-variables.html) for details on "
+"environment variables that Cargo reads."
+msgstr ""
+
+#: src/commands/cargo-help.md:137
+msgid "EXIT STATUS"
+msgstr ""
+
+#: src/commands/cargo-help.md:139
+msgid "`0`: Cargo succeeded."
+msgstr ""
+
+#: src/commands/cargo-help.md:140
+msgid "`101`: Cargo failed to complete."
+msgstr ""
+
+#: src/commands/cargo-help.md:142
 msgid "EXAMPLES"
 msgstr "範例"
 
-#: src/commands/cargo-help.md:17
+#: src/commands/cargo-help.md:144
 msgid "Get help for a command:"
 msgstr ""
 
-#: src/commands/cargo-help.md:21
+#: src/commands/cargo-help.md:148
 msgid "Help is also available with the `--help` flag:"
 msgstr ""
 
-#: src/commands/cargo-help.md:25
+#: src/commands/cargo-help.md:152
 msgid "SEE ALSO"
 msgstr "另請參見"
 
-#: src/commands/cargo-help.md:26
+#: src/commands/cargo-help.md:153
 msgid "[cargo(1)](cargo.html)"
 msgstr "[cargo(1)](cargo.html)"

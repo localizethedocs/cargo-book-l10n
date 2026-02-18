@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-01-24T08:28:07Z\n"
+"POT-Creation-Date: 2026-02-17T08:57:13Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -264,137 +264,145 @@ msgid "cargo miri"
 msgstr "cargo miri"
 
 #: src/SUMMARY.md:69
-msgid "cargo report"
-msgstr "cargo report"
-
-#: src/SUMMARY.md:70
 msgid "cargo run"
 msgstr "cargo run"
 
-#: src/SUMMARY.md:71
+#: src/SUMMARY.md:70
 msgid "cargo rustc"
 msgstr "cargo rustc"
 
-#: src/SUMMARY.md:72
+#: src/SUMMARY.md:71
 msgid "cargo rustdoc"
 msgstr "cargo rustdoc"
 
-#: src/SUMMARY.md:73
+#: src/SUMMARY.md:72
 msgid "cargo test"
 msgstr "cargo test"
 
-#: src/SUMMARY.md:74
+#: src/SUMMARY.md:73
 msgid "Manifest Commands"
 msgstr "清單命令"
 
-#: src/SUMMARY.md:75
+#: src/SUMMARY.md:74
 msgid "cargo add"
 msgstr "cargo add"
 
-#: src/SUMMARY.md:76
+#: src/SUMMARY.md:75
 msgid "cargo generate-lockfile"
 msgstr "cargo generate-lockfile"
 
-#: src/SUMMARY.md:77
+#: src/SUMMARY.md:76
 msgid "cargo info"
 msgstr "cargo info"
 
-#: src/SUMMARY.md:78
+#: src/SUMMARY.md:77
 msgid "cargo locate-project"
 msgstr "cargo locate-project"
 
-#: src/SUMMARY.md:79
+#: src/SUMMARY.md:78
 msgid "cargo metadata"
 msgstr "cargo metadata"
 
-#: src/SUMMARY.md:80
+#: src/SUMMARY.md:79
 msgid "cargo pkgid"
 msgstr "cargo pkgid"
 
-#: src/SUMMARY.md:81
+#: src/SUMMARY.md:80
 msgid "cargo remove"
 msgstr "cargo remove"
 
-#: src/SUMMARY.md:82
+#: src/SUMMARY.md:81
 msgid "cargo tree"
 msgstr "cargo tree"
 
-#: src/SUMMARY.md:83
+#: src/SUMMARY.md:82
 msgid "cargo update"
 msgstr "cargo update"
 
-#: src/SUMMARY.md:84
+#: src/SUMMARY.md:83
 msgid "cargo vendor"
 msgstr "cargo vendor"
 
-#: src/SUMMARY.md:85
+#: src/SUMMARY.md:84
 msgid "Package Commands"
 msgstr "軟體包命令"
 
-#: src/SUMMARY.md:86
+#: src/SUMMARY.md:85
 msgid "cargo init"
 msgstr "cargo init"
 
-#: src/SUMMARY.md:87
+#: src/SUMMARY.md:86
 msgid "cargo install"
 msgstr "cargo install"
 
-#: src/SUMMARY.md:88
+#: src/SUMMARY.md:87
 msgid "cargo new"
 msgstr "cargo new"
 
-#: src/SUMMARY.md:89
+#: src/SUMMARY.md:88
 msgid "cargo search"
 msgstr "cargo search"
 
-#: src/SUMMARY.md:90
+#: src/SUMMARY.md:89
 msgid "cargo uninstall"
 msgstr "cargo uninstall"
 
-#: src/SUMMARY.md:91
+#: src/SUMMARY.md:90
 msgid "Publishing Commands"
 msgstr "發布命令"
 
-#: src/SUMMARY.md:92
+#: src/SUMMARY.md:91
 msgid "cargo login"
 msgstr "cargo login"
 
-#: src/SUMMARY.md:93
+#: src/SUMMARY.md:92
 msgid "cargo logout"
 msgstr "cargo logout"
 
-#: src/SUMMARY.md:94
+#: src/SUMMARY.md:93
 msgid "cargo owner"
 msgstr "cargo owner"
 
-#: src/SUMMARY.md:95
+#: src/SUMMARY.md:94
 msgid "cargo package"
 msgstr "cargo package"
 
-#: src/SUMMARY.md:96
+#: src/SUMMARY.md:95
 msgid "cargo publish"
 msgstr "cargo publish"
 
-#: src/SUMMARY.md:97
+#: src/SUMMARY.md:96
 msgid "cargo yank"
 msgstr "cargo yank"
 
+#: src/SUMMARY.md:97
+msgid "Report Commands"
+msgstr ""
+
 #: src/SUMMARY.md:98
-msgid "Deprecated and Removed"
+msgid "cargo report"
+msgstr "cargo report"
+
+#: src/SUMMARY.md:99
+msgid "cargo report future-incompatibilities"
 msgstr ""
 
 #: src/SUMMARY.md:100
+msgid "Deprecated and Removed"
+msgstr ""
+
+#: src/SUMMARY.md:102
 msgid "FAQ"
 msgstr ""
 
-#: src/SUMMARY.md:101
+#: src/SUMMARY.md:103
 msgid "Changelog"
 msgstr "變更日誌"
 
-#: src/SUMMARY.md:102
+#: src/SUMMARY.md:104
 msgid "Appendix: Glossary"
 msgstr "附錄：詞彙表"
 
-#: src/SUMMARY.md:103
+#: src/SUMMARY.md:105
 msgid "Appendix: Git Authentication"
 msgstr "附錄：Git 身份認證"
