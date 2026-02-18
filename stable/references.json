@@ -16,9 +16,9 @@
       "branch" : "stable",
       "commit" : 
       {
-        "date" : "2026-01-19 16:34:28 +0000",
-        "hash" : "254b59607d4417e9dffbc307138ae5c86280fe4c",
-        "title" : "Auto merge of #151369 - Mark-Simulacrum:stable-next, r=Mark-Simulacrum"
+        "date" : "2026-02-11 07:30:54 +0000",
+        "hash" : "01f6ddf7588f42ae2d7eb0a2f21d44e8e96674cf",
+        "title" : "Auto merge of #152450 - cuviper:stable-next, r=cuviper"
       }
     },
     "zh_TW" : 
@@ -26,9 +26,9 @@
       "branch" : "stable",
       "commit" : 
       {
-        "date" : "2026-01-19 16:34:28 +0000",
-        "hash" : "254b59607d4417e9dffbc307138ae5c86280fe4c",
-        "title" : "Auto merge of #151369 - Mark-Simulacrum:stable-next, r=Mark-Simulacrum"
+        "date" : "2026-02-11 07:30:54 +0000",
+        "hash" : "01f6ddf7588f42ae2d7eb0a2f21d44e8e96674cf",
+        "title" : "Auto merge of #152450 - cuviper:stable-next, r=cuviper"
       }
     }
   },
