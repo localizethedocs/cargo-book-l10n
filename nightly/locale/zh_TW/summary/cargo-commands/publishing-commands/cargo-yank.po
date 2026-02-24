@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-01-24T08:28:08Z\n"
+"POT-Creation-Date: 2026-02-17T08:57:13Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -97,23 +97,23 @@ msgstr ""
 
 #: src/commands/cargo-yank.md:45
 msgid "`bar = \"1.5.0\"`"
-msgstr ""
+msgstr "`bar = \"1.5.0\"`"
 
 #: src/commands/cargo-yank.md:45
 msgid "`bar = \"=1.5.0\"`"
-msgstr ""
+msgstr "`bar = \"=1.5.0\"`"
 
 #: src/commands/cargo-yank.md:45
 msgid "`bar = \"2.0.0\"`"
-msgstr ""
+msgstr "`bar = \"2.0.0\"`"
 
 #: src/commands/cargo-yank.md:47
 msgid "`1.5.0`"
-msgstr ""
+msgstr "`1.5.0`"
 
 #: src/commands/cargo-yank.md:47
 msgid "Use either `1.5.1` or `1.5.2`"
-msgstr ""
+msgstr "使用 `1.5.1` 或 `1.5.2`"
 
 #: src/commands/cargo-yank.md:47 src/commands/cargo-yank.md:49
 msgid "**Return Error**"
@@ -129,7 +129,7 @@ msgstr ""
 
 #: src/commands/cargo-yank.md:48
 msgid "Use either `1.5.0` or `1.5.2`"
-msgstr ""
+msgstr "使用 `1.5.0` 或 `1.5.2`"
 
 #: src/commands/cargo-yank.md:48 src/commands/cargo-yank.md:49
 msgid "Use `1.5.0`"

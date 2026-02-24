@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-01-24T08:28:08Z\n"
+"POT-Creation-Date: 2026-02-17T08:57:13Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -29,7 +29,7 @@ msgstr "概要"
 
 #: src/commands/cargo-version.md:9
 msgid "`cargo version` \\[_options_\\]"
-msgstr ""
+msgstr "`cargo version` \\[_選項_\\]"
 
 #: src/commands/cargo-version.md:11
 msgid "DESCRIPTION"
