@@ -1,0 +1,903 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:36:50Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/build-scripts.md:1
+msgid "Build Scripts"
+msgstr ""
+
+#: src/reference/build-scripts.md:3
+msgid ""
+"Some packages need to compile third-party non-Rust code, for example C "
+"libraries. Other packages need to link to C libraries which can either be "
+"located on the system or possibly need to be built from source. Others still "
+"need facilities for functionality such as code generation before building "
+"(think parser generators)."
+msgstr ""
+
+#: src/reference/build-scripts.md:9
+msgid ""
+"Cargo does not aim to replace other tools that are well-optimized for these "
+"tasks, but it does integrate with them with the `build` configuration option."
+msgstr ""
+
+#: src/reference/build-scripts.md:13
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"build = \"build.rs\"\n"
+"```"
+msgstr ""
+
+#: src/reference/build-scripts.md:19
+msgid ""
+"The Rust file designated by the `build` command (relative to the package "
+"root) will be compiled and invoked before anything else is compiled in the "
+"package, allowing your Rust code to depend on the built or generated "
+"artifacts. By default Cargo looks for a `\"build.rs\"` file in a package "
+"root (even if you do not specify a value for `build`). Use `build = "
+"\"custom_build_name.rs\"` to specify a custom build name or `build = false` "
+"to disable automatic detection of the build script."
+msgstr ""
+
+#: src/reference/build-scripts.md:26
+msgid "Some example use cases of the build command are:"
+msgstr ""
+
+#: src/reference/build-scripts.md:28
+msgid "Building a bundled C library."
+msgstr ""
+
+#: src/reference/build-scripts.md:29
+msgid "Finding a C library on the host system."
+msgstr ""
+
+#: src/reference/build-scripts.md:30
+msgid "Generating a Rust module from a specification."
+msgstr ""
+
+#: src/reference/build-scripts.md:31
+msgid "Performing any platform-specific configuration needed for the crate."
+msgstr ""
+
+#: src/reference/build-scripts.md:33
+msgid ""
+"Each of these use cases will be detailed in full below to give examples of "
+"how the build command works."
+msgstr ""
+
+#: src/reference/build-scripts.md:36
+msgid "Inputs to the Build Script"
+msgstr ""
+
+#: src/reference/build-scripts.md:38
+msgid ""
+"When the build script is run, there are a number of inputs to the build "
+"script, all passed in the form of [environment variables](reference/"
+"environment-variables.html)."
+msgstr ""
+
+#: src/reference/build-scripts.md:41
+msgid ""
+"In addition to environment variables, the build script’s current directory "
+"is the source directory of the build script’s package."
+msgstr ""
+
+#: src/reference/build-scripts.md:46
+msgid "Outputs of the Build Script"
+msgstr ""
+
+#: src/reference/build-scripts.md:48
+msgid ""
+"All the lines printed to stdout by a build script are written to a file like "
+"`target/debug/build/<pkg>/output` (the precise location may depend on your "
+"configuration). If you would like to see such output directly in your "
+"terminal, invoke cargo as 'very verbose' with the `-vv` flag. Note that if "
+"neither the build script nor package source files are modified, subsequent "
+"calls to cargo with `-vv` will **not** print output to the terminal because "
+"a new build is not executed. Run `cargo clean` before each cargo invocation "
+"if you want to ensure that output is always displayed on your terminal. Any "
+"line that starts with `cargo:` is interpreted directly by Cargo. This line "
+"must be of the form `cargo:key=value`, like the examples below:"
+msgstr ""
+
+#: src/reference/build-scripts.md:72
+msgid ""
+"On the other hand, lines printed to stderr are written to a file like "
+"`target/debug/build/<pkg>/stderr` but are not interpreted by cargo."
+msgstr ""
+
+#: src/reference/build-scripts.md:75
+msgid ""
+"There are a few special keys that Cargo recognizes, some affecting how the "
+"crate is built:"
+msgstr ""
+
+#: src/reference/build-scripts.md:78
+msgid ""
+"`rustc-link-lib=[KIND=]NAME` indicates that the specified value is a library "
+"name and should be passed to the compiler as a `-l` flag. The optional "
+"`KIND` can be one of `static`, `dylib` (the default), or `framework`, see "
+"`rustc --help` for more details."
+msgstr ""
+
+#: src/reference/build-scripts.md:82
+msgid ""
+"`rustc-link-search=[KIND=]PATH` indicates the specified value is a library "
+"search path and should be passed to the compiler as a `-L` flag. The "
+"optional `KIND` can be one of `dependency`, `crate`, `native`, `framework` "
+"or `all` (the default), see `rustc --help` for more details."
+msgstr ""
+
+#: src/reference/build-scripts.md:86
+msgid ""
+"`rustc-flags=FLAGS` is a set of flags passed to the compiler, only `-l` and "
+"`-L` flags are supported."
+msgstr ""
+
+#: src/reference/build-scripts.md:88
+msgid ""
+"`rustc-cfg=FEATURE` indicates that the specified feature will be passed as a "
+"`--cfg` flag to the compiler. This is often useful for performing compile-"
+"time detection of various features."
+msgstr ""
+
+#: src/reference/build-scripts.md:91
+msgid ""
+"`rustc-env=VAR=VALUE` indicates that the specified environment variable will "
+"be added to the environment which the compiler is run within. The value can "
+"be then retrieved by the `env!` macro in the compiled crate. This is useful "
+"for embedding additional metadata in crate's code, such as the hash of Git "
+"HEAD or the unique identifier of a continuous integration server."
+msgstr ""
+
+#: src/reference/build-scripts.md:97
+msgid ""
+"`rustc-cdylib-link-arg=FLAG` is a flag passed to the compiler as `-C link-"
+"arg=FLAG` when building a `cdylib`. Its usage is highly platform specific. "
+"It is useful to set the shared library version or the runtime-path."
+msgstr ""
+
+#: src/reference/build-scripts.md:100
+msgid ""
+"`rerun-if-changed=PATH` is a path to a file or directory which indicates "
+"that the build script should be re-run if it changes (detected by a more-"
+"recent last-modified timestamp on the file). Normally build scripts are re-"
+"run if any file inside the crate root changes, but this can be used to scope "
+"changes to just a small set of files. (If this path points to a directory "
+"the entire directory will not be traversed for changes -- only changes to "
+"the timestamp of the directory itself (which corresponds to some types of "
+"changes within the directory, depending on platform) will trigger a rebuild. "
+"To request a re-run on any changes within an entire directory, print a line "
+"for the directory and another line for everything inside it, recursively.) "
+"Note that if the build script itself (or one of its dependencies) changes, "
+"then it's rebuilt and rerun unconditionally, so `cargo:rerun-if-"
+"changed=build.rs` is almost always redundant (unless you want to ignore "
+"changes in all other files except for `build.rs`)."
+msgstr ""
+
+#: src/reference/build-scripts.md:114
+msgid ""
+"`rerun-if-env-changed=VAR` is the name of an environment variable which "
+"indicates that if the environment variable's value changes the build script "
+"should be rerun. This basically behaves the same as `rerun-if-changed` "
+"except that it works with environment variables instead. Note that the "
+"environment variables here are intended for global environment variables "
+"like `CC` and such, it's not necessary to use this for env vars like "
+"`TARGET` that Cargo sets. Also note that if `rerun-if-env-changed` is "
+"printed out then Cargo will _only_ rerun the build script if those "
+"environment variables change or if files printed out by `rerun-if-changed` "
+"change."
+msgstr ""
+
+#: src/reference/build-scripts.md:124
+msgid ""
+"`warning=MESSAGE` is a message that will be printed to the main console "
+"after a build script has finished running. Warnings are only shown for path "
+"dependencies (that is, those you're working on locally), so for example "
+"warnings printed out in crates.io crates are not emitted by default."
+msgstr ""
+
+#: src/reference/build-scripts.md:129
+msgid ""
+"Any other element is a user-defined metadata that will be passed to "
+"dependents. More information about this can be found in the [`links`](#the-"
+"links-manifest-key) section."
+msgstr ""
+
+#: src/reference/build-scripts.md:135
+msgid "Build Dependencies"
+msgstr ""
+
+#: src/reference/build-scripts.md:137
+msgid ""
+"Build scripts are also allowed to have dependencies on other Cargo-based "
+"crates. Dependencies are declared through the `build-dependencies` section "
+"of the manifest."
+msgstr ""
+
+#: src/reference/build-scripts.md:141
+msgid ""
+"```toml\n"
+"[build-dependencies]\n"
+"foo = { git = \"https://github.com/your-packages/foo\" }\n"
+"```"
+msgstr ""
+
+#: src/reference/build-scripts.md:146
+msgid ""
+"The build script **does not** have access to the dependencies listed in the "
+"`dependencies` or `dev-dependencies` section (they’re not built yet!). All "
+"build dependencies will also not be available to the package itself unless "
+"explicitly stated as so."
+msgstr ""
+
+#: src/reference/build-scripts.md:151
+msgid "The `links` Manifest Key"
+msgstr ""
+
+#: src/reference/build-scripts.md:153
+msgid ""
+"In addition to the manifest key `build`, Cargo also supports a `links` "
+"manifest key to declare the name of a native library that is being linked to:"
+msgstr ""
+
+#: src/reference/build-scripts.md:156
+msgid ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"links = \"foo\"\n"
+"build = \"build.rs\"\n"
+"```"
+msgstr ""
+
+#: src/reference/build-scripts.md:163
+msgid ""
+"This manifest states that the package links to the `libfoo` native library, "
+"and it also has a build script for locating and/or building the library. "
+"Cargo requires that a `build` command is specified if a `links` entry is "
+"also specified."
+msgstr ""
+
+#: src/reference/build-scripts.md:168
+msgid ""
+"The purpose of this manifest key is to give Cargo an understanding about the "
+"set of native dependencies that a package has, as well as providing a "
+"principled system of passing metadata between package build scripts."
+msgstr ""
+
+#: src/reference/build-scripts.md:172
+msgid ""
+"Primarily, Cargo requires that there is at most one package per `links` "
+"value. In other words, it’s forbidden to have two packages link to the same "
+"native library. Note, however, that there are [conventions in place](#a-sys-"
+"packages) to alleviate this."
+msgstr ""
+
+#: src/reference/build-scripts.md:179
+msgid ""
+"As mentioned above in the output format, each build script can generate an "
+"arbitrary set of metadata in the form of key-value pairs. This metadata is "
+"passed to the build scripts of **dependent** packages. For example, if "
+"`libbar` depends on `libfoo`, then if `libfoo` generates `key=value` as part "
+"of its metadata, then the build script of `libbar` will have the environment "
+"variables `DEP_FOO_KEY=value`."
+msgstr ""
+
+#: src/reference/build-scripts.md:186
+msgid ""
+"Note that metadata is only passed to immediate dependents, not transitive "
+"dependents. The motivation for this metadata passing is outlined in the "
+"linking to system libraries case study below."
+msgstr ""
+
+#: src/reference/build-scripts.md:190
+msgid "Overriding Build Scripts"
+msgstr ""
+
+#: src/reference/build-scripts.md:192
+msgid ""
+"If a manifest contains a `links` key, then Cargo supports overriding the "
+"build script specified with a custom library. The purpose of this "
+"functionality is to prevent running the build script in question altogether "
+"and instead supply the metadata ahead of time."
+msgstr ""
+
+#: src/reference/build-scripts.md:197
+msgid ""
+"To override a build script, place the following configuration in any "
+"acceptable Cargo [configuration location](reference/config.html)."
+msgstr ""
+
+#: src/reference/build-scripts.md:200
+msgid ""
+"```toml\n"
+"[target.x86_64-unknown-linux-gnu.foo]\n"
+"rustc-link-search = [\"/path/to/foo\"]\n"
+"rustc-link-lib = [\"foo\"]\n"
+"root = \"/path/to/foo\"\n"
+"key = \"value\"\n"
+"```"
+msgstr ""
+
+#: src/reference/build-scripts.md:208
+msgid ""
+"This section states that for the target `x86_64-unknown-linux-gnu` the "
+"library named `foo` has the metadata specified. This metadata is the same as "
+"the metadata generated as if the build script had run, providing a number of "
+"key/value pairs where the `rustc-flags`, `rustc-link-search`, and `rustc-"
+"link-lib` keys are slightly special."
+msgstr ""
+
+#: src/reference/build-scripts.md:214
+msgid ""
+"With this configuration, if a package declares that it links to `foo` then "
+"the build script will **not** be compiled or run, and the metadata specified "
+"will instead be used."
+msgstr ""
+
+#: src/reference/build-scripts.md:218
+msgid "Case study: Code generation"
+msgstr ""
+
+#: src/reference/build-scripts.md:220
+msgid ""
+"Some Cargo packages need to have code generated just before they are "
+"compiled for various reasons. Here we’ll walk through a simple example which "
+"generates a library call as part of the build script."
+msgstr ""
+
+#: src/reference/build-scripts.md:224
+msgid "First, let’s take a look at the directory structure of this package:"
+msgstr ""
+
+#: src/reference/build-scripts.md:236
+msgid ""
+"Here we can see that we have a `build.rs` build script and our binary in "
+"`main.rs`. Next, let’s take a look at the manifest:"
+msgstr ""
+
+#: src/reference/build-scripts.md:239
+msgid ""
+"```toml\n"
+"# Cargo.toml\n"
+"\n"
+"[package]\n"
+"name = \"hello-from-generated-code\"\n"
+"version = \"0.1.0\"\n"
+"authors = [\"you@example.com\"]\n"
+"build = \"build.rs\"\n"
+"```"
+msgstr ""
+
+#: src/reference/build-scripts.md:249
+msgid ""
+"Here we can see we’ve got a build script specified which we’ll use to "
+"generate some code. Let’s see what’s inside the build script:"
+msgstr ""
+
+#: src/reference/build-scripts.md:253 src/reference/build-scripts.md:344
+#: src/reference/build-scripts.md:387
+msgid "// build.rs\n"
+msgstr ""
+
+#: src/reference/build-scripts.md:261 src/reference/build-scripts.md:294
+#: src/reference/build-scripts.md:351
+msgid "\"OUT_DIR\""
+msgstr ""
+
+#: src/reference/build-scripts.md:262
+msgid "\"hello.rs\""
+msgstr ""
+
+#: src/reference/build-scripts.md:265
+msgid ""
+"b\"\n"
+"        pub fn message() -> &'static str {\n"
+"            \\\"Hello, World!\\\"\n"
+"        }\n"
+"    \""
+msgstr ""
+
+#: src/reference/build-scripts.md:273
+msgid "There’s a couple of points of note here:"
+msgstr ""
+
+#: src/reference/build-scripts.md:275
+msgid ""
+"The script uses the `OUT_DIR` environment variable to discover where the "
+"output files should be located. It can use the process’ current working "
+"directory to find where the input files should be located, but in this case "
+"we don’t have any input files."
+msgstr ""
+
+#: src/reference/build-scripts.md:279
+msgid ""
+"In general, build scripts should not modify any files outside of `OUT_DIR`. "
+"It may seem fine on the first blush, but it does cause problems when you use "
+"such crate as a dependency, because there's an _implicit_ invariant that "
+"sources in `.cargo/registry` should be immutable. `cargo` won't allow such "
+"scripts when packaging."
+msgstr ""
+
+#: src/reference/build-scripts.md:284
+msgid ""
+"This script is relatively simple as it just writes out a small generated "
+"file. One could imagine that other more fanciful operations could take place "
+"such as generating a Rust module from a C header file or another language "
+"definition, for example."
+msgstr ""
+
+#: src/reference/build-scripts.md:289
+msgid "Next, let’s peek at the library itself:"
+msgstr ""
+
+#: src/reference/build-scripts.md:292 src/reference/build-scripts.md:438
+msgid "// src/main.rs\n"
+msgstr ""
+
+#: src/reference/build-scripts.md:294
+msgid "\"/hello.rs\""
+msgstr ""
+
+#: src/reference/build-scripts.md:297
+msgid "\"{}\""
+msgstr ""
+
+#: src/reference/build-scripts.md:301
+msgid ""
+"This is where the real magic happens. The library is using the rustc-defined "
+"`include!` macro in combination with the `concat!` and `env!` macros to "
+"include the generated file (`hello.rs`) into the crate’s compilation."
+msgstr ""
+
+#: src/reference/build-scripts.md:305
+msgid ""
+"Using the structure shown here, crates can include any number of generated "
+"files from the build script itself."
+msgstr ""
+
+#: src/reference/build-scripts.md:308
+msgid "Case study: Building some native code"
+msgstr ""
+
+#: src/reference/build-scripts.md:310
+msgid ""
+"Sometimes it’s necessary to build some native C or C++ code as part of a "
+"package. This is another excellent use case of leveraging the build script "
+"to build a native library before the Rust crate itself. As an example, we’ll "
+"create a Rust library which calls into C to print “Hello, World!”."
+msgstr ""
+
+#: src/reference/build-scripts.md:315
+msgid "Like above, let’s first take a look at the package layout:"
+msgstr ""
+
+#: src/reference/build-scripts.md:328
+msgid "Pretty similar to before! Next, the manifest:"
+msgstr ""
+
+#: src/reference/build-scripts.md:330
+msgid ""
+"```toml\n"
+"# Cargo.toml\n"
+"\n"
+"[package]\n"
+"name = \"hello-world-from-c\"\n"
+"version = \"0.1.0\"\n"
+"authors = [\"you@example.com\"]\n"
+"build = \"build.rs\"\n"
+"```"
+msgstr ""
+
+#: src/reference/build-scripts.md:340
+msgid ""
+"For now we’re not going to use any build dependencies, so let’s take a look "
+"at the build script now:"
+msgstr ""
+
+#: src/reference/build-scripts.md:353
+msgid ""
+"// note that there are a number of downsides to this approach, the comments\n"
+"    // below detail how to improve the portability of these commands.\n"
+msgstr ""
+
+#: src/reference/build-scripts.md:355
+msgid "\"gcc\""
+msgstr ""
+
+#: src/reference/build-scripts.md:355 src/reference/build-scripts.md:395
+msgid "\"src/hello.c\""
+msgstr ""
+
+#: src/reference/build-scripts.md:355
+msgid "\"-c\""
+msgstr ""
+
+#: src/reference/build-scripts.md:355
+msgid "\"-fPIC\""
+msgstr ""
+
+#: src/reference/build-scripts.md:355
+msgid "\"-o\""
+msgstr ""
+
+#: src/reference/build-scripts.md:356
+msgid "\"{}/hello.o\""
+msgstr ""
+
+#: src/reference/build-scripts.md:358
+msgid "\"ar\""
+msgstr ""
+
+#: src/reference/build-scripts.md:358
+msgid "\"crus\""
+msgstr ""
+
+#: src/reference/build-scripts.md:358
+msgid "\"libhello.a\""
+msgstr ""
+
+#: src/reference/build-scripts.md:358
+msgid "\"hello.o\""
+msgstr ""
+
+#: src/reference/build-scripts.md:362
+msgid "\"cargo:rustc-link-search=native={}\""
+msgstr ""
+
+#: src/reference/build-scripts.md:363
+msgid "\"cargo:rustc-link-lib=static=hello\""
+msgstr ""
+
+#: src/reference/build-scripts.md:367
+msgid ""
+"This build script starts out by compiling our C file into an object file (by "
+"invoking `gcc`) and then converting this object file into a static library "
+"(by invoking `ar`). The final step is feedback to Cargo itself to say that "
+"our output was in `out_dir` and the compiler should link the crate to "
+"`libhello.a` statically via the `-l static=hello` flag."
+msgstr ""
+
+#: src/reference/build-scripts.md:373
+msgid "Note that there are a number of drawbacks to this hardcoded approach:"
+msgstr ""
+
+#: src/reference/build-scripts.md:375
+msgid ""
+"The `gcc` command itself is not portable across platforms. For example it’s "
+"unlikely that Windows platforms have `gcc`, and not even all Unix platforms "
+"may have `gcc`. The `ar` command is also in a similar situation."
+msgstr ""
+
+#: src/reference/build-scripts.md:378
+msgid ""
+"These commands do not take cross-compilation into account. If we’re cross "
+"compiling for a platform such as Android it’s unlikely that `gcc` will "
+"produce an ARM executable."
+msgstr ""
+
+#: src/reference/build-scripts.md:382
+msgid ""
+"Not to fear, though, this is where a `build-dependencies` entry would help! "
+"The Cargo ecosystem has a number of packages to make this sort of task much "
+"easier, portable, and standardized. For example, the build script could be "
+"written as:"
+msgstr ""
+
+#: src/reference/build-scripts.md:388
+msgid ""
+"// Bring in a dependency on an externally maintained `cc` package which "
+"manages\n"
+"// invoking the C compiler.\n"
+msgstr ""
+
+#: src/reference/build-scripts.md:396
+msgid "\"hello\""
+msgstr ""
+
+#: src/reference/build-scripts.md:400
+msgid ""
+"Add a build time dependency on the `cc` crate with the following addition to "
+"your `Cargo.toml`:"
+msgstr ""
+
+#: src/reference/build-scripts.md:403
+msgid ""
+"```toml\n"
+"[build-dependencies]\n"
+"cc = \"1.0\"\n"
+"```"
+msgstr ""
+
+#: src/reference/build-scripts.md:408
+msgid ""
+"The [`cc` crate](https://crates.io/crates/cc) abstracts a range of build "
+"script requirements for C code:"
+msgstr ""
+
+#: src/reference/build-scripts.md:411
+msgid ""
+"It invokes the appropriate compiler (MSVC for windows, `gcc` for MinGW, `cc` "
+"for Unix platforms, etc.)."
+msgstr ""
+
+#: src/reference/build-scripts.md:413
+msgid ""
+"It takes the `TARGET` variable into account by passing appropriate flags to "
+"the compiler being used."
+msgstr ""
+
+#: src/reference/build-scripts.md:415
+msgid ""
+"Other environment variables, such as `OPT_LEVEL`, `DEBUG`, etc., are all "
+"handled automatically."
+msgstr ""
+
+#: src/reference/build-scripts.md:417
+msgid ""
+"The stdout output and `OUT_DIR` locations are also handled by the `cc` "
+"library."
+msgstr ""
+
+#: src/reference/build-scripts.md:420
+msgid ""
+"Here we can start to see some of the major benefits of farming as much "
+"functionality as possible out to common build dependencies rather than "
+"duplicating logic across all build scripts!"
+msgstr ""
+
+#: src/reference/build-scripts.md:424
+msgid ""
+"Back to the case study though, let’s take a quick look at the contents of "
+"the `src` directory:"
+msgstr ""
+
+#: src/reference/build-scripts.md:428
+msgid "// src/hello.c\n"
+msgstr ""
+
+#: src/reference/build-scripts.md:430
+msgid "<stdio.h>"
+msgstr ""
+
+#: src/reference/build-scripts.md:433
+msgid "\"Hello, World!\\n\""
+msgstr ""
+
+#: src/reference/build-scripts.md:439
+msgid ""
+"// Note the lack of the `#[link]` attribute. We’re delegating the "
+"responsibility\n"
+"// of selecting what to link to over to the build script rather than "
+"hardcoding\n"
+"// it in the source file.\n"
+msgstr ""
+
+#: src/reference/build-scripts.md:450
+msgid ""
+"And there we go! This should complete our example of building some C code "
+"from a Cargo package using the build script itself. This also shows why "
+"using a build dependency can be crucial in many situations and even much "
+"more concise!"
+msgstr ""
+
+#: src/reference/build-scripts.md:454
+msgid ""
+"We’ve also seen a brief example of how a build script can use a crate as a "
+"dependency purely for the build process and not for the crate itself at "
+"runtime."
+msgstr ""
+
+#: src/reference/build-scripts.md:457
+msgid "Case study: Linking to system libraries"
+msgstr ""
+
+#: src/reference/build-scripts.md:459
+msgid ""
+"The final case study here will be investigating how a Cargo library links to "
+"a system library and how the build script is leveraged to support this use "
+"case."
+msgstr ""
+
+#: src/reference/build-scripts.md:462
+msgid ""
+"Quite frequently a Rust crate wants to link to a native library often "
+"provided on the system to bind its functionality or just use it as part of "
+"an implementation detail. This is quite a nuanced problem when it comes to "
+"performing this in a platform-agnostic fashion, and the purpose of a build "
+"script is again to farm out as much of this as possible to make this as easy "
+"as possible for consumers."
+msgstr ""
+
+#: src/reference/build-scripts.md:469
+msgid ""
+"As an example to follow, let’s take a look at one of [Cargo’s own "
+"dependencies](https://github.com/alexcrichton/git2-rs/tree/master/libgit2-"
+"sys), [libgit2](https://github.com/libgit2/libgit2). The C library has a "
+"number of constraints:"
+msgstr ""
+
+#: src/reference/build-scripts.md:476
+msgid ""
+"It has an optional dependency on OpenSSL on Unix to implement the https "
+"transport."
+msgstr ""
+
+#: src/reference/build-scripts.md:478
+msgid ""
+"It has an optional dependency on libssh2 on all platforms to implement the "
+"ssh transport."
+msgstr ""
+
+#: src/reference/build-scripts.md:480
+msgid "It is often not installed on all systems by default."
+msgstr ""
+
+#: src/reference/build-scripts.md:481
+msgid "It can be built from source using `cmake`."
+msgstr ""
+
+#: src/reference/build-scripts.md:483
+msgid ""
+"To visualize what’s going on here, let’s take a look at the manifest for the "
+"relevant Cargo package that links to the native C library."
+msgstr ""
+
+#: src/reference/build-scripts.md:486
+msgid ""
+"```toml\n"
+"[package]\n"
+"name = \"libgit2-sys\"\n"
+"version = \"0.1.0\"\n"
+"authors = [\"...\"]\n"
+"links = \"git2\"\n"
+"build = \"build.rs\"\n"
+"\n"
+"[dependencies]\n"
+"libssh2-sys = { git = \"https://github.com/alexcrichton/ssh2-rs\" }\n"
+"\n"
+"[target.'cfg(unix)'.dependencies]\n"
+"openssl-sys = { git = \"https://github.com/alexcrichton/openssl-sys\" }\n"
+"\n"
+"# ...\n"
+"```"
+msgstr ""
+
+#: src/reference/build-scripts.md:503
+msgid ""
+"As the above manifests show, we’ve got a `build` script specified, but it’s "
+"worth noting that this example has a `links` entry which indicates that the "
+"crate (`libgit2-sys`) links to the `git2` native library."
+msgstr ""
+
+#: src/reference/build-scripts.md:507
+msgid ""
+"Here we also see that we chose to have the Rust crate have an unconditional "
+"dependency on `libssh2` via the `libssh2-sys` crate, as well as a platform-"
+"specific dependency on `openssl-sys` for \\*nix (other variants elided for "
+"now). It may seem a little counterintuitive to express _C dependencies_ in "
+"the _Cargo manifest_, but this is actually using one of Cargo’s conventions "
+"in this space."
+msgstr ""
+
+#: src/reference/build-scripts.md:514
+msgid "`*-sys` Packages"
+msgstr ""
+
+#: src/reference/build-scripts.md:516
+msgid ""
+"To alleviate linking to system libraries, crates.io has a _convention_ of "
+"package naming and functionality. Any package named `foo-sys` should provide "
+"two major pieces of functionality:"
+msgstr ""
+
+#: src/reference/build-scripts.md:520
+msgid ""
+"The library crate should link to the native library `libfoo`. This will "
+"often probe the current system for `libfoo` before resorting to building "
+"from source."
+msgstr ""
+
+#: src/reference/build-scripts.md:523
+msgid ""
+"The library crate should provide **declarations** for functions in `libfoo`, "
+"but **not** bindings or higher-level abstractions."
+msgstr ""
+
+#: src/reference/build-scripts.md:526
+msgid ""
+"The set of `*-sys` packages provides a common set of dependencies for "
+"linking to native libraries. There are a number of benefits earned from "
+"having this convention of native-library-related packages:"
+msgstr ""
+
+#: src/reference/build-scripts.md:530
+msgid ""
+"Common dependencies on `foo-sys` alleviates the above rule about one package "
+"per value of `links`."
+msgstr ""
+
+#: src/reference/build-scripts.md:532
+msgid ""
+"A common dependency allows centralizing logic on discovering `libfoo` itself "
+"(or building it from source)."
+msgstr ""
+
+#: src/reference/build-scripts.md:534
+msgid "These dependencies are easily overridable."
+msgstr ""
+
+#: src/reference/build-scripts.md:536
+msgid "Building libgit2"
+msgstr ""
+
+#: src/reference/build-scripts.md:538
+msgid ""
+"Now that we’ve got libgit2’s dependencies sorted out, we need to actually "
+"write the build script. We’re not going to look at specific snippets of code "
+"here and instead only take a look at the high-level details of the build "
+"script of `libgit2-sys`. This is not recommending all packages follow this "
+"strategy, but rather just outlining one specific strategy."
+msgstr ""
+
+#: src/reference/build-scripts.md:544
+msgid ""
+"The first step of the build script should do is to query whether libgit2 is "
+"already installed on the host system. To do this we’ll leverage the "
+"preexisting tool `pkg-config` (when its available). We’ll also use a `build-"
+"dependencies` section to refactor out all the `pkg-config` related code (or "
+"someone’s already done that!)."
+msgstr ""
+
+#: src/reference/build-scripts.md:550
+msgid ""
+"If `pkg-config` failed to find libgit2, or if `pkg-config` just wasn’t "
+"installed, the next step is to build libgit2 from bundled source code "
+"(distributed as part of `libgit2-sys` itself). There are a few nuances when "
+"doing so that we need to take into account, however:"
+msgstr ""
+
+#: src/reference/build-scripts.md:555
+msgid ""
+"The build system of libgit2, `cmake`, needs to be able to find libgit2’s "
+"optional dependency of libssh2. We’re sure we’ve already built it (it’s a "
+"Cargo dependency), we just need to communicate this information. To do this "
+"we leverage the metadata format to communicate information between build "
+"scripts. In this example the libssh2 package printed out `cargo:root=...` to "
+"tell us where libssh2 is installed at, and we can then pass this along to "
+"cmake with the `CMAKE_PREFIX_PATH` environment variable."
+msgstr ""
+
+#: src/reference/build-scripts.md:563
+msgid ""
+"We’ll need to handle some `CFLAGS` values when compiling C code (and tell "
+"`cmake` about this). Some flags we may want to pass are `-m64` for 64-bit "
+"code, `-m32` for 32-bit code, or `-fPIC` for 64-bit code as well."
+msgstr ""
+
+#: src/reference/build-scripts.md:567
+msgid ""
+"Finally, we’ll invoke `cmake` to place all output into the `OUT_DIR` "
+"environment variable, and then we’ll print the necessary metadata to "
+"instruct rustc how to link to libgit2."
+msgstr ""
+
+#: src/reference/build-scripts.md:571
+msgid ""
+"Most of the functionality of this build script is easily refactorable into "
+"common dependencies, so our build script isn’t quite as intimidating as this "
+"descriptions! In reality it’s expected that build scripts are quite succinct "
+"by farming logic such as above to build dependencies."
+msgstr ""
