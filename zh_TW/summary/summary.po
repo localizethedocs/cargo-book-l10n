@@ -1,0 +1,380 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:45:01Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/SUMMARY.md:1
+msgid "Summary"
+msgstr "摘要"
+
+#: src/SUMMARY.md:3
+msgid "Introduction"
+msgstr "介紹"
+
+#: src/SUMMARY.md:5
+msgid "Getting Started"
+msgstr "開始使用"
+
+#: src/SUMMARY.md:6
+msgid "Installation"
+msgstr "安裝"
+
+#: src/SUMMARY.md:7
+msgid "First Steps with Cargo"
+msgstr ""
+
+#: src/SUMMARY.md:9
+msgid "Cargo Guide"
+msgstr "Cargo 指南"
+
+#: src/SUMMARY.md:10
+msgid "Why Cargo Exists"
+msgstr "為什麼 Cargo 會存在"
+
+#: src/SUMMARY.md:11
+msgid "Creating a New Package"
+msgstr "建立新軟體包"
+
+#: src/SUMMARY.md:12
+msgid "Working on an Existing Package"
+msgstr ""
+
+#: src/SUMMARY.md:13
+msgid "Dependencies"
+msgstr ""
+
+#: src/SUMMARY.md:14
+msgid "Package Layout"
+msgstr "軟體包配置"
+
+#: src/SUMMARY.md:15
+msgid "Cargo.toml vs Cargo.lock"
+msgstr ""
+
+#: src/SUMMARY.md:16
+msgid "Tests"
+msgstr "測試"
+
+#: src/SUMMARY.md:17
+msgid "Continuous Integration"
+msgstr "持續整合"
+
+#: src/SUMMARY.md:18
+msgid "Publishing on crates.io"
+msgstr "在 creates.io 上發佈"
+
+#: src/SUMMARY.md:19
+msgid "Cargo Home"
+msgstr "Cargo 家目錄"
+
+#: src/SUMMARY.md:21
+msgid "Cargo Reference"
+msgstr "Cargo 參考"
+
+#: src/SUMMARY.md:22
+msgid "The Manifest Format"
+msgstr "清單格式"
+
+#: src/SUMMARY.md:23
+msgid "Cargo Targets"
+msgstr "Cargo 目標"
+
+#: src/SUMMARY.md:24
+msgid "Rust version"
+msgstr "Rust 版本"
+
+#: src/SUMMARY.md:25
+msgid "Workspaces"
+msgstr "工作空間"
+
+#: src/SUMMARY.md:26
+msgid "Specifying Dependencies"
+msgstr ""
+
+#: src/SUMMARY.md:27
+msgid "Overriding Dependencies"
+msgstr ""
+
+#: src/SUMMARY.md:28
+msgid "Source Replacement"
+msgstr ""
+
+#: src/SUMMARY.md:29
+msgid "Dependency Resolution"
+msgstr ""
+
+#: src/SUMMARY.md:30
+msgid "Features"
+msgstr "功能"
+
+#: src/SUMMARY.md:31
+msgid "Features Examples"
+msgstr "特性範例"
+
+#: src/SUMMARY.md:32
+msgid "Profiles"
+msgstr ""
+
+#: src/SUMMARY.md:33
+msgid "Configuration"
+msgstr "組態"
+
+#: src/SUMMARY.md:34
+msgid "Environment Variables"
+msgstr "環境變數"
+
+#: src/SUMMARY.md:35
+msgid "Build Scripts"
+msgstr "建置腳本"
+
+#: src/SUMMARY.md:36
+msgid "Build Script Examples"
+msgstr "建置腳本範例"
+
+#: src/SUMMARY.md:37
+msgid "Build Cache"
+msgstr "建置快取"
+
+#: src/SUMMARY.md:38
+msgid "Package ID Specifications"
+msgstr "軟體包 ID 規範"
+
+#: src/SUMMARY.md:39
+msgid "External Tools"
+msgstr "外部工具"
+
+#: src/SUMMARY.md:40
+msgid "Registries"
+msgstr "註冊表"
+
+#: src/SUMMARY.md:41
+msgid "Registry Authentication"
+msgstr ""
+
+#: src/SUMMARY.md:42
+msgid "Credential Provider Protocol"
+msgstr ""
+
+#: src/SUMMARY.md:43
+msgid "Running a Registry"
+msgstr ""
+
+#: src/SUMMARY.md:44
+msgid "Registry Index"
+msgstr "註冊表索引"
+
+#: src/SUMMARY.md:45
+msgid "Registry Web API"
+msgstr ""
+
+#: src/SUMMARY.md:46
+msgid "SemVer Compatibility"
+msgstr ""
+
+#: src/SUMMARY.md:47
+msgid "Future incompat report"
+msgstr ""
+
+#: src/SUMMARY.md:48
+msgid "Reporting build timings"
+msgstr ""
+
+#: src/SUMMARY.md:49
+msgid "Lints"
+msgstr ""
+
+#: src/SUMMARY.md:50
+msgid "Unstable Features"
+msgstr "不穩定功能"
+
+#: src/SUMMARY.md:52
+msgid "Cargo Commands"
+msgstr "Cargo 命令"
+
+#: src/SUMMARY.md:53
+msgid "General Commands"
+msgstr "一般命令"
+
+#: src/SUMMARY.md:54
+msgid "cargo"
+msgstr "cargo"
+
+#: src/SUMMARY.md:55
+msgid "cargo help"
+msgstr "cargo help"
+
+#: src/SUMMARY.md:56
+msgid "cargo version"
+msgstr "cargo version"
+
+#: src/SUMMARY.md:57
+msgid "Build Commands"
+msgstr "建置命令"
+
+#: src/SUMMARY.md:58
+msgid "cargo bench"
+msgstr "cargo bench"
+
+#: src/SUMMARY.md:59
+msgid "cargo build"
+msgstr "cargo build"
+
+#: src/SUMMARY.md:60
+msgid "cargo check"
+msgstr "cargo check"
+
+#: src/SUMMARY.md:61
+msgid "cargo clean"
+msgstr "cargo clean"
+
+#: src/SUMMARY.md:62
+msgid "cargo doc"
+msgstr "cargo doc"
+
+#: src/SUMMARY.md:63
+msgid "cargo fetch"
+msgstr "cargo fetch"
+
+#: src/SUMMARY.md:64
+msgid "cargo fix"
+msgstr "cargo fix"
+
+#: src/SUMMARY.md:65
+msgid "cargo run"
+msgstr "cargo run"
+
+#: src/SUMMARY.md:66
+msgid "cargo rustc"
+msgstr "cargo rustc"
+
+#: src/SUMMARY.md:67
+msgid "cargo rustdoc"
+msgstr "cargo rustdoc"
+
+#: src/SUMMARY.md:68
+msgid "cargo test"
+msgstr "cargo test"
+
+#: src/SUMMARY.md:69
+msgid "cargo report"
+msgstr "cargo report"
+
+#: src/SUMMARY.md:70
+msgid "Manifest Commands"
+msgstr "清單命令"
+
+#: src/SUMMARY.md:71
+msgid "cargo add"
+msgstr "cargo add"
+
+#: src/SUMMARY.md:72
+msgid "cargo generate-lockfile"
+msgstr "cargo generate-lockfile"
+
+#: src/SUMMARY.md:73
+msgid "cargo info"
+msgstr "cargo info"
+
+#: src/SUMMARY.md:74
+msgid "cargo locate-project"
+msgstr "cargo locate-project"
+
+#: src/SUMMARY.md:75
+msgid "cargo metadata"
+msgstr "cargo metadata"
+
+#: src/SUMMARY.md:76
+msgid "cargo pkgid"
+msgstr "cargo pkgid"
+
+#: src/SUMMARY.md:77
+msgid "cargo remove"
+msgstr "cargo remove"
+
+#: src/SUMMARY.md:78
+msgid "cargo tree"
+msgstr "cargo tree"
+
+#: src/SUMMARY.md:79
+msgid "cargo update"
+msgstr "cargo update"
+
+#: src/SUMMARY.md:80
+msgid "cargo vendor"
+msgstr "cargo vendor"
+
+#: src/SUMMARY.md:81
+msgid "cargo verify-project"
+msgstr ""
+
+#: src/SUMMARY.md:82
+msgid "Package Commands"
+msgstr "軟體包命令"
+
+#: src/SUMMARY.md:83
+msgid "cargo init"
+msgstr "cargo init"
+
+#: src/SUMMARY.md:84
+msgid "cargo install"
+msgstr "cargo install"
+
+#: src/SUMMARY.md:85
+msgid "cargo new"
+msgstr "cargo new"
+
+#: src/SUMMARY.md:86
+msgid "cargo search"
+msgstr "cargo search"
+
+#: src/SUMMARY.md:87
+msgid "cargo uninstall"
+msgstr "cargo uninstall"
+
+#: src/SUMMARY.md:88
+msgid "Publishing Commands"
+msgstr "發布命令"
+
+#: src/SUMMARY.md:89
+msgid "cargo login"
+msgstr "cargo login"
+
+#: src/SUMMARY.md:90
+msgid "cargo logout"
+msgstr "cargo logout"
+
+#: src/SUMMARY.md:91
+msgid "cargo owner"
+msgstr "cargo owner"
+
+#: src/SUMMARY.md:92
+msgid "cargo package"
+msgstr "cargo package"
+
+#: src/SUMMARY.md:93
+msgid "cargo publish"
+msgstr "cargo publish"
+
+#: src/SUMMARY.md:94
+msgid "cargo yank"
+msgstr "cargo yank"
+
+#: src/SUMMARY.md:96
+msgid "FAQ"
+msgstr ""
+
+#: src/SUMMARY.md:97
+msgid "Appendix: Glossary"
+msgstr "附錄：詞彙表"
+
+#: src/SUMMARY.md:98
+msgid "Appendix: Git Authentication"
+msgstr "附錄：Git 身份認證"
