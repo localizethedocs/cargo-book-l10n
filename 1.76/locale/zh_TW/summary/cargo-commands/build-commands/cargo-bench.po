@@ -21,7 +21,7 @@ msgstr "名稱"
 
 #: src/commands/cargo-bench.md:5
 msgid "cargo-bench --- Execute benchmarks of a package"
-msgstr ""
+msgstr "cargo-bench --- 執行軟體包的基準測試"
 
 #: src/commands/cargo-bench.md:7
 msgid "SYNOPSIS"
@@ -96,7 +96,7 @@ msgstr ""
 
 #: src/commands/cargo-bench.md:56
 msgid "Working directory of benchmarks"
-msgstr ""
+msgstr "基準測試的工作目錄"
 
 #: src/commands/cargo-bench.md:58
 msgid ""
@@ -167,7 +167,7 @@ msgstr ""
 
 #: src/commands/cargo-bench.md:139
 msgid "benchmark targets"
-msgstr ""
+msgstr "基準測試目標"
 
 #: src/commands/cargo-bench.md:141
 msgid ""
