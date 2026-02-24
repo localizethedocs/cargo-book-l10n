@@ -199,11 +199,11 @@ msgstr ""
 
 #: src/reference/lints.md:60
 msgid "`implicit_minimum_version_req`"
-msgstr ""
+msgstr "`implicit_minimum_version_req`"
 
 #: src/reference/lints.md:61
 msgid "Group: `pedantic`"
-msgstr ""
+msgstr "群組：`pedantic`"
 
 #: src/reference/lints.md:63
 msgid "Level: `allow`"
