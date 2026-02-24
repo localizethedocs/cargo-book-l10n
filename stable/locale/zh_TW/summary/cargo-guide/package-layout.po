@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-01-24T08:27:47Z\n"
+"POT-Creation-Date: 2026-02-17T08:58:35Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -34,7 +34,7 @@ msgstr ""
 
 #: src/guide/project-layout.md:39
 msgid "The default library file is `src/lib.rs`."
-msgstr ""
+msgstr "預設的程式庫檔為 `src/lib.rs`。"
 
 #: src/guide/project-layout.md:40
 msgid "The default executable file is `src/main.rs`."
