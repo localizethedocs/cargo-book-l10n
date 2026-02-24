@@ -57,7 +57,7 @@ msgstr "[cargo miri](cargo-miri.md)"
 
 #: src/commands/build-commands.md:12
 msgid "[cargo report](cargo-report.md)"
-msgstr "[cargo report](cargo-report.md)"
+msgstr ""
 
 #: src/commands/build-commands.md:13
 msgid "[cargo run](cargo-run.md)"
@@ -69,8 +69,8 @@ msgstr "[cargo rustc](cargo-rustc.md)"
 
 #: src/commands/build-commands.md:15
 msgid "[cargo rustdoc](cargo-rustdoc.md)"
-msgstr ""
+msgstr "[cargo rustdoc](cargo-rustdoc.md)"
 
 #: src/commands/build-commands.md:16
 msgid "[cargo test](cargo-test.md)"
-msgstr ""
+msgstr "[cargo test](cargo-test.md)"
