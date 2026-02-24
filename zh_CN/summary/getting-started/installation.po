@@ -1,0 +1,73 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:35:52Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/getting-started/installation.md:1
+msgid "Installation"
+msgstr ""
+
+#: src/getting-started/installation.md:3
+msgid "Install Rust and Cargo"
+msgstr ""
+
+#: src/getting-started/installation.md:5
+msgid ""
+"The easiest way to get Cargo is to install the current stable release of "
+"[Rust](https://www.rust-lang.org/) by using [rustup](https://rustup.rs/). "
+"Installing Rust using `rustup` will also install `cargo`."
+msgstr ""
+
+#: src/getting-started/installation.md:8
+msgid "On Linux and macOS systems, this is done as follows:"
+msgstr ""
+
+#: src/getting-started/installation.md:10
+msgid ""
+"```console\n"
+"curl https://sh.rustup.rs -sSf | sh\n"
+"```"
+msgstr ""
+
+#: src/getting-started/installation.md:14
+msgid ""
+"It will download a script, and start the installation. If everything goes "
+"well, you’ll see this appear:"
+msgstr ""
+
+#: src/getting-started/installation.md:21
+msgid ""
+"On Windows, download and run [rustup-init.exe](https://win.rustup.rs/). It "
+"will start the installation in a console and present the above message on "
+"success."
+msgstr ""
+
+#: src/getting-started/installation.md:24
+msgid ""
+"After this, you can use the `rustup` command to also install `beta` or "
+"`nightly` channels for Rust and Cargo."
+msgstr ""
+
+#: src/getting-started/installation.md:27
+msgid ""
+"For other installation options and information, visit the [install](https://"
+"www.rust-lang.org/tools/install) page of the Rust website."
+msgstr ""
+
+#: src/getting-started/installation.md:30
+msgid "Build and Install Cargo from Source"
+msgstr ""
+
+#: src/getting-started/installation.md:32
+msgid ""
+"Alternatively, you can [build Cargo from source](https://github.com/rust-"
+"lang/cargo#compiling-from-source)."
+msgstr ""
