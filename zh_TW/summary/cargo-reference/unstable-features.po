@@ -1,0 +1,2718 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:40:19Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/unstable.md:1
+msgid "Unstable Features"
+msgstr "不穩定功能"
+
+#: src/reference/unstable.md:3
+msgid ""
+"Experimental Cargo features are only available on the [nightly channel]"
+"(../../book/appendix-07-nightly-rust.html). You are encouraged to experiment "
+"with these features to see if they meet your needs, and if there are any "
+"issues or problems. Check the linked tracking issues listed below for more "
+"information on the feature, and click the GitHub subscribe button if you "
+"want future updates."
+msgstr ""
+
+#: src/reference/unstable.md:9
+msgid ""
+"After some period of time, if the feature does not have any major concerns, "
+"it can be [stabilized](https://doc.crates.io/contrib/process/unstable."
+"html#stabilization), which will make it available on stable once the current "
+"nightly release reaches the stable channel (anywhere from 6 to 12 weeks)."
+msgstr ""
+
+#: src/reference/unstable.md:13
+msgid ""
+"There are three different ways that unstable features can be enabled based "
+"on how the feature works:"
+msgstr ""
+
+#: src/reference/unstable.md:16
+msgid ""
+"New syntax in `Cargo.toml` requires a `cargo-features` key at the top of "
+"`Cargo.toml`, before any tables. For example:"
+msgstr ""
+
+#: src/reference/unstable.md:19
+msgid ""
+"```toml\n"
+"# This specifies which new Cargo.toml features are enabled.\n"
+"cargo-features = [\"test-dummy-unstable\"]\n"
+"\n"
+"[package]\n"
+"name = \"my-package\"\n"
+"version = \"0.1.0\"\n"
+"im-a-teapot = true  # This is a new option enabled by test-dummy-unstable.\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:29
+msgid ""
+"New command-line flags, options, and subcommands require the `-Z unstable-"
+"options` CLI option to also be included. For example, the new `--out-dir` "
+"option is only available on nightly:"
+msgstr ""
+
+#: src/reference/unstable.md:33
+msgid "`cargo +nightly build --out-dir=out -Z unstable-options`"
+msgstr ""
+
+#: src/reference/unstable.md:35
+msgid ""
+"`-Z` command-line flags are used to enable new functionality that may not "
+"have an interface, or the interface has not yet been designed, or for more "
+"complex features that affect multiple parts of Cargo. For example, the "
+"[timings](#timings) feature can be enabled with:"
+msgstr ""
+
+#: src/reference/unstable.md:40
+msgid "`cargo +nightly build -Z timings`"
+msgstr ""
+
+#: src/reference/unstable.md:42
+msgid "Run `cargo -Z help` to see a list of flags available."
+msgstr ""
+
+#: src/reference/unstable.md:44
+msgid ""
+"Anything which can be configured with a `-Z` flag can also be set in the "
+"cargo [config file](config.md) (`.cargo/config.toml`) in the `unstable` "
+"table. For example:"
+msgstr ""
+
+#: src/reference/unstable.md:48
+msgid ""
+"```toml\n"
+"[unstable]\n"
+"mtime-on-use = true\n"
+"multitarget = true\n"
+"timings = [\"html\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:55
+msgid "Each new feature described below should explain how to use it."
+msgstr ""
+
+#: src/reference/unstable.md:61
+msgid "List of unstable features"
+msgstr ""
+
+#: src/reference/unstable.md:63
+msgid "Unstable-specific features"
+msgstr ""
+
+#: src/reference/unstable.md:64
+msgid ""
+"[\\-Z allow-features](#allow-features) — Provides a way to restrict which "
+"unstable features are used."
+msgstr ""
+
+#: src/reference/unstable.md:65
+msgid "Build scripts and linking"
+msgstr ""
+
+#: src/reference/unstable.md:66
+msgid "[Metabuild](#metabuild) — Provides declarative build scripts."
+msgstr ""
+
+#: src/reference/unstable.md:67
+msgid "Resolver and features"
+msgstr ""
+
+#: src/reference/unstable.md:68
+msgid ""
+"[no-index-update](#no-index-update) — Prevents cargo from updating the index "
+"cache."
+msgstr ""
+
+#: src/reference/unstable.md:69
+msgid ""
+"[avoid-dev-deps](#avoid-dev-deps) — Prevents the resolver from including dev-"
+"dependencies during resolution."
+msgstr ""
+
+#: src/reference/unstable.md:70
+msgid ""
+"[minimal-versions](#minimal-versions) — Forces the resolver to use the "
+"lowest compatible version instead of the highest."
+msgstr ""
+
+#: src/reference/unstable.md:71
+msgid ""
+"[public-dependency](#public-dependency) — Allows dependencies to be "
+"classified as either public or private."
+msgstr ""
+
+#: src/reference/unstable.md:72
+msgid ""
+"[Namespaced features](#namespaced-features) — Separates optional "
+"dependencies into a separate namespace from regular features, and allows "
+"feature names to be the same as some dependency name."
+msgstr ""
+
+#: src/reference/unstable.md:73
+msgid ""
+"[Weak dependency features](#weak-dependency-features) — Allows setting "
+"features for dependencies without enabling optional dependencies."
+msgstr ""
+
+#: src/reference/unstable.md:74
+msgid "Output behavior"
+msgstr ""
+
+#: src/reference/unstable.md:75
+msgid "[out-dir](#out-dir) — Adds a directory where artifacts are copied to."
+msgstr ""
+
+#: src/reference/unstable.md:76
+msgid ""
+"[terminal-width](#terminal-width) — Tells rustc the width of the terminal so "
+"that long diagnostic messages can be truncated to be more readable."
+msgstr ""
+
+#: src/reference/unstable.md:77
+msgid ""
+"[Different binary name](#different-binary-name) — Assign a name to the built "
+"binary that is seperate from the crate name."
+msgstr ""
+
+#: src/reference/unstable.md:78
+msgid "Compile behavior"
+msgstr ""
+
+#: src/reference/unstable.md:79
+msgid ""
+"[mtime-on-use](#mtime-on-use) — Updates the last-modified timestamp on every "
+"dependency every time it is used, to provide a mechanism to delete unused "
+"artifacts."
+msgstr ""
+
+#: src/reference/unstable.md:80
+msgid ""
+"[doctest-xcompile](#doctest-xcompile) — Supports running doctests with the "
+"`--target` flag."
+msgstr ""
+
+#: src/reference/unstable.md:81
+msgid ""
+"[multitarget](#multitarget) — Supports building for multiple targets at the "
+"same time."
+msgstr ""
+
+#: src/reference/unstable.md:82
+msgid ""
+"[build-std](#build-std) — Builds the standard library instead of using pre-"
+"built binaries."
+msgstr ""
+
+#: src/reference/unstable.md:83
+msgid ""
+"[build-std-features](#build-std-features) — Sets features to use with the "
+"standard library."
+msgstr ""
+
+#: src/reference/unstable.md:84
+msgid ""
+"[binary-dep-depinfo](#binary-dep-depinfo) — Causes the dep-info file to "
+"track binary dependencies."
+msgstr ""
+
+#: src/reference/unstable.md:85
+msgid ""
+"[panic-abort-tests](#panic-abort-tests) — Allows running tests with the "
+"\"abort\" panic strategy."
+msgstr ""
+
+#: src/reference/unstable.md:86
+msgid "rustdoc"
+msgstr ""
+
+#: src/reference/unstable.md:87
+msgid ""
+"[`doctest-in-workspace`](#doctest-in-workspace) — Fixes workspace-relative "
+"paths when running doctests."
+msgstr ""
+
+#: src/reference/unstable.md:88
+msgid ""
+"[rustdoc-map](#rustdoc-map) — Provides mappings for documentation to link to "
+"external sites like [docs.rs](https://docs.rs/)."
+msgstr ""
+
+#: src/reference/unstable.md:89
+msgid "`Cargo.toml` extensions"
+msgstr ""
+
+#: src/reference/unstable.md:90
+msgid ""
+"[Custom named profiles](#custom-named-profiles) — Adds custom named profiles "
+"in addition to the standard names."
+msgstr ""
+
+#: src/reference/unstable.md:91
+msgid ""
+"[Profile `strip` option](#profile-strip-option) — Forces the removal of "
+"debug information and symbols from executables."
+msgstr ""
+
+#: src/reference/unstable.md:92
+msgid ""
+"[per-package-target](#per-package-target) — Sets the `--target` to use for "
+"each individual package."
+msgstr ""
+
+#: src/reference/unstable.md:93
+msgid "Information and metadata"
+msgstr ""
+
+#: src/reference/unstable.md:94
+msgid ""
+"[Build-plan](#build-plan) — Emits JSON information on which commands will be "
+"run."
+msgstr ""
+
+#: src/reference/unstable.md:95
+msgid ""
+"[timings](#timings) — Generates a report on how long individual dependencies "
+"took to run."
+msgstr ""
+
+#: src/reference/unstable.md:96
+msgid ""
+"[unit-graph](#unit-graph) — Emits JSON for Cargo's internal graph structure."
+msgstr ""
+
+#: src/reference/unstable.md:97
+msgid ""
+"[future incompat report](#future-incompat-report) — Displays a report for "
+"future incompatibilities that may error in the future."
+msgstr ""
+
+#: src/reference/unstable.md:98
+msgid ""
+"[`cargo rustc --print`](#rustc---print) — Calls rustc with `--print` to "
+"display information from rustc."
+msgstr ""
+
+#: src/reference/unstable.md:99
+msgid "Configuration"
+msgstr "組態"
+
+#: src/reference/unstable.md:100
+msgid ""
+"[config-cli](#config-cli) — Adds the ability to pass configuration options "
+"on the command-line."
+msgstr ""
+
+#: src/reference/unstable.md:101
+msgid ""
+"[config-include](#config-include) — Adds the ability for config files to "
+"include other files."
+msgstr ""
+
+#: src/reference/unstable.md:102
+msgid ""
+"[`cargo config`](#cargo-config) — Adds a new subcommand for viewing config "
+"files."
+msgstr ""
+
+#: src/reference/unstable.md:103
+msgid "Registries"
+msgstr "註冊表"
+
+#: src/reference/unstable.md:104
+msgid ""
+"[credential-process](#credential-process) — Adds support for fetching "
+"registry tokens from an external authentication program."
+msgstr ""
+
+#: src/reference/unstable.md:105
+msgid ""
+"[`cargo logout`](#cargo-logout) — Adds the `logout` command to remove the "
+"currently saved registry token."
+msgstr ""
+
+#: src/reference/unstable.md:107
+msgid "allow-features"
+msgstr ""
+
+#: src/reference/unstable.md:109
+msgid ""
+"This permanently-unstable flag makes it so that only a listed set of "
+"unstable features can be used. Specifically, if you pass `-Zallow-"
+"features=foo,bar`, you'll continue to be able to pass `-Zfoo` and `-Zbar` to "
+"`cargo`, but you will be unable to pass `-Zbaz`. You can pass an empty "
+"string (`-Zallow-features=`) to disallow all unstable features."
+msgstr ""
+
+#: src/reference/unstable.md:116
+msgid ""
+"`-Zallow-features` also restricts which unstable features can be passed to "
+"the `cargo-features` entry in `Cargo.toml`. If, for example, you want to "
+"allow"
+msgstr ""
+
+#: src/reference/unstable.md:120
+msgid ""
+"```toml\n"
+"cargo-features = [\"test-dummy-unstable\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:124
+msgid ""
+"where `test-dummy-unstable` is unstable, that features would also be "
+"disallowed by `-Zallow-features=`, and allowed with `-Zallow-features=test-"
+"dummy-unstable`."
+msgstr ""
+
+#: src/reference/unstable.md:128
+msgid ""
+"The list of features passed to cargo's `-Zallow-features` is also passed to "
+"any Rust tools that cargo ends up calling (like `rustc` or `rustdoc`). Thus, "
+"if you run `cargo -Zallow-features=`, no unstable Cargo _or_ Rust features "
+"can be used."
+msgstr ""
+
+#: src/reference/unstable.md:133
+msgid "no-index-update"
+msgstr ""
+
+#: src/reference/unstable.md:134
+msgid ""
+"Original Issue: [\\#3479](https://github.com/rust-lang/cargo/issues/3479)"
+msgstr ""
+
+#: src/reference/unstable.md:135
+msgid ""
+"Tracking Issue: [\\#7404](https://github.com/rust-lang/cargo/issues/7404)"
+msgstr ""
+
+#: src/reference/unstable.md:137
+msgid ""
+"The `-Z no-index-update` flag ensures that Cargo does not attempt to update "
+"the registry index. This is intended for tools such as Crater that issue "
+"many Cargo commands, and you want to avoid the network latency for updating "
+"the index each time."
+msgstr ""
+
+#: src/reference/unstable.md:142
+msgid "mtime-on-use"
+msgstr ""
+
+#: src/reference/unstable.md:143
+msgid "Original Issue: [\\#6477](https://github.com/rust-lang/cargo/pull/6477)"
+msgstr ""
+
+#: src/reference/unstable.md:144
+msgid ""
+"Cache usage meta tracking issue: [\\#7150](https://github.com/rust-lang/"
+"cargo/issues/7150)"
+msgstr ""
+
+#: src/reference/unstable.md:146
+msgid ""
+"The `-Z mtime-on-use` flag is an experiment to have Cargo update the mtime "
+"of used files to make it easier for tools like cargo-sweep to detect which "
+"files are stale. For many workflows this needs to be set on _all_ "
+"invocations of cargo. To make this more practical setting the `unstable."
+"mtime_on_use` flag in `.cargo/config.toml` or the corresponding ENV variable "
+"will apply the `-Z mtime-on-use` to all invocations of nightly cargo. (the "
+"config flag is ignored by stable)"
+msgstr ""
+
+#: src/reference/unstable.md:153
+msgid "avoid-dev-deps"
+msgstr ""
+
+#: src/reference/unstable.md:154
+msgid ""
+"Original Issue: [\\#4988](https://github.com/rust-lang/cargo/issues/4988)"
+msgstr ""
+
+#: src/reference/unstable.md:155
+msgid ""
+"Tracking Issue: [\\#5133](https://github.com/rust-lang/cargo/issues/5133)"
+msgstr ""
+
+#: src/reference/unstable.md:157
+msgid ""
+"When running commands such as `cargo install` or `cargo build`, Cargo "
+"currently requires dev-dependencies to be downloaded, even if they are not "
+"used. The `-Z avoid-dev-deps` flag allows Cargo to avoid downloading dev-"
+"dependencies if they are not needed. The `Cargo.lock` file will not be "
+"generated if dev-dependencies are skipped."
+msgstr ""
+
+#: src/reference/unstable.md:163
+msgid "minimal-versions"
+msgstr ""
+
+#: src/reference/unstable.md:164
+msgid ""
+"Original Issue: [\\#4100](https://github.com/rust-lang/cargo/issues/4100)"
+msgstr ""
+
+#: src/reference/unstable.md:165
+msgid ""
+"Tracking Issue: [\\#5657](https://github.com/rust-lang/cargo/issues/5657)"
+msgstr ""
+
+#: src/reference/unstable.md:167
+msgid ""
+"Note: It is not recommended to use this feature. Because it enforces minimal "
+"versions for all transitive dependencies, its usefulness is limited since "
+"not all external dependencies declare proper lower version bounds. It is "
+"intended that it will be changed in the future to only enforce minimal "
+"versions for direct dependencies."
+msgstr ""
+
+#: src/reference/unstable.md:173
+msgid ""
+"When a `Cargo.lock` file is generated, the `-Z minimal-versions` flag will "
+"resolve the dependencies to the minimum SemVer version that will satisfy the "
+"requirements (instead of the greatest version)."
+msgstr ""
+
+#: src/reference/unstable.md:177
+msgid ""
+"The intended use-case of this flag is to check, during continuous "
+"integration, that the versions specified in Cargo.toml are a correct "
+"reflection of the minimum versions that you are actually using. That is, if "
+"Cargo.toml says `foo = \"1.0.0\"` that you don't accidentally depend on "
+"features added only in `foo 1.5.0`."
+msgstr ""
+
+#: src/reference/unstable.md:183
+msgid "out-dir"
+msgstr ""
+
+#: src/reference/unstable.md:184
+msgid ""
+"Original Issue: [\\#4875](https://github.com/rust-lang/cargo/issues/4875)"
+msgstr ""
+
+#: src/reference/unstable.md:185
+msgid ""
+"Tracking Issue: [\\#6790](https://github.com/rust-lang/cargo/issues/6790)"
+msgstr ""
+
+#: src/reference/unstable.md:187
+msgid ""
+"This feature allows you to specify the directory where artifacts will be "
+"copied to after they are built. Typically artifacts are only written to the "
+"`target/release` or `target/debug` directories. However, determining the "
+"exact filename can be tricky since you need to parse JSON output. The `--out-"
+"dir` flag makes it easier to predictably access the artifacts. Note that the "
+"artifacts are copied, so the originals are still in the `target` directory. "
+"Example:"
+msgstr ""
+
+#: src/reference/unstable.md:199
+msgid "This can also be specified in `.cargo/config.toml` files."
+msgstr ""
+
+#: src/reference/unstable.md:201
+msgid ""
+"```toml\n"
+"[build]\n"
+"out-dir = \"out\"\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:206
+msgid "doctest-xcompile"
+msgstr ""
+
+#: src/reference/unstable.md:207
+msgid ""
+"Tracking Issue: [\\#7040](https://github.com/rust-lang/cargo/issues/7040)"
+msgstr ""
+
+#: src/reference/unstable.md:208
+msgid ""
+"Tracking Rustc Issue: [\\#64245](https://github.com/rust-lang/rust/"
+"issues/64245)"
+msgstr ""
+
+#: src/reference/unstable.md:210
+msgid ""
+"This flag changes `cargo test`'s behavior when handling doctests when a "
+"target is passed. Currently, if a target is passed that is different from "
+"the host cargo will simply skip testing doctests. If this flag is present, "
+"cargo will continue as normal, passing the tests to doctest, while also "
+"passing it a `--target` option, as well as enabling `-Zunstable-features --"
+"enable-per-target-ignores` and passing along information from `.cargo/config."
+"toml`. See the rustc issue for more information."
+msgstr ""
+
+#: src/reference/unstable.md:222
+msgid "multitarget"
+msgstr ""
+
+#: src/reference/unstable.md:223
+msgid ""
+"Tracking Issue: [\\#8176](https://github.com/rust-lang/cargo/issues/8176)"
+msgstr ""
+
+#: src/reference/unstable.md:225
+msgid ""
+"This flag allows passing multiple `--target` flags to the `cargo` subcommand "
+"selected. When multiple `--target` flags are passed the selected build "
+"targets will be built for each of the selected architectures."
+msgstr ""
+
+#: src/reference/unstable.md:229
+msgid "For example to compile a library for both 32 and 64-bit:"
+msgstr ""
+
+#: src/reference/unstable.md:235
+msgid "or running tests for both targets:"
+msgstr ""
+
+#: src/reference/unstable.md:241
+msgid "Custom named profiles"
+msgstr ""
+
+#: src/reference/unstable.md:243
+msgid ""
+"Tracking Issue: [rust-lang/cargo#6988](https://github.com/rust-lang/cargo/"
+"issues/6988)"
+msgstr ""
+
+#: src/reference/unstable.md:244
+msgid "RFC: [\\#2678](https://github.com/rust-lang/rfcs/pull/2678)"
+msgstr ""
+
+#: src/reference/unstable.md:246
+msgid ""
+"With this feature you can define custom profiles having new names. With the "
+"custom profile enabled, build artifacts can be emitted by default to "
+"directories other than `release` or `debug`, based on the custom profile's "
+"name."
+msgstr ""
+
+#: src/reference/unstable.md:251
+msgid "For example:"
+msgstr ""
+
+#: src/reference/unstable.md:253
+msgid ""
+"```toml\n"
+"cargo-features = [\"named-profiles\"]\n"
+"\n"
+"[profile.release-lto]\n"
+"inherits = \"release\"\n"
+"lto = true\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:261
+msgid ""
+"An `inherits` key is used in order to receive attributes from other "
+"profiles, so that a new custom profile can be based on the standard `dev` or "
+"`release` profile presets. Cargo emits errors in case `inherits` loops are "
+"detected. When considering inheritance hierarchy, all profiles directly or "
+"indirectly inherit from either from `release` or from `dev`."
+msgstr ""
+
+#: src/reference/unstable.md:267
+msgid ""
+"Valid profile names are: must not be empty, use only alphanumeric characters "
+"or `-` or `_`."
+msgstr ""
+
+#: src/reference/unstable.md:270
+msgid ""
+"Passing `--profile` with the profile's name to various Cargo commands, "
+"directs operations to use the profile's attributes. Overrides that are "
+"specified in the profiles from which the custom profile inherits are "
+"inherited too."
+msgstr ""
+
+#: src/reference/unstable.md:274
+msgid ""
+"For example, using `cargo build` with `--profile` and the manifest from "
+"above:"
+msgstr ""
+
+#: src/reference/unstable.md:280
+msgid ""
+"When a custom profile is used, build artifacts go to a different target by "
+"default. In the example above, you can expect to see the outputs under "
+"`target/release-lto`."
+msgstr ""
+
+#: src/reference/unstable.md:285
+msgid "New `dir-name` attribute"
+msgstr ""
+
+#: src/reference/unstable.md:287
+msgid ""
+"Some of the paths generated under `target/` have resulted in a de-facto "
+"\"build protocol\", where `cargo` is invoked as a part of a larger project "
+"build. So, to preserve the existing behavior, there is also a new attribute "
+"`dir-name`, which when left unspecified, defaults to the name of the "
+"profile. For example:"
+msgstr ""
+
+#: src/reference/unstable.md:292
+msgid ""
+"```toml\n"
+"[profile.release-lto]\n"
+"inherits = \"release\"\n"
+"dir-name = \"lto\"  # Emits to target/lto instead of target/release-lto\n"
+"lto = true\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:300
+msgid "Namespaced features"
+msgstr ""
+
+#: src/reference/unstable.md:301
+msgid ""
+"Original issue: [\\#1286](https://github.com/rust-lang/cargo/issues/1286)"
+msgstr ""
+
+#: src/reference/unstable.md:302
+msgid ""
+"Tracking Issue: [\\#5565](https://github.com/rust-lang/cargo/issues/5565)"
+msgstr ""
+
+#: src/reference/unstable.md:304
+msgid ""
+"The `namespaced-features` option makes two changes to how features can be "
+"specified:"
+msgstr ""
+
+#: src/reference/unstable.md:307
+msgid "Features may now be defined with the same name as a dependency."
+msgstr ""
+
+#: src/reference/unstable.md:308
+msgid ""
+"Optional dependencies can be explicitly enabled in the `[features]` table "
+"with the `dep:` prefix, which enables the dependency without enabling a "
+"feature of the same name."
+msgstr ""
+
+#: src/reference/unstable.md:312
+msgid ""
+"By default, an optional dependency `foo` will define a feature `foo = [\"dep:"
+"foo\"]` _unless_ `dep:foo` is mentioned in any other feature, or the `foo` "
+"feature is already defined. This helps prevent unnecessary boilerplate of "
+"listing every optional dependency, but still allows you to override the "
+"implicit feature."
+msgstr ""
+
+#: src/reference/unstable.md:318
+msgid "This allows two use cases that were previously not possible:"
+msgstr ""
+
+#: src/reference/unstable.md:320
+msgid ""
+"You can \"hide\" an optional dependency, so that external users cannot "
+"explicitly enable that optional dependency."
+msgstr ""
+
+#: src/reference/unstable.md:322
+msgid ""
+"There is no longer a need to create \"funky\" feature names to work around "
+"the restriction that features cannot shadow dependency names."
+msgstr ""
+
+#: src/reference/unstable.md:325
+msgid ""
+"To enable namespaced-features, use the `-Z namespaced-features` command-line "
+"flag."
+msgstr ""
+
+#: src/reference/unstable.md:328
+msgid "An example of hiding an optional dependency:"
+msgstr ""
+
+#: src/reference/unstable.md:330
+msgid ""
+"```toml\n"
+"[dependencies]\n"
+"regex = { version = \"1.4.1\", optional = true }\n"
+"lazy_static = { version = \"1.4.0\", optional = true }\n"
+"\n"
+"[features]\n"
+"regex = [\"dep:regex\", \"dep:lazy_static\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:339
+msgid ""
+"In this example, the \"regex\" feature enables both `regex` and "
+"`lazy_static`. The `lazy_static` feature does not exist, and a user cannot "
+"explicitly enable it. This helps hide internal details of how your package "
+"is implemented."
+msgstr ""
+
+#: src/reference/unstable.md:343
+msgid "An example of avoiding \"funky\" names:"
+msgstr ""
+
+#: src/reference/unstable.md:345
+msgid ""
+"```toml\n"
+"[dependencies]\n"
+"bigdecimal = \"0.1\"\n"
+"chrono = \"0.4\"\n"
+"num-bigint = \"0.2\"\n"
+"serde = {version = \"1.0\", optional = true }\n"
+"\n"
+"[features]\n"
+"serde = [\"dep:serde\", \"bigdecimal/serde\", \"chrono/serde\", \"num-bigint/"
+"serde\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:356
+msgid ""
+"In this case, `serde` is a natural name to use for a feature, because it is "
+"relevant to your exported API. However, previously you would need to use a "
+"name like `serde1` to work around the naming limitation if you wanted to "
+"also enable other features."
+msgstr ""
+
+#: src/reference/unstable.md:361
+msgid "Build-plan"
+msgstr ""
+
+#: src/reference/unstable.md:362
+msgid ""
+"Tracking Issue: [\\#5579](https://github.com/rust-lang/cargo/issues/5579)"
+msgstr ""
+
+#: src/reference/unstable.md:364
+msgid ""
+"The `--build-plan` argument for the `build` command will output JSON with "
+"information about which commands would be run without actually executing "
+"anything. This can be useful when integrating with another build tool. "
+"Example:"
+msgstr ""
+
+#: src/reference/unstable.md:373
+msgid "Metabuild"
+msgstr ""
+
+#: src/reference/unstable.md:374
+msgid ""
+"Tracking Issue: [rust-lang/rust#49803](https://github.com/rust-lang/rust/"
+"issues/49803)"
+msgstr ""
+
+#: src/reference/unstable.md:375
+msgid ""
+"RFC: [\\#2196](https://github.com/rust-lang/rfcs/blob/master/text/2196-"
+"metabuild.md)"
+msgstr ""
+
+#: src/reference/unstable.md:377
+msgid ""
+"Metabuild is a feature to have declarative build scripts. Instead of writing "
+"a `build.rs` script, you specify a list of build dependencies in the "
+"`metabuild` key in `Cargo.toml`. A build script is automatically generated "
+"that runs each build dependency in order. Metabuild packages can then read "
+"metadata from `Cargo.toml` to specify their behavior."
+msgstr ""
+
+#: src/reference/unstable.md:383
+msgid ""
+"Include `cargo-features` at the top of `Cargo.toml`, a `metabuild` key in "
+"the `package`, list the dependencies in `build-dependencies`, and add any "
+"metadata that the metabuild packages require under `package.metadata`. "
+"Example:"
+msgstr ""
+
+#: src/reference/unstable.md:387
+msgid ""
+"```toml\n"
+"cargo-features = [\"metabuild\"]\n"
+"\n"
+"[package]\n"
+"name = \"mypackage\"\n"
+"version = \"0.0.1\"\n"
+"metabuild = [\"foo\", \"bar\"]\n"
+"\n"
+"[build-dependencies]\n"
+"foo = \"1.0\"\n"
+"bar = \"1.0\"\n"
+"\n"
+"[package.metadata.foo]\n"
+"extra-info = \"qwerty\"\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:403
+msgid ""
+"Metabuild packages should have a public function called `metabuild` that "
+"performs the same actions as a regular `build.rs` script would perform."
+msgstr ""
+
+#: src/reference/unstable.md:406
+msgid "public-dependency"
+msgstr ""
+
+#: src/reference/unstable.md:407
+msgid ""
+"Tracking Issue: [\\#44663](https://github.com/rust-lang/rust/issues/44663)"
+msgstr ""
+
+#: src/reference/unstable.md:409
+msgid ""
+"The 'public-dependency' feature allows marking dependencies as 'public' or "
+"'private'. When this feature is enabled, additional information is passed to "
+"rustc to allow the 'exported_private_dependencies' lint to function properly."
+msgstr ""
+
+#: src/reference/unstable.md:413
+msgid "This requires the appropriate key to be set in `cargo-features`:"
+msgstr ""
+
+#: src/reference/unstable.md:415
+msgid ""
+"```toml\n"
+"cargo-features = [\"public-dependency\"]\n"
+"\n"
+"[dependencies]\n"
+"my_dep = { version = \"1.2.3\", public = true }\n"
+"private_dep = \"2.0.0\" # Will be 'private' by default\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:423
+msgid "build-std"
+msgstr ""
+
+#: src/reference/unstable.md:424 src/reference/unstable.md:505
+msgid "Tracking Repository: <https://github.com/rust-lang/wg-cargo-std-aware>"
+msgstr ""
+
+#: src/reference/unstable.md:426
+msgid ""
+"The `build-std` feature enables Cargo to compile the standard library itself "
+"as part of a crate graph compilation. This feature has also historically "
+"been known as \"std-aware Cargo\". This feature is still in very early "
+"stages of development, and is also a possible massive feature addition to "
+"Cargo. This is a very large feature to document, even in the minimal form "
+"that it exists in today, so if you're curious to stay up to date you'll want "
+"to follow the [tracking repository](https://github.com/rust-lang/wg-cargo-"
+"std-aware) and its set of issues."
+msgstr ""
+
+#: src/reference/unstable.md:435
+msgid ""
+"The functionality implemented today is behind a flag called `-Z build-std`. "
+"This flag indicates that Cargo should compile the standard library from "
+"source code using the same profile as the main build itself. Note that for "
+"this to work you need to have the source code for the standard library "
+"available, and at this time the only supported method of doing so is to add "
+"the `rust-src` rust rustup component:"
+msgstr ""
+
+#: src/reference/unstable.md:446
+msgid ""
+"It is also required today that the `-Z build-std` flag is combined with the "
+"`--target` flag. Note that you're not forced to do a cross compilation, "
+"you're just forced to pass `--target` in one form or another."
+msgstr ""
+
+#: src/reference/unstable.md:450
+msgid "Usage looks like:"
+msgstr ""
+
+#: src/reference/unstable.md:464
+msgid ""
+"Here we recompiled the standard library in debug mode with debug assertions "
+"(like `src/main.rs` is compiled) and everything was linked together at the "
+"end."
+msgstr ""
+
+#: src/reference/unstable.md:467
+msgid ""
+"Using `-Z build-std` will implicitly compile the stable crates `core`, "
+"`std`, `alloc`, and `proc_macro`. If you're using `cargo test` it will also "
+"compile the `test` crate. If you're working with an environment which does "
+"not support some of these crates, then you can pass an argument to `-Zbuild-"
+"std` as well:"
+msgstr ""
+
+#: src/reference/unstable.md:476
+msgid ""
+"The value here is a comma-separated list of standard library crates to build."
+msgstr ""
+
+#: src/reference/unstable.md:478
+msgid "Requirements"
+msgstr ""
+
+#: src/reference/unstable.md:480
+msgid "As a summary, a list of requirements today to use `-Z build-std` are:"
+msgstr ""
+
+#: src/reference/unstable.md:482
+msgid ""
+"You must install libstd's source code through `rustup component add rust-src`"
+msgstr ""
+
+#: src/reference/unstable.md:483
+msgid "You must pass `--target`"
+msgstr ""
+
+#: src/reference/unstable.md:484
+msgid "You must use both a nightly Cargo and a nightly rustc"
+msgstr ""
+
+#: src/reference/unstable.md:485
+msgid "The `-Z build-std` flag must be passed to all `cargo` invocations."
+msgstr ""
+
+#: src/reference/unstable.md:487
+msgid "Reporting bugs and helping out"
+msgstr ""
+
+#: src/reference/unstable.md:489
+msgid ""
+"The `-Z build-std` feature is in the very early stages of development! This "
+"feature for Cargo has an extremely long history and is very large in scope, "
+"and this is just the beginning. If you'd like to report bugs please either "
+"report them to:"
+msgstr ""
+
+#: src/reference/unstable.md:494
+msgid ""
+"Cargo - <https://github.com/rust-lang/cargo/issues/new> - for implementation "
+"bugs"
+msgstr ""
+
+#: src/reference/unstable.md:495
+msgid ""
+"The tracking repository - <https://github.com/rust-lang/wg-cargo-std-aware/"
+"issues/new> - for larger design questions."
+msgstr ""
+
+#: src/reference/unstable.md:499
+msgid ""
+"Also if you'd like to see a feature that's not yet implemented and/or if "
+"something doesn't quite work the way you'd like it to, feel free to check "
+"out the [issue tracker](https://github.com/rust-lang/wg-cargo-std-aware/"
+"issues) of the tracking repository, and if it's not there please file a new "
+"issue!"
+msgstr ""
+
+#: src/reference/unstable.md:504
+msgid "build-std-features"
+msgstr ""
+
+#: src/reference/unstable.md:507
+msgid ""
+"This flag is a sibling to the `-Zbuild-std` feature flag. This will "
+"configure the features enabled for the standard library itself when building "
+"the standard library. The default enabled features, at this time, are "
+"`backtrace` and `panic_unwind`. This flag expects a comma-separated list "
+"and, if provided, will override the default list of features enabled."
+msgstr ""
+
+#: src/reference/unstable.md:513
+msgid "timings"
+msgstr ""
+
+#: src/reference/unstable.md:514
+msgid ""
+"Tracking Issue: [\\#7405](https://github.com/rust-lang/cargo/issues/7405)"
+msgstr ""
+
+#: src/reference/unstable.md:516
+msgid ""
+"The `timings` feature gives some information about how long each compilation "
+"takes, and tracks concurrency information over time."
+msgstr ""
+
+#: src/reference/unstable.md:523
+msgid ""
+"The `-Ztimings` flag can optionally take a comma-separated list of the "
+"following values:"
+msgstr ""
+
+#: src/reference/unstable.md:526
+msgid ""
+"`html` — Saves a file called `cargo-timing.html` to the current directory "
+"with a report of the compilation. Files are also saved with a timestamp in "
+"the filename if you want to look at older runs."
+msgstr ""
+
+#: src/reference/unstable.md:529
+msgid ""
+"`info` — Displays a message to stdout after each compilation finishes with "
+"how long it took."
+msgstr ""
+
+#: src/reference/unstable.md:531
+msgid "`json` — Emits some JSON information about timing information."
+msgstr ""
+
+#: src/reference/unstable.md:533
+msgid "The default if none are specified is `html,info`."
+msgstr ""
+
+#: src/reference/unstable.md:535
+msgid "Reading the graphs"
+msgstr ""
+
+#: src/reference/unstable.md:537
+msgid ""
+"There are two graphs in the output. The \"unit\" graph shows the duration of "
+"each unit over time. A \"unit\" is a single compiler invocation. There are "
+"lines that show which additional units are \"unlocked\" when a unit "
+"finishes. That is, it shows the new units that are now allowed to run "
+"because their dependencies are all finished. Hover the mouse over a unit to "
+"highlight the lines. This can help visualize the critical path of "
+"dependencies. This may change between runs because the units may finish in "
+"different orders."
+msgstr ""
+
+#: src/reference/unstable.md:545
+msgid ""
+"The \"codegen\" times are highlighted in a lavender color. In some cases, "
+"build pipelining allows units to start when their dependencies are "
+"performing code generation. This information is not always displayed (for "
+"example, binary units do not show when code generation starts)."
+msgstr ""
+
+#: src/reference/unstable.md:550
+msgid ""
+"The \"custom build\" units are `build.rs` scripts, which when run are "
+"highlighted in orange."
+msgstr ""
+
+#: src/reference/unstable.md:553
+msgid ""
+"The second graph shows Cargo's concurrency over time. The three lines are:"
+msgstr ""
+
+#: src/reference/unstable.md:554
+msgid ""
+"\"Waiting\" (red) — This is the number of units waiting for a CPU slot to "
+"open."
+msgstr ""
+
+#: src/reference/unstable.md:556
+msgid ""
+"\"Inactive\" (blue) — This is the number of units that are waiting for their "
+"dependencies to finish."
+msgstr ""
+
+#: src/reference/unstable.md:558
+msgid "\"Active\" (green) — This is the number of units currently running."
+msgstr ""
+
+#: src/reference/unstable.md:560
+msgid ""
+"Note: This does not show the concurrency in the compiler itself. `rustc` "
+"coordinates with Cargo via the \"job server\" to stay within the concurrency "
+"limit. This currently mostly applies to the code generation phase."
+msgstr ""
+
+#: src/reference/unstable.md:564
+msgid "Tips for addressing compile times:"
+msgstr ""
+
+#: src/reference/unstable.md:565
+msgid "Look for slow dependencies."
+msgstr ""
+
+#: src/reference/unstable.md:566
+msgid "Check if they have features that you may wish to consider disabling."
+msgstr ""
+
+#: src/reference/unstable.md:567
+msgid "Consider trying to remove the dependency completely."
+msgstr ""
+
+#: src/reference/unstable.md:568
+msgid ""
+"Look for a crate being built multiple times with different versions. Try to "
+"remove the older versions from the dependency graph."
+msgstr ""
+
+#: src/reference/unstable.md:570
+msgid "Split large crates into smaller pieces."
+msgstr ""
+
+#: src/reference/unstable.md:571
+msgid ""
+"If there are a large number of crates bottlenecked on a single crate, focus "
+"your attention on improving that one crate to improve parallelism."
+msgstr ""
+
+#: src/reference/unstable.md:574
+msgid "binary-dep-depinfo"
+msgstr ""
+
+#: src/reference/unstable.md:575
+msgid ""
+"Tracking rustc issue: [\\#63012](https://github.com/rust-lang/rust/"
+"issues/63012)"
+msgstr ""
+
+#: src/reference/unstable.md:577
+msgid ""
+"The `-Z binary-dep-depinfo` flag causes Cargo to forward the same flag to "
+"`rustc` which will then cause `rustc` to include the paths of all binary "
+"dependencies in the \"dep info\" file (with the `.d` extension). Cargo then "
+"uses that information for change-detection (if any binary dependency "
+"changes, then the crate will be rebuilt). The primary use case is for "
+"building the compiler itself, which has implicit dependencies on the "
+"standard library that would otherwise be untracked for change-detection."
+msgstr ""
+
+#: src/reference/unstable.md:585
+msgid "panic-abort-tests"
+msgstr ""
+
+#: src/reference/unstable.md:586
+msgid ""
+"Tracking Issue: [\\#67650](https://github.com/rust-lang/rust/issues/67650)"
+msgstr ""
+
+#: src/reference/unstable.md:587
+msgid ""
+"Original Pull Request: [\\#7460](https://github.com/rust-lang/cargo/"
+"pull/7460)"
+msgstr ""
+
+#: src/reference/unstable.md:589
+msgid ""
+"The `-Z panic-abort-tests` flag will enable nightly support to compile test "
+"harness crates with `-Cpanic=abort`. Without this flag Cargo will compile "
+"tests, and everything they depend on, with `-Cpanic=unwind` because it's the "
+"only way `test`\\-the-crate knows how to operate. As of [rust-lang/"
+"rust#64158](https://github.com/rust-lang/rust/pull/64158), however, the "
+"`test` crate supports `-C panic=abort` with a test-per-process, and can help "
+"avoid compiling crate graphs multiple times."
+msgstr ""
+
+#: src/reference/unstable.md:596
+msgid ""
+"It's currently unclear how this feature will be stabilized in Cargo, but "
+"we'd like to stabilize it somehow!"
+msgstr ""
+
+#: src/reference/unstable.md:601
+msgid "config-cli"
+msgstr ""
+
+#: src/reference/unstable.md:602
+msgid ""
+"Tracking Issue: [\\#7722](https://github.com/rust-lang/cargo/issues/7722)"
+msgstr ""
+
+#: src/reference/unstable.md:604
+msgid ""
+"The `--config` CLI option allows arbitrary config values to be passed in via "
+"the command-line. The argument should be in TOML syntax of KEY=VALUE:"
+msgstr ""
+
+#: src/reference/unstable.md:611
+msgid ""
+"The `--config` option may be specified multiple times, in which case the "
+"values are merged in left-to-right order, using the same merging logic that "
+"multiple config files use. CLI values take precedence over environment "
+"variables, which take precedence over config files."
+msgstr ""
+
+#: src/reference/unstable.md:616
+msgid "Some examples of what it looks like using Bourne shell syntax:"
+msgstr ""
+
+#: src/reference/unstable.md:618
+msgid ""
+"```console\n"
+"# Most shells will require escaping.\n"
+"cargo --config http.proxy=\\\"http://example.com\\\" …\n"
+"\n"
+"# Spaces may be used.\n"
+"cargo --config \"net.git-fetch-with-cli = true\" …\n"
+"\n"
+"# TOML array example. Single quotes make it easier to read and write.\n"
+"cargo --config 'build.rustdocflags = [\"--html-in-header\", \"header."
+"html\"]' …\n"
+"\n"
+"# Example of a complex TOML key.\n"
+"cargo --config \"target.'cfg(all(target_arch = \\\"arm\\\", target_os = \\"
+"\"none\\\"))'.runner = 'my-runner'\" …\n"
+"\n"
+"# Example of overriding a profile setting.\n"
+"cargo --config profile.dev.package.image.opt-level=3 …\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:635
+msgid "config-include"
+msgstr ""
+
+#: src/reference/unstable.md:636
+msgid ""
+"Tracking Issue: [\\#7723](https://github.com/rust-lang/cargo/issues/7723)"
+msgstr ""
+
+#: src/reference/unstable.md:638
+msgid ""
+"The `include` key in a config file can be used to load another config file. "
+"It takes a string for a path to another file relative to the config file, or "
+"a list of strings. It requires the `-Zconfig-include` command-line option."
+msgstr ""
+
+#: src/reference/unstable.md:647
+msgid ""
+"The config values are first loaded from the include path, and then the "
+"config file's own values are merged on top of it."
+msgstr ""
+
+#: src/reference/unstable.md:650
+msgid ""
+"This can be paired with [config-cli](#config-cli) to specify a file to load "
+"from the command-line. Pass a path to a config file as the argument to `--"
+"config`:"
+msgstr ""
+
+#: src/reference/unstable.md:658
+msgid "CLI paths are relative to the current working directory."
+msgstr ""
+
+#: src/reference/unstable.md:660
+msgid "target-applies-to-host"
+msgstr ""
+
+#: src/reference/unstable.md:661 src/reference/unstable.md:683
+msgid ""
+"Original Pull Request: [\\#9322](https://github.com/rust-lang/cargo/"
+"pull/9322)"
+msgstr ""
+
+#: src/reference/unstable.md:662
+msgid ""
+"Tracking Issue: [\\#9453](https://github.com/rust-lang/cargo/issues/9453)"
+msgstr ""
+
+#: src/reference/unstable.md:664
+msgid ""
+"The `target-applies-to-host` key in a config file can be used set the "
+"desired behavior for passing target config flags to build scripts."
+msgstr ""
+
+#: src/reference/unstable.md:667
+msgid "It requires the `-Ztarget-applies-to-host` command-line option."
+msgstr ""
+
+#: src/reference/unstable.md:669
+msgid ""
+"The current default for `target-applies-to-host` is `true`, which will be "
+"changed to `false` in the future, if `-Zhost-config` is used the new `false` "
+"default will be set for `target-applies-to-host`."
+msgstr ""
+
+#: src/reference/unstable.md:682
+msgid "host-config"
+msgstr ""
+
+#: src/reference/unstable.md:684
+msgid ""
+"Tracking Issue: [\\#9452](https://github.com/rust-lang/cargo/issues/9452)"
+msgstr ""
+
+#: src/reference/unstable.md:686
+msgid ""
+"The `host` key in a config file can be used pass flags to host build targets "
+"such as build scripts that must run on the host system instead of the target "
+"system when cross compiling. It supports both generic and host arch specific "
+"tables. Matching host arch tables take precedence over generic host tables."
+msgstr ""
+
+#: src/reference/unstable.md:691
+msgid ""
+"It requires the `-Zhost-config` and `-Ztarget-applies-to-host` command-line "
+"options to be set."
+msgstr ""
+
+#: src/reference/unstable.md:694
+msgid ""
+"```toml\n"
+"# config.toml\n"
+"[host]\n"
+"linker = \"/path/to/host/linker\"\n"
+"[host.x86_64-unknown-linux-gnu]\n"
+"linker = \"/path/to/host/arch/linker\"\n"
+"[target.x86_64-unknown-linux-gnu]\n"
+"linker = \"/path/to/target/linker\"\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:704
+msgid ""
+"The generic `host` table above will be entirely ignored when building on a "
+"`x86_64-unknown-linux-gnu` host as the `host.x86_64-unknown-linux-gnu` table "
+"takes precedence."
+msgstr ""
+
+#: src/reference/unstable.md:708
+msgid ""
+"Setting `-Zhost-config` changes the default for `target-applies-to-host` to "
+"`false` from `true`."
+msgstr ""
+
+#: src/reference/unstable.md:715
+msgid "unit-graph"
+msgstr ""
+
+#: src/reference/unstable.md:716
+msgid ""
+"Tracking Issue: [\\#8002](https://github.com/rust-lang/cargo/issues/8002)"
+msgstr ""
+
+#: src/reference/unstable.md:718
+msgid ""
+"The `--unit-graph` flag can be passed to any build command (`build`, "
+"`check`, `run`, `test`, `bench`, `doc`, etc.) to emit a JSON object to "
+"stdout which represents Cargo's internal unit graph. Nothing is actually "
+"built, and the command returns immediately after printing. Each \"unit\" "
+"corresponds to an execution of the compiler. These objects also include "
+"which unit each unit depends on."
+msgstr ""
+
+#: src/reference/unstable.md:729
+msgid ""
+"This structure provides a more complete view of the dependency relationship "
+"as Cargo sees it. In particular, the \"features\" field supports the new "
+"feature resolver where a dependency can be built multiple times with "
+"different features. `cargo metadata` fundamentally cannot represent the "
+"relationship of features between different dependency kinds, and features "
+"now depend on which command is run and which packages and targets are "
+"selected. Additionally it can provide details about intra-package "
+"dependencies like build scripts or tests."
+msgstr ""
+
+#: src/reference/unstable.md:738
+msgid "The following is a description of the JSON structure:"
+msgstr ""
+
+#: src/reference/unstable.md:742
+msgid ""
+"/* Version of the JSON output structure. If any backwards incompatible\n"
+"     changes are made, this value will be increased.\n"
+"  */"
+msgstr ""
+
+#: src/reference/unstable.md:745
+msgid "\"version\""
+msgstr ""
+
+#: src/reference/unstable.md:746
+msgid "/* Array of all build units. */"
+msgstr ""
+
+#: src/reference/unstable.md:747
+msgid "\"units\""
+msgstr ""
+
+#: src/reference/unstable.md:749
+msgid ""
+"/* An opaque string which indicates the package.\n"
+"         Information about the package can be obtained from `cargo "
+"metadata`.\n"
+"      */"
+msgstr ""
+
+#: src/reference/unstable.md:752
+msgid "\"pkg_id\""
+msgstr ""
+
+#: src/reference/unstable.md:752
+msgid "\"my-package 0.1.0 (path+file:///path/to/my-package)\""
+msgstr ""
+
+#: src/reference/unstable.md:753
+msgid ""
+"/* The Cargo target. See the `cargo metadata` documentation for more\n"
+"         information about these fields.\n"
+"         https://doc.rust-lang.org/cargo/commands/cargo-metadata.html\n"
+"      */"
+msgstr ""
+
+#: src/reference/unstable.md:757
+msgid "\"target\""
+msgstr ""
+
+#: src/reference/unstable.md:758
+msgid "\"kind\""
+msgstr ""
+
+#: src/reference/unstable.md:758 src/reference/unstable.md:759
+msgid "\"lib\""
+msgstr ""
+
+#: src/reference/unstable.md:759
+msgid "\"crate_types\""
+msgstr ""
+
+#: src/reference/unstable.md:760 src/reference/unstable.md:773
+msgid "\"name\""
+msgstr ""
+
+#: src/reference/unstable.md:760
+msgid "\"my-package\""
+msgstr ""
+
+#: src/reference/unstable.md:761
+msgid "\"src_path\""
+msgstr ""
+
+#: src/reference/unstable.md:761
+msgid "\"/path/to/my-package/src/lib.rs\""
+msgstr ""
+
+#: src/reference/unstable.md:762
+msgid "\"edition\""
+msgstr ""
+
+#: src/reference/unstable.md:762
+msgid "\"2018\""
+msgstr ""
+
+#: src/reference/unstable.md:763
+msgid "\"test\""
+msgstr ""
+
+#: src/reference/unstable.md:764
+msgid "\"doctest\""
+msgstr ""
+
+#: src/reference/unstable.md:766
+msgid ""
+"/* The profile settings for this unit.\n"
+"         These values may not match the profile defined in the manifest.\n"
+"         Units can use modified profile settings. For example, the "
+"\"panic\"\n"
+"         setting can be overridden for tests to force it to \"unwind\".\n"
+"      */"
+msgstr ""
+
+#: src/reference/unstable.md:771
+msgid "\"profile\""
+msgstr ""
+
+#: src/reference/unstable.md:772
+msgid "/* The profile name these settings are derived from. */"
+msgstr ""
+
+#: src/reference/unstable.md:773
+msgid "\"dev\""
+msgstr ""
+
+#: src/reference/unstable.md:774
+msgid "/* The optimization level as a string. */"
+msgstr ""
+
+#: src/reference/unstable.md:775
+msgid "\"opt_level\""
+msgstr ""
+
+#: src/reference/unstable.md:775
+msgid "\"0\""
+msgstr ""
+
+#: src/reference/unstable.md:776
+msgid "/* The LTO setting as a string. */"
+msgstr ""
+
+#: src/reference/unstable.md:777
+msgid "\"lto\""
+msgstr ""
+
+#: src/reference/unstable.md:777
+msgid "\"false\""
+msgstr ""
+
+#: src/reference/unstable.md:778
+msgid ""
+"/* The codegen units as an integer.\n"
+"           `null` if it should use the compiler's default.\n"
+"        */"
+msgstr ""
+
+#: src/reference/unstable.md:781
+msgid "\"codegen_units\""
+msgstr ""
+
+#: src/reference/unstable.md:782
+msgid ""
+"/* The debug information level as an integer.\n"
+"           `null` if it should use the compiler's default (0).\n"
+"        */"
+msgstr ""
+
+#: src/reference/unstable.md:785
+msgid "\"debuginfo\""
+msgstr ""
+
+#: src/reference/unstable.md:786
+msgid "/* Whether or not debug-assertions are enabled. */"
+msgstr ""
+
+#: src/reference/unstable.md:787
+msgid "\"debug_assertions\""
+msgstr ""
+
+#: src/reference/unstable.md:788
+msgid "/* Whether or not overflow-checks are enabled. */"
+msgstr ""
+
+#: src/reference/unstable.md:789
+msgid "\"overflow_checks\""
+msgstr ""
+
+#: src/reference/unstable.md:790
+msgid "/* Whether or not rpath is enabled. */"
+msgstr ""
+
+#: src/reference/unstable.md:791
+msgid "\"rpath\""
+msgstr ""
+
+#: src/reference/unstable.md:792
+msgid "/* Whether or not incremental is enabled. */"
+msgstr ""
+
+#: src/reference/unstable.md:793
+msgid "\"incremental\""
+msgstr ""
+
+#: src/reference/unstable.md:794
+msgid "/* The panic strategy, \"unwind\" or \"abort\". */"
+msgstr ""
+
+#: src/reference/unstable.md:795
+msgid "\"panic\""
+msgstr ""
+
+#: src/reference/unstable.md:795
+msgid "\"unwind\""
+msgstr ""
+
+#: src/reference/unstable.md:797
+msgid ""
+"/* Which platform this target is being built for.\n"
+"         A value of `null` indicates it is for the host.\n"
+"         Otherwise it is a string of the target triple (such as\n"
+"         \"x86_64-unknown-linux-gnu\").\n"
+"      */"
+msgstr ""
+
+#: src/reference/unstable.md:802
+msgid "\"platform\""
+msgstr ""
+
+#: src/reference/unstable.md:803
+msgid ""
+"/* The \"mode\" for this unit. Valid values:\n"
+"\n"
+"         * \"test\" — Build using `rustc` as a test.\n"
+"         * \"build\" — Build using `rustc`.\n"
+"         * \"check\" — Build using `rustc` in \"check\" mode.\n"
+"         * \"doc\" — Build using `rustdoc`.\n"
+"         * \"doctest\" — Test using `rustdoc`.\n"
+"         * \"run-custom-build\" — Represents the execution of a build "
+"script.\n"
+"      */"
+msgstr ""
+
+#: src/reference/unstable.md:812
+msgid "\"mode\""
+msgstr ""
+
+#: src/reference/unstable.md:812
+msgid "\"build\""
+msgstr ""
+
+#: src/reference/unstable.md:813
+msgid "/* Array of features enabled on this unit as strings. */"
+msgstr ""
+
+#: src/reference/unstable.md:814
+msgid "\"features\""
+msgstr ""
+
+#: src/reference/unstable.md:814
+msgid "\"somefeat\""
+msgstr ""
+
+#: src/reference/unstable.md:815
+msgid ""
+"/* Whether or not this is a standard-library unit,\n"
+"         part of the unstable build-std feature.\n"
+"         If not set, treat as `false`.\n"
+"      */"
+msgstr ""
+
+#: src/reference/unstable.md:819
+msgid "\"is_std\""
+msgstr ""
+
+#: src/reference/unstable.md:820
+msgid "/* Array of dependencies of this unit. */"
+msgstr ""
+
+#: src/reference/unstable.md:821
+msgid "\"dependencies\""
+msgstr ""
+
+#: src/reference/unstable.md:823
+msgid "/* Index in the \"units\" array for the dependency. */"
+msgstr ""
+
+#: src/reference/unstable.md:824
+msgid "\"index\""
+msgstr ""
+
+#: src/reference/unstable.md:825
+msgid "/* The name that this dependency will be referred as. */"
+msgstr ""
+
+#: src/reference/unstable.md:826
+msgid "\"extern_crate_name\""
+msgstr ""
+
+#: src/reference/unstable.md:826
+msgid "\"unicode_xid\""
+msgstr ""
+
+#: src/reference/unstable.md:827
+msgid ""
+"/* Whether or not this dependency is \"public\",\n"
+"             part of the unstable public-dependency feature.\n"
+"             If not set, the public-dependency feature is not enabled.\n"
+"          */"
+msgstr ""
+
+#: src/reference/unstable.md:831
+msgid "\"public\""
+msgstr ""
+
+#: src/reference/unstable.md:832
+msgid ""
+"/* Whether or not this dependency is injected into the prelude,\n"
+"             currently used by the build-std feature.\n"
+"             If not set, treat as `false`.\n"
+"          */"
+msgstr ""
+
+#: src/reference/unstable.md:836
+msgid "\"noprelude\""
+msgstr ""
+
+#: src/reference/unstable.md:840
+msgid "// ...\n"
+msgstr ""
+
+#: src/reference/unstable.md:842
+msgid ""
+"/* Array of indices in the \"units\" array that are the \"roots\" of the\n"
+"     dependency graph.\n"
+"  */"
+msgstr ""
+
+#: src/reference/unstable.md:845
+msgid "\"roots\""
+msgstr ""
+
+#: src/reference/unstable.md:849
+msgid "Profile `strip` option"
+msgstr ""
+
+#: src/reference/unstable.md:850
+msgid ""
+"Tracking Issue: [rust-lang/rust#72110](https://github.com/rust-lang/rust/"
+"issues/72110)"
+msgstr ""
+
+#: src/reference/unstable.md:852
+msgid ""
+"This feature provides a new option in the `[profile]` section to strip "
+"either symbols or debuginfo from a binary. This can be enabled like so:"
+msgstr ""
+
+#: src/reference/unstable.md:855
+msgid ""
+"```toml\n"
+"cargo-features = [\"strip\"]\n"
+"\n"
+"[package]\n"
+"# ...\n"
+"\n"
+"[profile.release]\n"
+"strip = \"debuginfo\"\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:865
+msgid ""
+"Other possible string values of `strip` are `none`, `symbols`, and `off`. "
+"The default is `none`."
+msgstr ""
+
+#: src/reference/unstable.md:867
+msgid ""
+"You can also configure this option with the two absolute boolean values "
+"`true` and `false`. The former enables `strip` at its higher level, "
+"`symbols`, while the latter disables `strip` completely."
+msgstr ""
+
+#: src/reference/unstable.md:871
+msgid "rustdoc-map"
+msgstr ""
+
+#: src/reference/unstable.md:872
+msgid ""
+"Tracking Issue: [\\#8296](https://github.com/rust-lang/cargo/issues/8296)"
+msgstr ""
+
+#: src/reference/unstable.md:874
+msgid ""
+"This feature adds configuration settings that are passed to `rustdoc` so "
+"that it can generate links to dependencies whose documentation is hosted "
+"elsewhere when the dependency is not documented. First, add this to `.cargo/"
+"config`:"
+msgstr ""
+
+#: src/reference/unstable.md:878
+msgid ""
+"```toml\n"
+"[doc.extern-map.registries]\n"
+"crates-io = \"https://docs.rs/\"\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:883
+msgid ""
+"Then, when building documentation, use the following flags to cause links to "
+"dependencies to link to [docs.rs](https://docs.rs/):"
+msgstr ""
+
+#: src/reference/unstable.md:890
+msgid ""
+"The `registries` table contains a mapping of registry name to the URL to "
+"link to. The URL may have the markers `{pkg_name}` and `{version}` which "
+"will get replaced with the corresponding values. If neither are specified, "
+"then Cargo defaults to appending `{pkg_name}/{version}/` to the end of the "
+"URL."
+msgstr ""
+
+#: src/reference/unstable.md:895
+msgid ""
+"Another config setting is available to redirect standard library links. By "
+"default, rustdoc creates links to <https://doc.rust-lang.org/nightly/>. To "
+"change this behavior, use the `doc.extern-map.std` setting:"
+msgstr ""
+
+#: src/reference/unstable.md:899
+msgid ""
+"```toml\n"
+"[doc.extern-map]\n"
+"std = \"local\"\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:904
+msgid ""
+"A value of `\"local\"` means to link to the documentation found in the "
+"`rustc` sysroot. If you are using rustup, this documentation can be "
+"installed with `rustup component add rust-docs`."
+msgstr ""
+
+#: src/reference/unstable.md:908
+msgid "The default value is `\"remote\"`."
+msgstr ""
+
+#: src/reference/unstable.md:910
+msgid "The value may also take a URL for a custom location."
+msgstr ""
+
+#: src/reference/unstable.md:912
+msgid "terminal-width"
+msgstr ""
+
+#: src/reference/unstable.md:914
+msgid ""
+"Tracking Issue: [\\#84673](https://github.com/rust-lang/rust/issues/84673)"
+msgstr ""
+
+#: src/reference/unstable.md:916
+msgid ""
+"This feature provides a new flag, `-Z terminal-width`, which is used to pass "
+"a terminal width to `rustc` so that error messages containing long lines can "
+"be intelligently truncated."
+msgstr ""
+
+#: src/reference/unstable.md:920
+msgid ""
+"For example, passing `-Z terminal-width=20` (an arbitrarily low value) might "
+"produce the following error:"
+msgstr ""
+
+#: src/reference/unstable.md:935
+msgid ""
+"In contrast, without `-Z terminal-width`, the error would look as shown "
+"below:"
+msgstr ""
+
+#: src/reference/unstable.md:949
+msgid "Weak dependency features"
+msgstr ""
+
+#: src/reference/unstable.md:950
+msgid ""
+"Tracking Issue: [\\#8832](https://github.com/rust-lang/cargo/issues/8832)"
+msgstr ""
+
+#: src/reference/unstable.md:952
+msgid ""
+"The `-Z weak-dep-features` command-line options enables the ability to use "
+"`dep_name?/feat_name` syntax in the `[features]` table. The `?` indicates "
+"that the optional dependency `dep_name` will not be automatically enabled. "
+"The feature `feat_name` will only be added if something else enables the "
+"`dep_name` dependency."
+msgstr ""
+
+#: src/reference/unstable.md:958 src/reference/unstable.md:983
+#: src/reference/unstable.md:1399
+msgid "Example:"
+msgstr ""
+
+#: src/reference/unstable.md:960
+msgid ""
+"```toml\n"
+"[dependencies]\n"
+"serde = { version = \"1.0.117\", optional = true, default-features = "
+"false }\n"
+"\n"
+"[features]\n"
+"std = [\"serde?/std\"]\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:968
+msgid ""
+"In this example, the `std` feature enables the `std` feature on the `serde` "
+"dependency. However, unlike the normal `serde/std` syntax, it will not "
+"enable the optional dependency `serde` unless something else has included it."
+msgstr ""
+
+#: src/reference/unstable.md:972
+msgid "per-package-target"
+msgstr ""
+
+#: src/reference/unstable.md:973
+msgid "Tracking Issue: [\\#9406](https://github.com/rust-lang/cargo/pull/9406)"
+msgstr ""
+
+#: src/reference/unstable.md:974
+msgid ""
+"Original Pull Request: [\\#9030](https://github.com/rust-lang/cargo/"
+"pull/9030)"
+msgstr ""
+
+#: src/reference/unstable.md:975
+msgid "Original Issue: [\\#7004](https://github.com/rust-lang/cargo/pull/7004)"
+msgstr ""
+
+#: src/reference/unstable.md:977
+msgid ""
+"The `per-package-target` feature adds two keys to the manifest: `package."
+"default-target` and `package.forced-target`. The first makes the package be "
+"compiled by default (ie. when no `--target` argument is passed) for some "
+"target. The second one makes the package always be compiled for the target."
+msgstr ""
+
+#: src/reference/unstable.md:985
+msgid ""
+"```toml\n"
+"[package]\n"
+"forced-target = \"wasm32-unknown-unknown\"\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:990
+msgid ""
+"In this example, the crate is always built for `wasm32-unknown-unknown`, for "
+"instance because it is going to be used as a plugin for a main program that "
+"runs on the host (or provided on the command line) target."
+msgstr ""
+
+#: src/reference/unstable.md:995
+msgid "credential-process"
+msgstr ""
+
+#: src/reference/unstable.md:996
+msgid ""
+"Tracking Issue: [\\#8933](https://github.com/rust-lang/cargo/issues/8933)"
+msgstr ""
+
+#: src/reference/unstable.md:997
+msgid "RFC: [\\#2730](https://github.com/rust-lang/rfcs/pull/2730)"
+msgstr ""
+
+#: src/reference/unstable.md:999
+msgid ""
+"The `credential-process` feature adds a config setting to fetch registry "
+"authentication tokens by calling an external process."
+msgstr ""
+
+#: src/reference/unstable.md:1002
+msgid ""
+"Token authentication is used by the [`cargo login`](../commands/cargo-login."
+"md), [`cargo publish`](../commands/cargo-publish.md), [`cargo owner`](../"
+"commands/cargo-owner.md), and [`cargo yank`](../commands/cargo-yank.md) "
+"commands. Additionally, this feature adds a new `cargo logout` command."
+msgstr ""
+
+#: src/reference/unstable.md:1006
+msgid ""
+"To use this feature, you must pass the `-Z credential-process` flag on the "
+"command-line. Additionally, you must remove any current tokens currently "
+"saved in the [`credentials` file](config.md#credentials) (which can be done "
+"with the new `logout` command)."
+msgstr ""
+
+#: src/reference/unstable.md:1010
+msgid "`credential-process` Configuration"
+msgstr ""
+
+#: src/reference/unstable.md:1012
+msgid ""
+"To configure which process to run to fetch the token, specify the process in "
+"the `registry` table in a [config file](config.md):"
+msgstr ""
+
+#: src/reference/unstable.md:1015
+msgid ""
+"```toml\n"
+"[registry]\n"
+"credential-process = \"/usr/bin/cargo-creds\"\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:1020
+msgid ""
+"If you want to use a different process for a specific registry, it can be "
+"specified in the `registries` table:"
+msgstr ""
+
+#: src/reference/unstable.md:1023
+msgid ""
+"```toml\n"
+"[registries.my-registry]\n"
+"credential-process = \"/usr/bin/cargo-creds\"\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:1028
+msgid ""
+"The value can be a string with spaces separating arguments or it can be a "
+"TOML array of strings."
+msgstr ""
+
+#: src/reference/unstable.md:1031
+msgid ""
+"Command-line arguments allow special placeholders which will be replaced "
+"with the corresponding value:"
+msgstr ""
+
+#: src/reference/unstable.md:1034
+msgid "`{name}` — The name of the registry."
+msgstr ""
+
+#: src/reference/unstable.md:1035
+msgid "`{api_url}` — The base URL of the registry API endpoints."
+msgstr ""
+
+#: src/reference/unstable.md:1036
+msgid "`{action}` — The authentication action (described below)."
+msgstr ""
+
+#: src/reference/unstable.md:1038
+msgid ""
+"Process names with the prefix `cargo:` are loaded from the `libexec` "
+"directory next to cargo. Several experimental credential wrappers are "
+"included with Cargo, and this provides convenient access to them:"
+msgstr ""
+
+#: src/reference/unstable.md:1042
+msgid ""
+"```toml\n"
+"[registry]\n"
+"credential-process = \"cargo:macos-keychain\"\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:1047
+msgid "The current wrappers are:"
+msgstr ""
+
+#: src/reference/unstable.md:1049
+msgid "`cargo:macos-keychain`: Uses the macOS Keychain to store the token."
+msgstr ""
+
+#: src/reference/unstable.md:1050
+msgid ""
+"`cargo:wincred`: Uses the Windows Credential Manager to store the token."
+msgstr ""
+
+#: src/reference/unstable.md:1051
+msgid ""
+"`cargo:1password`: Uses the 1password `op` CLI to store the token. You must "
+"install the `op` CLI from the [1password website](https://1password.com/"
+"downloads/command-line/). You must run `op signin` at least once with the "
+"appropriate arguments (such as `op signin my.1password.com user@example."
+"com`), unless you provide the sign-in-address and email arguments. The "
+"master password will be required on each request unless the appropriate "
+"`OP_SESSION` environment variable is set. It supports the following command-"
+"line arguments:"
+msgstr ""
+
+#: src/reference/unstable.md:1059
+msgid "`--account`: The account shorthand name to use."
+msgstr ""
+
+#: src/reference/unstable.md:1060
+msgid "`--vault`: The vault name to use."
+msgstr ""
+
+#: src/reference/unstable.md:1061
+msgid ""
+"`--sign-in-address`: The sign-in-address, which is a web address such as "
+"`my.1password.com`."
+msgstr ""
+
+#: src/reference/unstable.md:1062
+msgid "`--email`: The email address to sign in with."
+msgstr ""
+
+#: src/reference/unstable.md:1064
+msgid ""
+"A wrapper is available for GNOME [libsecret](https://wiki.gnome.org/Projects/"
+"Libsecret) to store tokens on Linux systems. Due to build limitations, this "
+"wrapper is not available as a pre-compiled binary. This can be built and "
+"installed manually. First, install libsecret using your system package "
+"manager (for example, `sudo apt install libsecret-1-dev`). Then build and "
+"install the wrapper with `cargo install cargo-credential-gnome-secret`. In "
+"the config, use a path to the binary like this:"
+msgstr ""
+
+#: src/reference/unstable.md:1073
+msgid ""
+"```toml\n"
+"[registry]\n"
+"credential-process = \"cargo-credential-gnome-secret {action}\"\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:1078
+msgid "`credential-process` Interface"
+msgstr ""
+
+#: src/reference/unstable.md:1080
+msgid ""
+"There are two different kinds of token processes that Cargo supports. The "
+"simple \"basic\" kind will only be called by Cargo when it needs a token. "
+"This is intended for simple and easy integration with password managers, "
+"that can often use pre-existing tooling. The more advanced \"Cargo\" kind "
+"supports different actions passed as a command-line argument. This is "
+"intended for more pleasant integration experience, at the expense of "
+"requiring a Cargo-specific process to glue to the password manager. Cargo "
+"will determine which kind is supported by the `credential-process` "
+"definition. If it contains the `{action}` argument, then it uses the "
+"advanced style, otherwise it assumes it only supports the \"basic\" kind."
+msgstr ""
+
+#: src/reference/unstable.md:1091
+msgid "Basic authenticator"
+msgstr ""
+
+#: src/reference/unstable.md:1093
+msgid ""
+"A basic authenticator is a process that returns a token on stdout. Newlines "
+"will be trimmed. The process inherits the user's stdin and stderr. It should "
+"exit 0 on success, and nonzero on error."
+msgstr ""
+
+#: src/reference/unstable.md:1097
+msgid ""
+"With this form, [`cargo login`](../commands/cargo-login.md) and `cargo "
+"logout` are not supported and return an error if used."
+msgstr ""
+
+#: src/reference/unstable.md:1100
+msgid "Cargo authenticator"
+msgstr ""
+
+#: src/reference/unstable.md:1102
+msgid ""
+"The protocol between the Cargo and the process is very basic, intended to "
+"ensure the credential process is kept as simple as possible. Cargo will "
+"execute the process with the `{action}` argument indicating which action to "
+"perform:"
+msgstr ""
+
+#: src/reference/unstable.md:1107
+msgid "`store` — Store the given token in secure storage."
+msgstr ""
+
+#: src/reference/unstable.md:1108
+msgid "`get` — Get a token from storage."
+msgstr ""
+
+#: src/reference/unstable.md:1109
+msgid "`erase` — Remove a token from storage."
+msgstr ""
+
+#: src/reference/unstable.md:1111
+msgid ""
+"The `cargo login` command uses `store` to save a token. Commands that "
+"require authentication, like `cargo publish`, uses `get` to retrieve a "
+"token. `cargo logout` uses the `erase` command to remove a token."
+msgstr ""
+
+#: src/reference/unstable.md:1115
+msgid ""
+"The process inherits the user's stderr, so the process can display messages. "
+"Some values are passed in via environment variables (see below). The "
+"expected interactions are:"
+msgstr ""
+
+#: src/reference/unstable.md:1119
+msgid ""
+"`store` — The token is sent to the process's stdin, terminated by a newline. "
+"The process should store the token keyed off the registry name. If the "
+"process fails, it should exit with a nonzero exit status."
+msgstr ""
+
+#: src/reference/unstable.md:1123
+msgid ""
+"`get` — The process should send the token to its stdout (trailing newline "
+"will be trimmed). The process inherits the user's stdin, should it need to "
+"receive input."
+msgstr ""
+
+#: src/reference/unstable.md:1127
+msgid ""
+"If the process is unable to fulfill the request, it should exit with a "
+"nonzero exit code."
+msgstr ""
+
+#: src/reference/unstable.md:1130
+msgid ""
+"`erase` — The process should remove the token associated with the registry "
+"name. If the token is not found, the process should exit with a 0 exit "
+"status."
+msgstr ""
+
+#: src/reference/unstable.md:1134
+msgid "Environment"
+msgstr ""
+
+#: src/reference/unstable.md:1136
+msgid ""
+"The following environment variables will be provided to the executed command:"
+msgstr ""
+
+#: src/reference/unstable.md:1138
+msgid "`CARGO` — Path to the `cargo` binary executing the command."
+msgstr ""
+
+#: src/reference/unstable.md:1139
+msgid ""
+"`CARGO_REGISTRY_NAME` — Name of the registry the authentication token is for."
+msgstr ""
+
+#: src/reference/unstable.md:1140
+msgid "`CARGO_REGISTRY_API_URL` — The URL of the registry API."
+msgstr ""
+
+#: src/reference/unstable.md:1142
+msgid "`cargo logout`"
+msgstr ""
+
+#: src/reference/unstable.md:1144
+msgid ""
+"A new `cargo logout` command has been added to make it easier to remove a "
+"token from storage. This supports both [`credentials` file](config."
+"md#credentials) tokens and `credential-process` tokens."
+msgstr ""
+
+#: src/reference/unstable.md:1148
+msgid ""
+"When used with `credentials` file tokens, it needs the `-Z unstable-options` "
+"command-line option:"
+msgstr ""
+
+#: src/reference/unstable.md:1155
+msgid ""
+"When used with the `credential-process` config, use the `-Z credential-"
+"process` command-line option:"
+msgstr ""
+
+#: src/reference/unstable.md:1171
+msgid "future incompat report"
+msgstr ""
+
+#: src/reference/unstable.md:1172
+msgid ""
+"RFC: [\\#2834](https://github.com/rust-lang/rfcs/blob/master/text/2834-cargo-"
+"report-future-incompat.md)"
+msgstr ""
+
+#: src/reference/unstable.md:1173
+msgid ""
+"rustc Tracking Issue: [\\#71249](https://github.com/rust-lang/rust/"
+"issues/71249)"
+msgstr ""
+
+#: src/reference/unstable.md:1175
+msgid ""
+"The `-Z future-incompat-report` flag causes Cargo to check for future-"
+"incompatible warnings in all dependencies. These are warnings for changes "
+"that may become hard errors in the future, causing the dependency to stop "
+"building in a future version of rustc. If any warnings are found, a small "
+"notice is displayed indicating that the warnings were found, and provides "
+"instructions on how to display a full report."
+msgstr ""
+
+#: src/reference/unstable.md:1182
+msgid ""
+"A full report can be displayed with the `cargo report future-"
+"incompatibilities -Z future-incompat-report --id ID` command, or by running "
+"the build again with the `--future-incompat-report` flag. The developer "
+"should then update their dependencies to a version where the issue is fixed, "
+"or work with the developers of the dependencies to help resolve the issue."
+msgstr ""
+
+#: src/reference/unstable.md:1188
+msgid ""
+"This feature can be configured through a `[future-incompat-report]` section "
+"in `.cargo/config`. Currently, the supported options are:"
+msgstr ""
+
+#: src/reference/unstable.md:1196
+msgid ""
+"The supported values for `FREQUENCY` are 'always`and 'never', which control "
+"whether or not a message is printed out at the end of`cargo build`/`cargo "
+"check\\`."
+msgstr ""
+
+#: src/reference/unstable.md:1200
+msgid "`cargo config`"
+msgstr ""
+
+#: src/reference/unstable.md:1202
+msgid ""
+"Original Issue: [\\#2362](https://github.com/rust-lang/cargo/issues/2362)"
+msgstr ""
+
+#: src/reference/unstable.md:1203
+msgid ""
+"Tracking Issue: [\\#9301](https://github.com/rust-lang/cargo/issues/9301)"
+msgstr ""
+
+#: src/reference/unstable.md:1205
+msgid ""
+"The `cargo config` subcommand provides a way to display the configuration "
+"files that cargo loads. It currently includes the `get` subcommand which can "
+"take an optional config value to display."
+msgstr ""
+
+#: src/reference/unstable.md:1213
+msgid ""
+"If no config value is included, it will display all config values. See the "
+"`--help` output for more options available."
+msgstr ""
+
+#: src/reference/unstable.md:1216
+msgid "`doctest-in-workspace`"
+msgstr ""
+
+#: src/reference/unstable.md:1218
+msgid ""
+"Tracking Issue: [\\#9427](https://github.com/rust-lang/cargo/issues/9427)"
+msgstr ""
+
+#: src/reference/unstable.md:1220
+msgid ""
+"The `-Z doctest-in-workspace` flag changes the behavior of the current "
+"working directory used when running doctests. Historically, Cargo has run "
+"`rustdoc --test` relative to the root of the package, with paths relative "
+"from that root. However, this is inconsistent with how `rustc` and `rustdoc` "
+"are normally run in a workspace, where they are run relative to the "
+"workspace root. This inconsistency causes problems in various ways, such as "
+"when passing RUSTDOCFLAGS with relative paths, or dealing with diagnostic "
+"output."
+msgstr ""
+
+#: src/reference/unstable.md:1228
+msgid ""
+"The `-Z doctest-in-workspace` flag causes cargo to switch to running "
+"`rustdoc` from the root of the workspace. It also passes the `--test-run-"
+"directory` to `rustdoc` so that when _running_ the tests, they are run from "
+"the root of the package. This preserves backwards compatibility and is "
+"consistent with how normal unittests are run."
+msgstr ""
+
+#: src/reference/unstable.md:1234
+msgid "rustc `--print`"
+msgstr ""
+
+#: src/reference/unstable.md:1236
+msgid ""
+"Tracking Issue: [\\#9357](https://github.com/rust-lang/cargo/issues/9357)"
+msgstr ""
+
+#: src/reference/unstable.md:1238
+msgid ""
+"`cargo rustc --print=VAL` forwards the `--print` flag to `rustc` in order to "
+"extract information from `rustc`. This runs `rustc` with the corresponding "
+"[`--print`](https://doc.rust-lang.org/rustc/command-line-arguments.html#--"
+"print-print-compiler-information) flag, and then immediately exits without "
+"compiling. Exposing this as a cargo flag allows cargo to inject the correct "
+"target and RUSTFLAGS based on the current configuration."
+msgstr ""
+
+#: src/reference/unstable.md:1245
+msgid ""
+"The primary use case is to run `cargo rustc --print=cfg` to get config "
+"values for the appropriate target and influenced by any other RUSTFLAGS."
+msgstr ""
+
+#: src/reference/unstable.md:1249
+msgid "Different binary name"
+msgstr ""
+
+#: src/reference/unstable.md:1251
+msgid ""
+"Tracking Issue: [\\#9778](https://github.com/rust-lang/cargo/issues/9778)"
+msgstr ""
+
+#: src/reference/unstable.md:1252
+msgid "PR: [\\#9627](https://github.com/rust-lang/cargo/pull/9627)"
+msgstr ""
+
+#: src/reference/unstable.md:1254
+msgid ""
+"The `different-binary-name` feature allows setting the filename of the "
+"binary without having to obey the restrictions placed on crate names. For "
+"example, the crate name must use only `alphanumeric` characters or `-` or "
+"`_`, and cannot be empty."
+msgstr ""
+
+#: src/reference/unstable.md:1258
+msgid ""
+"The `filename` parameter should **not** include the binary extension, "
+"`cargo` will figure out the appropriate extension and use that for the "
+"binary on its own."
+msgstr ""
+
+#: src/reference/unstable.md:1261
+msgid ""
+"The `filename` parameter is only available in the `[[bin]]` section of the "
+"manifest."
+msgstr ""
+
+#: src/reference/unstable.md:1263
+msgid ""
+"```toml\n"
+"cargo-features = [\"different-binary-name\"]\n"
+"\n"
+"[project]\n"
+"name =  \"foo\"\n"
+"version = \"0.0.1\"\n"
+"\n"
+"[[bin]]\n"
+"name = \"foo\"\n"
+"filename = \"007bar\"\n"
+"path = \"src/main.rs\"\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:1276
+msgid "Stabilized and removed features"
+msgstr ""
+
+#: src/reference/unstable.md:1278
+msgid "Compile progress"
+msgstr ""
+
+#: src/reference/unstable.md:1280
+msgid ""
+"The compile-progress feature has been stabilized in the 1.30 release. "
+"Progress bars are now enabled by default. See [`term.progress`](config."
+"md#termprogresswhen) for more information about controlling this feature."
+msgstr ""
+
+#: src/reference/unstable.md:1285
+msgid "Edition"
+msgstr "版次（Edition）"
+
+#: src/reference/unstable.md:1287
+msgid ""
+"Specifying the `edition` in `Cargo.toml` has been stabilized in the 1.31 "
+"release. See [the edition field](manifest.md#the-edition-field) for more "
+"information about specifying this field."
+msgstr ""
+
+#: src/reference/unstable.md:1291
+msgid "rename-dependency"
+msgstr ""
+
+#: src/reference/unstable.md:1293
+msgid ""
+"Specifying renamed dependencies in `Cargo.toml` has been stabilized in the "
+"1.31 release. See [renaming dependencies](specifying-dependencies."
+"md#renaming-dependencies-in-cargotoml) for more information about renaming "
+"dependencies."
+msgstr ""
+
+#: src/reference/unstable.md:1297
+msgid "Alternate Registries"
+msgstr ""
+
+#: src/reference/unstable.md:1299
+msgid ""
+"Support for alternate registries has been stabilized in the 1.34 release. "
+"See the [Registries chapter](registries.md) for more information about "
+"alternate registries."
+msgstr ""
+
+#: src/reference/unstable.md:1302
+msgid "Offline Mode"
+msgstr ""
+
+#: src/reference/unstable.md:1304
+msgid ""
+"The offline feature has been stabilized in the 1.36 release. See the [`--"
+"offline` flag](../commands/cargo.md#option-cargo---offline) for more "
+"information on using the offline mode."
+msgstr ""
+
+#: src/reference/unstable.md:1308
+msgid "publish-lockfile"
+msgstr ""
+
+#: src/reference/unstable.md:1310
+msgid ""
+"The `publish-lockfile` feature has been removed in the 1.37 release. The "
+"`Cargo.lock` file is always included when a package is published if the "
+"package contains a binary target. `cargo install` requires the `--locked` "
+"flag to use the `Cargo.lock` file. See [`cargo package`](../commands/cargo-"
+"package.md) and [`cargo install`](../commands/cargo-install.md) for more "
+"information."
+msgstr ""
+
+#: src/reference/unstable.md:1317
+msgid "default-run"
+msgstr ""
+
+#: src/reference/unstable.md:1319
+msgid ""
+"The `default-run` feature has been stabilized in the 1.37 release. See [the "
+"`default-run` field](manifest.md#the-default-run-field) for more information "
+"about specifying the default target to run."
+msgstr ""
+
+#: src/reference/unstable.md:1323
+msgid "cache-messages"
+msgstr ""
+
+#: src/reference/unstable.md:1325
+msgid ""
+"Compiler message caching has been stabilized in the 1.40 release. Compiler "
+"warnings are now cached by default and will be replayed automatically when "
+"re-running Cargo."
+msgstr ""
+
+#: src/reference/unstable.md:1329
+msgid "install-upgrade"
+msgstr ""
+
+#: src/reference/unstable.md:1331
+msgid ""
+"The `install-upgrade` feature has been stabilized in the 1.41 release. "
+"[`cargo install`](../commands/cargo-install.md) will now automatically "
+"upgrade packages if they appear to be out-of-date. See the [`cargo install`]"
+"(../commands/cargo-install.md) documentation for more information."
+msgstr ""
+
+#: src/reference/unstable.md:1337
+msgid "Profile Overrides"
+msgstr ""
+
+#: src/reference/unstable.md:1339
+msgid ""
+"Profile overrides have been stabilized in the 1.41 release. See [Profile "
+"Overrides](profiles.md#overrides) for more information on using overrides."
+msgstr ""
+
+#: src/reference/unstable.md:1343
+msgid "Config Profiles"
+msgstr ""
+
+#: src/reference/unstable.md:1345
+msgid ""
+"Specifying profiles in Cargo config files and environment variables has been "
+"stabilized in the 1.43 release. See the [config `[profile]` table](config."
+"md#profile) for more information about specifying [profiles](profiles.md) in "
+"config files."
+msgstr ""
+
+#: src/reference/unstable.md:1350
+msgid "crate-versions"
+msgstr ""
+
+#: src/reference/unstable.md:1352
+msgid ""
+"The `-Z crate-versions` flag has been stabilized in the 1.47 release. The "
+"crate version is now automatically included in the [`cargo doc`](../commands/"
+"cargo-doc.md) documentation sidebar."
+msgstr ""
+
+#: src/reference/unstable.md:1356
+msgid "Features"
+msgstr "功能"
+
+#: src/reference/unstable.md:1358
+msgid ""
+"The `-Z features` flag has been stabilized in the 1.51 release. See [feature "
+"resolver version 2](features.md#feature-resolver-version-2) for more "
+"information on using the new feature resolver."
+msgstr ""
+
+#: src/reference/unstable.md:1362
+msgid "package-features"
+msgstr ""
+
+#: src/reference/unstable.md:1364
+msgid ""
+"The `-Z package-features` flag has been stabilized in the 1.51 release. See "
+"the [resolver version 2 command-line flags](features.md#resolver-version-2-"
+"command-line-flags) for more information on using the features CLI options."
+msgstr ""
+
+#: src/reference/unstable.md:1368
+msgid "Resolver"
+msgstr ""
+
+#: src/reference/unstable.md:1370
+msgid ""
+"The `resolver` feature in `Cargo.toml` has been stabilized in the 1.51 "
+"release. See the [resolver versions](resolver.md#resolver-versions) for more "
+"information about specifying resolvers."
+msgstr ""
+
+#: src/reference/unstable.md:1374
+msgid "extra-link-arg"
+msgstr ""
+
+#: src/reference/unstable.md:1376
+msgid ""
+"The `extra-link-arg` feature to specify additional linker arguments in build "
+"scripts has been stabilized in the 1.56 release. See the [build script "
+"documentation](build-scripts.md#outputs-of-the-build-script) for more "
+"information on specifying extra linker arguments."
+msgstr ""
+
+#: src/reference/unstable.md:1381
+msgid "configurable-env"
+msgstr ""
+
+#: src/reference/unstable.md:1383
+msgid ""
+"The `configurable-env` feature to specify environment variables in Cargo "
+"configuration has been stabilized in the 1.56 release. See the [config "
+"documentation](config.html#env) for more information about configuring "
+"environment variables."
+msgstr ""
+
+#: src/reference/unstable.md:1388
+msgid "rust-version"
+msgstr ""
+
+#: src/reference/unstable.md:1390
+msgid ""
+"The `rust-version` field in `Cargo.toml` has been stabilized in the 1.56 "
+"release. See the [rust-version field](manifest.html#the-rust-version-field) "
+"for more information on using the `rust-version` field and the `--ignore-"
+"rust-version` option."
+msgstr ""
+
+#: src/reference/unstable.md:1394
+msgid "codegen-backend"
+msgstr ""
+
+#: src/reference/unstable.md:1396
+msgid ""
+"The `codegen-backend` feature makes it possible to select the codegen "
+"backend used by rustc using a profile."
+msgstr ""
+
+#: src/reference/unstable.md:1401
+msgid ""
+"```toml\n"
+"[package]\n"
+"name = \"foo\"\n"
+"\n"
+"[dependencies]\n"
+"serde = \"1.0.117\"\n"
+"\n"
+"[profile.dev.package.foo]\n"
+"codegen-backend = \"cranelift\"\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:1412
+msgid "patch-in-config"
+msgstr ""
+
+#: src/reference/unstable.md:1414
+msgid ""
+"The `-Z patch-in-config` flag, and the corresponding support for `[patch]` "
+"section in Cargo configuration files has been stabilized in the 1.56 "
+"release. See the [patch field](config.html#patch) for more information."
+msgstr ""
+
+#: src/reference/unstable.md:1419
+msgid "edition 2021"
+msgstr ""
+
+#: src/reference/unstable.md:1421
+msgid ""
+"The 2021 edition has been stabilized in the 1.56 release. See the [`edition` "
+"field](manifest.md#the-edition-field) for more information on setting the "
+"edition. See [`cargo fix --edition`](../commands/cargo-fix.md) and [The "
+"Edition Guide](../../edition-guide/index.html) for more information on "
+"migrating existing projects."
+msgstr ""
