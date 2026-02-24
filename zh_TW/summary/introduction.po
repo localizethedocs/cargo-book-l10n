@@ -1,0 +1,115 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:35:12Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/index.md:1
+msgid "The Cargo Book"
+msgstr "Cargo 手冊"
+
+#: src/index.md:3
+msgid "![Cargo Logo](images/Cargo-Logo-Small.png)"
+msgstr ""
+
+#: src/index.md:5
+msgid ""
+"Cargo is the [Rust](https://www.rust-lang.org/) [_package manager_](./"
+"appendix/glossary.md#package-manager \"\\\"package manager\\\" (glossary "
+"entry)\"). Cargo downloads your Rust [package](./appendix/glossary."
+"md#package \"\\\"package\\\" (glossary entry)\")'s dependencies, compiles "
+"your packages, makes distributable packages, and uploads them to [crates.io]"
+"(https://crates.io/), the Rust community’s [_package registry_](./appendix/"
+"glossary.md#package-registry \"\\\"package registry\\\" (glossary entry)\"). "
+"You can contribute to this book on [GitHub](https://github.com/rust-lang/"
+"cargo/tree/master/src/doc)."
+msgstr ""
+"Cargo 是 [Rust](https://www.rust-lang.org/) 的[_軟體包管理器_](./appendix/"
+"glossary.md#package-manager \"\\\"package manager\\\" (glossary entry)\")。"
+"Cargo 會下載您的 Rust [軟體包](./appendix/glossary.md#package \"\\\"package\\"
+"\" (glossary entry)\")依賴項目、編譯您的軟體包、製作可散佈的軟體包，並將其上"
+"傳到 Rust 社群的[_軟體包註冊表_](./appendix/glossary.md#package-registry \"\\"
+"\"package registry\\\" (glossary entry)\") [crates.io](https://crates.io/)。"
+"您可以在 [GitHub](https://github.com/rust-lang/cargo/tree/master/src/doc) 上"
+"為本書做出貢獻。"
+
+#: src/index.md:11
+msgid "Sections"
+msgstr ""
+
+#: src/index.md:13
+msgid "**[Getting Started](getting-started/index.md)**"
+msgstr "**[開始使用](getting-started/index.md)**"
+
+#: src/index.md:15
+msgid ""
+"To get started with Cargo, install Cargo (and Rust) and set up your first "
+"[_crate_](./appendix/glossary.md#crate \"\\\"crate\\\" (glossary entry)\")."
+msgstr ""
+
+#: src/index.md:18
+msgid "**[Cargo Guide](guide/index.md)**"
+msgstr "**[Cargo 指南](guide/index.md)**"
+
+#: src/index.md:20
+msgid ""
+"The guide will give you all you need to know about how to use Cargo to "
+"develop Rust packages."
+msgstr "該指南將為您提供關於如何使用 Cargo 開發 Rust 軟體包的所有必要資訊。"
+
+#: src/index.md:23
+msgid "**[Cargo Reference](reference/index.md)**"
+msgstr "**[Cargo 參考](reference/index.md)**"
+
+#: src/index.md:25
+msgid "The reference covers the details of various areas of Cargo."
+msgstr "此參考涵蓋了 Cargo 各個領域的詳細資訊。"
+
+#: src/index.md:27
+msgid "**[Cargo Commands](commands/index.md)**"
+msgstr "**[Cargo 命令](commands/index.md)**"
+
+#: src/index.md:29
+msgid ""
+"The commands will let you interact with Cargo using its command-line "
+"interface."
+msgstr "這些命令將讓你透過命令行介面與 Cargo 進行互動。"
+
+#: src/index.md:31
+msgid "**[Frequently Asked Questions](faq.md)**"
+msgstr "**[常見問題](faq.md)**"
+
+#: src/index.md:33
+msgid "**Appendices:**"
+msgstr "**附錄：**"
+
+#: src/index.md:34
+msgid "[Glossary](appendix/glossary.md)"
+msgstr "[詞彙表](appendix/glossary.md)"
+
+#: src/index.md:35
+msgid "[Git Authentication](appendix/git-authentication.md)"
+msgstr ""
+
+#: src/index.md:37
+msgid "**Other Documentation:**"
+msgstr "**其他文件：**"
+
+#: src/index.md:38
+msgid ""
+"[Changelog](https://github.com/rust-lang/cargo/blob/master/CHANGELOG.md) "
+"\\--- Detailed notes about changes in Cargo in each release."
+msgstr ""
+
+#: src/index.md:40
+msgid ""
+"[Rust documentation website](https://doc.rust-lang.org/) --- Links to "
+"official Rust documentation and tools."
+msgstr ""
