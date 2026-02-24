@@ -29,7 +29,7 @@ msgstr "概要"
 
 #: src/commands/cargo-version.md:9
 msgid "`cargo version` \\[_options_\\]"
-msgstr ""
+msgstr "`cargo version` \\[_選項_\\]"
 
 #: src/commands/cargo-version.md:11
 msgid "DESCRIPTION"
