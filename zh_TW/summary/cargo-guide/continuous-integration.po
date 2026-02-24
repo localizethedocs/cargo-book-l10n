@@ -1,0 +1,325 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:50:20Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/guide/continuous-integration.md:1
+msgid "Continuous Integration"
+msgstr "持續整合"
+
+#: src/guide/continuous-integration.md:3
+msgid "Travis CI"
+msgstr ""
+
+#: src/guide/continuous-integration.md:5
+msgid ""
+"To test your [package](../appendix/glossary.md#package \"\\\"package\\"
+"\" (glossary entry)\") on Travis CI, here is a sample `.travis.yml` file:"
+msgstr ""
+
+#: src/guide/continuous-integration.md:9
+msgid "language"
+msgstr ""
+
+#: src/guide/continuous-integration.md:9 src/guide/continuous-integration.md:16
+msgid "rust"
+msgstr ""
+
+#: src/guide/continuous-integration.md:11
+#: src/guide/continuous-integration.md:45
+#: src/guide/continuous-integration.md:104
+msgid "stable"
+msgstr ""
+
+#: src/guide/continuous-integration.md:12
+#: src/guide/continuous-integration.md:46
+msgid "beta"
+msgstr ""
+
+#: src/guide/continuous-integration.md:13
+#: src/guide/continuous-integration.md:16
+#: src/guide/continuous-integration.md:47
+#: src/guide/continuous-integration.md:109
+msgid "nightly"
+msgstr ""
+
+#: src/guide/continuous-integration.md:13
+#: src/guide/continuous-integration.md:43
+msgid "matrix"
+msgstr ""
+
+#: src/guide/continuous-integration.md:15
+msgid "allow_failures"
+msgstr ""
+
+#: src/guide/continuous-integration.md:19
+msgid ""
+"This will test all three release channels, but any breakage in nightly will "
+"not fail your overall build. Please see the [Travis CI Rust documentation]"
+"(https://docs.travis-ci.com/user/languages/rust/) for more information."
+msgstr ""
+
+#: src/guide/continuous-integration.md:24
+msgid "GitHub Actions"
+msgstr ""
+
+#: src/guide/continuous-integration.md:26
+msgid ""
+"To test your package on GitHub Actions, here is a sample `.github/workflows/"
+"ci.yml` file:"
+msgstr ""
+
+#: src/guide/continuous-integration.md:29
+#: src/guide/continuous-integration.md:40
+msgid "name"
+msgstr ""
+
+#: src/guide/continuous-integration.md:29
+msgid "Cargo Build & Test"
+msgstr ""
+
+#: src/guide/continuous-integration.md:32
+msgid "push"
+msgstr ""
+
+#: src/guide/continuous-integration.md:33
+msgid "pull_request"
+msgstr ""
+
+#: src/guide/continuous-integration.md:34
+msgid "env"
+msgstr ""
+
+#: src/guide/continuous-integration.md:36
+msgid "CARGO_TERM_COLOR"
+msgstr ""
+
+#: src/guide/continuous-integration.md:36
+msgid "always"
+msgstr ""
+
+#: src/guide/continuous-integration.md:37
+msgid "jobs"
+msgstr ""
+
+#: src/guide/continuous-integration.md:39
+msgid "build_and_test"
+msgstr ""
+
+#: src/guide/continuous-integration.md:40
+msgid "Rust project - latest"
+msgstr ""
+
+#: src/guide/continuous-integration.md:41
+msgid "runs-on"
+msgstr ""
+
+#: src/guide/continuous-integration.md:41
+msgid "ubuntu-latest"
+msgstr ""
+
+#: src/guide/continuous-integration.md:42
+msgid "strategy"
+msgstr ""
+
+#: src/guide/continuous-integration.md:44
+msgid "toolchain"
+msgstr ""
+
+#: src/guide/continuous-integration.md:48
+msgid "steps"
+msgstr ""
+
+#: src/guide/continuous-integration.md:49
+msgid "uses"
+msgstr ""
+
+#: src/guide/continuous-integration.md:49
+msgid "actions/checkout@v2"
+msgstr ""
+
+#: src/guide/continuous-integration.md:50
+#: src/guide/continuous-integration.md:51
+#: src/guide/continuous-integration.md:52
+msgid "run"
+msgstr ""
+
+#: src/guide/continuous-integration.md:50
+msgid ""
+"rustup update ${{ matrix.toolchain }} && rustup default ${{ matrix."
+"toolchain }}"
+msgstr ""
+
+#: src/guide/continuous-integration.md:51
+#: src/guide/continuous-integration.md:70
+#: src/guide/continuous-integration.md:77
+msgid "cargo build --verbose"
+msgstr ""
+
+#: src/guide/continuous-integration.md:52
+#: src/guide/continuous-integration.md:71
+#: src/guide/continuous-integration.md:78
+msgid "cargo test --verbose"
+msgstr ""
+
+#: src/guide/continuous-integration.md:56
+msgid ""
+"This will test all three release channels (note a failure in any toolchain "
+"version will fail the entire job). You can also click `\"Actions\" > \"new "
+"workflow\"` in the GitHub UI and select Rust to add the [default "
+"configuration](https://github.com/actions/starter-workflows/blob/main/ci/"
+"rust.yml) to your repo. See [GitHub Actions documentation](https://docs."
+"github.com/en/actions) for more information."
+msgstr ""
+
+#: src/guide/continuous-integration.md:58
+msgid "GitLab CI"
+msgstr ""
+
+#: src/guide/continuous-integration.md:60
+msgid ""
+"To test your package on GitLab CI, here is a sample `.gitlab-ci.yml` file:"
+msgstr ""
+
+#: src/guide/continuous-integration.md:63
+msgid "stages"
+msgstr ""
+
+#: src/guide/continuous-integration.md:64
+#: src/guide/continuous-integration.md:67
+#: src/guide/continuous-integration.md:74
+msgid "build"
+msgstr ""
+
+#: src/guide/continuous-integration.md:65
+msgid "rust-latest"
+msgstr ""
+
+#: src/guide/continuous-integration.md:67
+#: src/guide/continuous-integration.md:74
+msgid "stage"
+msgstr ""
+
+#: src/guide/continuous-integration.md:68
+#: src/guide/continuous-integration.md:75
+#: src/guide/continuous-integration.md:94
+msgid "image"
+msgstr ""
+
+#: src/guide/continuous-integration.md:68
+msgid "rust:latest"
+msgstr ""
+
+#: src/guide/continuous-integration.md:69
+#: src/guide/continuous-integration.md:76
+msgid "script"
+msgstr ""
+
+#: src/guide/continuous-integration.md:72
+msgid "rust-nightly"
+msgstr ""
+
+#: src/guide/continuous-integration.md:75
+msgid "rustlang/rust:nightly"
+msgstr ""
+
+#: src/guide/continuous-integration.md:79
+msgid "allow_failure"
+msgstr ""
+
+#: src/guide/continuous-integration.md:82
+msgid ""
+"This will test on the stable channel and nightly channel, but any breakage "
+"in nightly will not fail your overall build. Please see the [GitLab CI "
+"documentation](https://docs.gitlab.com/ce/ci/yaml/index.html) for more "
+"information."
+msgstr ""
+
+#: src/guide/continuous-integration.md:87
+msgid "builds.sr.ht"
+msgstr ""
+
+#: src/guide/continuous-integration.md:89
+msgid ""
+"To test your package on sr.ht, here is a sample `.build.yml` file. Be sure "
+"to change `<your repo>` and `<your project>` to the repo to clone and the "
+"directory where it was cloned."
+msgstr ""
+
+#: src/guide/continuous-integration.md:94
+msgid "archlinux"
+msgstr ""
+
+#: src/guide/continuous-integration.md:94
+msgid "packages"
+msgstr ""
+
+#: src/guide/continuous-integration.md:96
+msgid "rustup"
+msgstr ""
+
+#: src/guide/continuous-integration.md:96
+msgid "sources"
+msgstr ""
+
+#: src/guide/continuous-integration.md:98
+msgid "<your repo>"
+msgstr ""
+
+#: src/guide/continuous-integration.md:98
+msgid "tasks"
+msgstr ""
+
+#: src/guide/continuous-integration.md:100
+msgid "setup"
+msgstr ""
+
+#: src/guide/continuous-integration.md:100
+msgid ""
+"      rustup toolchain install nightly stable\n"
+"      cd <your project>/\n"
+"      rustup run stable cargo fetch\n"
+msgstr ""
+
+#: src/guide/continuous-integration.md:104
+msgid ""
+"      rustup default stable\n"
+"      cd <your project>/\n"
+"      cargo build --verbose\n"
+"      cargo test --verbose\n"
+msgstr ""
+
+#: src/guide/continuous-integration.md:109
+msgid ""
+"      rustup default nightly\n"
+"      cd <your project>/\n"
+"      cargo build --verbose ||:\n"
+"      cargo test --verbose  ||:\n"
+msgstr ""
+
+#: src/guide/continuous-integration.md:114
+msgid "docs"
+msgstr ""
+
+#: src/guide/continuous-integration.md:114
+msgid ""
+"      cd <your project>/\n"
+"      rustup run stable cargo doc --no-deps\n"
+"      rustup run nightly cargo doc --no-deps ||:\n"
+msgstr ""
+
+#: src/guide/continuous-integration.md:120
+msgid ""
+"This will test and build documentation on the stable channel and nightly "
+"channel, but any breakage in nightly will not fail your overall build. "
+"Please see the [builds.sr.ht documentation](https://man.sr.ht/builds.sr.ht/) "
+"for more information."
+msgstr ""
