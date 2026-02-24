@@ -1,0 +1,106 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:37:37Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/appendix/git-authentication.md:1
+msgid "Git Authentication"
+msgstr ""
+
+#: src/appendix/git-authentication.md:3
+msgid ""
+"Cargo supports some forms of authentication when using git dependencies and "
+"registries. This appendix contains some information for setting up git "
+"authentication in a way that works with Cargo."
+msgstr ""
+
+#: src/appendix/git-authentication.md:7
+msgid ""
+"If you need other authentication methods, the [`net.git-fetch-with-cli`](../"
+"reference/config.md#netgit-fetch-with-cli) config value can be set to cause "
+"Cargo to execute the `git` executable to handle fetching remote repositories "
+"instead of using the built-in support. This can be enabled with the "
+"`CARGO_NET_GIT_FETCH_WITH_CLI=true` environment variable."
+msgstr ""
+
+#: src/appendix/git-authentication.md:13
+msgid "HTTPS authentication"
+msgstr ""
+
+#: src/appendix/git-authentication.md:15
+msgid ""
+"HTTPS authentication requires the [`credential.helper`](https://git-scm.com/"
+"book/en/v2/Git-Tools-Credential-Storage) mechanism. There are multiple "
+"credential helpers, and you specify the one you want to use in your global "
+"git configuration file."
+msgstr ""
+
+#: src/appendix/git-authentication.md:26
+msgid ""
+"Cargo does not ask for passwords, so for most helpers you will need to give "
+"the helper the initial username/password before running Cargo. One way to do "
+"this is to run `git clone` of the private git repo and enter the username/"
+"password."
+msgstr ""
+
+#: src/appendix/git-authentication.md:31
+msgid ""
+"**Tip:**<br> macOS users may want to consider using the osxkeychain helper."
+"<br> Windows users may want to consider using the [GCM](https://github.com/"
+"microsoft/Git-Credential-Manager-Core/) helper."
+msgstr ""
+
+#: src/appendix/git-authentication.md:35
+msgid ""
+"**Note:** Windows users will need to make sure that the `sh` shell is "
+"available in your `PATH`. This typically is available with the Git for "
+"Windows installation."
+msgstr ""
+
+#: src/appendix/git-authentication.md:39
+msgid "SSH authentication"
+msgstr ""
+
+#: src/appendix/git-authentication.md:41
+msgid ""
+"SSH authentication requires `ssh-agent` to be running to acquire the SSH "
+"key. Make sure the appropriate environment variables are set up "
+"(`SSH_AUTH_SOCK` on most Unix-like systems), and that the correct keys are "
+"added (with `ssh-add`)."
+msgstr ""
+
+#: src/appendix/git-authentication.md:45
+msgid ""
+"Windows can use Pageant (part of [PuTTY](https://www.chiark.greenend.org.uk/"
+"~sgtatham/putty/)) or `ssh-agent`. To use `ssh-agent`, Cargo needs to use "
+"the OpenSSH that is distributed as part of Windows, as Cargo does not "
+"support the simulated Unix-domain sockets used by MinGW or Cygwin. More "
+"information about installing with Windows can be found at the [Microsoft "
+"installation documentation](https://docs.microsoft.com/en-us/windows-server/"
+"administration/openssh/openssh_install_firstuse) and the page on [key "
+"management](https://docs.microsoft.com/en-us/windows-server/administration/"
+"openssh/openssh_keymanagement) has instructions on how to start `ssh-agent` "
+"and to add keys."
+msgstr ""
+
+#: src/appendix/git-authentication.md:53
+msgid ""
+"**Note:** Cargo does not support git's shorthand SSH URLs like `git@example."
+"com:user/repo.git`. Use a full SSH URL like `ssh://git@example.com/user/repo."
+"git`."
+msgstr ""
+
+#: src/appendix/git-authentication.md:57
+msgid ""
+"**Note:** SSH configuration files (like OpenSSH's `~/.ssh/config`) are not "
+"used by Cargo's built-in SSH library. More advanced requirements should use "
+"[`net.git-fetch-with-cli`](../reference/config.md#netgit-fetch-with-cli)."
+msgstr ""

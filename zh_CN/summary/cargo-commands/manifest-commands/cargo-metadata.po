@@ -1,0 +1,844 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:37:37Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/commands/cargo-metadata.md:1
+msgid "cargo-metadata(1)"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:3
+msgid "NAME"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:5
+msgid "cargo-metadata - Machine-readable metadata about the current package"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:7
+msgid "SYNOPSIS"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:9
+msgid "`cargo metadata` \\[_options_\\]"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:11
+msgid "DESCRIPTION"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:13
+msgid ""
+"Output JSON to stdout containing information about the workspace members and "
+"resolved dependencies of the current package."
+msgstr ""
+
+#: src/commands/cargo-metadata.md:16
+msgid ""
+"It is recommended to include the `--format-version` flag to future-proof "
+"your code to ensure the output is in the format you are expecting."
+msgstr ""
+
+#: src/commands/cargo-metadata.md:19
+msgid ""
+"See the [cargo_metadata crate](https://crates.io/crates/cargo_metadata) for "
+"a Rust API for reading the metadata."
+msgstr ""
+
+#: src/commands/cargo-metadata.md:22
+msgid "OUTPUT FORMAT"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:24
+msgid "The output has the following format:"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:28
+msgid ""
+"/* Array of all packages in the workspace.\n"
+"       It also includes all feature-enabled dependencies unless --no-deps is "
+"used.\n"
+"    */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:31
+msgid "\"packages\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:33
+msgid "/* The name of the package. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:34 src/commands/cargo-metadata.md:59
+#: src/commands/cargo-metadata.md:123 src/commands/cargo-metadata.md:246
+msgid "\"name\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:34 src/commands/cargo-metadata.md:123
+msgid "\"my-package\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:35
+msgid "/* The version of the package. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:36 src/commands/cargo-metadata.md:281
+msgid "\"version\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:36
+msgid "\"0.1.0\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:37
+msgid "/* The Package ID, a unique identifier for referring to the package. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:38 src/commands/cargo-metadata.md:231
+msgid "\"id\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:38 src/commands/cargo-metadata.md:213
+#: src/commands/cargo-metadata.md:231 src/commands/cargo-metadata.md:274
+msgid "\"my-package 0.1.0 (path+file:///path/to/my-package)\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:39
+msgid "/* The license value from the manifest, or null. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:40
+msgid "\"license\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:40
+msgid "\"MIT/Apache-2.0\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:41
+msgid "/* The license-file value from the manifest, or null. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:42
+msgid "\"license_file\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:42
+msgid "\"LICENSE\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:43
+msgid "/* The description value from the manifest, or null. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:44
+msgid "\"description\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:44
+msgid "\"Package description.\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:45
+msgid ""
+"/* The source ID of the package. This represents where\n"
+"               a package is retrieved from.\n"
+"               This is null for path dependencies and workspace members.\n"
+"               For other dependencies, it is a string with the format:\n"
+"               - \"registry+URL\" for registry-based dependencies.\n"
+"                 Example: \"registry+https://github.com/rust-lang/crates.io-"
+"index\"\n"
+"               - \"git+URL\" for git-based dependencies.\n"
+"                 Example: \"git+https://github.com/rust-lang/cargo?"
+"rev=5e85ba14aaa20f8133863373404cb0af69eeef2c#5e85ba14aaa20f8133863373404cb0af69eeef2c\"\n"
+"            */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:54 src/commands/cargo-metadata.md:63
+msgid "\"source\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:55
+msgid "/* Array of dependencies declared in the package's manifest. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:56 src/commands/cargo-metadata.md:233
+msgid "\"dependencies\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:58
+msgid "/* The name of the dependency. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:59 src/commands/cargo-metadata.md:246
+msgid "\"bitflags\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:60
+msgid ""
+"/* The source ID of the dependency. May be null, see\n"
+"                       description for the package source.\n"
+"                    */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:63
+msgid "\"registry+https://github.com/rust-lang/crates.io-index\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:64
+msgid ""
+"/* The version requirement for the dependency.\n"
+"                       Dependencies without a version requirement have a "
+"value of \"*\".\n"
+"                    */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:67
+msgid "\"req\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:67
+msgid "\"^1.0\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:68
+msgid ""
+"/* The dependency kind.\n"
+"                       \"dev\", \"build\", or null for a normal dependency.\n"
+"                    */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:71 src/commands/cargo-metadata.md:110
+#: src/commands/cargo-metadata.md:255
+msgid "\"kind\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:72
+msgid ""
+"/* If the dependency is renamed, this is the new name for\n"
+"                       the dependency as a string.  null if it is not "
+"renamed.\n"
+"                    */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:75
+msgid "\"rename\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:76
+msgid "/* Boolean of whether or not this is an optional dependency. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:77
+msgid "\"optional\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:78
+msgid "/* Boolean of whether or not default features are enabled. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:79
+msgid "\"uses_default_features\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:80
+msgid "/* Array of features enabled. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:81 src/commands/cargo-metadata.md:149
+#: src/commands/cargo-metadata.md:265
+msgid "\"features\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:82
+msgid ""
+"/* The target platform for the dependency.\n"
+"                       null if not a target dependency.\n"
+"                    */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:85 src/commands/cargo-metadata.md:259
+msgid "\"target\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:85 src/commands/cargo-metadata.md:259
+msgid "\"cfg(windows)\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:86
+msgid ""
+"/* The file system path for a local path dependency.\n"
+"                       not present if not a path dependency.\n"
+"                    */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:89
+msgid "\"path\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:89
+msgid "\"/path/to/dep\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:90
+msgid ""
+"/* A string of the URL of the registry this dependency is from.\n"
+"                       If not specified or null, the dependency is from the "
+"default\n"
+"                       registry (crates.io).\n"
+"                    */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:94
+msgid "\"registry\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:97
+msgid "/* Array of Cargo targets. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:98
+msgid "\"targets\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:100
+msgid ""
+"/* Array of target kinds.\n"
+"                       - lib targets list the `crate-type` values from the\n"
+"                         manifest such as \"lib\", \"rlib\", \"dylib\",\n"
+"                         \"proc-macro\", etc. (default [\"lib\"])\n"
+"                       - binary is [\"bin\"]\n"
+"                       - example is [\"example\"]\n"
+"                       - integration test is [\"test\"]\n"
+"                       - benchmark is [\"bench\"]\n"
+"                       - build script is [\"custom-build\"]\n"
+"                    */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:111 src/commands/cargo-metadata.md:120
+msgid "\"bin\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:113
+msgid ""
+"/* Array of crate types.\n"
+"                       - lib and example libraries list the `crate-type` "
+"values\n"
+"                         from the manifest such as \"lib\", \"rlib\", "
+"\"dylib\",\n"
+"                         \"proc-macro\", etc. (default [\"lib\"])\n"
+"                       - all other target kinds are [\"bin\"]\n"
+"                    */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:119
+msgid "\"crate_types\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:122
+msgid "/* The name of the target. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:124
+msgid "/* Absolute path to the root source file of the target. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:125
+msgid "\"src_path\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:125
+msgid "\"/path/to/my-package/src/main.rs\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:126
+msgid ""
+"/* The Rust edition of the target.\n"
+"                       Defaults to the package edition.\n"
+"                    */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:129 src/commands/cargo-metadata.md:202
+msgid "\"edition\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:129 src/commands/cargo-metadata.md:202
+msgid "\"2018\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:130
+msgid ""
+"/* Array of required features.\n"
+"                       This property is not included if no required features "
+"are set.\n"
+"                    */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:133
+msgid "\"required-features\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:133 src/commands/cargo-metadata.md:151
+#: src/commands/cargo-metadata.md:153
+msgid "\"feat1\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:134
+msgid "/* Whether the target should be documented by `cargo doc`. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:135
+msgid "\"doc\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:136
+msgid ""
+"/* Whether or not this target has doc tests enabled, and\n"
+"                       the target is compatible with doc testing.\n"
+"                    */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:139
+msgid "\"doctest\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:140
+msgid ""
+"/* Whether or not this target should be built and run with `--test`\n"
+"                    */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:142
+msgid "\"test\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:145
+msgid ""
+"/* Set of features defined for the package.\n"
+"               Each feature maps to an array of features or dependencies it\n"
+"               enables.\n"
+"            */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:150 src/commands/cargo-metadata.md:266
+msgid "\"default\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:154
+msgid "\"feat2\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:156
+msgid "/* Absolute path to this package's manifest. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:157
+msgid "\"manifest_path\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:157
+msgid "\"/path/to/my-package/Cargo.toml\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:158
+msgid ""
+"/* Package metadata.\n"
+"               This is null if no metadata is specified.\n"
+"            */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:161 src/commands/cargo-metadata.md:286
+msgid "\"metadata\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:162 src/commands/cargo-metadata.md:287
+msgid "\"docs\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:163 src/commands/cargo-metadata.md:288
+msgid "\"rs\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:164 src/commands/cargo-metadata.md:289
+msgid "\"all-features\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:168
+msgid ""
+"/* List of registries to which this package may be published.\n"
+"               Publishing is unrestricted if null, and forbidden if an empty "
+"array. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:170
+msgid "\"publish\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:171
+msgid "\"crates-io\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:173
+msgid ""
+"/* Array of authors from the manifest.\n"
+"               Empty array if no authors specified.\n"
+"            */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:176
+msgid "\"authors\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:177
+msgid "\"Jane Doe <user@example.com>\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:179
+msgid "/* Array of categories from the manifest. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:180
+msgid "\"categories\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:181
+msgid "\"command-line-utilities\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:183
+msgid "/* Optional string that is the default binary picked by cargo run. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:184
+msgid "\"default_run\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:185
+msgid "/* Optional string that is the minimum supported rust version */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:186
+msgid "\"rust_version\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:186
+msgid "\"1.56\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:187
+msgid "/* Array of keywords from the manifest. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:188
+msgid "\"keywords\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:189
+msgid "\"cli\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:191
+msgid "/* The readme value from the manifest or null if not specified. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:192
+msgid "\"readme\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:192
+msgid "\"README.md\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:193
+msgid "/* The repository value from the manifest or null if not specified. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:194
+msgid "\"repository\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:194
+msgid "\"https://github.com/rust-lang/cargo\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:195
+msgid "/* The homepage value from the manifest or null if not specified. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:196
+msgid "\"homepage\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:196
+msgid "\"https://rust-lang.org\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:197
+msgid ""
+"/* The documentation value from the manifest or null if not specified. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:198
+msgid "\"documentation\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:198
+msgid "\"https://doc.rust-lang.org/stable/std\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:199
+msgid ""
+"/* The default edition of the package.\n"
+"               Note that individual targets may have different editions.\n"
+"            */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:203
+msgid ""
+"/* Optional string that is the name of a native library the package\n"
+"               is linking to.\n"
+"            */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:206
+msgid "\"links\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:209
+msgid ""
+"/* Array of members of the workspace.\n"
+"       Each entry is the Package ID for the package.\n"
+"    */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:212
+msgid "\"workspace_members\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:215
+msgid ""
+"// The resolved dependency graph for the entire workspace. The enabled\n"
+"    // features are based on the enabled features for the \"current\" "
+"package.\n"
+"    // Inactivated optional dependencies are not listed.\n"
+"    //\n"
+"    // This is null if --no-deps is specified.\n"
+"    //\n"
+"    // By default, this includes all dependencies for all target platforms.\n"
+"    // The `--filter-platform` flag may be used to narrow to a specific\n"
+"    // target triple.\n"
+"    \"resolve\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:225
+msgid ""
+"/* Array of nodes within the dependency graph.\n"
+"           Each node is a package.\n"
+"        */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:228
+msgid "\"nodes\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:230
+msgid "/* The Package ID of this node. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:232
+msgid "/* The dependencies of this package, an array of Package IDs. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:234 src/commands/cargo-metadata.md:248
+msgid ""
+"\"bitflags 1.0.4 (registry+https://github.com/rust-lang/crates.io-index)\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:236
+msgid ""
+"/* The dependencies of this package. This is an alternative to\n"
+"                   \"dependencies\" which contains additional information. "
+"In\n"
+"                   particular, this handles renamed dependencies.\n"
+"                */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:240
+msgid "\"deps\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:242
+msgid ""
+"/* The name of the dependency's library target.\n"
+"                           If this is a renamed dependency, this is the new\n"
+"                           name.\n"
+"                        */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:247
+msgid "/* The Package ID of the dependency. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:248
+msgid "\"pkg\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:249
+msgid "/* Array of dependency kinds. Added in Cargo 1.40. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:250
+msgid "\"dep_kinds\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:252
+msgid ""
+"/* The dependency kind.\n"
+"                                   \"dev\", \"build\", or null for a normal "
+"dependency.\n"
+"                                */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:256
+msgid ""
+"/* The target platform for the dependency.\n"
+"                                   null if not a target dependency.\n"
+"                                */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:264
+msgid "/* Array of features enabled on this package. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:270
+msgid ""
+"/* The root package of the workspace.\n"
+"           This is null if this is a virtual workspace. Otherwise it is\n"
+"           the Package ID of the root package.\n"
+"        */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:274
+msgid "\"root\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:276
+msgid ""
+"/* The absolute path to the build directory where Cargo places its output. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:277
+msgid "\"target_directory\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:277
+msgid "\"/path/to/my-package/target\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:278
+msgid ""
+"/* The version of the schema for this metadata structure.\n"
+"       This will be changed if incompatible changes are ever made.\n"
+"    */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:282
+msgid "/* The absolute path to the root of the workspace. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:283
+msgid "\"workspace_root\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:283
+msgid "\"/path/to/my-package\""
+msgstr ""
+
+#: src/commands/cargo-metadata.md:284
+msgid ""
+"/* Workspace metadata.\n"
+"       This is null if no metadata is specified. */"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:296
+msgid "OPTIONS"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:298
+msgid "Output Options"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:322
+msgid "Feature Selection"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:324
+msgid ""
+"The feature flags allow you to control which features are enabled. When no "
+"feature options are given, the `default` feature is activated for every "
+"selected package."
+msgstr ""
+
+#: src/commands/cargo-metadata.md:328
+msgid ""
+"See [the features documentation](../reference/features.html#command-line-"
+"feature-options) for more details."
+msgstr ""
+
+#: src/commands/cargo-metadata.md:351
+msgid "Display Options"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:383
+msgid "Manifest Options"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:418
+msgid "Common Options"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:446
+msgid "ENVIRONMENT"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:448
+msgid ""
+"See [the reference](../reference/environment-variables.html) for details on "
+"environment variables that Cargo reads."
+msgstr ""
+
+#: src/commands/cargo-metadata.md:452
+msgid "EXIT STATUS"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:454
+msgid "`0`: Cargo succeeded."
+msgstr ""
+
+#: src/commands/cargo-metadata.md:455
+msgid "`101`: Cargo failed to complete."
+msgstr ""
+
+#: src/commands/cargo-metadata.md:458
+msgid "EXAMPLES"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:460
+msgid "Output JSON about the current package:"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:464
+msgid "SEE ALSO"
+msgstr ""
+
+#: src/commands/cargo-metadata.md:465
+msgid "[cargo(1)](cargo.html)"
+msgstr ""
