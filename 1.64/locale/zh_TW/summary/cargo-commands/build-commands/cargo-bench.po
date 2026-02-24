@@ -154,7 +154,7 @@ msgstr ""
 
 #: src/commands/cargo-bench.md:134
 msgid "benchmark targets"
-msgstr ""
+msgstr "基準測試目標"
 
 #: src/commands/cargo-bench.md:136
 msgid ""
