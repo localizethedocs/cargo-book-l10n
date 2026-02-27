@@ -368,7 +368,7 @@ msgstr "目標（Target）"
 
 #: src/appendix/glossary.md:183
 msgid "The meaning of the term _target_ depends on the context:"
-msgstr ""
+msgstr "_目標_ 一詞的含義取決於上下文："
 
 #: src/appendix/glossary.md:185
 msgid ""
@@ -379,6 +379,11 @@ msgid ""
 "in the `Cargo.toml` [_manifest_](#manifest), often inferred automatically by "
 "the [directory layout](../guide/project-layout.md) of the source files."
 msgstr ""
+"**Cargo 目標（Cargo Target）** --- Cargo [_軟體包_](#package)是由「_目標_」組"
+"成的，這些目標對應到將會生成的 [_製品_](#artifact)。軟體包可以擁有程式庫、執"
+"行檔、範例、測試與基準測試目標。[目標列表](../reference/cargo-targets."
+"md#configuring-a-target) 是在 `Cargo.toml` [_清單_](#manifest) 中設定的，通常"
+"會根據來源檔的 [_目錄配置_](../guide/project-layout.md) 自動推斷。"
 
 #: src/appendix/glossary.md:191
 msgid ""
@@ -391,12 +396,20 @@ msgid ""
 "more information see the [build cache](../reference/build-cache.html) "
 "documentation."
 msgstr ""
+"**目標目錄（Target Directory）** --- Cargo 將建置製品放置在「目標」目錄中。預"
+"設情況下，這是位於「[工作空間](#workspace)」根目錄下名為 `target` 的目錄，若"
+"未使用工作空間，則位於軟體包根目錄。此目錄可透過 `--target-dir` 命令行選項、"
+"`CARGO_TARGET_DIR` [環境變數](../reference/environment-variables.md) 或 "
+"`build.target-dir` [組態選項](../reference/config.md) 來更改。更多資訊請參見"
+"[建置快取](../reference/build-cache.html)文件。"
 
 #: src/appendix/glossary.md:197
 msgid ""
 "**Target Architecture** --- The OS and machine architecture for the built "
 "artifacts are typically referred to as a _target_."
 msgstr ""
+"**目標架構（Target Architecture）** --- 建置製品的作業系統與機器架構通常被稱"
+"為「目標」。"
 
 #: src/appendix/glossary.md:199
 msgid ""
