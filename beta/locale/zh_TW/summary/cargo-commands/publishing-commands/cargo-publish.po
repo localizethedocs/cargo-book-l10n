@@ -21,7 +21,7 @@ msgstr "名稱"
 
 #: src/commands/cargo-publish.md:4
 msgid "cargo-publish --- Upload a package to the registry"
-msgstr ""
+msgstr "cargo-publish --- 將軟體包上傳至註冊表"
 
 #: src/commands/cargo-publish.md:6
 msgid "SYNOPSIS"
@@ -92,7 +92,7 @@ msgstr "選項"
 
 #: src/commands/cargo-publish.md:36
 msgid "Publish Options"
-msgstr ""
+msgstr "發佈選項"
 
 #: src/commands/cargo-publish.md:73
 msgid "Package Selection"
@@ -122,7 +122,7 @@ msgstr "編譯選項"
 
 #: src/commands/cargo-publish.md:149
 msgid "Feature Selection"
-msgstr "特性選取"
+msgstr "功能選取"
 
 #: src/commands/cargo-publish.md:151
 msgid ""

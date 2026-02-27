@@ -2755,18 +2755,24 @@ msgid ""
 "`-Zscript`: Integrate cargo-script logic into main parser [\\#15168](https://"
 "github.com/rust-lang/cargo/pull/15168)"
 msgstr ""
+"`-Zscript`：將 cargo-script 邏輯整合至主剖析器 [\\#15168]( https://github."
+"com/rust-lang/cargo/pull/15168)"
 
 #: src/CHANGELOG.md:1187
 msgid ""
 "`-Zscript`: add `cargo pkgid` support for cargo-script [\\#14961](https://"
 "github.com/rust-lang/cargo/pull/14961)"
 msgstr ""
+"`-Zscript`：為 cargo-script 增添 `cargo pkgid` 支援 [\\#14961]( https://"
+"github.com/rust-lang/cargo/pull/14961)"
 
 #: src/CHANGELOG.md:1189
 msgid ""
 "`-Zpackage-workspace`: Report all unpublishable packages [\\#15070](https://"
 "github.com/rust-lang/cargo/pull/15070)"
 msgstr ""
+"`-Zpackage-workspace`：回報所有無法發佈的軟體包 [\\#15070](https://github."
+"com/rust-lang/cargo/pull/15070)"
 
 #: src/CHANGELOG.md:1194
 msgid ""
@@ -2781,6 +2787,9 @@ msgid ""
 "lang/cargo/pull/15119) [\\#15123](https://github.com/rust-lang/cargo/"
 "pull/15123) [\\#15142](https://github.com/rust-lang/cargo/pull/15142)"
 msgstr ""
+"將變更日誌移至《Cargo 手冊》。 [\\#15119](https://github.com/rust-lang/cargo/"
+"pull/15119) [\\#15123](https://github.com/rust-lang/cargo/pull/15123) "
+"[\\#15142](https://github.com/rust-lang/cargo/pull/15142)"
 
 #: src/CHANGELOG.md:1201
 msgid ""
@@ -2793,6 +2802,8 @@ msgid ""
 "Fix the wrong grammar of a Package Id Specification. [\\#15049](https://"
 "github.com/rust-lang/cargo/pull/15049)"
 msgstr ""
+"修正軟體包 ID 規範中的文法錯誤。[\\#15049](https://github.com/rust-lang/"
+"cargo/pull/15049)"
 
 #: src/CHANGELOG.md:1205
 msgid ""
