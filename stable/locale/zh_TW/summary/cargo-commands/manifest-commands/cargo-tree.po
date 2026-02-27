@@ -143,7 +143,7 @@ msgstr "清單選項"
 
 #: src/commands/cargo-tree.md:287
 msgid "Feature Selection"
-msgstr "特性選取"
+msgstr "功能選取"
 
 #: src/commands/cargo-tree.md:289
 msgid ""

@@ -84,7 +84,7 @@ msgstr ""
 #: src/reference/build-cache.md:54 src/reference/build-cache.md:62
 #: src/reference/build-cache.md:71
 msgid "Directory"
-msgstr ""
+msgstr "目錄"
 
 #: src/reference/build-cache.md:26 src/reference/build-cache.md:54
 #: src/reference/build-cache.md:62 src/reference/build-cache.md:71

@@ -23,11 +23,11 @@ msgstr ""
 
 #: src/guide/index.md:6
 msgid "[Why Cargo Exists](why-cargo-exists.md)"
-msgstr ""
+msgstr "[為什麼 Cargo 會存在](why-cargo-exists.md)"
 
 #: src/guide/index.md:7
 msgid "[Creating a New Package](creating-a-new-project.md)"
-msgstr ""
+msgstr "[建立新軟體包](creating-a-new-project.md)"
 
 #: src/guide/index.md:8
 msgid ""
@@ -40,7 +40,7 @@ msgstr ""
 
 #: src/guide/index.md:10
 msgid "[Package Layout](project-layout.md)"
-msgstr ""
+msgstr "[軟體包配置](project-layout.md)"
 
 #: src/guide/index.md:11
 msgid "[Cargo.toml vs Cargo.lock](cargo-toml-vs-cargo-lock.md)"
@@ -48,20 +48,20 @@ msgstr ""
 
 #: src/guide/index.md:12
 msgid "[Tests](tests.md)"
-msgstr ""
+msgstr "[測試](tests.md)"
 
 #: src/guide/index.md:13
 msgid "[Continuous Integration](continuous-integration.md)"
-msgstr ""
+msgstr "[持續整合](continuous-integration.md)"
 
 #: src/guide/index.md:14
 msgid "[Publishing on crates.io](../reference/publishing.md)"
-msgstr ""
+msgstr "[發佈至 crates.io](../reference/publishing.md)"
 
 #: src/guide/index.md:15
 msgid "[Cargo Home](cargo-home.md)"
-msgstr ""
+msgstr "[Cargo 家目錄](cargo-home.md)"
 
 #: src/guide/index.md:16
 msgid "[Optimizing Build Performance](build-performance.md)"
-msgstr ""
+msgstr "[最佳化建置效能](build-performance.md)"
