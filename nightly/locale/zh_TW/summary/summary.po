@@ -349,7 +349,7 @@ msgstr "cargo uninstall"
 
 #: src/SUMMARY.md:90
 msgid "Publishing Commands"
-msgstr "發布命令"
+msgstr "發佈命令"
 
 #: src/SUMMARY.md:91
 msgid "cargo login"

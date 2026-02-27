@@ -257,7 +257,7 @@ msgstr ""
 
 #: src/commands/cargo.md:114
 msgid "Publishing Commands"
-msgstr "發布命令"
+msgstr "發佈命令"
 
 #: src/commands/cargo.md:116
 msgid ""
