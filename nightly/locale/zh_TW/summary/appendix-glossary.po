@@ -283,7 +283,7 @@ msgstr "軟體包註冊表（Package registry）"
 
 #: src/appendix/glossary.md:144
 msgid "See [_registry_](#registry)."
-msgstr "請參見 [_註冊表_](#registry)。"
+msgstr "請參見 [_註冊表_](#註冊表registry)。"
 
 #: src/appendix/glossary.md:146
 msgid "Project"
@@ -291,7 +291,7 @@ msgstr "專案（Project）"
 
 #: src/appendix/glossary.md:148
 msgid "Another name for a [package](#package)."
-msgstr "[軟體包](#package)的另一個名稱。"
+msgstr "[軟體包](#軟體包package)的另一個名稱。"
 
 #: src/appendix/glossary.md:150
 msgid "Registry"
@@ -320,7 +320,8 @@ msgstr ""
 
 #: src/appendix/glossary.md:165
 msgid "**Registry source** --- See [registry](#registry)."
-msgstr "**註冊表來源（Registry source）** --- 請參見[註冊表](#registry)。"
+msgstr ""
+"**註冊表來源（Registry source）** --- 請參見[註冊表](#註冊表registry)。"
 
 #: src/appendix/glossary.md:166
 msgid ""
@@ -363,7 +364,7 @@ msgstr "規範（Spec）"
 
 #: src/appendix/glossary.md:179
 msgid "See [package ID specification](#package)."
-msgstr "請參見[軟體包 ID 規範](#package)。"
+msgstr "請參見[軟體包 ID 規範](#軟體包package)。"
 
 #: src/appendix/glossary.md:181
 msgid "Target"
@@ -382,11 +383,12 @@ msgid ""
 "in the `Cargo.toml` [_manifest_](#manifest), often inferred automatically by "
 "the [directory layout](../guide/project-layout.md) of the source files."
 msgstr ""
-"**Cargo 目標（Cargo Target）** --- Cargo [_軟體包_](#package) 是由 _目標"
-"（target）_ 組成的，這些目標對應到將會生成的 [_製品_](#artifact)。軟體包可以"
-"擁有程式庫、執行檔、範例、測試與基準測試目標。[目標列表](../reference/cargo-"
-"targets.md#configuring-a-target)是在 `Cargo.toml` [_清單_](#manifest) 中設定"
-"的，通常會根據來源檔的[_目錄配置_](../guide/project-layout.md)自動推斷。"
+"**Cargo 目標（Cargo Target）** --- Cargo 的 [_軟體包_](#軟體包package) 是由 _"
+"目標_ 組成的，這些目標對應到將會生成的 [_製品_](#製品artifact)。軟體包可以擁"
+"有程式庫、執行檔、範例、測試與基準測試目標。[目標列表](../reference/cargo-"
+"targets.md#configuring-a-target)是在 `Cargo.toml` 的 [_清單_](#清單manifest) "
+"中設定的，通常會根據來源檔的[_目錄配置_](../guide/project-layout.md)自動推"
+"斷。"
 
 #: src/appendix/glossary.md:191
 msgid ""
@@ -399,12 +401,12 @@ msgid ""
 "more information see the [build cache](../reference/build-cache.html) "
 "documentation."
 msgstr ""
-"**目標目錄（Target Directory）** --- Cargo 將建置製品放置在 _目標（target）_ "
-"目錄中。預設情況下，這是位於 [_工作空間_](#workspace) 根目錄下名為 `target` "
-"的目錄，若未使用工作空間，則位於軟體包根目錄。此目錄可透過 `--target-dir` 命"
-"令行選項、`CARGO_TARGET_DIR` [環境變數](../reference/environment-variables."
-"md)或 `build.target-dir` [組態選項](../reference/config.md)來變更。更多資訊請"
-"參見[建置快取](../reference/build-cache.html)文件。"
+"**目標目錄（Target Directory）** --- Cargo 將建置製品放置在 _目標_ 目錄中。預"
+"設情況下，這是位於 [_工作空間_](#工作空間workspace) 根目錄下名為 `target` 的"
+"目錄，若未使用工作空間，則位於軟體包根目錄。此目錄可透過 `--target-dir` 命令"
+"行選項、`CARGO_TARGET_DIR` [環境變數](../reference/environment-variables.md)"
+"或 `build.target-dir` [組態選項](../reference/config.md)來變更。更多資訊請參"
+"見[建置快取](../reference/build-cache.html)文件。"
 
 #: src/appendix/glossary.md:197
 msgid ""
@@ -412,7 +414,7 @@ msgid ""
 "artifacts are typically referred to as a _target_."
 msgstr ""
 "**目標架構（Target Architecture）** --- 建置製品的作業系統與機器架構通常被稱"
-"為 _目標（target）_ 。"
+"為 _目標_ 。"
 
 #: src/appendix/glossary.md:199
 msgid ""

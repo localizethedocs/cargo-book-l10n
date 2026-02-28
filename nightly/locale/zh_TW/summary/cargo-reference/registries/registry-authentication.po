@@ -51,11 +51,11 @@ msgstr ""
 
 #: src/reference/registry-authentication.md:18
 msgid "Windows: `%USERPROFILE%\\.cargo\\config.toml`"
-msgstr ""
+msgstr "Windows：`%USERPROFILE%\\.cargo\\config.toml`"
 
 #: src/reference/registry-authentication.md:19
 msgid "Unix: `~/.cargo/config.toml`"
-msgstr ""
+msgstr "Unix：`~/.cargo/config.toml`"
 
 #: src/reference/registry-authentication.md:21
 msgid ""

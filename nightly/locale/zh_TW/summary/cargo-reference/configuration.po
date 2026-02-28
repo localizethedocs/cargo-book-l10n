@@ -61,7 +61,7 @@ msgstr ""
 
 #: src/reference/config.md:21
 msgid "Windows: `%USERPROFILE%\\.cargo\\config.toml`"
-msgstr ""
+msgstr "Windows：`%USERPROFILE%\\.cargo\\config.toml`"
 
 #: src/reference/config.md:22
 msgid "Unix: `$HOME/.cargo/config.toml`"

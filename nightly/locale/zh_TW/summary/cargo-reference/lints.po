@@ -211,7 +211,7 @@ msgstr ""
 #: src/reference/lints.md:403 src/reference/lints.md:426
 #: src/reference/lints.md:448
 msgid "What it does"
-msgstr ""
+msgstr "它在做什麼"
 
 #: src/reference/lints.md:48
 msgid "Checks if `hint-mostly-unused` being applied to all dependencies."
@@ -530,6 +530,12 @@ msgid ""
 "repository = \"https://github.com/rust-lang/cargo/\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[package]\n"
+"name = \"foo\"\n"
+"homepage = \"https://github.com/rust-lang/cargo/\"\n"
+"repository = \"https://github.com/rust-lang/cargo/\"\n"
+"```"
 
 #: src/reference/lints.md:352
 msgid ""
@@ -539,10 +545,15 @@ msgid ""
 "repository = \"https://github.com/rust-lang/cargo/\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[package]\n"
+"name = \"foo\"\n"
+"repository = \"https://github.com/rust-lang/cargo/\"\n"
+"```"
 
 #: src/reference/lints.md:359
 msgid "`redundant_readme`"
-msgstr ""
+msgstr "`redundant_readme`"
 
 #: src/reference/lints.md:368
 msgid "Checks for `package.readme` fields that can be inferred."
@@ -570,6 +581,11 @@ msgid ""
 "readme = \"README.md\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[package]\n"
+"name = \"foo\"\n"
+"readme = \"README.md\"\n"
+"```"
 
 #: src/reference/lints.md:390
 msgid ""
@@ -578,6 +594,10 @@ msgid ""
 "name = \"foo\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[package]\n"
+"name = \"foo\"\n"
+"```"
 
 #: src/reference/lints.md:396
 msgid "`unknown_lints`"
@@ -613,7 +633,7 @@ msgstr ""
 
 #: src/reference/lints.md:419
 msgid "`unused_workspace_dependencies`"
-msgstr ""
+msgstr "`unused_workspace_dependencies`"
 
 #: src/reference/lints.md:427
 msgid ""
@@ -634,6 +654,12 @@ msgid ""
 "[dependencies]\n"
 "```"
 msgstr ""
+"```toml\n"
+"[workspace.dependencies]\n"
+"regex = \"1\"\n"
+"\n"
+"[dependencies]\n"
+"```"
 
 #: src/reference/lints.md:441
 msgid "`unused_workspace_package_fields`"
