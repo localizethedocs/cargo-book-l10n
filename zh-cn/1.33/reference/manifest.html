@@ -1,0 +1,755 @@
+<!DOCTYPE HTML>
+<html lang="zh_CN" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>The Manifest Format - The Cargo Book</title>
+
+
+        <!-- Custom HTML head -->
+        <style>
+            dd {
+                margin-bottom: 1em;
+            }
+        </style>
+        <script type="text/javascript" src="../ltd-provenance.js"></script>
+        <script type="text/javascript" src="../ltd-current.js"></script>
+        <script type="text/javascript" src="../../../ltd-config.js"></script>
+        <script type="text/javascript" src="../../../ltd-flyout.js"></script>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../searchindex.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Cargo Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/rust-lang/cargo/tree/master/src/doc/src" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="the-manifest-format"><a class="header" href="#the-manifest-format">The Manifest Format</a></h2>
+<p>The <code>Cargo.toml</code> file for each package is called its <em>manifest</em>. Every manifest file consists of one or more sections.</p>
+<h3 id="the-package-section"><a class="header" href="#the-package-section">The <code>[package]</code> section</a></h3>
+<p>The first section in a <code>Cargo.toml</code> is <code>[package]</code>.</p>
+<pre><code class="language-toml">[package]
+name = "hello_world" # the name of the package
+version = "0.1.0"    # the current version, obeying semver
+authors = ["Alice &lt;a@example.com&gt;", "Bob &lt;b@example.com&gt;"]
+</code></pre>
+<h4 id="the-name-field"><a class="header" href="#the-name-field">The <code>name</code> field</a></h4>
+<p>The package name is an identifier used to refer to the package. It is used when listed as a dependency in another package, and as the default name of inferred lib and bin targets.</p>
+<p>The name must not be empty, use only <a href="https://doc.rust-lang.org/std/primitive.char.html#method.is_alphanumeric">alphanumeric</a> characters or <code>-</code> or <code>_</code>. Note that <code>cargo new</code> and <code>cargo init</code> impose some additional restrictions on the package name, such as enforcing that it is a valid Rust identifier and not a keyword. <a href="https://crates.io/">crates.io</a> imposes even more restrictions, such as enforcing only ASCII characters, not a reserved name, not a special Windows name such as "nul", is not too long, etc.</p>
+<h4 id="the-version-field"><a class="header" href="#the-version-field">The <code>version</code> field</a></h4>
+<p>Cargo bakes in the concept of <a href="http://semver.org/">Semantic Versioning</a>, so make sure you follow some basic rules:</p>
+<ul>
+<li>Before you reach 1.0.0, anything goes, but if you make breaking changes, increment the minor version. In Rust, breaking changes include adding fields to structs or variants to enums.</li>
+<li>After 1.0.0, only make breaking changes when you increment the major version. Don’t break the build.</li>
+<li>After 1.0.0, don’t add any new public API (no new <code>pub</code> anything) in patch-level versions. Always increment the minor version if you add any new <code>pub</code> structs, traits, fields, types, functions, methods or anything else.</li>
+<li>Use version numbers with three numeric parts such as 1.0.0 rather than 1.0.</li>
+</ul>
+<h4 id="the-authors-field-optional"><a class="header" href="#the-authors-field-optional">The <code>authors</code> field (optional)</a></h4>
+<p>The <code>authors</code> field lists people or organizations that are considered the "authors" of the package. The exact meaning is open to interpretation — it may list the original or primary authors, current maintainers, or owners of the package. These names will be listed on the crate's page on <a href="https://crates.io/">crates.io</a>. An optional email address may be included within angled brackets at the end of each author.</p>
+<h4 id="the-edition-field-optional"><a class="header" href="#the-edition-field-optional">The <code>edition</code> field (optional)</a></h4>
+<p>You can opt in to a specific Rust Edition for your package with the <code>edition</code> key in <code>Cargo.toml</code>.  If you don't specify the edition, it will default to 2015.</p>
+<pre><code class="language-toml">[package]
+# ...
+edition = '2018'
+</code></pre>
+<p>The <code>edition</code> key affects which edition your package is compiled with. Cargo will always generate packages via <code>cargo new</code> with the <code>edition</code> key set to the latest edition. Setting the <code>edition</code> key in <code>[package]</code> will affect all targets/crates in the package, including test suites, benchmarks, binaries, examples, etc.</p>
+<h4 id="the-build-field-optional"><a class="header" href="#the-build-field-optional">The <code>build</code> field (optional)</a></h4>
+<p>This field specifies a file in the package root which is a <a href="reference/build-scripts.html">build script</a> for building native code. More information can be found in the build script <a href="reference/build-scripts.html">guide</a>.</p>
+<pre><code class="language-toml">[package]
+# ...
+build = "build.rs"
+</code></pre>
+<h4 id="the-links-field-optional"><a class="header" href="#the-links-field-optional">The <code>links</code> field (optional)</a></h4>
+<p>This field specifies the name of a native library that is being linked to. More information can be found in the <a href="reference/build-scripts.html#the-links-manifest-key"><code>links</code></a> section of the build script guide.</p>
+<pre><code class="language-toml">[package]
+# ...
+links = "foo"
+build = "build.rs"
+</code></pre>
+<h4 id="the-documentation-field-optional"><a class="header" href="#the-documentation-field-optional">The <code>documentation</code> field (optional)</a></h4>
+<p>This field specifies a URL to a website hosting the crate's documentation. If no URL is specified in the manifest file, <a href="https://crates.io/">crates.io</a> will automatically link your crate to the corresponding <a href="https://docs.rs/">docs.rs</a> page.</p>
+<p>Documentation links from specific hosts are blacklisted. Hosts are added to the blacklist if they are known to not be hosting documentation and are possibly of malicious intent e.g. ad tracking networks. URLs from the following hosts are blacklisted:</p>
+<ul>
+<li>rust-ci.org</li>
+</ul>
+<p>Documentation URLs from blacklisted hosts will not appear on crates.io, and may be replaced by docs.rs links.</p>
+<h4 id="the-exclude-and-include-fields-optional"><a class="header" href="#the-exclude-and-include-fields-optional">The <code>exclude</code> and <code>include</code> fields (optional)</a></h4>
+<p>You can explicitly specify to Cargo that a set of <a href="https://docs.rs/glob/0.2.11/glob/struct.Pattern.html">globs</a> should be ignored or included for the purposes of packaging and rebuilding a package. The globs specified in the <code>exclude</code> field identify a set of files that are not included when a package is published as well as ignored for the purposes of detecting when to rebuild a package, and the globs in <code>include</code> specify files that are explicitly included.</p>
+<p>If a VCS is being used for a package, the <code>exclude</code> field will be seeded with the VCS’ ignore settings (<code>.gitignore</code> for git for example).</p>
+<pre><code class="language-toml">[package]
+# ...
+exclude = ["build/**/*.o", "doc/**/*.html"]
+</code></pre>
+<pre><code class="language-toml">[package]
+# ...
+include = ["src/**/*", "Cargo.toml"]
+</code></pre>
+<p>The options are mutually exclusive: setting <code>include</code> will override an <code>exclude</code>. Note that <code>include</code> must be an exhaustive list of files as otherwise necessary source files may not be included.</p>
+<h4 id="migrating-to-gitignore-like-pattern-matching"><a class="header" href="#migrating-to-gitignore-like-pattern-matching">Migrating to <code>gitignore</code>-like pattern matching</a></h4>
+<p>The current interpretation of these configs is based on UNIX Globs, as implemented in the <a href="https://crates.io/crates/glob"><code>glob</code> crate</a>. We want Cargo's <code>include</code> and <code>exclude</code> configs to work as similar to <code>gitignore</code> as possible. <a href="https://git-scm.com/docs/gitignore">The <code>gitignore</code> specification</a> is also based on Globs, but has a bunch of additional features that enable easier pattern writing and more control. Therefore, we are migrating the interpretation for the rules of these configs to use the <a href="https://crates.io/crates/ignore"><code>ignore</code> crate</a>, and treat them each rule as a single line in a <code>gitignore</code> file. See <a href="https://github.com/rust-lang/cargo/issues/4268">the tracking issue</a> for more details on the migration.</p>
+<h4 id="the-publish--field-optional"><a class="header" href="#the-publish--field-optional">The <code>publish</code>  field (optional)</a></h4>
+<p>The <code>publish</code> field can be used to prevent a package from being published to a package registry (like <em>crates.io</em>) by mistake.</p>
+<pre><code class="language-toml">[package]
+# ...
+publish = false
+</code></pre>
+<h4 id="the-workspace--field-optional"><a class="header" href="#the-workspace--field-optional">The <code>workspace</code>  field (optional)</a></h4>
+<p>The <code>workspace</code> field can be used to configure the workspace that this package will be a member of. If not specified this will be inferred as the first Cargo.toml with <code>[workspace]</code> upwards in the filesystem.</p>
+<pre><code class="language-toml">[package]
+# ...
+workspace = "path/to/workspace/root"
+</code></pre>
+<p>For more information, see the documentation for the workspace table below.</p>
+<h4 id="package-metadata"><a class="header" href="#package-metadata">Package metadata</a></h4>
+<p>There are a number of optional metadata fields also accepted under the <code>[package]</code> section:</p>
+<pre><code class="language-toml">[package]
+# ...
+
+# A short blurb about the package. This is not rendered in any format when
+# uploaded to crates.io (aka this is not markdown).
+description = "..."
+
+# These URLs point to more information about the package. These are
+# intended to be webviews of the relevant data, not necessarily compatible
+# with VCS tools and the like.
+documentation = "..."
+homepage = "..."
+repository = "..."
+
+# This points to a file under the package root (relative to this `Cargo.toml`).
+# The contents of this file are stored and indexed in the registry.
+# crates.io will render this file and place the result on the crate's page.
+readme = "..."
+
+# This is a list of up to five keywords that describe this crate. Keywords
+# are searchable on crates.io, and you may choose any words that would
+# help someone find this crate.
+keywords = ["...", "..."]
+
+# This is a list of up to five categories where this crate would fit.
+# Categories are a fixed list available at crates.io/category_slugs, and
+# they must match exactly.
+categories = ["...", "..."]
+
+# This is an SPDX 2.1 license expression for this package.  Currently
+# crates.io will validate the license provided against a whitelist of
+# known license and exception identifiers from the SPDX license list
+# 2.4.  Parentheses are not currently supported.
+#
+# Multiple licenses can be separated with a `/`, although that usage
+# is deprecated.  Instead, use a license expression with AND and OR
+# operators to get more explicit semantics.
+license = "..."
+
+# If a package is using a nonstandard license, then this key may be specified in
+# lieu of the above key and must point to a file relative to this manifest
+# (similar to the readme key).
+license-file = "..."
+
+# Optional specification of badges to be displayed on crates.io.
+#
+# - The badges pertaining to build status that are currently available are
+#   Appveyor, CircleCI, GitLab, and TravisCI.
+# - Available badges pertaining to code test coverage are Codecov and
+#   Coveralls.
+# - There are also maintenance-related badges based on isitmaintained.com
+#   which state the issue resolution time, percent of open issues, and future
+#   maintenance intentions.
+#
+# If a `repository` key is required, this refers to a repository in
+# `user/repo` format.
+[badges]
+
+# Appveyor: `repository` is required. `branch` is optional; default is `master`
+# `service` is optional; valid values are `github` (default), `bitbucket`, and
+# `gitlab`; `id` is optional; you can specify the appveyor project id if you
+# want to use that instead. `project_name` is optional; use when the repository
+# name differs from the appveyor project name.
+appveyor = { repository = "...", branch = "master", service = "github" }
+
+# Circle CI: `repository` is required. `branch` is optional; default is `master`
+circle-ci = { repository = "...", branch = "master" }
+
+# GitLab: `repository` is required. `branch` is optional; default is `master`
+gitlab = { repository = "...", branch = "master" }
+
+# Travis CI: `repository` in format "&lt;user&gt;/&lt;project&gt;" is required.
+# `branch` is optional; default is `master`
+travis-ci = { repository = "...", branch = "master" }
+
+# Codecov: `repository` is required. `branch` is optional; default is `master`
+# `service` is optional; valid values are `github` (default), `bitbucket`, and
+# `gitlab`.
+codecov = { repository = "...", branch = "master", service = "github" }
+
+# Coveralls: `repository` is required. `branch` is optional; default is `master`
+# `service` is optional; valid values are `github` (default) and `bitbucket`.
+coveralls = { repository = "...", branch = "master", service = "github" }
+
+# Is it maintained resolution time: `repository` is required.
+is-it-maintained-issue-resolution = { repository = "..." }
+
+# Is it maintained percentage of open issues: `repository` is required.
+is-it-maintained-open-issues = { repository = "..." }
+
+# Maintenance: `status` is required. Available options are `actively-developed`,
+# `passively-maintained`, `as-is`, `experimental`, `looking-for-maintainer`,
+# `deprecated`, and the default `none`, which displays no badge on crates.io.
+maintenance = { status = "..." }
+</code></pre>
+<p>The <a href="https://crates.io">crates.io</a> registry will render the description, display the license, link to the three URLs and categorize by the keywords. These keys provide useful information to users of the registry and also influence the search ranking of a crate. It is highly discouraged to omit everything in a published crate.</p>
+<p>SPDX 2.1 license expressions are documented <a href="https://spdx.org/spdx-specification-21-web-version#h.jxpfx0ykyb60">here</a>.  The current version of the license list is available <a href="https://spdx.org/licenses/">here</a>, and version 2.4 is available <a href="https://github.com/spdx/license-list-data/tree/v2.4">here</a>.</p>
+<h4 id="the-metadata-table-optional"><a class="header" href="#the-metadata-table-optional">The <code>metadata</code> table (optional)</a></h4>
+<p>Cargo by default will warn about unused keys in <code>Cargo.toml</code> to assist in detecting typos and such. The <code>package.metadata</code> table, however, is completely ignored by Cargo and will not be warned about. This section can be used for tools which would like to store package configuration in <code>Cargo.toml</code>. For example:</p>
+<pre><code class="language-toml">[package]
+name = "..."
+# ...
+
+# Metadata used when generating an Android APK, for example.
+[package.metadata.android]
+package-name = "my-awesome-android-app"
+assets = "path/to/static"
+</code></pre>
+<h3 id="dependency-sections"><a class="header" href="#dependency-sections">Dependency sections</a></h3>
+<p>See the <a href="reference/specifying-dependencies.html">specifying dependencies page</a> for information on the <code>[dependencies]</code>, <code>[dev-dependencies]</code>, <code>[build-dependencies]</code>, and target-specific <code>[target.*.dependencies]</code> sections.</p>
+<h3 id="the-profile-sections"><a class="header" href="#the-profile-sections">The <code>[profile.*]</code> sections</a></h3>
+<p>Cargo supports custom configuration of how rustc is invoked through profiles at the top level. Any manifest may declare a profile, but only the top level package’s profiles are actually read. All dependencies’ profiles will be overridden. This is done so the top-level package has control over how its dependencies are compiled.</p>
+<p>There are four currently supported profile names, all of which have the same configuration available to them. Listed below is the configuration available, along with the defaults for each profile.</p>
+<pre><code class="language-toml"># The development profile, used for `cargo build`.
+[profile.dev]
+opt-level = 0      # controls the `--opt-level` the compiler builds with.
+                   # 0-1 is good for debugging. 2 is well-optimized. Max is 3.
+                   # 's' attempts to reduce size, 'z' reduces size even more.
+debug = true       # (u32 or bool) Include debug information (debug symbols).
+                   # Equivalent to `-C debuginfo=2` compiler flag.
+rpath = false      # controls whether compiler should set loader paths.
+                   # If true, passes `-C rpath` flag to the compiler.
+lto = false        # Link Time Optimization usually reduces size of binaries
+                   # and static libraries. Increases compilation time.
+                   # If true, passes `-C lto` flag to the compiler, and if a
+                   # string is specified like 'thin' then `-C lto=thin` will
+                   # be passed.
+debug-assertions = true # controls whether debug assertions are enabled
+                   # (e.g. debug_assert!() and arithmetic overflow checks)
+codegen-units = 16 # if &gt; 1 enables parallel code generation which improves
+                   # compile times, but prevents some optimizations.
+                   # Passes `-C codegen-units`.
+panic = 'unwind'   # panic strategy (`-C panic=...`), can also be 'abort'
+incremental = true # whether or not incremental compilation is enabled
+overflow-checks = true # use overflow checks for integer arithmetic.
+                   # Passes the `-C overflow-checks=...` flag to the compiler.
+
+# The release profile, used for `cargo build --release` (and the dependencies
+# for `cargo test --release`,  including the local library or binary).
+[profile.release]
+opt-level = 3
+debug = false
+rpath = false
+lto = false
+debug-assertions = false
+codegen-units = 16
+panic = 'unwind'
+incremental = false
+overflow-checks = false
+
+# The testing profile, used for `cargo test` (for `cargo test --release` see
+# the `release` and `bench` profiles).
+[profile.test]
+opt-level = 0
+debug = 2
+rpath = false
+lto = false
+debug-assertions = true
+codegen-units = 16
+panic = 'unwind'
+incremental = true
+overflow-checks = true
+
+# The benchmarking profile, used for `cargo bench` (and the test targets and
+# unit tests for `cargo test --release`).
+[profile.bench]
+opt-level = 3
+debug = false
+rpath = false
+lto = false
+debug-assertions = false
+codegen-units = 16
+panic = 'unwind'
+incremental = false
+overflow-checks = false
+</code></pre>
+<h3 id="the-features-section"><a class="header" href="#the-features-section">The <code>[features]</code> section</a></h3>
+<p>Cargo supports features to allow expression of:</p>
+<ul>
+<li>conditional compilation options (usable through <code>cfg</code> attributes);</li>
+<li>optional dependencies, which enhance a package, but are not required; and</li>
+<li>clusters of optional dependencies, such as <code>postgres</code>, that would include the <code>postgres</code> package, the <code>postgres-macros</code> package, and possibly other packages (such as development-time mocking libraries, debugging tools, etc.).</li>
+</ul>
+<p>A feature of a package is either an optional dependency, or a set of other features. The format for specifying features is:</p>
+<pre><code class="language-toml">[package]
+name = "awesome"
+
+[features]
+# The default set of optional packages. Most people will want to use these
+# packages, but they are strictly optional. Note that `session` is not a package
+# but rather another feature listed in this manifest.
+default = ["jquery", "uglifier", "session"]
+
+# A feature with no dependencies is used mainly for conditional compilation,
+# like `#[cfg(feature = "go-faster")]`.
+go-faster = []
+
+# The `secure-password` feature depends on the bcrypt package. This aliasing
+# will allow people to talk about the feature in a higher-level way and allow
+# this package to add more requirements to the feature in the future.
+secure-password = ["bcrypt"]
+
+# Features can be used to reexport features of other packages. The `session`
+# feature of package `awesome` will ensure that the `session` feature of the
+# package `cookie` is also enabled.
+session = ["cookie/session"]
+
+[dependencies]
+# These packages are mandatory and form the core of this package’s distribution.
+cookie = "1.2.0"
+oauth = "1.1.0"
+route-recognizer = "=2.1.0"
+
+# A list of all of the optional dependencies, some of which are included in the
+# above `features`. They can be opted into by apps.
+jquery = { version = "1.0.2", optional = true }
+uglifier = { version = "1.5.3", optional = true }
+bcrypt = { version = "*", optional = true }
+civet = { version = "*", optional = true }
+</code></pre>
+<p>To use the package <code>awesome</code>:</p>
+<pre><code class="language-toml">[dependencies.awesome]
+version = "1.3.5"
+default-features = false # do not include the default features, and optionally
+                         # cherry-pick individual features
+features = ["secure-password", "civet"]
+</code></pre>
+<h4 id="rules"><a class="header" href="#rules">Rules</a></h4>
+<p>The usage of features is subject to a few rules:</p>
+<ul>
+<li>Feature names must not conflict with other package names in the manifest. This is because they are opted into via <code>features = [...]</code>, which only has a single namespace.</li>
+<li>With the exception of the <code>default</code> feature, all features are opt-in. To opt out of the default feature, use <code>default-features = false</code> and cherry-pick individual features.</li>
+<li>Feature groups are not allowed to cyclically depend on one another.</li>
+<li>Dev-dependencies cannot be optional.</li>
+<li>Features groups can only reference optional dependencies.</li>
+<li>When a feature is selected, Cargo will call <code>rustc</code> with <code>--cfg feature="${feature_name}"</code>. If a feature group is included, it and all of its individual features will be included. This can be tested in code via <code>#[cfg(feature = "foo")]</code>.</li>
+</ul>
+<p>Note that it is explicitly allowed for features to not actually activate any optional dependencies. This allows packages to internally enable/disable features without requiring a new dependency.</p>
+<h4 id="usage-in-end-products"><a class="header" href="#usage-in-end-products">Usage in end products</a></h4>
+<p>One major use-case for this feature is specifying optional features in end-products. For example, the Servo package may want to include optional features that people can enable or disable when they build it.</p>
+<p>In that case, Servo will describe features in its <code>Cargo.toml</code> and they can be enabled using command-line flags:</p>
+<pre><code class="language-console">$ cargo build --release --features "shumway pdf"
+</code></pre>
+<p>Default features could be excluded using <code>--no-default-features</code>.</p>
+<h4 id="usage-in-packages"><a class="header" href="#usage-in-packages">Usage in packages</a></h4>
+<p>In most cases, the concept of <em>optional dependency</em> in a library is best expressed as a separate package that the top-level application depends on.</p>
+<p>However, high-level packages, like Iron or Piston, may want the ability to curate a number of packages for easy installation. The current Cargo system allows them to curate a number of mandatory dependencies into a single package for easy installation.</p>
+<p>In some cases, packages may want to provide additional curation for optional dependencies:</p>
+<ul>
+<li>grouping a number of low-level optional dependencies together into a single high-level feature;</li>
+<li>specifying packages that are recommended (or suggested) to be included by users of the package; and</li>
+<li>including a feature (like <code>secure-password</code> in the motivating example) that will only work if an optional dependency is available, and would be difficult to implement as a separate package (for example, it may be overly difficult to design an IO package to be completely decoupled from OpenSSL, with opt-in via the inclusion of a separate package).</li>
+</ul>
+<p>In almost all cases, it is an antipattern to use these features outside of high-level packages that are designed for curation. If a feature is optional, it can almost certainly be expressed as a separate package.</p>
+<h3 id="the-workspace-section"><a class="header" href="#the-workspace-section">The <code>[workspace]</code> section</a></h3>
+<p>Packages can define a workspace which is a set of crates that will all share the same <code>Cargo.lock</code> and output directory. The <code>[workspace]</code> table can be defined as:</p>
+<pre><code class="language-toml">[workspace]
+
+# Optional key, inferred from path dependencies if not present.
+# Additional non-path dependencies that should be included must be given here.
+# In particular, for a virtual manifest, all members have to be listed.
+members = ["path/to/member1", "path/to/member2", "path/to/member3/*"]
+
+# Optional key, empty if not present.
+exclude = ["path1", "path/to/dir2"]
+</code></pre>
+<p>Workspaces were added to Cargo as part of <a href="https://github.com/rust-lang/rfcs/blob/master/text/1525-cargo-workspace.md">RFC 1525</a> and have a number of properties:</p>
+<ul>
+<li>A workspace can contain multiple crates where one of them is the <em>root crate</em>.</li>
+<li>The <em>root crate</em>'s <code>Cargo.toml</code> contains the <code>[workspace]</code> table, but is not required to have other configuration.</li>
+<li>Whenever any crate in the workspace is compiled, output is placed in the <em>workspace root</em>. i.e. next to the <em>root crate</em>'s <code>Cargo.toml</code>.</li>
+<li>The lock file for all crates in the workspace resides in the <em>workspace root</em>.</li>
+<li>The <code>[patch]</code>, <code>[replace]</code> and <code>[profile.*]</code> sections in <code>Cargo.toml</code> are only recognized in the <em>root crate</em>'s manifest, and ignored in member crates' manifests.</li>
+</ul>
+<p>The <em>root crate</em> of a workspace, indicated by the presence of <code>[workspace]</code> in its manifest, is responsible for defining the entire workspace. All <code>path</code> dependencies residing in the workspace directory become members. You can add additional packages to the workspace by listing them in the <code>members</code> key. Note that members of the workspaces listed explicitly will also have their path dependencies included in the workspace. Sometimes a package may have a lot of workspace members and it can be onerous to keep up to date. The path dependency can also use <a href="https://docs.rs/glob/0.2.11/glob/struct.Pattern.html">globs</a> to match multiple paths. Finally, the <code>exclude</code> key can be used to blacklist paths from being included in a workspace. This can be useful if some path dependencies aren't desired to be in the workspace at all.</p>
+<p>The <code>package.workspace</code> manifest key (described above) is used in member crates to point at a workspace's root crate. If this key is omitted then it is inferred to be the first crate whose manifest contains <code>[workspace]</code> upwards in the filesystem.</p>
+<p>A crate may either specify <code>package.workspace</code> or specify <code>[workspace]</code>. That is, a crate cannot both be a root crate in a workspace (contain <code>[workspace]</code>) and also be a member crate of another workspace (contain <code>package.workspace</code>).</p>
+<p>Most of the time workspaces will not need to be dealt with as <code>cargo new</code> and <code>cargo init</code> will handle workspace configuration automatically.</p>
+<h4 id="virtual-manifest"><a class="header" href="#virtual-manifest">Virtual Manifest</a></h4>
+<p>In workspace manifests, if the <code>package</code> table is present, the workspace root crate will be treated as a normal package, as well as a workspace. If the <code>package</code> table is not present in a workspace manifest, it is called a <em>virtual manifest</em>.</p>
+<h4 id="package-selection"><a class="header" href="#package-selection">Package selection</a></h4>
+<p>In a workspace, package-related cargo commands like <code>cargo build</code> apply to packages selected by <code>-p</code> / <code>--package</code> or <code>--all</code> command-line parameters. When neither is specified, the optional <code>default-members</code> configuration is used:</p>
+<pre><code class="language-toml">[workspace]
+members = ["path/to/member1", "path/to/member2", "path/to/member3/*"]
+default-members = ["path/to/member2", "path/to/member3/foo"]
+</code></pre>
+<p>When specified, <code>default-members</code> must expand to a subset of <code>members</code>.</p>
+<p>When <code>default-members</code> is not specified, the default is the root manifest if it is a package, or every member manifest (as if <code>--all</code> were specified on the command-line) for virtual workspaces.</p>
+<h3 id="the-project-layout"><a class="header" href="#the-project-layout">The project layout</a></h3>
+<p>If your package is an executable, name the main source file <code>src/main.rs</code>. If it is a library, name the main source file <code>src/lib.rs</code>.</p>
+<p>Cargo will also treat any files located in <code>src/bin/*.rs</code> as executables. If your executable consists of more than just one source file, you might also use a directory inside <code>src/bin</code> containing a <code>main.rs</code> file which will be treated as an executable with a name of the parent directory. Do note, however, once you add a <code>[[bin]]</code> section (<a href="#configuring-a-target">see below</a>), Cargo will no longer automatically build files located in <code>src/bin/*.rs</code>.  Instead you must create a <code>[[bin]]</code> section for each file you want to build.</p>
+<p>Your package can optionally contain folders named <code>examples</code>, <code>tests</code>, and <code>benches</code>, which Cargo will treat as containing examples, integration tests, and benchmarks respectively. Analogous to <code>bin</code> targets, they may be composed of single files or directories with a <code>main.rs</code> file.</p>
+<pre><code>▾ src/           # directory containing source files
+  lib.rs         # the main entry point for libraries and packages
+  main.rs        # the main entry point for packages producing executables
+  ▾ bin/         # (optional) directory containing additional executables
+    *.rs
+  ▾ */           # (optional) directories containing multi-file executables
+    main.rs
+▾ examples/      # (optional) examples
+  *.rs
+  ▾ */           # (optional) directories containing multi-file examples
+    main.rs
+▾ tests/         # (optional) integration tests
+  *.rs
+  ▾ */           # (optional) directories containing multi-file tests
+    main.rs
+▾ benches/       # (optional) benchmarks
+  *.rs
+  ▾ */           # (optional) directories containing multi-file benchmarks
+    main.rs
+</code></pre>
+<p>To structure your code after you've created the files and folders for your package, you should remember to use Rust's module system, which you can read about in <a href="https://doc.rust-lang.org/book/crates-and-modules.html">the book</a>.</p>
+<h3 id="examples"><a class="header" href="#examples">Examples</a></h3>
+<p>Files located under <code>examples</code> are example uses of the functionality provided by the library. When compiled, they are placed in the <code>target/examples</code> directory.</p>
+<p>They can compile either as executables (with a <code>main()</code> function) or libraries and pull in the library by using <code>extern crate &lt;library-name&gt;</code>. They are compiled when you run your tests to protect them from bitrotting.</p>
+<p>You can run individual executable examples with the command <code>cargo run --example &lt;example-name&gt;</code>.</p>
+<p>Specify <code>crate-type</code> to make an example be compiled as a library (additional information about crate types is available in <a href="https://doc.rust-lang.org/reference/linkage.html">The Rust Reference</a>):</p>
+<pre><code class="language-toml">[[example]]
+name = "foo"
+crate-type = ["staticlib"]
+</code></pre>
+<p>You can build individual library examples with the command <code>cargo build --example &lt;example-name&gt;</code>.</p>
+<h3 id="tests"><a class="header" href="#tests">Tests</a></h3>
+<p>When you run <code>cargo test</code>, Cargo will:</p>
+<ul>
+<li>compile and run your library’s unit tests, which are in the files reachable from <code>lib.rs</code> (naturally, any sections marked with <code>#[cfg(test)]</code> will be considered at this stage);</li>
+<li>compile and run your library’s documentation tests, which are embedded inside of documentation blocks;</li>
+<li>compile and run your library’s <a href="#integration-tests">integration tests</a>; and</li>
+<li>compile your library’s examples.</li>
+</ul>
+<h4 id="integration-tests"><a class="header" href="#integration-tests">Integration tests</a></h4>
+<p>Each file in <code>tests/*.rs</code> is an integration test. When you run <code>cargo test</code>, Cargo will compile each of these files as a separate crate. The crate can link to your library by using <code>extern crate &lt;library-name&gt;</code>, like any other code that depends on it.</p>
+<p>Cargo will not automatically compile files inside subdirectories of <code>tests</code>, but an integration test can import modules from these directories as usual. For example, if you want several integration tests to share some code, you can put the shared code in <code>tests/common/mod.rs</code> and then put <code>mod common;</code> in each of the test files.</p>
+<h3 id="configuring-a-target"><a class="header" href="#configuring-a-target">Configuring a target</a></h3>
+<p>All of the  <code>[[bin]]</code>, <code>[lib]</code>, <code>[[bench]]</code>, <code>[[test]]</code>, and <code>[[example]]</code> sections support similar configuration for specifying how a target should be built. The double-bracket sections like <code>[[bin]]</code> are array-of-table of <a href="https://github.com/toml-lang/toml#array-of-tables">TOML</a>, which means you can write more than one <code>[[bin]]</code> section to make several executables in your crate.</p>
+<p>The example below uses <code>[lib]</code>, but it also applies to all other sections as well. All values listed are the defaults for that option unless otherwise specified.</p>
+<pre><code class="language-toml">[package]
+# ...
+
+[lib]
+# The name of a target is the name of the library that will be generated. This
+# is defaulted to the name of the package, with any dashes replaced
+# with underscores. (Rust `extern crate` declarations reference this name;
+# therefore the value must be a valid Rust identifier to be usable.)
+name = "foo"
+
+# This field points at where the crate is located, relative to the `Cargo.toml`.
+path = "src/lib.rs"
+
+# A flag for enabling unit tests for this target. This is used by `cargo test`.
+test = true
+
+# A flag for enabling documentation tests for this target. This is only relevant
+# for libraries, it has no effect on other sections. This is used by
+# `cargo test`.
+doctest = true
+
+# A flag for enabling benchmarks for this target. This is used by `cargo bench`.
+bench = true
+
+# A flag for enabling documentation of this target. This is used by `cargo doc`.
+doc = true
+
+# If the target is meant to be a compiler plugin, this field must be set to true
+# for Cargo to correctly compile it and make it available for all dependencies.
+plugin = false
+
+# If the target is meant to be a "macros 1.1" procedural macro, this field must
+# be set to true.
+proc-macro = false
+
+# If set to false, `cargo test` will omit the `--test` flag to rustc, which
+# stops it from generating a test harness. This is useful when the binary being
+# built manages the test runner itself.
+harness = true
+
+# If set then a target can be configured to use a different edition than the
+# `[package]` is configured to use, perhaps only compiling a library with the
+# 2018 edition or only compiling one unit test with the 2015 edition. By default
+# all targets are compiled with the edition specified in `[package]`.
+edition = '2015'
+
+# Here's an example of a TOML "array of tables" section, in this case specifying
+# a binary target name and path.
+[[bin]]
+name = "my-cool-binary"
+path = "src/my-cool-binary.rs"
+</code></pre>
+<p>The <code>[package]</code> also includes the optional <code>autobins</code>, <code>autoexamples</code>, <code>autotests</code>, and <code>autobenches</code> keys to explicitly opt-in or opt-out of auto-discovering specific target kinds.</p>
+<h4 id="the-required-features-field-optional"><a class="header" href="#the-required-features-field-optional">The <code>required-features</code> field (optional)</a></h4>
+<p>The <code>required-features</code> field specifies which features the target needs in order to be built. If any of the required features are not selected, the target will be skipped. This is only relevant for the <code>[[bin]]</code>, <code>[[bench]]</code>, <code>[[test]]</code>, and <code>[[example]]</code> sections, it has no effect on <code>[lib]</code>.</p>
+<pre><code class="language-toml">[features]
+# ...
+postgres = []
+sqlite = []
+tools = []
+
+[[bin]]
+# ...
+required-features = ["postgres", "tools"]
+</code></pre>
+<h4 id="building-dynamic-or-static-libraries"><a class="header" href="#building-dynamic-or-static-libraries">Building dynamic or static libraries</a></h4>
+<p>If your package produces a library, you can specify which kind of library to build by explicitly listing the library in your <code>Cargo.toml</code>:</p>
+<pre><code class="language-toml"># ...
+
+[lib]
+name = "..."
+crate-type = ["dylib"] # could be `staticlib` as well
+</code></pre>
+<p>The available options are <code>dylib</code>, <code>rlib</code>, <code>staticlib</code>, <code>cdylib</code>, and <code>proc-macro</code>. You should only use this option in a package. Cargo will always compile packages (dependencies) based on the requirements of the package that includes them.</p>
+<p>You can read more about the different crate types in the <a href="https://doc.rust-lang.org/reference/linkage.html">Rust Reference Manual</a></p>
+<h3 id="the-patch-section"><a class="header" href="#the-patch-section">The <code>[patch]</code> Section</a></h3>
+<p>This section of Cargo.toml can be used to <a href="reference/specifying-dependencies.html#overriding-dependencies">override dependencies</a> with other copies. The syntax is similar to the <code>[dependencies]</code> section:</p>
+<pre><code class="language-toml">[patch.crates-io]
+foo = { git = 'https://github.com/example/foo' }
+bar = { path = 'my/local/bar' }
+
+[dependencies.baz]
+git = 'https://github.com/example/baz'
+
+[patch.'https://github.com/example/baz']
+baz = { git = 'https://github.com/example/patched-baz', branch = 'my-branch' }
+</code></pre>
+<p>The <code>[patch]</code> table is made of dependency-like sub-tables. Each key after <code>[patch]</code> is a URL of the source that's being patched, or <code>crates-io</code> if you're modifying the https://crates.io registry. In the example above <code>crates-io</code> could be replaced with a git URL such as <code>https://github.com/rust-lang-nursery/log</code>; the second <code>[patch]</code> section in the example uses this to specify a source called <code>baz</code>.</p>
+<p>Each entry in these tables is a normal dependency specification, the same as found in the <code>[dependencies]</code> section of the manifest. The dependencies listed in the <code>[patch]</code> section are resolved and used to patch the source at the URL specified. The above manifest snippet patches the <code>crates-io</code> source (e.g. crates.io itself) with the <code>foo</code> crate and <code>bar</code> crate. It also patches the <code>https://github.com/example/baz</code> source with a <code>my-branch</code> that comes from elsewhere.</p>
+<p>Sources can be patched with versions of crates that do not exist, and they can also be patched with versions of crates that already exist. If a source is patched with a crate version that already exists in the source, then the source's original crate is replaced.</p>
+<p>More information about overriding dependencies can be found in the <a href="reference/specifying-dependencies.html#overriding-dependencies">overriding dependencies</a> section of the documentation and <a href="https://github.com/rust-lang/rfcs/pull/1969">RFC 1969</a> for the technical specification of this feature.</p>
+<h3 id="the-replace-section"><a class="header" href="#the-replace-section">The <code>[replace]</code> Section</a></h3>
+<p>This section of Cargo.toml can be used to <a href="reference/specifying-dependencies.html#overriding-dependencies">override dependencies</a> with other copies. The syntax is similar to the <code>[dependencies]</code> section:</p>
+<pre><code class="language-toml">[replace]
+"foo:0.1.0" = { git = 'https://github.com/example/foo' }
+"bar:1.0.2" = { path = 'my/local/bar' }
+</code></pre>
+<p>Each key in the <code>[replace]</code> table is a <a href="reference/pkgid-spec.html">package id specification</a> which allows arbitrarily choosing a node in the dependency graph to override. The value of each key is the same as the <code>[dependencies]</code> syntax for specifying dependencies, except that you can't specify features. Note that when a crate is overridden the copy it's overridden with must have both the same name and version, but it can come from a different source (e.g. git or a local path).</p>
+<p>More information about overriding dependencies can be found in the <a href="reference/specifying-dependencies.html#overriding-dependencies">overriding dependencies</a> section of the documentation.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../reference/specifying-dependencies.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../reference/config.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../reference/specifying-dependencies.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../reference/config.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>
