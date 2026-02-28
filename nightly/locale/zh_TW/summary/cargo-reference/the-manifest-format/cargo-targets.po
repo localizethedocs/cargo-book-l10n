@@ -24,6 +24,11 @@ msgid ""
 "toml` manifest, often [inferred automatically](#target-auto-discovery) by "
 "the [directory layout](../guide/project-layout.md) of the source files."
 msgstr ""
+"Cargo 軟體包是由 _目標_ 組成的，這些目標對應到可編譯成軟體箱的來源檔。軟體包"
+"可以擁有[程式庫](#library)、[二進位檔](#binaries)、[範例](#examples)、[測試]"
+"(#tests)以及[基準測試](#benchmarks)目標。目標列表可以在 `Cargo.toml` 清單中進"
+"行組態，通常也會根據來源檔的[目錄配置](../guide/project-layout.md)[自動推導]"
+"(#target-auto-discovery)出來。\n"
 
 #: src/reference/cargo-targets.md:10
 msgid ""
@@ -33,7 +38,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:13
 msgid "Library"
-msgstr ""
+msgstr "程式庫"
 
 #: src/reference/cargo-targets.md:15
 msgid ""
@@ -171,6 +176,8 @@ msgid ""
 "`#[test]` functions, which is linked with the project's library and has "
 "access to its _public_ API."
 msgstr ""
+"_整合測試_ 是一個獨立的可執行二進位檔，同樣包含 `#[test]` 函式，它會與專案的"
+"程式庫連結，並能存取其 _公有_ API。"
 
 #: src/reference/cargo-targets.md:96
 msgid ""
@@ -194,7 +201,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:111
 msgid "Integration tests"
-msgstr ""
+msgstr "整合測試"
 
 #: src/reference/cargo-targets.md:113
 msgid ""
@@ -202,6 +209,9 @@ msgid ""
 "integration tests. When you run [`cargo test`](../commands/cargo-test.md), "
 "Cargo will compile each of these files as a separate crate, and execute them."
 msgstr ""
+"位於 [`tests` 目錄](../guide/project-layout.md)下的檔案是整合測試。當您執行 "
+"[`cargo test`](../commands/cargo-test.md) 時，Cargo 會將這些檔案中的每一個都"
+"編譯為獨立的軟體箱並執行。"
 
 #: src/reference/cargo-targets.md:117
 msgid ""
@@ -244,7 +254,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:144
 msgid "Benchmarks"
-msgstr ""
+msgstr "基準測試"
 
 #: src/reference/cargo-targets.md:146
 msgid ""
@@ -272,6 +282,7 @@ msgid ""
 "[The `bench` field](#the-bench-field) can be used to define which targets "
 "are benchmarked by default."
 msgstr ""
+"[`bench` 欄位](#bench-欄位)可用於定義預設情況下要對哪些目標進行基準測試。"
 
 #: src/reference/cargo-targets.md:157
 msgid ""
@@ -291,7 +302,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:167
 msgid "Configuring a target"
-msgstr ""
+msgstr "組態目標"
 
 #: src/reference/cargo-targets.md:169
 msgid ""
@@ -360,7 +371,7 @@ msgstr "`path` 欄位"
 msgid ""
 "The `path` field specifies where the source for the crate is located, "
 "relative to the `Cargo.toml` file."
-msgstr ""
+msgstr "`path` 欄位指定了該軟體箱的來源碼相對於 `Cargo.toml` 檔案所在的位置。"
 
 #: src/reference/cargo-targets.md:213
 msgid ""
@@ -434,7 +445,7 @@ msgstr "`plugin` 欄位"
 
 #: src/reference/cargo-targets.md:249
 msgid "This option is deprecated and unused."
-msgstr ""
+msgstr "該選項已棄用且不再使用。"
 
 #: src/reference/cargo-targets.md:251
 msgid "The `proc-macro` field"
@@ -493,15 +504,15 @@ msgstr "目標"
 
 #: src/reference/cargo-targets.md:279
 msgid "Crate Type"
-msgstr ""
+msgstr "軟體箱型別"
 
 #: src/reference/cargo-targets.md:281
 msgid "Normal library"
-msgstr ""
+msgstr "普通程式庫"
 
 #: src/reference/cargo-targets.md:281
 msgid "`\"lib\"`"
-msgstr ""
+msgstr "`\"lib\"`"
 
 #: src/reference/cargo-targets.md:282
 msgid "Proc-macro library"
@@ -509,7 +520,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:282
 msgid "`\"proc-macro\"`"
-msgstr ""
+msgstr "`\"proc-macro\"`"
 
 #: src/reference/cargo-targets.md:283
 msgid "Example"
@@ -517,7 +528,7 @@ msgstr "範例"
 
 #: src/reference/cargo-targets.md:283
 msgid "`\"bin\"`"
-msgstr ""
+msgstr "`\"bin\"`"
 
 #: src/reference/cargo-targets.md:285
 msgid ""
@@ -525,6 +536,9 @@ msgid ""
 "`staticlib`, and `proc-macro`. You can read more about the different crate "
 "types in the [Rust Reference Manual](../../reference/linkage.html)."
 msgstr ""
+"可用的選項有 `bin`、`lib`、`rlib`、`dylib`、`cdylib`、`staticlib` 和 `proc-"
+"macro`。您可以在 [Rust 參考手冊](../../reference/linkage.html)中閱讀更多關於"
+"不同軟體箱型別的資訊。"
 
 #: src/reference/cargo-targets.md:289
 msgid "The `required-features` field"
@@ -572,7 +586,7 @@ msgstr ""
 
 #: src/reference/cargo-targets.md:316
 msgid "Target auto-discovery"
-msgstr ""
+msgstr "目標自動探索"
 
 #: src/reference/cargo-targets.md:318
 msgid ""

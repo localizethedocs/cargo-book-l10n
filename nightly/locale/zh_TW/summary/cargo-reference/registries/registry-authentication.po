@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/reference/registry-authentication.md:1
 msgid "Registry Authentication"
-msgstr ""
+msgstr "註冊表認證"
 
 #: src/reference/registry-authentication.md:2
 msgid ""

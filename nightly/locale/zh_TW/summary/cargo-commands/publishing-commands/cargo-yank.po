@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/commands/cargo-yank.md:1
 msgid "cargo-yank(1)"
-msgstr ""
+msgstr "cargo-yank(1)"
 
 #: src/commands/cargo-yank.md:3
 msgid "NAME"

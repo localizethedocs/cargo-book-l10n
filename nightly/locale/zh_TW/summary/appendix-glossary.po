@@ -42,7 +42,7 @@ msgstr "Cargo.lock"
 
 #: src/appendix/glossary.md:16
 msgid "See [_lock file_](#lock-file)."
-msgstr "請參見 [_鎖定檔_](#lock-file)。"
+msgstr "請參見 [_鎖定檔_](#鎖定檔lock-file)。"
 
 #: src/appendix/glossary.md:18
 msgid "Cargo.toml"
@@ -50,7 +50,7 @@ msgstr "Cargo.toml"
 
 #: src/appendix/glossary.md:20
 msgid "See [_manifest_](#manifest)."
-msgstr "請參見 [_清單_](#manifest)。"
+msgstr "請參見 [_清單_](#清單manifest)。"
 
 #: src/appendix/glossary.md:22
 msgid "Crate"
@@ -383,12 +383,11 @@ msgid ""
 "in the `Cargo.toml` [_manifest_](#manifest), often inferred automatically by "
 "the [directory layout](../guide/project-layout.md) of the source files."
 msgstr ""
-"**Cargo 目標（Cargo Target）** --- Cargo 的 [_軟體包_](#軟體包package) 是由 _"
-"目標_ 組成的，這些目標對應到將會生成的 [_製品_](#製品artifact)。軟體包可以擁"
-"有程式庫、執行檔、範例、測試與基準測試目標。[目標列表](../reference/cargo-"
-"targets.md#configuring-a-target)是在 `Cargo.toml` 的 [_清單_](#清單manifest) "
-"中設定的，通常會根據來源檔的[_目錄配置_](../guide/project-layout.md)自動推"
-"斷。"
+"**Cargo 目標（Cargo Target）** --- Cargo [_軟體包_](#軟體包package) 是由 _目"
+"標_ 組成的，這些目標對應到將會生成的 [_製品_](#製品artifact)。軟體包可以擁有"
+"程式庫、執行檔、範例、測試與基準測試目標。[目標列表](../reference/cargo-"
+"targets.md#configuring-a-target)是在 `Cargo.toml` [_清單_](#清單manifest) 中"
+"設定的，通常會根據來源檔的[_目錄配置_](../guide/project-layout.md)自動推斷。"
 
 #: src/appendix/glossary.md:191
 msgid ""

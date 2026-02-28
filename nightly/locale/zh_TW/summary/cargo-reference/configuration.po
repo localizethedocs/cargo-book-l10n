@@ -1258,7 +1258,7 @@ msgstr ""
 #: src/reference/config.md:690 src/reference/config.md:694
 #: src/reference/config.md:1336
 msgid "This option is deprecated and unused."
-msgstr ""
+msgstr "該選項已棄用且不再使用。"
 
 #: src/reference/config.md:692
 msgid "`cargo-new.email`"

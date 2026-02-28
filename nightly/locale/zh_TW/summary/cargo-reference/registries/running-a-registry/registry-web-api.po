@@ -147,7 +147,7 @@ msgstr ""
 
 #: src/reference/registry-web-api.md:68
 msgid "The `.crate` file."
-msgstr ""
+msgstr "`.crate` 檔案。"
 
 #: src/reference/registry-web-api.md:70
 msgid ""
