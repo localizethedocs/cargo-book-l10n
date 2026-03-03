@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-01-24T08:27:44Z\n"
+"POT-Creation-Date: 2026-03-03T09:10:17Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/reference/environment-variables.md:1
@@ -576,7 +576,7 @@ msgstr ""
 
 #: src/reference/environment-variables.md:233
 #: src/reference/environment-variables.md:327
-#: src/reference/environment-variables.md:455
+#: src/reference/environment-variables.md:461
 msgid "`CARGO` --- Path to the `cargo` binary performing the build."
 msgstr ""
 
@@ -922,7 +922,16 @@ msgstr ""
 msgid "Some cfg values like `test` are not available."
 msgstr ""
 
-#: src/reference/environment-variables.md:368
+#: src/reference/environment-variables.md:369
+msgid ""
+"**Tip:** For a typed API to read these values, consider using the [`build-"
+"rs`](https://crates.io/crates/build-rs) crate instead of parsing environment "
+"variables manually. Also note that `CARGO_CFG_*` variables should be used "
+"instead of the `cfg!` macro or `#[cfg]` attribute in build scripts, those "
+"check the _host_ platform, not the _target_."
+msgstr ""
+
+#: src/reference/environment-variables.md:373
 msgid ""
 "`OUT_DIR` --- the folder in which all output and intermediate artifacts "
 "should be placed. This folder is inside the build directory for the package "
@@ -932,18 +941,18 @@ msgid ""
 "and are responsible for managing or cleaning up any files they create."
 msgstr ""
 
-#: src/reference/environment-variables.md:374
+#: src/reference/environment-variables.md:379
 msgid ""
 "`TARGET` --- the target triple that is being compiled for. Native code "
 "should be compiled for this triple. See the [Target Triple](../appendix/"
 "glossary.md#target) description for more information."
 msgstr ""
 
-#: src/reference/environment-variables.md:376
+#: src/reference/environment-variables.md:381
 msgid "`HOST` --- the host triple of the Rust compiler."
 msgstr ""
 
-#: src/reference/environment-variables.md:377
+#: src/reference/environment-variables.md:382
 msgid ""
 "`NUM_JOBS` --- the parallelism specified as the top-level parallelism. This "
 "can be useful to pass a `-j` parameter to a system like `make`. Note that "
@@ -955,19 +964,19 @@ msgid ""
 "html_node/Job-Slots.html) for sub-make invocations."
 msgstr ""
 
-#: src/reference/environment-variables.md:384
+#: src/reference/environment-variables.md:389
 msgid ""
 "`DEBUG` --- `true` if any [`debug`](profiles.md#debug) information will be "
 "generated and `false` otherwise."
 msgstr ""
 
-#: src/reference/environment-variables.md:385
+#: src/reference/environment-variables.md:390
 msgid ""
 "`OPT_LEVEL` --- values of the corresponding [`opt-level`](profiles.md#opt-"
 "level) variable for the profile currently being built."
 msgstr ""
 
-#: src/reference/environment-variables.md:386
+#: src/reference/environment-variables.md:391
 msgid ""
 "`PROFILE` --- `release` for release builds, `debug` for other builds. This "
 "is determined based on if the [profile](profiles.md) inherits from the "
@@ -977,33 +986,33 @@ msgid ""
 "settings being used."
 msgstr ""
 
-#: src/reference/environment-variables.md:391
+#: src/reference/environment-variables.md:396
 msgid ""
 "`DEP_<links>_<key>` --- For more information about this set of environment "
 "variables, see build script documentation about [`links`](build-scripts."
 "md#the-links-manifest-key)."
 msgstr ""
 
-#: src/reference/environment-variables.md:393
+#: src/reference/environment-variables.md:398
 msgid ""
 "`RUSTC`, `RUSTDOC` --- the compiler and documentation generator that Cargo "
 "has resolved to use, passed to the build script so it might use it as well."
 msgstr ""
 
-#: src/reference/environment-variables.md:395
+#: src/reference/environment-variables.md:400
 msgid ""
 "`RUSTC_WRAPPER` --- the `rustc` wrapper, if any, that Cargo is using. See "
 "[`build.rustc-wrapper`](config.md#buildrustc-wrapper)."
 msgstr ""
 
-#: src/reference/environment-variables.md:396
+#: src/reference/environment-variables.md:401
 msgid ""
 "`RUSTC_WORKSPACE_WRAPPER` --- the `rustc` wrapper, if any, that Cargo is "
 "using for workspace members. See [`build.rustc-workspace-wrapper`](config."
 "md#buildrustc-workspace-wrapper)."
 msgstr ""
 
-#: src/reference/environment-variables.md:398
+#: src/reference/environment-variables.md:403
 msgid ""
 "`RUSTC_LINKER` --- The path to the linker binary that Cargo has resolved to "
 "use for the current target, if specified. The linker can be changed by "
@@ -1011,7 +1020,7 @@ msgid ""
 "configuration](config.md) for more information."
 msgstr ""
 
-#: src/reference/environment-variables.md:402
+#: src/reference/environment-variables.md:407
 msgid ""
 "`CARGO_ENCODED_RUSTFLAGS` --- extra flags that Cargo invokes `rustc` with, "
 "separated by a `0x1f` character (ASCII Unit Separator). See [`build."
@@ -1020,28 +1029,28 @@ msgid ""
 "`CARGO_ENCODED_RUSTFLAGS` instead."
 msgstr ""
 
-#: src/reference/environment-variables.md:406
+#: src/reference/environment-variables.md:411
 msgid ""
 "`CARGO_PKG_<var>` --- The package information variables, with the same names "
 "and values as are [provided during crate building](#environment-variables-"
 "cargo-sets-for-crates)."
 msgstr ""
 
-#: src/reference/environment-variables.md:433
+#: src/reference/environment-variables.md:439
 msgid "Environment variables Cargo sets for `cargo test`"
 msgstr ""
 
-#: src/reference/environment-variables.md:435
+#: src/reference/environment-variables.md:441
 msgid ""
 "Cargo sets several environment variables when tests are run. You can "
 "retrieve the values when the tests are run:"
 msgstr ""
 
-#: src/reference/environment-variables.md:440
+#: src/reference/environment-variables.md:446
 msgid "\"CARGO_BIN_EXE_foo\""
 msgstr ""
 
-#: src/reference/environment-variables.md:443
+#: src/reference/environment-variables.md:449
 msgid ""
 "`CARGO_BIN_EXE_<name>` --- The absolute path to a binary target's "
 "executable. This is only set when running an [integration test](cargo-"
@@ -1051,17 +1060,17 @@ msgid ""
 "built, unless the binary has required features that are not enabled."
 msgstr ""
 
-#: src/reference/environment-variables.md:450
+#: src/reference/environment-variables.md:456
 msgid "Environment variables Cargo sets for 3rd party subcommands"
 msgstr ""
 
-#: src/reference/environment-variables.md:452
+#: src/reference/environment-variables.md:458
 msgid ""
 "Cargo exposes this environment variable to 3rd party subcommands (ie. "
 "programs named `cargo-foobar` placed in `$PATH`):"
 msgstr ""
 
-#: src/reference/environment-variables.md:456
+#: src/reference/environment-variables.md:462
 msgid ""
 "`CARGO_MAKEFLAGS` --- Contains parameters needed for Cargo's [jobserver]"
 "(https://www.gnu.org/software/make/manual/html_node/Job-Slots.html) "
@@ -1069,7 +1078,7 @@ msgid ""
 "detects the existence of a jobserver."
 msgstr ""
 
-#: src/reference/environment-variables.md:460
+#: src/reference/environment-variables.md:466
 msgid ""
 "For extended information about your environment you may run `cargo metadata`."
 msgstr ""
