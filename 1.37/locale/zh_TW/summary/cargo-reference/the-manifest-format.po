@@ -41,7 +41,7 @@ msgstr ""
 
 #: src/reference/manifest.md:17
 msgid "The `name` field"
-msgstr ""
+msgstr "`name` 欄位"
 
 #: src/reference/manifest.md:19
 msgid ""
@@ -579,7 +579,7 @@ msgstr ""
 
 #: src/reference/manifest.md:367
 msgid "The `default-run` field"
-msgstr ""
+msgstr "`default-run` 欄位"
 
 #: src/reference/manifest.md:369
 msgid ""
