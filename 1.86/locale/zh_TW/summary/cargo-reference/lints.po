@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/reference/lints.md:1
 msgid "Lints"
-msgstr ""
+msgstr "梳理"
 
 #: src/reference/lints.md:3
 msgid ""
@@ -43,7 +43,7 @@ msgstr ""
 
 #: src/reference/lints.md:13
 msgid "What it does"
-msgstr ""
+msgstr "它在做什麼"
 
 #: src/reference/lints.md:14
 msgid "Checks for unknown lints in the `[lints.cargo]` table"
