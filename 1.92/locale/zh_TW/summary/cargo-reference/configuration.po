@@ -61,7 +61,7 @@ msgstr ""
 
 #: src/reference/config.md:21
 msgid "Windows: `%USERPROFILE%\\.cargo\\config.toml`"
-msgstr ""
+msgstr "Windows：`%USERPROFILE%\\.cargo\\config.toml`"
 
 #: src/reference/config.md:22
 msgid "Unix: `$HOME/.cargo/config.toml`"
@@ -1154,7 +1154,7 @@ msgstr ""
 #: src/reference/config.md:638 src/reference/config.md:642
 #: src/reference/config.md:1284
 msgid "This option is deprecated and unused."
-msgstr ""
+msgstr "該選項已棄用且不再使用。"
 
 #: src/reference/config.md:640
 msgid "`cargo-new.email`"
