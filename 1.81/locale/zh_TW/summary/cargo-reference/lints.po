@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/reference/lints.md:1
 msgid "Lints"
-msgstr ""
+msgstr "梳理"
 
 #: src/reference/lints.md:3
 msgid ""
@@ -60,7 +60,7 @@ msgstr ""
 #: src/reference/lints.md:19 src/reference/lints.md:63
 #: src/reference/lints.md:82
 msgid "What it does"
-msgstr ""
+msgstr "它在做什麼"
 
 #: src/reference/lints.md:20
 msgid "Checks for implicit features for optional dependencies"
