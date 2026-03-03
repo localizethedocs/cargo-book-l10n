@@ -165,7 +165,7 @@ msgstr ""
 
 #: src/SUMMARY.md:43
 msgid "SemVer Compatibility"
-msgstr ""
+msgstr "語義化版本相容性"
 
 #: src/SUMMARY.md:44
 msgid "Future incompat report"
@@ -321,7 +321,7 @@ msgstr "cargo uninstall"
 
 #: src/SUMMARY.md:83
 msgid "Publishing Commands"
-msgstr "發布命令"
+msgstr "發佈命令"
 
 #: src/SUMMARY.md:84
 msgid "cargo login"
