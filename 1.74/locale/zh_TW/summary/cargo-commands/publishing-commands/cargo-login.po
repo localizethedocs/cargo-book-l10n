@@ -76,7 +76,7 @@ msgstr "選項"
 
 #: src/commands/cargo-login.md:33
 msgid "Login Options"
-msgstr ""
+msgstr "登入選項"
 
 #: src/commands/cargo-login.md:45
 msgid "Display Options"
