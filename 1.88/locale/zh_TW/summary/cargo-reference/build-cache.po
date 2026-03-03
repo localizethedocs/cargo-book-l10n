@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/reference/build-cache.md:1
 msgid "Build cache"
-msgstr ""
+msgstr "建置快取"
 
 #: src/reference/build-cache.md:3
 msgid ""
@@ -39,7 +39,7 @@ msgstr ""
 #: src/reference/build-cache.md:43 src/reference/build-cache.md:51
 #: src/reference/build-cache.md:60
 msgid "Directory"
-msgstr ""
+msgstr "目錄"
 
 #: src/reference/build-cache.md:15 src/reference/build-cache.md:43
 #: src/reference/build-cache.md:51 src/reference/build-cache.md:60
