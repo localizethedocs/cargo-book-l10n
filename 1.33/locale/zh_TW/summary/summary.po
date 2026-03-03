@@ -221,7 +221,7 @@ msgstr ""
 
 #: src/SUMMARY.md:58
 msgid "Publishing Commands"
-msgstr "發布命令"
+msgstr "發佈命令"
 
 #: src/SUMMARY.md:59
 msgid "login"
