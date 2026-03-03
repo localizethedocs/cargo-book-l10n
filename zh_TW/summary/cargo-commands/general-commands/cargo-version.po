@@ -1,0 +1,68 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:40:19Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/commands/cargo-version.md:1
+msgid "cargo-version(1)"
+msgstr "cargo-version(1)"
+
+#: src/commands/cargo-version.md:3
+msgid "NAME"
+msgstr "名稱"
+
+#: src/commands/cargo-version.md:5
+msgid "cargo-version - Show version information"
+msgstr ""
+
+#: src/commands/cargo-version.md:7
+msgid "SYNOPSIS"
+msgstr "概要"
+
+#: src/commands/cargo-version.md:9
+msgid "`cargo version` \\[_options_\\]"
+msgstr "`cargo version` \\[_選項_\\]"
+
+#: src/commands/cargo-version.md:11
+msgid "DESCRIPTION"
+msgstr "描述"
+
+#: src/commands/cargo-version.md:13
+msgid "Displays the version of Cargo."
+msgstr "顯示 Cargo 的版本。"
+
+#: src/commands/cargo-version.md:15
+msgid "OPTIONS"
+msgstr "選項"
+
+#: src/commands/cargo-version.md:26
+msgid "EXAMPLES"
+msgstr "範例"
+
+#: src/commands/cargo-version.md:28
+msgid "Display the version:"
+msgstr "顯示版本："
+
+#: src/commands/cargo-version.md:32
+msgid "The version is also available via flags:"
+msgstr ""
+
+#: src/commands/cargo-version.md:37
+msgid "Display extra version information:"
+msgstr "顯示額外的版本資訊："
+
+#: src/commands/cargo-version.md:41
+msgid "SEE ALSO"
+msgstr "另請參見"
+
+#: src/commands/cargo-version.md:42
+msgid "[cargo(1)](cargo.html)"
+msgstr "[cargo(1)](cargo.html)"
