@@ -1,0 +1,177 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:35:43Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/commands/cargo-new.md:1
+msgid "cargo-new(1)"
+msgstr ""
+
+#: src/commands/cargo-new.md:3
+msgid "NAME"
+msgstr ""
+
+#: src/commands/cargo-new.md:5
+msgid "cargo-new - Create a new Cargo package"
+msgstr ""
+
+#: src/commands/cargo-new.md:7
+msgid "SYNOPSIS"
+msgstr ""
+
+#: src/commands/cargo-new.md:9
+msgid "`cargo new` \\[_options_\\] _path_"
+msgstr ""
+
+#: src/commands/cargo-new.md:11
+msgid "DESCRIPTION"
+msgstr ""
+
+#: src/commands/cargo-new.md:13
+msgid ""
+"This command will create a new Cargo package in the given directory. This "
+"includes a simple template with a `Cargo.toml` manifest, sample source file, "
+"and a VCS ignore file. If the directory is not already in a VCS repository, "
+"then a new repository is created (see `--vcs` below)."
+msgstr ""
+
+#: src/commands/cargo-new.md:18
+msgid ""
+"The \"authors\" field in the manifest is determined from the environment or "
+"configuration settings. A name is required and is determined from (first "
+"match wins):"
+msgstr ""
+
+#: src/commands/cargo-new.md:22
+msgid "`cargo-new.name` Cargo config value"
+msgstr ""
+
+#: src/commands/cargo-new.md:23
+msgid "`CARGO_NAME` environment variable"
+msgstr ""
+
+#: src/commands/cargo-new.md:24
+msgid "`GIT_AUTHOR_NAME` environment variable"
+msgstr ""
+
+#: src/commands/cargo-new.md:25
+msgid "`GIT_COMMITTER_NAME` environment variable"
+msgstr ""
+
+#: src/commands/cargo-new.md:26
+msgid "`user.name` git configuration value"
+msgstr ""
+
+#: src/commands/cargo-new.md:27
+msgid "`USER` environment variable"
+msgstr ""
+
+#: src/commands/cargo-new.md:28
+msgid "`USERNAME` environment variable"
+msgstr ""
+
+#: src/commands/cargo-new.md:29
+msgid "`NAME` environment variable"
+msgstr ""
+
+#: src/commands/cargo-new.md:31
+msgid "The email address is optional and is determined from:"
+msgstr ""
+
+#: src/commands/cargo-new.md:33
+msgid "`cargo-new.email` Cargo config value"
+msgstr ""
+
+#: src/commands/cargo-new.md:34
+msgid "`CARGO_EMAIL` environment variable"
+msgstr ""
+
+#: src/commands/cargo-new.md:35
+msgid "`GIT_AUTHOR_EMAIL` environment variable"
+msgstr ""
+
+#: src/commands/cargo-new.md:36
+msgid "`GIT_COMMITTER_EMAIL` environment variable"
+msgstr ""
+
+#: src/commands/cargo-new.md:37
+msgid "`user.email` git configuration value"
+msgstr ""
+
+#: src/commands/cargo-new.md:38
+msgid "`EMAIL` environment variable"
+msgstr ""
+
+#: src/commands/cargo-new.md:40
+msgid ""
+"See [the reference](../reference/config.html) for more information about "
+"configuration files."
+msgstr ""
+
+#: src/commands/cargo-new.md:44
+msgid ""
+"See [cargo-init(1)](cargo-init.html) for a similar command which will create "
+"a new manifest in an existing directory."
+msgstr ""
+
+#: src/commands/cargo-new.md:47
+msgid "OPTIONS"
+msgstr ""
+
+#: src/commands/cargo-new.md:49
+msgid "New Options"
+msgstr ""
+
+#: src/commands/cargo-new.md:91
+msgid "Display Options"
+msgstr ""
+
+#: src/commands/cargo-new.md:121
+msgid "Common Options"
+msgstr ""
+
+#: src/commands/cargo-new.md:145
+msgid "ENVIRONMENT"
+msgstr ""
+
+#: src/commands/cargo-new.md:147
+msgid ""
+"See [the reference](../reference/environment-variables.html) for details on "
+"environment variables that Cargo reads."
+msgstr ""
+
+#: src/commands/cargo-new.md:151
+msgid "EXIT STATUS"
+msgstr ""
+
+#: src/commands/cargo-new.md:153
+msgid "`0`: Cargo succeeded."
+msgstr ""
+
+#: src/commands/cargo-new.md:154
+msgid "`101`: Cargo failed to complete."
+msgstr ""
+
+#: src/commands/cargo-new.md:157
+msgid "EXAMPLES"
+msgstr ""
+
+#: src/commands/cargo-new.md:159
+msgid "Create a binary Cargo package in the given directory:"
+msgstr ""
+
+#: src/commands/cargo-new.md:163
+msgid "SEE ALSO"
+msgstr ""
+
+#: src/commands/cargo-new.md:164
+msgid "[cargo(1)](cargo.html), [cargo-init(1)](cargo-init.html)"
+msgstr ""
