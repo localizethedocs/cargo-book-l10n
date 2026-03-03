@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/appendix/git-authentication.md:1
 msgid "Git Authentication"
-msgstr ""
+msgstr "Git 認證"
 
 #: src/appendix/git-authentication.md:3
 msgid ""
@@ -40,7 +40,7 @@ msgstr ""
 
 #: src/appendix/git-authentication.md:17
 msgid "HTTPS authentication"
-msgstr ""
+msgstr "HTTPS 認證"
 
 #: src/appendix/git-authentication.md:19
 msgid ""
@@ -74,7 +74,7 @@ msgstr ""
 
 #: src/appendix/git-authentication.md:43
 msgid "SSH authentication"
-msgstr ""
+msgstr "SSH 認證"
 
 #: src/appendix/git-authentication.md:45
 msgid ""
@@ -114,7 +114,7 @@ msgstr ""
 
 #: src/appendix/git-authentication.md:65
 msgid "SSH Known Hosts"
-msgstr ""
+msgstr "SSH 已知主機"
 
 #: src/appendix/git-authentication.md:67
 msgid ""
