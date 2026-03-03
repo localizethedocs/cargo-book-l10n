@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/commands/deprecated-and-removed.md:1
 msgid "Deprecated and Removed Commands"
-msgstr ""
+msgstr "已棄用和已移除的命令"
 
 #: src/commands/deprecated-and-removed.md:3
 msgid ""

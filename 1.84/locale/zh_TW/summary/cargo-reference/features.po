@@ -669,7 +669,7 @@ msgstr ""
 
 #: src/reference/features.md:431
 msgid "Build scripts"
-msgstr ""
+msgstr "建置腳本"
 
 #: src/reference/features.md:433
 msgid ""
