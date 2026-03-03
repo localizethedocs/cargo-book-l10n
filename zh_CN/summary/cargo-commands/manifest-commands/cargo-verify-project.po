@@ -1,0 +1,112 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:49:29Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/commands/cargo-verify-project.md:1
+msgid "cargo-verify-project(1)"
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:3
+msgid "NAME"
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:5
+msgid "cargo-verify-project - Check correctness of crate manifest"
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:7
+msgid "SYNOPSIS"
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:9
+msgid "`cargo verify-project` \\[_options_\\]"
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:11
+msgid "DESCRIPTION"
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:13
+msgid ""
+"This command will parse the local manifest and check its validity. It emits "
+"a JSON object with the result. A successful validation will display:"
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:16
+msgid ""
+"    {\"success\":\"true\"}\n"
+"    "
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:18
+msgid "An invalid workspace will display:"
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:20
+msgid ""
+"    {\"invalid\":\"human-readable error message\"}\n"
+"    "
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:22
+msgid "OPTIONS"
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:24
+msgid "Display Options"
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:56
+msgid "Manifest Options"
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:93
+msgid "Common Options"
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:117
+msgid "ENVIRONMENT"
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:119
+msgid ""
+"See [the reference](../reference/environment-variables.html) for details on "
+"environment variables that Cargo reads."
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:123
+msgid "EXIT STATUS"
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:125
+msgid "`0`: The workspace is OK."
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:126
+msgid "`1`: The workspace is invalid."
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:128
+msgid "EXAMPLES"
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:130
+msgid "Check the current workspace for errors:"
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:134
+msgid "SEE ALSO"
+msgstr ""
+
+#: src/commands/cargo-verify-project.md:135
+msgid "[cargo(1)](cargo.html), [cargo-package(1)](cargo-package.html)"
+msgstr ""
