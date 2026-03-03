@@ -1,0 +1,416 @@
+<!DOCTYPE HTML>
+<html lang="zh_TW" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>不穩定功能 - The Cargo Book</title>
+
+
+        <!-- Custom HTML head -->
+        <style>
+            dd {
+                margin-bottom: 1em;
+            }
+        </style>
+        <script type="text/javascript" src="../ltd-provenance.js"></script>
+        <script type="text/javascript" src="../ltd-current.js"></script>
+        <script type="text/javascript" src="../../../ltd-config.js"></script>
+        <script type="text/javascript" src="../../../ltd-flyout.js"></script>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../searchindex.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Cargo Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/rust-lang/cargo/tree/master/src/doc/src" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="不穩定功能"><a class="header" href="#不穩定功能">不穩定功能</a></h2>
+<p>Experimental Cargo features are only available on the nightly channel.  You typically use one of the <code>-Z</code> flags to enable them.  Run <code>cargo -Z help</code> to see a list of flags available.</p>
+<p><code>-Z unstable-options</code> is a generic flag for enabling other unstable command-line flags.  Options requiring this will be called out below.</p>
+<p>Some unstable features will require you to specify the <code>cargo-features</code> key in <code>Cargo.toml</code>.</p>
+<h3 id="alternate-registries"><a class="header" href="#alternate-registries">Alternate Registries</a></h3>
+<ul>
+<li>RFC: <a href="https://github.com/rust-lang/rfcs/blob/master/text/2141-alternative-registries.md">#2141</a></li>
+<li>Tracking Issue: <a href="https://github.com/rust-lang/rust/issues/44931">rust-lang/rust#44931</a></li>
+</ul>
+<p>Alternate registries allow you to use registries other than crates.io.</p>
+<p>The name of a registry is defined in <code>.cargo/config</code> under the <code>registries</code> table:</p>
+<pre><code class="language-toml">[registries]
+my-registry = { index = "https://my-intranet:8080/git/index" }
+</code></pre>
+<p>Authentication information for alternate registries can be added to <code>.cargo/credentials</code>:</p>
+<pre><code class="language-toml">[registries.my-registry]
+token = "api-token"
+</code></pre>
+<p>Inside <code>Cargo.toml</code> you can specify which registry a dependency comes from using the <code>registry</code> key. First you need to include the appropriate <code>cargo-features</code> at the top of the file:</p>
+<pre><code class="language-toml">cargo-features = ["alternative-registries"]
+
+[package]
+...
+
+[dependencies]
+other-create = { version = "1.0", registry = "my-registry"}
+</code></pre>
+<p>A <code>--registry</code> flag has been added to commands that interact with registries such as <code>publish</code>, <code>login</code>, etc.  Example:</p>
+<pre><code>cargo +nightly publish -Z unstable-options --registry my-registry
+</code></pre>
+<p>The <code>publish</code> field in <code>Cargo.toml</code> has been extended to accept a list of registries that will restrict publishing only to those registries.</p>
+<pre><code class="language-toml">[package]
+...
+publish = ["my-registry"]
+</code></pre>
+<h3 id="publish-lockfile"><a class="header" href="#publish-lockfile">publish-lockfile</a></h3>
+<ul>
+<li>Original Issue: <a href="https://github.com/rust-lang/cargo/issues/2263">#2263</a></li>
+<li>PR: <a href="https://github.com/rust-lang/cargo/pull/5093">#5093</a></li>
+<li>Tracking Issue: <a href="https://github.com/rust-lang/cargo/issues/5654">#5654</a></li>
+</ul>
+<p>When creating a <code>.crate</code> file for distribution, Cargo has historically not included the <code>Cargo.lock</code> file.  This can cause problems with using <code>cargo install</code> with a binary.  You can specify that your package should include the <code>Cargo.lock</code> file when using <code>cargo package</code> or <code>cargo publish</code> by specifying the <code>publish-lockfile</code> key in <code>Cargo.toml</code>.  This also requires the appropriate <code>cargo-features</code>:</p>
+<pre><code class="language-toml">cargo-features = ["publish-lockfile"]
+
+[package]
+...
+publish-lockfile = true
+</code></pre>
+<h3 id="offline-mode"><a class="header" href="#offline-mode">Offline Mode</a></h3>
+<ul>
+<li>Original Issue: <a href="https://github.com/rust-lang/cargo/issues/4686">#4686</a></li>
+<li>Tracking Issue: <a href="https://github.com/rust-lang/cargo/issues/5655">#5655</a></li>
+</ul>
+<p>The <code>-Z offline</code> flag prevents Cargo from attempting to access the network for any reason.  Typically Cargo will stop with an error if it wants to access the network and it is not available.</p>
+<p>Beware that this may result in different dependency resolution than online mode.  Cargo will restrict itself to crates that are available locally, even if there might be a newer version as indicated in the local copy of the index.</p>
+<h3 id="no-index-update"><a class="header" href="#no-index-update">no-index-update</a></h3>
+<ul>
+<li>Original Issue: <a href="https://github.com/rust-lang/cargo/issues/3479">#3479</a></li>
+</ul>
+<p>The <code>-Z no-index-update</code> flag ensures that Cargo does not attempt to update the registry index.  This is intended for tools such as Crater that issue many Cargo commands, and you want to avoid the network latency for updating the index each time.</p>
+<h3 id="avoid-dev-deps"><a class="header" href="#avoid-dev-deps">avoid-dev-deps</a></h3>
+<ul>
+<li>Original Issue: <a href="https://github.com/rust-lang/cargo/issues/4988">#4988</a></li>
+<li>Stabilization Issue: <a href="https://github.com/rust-lang/cargo/issues/5133">#5133</a></li>
+</ul>
+<p>When running commands such as <code>cargo install</code> or <code>cargo build</code>, Cargo currently requires dev-dependencies to be downloaded, even if they are not used.  The <code>-Z avoid-dev-deps</code> flag allows Cargo to avoid downloading dev-dependencies if they are not needed.  The <code>Cargo.lock</code> file will not be generated if dev-dependencies are skipped.</p>
+<h3 id="minimal-versions"><a class="header" href="#minimal-versions">minimal-versions</a></h3>
+<ul>
+<li>Original Issue: <a href="https://github.com/rust-lang/cargo/issues/4100">#4100</a></li>
+<li>Tracking Issue: <a href="https://github.com/rust-lang/cargo/issues/5657">#5657</a></li>
+</ul>
+<p>When a <code>Cargo.lock</code> file is generated, the <code>-Z minimal-versions</code> flag will resolve the dependencies to the minimum semver version that will satisfy the requirements (instead of the greatest version).</p>
+<p>The intended use-case of this flag is to check, during continuous integration, that the versions specified in Cargo.toml are a correct reflection of the minimum versions that you are actually using. That is, if Cargo.toml says <code>foo = "1.0.0"</code> that you don't accidentally depend on features added only in <code>foo 1.5.0</code>.</p>
+<h3 id="out-dir"><a class="header" href="#out-dir">out-dir</a></h3>
+<ul>
+<li>Original Issue: <a href="https://github.com/rust-lang/cargo/issues/4875">#4875</a></li>
+</ul>
+<p>This feature allows you to specify the directory where artifacts will be copied to after they are built.  Typically artifacts are only written to the <code>target/release</code> or <code>target/debug</code> directories.  However, determining the exact filename can be tricky since you need to parse JSON output. The <code>--out-dir</code> flag makes it easier to predictably access the artifacts. Note that the artifacts are copied, so the originals are still in the <code>target</code> directory.  Example:</p>
+<pre><code>cargo +nightly build --out-dir=out -Z unstable-options
+</code></pre>
+<h3 id="profile-overrides"><a class="header" href="#profile-overrides">Profile Overrides</a></h3>
+<ul>
+<li>Tracking Issue: <a href="https://github.com/rust-lang/rust/issues/48683">rust-lang/rust#48683</a></li>
+<li>RFC: <a href="https://github.com/rust-lang/rfcs/blob/master/text/2282-profile-dependencies.md">#2282</a></li>
+</ul>
+<p>Profiles can be overridden for specific packages and custom build scripts. The general format looks like this:</p>
+<pre><code class="language-toml">cargo-features = ["profile-overrides"]
+
+[package]
+...
+
+[profile.dev]
+opt-level = 0
+debug = true
+
+# the `image` crate will be compiled with -Copt-level=3
+[profile.dev.overrides.image]
+opt-level = 3
+
+# All dependencies (but not this crate itself or any workspace member)
+# will be compiled with -Copt-level=2 . This includes build dependencies.
+[profile.dev.overrides."*"]
+opt-level = 2
+
+# Build scripts and their dependencies will be compiled with -Copt-level=3
+# By default, build scripts use the same rules as the rest of the profile
+[profile.dev.build-override]
+opt-level = 3
+</code></pre>
+<p>Overrides can only be specified for dev and release profiles.</p>
+<h3 id="config-profiles"><a class="header" href="#config-profiles">Config Profiles</a></h3>
+<ul>
+<li>Tracking Issue: <a href="https://github.com/rust-lang/rust/issues/48683">rust-lang/rust#48683</a></li>
+<li>RFC: <a href="https://github.com/rust-lang/rfcs/blob/master/text/2282-profile-dependencies.md">#2282</a></li>
+</ul>
+<p>Profiles can be specified in <code>.cargo/config</code> files.  The <code>-Z config-profile</code> command-line flag is required to use this feature.  The format is the same as in a <code>Cargo.toml</code> manifest.  If found in multiple config files, settings will be merged using the regular <a href="reference/config.html#hierarchical-structure">config hierarchy</a>. Config settings take precedence over manifest settings.</p>
+<pre><code class="language-toml">[profile.dev]
+opt-level = 3
+</code></pre>
+<pre><code>cargo +nightly build -Z config-profile
+</code></pre>
+<h3 id="namespaced-features"><a class="header" href="#namespaced-features">Namespaced features</a></h3>
+<ul>
+<li>Original issue: <a href="https://github.com/rust-lang/cargo/issues/1286">#1286</a></li>
+<li>Tracking Issue: <a href="https://github.com/rust-lang/cargo/issues/5565">rust-lang/cargo#5565</a></li>
+</ul>
+<p>Currently, it is not possible to have a feature and a dependency with the same name in the manifest. If you set <code>namespaced-features</code> to <code>true</code>, the namespaces for features and dependencies are separated. The effect of this is that, in the feature requirements, dependencies have to be prefixed with <code>crate:</code>. Like this:</p>
+<pre><code class="language-toml">[package]
+namespaced-features = true
+
+[features]
+bar = ["crate:baz", "foo"]
+foo = []
+
+[dependencies]
+baz = { version = "0.1", optional = true }
+</code></pre>
+<p>To prevent unnecessary boilerplate from having to explicitly declare features for each optional dependency, implicit features get created for any optional dependencies where a feature of the same name is not defined. However, if a feature of the same name as a dependency is defined, that feature must include the dependency as a requirement, as <code>foo = ["crate:foo"]</code>.</p>
+<h3 id="build-plan"><a class="header" href="#build-plan">Build-plan</a></h3>
+<ul>
+<li>Tracking Issue: <a href="https://github.com/rust-lang/cargo/issues/5579">rust-lang/cargo#5579</a></li>
+</ul>
+<p>The <code>--build-plan</code> argument for the <code>build</code> command will output JSON with information about which commands would be run without actually executing anything. This can be useful when integrating with another build tool. Example:</p>
+<pre><code>cargo +nightly build --build-plan -Z unstable-options
+</code></pre>
+<h3 id="default-run"><a class="header" href="#default-run">default-run</a></h3>
+<ul>
+<li>Original issue: <a href="https://github.com/rust-lang/cargo/issues/2200">#2200</a></li>
+</ul>
+<p>The <code>default-run</code> option in the <code>[package]</code> section of the manifest can be used to specify a default binary picked by <code>cargo run</code>. For example, when there is both <code>src/bin/a.rs</code> and <code>src/bin/b.rs</code>:</p>
+<pre><code class="language-toml">[package]
+default-run = "a"
+</code></pre>
+<h3 id="metabuild"><a class="header" href="#metabuild">Metabuild</a></h3>
+<ul>
+<li>Tracking Issue: <a href="https://github.com/rust-lang/rust/issues/49803">rust-lang/rust#49803</a></li>
+<li>RFC: <a href="https://github.com/rust-lang/rfcs/blob/master/text/2196-metabuild.md">#2196</a></li>
+</ul>
+<p>Metabuild is a feature to have declarative build scripts.  Instead of writing a <code>build.rs</code> script, you specify a list of build dependencies in the <code>metabuild</code> key in <code>Cargo.toml</code>.  A build script is automatically generated that runs each build dependency in order.  Metabuild packages can then read metadata from <code>Cargo.toml</code> to specify their behavior.</p>
+<p>Include <code>cargo-features</code> at the top of <code>Cargo.toml</code>, a <code>metadata</code> key in the <code>package</code>, list the dependencies in <code>build-dependencies</code>, and add any metadata that the metabuild packages require.  Example:</p>
+<pre><code class="language-toml">cargo-features = ["metabuild"]
+
+[package]
+name = "mypackage"
+version = "0.0.1"
+metabuild = ["foo", "bar"]
+
+[build-dependencies]
+foo = "1.0"
+bar = "1.0"
+
+[package.metadata.foo]
+extra-info = "qwerty"
+</code></pre>
+<p>Metabuild packages should have a public function called <code>metabuild</code> that performs the same actions as a regular <code>build.rs</code> script would perform.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../reference/external-tools.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../faq.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../reference/external-tools.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../faq.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>
