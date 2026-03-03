@@ -295,7 +295,7 @@ msgstr ""
 
 #: src/reference/manifest.md:73
 msgid "The `name` field"
-msgstr ""
+msgstr "`name` 欄位"
 
 #: src/reference/manifest.md:75
 msgid ""
@@ -387,7 +387,7 @@ msgstr ""
 
 #: src/reference/manifest.md:121
 msgid "The `authors` field"
-msgstr ""
+msgstr "`authors` 欄位"
 
 #: src/reference/manifest.md:123
 msgid "**Warning**: This field is deprecated"
@@ -418,7 +418,7 @@ msgstr ""
 
 #: src/reference/manifest.md:138
 msgid "The `edition` field"
-msgstr ""
+msgstr "`edition` 欄位"
 
 #: src/reference/manifest.md:140
 msgid ""
@@ -446,7 +446,7 @@ msgstr ""
 
 #: src/reference/manifest.md:160
 msgid "The `rust-version` field"
-msgstr ""
+msgstr "`rust-version` 欄位"
 
 #: src/reference/manifest.md:162
 msgid ""
@@ -457,7 +457,7 @@ msgstr ""
 
 #: src/reference/manifest.md:166
 msgid "The `description` field"
-msgstr ""
+msgstr "`description` 欄位"
 
 #: src/reference/manifest.md:168
 msgid ""
@@ -483,7 +483,7 @@ msgstr ""
 
 #: src/reference/manifest.md:179
 msgid "The `documentation` field"
-msgstr ""
+msgstr "`documentation` 欄位"
 
 #: src/reference/manifest.md:181
 msgid ""
@@ -505,7 +505,7 @@ msgstr ""
 
 #: src/reference/manifest.md:194
 msgid "The `readme` field"
-msgstr ""
+msgstr "`readme` 欄位"
 
 #: src/reference/manifest.md:196
 msgid ""
@@ -536,7 +536,7 @@ msgstr ""
 
 #: src/reference/manifest.md:213
 msgid "The `homepage` field"
-msgstr ""
+msgstr "`homepage` 欄位"
 
 #: src/reference/manifest.md:215
 msgid ""
@@ -563,7 +563,7 @@ msgstr ""
 
 #: src/reference/manifest.md:228
 msgid "The `repository` field"
-msgstr ""
+msgstr "`repository` 欄位"
 
 #: src/reference/manifest.md:230
 msgid ""
@@ -582,7 +582,7 @@ msgstr ""
 
 #: src/reference/manifest.md:239
 msgid "The `license` and `license-file` fields"
-msgstr ""
+msgstr "`license` 和 `license-file` 欄位"
 
 #: src/reference/manifest.md:241
 msgid ""
@@ -663,7 +663,7 @@ msgstr ""
 
 #: src/reference/manifest.md:281
 msgid "The `keywords` field"
-msgstr ""
+msgstr "`keywords` 欄位"
 
 #: src/reference/manifest.md:283
 msgid ""
@@ -690,7 +690,7 @@ msgstr ""
 
 #: src/reference/manifest.md:297
 msgid "The `categories` field"
-msgstr ""
+msgstr "`categories` 欄位"
 
 #: src/reference/manifest.md:299
 msgid ""
@@ -719,7 +719,7 @@ msgstr ""
 
 #: src/reference/manifest.md:310
 msgid "The `workspace` field"
-msgstr ""
+msgstr "`workspace` 欄位"
 
 #: src/reference/manifest.md:312
 msgid ""
@@ -752,7 +752,7 @@ msgstr ""
 
 #: src/reference/manifest.md:330
 msgid "The `build` field"
-msgstr ""
+msgstr "`build` 欄位"
 
 #: src/reference/manifest.md:332
 msgid ""
@@ -1071,7 +1071,7 @@ msgstr ""
 
 #: src/reference/manifest.md:510
 msgid "The `default-run` field"
-msgstr ""
+msgstr "`default-run` 欄位"
 
 #: src/reference/manifest.md:512
 msgid ""
