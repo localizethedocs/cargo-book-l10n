@@ -1,0 +1,115 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:28:17Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/commands/cargo-init.md:1
+msgid "cargo-init(1)"
+msgstr ""
+
+#: src/commands/cargo-init.md:3
+msgid "NAME"
+msgstr "名稱"
+
+#: src/commands/cargo-init.md:5
+msgid "cargo-init --- Create a new Cargo package in an existing directory"
+msgstr "cargo-init --- 在現有目錄中建立新的 Cargo 軟體包"
+
+#: src/commands/cargo-init.md:7
+msgid "SYNOPSIS"
+msgstr "概要"
+
+#: src/commands/cargo-init.md:9
+msgid "`cargo init` \\[_options_\\] \\[_path_\\]"
+msgstr ""
+
+#: src/commands/cargo-init.md:11
+msgid "DESCRIPTION"
+msgstr "描述"
+
+#: src/commands/cargo-init.md:13
+msgid ""
+"This command will create a new Cargo manifest in the current directory. Give "
+"a path as an argument to create in the given directory."
+msgstr ""
+
+#: src/commands/cargo-init.md:16
+msgid ""
+"If there are typically-named Rust source files already in the directory, "
+"those will be used. If not, then a sample `src/main.rs` file will be "
+"created, or `src/lib.rs` if `--lib` is passed."
+msgstr ""
+
+#: src/commands/cargo-init.md:20
+msgid ""
+"If the directory is not already in a VCS repository, then a new repository "
+"is created (see `--vcs` below)."
+msgstr ""
+
+#: src/commands/cargo-init.md:23
+msgid ""
+"See [cargo-new(1)](cargo-new.html) for a similar command which will create a "
+"new package in a new directory."
+msgstr ""
+
+#: src/commands/cargo-init.md:26
+msgid "OPTIONS"
+msgstr "選項"
+
+#: src/commands/cargo-init.md:28
+msgid "Init Options"
+msgstr "初始化選項"
+
+#: src/commands/cargo-init.md:69
+msgid "Display Options"
+msgstr "顯示選項"
+
+#: src/commands/cargo-init.md:100
+msgid "Common Options"
+msgstr "共用選項"
+
+#: src/commands/cargo-init.md:140
+msgid "ENVIRONMENT"
+msgstr "環境"
+
+#: src/commands/cargo-init.md:142
+msgid ""
+"See [the reference](../reference/environment-variables.html) for details on "
+"environment variables that Cargo reads."
+msgstr ""
+
+#: src/commands/cargo-init.md:145
+msgid "EXIT STATUS"
+msgstr "退出狀態"
+
+#: src/commands/cargo-init.md:147
+msgid "`0`: Cargo succeeded."
+msgstr "`0`：Cargo 執行成功。"
+
+#: src/commands/cargo-init.md:148
+msgid "`101`: Cargo failed to complete."
+msgstr "`101`：Cargo 未能完成執行。"
+
+#: src/commands/cargo-init.md:150
+msgid "EXAMPLES"
+msgstr "範例"
+
+#: src/commands/cargo-init.md:152
+msgid "Create a binary Cargo package in the current directory:"
+msgstr ""
+
+#: src/commands/cargo-init.md:156
+msgid "SEE ALSO"
+msgstr "另請參見"
+
+#: src/commands/cargo-init.md:157
+msgid "[cargo(1)](cargo.html), [cargo-new(1)](cargo-new.html)"
+msgstr ""
