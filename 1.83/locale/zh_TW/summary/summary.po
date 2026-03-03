@@ -157,11 +157,11 @@ msgstr "註冊表"
 
 #: src/SUMMARY.md:41
 msgid "Registry Authentication"
-msgstr ""
+msgstr "註冊表認證"
 
 #: src/SUMMARY.md:42
 msgid "Credential Provider Protocol"
-msgstr ""
+msgstr "憑證提供者協定"
 
 #: src/SUMMARY.md:43
 msgid "Running a Registry"
@@ -177,7 +177,7 @@ msgstr ""
 
 #: src/SUMMARY.md:46
 msgid "SemVer Compatibility"
-msgstr ""
+msgstr "語義化版本相容性"
 
 #: src/SUMMARY.md:47
 msgid "Future incompat report"
@@ -189,7 +189,7 @@ msgstr ""
 
 #: src/SUMMARY.md:49
 msgid "Lints"
-msgstr ""
+msgstr "梳理"
 
 #: src/SUMMARY.md:50
 msgid "Unstable Features"
@@ -341,7 +341,7 @@ msgstr "cargo uninstall"
 
 #: src/SUMMARY.md:88
 msgid "Publishing Commands"
-msgstr "發布命令"
+msgstr "發佈命令"
 
 #: src/SUMMARY.md:89
 msgid "cargo login"
