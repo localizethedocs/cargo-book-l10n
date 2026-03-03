@@ -1,0 +1,132 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-01-24T08:29:12Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/commands/cargo-vendor.md:1
+msgid "cargo-vendor(1)"
+msgstr ""
+
+#: src/commands/cargo-vendor.md:3
+msgid "NAME"
+msgstr "名稱"
+
+#: src/commands/cargo-vendor.md:5
+msgid "cargo-vendor --- Vendor all dependencies locally"
+msgstr ""
+
+#: src/commands/cargo-vendor.md:7
+msgid "SYNOPSIS"
+msgstr "概要"
+
+#: src/commands/cargo-vendor.md:9
+msgid "`cargo vendor` \\[_options_\\] \\[_path_\\]"
+msgstr ""
+
+#: src/commands/cargo-vendor.md:11
+msgid "DESCRIPTION"
+msgstr "描述"
+
+#: src/commands/cargo-vendor.md:13
+msgid ""
+"This cargo subcommand will vendor all crates.io and git dependencies for a "
+"project into the specified directory at `<path>`. After this command "
+"completes the vendor directory specified by `<path>` will contain all remote "
+"sources from dependencies specified. Additional manifests beyond the default "
+"one can be specified with the `-s` option."
+msgstr ""
+
+#: src/commands/cargo-vendor.md:19
+msgid ""
+"The configuration necessary to use the vendored sources would be printed to "
+"stdout after `cargo vendor` completes the vendoring process. You will need "
+"to add or redirect it to your Cargo configuration file, which is usually `."
+"cargo/config.toml` locally for the current package."
+msgstr ""
+
+#: src/commands/cargo-vendor.md:24
+msgid ""
+"Cargo treats vendored sources as read-only as it does to registry and git "
+"sources. If you intend to modify a crate from a remote source, use `[patch]` "
+"or a `path` dependency pointing to a local copy of that crate. Cargo will "
+"then correctly handle the crate on incremental rebuilds, as it knows that it "
+"is no longer a read-only dependency."
+msgstr ""
+
+#: src/commands/cargo-vendor.md:30
+msgid "OPTIONS"
+msgstr "選項"
+
+#: src/commands/cargo-vendor.md:32
+msgid "Vendor Options"
+msgstr ""
+
+#: src/commands/cargo-vendor.md:62
+msgid "Manifest Options"
+msgstr "清單選項"
+
+#: src/commands/cargo-vendor.md:114
+msgid "Display Options"
+msgstr "顯示選項"
+
+#: src/commands/cargo-vendor.md:147
+msgid "Common Options"
+msgstr "共用選項"
+
+#: src/commands/cargo-vendor.md:187
+msgid "ENVIRONMENT"
+msgstr "環境"
+
+#: src/commands/cargo-vendor.md:189
+msgid ""
+"See [the reference](../reference/environment-variables.html) for details on "
+"environment variables that Cargo reads."
+msgstr ""
+
+#: src/commands/cargo-vendor.md:192
+msgid "EXIT STATUS"
+msgstr "退出狀態"
+
+#: src/commands/cargo-vendor.md:194
+msgid "`0`: Cargo succeeded."
+msgstr "`0`：Cargo 執行成功。"
+
+#: src/commands/cargo-vendor.md:195
+msgid "`101`: Cargo failed to complete."
+msgstr "`101`：Cargo 未能完成執行。"
+
+#: src/commands/cargo-vendor.md:197
+msgid "EXAMPLES"
+msgstr "範例"
+
+#: src/commands/cargo-vendor.md:199
+msgid "Vendor all dependencies into a local \"vendor\" folder"
+msgstr ""
+
+#: src/commands/cargo-vendor.md:203
+msgid "Vendor all dependencies into a local \"third-party/vendor\" folder"
+msgstr ""
+
+#: src/commands/cargo-vendor.md:207
+msgid "Vendor the current workspace as well as another to \"vendor\""
+msgstr ""
+
+#: src/commands/cargo-vendor.md:211
+msgid "Vendor and redirect the necessary vendor configs to a config file."
+msgstr ""
+
+#: src/commands/cargo-vendor.md:215
+msgid "SEE ALSO"
+msgstr "另請參見"
+
+#: src/commands/cargo-vendor.md:216
+msgid "[cargo(1)](cargo.html)"
+msgstr "[cargo(1)](cargo.html)"
