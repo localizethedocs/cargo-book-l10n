@@ -37,6 +37,8 @@ msgid ""
 "After this, you can use the `rustup` command to also install `beta` or "
 "`nightly` channels for Rust and Cargo."
 msgstr ""
+"在此之後，您可以使用 `rustup` 命令來安裝 Rust 與 Cargo 的 `beta` 或 "
+"`nightly` 頻道。"
 
 #: src/getting-started/installation.md:15
 msgid "Install Nightly Cargo"
