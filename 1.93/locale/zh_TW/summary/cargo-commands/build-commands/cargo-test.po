@@ -255,7 +255,7 @@ msgstr ""
 
 #: src/commands/cargo-test.md:265
 msgid "Feature Selection"
-msgstr "特性選取"
+msgstr "功能選取"
 
 #: src/commands/cargo-test.md:267
 msgid ""
