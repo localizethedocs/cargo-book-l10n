@@ -273,7 +273,7 @@ msgstr "cargo uninstall"
 
 #: src/SUMMARY.md:71
 msgid "Publishing Commands"
-msgstr "發布命令"
+msgstr "發佈命令"
 
 #: src/SUMMARY.md:72
 msgid "cargo login"

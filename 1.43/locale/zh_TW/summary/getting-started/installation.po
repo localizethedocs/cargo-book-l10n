@@ -28,7 +28,7 @@ msgstr ""
 
 #: src/getting-started/installation.md:8
 msgid "On Linux and macOS systems, this is done as follows:"
-msgstr ""
+msgstr "在 Linux 和 macOS 系統上，操作方式如下："
 
 #: src/getting-started/installation.md:10
 msgid ""
@@ -41,7 +41,7 @@ msgstr ""
 msgid ""
 "It will download a script, and start the installation. If everything goes "
 "well, you’ll see this appear:"
-msgstr ""
+msgstr "它將會下載一個腳本並開始安裝。如果一切順利，您將會看到以下內容："
 
 #: src/getting-started/installation.md:21
 msgid ""
@@ -55,12 +55,16 @@ msgid ""
 "After this, you can use the `rustup` command to also install `beta` or "
 "`nightly` channels for Rust and Cargo."
 msgstr ""
+"在此之後，您可以使用 `rustup` 命令來安裝 Rust 與 Cargo 的 `beta` 或 "
+"`nightly` 頻道。"
 
 #: src/getting-started/installation.md:27
 msgid ""
 "For other installation options and information, visit the [install](https://"
 "www.rust-lang.org/tools/install) page of the Rust website."
 msgstr ""
+"關於其他安裝選項與資訊，請訪問 Rust 網站的[安裝](https://www.rust-lang.org/"
+"tools/install)頁面。"
 
 #: src/getting-started/installation.md:30
 msgid "Build and Install Cargo from Source"
