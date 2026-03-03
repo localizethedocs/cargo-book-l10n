@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:36Z\n"
+"POT-Creation-Date: 2026-03-03T09:09:10Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -197,65 +197,65 @@ msgstr ""
 msgid "Compilation Options"
 msgstr ""
 
-#: src/commands/cargo-install.md:295
+#: src/commands/cargo-install.md:288
 msgid "Manifest Options"
 msgstr ""
 
-#: src/commands/cargo-install.md:336
+#: src/commands/cargo-install.md:329
 msgid "Miscellaneous Options"
 msgstr ""
 
-#: src/commands/cargo-install.md:361
+#: src/commands/cargo-install.md:354
 msgid "Display Options"
 msgstr ""
 
-#: src/commands/cargo-install.md:420
+#: src/commands/cargo-install.md:413
 msgid "Common Options"
 msgstr ""
 
-#: src/commands/cargo-install.md:465
+#: src/commands/cargo-install.md:458
 msgid "ENVIRONMENT"
 msgstr ""
 
-#: src/commands/cargo-install.md:467
+#: src/commands/cargo-install.md:460
 msgid ""
 "See [the reference](../reference/environment-variables.html) for details on "
 "environment variables that Cargo reads."
 msgstr ""
 
-#: src/commands/cargo-install.md:470
+#: src/commands/cargo-install.md:463
 msgid "EXIT STATUS"
 msgstr ""
 
-#: src/commands/cargo-install.md:472
+#: src/commands/cargo-install.md:465
 msgid "`0`: Cargo succeeded."
 msgstr ""
 
-#: src/commands/cargo-install.md:473
+#: src/commands/cargo-install.md:466
 msgid "`101`: Cargo failed to complete."
 msgstr ""
 
-#: src/commands/cargo-install.md:475
+#: src/commands/cargo-install.md:468
 msgid "EXAMPLES"
 msgstr ""
 
-#: src/commands/cargo-install.md:477
+#: src/commands/cargo-install.md:470
 msgid "Install or upgrade a package from crates.io:"
 msgstr ""
 
-#: src/commands/cargo-install.md:481
+#: src/commands/cargo-install.md:474
 msgid "Install or reinstall the package in the current directory:"
 msgstr ""
 
-#: src/commands/cargo-install.md:485
+#: src/commands/cargo-install.md:478
 msgid "View the list of installed packages:"
 msgstr ""
 
-#: src/commands/cargo-install.md:489
+#: src/commands/cargo-install.md:482
 msgid "SEE ALSO"
 msgstr ""
 
-#: src/commands/cargo-install.md:490
+#: src/commands/cargo-install.md:483
 msgid ""
 "[cargo(1)](cargo.html), [cargo-uninstall(1)](cargo-uninstall.html), [cargo-"
 "search(1)](cargo-search.html), [cargo-publish(1)](cargo-publish.html)"

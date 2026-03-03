@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:36Z\n"
+"POT-Creation-Date: 2026-03-03T09:09:10Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -115,60 +115,60 @@ msgstr ""
 msgid "Manifest Options"
 msgstr ""
 
-#: src/commands/cargo-add.md:266
+#: src/commands/cargo-add.md:254
 msgid "Common Options"
 msgstr ""
 
-#: src/commands/cargo-add.md:311
+#: src/commands/cargo-add.md:299
 msgid "ENVIRONMENT"
 msgstr ""
 
-#: src/commands/cargo-add.md:313
+#: src/commands/cargo-add.md:301
 msgid ""
 "See [the reference](../reference/environment-variables.html) for details on "
 "environment variables that Cargo reads."
 msgstr ""
 
-#: src/commands/cargo-add.md:316
+#: src/commands/cargo-add.md:304
 msgid "EXIT STATUS"
 msgstr ""
 
-#: src/commands/cargo-add.md:318
+#: src/commands/cargo-add.md:306
 msgid "`0`: Cargo succeeded."
 msgstr ""
 
-#: src/commands/cargo-add.md:319
+#: src/commands/cargo-add.md:307
 msgid "`101`: Cargo failed to complete."
 msgstr ""
 
-#: src/commands/cargo-add.md:321
+#: src/commands/cargo-add.md:309
 msgid "EXAMPLES"
 msgstr ""
 
-#: src/commands/cargo-add.md:323
+#: src/commands/cargo-add.md:311
 msgid "Add `regex` as a dependency"
 msgstr ""
 
-#: src/commands/cargo-add.md:327
+#: src/commands/cargo-add.md:315
 msgid "Add `trybuild` as a dev-dependency"
 msgstr ""
 
-#: src/commands/cargo-add.md:331
+#: src/commands/cargo-add.md:319
 msgid "Add an older version of `nom` as a dependency"
 msgstr ""
 
-#: src/commands/cargo-add.md:335
+#: src/commands/cargo-add.md:323
 msgid "Add support for serializing data structures to json with `derive`s"
 msgstr ""
 
-#: src/commands/cargo-add.md:339
+#: src/commands/cargo-add.md:327
 msgid "Add `windows` as a platform specific dependency on `cfg(windows)`"
 msgstr ""
 
-#: src/commands/cargo-add.md:343
+#: src/commands/cargo-add.md:331
 msgid "SEE ALSO"
 msgstr ""
 
-#: src/commands/cargo-add.md:344
+#: src/commands/cargo-add.md:332
 msgid "[cargo(1)](cargo.html), [cargo-remove(1)](cargo-remove.html)"
 msgstr ""

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:36Z\n"
+"POT-Creation-Date: 2026-03-03T09:09:10Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -132,61 +132,61 @@ msgstr ""
 msgid "Compilation Options"
 msgstr ""
 
-#: src/commands/cargo-rustdoc.md:233
+#: src/commands/cargo-rustdoc.md:226
 msgid "Output Options"
 msgstr ""
 
-#: src/commands/cargo-rustdoc.md:245
+#: src/commands/cargo-rustdoc.md:238
 msgid "Display Options"
 msgstr ""
 
-#: src/commands/cargo-rustdoc.md:303
+#: src/commands/cargo-rustdoc.md:296
 msgid "Manifest Options"
 msgstr ""
 
-#: src/commands/cargo-rustdoc.md:363
+#: src/commands/cargo-rustdoc.md:344
 msgid "Common Options"
 msgstr ""
 
-#: src/commands/cargo-rustdoc.md:408
+#: src/commands/cargo-rustdoc.md:389
 msgid "Miscellaneous Options"
 msgstr ""
 
-#: src/commands/cargo-rustdoc.md:443
+#: src/commands/cargo-rustdoc.md:424
 msgid "ENVIRONMENT"
 msgstr ""
 
-#: src/commands/cargo-rustdoc.md:445
+#: src/commands/cargo-rustdoc.md:426
 msgid ""
 "See [the reference](../reference/environment-variables.html) for details on "
 "environment variables that Cargo reads."
 msgstr ""
 
-#: src/commands/cargo-rustdoc.md:448
+#: src/commands/cargo-rustdoc.md:429
 msgid "EXIT STATUS"
 msgstr ""
 
-#: src/commands/cargo-rustdoc.md:450
+#: src/commands/cargo-rustdoc.md:431
 msgid "`0`: Cargo succeeded."
 msgstr ""
 
-#: src/commands/cargo-rustdoc.md:451
+#: src/commands/cargo-rustdoc.md:432
 msgid "`101`: Cargo failed to complete."
 msgstr ""
 
-#: src/commands/cargo-rustdoc.md:453
+#: src/commands/cargo-rustdoc.md:434
 msgid "EXAMPLES"
 msgstr ""
 
-#: src/commands/cargo-rustdoc.md:455
+#: src/commands/cargo-rustdoc.md:436
 msgid "Build documentation with custom CSS included from a given file:"
 msgstr ""
 
-#: src/commands/cargo-rustdoc.md:459
+#: src/commands/cargo-rustdoc.md:440
 msgid "SEE ALSO"
 msgstr ""
 
-#: src/commands/cargo-rustdoc.md:460
+#: src/commands/cargo-rustdoc.md:441
 msgid ""
 "[cargo(1)](cargo.html), [cargo-doc(1)](cargo-doc.html), [rustdoc(1)](https://"
 "doc.rust-lang.org/rustdoc/index.html)"
