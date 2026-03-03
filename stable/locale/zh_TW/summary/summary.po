@@ -161,11 +161,11 @@ msgstr "註冊表"
 
 #: src/SUMMARY.md:42
 msgid "Registry Authentication"
-msgstr ""
+msgstr "註冊表認證"
 
 #: src/SUMMARY.md:43
 msgid "Credential Provider Protocol"
-msgstr ""
+msgstr "憑證提供者協定"
 
 #: src/SUMMARY.md:44
 msgid "Running a Registry"
@@ -181,7 +181,7 @@ msgstr ""
 
 #: src/SUMMARY.md:47
 msgid "SemVer Compatibility"
-msgstr ""
+msgstr "語義化版本相容性"
 
 #: src/SUMMARY.md:48
 msgid "Future incompat report"
@@ -193,7 +193,7 @@ msgstr ""
 
 #: src/SUMMARY.md:50
 msgid "Lints"
-msgstr ""
+msgstr "梳理"
 
 #: src/SUMMARY.md:51
 msgid "Unstable Features"
