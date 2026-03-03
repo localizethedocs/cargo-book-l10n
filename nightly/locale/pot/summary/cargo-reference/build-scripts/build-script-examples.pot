@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:57:13Z\n"
+"POT-Creation-Date: 2026-03-03T09:10:00Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -106,6 +106,7 @@ msgstr ""
 #: src/reference/build-script-examples.md:218
 #: src/reference/build-script-examples.md:322
 #: src/reference/build-script-examples.md:409
+#: src/reference/build-script-examples.md:441
 msgid "// build.rs\n"
 msgstr ""
 
@@ -632,11 +633,61 @@ msgstr ""
 msgid "// … rest of code that makes use of zlib.\n"
 msgstr ""
 
-#: src/reference/build-script-examples.md:434
+#: src/reference/build-script-examples.md:433
+msgid "Reading target configuration"
+msgstr ""
+
+#: src/reference/build-script-examples.md:435
+msgid ""
+"When a build script needs to make decisions based on the target platform, it "
+"should read the `CARGO_CFG_*` environment variables rather than using `cfg!` "
+"or `#[cfg]` attributes. This is because the build script is compiled for and "
+"runs on the _host_ machine, while `CARGO_CFG_*` variables reflect the "
+"_target_ platform, an important distinction when cross-compiling."
+msgstr ""
+
+#: src/reference/build-script-examples.md:444
+msgid "// reads the TARGET configuration\n"
+msgstr ""
+
+#: src/reference/build-script-examples.md:445
+msgid "\"CARGO_CFG_TARGET_OS\""
+msgstr ""
+
+#: src/reference/build-script-examples.md:447
+msgid "\"windows\""
+msgstr ""
+
+#: src/reference/build-script-examples.md:448
+msgid "\"cargo::rustc-link-lib=userenv\""
+msgstr ""
+
+#: src/reference/build-script-examples.md:449
+msgid "\"linux\""
+msgstr ""
+
+#: src/reference/build-script-examples.md:450
+msgid "\"cargo::rustc-link-lib=pthread\""
+msgstr ""
+
+#: src/reference/build-script-examples.md:455
+msgid ""
+"Note that some configuration values may contain multiple values separated by "
+"commas (for example, `CARGO_CFG_TARGET_FAMILY` may be `unix,wasm`). When "
+"checking these values, be sure to handle this appropriately."
+msgstr ""
+
+#: src/reference/build-script-examples.md:459
+msgid ""
+"For a more convenient, typed API, consider using the [`build-rs`](https://"
+"crates.io/crates/build-rs) crate which handles these details for you."
+msgstr ""
+
+#: src/reference/build-script-examples.md:464
 msgid "Conditional compilation"
 msgstr ""
 
-#: src/reference/build-script-examples.md:436
+#: src/reference/build-script-examples.md:466
 msgid ""
 "A build script may emit [`rustc-cfg` instructions](build-scripts.md#rustc-"
 "cfg) which can enable conditions that can be checked at compile time. In "
@@ -645,7 +696,7 @@ msgid ""
 "library."
 msgstr ""
 
-#: src/reference/build-script-examples.md:441
+#: src/reference/build-script-examples.md:471
 msgid ""
 "The [`openssl-sys` crate](https://crates.io/crates/openssl-sys) implements "
 "building and linking the OpenSSL library. It supports multiple different "
@@ -657,17 +708,17 @@ msgid ""
 "dc72a8e2c429e46c275e528b61a733a66e7877fc/openssl-sys/build/main.rs#L216):"
 msgstr ""
 
-#: src/reference/build-script-examples.md:450
+#: src/reference/build-script-examples.md:480
 msgid "\"cargo::metadata=version_number={openssl_version:x}\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:453
+#: src/reference/build-script-examples.md:483
 msgid ""
 "This instruction causes the `DEP_OPENSSL_VERSION_NUMBER` environment "
 "variable to be set in any crates that directly depend on `openssl-sys`."
 msgstr ""
 
-#: src/reference/build-script-examples.md:456
+#: src/reference/build-script-examples.md:486
 msgid ""
 "The `openssl` crate, which provides the higher-level interface, specifies "
 "`openssl-sys` as a dependency. The `openssl` build script can read the "
@@ -677,43 +728,43 @@ msgid ""
 "dc72a8e2c429e46c275e528b61a733a66e7877fc/openssl/build.rs#L18-L36):"
 msgstr ""
 
-#: src/reference/build-script-examples.md:464
+#: src/reference/build-script-examples.md:494
 msgid "// (portion of build.rs)\n"
 msgstr ""
 
-#: src/reference/build-script-examples.md:466
+#: src/reference/build-script-examples.md:496
 msgid "\"cargo::rustc-check-cfg=cfg(ossl101,ossl102)\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:467
+#: src/reference/build-script-examples.md:497
 msgid "\"cargo::rustc-check-cfg=cfg(ossl110,ossl110g,ossl111)\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:469
+#: src/reference/build-script-examples.md:499
 msgid "\"DEP_OPENSSL_VERSION_NUMBER\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:473
+#: src/reference/build-script-examples.md:503
 msgid "\"cargo::rustc-cfg=ossl101\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:476
+#: src/reference/build-script-examples.md:506
 msgid "\"cargo::rustc-cfg=ossl102\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:479
+#: src/reference/build-script-examples.md:509
 msgid "\"cargo::rustc-cfg=ossl110\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:482
+#: src/reference/build-script-examples.md:512
 msgid "\"cargo::rustc-cfg=ossl110g\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:485
+#: src/reference/build-script-examples.md:515
 msgid "\"cargo::rustc-cfg=ossl111\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:490
+#: src/reference/build-script-examples.md:520
 msgid ""
 "These `cfg` values can then be used with the [`cfg` attribute](../../"
 "reference/conditional-compilation.md#the-cfg-attribute) or the [`cfg` macro]"
@@ -724,11 +775,11 @@ msgid ""
 "older versions:"
 msgstr ""
 
-#: src/reference/build-script-examples.md:497
+#: src/reference/build-script-examples.md:527
 msgid "// (portion of openssl crate)\n"
 msgstr ""
 
-#: src/reference/build-script-examples.md:505
+#: src/reference/build-script-examples.md:535
 msgid ""
 "Of course, one should be careful when using this, since it makes the "
 "resulting binary even more dependent on the build environment. In this "
