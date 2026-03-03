@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/reference/semver.md:1
 msgid "SemVer Compatibility"
-msgstr ""
+msgstr "語義化版本相容性"
 
 #: src/reference/semver.md:3
 msgid ""
