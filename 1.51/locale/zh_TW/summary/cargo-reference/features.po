@@ -603,7 +603,7 @@ msgstr ""
 
 #: src/reference/features.md:383
 msgid "Build scripts"
-msgstr ""
+msgstr "建置腳本"
 
 #: src/reference/features.md:385
 msgid ""
