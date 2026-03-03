@@ -28,7 +28,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:8
 msgid "Crate"
-msgstr ""
+msgstr "軟體箱（Crate）"
 
 #: src/appendix/glossary.md:10
 msgid ""
@@ -53,7 +53,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:22
 msgid "Feature"
-msgstr ""
+msgstr "功能（Feature）"
 
 #: src/appendix/glossary.md:24
 msgid "The meaning of _feature_ depends on the context:"
@@ -80,6 +80,9 @@ msgid ""
 "html) and [The Rustdoc Book](https://doc.rust-lang.org/nightly/rustdoc/"
 "unstable-features.html))."
 msgstr ""
+"Rust 編譯器與 Rustdoc 擁有各自的不穩定功能旗標（請參見《[不穩定手冊](https://"
+"doc.rust-lang.org/nightly/unstable-book/index.html)》與《[Rustdoc 手冊]"
+"(https://doc.rust-lang.org/nightly/rustdoc/unstable-features.html)》）。"
 
 #: src/appendix/glossary.md:38
 msgid ""
@@ -162,7 +165,7 @@ msgstr "專案（Project）"
 
 #: src/appendix/glossary.md:78
 msgid "Another name for a [package](#package)."
-msgstr ""
+msgstr "[軟體包](#軟體包package)的另一個名稱。"
 
 #: src/appendix/glossary.md:80
 msgid "Registry"
@@ -232,7 +235,7 @@ msgstr "規範（Spec）"
 
 #: src/appendix/glossary.md:107
 msgid "See [package ID specification](#package)."
-msgstr ""
+msgstr "請參見[軟體包 ID 規範](#軟體包package)。"
 
 #: src/appendix/glossary.md:109
 msgid "Target"
@@ -240,7 +243,7 @@ msgstr "目標（Target）"
 
 #: src/appendix/glossary.md:111
 msgid "The meaning of the term _target_ depends on the context:"
-msgstr ""
+msgstr "_目標（target）_ 一詞的含義取決於上下文："
 
 #: src/appendix/glossary.md:113
 msgid ""
@@ -344,7 +347,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:162
 msgid "Workspace"
-msgstr "工作空間（Workspace00）"
+msgstr "工作空間（Workspace）"
 
 #: src/appendix/glossary.md:164
 msgid ""
