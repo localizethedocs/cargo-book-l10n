@@ -153,7 +153,7 @@ msgstr ""
 
 #: src/SUMMARY.md:40
 msgid "SemVer Compatibility"
-msgstr ""
+msgstr "語義化版本相容性"
 
 #: src/SUMMARY.md:41
 msgid "Unstable Features"
@@ -289,7 +289,7 @@ msgstr "cargo uninstall"
 
 #: src/SUMMARY.md:75
 msgid "Publishing Commands"
-msgstr "發布命令"
+msgstr "發佈命令"
 
 #: src/SUMMARY.md:76
 msgid "cargo login"
