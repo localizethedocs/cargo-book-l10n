@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/reference/lints.md:1
 msgid "Lints"
-msgstr ""
+msgstr "梳理"
 
 #: src/reference/lints.md:3
 msgid ""
@@ -121,7 +121,7 @@ msgstr ""
 
 #: src/reference/lints.md:22
 msgid "[`implicit_minimum_version_req`](#implicit_minimum_version_req)"
-msgstr ""
+msgstr "[`implicit_minimum_version_req`](#implicit_minimum_version_req)"
 
 #: src/reference/lints.md:24
 msgid "Warn-by-default"
@@ -133,7 +133,7 @@ msgstr ""
 
 #: src/reference/lints.md:27
 msgid "[`blanket_hint_mostly_unused`](#blanket_hint_mostly_unused)"
-msgstr ""
+msgstr "[`blanket_hint_mostly_unused`](#blanket_hint_mostly_unused)"
 
 #: src/reference/lints.md:28
 msgid "[`unknown_lints`](#unknown_lints)"
@@ -154,7 +154,7 @@ msgstr ""
 #: src/reference/lints.md:35 src/reference/lints.md:65
 #: src/reference/lints.md:116
 msgid "What it does"
-msgstr ""
+msgstr "它在做什麼"
 
 #: src/reference/lints.md:36
 msgid "Checks if `hint-mostly-unused` being applied to all dependencies."
