@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/guide/build-cache.md:1
 msgid "Build cache"
-msgstr ""
+msgstr "建置快取"
 
 #: src/guide/build-cache.md:3
 msgid ""

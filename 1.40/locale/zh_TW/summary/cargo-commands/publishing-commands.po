@@ -13,4 +13,4 @@ msgstr ""
 
 #: src/commands/publishing-commands.md:1
 msgid "Publishing Commands"
-msgstr "發布命令"
+msgstr "發佈命令"
