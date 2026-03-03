@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:36Z\n"
+"POT-Creation-Date: 2026-03-03T09:09:10Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -59,56 +59,56 @@ msgstr ""
 msgid "Manifest Options"
 msgstr ""
 
-#: src/commands/cargo-remove.md:138
+#: src/commands/cargo-remove.md:126
 msgid "Package Selection"
 msgstr ""
 
-#: src/commands/cargo-remove.md:150
+#: src/commands/cargo-remove.md:138
 msgid "Common Options"
 msgstr ""
 
-#: src/commands/cargo-remove.md:195
+#: src/commands/cargo-remove.md:183
 msgid "ENVIRONMENT"
 msgstr ""
 
-#: src/commands/cargo-remove.md:197
+#: src/commands/cargo-remove.md:185
 msgid ""
 "See [the reference](../reference/environment-variables.html) for details on "
 "environment variables that Cargo reads."
 msgstr ""
 
-#: src/commands/cargo-remove.md:200
+#: src/commands/cargo-remove.md:188
 msgid "EXIT STATUS"
 msgstr ""
 
-#: src/commands/cargo-remove.md:202
+#: src/commands/cargo-remove.md:190
 msgid "`0`: Cargo succeeded."
 msgstr ""
 
-#: src/commands/cargo-remove.md:203
+#: src/commands/cargo-remove.md:191
 msgid "`101`: Cargo failed to complete."
 msgstr ""
 
-#: src/commands/cargo-remove.md:205
+#: src/commands/cargo-remove.md:193
 msgid "EXAMPLES"
 msgstr ""
 
-#: src/commands/cargo-remove.md:207
+#: src/commands/cargo-remove.md:195
 msgid "Remove `regex` as a dependency"
 msgstr ""
 
-#: src/commands/cargo-remove.md:211
+#: src/commands/cargo-remove.md:199
 msgid "Remove `trybuild` as a dev-dependency"
 msgstr ""
 
-#: src/commands/cargo-remove.md:215
+#: src/commands/cargo-remove.md:203
 msgid "Remove `nom` from the `x86_64-pc-windows-gnu` dependencies table"
 msgstr ""
 
-#: src/commands/cargo-remove.md:219
+#: src/commands/cargo-remove.md:207
 msgid "SEE ALSO"
 msgstr ""
 
-#: src/commands/cargo-remove.md:220
+#: src/commands/cargo-remove.md:208
 msgid "[cargo(1)](cargo.html), [cargo-add(1)](cargo-add.html)"
 msgstr ""

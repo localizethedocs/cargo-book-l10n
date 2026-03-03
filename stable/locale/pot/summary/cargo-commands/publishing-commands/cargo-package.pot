@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:36Z\n"
+"POT-Creation-Date: 2026-03-03T09:09:10Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -232,52 +232,52 @@ msgstr ""
 msgid "Manifest Options"
 msgstr ""
 
-#: src/commands/cargo-package.md:329
+#: src/commands/cargo-package.md:317
 msgid "Miscellaneous Options"
 msgstr ""
 
-#: src/commands/cargo-package.md:354
+#: src/commands/cargo-package.md:342
 msgid "Display Options"
 msgstr ""
 
-#: src/commands/cargo-package.md:388
+#: src/commands/cargo-package.md:376
 msgid "Common Options"
 msgstr ""
 
-#: src/commands/cargo-package.md:433
+#: src/commands/cargo-package.md:421
 msgid "ENVIRONMENT"
 msgstr ""
 
-#: src/commands/cargo-package.md:435
+#: src/commands/cargo-package.md:423
 msgid ""
 "See [the reference](../reference/environment-variables.html) for details on "
 "environment variables that Cargo reads."
 msgstr ""
 
-#: src/commands/cargo-package.md:438
+#: src/commands/cargo-package.md:426
 msgid "EXIT STATUS"
 msgstr ""
 
-#: src/commands/cargo-package.md:440
+#: src/commands/cargo-package.md:428
 msgid "`0`: Cargo succeeded."
 msgstr ""
 
-#: src/commands/cargo-package.md:441
+#: src/commands/cargo-package.md:429
 msgid "`101`: Cargo failed to complete."
 msgstr ""
 
-#: src/commands/cargo-package.md:443
+#: src/commands/cargo-package.md:431
 msgid "EXAMPLES"
 msgstr ""
 
-#: src/commands/cargo-package.md:445
+#: src/commands/cargo-package.md:433
 msgid "Create a compressed `.crate` file of the current package:"
 msgstr ""
 
-#: src/commands/cargo-package.md:449
+#: src/commands/cargo-package.md:437
 msgid "SEE ALSO"
 msgstr ""
 
-#: src/commands/cargo-package.md:450
+#: src/commands/cargo-package.md:438
 msgid "[cargo(1)](cargo.html), [cargo-publish(1)](cargo-publish.html)"
 msgstr ""

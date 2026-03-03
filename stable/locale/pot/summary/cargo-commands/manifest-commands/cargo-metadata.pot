@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:36Z\n"
+"POT-Creation-Date: 2026-03-03T09:09:10Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -911,45 +911,45 @@ msgstr ""
 msgid "Manifest Options"
 msgstr ""
 
-#: src/commands/cargo-metadata.md:497
+#: src/commands/cargo-metadata.md:485
 msgid "Common Options"
 msgstr ""
 
-#: src/commands/cargo-metadata.md:542
+#: src/commands/cargo-metadata.md:530
 msgid "ENVIRONMENT"
 msgstr ""
 
-#: src/commands/cargo-metadata.md:544
+#: src/commands/cargo-metadata.md:532
 msgid ""
 "See [the reference](../reference/environment-variables.html) for details on "
 "environment variables that Cargo reads."
 msgstr ""
 
-#: src/commands/cargo-metadata.md:547
+#: src/commands/cargo-metadata.md:535
 msgid "EXIT STATUS"
 msgstr ""
 
-#: src/commands/cargo-metadata.md:549
+#: src/commands/cargo-metadata.md:537
 msgid "`0`: Cargo succeeded."
 msgstr ""
 
-#: src/commands/cargo-metadata.md:550
+#: src/commands/cargo-metadata.md:538
 msgid "`101`: Cargo failed to complete."
 msgstr ""
 
-#: src/commands/cargo-metadata.md:552
+#: src/commands/cargo-metadata.md:540
 msgid "EXAMPLES"
 msgstr ""
 
-#: src/commands/cargo-metadata.md:554
+#: src/commands/cargo-metadata.md:542
 msgid "Output JSON about the current package:"
 msgstr ""
 
-#: src/commands/cargo-metadata.md:558
+#: src/commands/cargo-metadata.md:546
 msgid "SEE ALSO"
 msgstr ""
 
-#: src/commands/cargo-metadata.md:560
+#: src/commands/cargo-metadata.md:548
 msgid ""
 "[cargo(1)](cargo.html), [cargo-pkgid(1)](cargo-pkgid.html), [Package ID "
 "Specifications](../reference/pkgid-spec.html), [JSON messages](../reference/"

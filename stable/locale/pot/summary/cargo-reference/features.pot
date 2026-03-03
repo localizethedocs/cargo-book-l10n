@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:35Z\n"
+"POT-Creation-Date: 2026-03-03T09:09:09Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -794,17 +794,16 @@ msgstr ""
 msgid ""
 "**Note**: Rustdoc has experimental support for annotating the documentation "
 "to indicate which features are required to use certain APIs. See the "
-"[`doc_cfg`](../../unstable-book/language-features/doc-cfg.html) "
-"documentation for more details. An example is the [`syn` documentation]"
-"(https://docs.rs/syn/1.0.54/syn/#modules), where you can see colored boxes "
-"which note which features are required to use it."
+"`doc_cfg` documentation for more details. An example is the [`syn` "
+"documentation](https://docs.rs/syn/1.0.54/syn/#modules), where you can see "
+"colored boxes which note which features are required to use it."
 msgstr ""
 
-#: src/reference/features.md:512
+#: src/reference/features.md:511
 msgid "Discovering features"
 msgstr ""
 
-#: src/reference/features.md:514
+#: src/reference/features.md:513
 msgid ""
 "When features are documented in the library API, this can make it easier for "
 "your users to discover which features are available and what they do. If the "
@@ -816,11 +815,11 @@ msgid ""
 "crate) can be used to download the source and inspect it."
 msgstr ""
 
-#: src/reference/features.md:525
+#: src/reference/features.md:524
 msgid "Feature combinations"
 msgstr ""
 
-#: src/reference/features.md:527
+#: src/reference/features.md:526
 msgid ""
 "Because features are a form of conditional compilation, they require an "
 "exponential number of configurations and test cases to be 100% covered. By "
@@ -828,7 +827,7 @@ msgid ""
 "rust-lang/rust-clippy) will only run with the default set of features."
 msgstr ""
 
-#: src/reference/features.md:529
+#: src/reference/features.md:528
 msgid ""
 "We encourage you to consider your strategy and tooling in regards to "
 "different feature combinations --- Every project will have different "
