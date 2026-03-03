@@ -81,7 +81,7 @@ msgstr ""
 
 #: src/commands/cargo-run.md:61
 msgid "Feature Selection"
-msgstr "特性選取"
+msgstr "功能選取"
 
 #: src/commands/cargo-run.md:63
 msgid ""
