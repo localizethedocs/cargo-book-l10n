@@ -104,6 +104,12 @@ msgid ""
 "Hello, world!\n"
 "```"
 msgstr ""
+"```console\n"
+"$ cargo run\n"
+"   Compiling hello_world v0.1.0 (file:///path/to/package/hello_world)\n"
+"     Running `target/debug/hello_world`\n"
+"Hello, world!\n"
+"```"
 
 #: src/guide/creating-a-new-project.md:76
 msgid ""
@@ -124,6 +130,10 @@ msgid ""
 "   Compiling hello_world v0.1.0 (file:///path/to/package/hello_world)\n"
 "```"
 msgstr ""
+"```console\n"
+"$ cargo build --release\n"
+"   Compiling hello_world v0.1.0 (file:///path/to/package/hello_world)\n"
+"```"
 
 #: src/guide/creating-a-new-project.md:87
 msgid ""

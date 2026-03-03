@@ -207,7 +207,7 @@ msgstr ""
 
 #: src/reference/workspaces.md:87
 msgid "The `members` and `exclude` fields"
-msgstr ""
+msgstr "`members` 和 `exclude` 欄位"
 
 #: src/reference/workspaces.md:89
 msgid ""
@@ -276,7 +276,7 @@ msgstr ""
 
 #: src/reference/workspaces.md:127
 msgid "The `default-members` field"
-msgstr ""
+msgstr "`default-members` 欄位"
 
 #: src/reference/workspaces.md:129
 msgid ""
