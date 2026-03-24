@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:35Z\n"
+"POT-Creation-Date: 2026-03-24T09:24:14Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -155,12 +155,30 @@ msgstr ""
 
 #: src/reference/build-scripts.md:76
 msgid ""
+"**Note:** Cargo does not clean or reset `OUT_DIR` between builds. The "
+"contents of this directory may persist across rebuilds, even if the build "
+"script is re-run. This behavior is intentional to support incremental "
+"builds, such as native code compilation."
+msgstr ""
+
+#: src/reference/build-scripts.md:81
+msgid ""
+"Build scripts should not rely on `OUT_DIR` being empty, as its contents may "
+"persist across rebuilds. If a script requires a clean directory, it is "
+"currently responsible for managing or cleaning up any files or "
+"subdirectories it creates. Future improvements in this area are being "
+"discussed (see [\\#16427](https://github.com/rust-lang/cargo/issues/16427) "
+"and [\\#9661](https://github.com/rust-lang/cargo/issues/9661))."
+msgstr ""
+
+#: src/reference/build-scripts.md:88
+msgid ""
 "Build scripts communicate with Cargo by printing to stdout. Cargo will "
 "interpret each line that starts with `cargo::` as an instruction that will "
 "influence compilation of the package. All other lines are ignored."
 msgstr ""
 
-#: src/reference/build-scripts.md:80
+#: src/reference/build-scripts.md:92
 msgid ""
 "The order of `cargo::` instructions printed by the build script _may_ affect "
 "the order of arguments that `cargo` passes to `rustc`. In turn, the order of "
@@ -172,7 +190,7 @@ msgid ""
 "object `foo`."
 msgstr ""
 
-#: src/reference/build-scripts.md:89
+#: src/reference/build-scripts.md:101
 msgid ""
 "The output of the script is hidden from the terminal during normal "
 "compilation. If you would like to see the output directly in your terminal, "
@@ -182,135 +200,135 @@ msgid ""
 "more."
 msgstr ""
 
-#: src/reference/build-scripts.md:95
+#: src/reference/build-scripts.md:107
 msgid ""
 "All the lines printed to stdout by a build script are written to a file like "
 "`target/debug/build/<pkg>/output` (the precise location may depend on your "
 "configuration). The stderr output is also saved in that same directory."
 msgstr ""
 
-#: src/reference/build-scripts.md:99
+#: src/reference/build-scripts.md:111
 msgid ""
 "The following is a summary of the instructions that Cargo recognizes, with "
 "each one detailed below."
 msgstr ""
 
-#: src/reference/build-scripts.md:102
+#: src/reference/build-scripts.md:114
 msgid ""
 "[`cargo::rerun-if-changed=PATH`](#rerun-if-changed) --- Tells Cargo when to "
 "re-run the script."
 msgstr ""
 
-#: src/reference/build-scripts.md:104
+#: src/reference/build-scripts.md:116
 msgid ""
 "[`cargo::rerun-if-env-changed=VAR`](#rerun-if-env-changed) --- Tells Cargo "
 "when to re-run the script."
 msgstr ""
 
-#: src/reference/build-scripts.md:106
+#: src/reference/build-scripts.md:118
 msgid ""
 "[`cargo::rustc-link-arg=FLAG`](#rustc-link-arg) --- Passes custom flags to a "
 "linker for benchmarks, binaries, `cdylib` crates, examples, and tests."
 msgstr ""
 
-#: src/reference/build-scripts.md:108
+#: src/reference/build-scripts.md:120
 msgid ""
 "[`cargo::rustc-link-arg-cdylib=FLAG`](#rustc-cdylib-link-arg) --- Passes "
 "custom flags to a linker for cdylib crates."
 msgstr ""
 
-#: src/reference/build-scripts.md:110
+#: src/reference/build-scripts.md:122
 msgid ""
 "[`cargo::rustc-link-arg-bin=BIN=FLAG`](#rustc-link-arg-bin) --- Passes "
 "custom flags to a linker for the binary `BIN`."
 msgstr ""
 
-#: src/reference/build-scripts.md:112
+#: src/reference/build-scripts.md:124
 msgid ""
 "[`cargo::rustc-link-arg-bins=FLAG`](#rustc-link-arg-bins) --- Passes custom "
 "flags to a linker for binaries."
 msgstr ""
 
-#: src/reference/build-scripts.md:114
+#: src/reference/build-scripts.md:126
 msgid ""
 "[`cargo::rustc-link-arg-tests=FLAG`](#rustc-link-arg-tests) --- Passes "
 "custom flags to a linker for tests."
 msgstr ""
 
-#: src/reference/build-scripts.md:116
+#: src/reference/build-scripts.md:128
 msgid ""
 "[`cargo::rustc-link-arg-examples=FLAG`](#rustc-link-arg-examples) --- Passes "
 "custom flags to a linker for examples."
 msgstr ""
 
-#: src/reference/build-scripts.md:118
+#: src/reference/build-scripts.md:130
 msgid ""
 "[`cargo::rustc-link-arg-benches=FLAG`](#rustc-link-arg-benches) --- Passes "
 "custom flags to a linker for benchmarks."
 msgstr ""
 
-#: src/reference/build-scripts.md:120
+#: src/reference/build-scripts.md:132
 msgid ""
 "[`cargo::rustc-link-lib=LIB`](#rustc-link-lib) --- Adds a library to link."
 msgstr ""
 
-#: src/reference/build-scripts.md:122
+#: src/reference/build-scripts.md:134
 msgid ""
 "[`cargo::rustc-link-search=[KIND=]PATH`](#rustc-link-search) --- Adds to the "
 "library search path."
 msgstr ""
 
-#: src/reference/build-scripts.md:124
+#: src/reference/build-scripts.md:136
 msgid ""
 "[`cargo::rustc-flags=FLAGS`](#rustc-flags) --- Passes certain flags to the "
 "compiler."
 msgstr ""
 
-#: src/reference/build-scripts.md:126
+#: src/reference/build-scripts.md:138
 msgid ""
 "[`cargo::rustc-cfg=KEY[=\"VALUE\"]`](#rustc-cfg) --- Enables compile-time "
 "`cfg` settings."
 msgstr ""
 
-#: src/reference/build-scripts.md:128
+#: src/reference/build-scripts.md:140
 msgid ""
 "[`cargo::rustc-check-cfg=CHECK_CFG`](#rustc-check-cfg) -- Register custom "
 "`cfg`s as expected for compile-time checking of configs."
 msgstr ""
 
-#: src/reference/build-scripts.md:130
+#: src/reference/build-scripts.md:142
 msgid ""
 "[`cargo::rustc-env=VAR=VALUE`](#rustc-env) --- Sets an environment variable."
 msgstr ""
 
-#: src/reference/build-scripts.md:131
+#: src/reference/build-scripts.md:143
 msgid ""
 "[`cargo::error=MESSAGE`](#cargo-error) --- Displays an error on the terminal."
 msgstr ""
 
-#: src/reference/build-scripts.md:132
+#: src/reference/build-scripts.md:144
 msgid ""
 "[`cargo::warning=MESSAGE`](#cargo-warning) --- Displays a warning on the "
 "terminal."
 msgstr ""
 
-#: src/reference/build-scripts.md:134
+#: src/reference/build-scripts.md:146
 msgid ""
 "[`cargo::metadata=KEY=VALUE`](#the-links-manifest-key) --- Metadata, used by "
 "`links` scripts."
 msgstr ""
 
-#: src/reference/build-scripts.md:137
+#: src/reference/build-scripts.md:149
 msgid ""
 "**MSRV:** 1.77 is required for `cargo::KEY=VALUE` syntax. To support older "
 "versions, use the `cargo:KEY=VALUE` syntax."
 msgstr ""
 
-#: src/reference/build-scripts.md:140
+#: src/reference/build-scripts.md:152
 msgid "`cargo::rustc-link-arg=FLAG`"
 msgstr ""
 
-#: src/reference/build-scripts.md:142
+#: src/reference/build-scripts.md:154
 msgid ""
 "The `rustc-link-arg` instruction tells Cargo to pass the [`-C link-arg=FLAG` "
 "option](../../rustc/codegen-options/index.md#link-arg) to the compiler, but "
@@ -319,11 +337,11 @@ msgid ""
 "set the shared library version or linker script."
 msgstr ""
 
-#: src/reference/build-scripts.md:150
+#: src/reference/build-scripts.md:162
 msgid "`cargo::rustc-link-arg-cdylib=FLAG`"
 msgstr ""
 
-#: src/reference/build-scripts.md:152
+#: src/reference/build-scripts.md:164
 msgid ""
 "The `rustc-link-arg-cdylib` instruction tells Cargo to pass the [`-C link-"
 "arg=FLAG` option](../../rustc/codegen-options/index.md#link-arg) to the "
@@ -332,17 +350,17 @@ msgid ""
 "the runtime-path."
 msgstr ""
 
-#: src/reference/build-scripts.md:157
+#: src/reference/build-scripts.md:169
 msgid ""
 "For historical reasons, the `cargo::rustc-cdylib-link-arg` form is an alias "
 "for `cargo::rustc-link-arg-cdylib`, and has the same meaning."
 msgstr ""
 
-#: src/reference/build-scripts.md:160
+#: src/reference/build-scripts.md:172
 msgid "`cargo::rustc-link-arg-bin=BIN=FLAG`"
 msgstr ""
 
-#: src/reference/build-scripts.md:162
+#: src/reference/build-scripts.md:174
 msgid ""
 "The `rustc-link-arg-bin` instruction tells Cargo to pass the [`-C link-"
 "arg=FLAG` option](../../rustc/codegen-options/index.md#link-arg) to the "
@@ -351,11 +369,11 @@ msgid ""
 "other linker options."
 msgstr ""
 
-#: src/reference/build-scripts.md:167
+#: src/reference/build-scripts.md:179
 msgid "`cargo::rustc-link-arg-bins=FLAG`"
 msgstr ""
 
-#: src/reference/build-scripts.md:169
+#: src/reference/build-scripts.md:181
 msgid ""
 "The `rustc-link-arg-bins` instruction tells Cargo to pass the [`-C link-"
 "arg=FLAG` option](../../rustc/codegen-options/index.md#link-arg) to the "
@@ -364,44 +382,44 @@ msgid ""
 "options."
 msgstr ""
 
-#: src/reference/build-scripts.md:174
+#: src/reference/build-scripts.md:186
 msgid "`cargo::rustc-link-arg-tests=FLAG`"
 msgstr ""
 
-#: src/reference/build-scripts.md:176
+#: src/reference/build-scripts.md:188
 msgid ""
 "The `rustc-link-arg-tests` instruction tells Cargo to pass the [`-C link-"
 "arg=FLAG` option](../../rustc/codegen-options/index.md#link-arg) to the "
 "compiler, but only when building a tests target."
 msgstr ""
 
-#: src/reference/build-scripts.md:180
+#: src/reference/build-scripts.md:192
 msgid "`cargo::rustc-link-arg-examples=FLAG`"
 msgstr ""
 
-#: src/reference/build-scripts.md:182
+#: src/reference/build-scripts.md:194
 msgid ""
 "The `rustc-link-arg-examples` instruction tells Cargo to pass the [`-C link-"
 "arg=FLAG` option](../../rustc/codegen-options/index.md#link-arg) to the "
 "compiler, but only when building an examples target."
 msgstr ""
 
-#: src/reference/build-scripts.md:186
+#: src/reference/build-scripts.md:198
 msgid "`cargo::rustc-link-arg-benches=FLAG`"
 msgstr ""
 
-#: src/reference/build-scripts.md:188
+#: src/reference/build-scripts.md:200
 msgid ""
 "The `rustc-link-arg-benches` instruction tells Cargo to pass the [`-C link-"
 "arg=FLAG` option](../../rustc/codegen-options/index.md#link-arg) to the "
 "compiler, but only when building a benchmark target."
 msgstr ""
 
-#: src/reference/build-scripts.md:192
+#: src/reference/build-scripts.md:204
 msgid "`cargo::rustc-link-lib=LIB`"
 msgstr ""
 
-#: src/reference/build-scripts.md:194
+#: src/reference/build-scripts.md:206
 msgid ""
 "The `rustc-link-lib` instruction tells Cargo to link the given library using "
 "the compiler's [`-l` flag](../../rustc/command-line-arguments.md#option-l-"
@@ -409,7 +427,7 @@ msgid ""
 "nomicon/ffi.md)."
 msgstr ""
 
-#: src/reference/build-scripts.md:198
+#: src/reference/build-scripts.md:210
 msgid ""
 "The `LIB` string is passed directly to rustc, so it supports any syntax that "
 "`-l` does.   \n"
@@ -417,7 +435,7 @@ msgid ""
 "RENAME]`."
 msgstr ""
 
-#: src/reference/build-scripts.md:202
+#: src/reference/build-scripts.md:214
 msgid ""
 "The `-l` flag is only passed to the library target of the package, unless "
 "there is no library target, in which case it is passed to all targets. This "
@@ -428,32 +446,32 @@ msgid ""
 "should access them through the library target's public API."
 msgstr ""
 
-#: src/reference/build-scripts.md:210
+#: src/reference/build-scripts.md:222
 msgid ""
 "The optional `KIND` may be one of `dylib`, `static`, or `framework`. See the "
 "[rustc book](../../rustc/command-line-arguments.md#option-l-link-lib) for "
 "more detail."
 msgstr ""
 
-#: src/reference/build-scripts.md:216
+#: src/reference/build-scripts.md:228
 msgid "`cargo::rustc-link-search=[KIND=]PATH`"
 msgstr ""
 
-#: src/reference/build-scripts.md:218
+#: src/reference/build-scripts.md:230
 msgid ""
 "The `rustc-link-search` instruction tells Cargo to pass the [`-L` flag]"
 "(../../rustc/command-line-arguments.md#option-l-search-path) to the compiler "
 "to add a directory to the library search path."
 msgstr ""
 
-#: src/reference/build-scripts.md:222
+#: src/reference/build-scripts.md:234
 msgid ""
 "The optional `KIND` may be one of `dependency`, `crate`, `native`, "
 "`framework`, or `all`. See the [rustc book](../../rustc/command-line-"
 "arguments.md#option-l-search-path) for more detail."
 msgstr ""
 
-#: src/reference/build-scripts.md:225
+#: src/reference/build-scripts.md:237
 msgid ""
 "These paths are also added to the [dynamic library search path environment "
 "variable](environment-variables.md#dynamic-library-paths) if they are within "
@@ -463,11 +481,11 @@ msgid ""
 "libraries is fine)."
 msgstr ""
 
-#: src/reference/build-scripts.md:234
+#: src/reference/build-scripts.md:246
 msgid "`cargo::rustc-flags=FLAGS`"
 msgstr ""
 
-#: src/reference/build-scripts.md:236
+#: src/reference/build-scripts.md:248
 msgid ""
 "The `rustc-flags` instruction tells Cargo to pass the given space-separated "
 "flags to the compiler. This only allows the `-l` and `-L` flags, and is "
@@ -475,11 +493,11 @@ msgid ""
 "search`](#rustc-link-search)."
 msgstr ""
 
-#: src/reference/build-scripts.md:241
+#: src/reference/build-scripts.md:253
 msgid "`cargo::rustc-cfg=KEY[=\"VALUE\"]`"
 msgstr ""
 
-#: src/reference/build-scripts.md:243
+#: src/reference/build-scripts.md:255
 msgid ""
 "The `rustc-cfg` instruction tells Cargo to pass the given value to the [`--"
 "cfg` flag](../../rustc/command-line-arguments.md#option-cfg) to the "
@@ -491,13 +509,13 @@ msgid ""
 "cfgs) lint to avoid unexpected cfgs warnings."
 msgstr ""
 
-#: src/reference/build-scripts.md:250
+#: src/reference/build-scripts.md:262
 msgid ""
 "Note that this does _not_ affect Cargo's dependency resolution. This cannot "
 "be used to enable an optional dependency, or enable other Cargo features."
 msgstr ""
 
-#: src/reference/build-scripts.md:253
+#: src/reference/build-scripts.md:265
 msgid ""
 "Be aware that [Cargo features](features.md) use the form `feature=\"foo\"`. "
 "`cfg` values passed with this flag are not restricted to that form, and may "
@@ -508,68 +526,68 @@ msgid ""
 "The key should be a Rust identifier, the value should be a string."
 msgstr ""
 
-#: src/reference/build-scripts.md:266
+#: src/reference/build-scripts.md:278
 msgid "`cargo::rustc-check-cfg=CHECK_CFG`"
 msgstr ""
 
-#: src/reference/build-scripts.md:268
+#: src/reference/build-scripts.md:280
 msgid ""
 "Add to the list of expected config names and values that is used when "
 "checking the _reachable_ cfg expressions with the [`unexpected_cfgs`](../../"
 "rustc/lints/listing/warn-by-default.md#unexpected-cfgs) lint."
 msgstr ""
 
-#: src/reference/build-scripts.md:271
+#: src/reference/build-scripts.md:283
 msgid ""
 "The syntax of `CHECK_CFG` mirrors the `rustc` [`--check-cfg` flag](../../"
 "rustc/command-line-arguments.md#option-check-cfg), see [Checking conditional "
 "configurations](../../rustc/check-cfg.html) for more details."
 msgstr ""
 
-#: src/reference/build-scripts.md:274
+#: src/reference/build-scripts.md:286
 msgid "The instruction can be used like this:"
 msgstr ""
 
-#: src/reference/build-scripts.md:277
+#: src/reference/build-scripts.md:289
 msgid "// build.rs\n"
 msgstr ""
 
-#: src/reference/build-scripts.md:278
+#: src/reference/build-scripts.md:290
 msgid "\"cargo::rustc-check-cfg=cfg(foo, values(\\\"bar\\\"))\""
 msgstr ""
 
-#: src/reference/build-scripts.md:280
+#: src/reference/build-scripts.md:292
 msgid "\"cargo::rustc-cfg=foo=\\\"bar\\\"\""
 msgstr ""
 
-#: src/reference/build-scripts.md:284
+#: src/reference/build-scripts.md:296
 msgid ""
 "Note that all possible cfgs should be defined, regardless of which cfgs are "
 "currently enabled. This includes all possible values of a given cfg name."
 msgstr ""
 
-#: src/reference/build-scripts.md:287
+#: src/reference/build-scripts.md:299
 msgid ""
 "It is recommended to group the `cargo::rustc-check-cfg` and [`cargo::rustc-"
 "cfg`](../../rustc/command-line-arguments.md#option-cfg) instructions as "
 "closely as possible in order to avoid typos, missing check-cfg, stale cfgs..."
 msgstr ""
 
-#: src/reference/build-scripts.md:291
+#: src/reference/build-scripts.md:303
 msgid ""
 "See also the [conditional compilation](build-script-examples.md#conditional-"
 "compilation) example."
 msgstr ""
 
-#: src/reference/build-scripts.md:294
+#: src/reference/build-scripts.md:306
 msgid "**MSRV:** Respected as of 1.80"
 msgstr ""
 
-#: src/reference/build-scripts.md:300
+#: src/reference/build-scripts.md:312
 msgid "`cargo::rustc-env=VAR=VALUE`"
 msgstr ""
 
-#: src/reference/build-scripts.md:302
+#: src/reference/build-scripts.md:314
 msgid ""
 "The `rustc-env` instruction tells Cargo to set the given environment "
 "variable when compiling the package. The value can be then retrieved by the "
@@ -578,13 +596,13 @@ msgid ""
 "of git HEAD or the unique identifier of a continuous integration server."
 msgstr ""
 
-#: src/reference/build-scripts.md:308
+#: src/reference/build-scripts.md:320
 msgid ""
 "See also the [environment variables automatically included by Cargo]"
 "(environment-variables.md#environment-variables-cargo-sets-for-crates)."
 msgstr ""
 
-#: src/reference/build-scripts.md:311
+#: src/reference/build-scripts.md:323
 msgid ""
 "**Note**: These environment variables are also set when running an "
 "executable with `cargo run` or `cargo test`. However, this usage is "
@@ -593,17 +611,17 @@ msgid ""
 "with the `env!` macro."
 msgstr ""
 
-#: src/reference/build-scripts.md:320
+#: src/reference/build-scripts.md:332
 msgid "`cargo::error=MESSAGE`"
 msgstr ""
 
-#: src/reference/build-scripts.md:322
+#: src/reference/build-scripts.md:334
 msgid ""
 "The `error` instruction tells Cargo to display an error after the build "
 "script has finished running, and then fail the build."
 msgstr ""
 
-#: src/reference/build-scripts.md:325
+#: src/reference/build-scripts.md:337
 msgid ""
 "Note: Build script libraries should carefully consider if they want to use "
 "`cargo::error` versus returning a `Result`. It may be better to return a "
@@ -612,15 +630,15 @@ msgid ""
 "`cargo::error`."
 msgstr ""
 
-#: src/reference/build-scripts.md:331
+#: src/reference/build-scripts.md:343
 msgid "**MSRV:** Respected as of 1.84"
 msgstr ""
 
-#: src/reference/build-scripts.md:333
+#: src/reference/build-scripts.md:345
 msgid "`cargo::warning=MESSAGE`"
 msgstr ""
 
-#: src/reference/build-scripts.md:335
+#: src/reference/build-scripts.md:347
 msgid ""
 "The `warning` instruction tells Cargo to display a warning after the build "
 "script has finished running. Warnings are only shown for `path` dependencies "
@@ -630,18 +648,18 @@ msgid ""
 "Cargo display warnings for all crates."
 msgstr ""
 
-#: src/reference/build-scripts.md:342
+#: src/reference/build-scripts.md:354
 msgid "Build Dependencies"
 msgstr ""
 
-#: src/reference/build-scripts.md:344
+#: src/reference/build-scripts.md:356
 msgid ""
 "Build scripts are also allowed to have dependencies on other Cargo-based "
 "crates. Dependencies are declared through the `build-dependencies` section "
 "of the manifest."
 msgstr ""
 
-#: src/reference/build-scripts.md:348
+#: src/reference/build-scripts.md:360
 msgid ""
 "```toml\n"
 "[build-dependencies]\n"
@@ -649,7 +667,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/build-scripts.md:353
+#: src/reference/build-scripts.md:365
 msgid ""
 "The build script **does not** have access to the dependencies listed in the "
 "`dependencies` or `dev-dependencies` section (they’re not built yet!). Also, "
@@ -657,7 +675,7 @@ msgid ""
 "explicitly added in the `[dependencies]` table."
 msgstr ""
 
-#: src/reference/build-scripts.md:358
+#: src/reference/build-scripts.md:370
 msgid ""
 "It is recommended to carefully consider each dependency you add, weighing "
 "against the impact on compile time, licensing, maintenance, etc. Cargo will "
@@ -666,11 +684,11 @@ msgid ""
 "cross-compiling, so keep that in consideration of the impact on compile time."
 msgstr ""
 
-#: src/reference/build-scripts.md:364
+#: src/reference/build-scripts.md:376
 msgid "Change Detection"
 msgstr ""
 
-#: src/reference/build-scripts.md:366
+#: src/reference/build-scripts.md:378
 msgid ""
 "When rebuilding a package, Cargo does not necessarily know if the build "
 "script needs to be run again. By default, it takes a conservative approach "
@@ -685,11 +703,11 @@ msgid ""
 "in the FAQ](../faq.md#why-is-cargo-rebuilding-my-code)."
 msgstr ""
 
-#: src/reference/build-scripts.md:379
+#: src/reference/build-scripts.md:391
 msgid "`cargo::rerun-if-changed=PATH`"
 msgstr ""
 
-#: src/reference/build-scripts.md:381
+#: src/reference/build-scripts.md:393
 msgid ""
 "The `rerun-if-changed` instruction tells Cargo to re-run the build script if "
 "the file at the given path has changed. Currently, Cargo only uses the "
@@ -698,13 +716,13 @@ msgid ""
 "script last ran."
 msgstr ""
 
-#: src/reference/build-scripts.md:387
+#: src/reference/build-scripts.md:399
 msgid ""
 "If the path points to a directory, it will scan the entire directory for any "
 "modifications."
 msgstr ""
 
-#: src/reference/build-scripts.md:390
+#: src/reference/build-scripts.md:402
 msgid ""
 "If the build script inherently does not need to re-run under any "
 "circumstance, then emitting `cargo::rerun-if-changed=build.rs` is a simple "
@@ -715,17 +733,17 @@ msgid ""
 "recompiled. Otherwise, specifying `build.rs` is redundant and unnecessary."
 msgstr ""
 
-#: src/reference/build-scripts.md:398
+#: src/reference/build-scripts.md:410
 msgid "`cargo::rerun-if-env-changed=NAME`"
 msgstr ""
 
-#: src/reference/build-scripts.md:400
+#: src/reference/build-scripts.md:412
 msgid ""
 "The `rerun-if-env-changed` instruction tells Cargo to re-run the build "
 "script if the value of an environment variable of the given name has changed."
 msgstr ""
 
-#: src/reference/build-scripts.md:403
+#: src/reference/build-scripts.md:415
 msgid ""
 "Note that the environment variables here are intended for global environment "
 "variables like `CC` and such, it is not possible to use this for environment "
@@ -735,7 +753,7 @@ msgid ""
 "those received by the executable of the build script."
 msgstr ""
 
-#: src/reference/build-scripts.md:409
+#: src/reference/build-scripts.md:421
 msgid ""
 "As of 1.46, using [`env!`](../../std/macro.env.html) and [`option_env!`]"
 "(../../std/macro.option_env.html) in source code will automatically detect "
@@ -743,11 +761,11 @@ msgid ""
 "variables already referenced by these macros."
 msgstr ""
 
-#: src/reference/build-scripts.md:416
+#: src/reference/build-scripts.md:428
 msgid "The `links` Manifest Key"
 msgstr ""
 
-#: src/reference/build-scripts.md:418
+#: src/reference/build-scripts.md:430
 msgid ""
 "The `package.links` key may be set in the `Cargo.toml` manifest to declare "
 "that the package links with the given native library. The purpose of this "
@@ -756,7 +774,7 @@ msgid ""
 "passing metadata between package build scripts."
 msgstr ""
 
-#: src/reference/build-scripts.md:424
+#: src/reference/build-scripts.md:436
 msgid ""
 "```toml\n"
 "[package]\n"
@@ -765,7 +783,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/build-scripts.md:430
+#: src/reference/build-scripts.md:442
 msgid ""
 "This manifest states that the package links to the `libfoo` native library. "
 "When using the `links` key, the package must have a build script, and the "
@@ -773,7 +791,7 @@ msgid ""
 "to link the library."
 msgstr ""
 
-#: src/reference/build-scripts.md:435
+#: src/reference/build-scripts.md:447
 msgid ""
 "Primarily, Cargo requires that there is at most one package per `links` "
 "value. In other words, it is forbidden to have two packages link to the same "
@@ -782,14 +800,14 @@ msgid ""
 "this."
 msgstr ""
 
-#: src/reference/build-scripts.md:440
+#: src/reference/build-scripts.md:452
 msgid ""
 "Build scripts can generate an arbitrary set of metadata in the form of key-"
 "value pairs. This metadata is set with the `cargo::metadata=KEY=VALUE` "
 "instruction."
 msgstr ""
 
-#: src/reference/build-scripts.md:444
+#: src/reference/build-scripts.md:456
 msgid ""
 "The metadata is passed to the build scripts of **dependent** packages. For "
 "example, if the package `foo` depends on `bar`, which links `baz`, then if "
@@ -800,57 +818,57 @@ msgid ""
 "examples.md#using-another-sys-crate) for an example of how this can be used."
 msgstr ""
 
-#: src/reference/build-scripts.md:452
+#: src/reference/build-scripts.md:464
 msgid ""
 "Note that metadata is only passed to immediate dependents, not transitive "
 "dependents."
 msgstr ""
 
-#: src/reference/build-scripts.md:455
+#: src/reference/build-scripts.md:467
 msgid ""
 "**MSRV:** 1.77 is required for `cargo::metadata=KEY=VALUE`. To support older "
 "versions, use `cargo:KEY=VALUE` (unsupported directives are assumed to be "
 "metadata keys)."
 msgstr ""
 
-#: src/reference/build-scripts.md:460
+#: src/reference/build-scripts.md:472
 msgid "`*-sys` Packages"
 msgstr ""
 
-#: src/reference/build-scripts.md:462
+#: src/reference/build-scripts.md:474
 msgid ""
 "Some Cargo packages that link to system libraries have a naming convention "
 "of having a `-sys` suffix. Any package named `foo-sys` should provide two "
 "major pieces of functionality:"
 msgstr ""
 
-#: src/reference/build-scripts.md:466
+#: src/reference/build-scripts.md:478
 msgid ""
 "The library crate should link to the native library `libfoo`. This will "
 "often probe the current system for `libfoo` before resorting to building "
 "from source."
 msgstr ""
 
-#: src/reference/build-scripts.md:469
+#: src/reference/build-scripts.md:481
 msgid ""
 "The library crate should provide **declarations** for types and functions in "
 "`libfoo`, but **not** higher-level abstractions."
 msgstr ""
 
-#: src/reference/build-scripts.md:472
+#: src/reference/build-scripts.md:484
 msgid ""
 "The set of `*-sys` packages provides a common set of dependencies for "
 "linking to native libraries. There are a number of benefits earned from "
 "having this convention of native-library-related packages:"
 msgstr ""
 
-#: src/reference/build-scripts.md:476
+#: src/reference/build-scripts.md:488
 msgid ""
 "Common dependencies on `foo-sys` alleviates the rule about one package per "
 "value of `links`."
 msgstr ""
 
-#: src/reference/build-scripts.md:478
+#: src/reference/build-scripts.md:490
 msgid ""
 "Other `-sys` packages can take advantage of the `DEP_LINKS_KEY=value` "
 "environment variables to better integrate with other packages. See the "
@@ -858,17 +876,17 @@ msgid ""
 "crate) example."
 msgstr ""
 
-#: src/reference/build-scripts.md:481
+#: src/reference/build-scripts.md:493
 msgid ""
 "A common dependency allows centralizing logic on discovering `libfoo` itself "
 "(or building it from source)."
 msgstr ""
 
-#: src/reference/build-scripts.md:483
+#: src/reference/build-scripts.md:495
 msgid "These dependencies are easily [overridable](#overriding-build-scripts)."
 msgstr ""
 
-#: src/reference/build-scripts.md:485
+#: src/reference/build-scripts.md:497
 msgid ""
 "It is common to have a companion package without the `-sys` suffix that "
 "provides a safe, high-level abstractions on top of the sys package. For "
@@ -877,11 +895,11 @@ msgid ""
 "libgit2-sys)."
 msgstr ""
 
-#: src/reference/build-scripts.md:493
+#: src/reference/build-scripts.md:505
 msgid "Overriding Build Scripts"
 msgstr ""
 
-#: src/reference/build-scripts.md:495
+#: src/reference/build-scripts.md:507
 msgid ""
 "If a manifest contains a `links` key, then Cargo supports overriding the "
 "build script specified with a custom library. The purpose of this "
@@ -889,13 +907,13 @@ msgid ""
 "and instead supply the metadata ahead of time."
 msgstr ""
 
-#: src/reference/build-scripts.md:500
+#: src/reference/build-scripts.md:512
 msgid ""
 "To override a build script, place the following configuration in any "
 "acceptable [`config.toml`](config.md) file."
 msgstr ""
 
-#: src/reference/build-scripts.md:502
+#: src/reference/build-scripts.md:514
 msgid ""
 "```toml\n"
 "[target.x86_64-unknown-linux-gnu.foo]\n"
@@ -910,24 +928,24 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/build-scripts.md:514
+#: src/reference/build-scripts.md:526
 msgid ""
 "With this configuration, if a package declares that it links to `foo` then "
 "the build script will **not** be compiled or run, and the metadata specified "
 "will be used instead."
 msgstr ""
 
-#: src/reference/build-scripts.md:518
+#: src/reference/build-scripts.md:530
 msgid ""
 "The `warning`, `rerun-if-changed`, and `rerun-if-env-changed` keys should "
 "not be used and will be ignored."
 msgstr ""
 
-#: src/reference/build-scripts.md:521
+#: src/reference/build-scripts.md:533
 msgid "Jobserver"
 msgstr ""
 
-#: src/reference/build-scripts.md:523
+#: src/reference/build-scripts.md:535
 msgid ""
 "Cargo and `rustc` use the [jobserver protocol](http://make.mad-scientist.net/"
 "papers/jobserver-implementation/), developed for GNU make, to coordinate "
@@ -936,7 +954,7 @@ msgid ""
 "`--jobs` flag, which defaults to the number of logical CPUs."
 msgstr ""
 
-#: src/reference/build-scripts.md:528
+#: src/reference/build-scripts.md:540
 msgid ""
 "Each build script inherits one job slot from Cargo, and should endeavor to "
 "only use one CPU while it runs. If the script wants to use more CPUs in "
@@ -944,7 +962,7 @@ msgid ""
 "jobserver) to coordinate with Cargo."
 msgstr ""
 
-#: src/reference/build-scripts.md:532
+#: src/reference/build-scripts.md:544
 msgid ""
 "As an example, the [`cc` crate](https://crates.io/crates/cc) may enable the "
 "optional `parallel` feature which will use the jobserver protocol to attempt "
