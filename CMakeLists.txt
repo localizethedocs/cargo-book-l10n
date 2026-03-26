@@ -186,9 +186,9 @@ get_members_of_json_object(
 # - For "stable":
 #   - Set VERSION_TYPE    to "branch"
 #   - Set BRANCH_NAME     to "stable"
-# - For "[MAJOR].[MINOR]":
+# - For "[MAJOR]":
 #   - Set VERSION_TYPE    to "tag"
-#   - Set TAG_PATTERN     to "^([MAJOR])\\.([MINOR])\\.([0-9]+)$"
+#   - Set TAG_PATTERN     to "^([MAJOR])\\.([0-9]+)\\.([0-9]+)$"
 #   - Set TAG_SUFFIX      to ""
 #]============================================================]
 
@@ -201,11 +201,10 @@ elseif (VERSION MATCHES "^(beta)$")
 elseif (VERSION MATCHES "^(stable)$")
     set(VERSION_TYPE    "branch")
     set(BRANCH_NAME     "stable")
-elseif (VERSION MATCHES "^([0-9]+)\\.([0-9]+)$")
+elseif (VERSION MATCHES "^([0-9]+)$")
     set(MAJOR           "${CMAKE_MATCH_1}")
-    set(MINOR           "${CMAKE_MATCH_2}")
     set(VERSION_TYPE    "tag")
-    set(TAG_PATTERN     "^(${MAJOR})\\.(${MINOR})\\.([0-9]+)$")
+    set(TAG_PATTERN     "^(${MAJOR})\\.([0-9]+)\\.([0-9]+)$")
     set(TAG_SUFFIX      "")
 else()
     message(FATAL_ERROR "Invalid VERSION value. (${VERSION})")
@@ -278,13 +277,13 @@ elseif (VERSION MATCHES "^(stable)$")
     set(VERSION_OF_DASEL                "2")
     set(VERSION_OF_MDBOOK               "^0.5")
     set(VERSION_OF_MDBOOK_I18N_HELPERS  "^0.4")
-elseif (VERSION MATCHES "^([0-9]+)\\.([0-9]+)$")
-    if     (VERSION VERSION_LESS_EQUAL    "1.93" AND
-            VERSION VERSION_GREATER_EQUAL "1.22")
+elseif (VERSION MATCHES "^([0-9]+)$")
+    if     (VERSION VERSION_LESS_EQUAL    "1" AND
+            VERSION VERSION_GREATER_EQUAL "1")
         set(VERSION_OF_RUST                 "1")
         set(VERSION_OF_DASEL                "2")
-        set(VERSION_OF_MDBOOK               "^0.4")
-        set(VERSION_OF_MDBOOK_I18N_HELPERS  "^0.3")
+        set(VERSION_OF_MDBOOK               "^0.5")
+        set(VERSION_OF_MDBOOK_I18N_HELPERS  "^0.4")
     else()
         message(FATAL_ERROR "Invalid VERSION value. (${VERSION})")
     endif()
