@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:36Z\n"
+"POT-Creation-Date: 2026-03-24T09:24:14Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -77,45 +77,45 @@ msgstr "顯示選項"
 msgid "Manifest Options"
 msgstr "清單選項"
 
-#: src/commands/cargo-fetch.md:135
+#: src/commands/cargo-fetch.md:123
 msgid "Common Options"
 msgstr "共用選項"
 
-#: src/commands/cargo-fetch.md:180
+#: src/commands/cargo-fetch.md:168
 msgid "ENVIRONMENT"
 msgstr "環境"
 
-#: src/commands/cargo-fetch.md:182
+#: src/commands/cargo-fetch.md:170
 msgid ""
 "See [the reference](../reference/environment-variables.html) for details on "
 "environment variables that Cargo reads."
 msgstr ""
 
-#: src/commands/cargo-fetch.md:185
+#: src/commands/cargo-fetch.md:173
 msgid "EXIT STATUS"
 msgstr "退出狀態"
 
-#: src/commands/cargo-fetch.md:187
+#: src/commands/cargo-fetch.md:175
 msgid "`0`: Cargo succeeded."
 msgstr "`0`：Cargo 執行成功。"
 
-#: src/commands/cargo-fetch.md:188
+#: src/commands/cargo-fetch.md:176
 msgid "`101`: Cargo failed to complete."
 msgstr "`101`：Cargo 未能完成執行。"
 
-#: src/commands/cargo-fetch.md:190
+#: src/commands/cargo-fetch.md:178
 msgid "EXAMPLES"
 msgstr "範例"
 
-#: src/commands/cargo-fetch.md:192
+#: src/commands/cargo-fetch.md:180
 msgid "Fetch all dependencies:"
 msgstr ""
 
-#: src/commands/cargo-fetch.md:196
+#: src/commands/cargo-fetch.md:184
 msgid "SEE ALSO"
 msgstr "另請參見"
 
-#: src/commands/cargo-fetch.md:197
+#: src/commands/cargo-fetch.md:185
 msgid ""
 "[cargo(1)](cargo.html), [cargo-update(1)](cargo-update.html), [cargo-"
 "generate-lockfile(1)](cargo-generate-lockfile.html)"

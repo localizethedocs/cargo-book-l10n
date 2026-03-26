@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:36Z\n"
+"POT-Creation-Date: 2026-03-24T09:24:14Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -141,53 +141,53 @@ msgstr ""
 msgid "Manifest Options"
 msgstr "清單選項"
 
-#: src/commands/cargo-publish.md:237
+#: src/commands/cargo-publish.md:225
 msgid "Miscellaneous Options"
 msgstr ""
 
-#: src/commands/cargo-publish.md:262
+#: src/commands/cargo-publish.md:250
 msgid "Display Options"
 msgstr "顯示選項"
 
-#: src/commands/cargo-publish.md:296
+#: src/commands/cargo-publish.md:284
 msgid "Common Options"
 msgstr "共用選項"
 
-#: src/commands/cargo-publish.md:341
+#: src/commands/cargo-publish.md:329
 msgid "ENVIRONMENT"
 msgstr "環境"
 
-#: src/commands/cargo-publish.md:343
+#: src/commands/cargo-publish.md:331
 msgid ""
 "See [the reference](../reference/environment-variables.html) for details on "
 "environment variables that Cargo reads."
 msgstr ""
 
-#: src/commands/cargo-publish.md:346
+#: src/commands/cargo-publish.md:334
 msgid "EXIT STATUS"
 msgstr "退出狀態"
 
-#: src/commands/cargo-publish.md:348
+#: src/commands/cargo-publish.md:336
 msgid "`0`: Cargo succeeded."
 msgstr "`0`：Cargo 執行成功。"
 
-#: src/commands/cargo-publish.md:349
+#: src/commands/cargo-publish.md:337
 msgid "`101`: Cargo failed to complete."
 msgstr "`101`：Cargo 未能完成執行。"
 
-#: src/commands/cargo-publish.md:351
+#: src/commands/cargo-publish.md:339
 msgid "EXAMPLES"
 msgstr "範例"
 
-#: src/commands/cargo-publish.md:353
+#: src/commands/cargo-publish.md:341
 msgid "Publish the current package:"
 msgstr ""
 
-#: src/commands/cargo-publish.md:357
+#: src/commands/cargo-publish.md:345
 msgid "SEE ALSO"
 msgstr "另請參見"
 
-#: src/commands/cargo-publish.md:358
+#: src/commands/cargo-publish.md:346
 msgid ""
 "[cargo(1)](cargo.html), [cargo-package(1)](cargo-package.html), [cargo-"
 "login(1)](cargo-login.html)"

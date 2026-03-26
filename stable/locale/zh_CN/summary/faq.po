@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:36Z\n"
+"POT-Creation-Date: 2026-03-24T09:24:14Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -443,14 +443,14 @@ msgstr ""
 
 #: src/faq.md:262
 msgid ""
-"The project and its dependencies use [links](https://doc.rust-lang.org/cargo/"
-"reference/resolver.html#links) to repeatedly link the local library. Cargo "
-"forbids linking two packages with the same native library, so even with "
-"multiple layers of dependencies it is not allowed. In this case, the error "
-"message will prompt: `Only one package in the dependency graph may specify "
-"the same links value`, you may need to manually check and delete duplicate "
-"link values. The community also have [conventions in place](https://doc.rust-"
-"lang.org/cargo/reference/build-scripts.html#-sys-packages) to alleviate this."
+"The project and its dependencies use [links](reference/resolver.md#links) to "
+"repeatedly link the local library. Cargo forbids linking two packages with "
+"the same native library, so even with multiple layers of dependencies it is "
+"not allowed. In this case, the error message will prompt: `Only one package "
+"in the dependency graph may specify the same links value`, you may need to "
+"manually check and delete duplicate link values. The community also have "
+"[conventions in place](reference/build-scripts.md#-sys-packages) to "
+"alleviate this."
 msgstr ""
 
 #: src/faq.md:269
@@ -490,4 +490,37 @@ msgid ""
 "run them that this time. The community has been looking to resolve merge "
 "conflicts with `Cargo.lock` and `Cargo.toml` using a [custom merge tool]"
 "(https://github.com/rust-lang/cargo/issues/1818)."
+msgstr ""
+
+#: src/faq.md:298
+msgid "Why does my build take up so much space?"
+msgstr ""
+
+#: src/faq.md:300
+msgid "Cargo trades off disk space for faster builds including:"
+msgstr ""
+
+#: src/faq.md:301
+msgid ""
+"Maintaining a [cache](reference/build-cache.md) of intermediate build "
+"artifacts to avoid rebuilding everything when making changes to one package"
+msgstr ""
+
+#: src/faq.md:302
+msgid ""
+"Maintaining distinct [cache](reference/build-cache.md) entries for different "
+"combinations of toolchain versions, package versions, features, etc to avoid "
+"rebuilding packages when switching back and forth between configurations"
+msgstr ""
+
+#: src/faq.md:303
+msgid ""
+"Enabling [incremental compilation](reference/profiles.md#incremental) for "
+"local packages for faster rebuilds for the package that changed"
+msgstr ""
+
+#: src/faq.md:304
+msgid ""
+"Enabling [debuginfo](reference/profiles.md#debug) in the [`dev` profile]"
+"(reference/profiles.md#dev) in case you use a debugger"
 msgstr ""

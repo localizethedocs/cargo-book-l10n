@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:36Z\n"
+"POT-Creation-Date: 2026-03-24T09:24:14Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -116,64 +116,64 @@ msgstr ""
 msgid "Compilation Options"
 msgstr "編譯選項"
 
-#: src/commands/cargo-check.md:240
+#: src/commands/cargo-check.md:233
 msgid "Output Options"
 msgstr "輸出選項"
 
-#: src/commands/cargo-check.md:252
+#: src/commands/cargo-check.md:245
 msgid "Display Options"
 msgstr "顯示選項"
 
-#: src/commands/cargo-check.md:310
+#: src/commands/cargo-check.md:303
 msgid "Manifest Options"
 msgstr "清單選項"
 
-#: src/commands/cargo-check.md:370
+#: src/commands/cargo-check.md:351
 msgid "Common Options"
 msgstr "共用選項"
 
-#: src/commands/cargo-check.md:415
+#: src/commands/cargo-check.md:396
 msgid "Miscellaneous Options"
 msgstr ""
 
-#: src/commands/cargo-check.md:446
+#: src/commands/cargo-check.md:427
 msgid "ENVIRONMENT"
 msgstr "環境"
 
-#: src/commands/cargo-check.md:448
+#: src/commands/cargo-check.md:429
 msgid ""
 "See [the reference](../reference/environment-variables.html) for details on "
 "environment variables that Cargo reads."
 msgstr ""
 
-#: src/commands/cargo-check.md:451
+#: src/commands/cargo-check.md:432
 msgid "EXIT STATUS"
 msgstr "退出狀態"
 
-#: src/commands/cargo-check.md:453
+#: src/commands/cargo-check.md:434
 msgid "`0`: Cargo succeeded."
 msgstr "`0`：Cargo 執行成功。"
 
-#: src/commands/cargo-check.md:454
+#: src/commands/cargo-check.md:435
 msgid "`101`: Cargo failed to complete."
 msgstr "`101`：Cargo 未能完成執行。"
 
-#: src/commands/cargo-check.md:456
+#: src/commands/cargo-check.md:437
 msgid "EXAMPLES"
 msgstr "範例"
 
-#: src/commands/cargo-check.md:458
+#: src/commands/cargo-check.md:439
 msgid "Check the local package for errors:"
 msgstr ""
 
-#: src/commands/cargo-check.md:462
+#: src/commands/cargo-check.md:443
 msgid "Check all targets, including unit tests:"
 msgstr ""
 
-#: src/commands/cargo-check.md:466
+#: src/commands/cargo-check.md:447
 msgid "SEE ALSO"
 msgstr "另請參見"
 
-#: src/commands/cargo-check.md:467
+#: src/commands/cargo-check.md:448
 msgid "[cargo(1)](cargo.html), [cargo-build(1)](cargo-build.html)"
 msgstr ""

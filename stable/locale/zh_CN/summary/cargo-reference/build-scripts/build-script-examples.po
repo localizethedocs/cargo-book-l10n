@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:35Z\n"
+"POT-Creation-Date: 2026-03-24T09:24:14Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -102,16 +102,16 @@ msgid "Let’s see what’s inside the build script:"
 msgstr ""
 
 #: src/reference/build-script-examples.md:58
-#: src/reference/build-script-examples.md:158
-#: src/reference/build-script-examples.md:211
-#: src/reference/build-script-examples.md:315
-#: src/reference/build-script-examples.md:402
+#: src/reference/build-script-examples.md:165
+#: src/reference/build-script-examples.md:218
+#: src/reference/build-script-examples.md:322
+#: src/reference/build-script-examples.md:409
 msgid "// build.rs\n"
 msgstr ""
 
 #: src/reference/build-script-examples.md:65
-#: src/reference/build-script-examples.md:104
-#: src/reference/build-script-examples.md:165
+#: src/reference/build-script-examples.md:111
+#: src/reference/build-script-examples.md:172
 msgid "\"OUT_DIR\""
 msgstr ""
 
@@ -128,7 +128,7 @@ msgid ""
 msgstr ""
 
 #: src/reference/build-script-examples.md:74
-#: src/reference/build-script-examples.md:319
+#: src/reference/build-script-examples.md:326
 msgid "\"cargo::rerun-if-changed=build.rs\""
 msgstr ""
 
@@ -155,13 +155,24 @@ msgstr ""
 
 #: src/reference/build-script-examples.md:89
 msgid ""
+"Sometimes, projects want to check in a generated file, and treat it as "
+"source code. However, in this case, the file shouldn't be generated from "
+"`build.rs`. Instead, have a test or similar which checks that the file "
+"precisely matches the generated version _and fails if the result doesn't "
+"match_, and run that test as part of your CI. (The test can generate a "
+"temporary file to compare to, and if you want to update the generated file, "
+"you can replace the checked-in file with that temporary file.)"
+msgstr ""
+
+#: src/reference/build-script-examples.md:96
+msgid ""
 "This script is relatively simple as it just writes out a small generated "
 "file. One could imagine that other more complex operations could take place "
 "such as generating a Rust module from a C header file or another language "
 "definition, for example."
 msgstr ""
 
-#: src/reference/build-script-examples.md:93
+#: src/reference/build-script-examples.md:100
 msgid ""
 "The [`rerun-if-changed` instruction](build-scripts.md#rerun-if-changed) "
 "tells Cargo that the build script only needs to re-run if the build script "
@@ -170,24 +181,24 @@ msgid ""
 "input files, this is where you would print a list of each of those files."
 msgstr ""
 
-#: src/reference/build-script-examples.md:99
+#: src/reference/build-script-examples.md:106
 msgid "Next, let’s peek at the library itself:"
 msgstr ""
 
-#: src/reference/build-script-examples.md:102
-#: src/reference/build-script-examples.md:250
+#: src/reference/build-script-examples.md:109
+#: src/reference/build-script-examples.md:257
 msgid "// src/main.rs\n"
 msgstr ""
 
-#: src/reference/build-script-examples.md:104
+#: src/reference/build-script-examples.md:111
 msgid "\"/hello.rs\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:107
+#: src/reference/build-script-examples.md:114
 msgid "\"{}\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:111
+#: src/reference/build-script-examples.md:118
 msgid ""
 "This is where the real magic happens. The library is using the rustc-defined "
 "[`include!` macro](../../std/macro.include.html) in combination with the "
@@ -196,17 +207,17 @@ msgid ""
 "compilation."
 msgstr ""
 
-#: src/reference/build-script-examples.md:116
+#: src/reference/build-script-examples.md:123
 msgid ""
 "Using the structure shown here, crates can include any number of generated "
 "files from the build script itself."
 msgstr ""
 
-#: src/reference/build-script-examples.md:123
+#: src/reference/build-script-examples.md:130
 msgid "Building a native library"
 msgstr ""
 
-#: src/reference/build-script-examples.md:125
+#: src/reference/build-script-examples.md:132
 msgid ""
 "Sometimes it’s necessary to build some native C or C++ code as part of a "
 "package. This is another excellent use case of leveraging the build script "
@@ -214,15 +225,15 @@ msgid ""
 "create a Rust library which calls into C to print “Hello, World!”."
 msgstr ""
 
-#: src/reference/build-script-examples.md:130
+#: src/reference/build-script-examples.md:137
 msgid "Like above, let’s first take a look at the package layout:"
 msgstr ""
 
-#: src/reference/build-script-examples.md:143
+#: src/reference/build-script-examples.md:150
 msgid "Pretty similar to before! Next, the manifest:"
 msgstr ""
 
-#: src/reference/build-script-examples.md:145
+#: src/reference/build-script-examples.md:152
 msgid ""
 "```toml\n"
 "# Cargo.toml\n"
@@ -234,73 +245,73 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/build-script-examples.md:154
+#: src/reference/build-script-examples.md:161
 msgid ""
 "For now we’re not going to use any build dependencies, so let’s take a look "
 "at the build script now:"
 msgstr ""
 
-#: src/reference/build-script-examples.md:167
+#: src/reference/build-script-examples.md:174
 msgid ""
 "// Note that there are a number of downsides to this approach, the comments\n"
 "    // below detail how to improve the portability of these commands.\n"
 msgstr ""
 
-#: src/reference/build-script-examples.md:169
+#: src/reference/build-script-examples.md:176
 msgid "\"gcc\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:169
-#: src/reference/build-script-examples.md:215
+#: src/reference/build-script-examples.md:176
+#: src/reference/build-script-examples.md:222
 msgid "\"src/hello.c\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:169
+#: src/reference/build-script-examples.md:176
 msgid "\"-c\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:169
+#: src/reference/build-script-examples.md:176
 msgid "\"-fPIC\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:169
+#: src/reference/build-script-examples.md:176
 msgid "\"-o\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:170
+#: src/reference/build-script-examples.md:177
 msgid "\"{}/hello.o\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:172
+#: src/reference/build-script-examples.md:179
 msgid "\"ar\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:172
+#: src/reference/build-script-examples.md:179
 msgid "\"crus\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:172
+#: src/reference/build-script-examples.md:179
 msgid "\"libhello.a\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:172
+#: src/reference/build-script-examples.md:179
 msgid "\"hello.o\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:176
+#: src/reference/build-script-examples.md:183
 msgid "\"cargo::rustc-link-search=native={}\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:177
+#: src/reference/build-script-examples.md:184
 msgid "\"cargo::rustc-link-lib=static=hello\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:178
-#: src/reference/build-script-examples.md:217
+#: src/reference/build-script-examples.md:185
+#: src/reference/build-script-examples.md:224
 msgid "\"cargo::rerun-if-changed=src/hello.c\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:182
+#: src/reference/build-script-examples.md:189
 msgid ""
 "This build script starts out by compiling our C file into an object file (by "
 "invoking `gcc`) and then converting this object file into a static library "
@@ -309,25 +320,25 @@ msgid ""
 "`libhello.a` statically via the `-l static=hello` flag."
 msgstr ""
 
-#: src/reference/build-script-examples.md:188
+#: src/reference/build-script-examples.md:195
 msgid "Note that there are a number of drawbacks to this hard-coded approach:"
 msgstr ""
 
-#: src/reference/build-script-examples.md:190
+#: src/reference/build-script-examples.md:197
 msgid ""
 "The `gcc` command itself is not portable across platforms. For example it’s "
 "unlikely that Windows platforms have `gcc`, and not even all Unix platforms "
 "may have `gcc`. The `ar` command is also in a similar situation."
 msgstr ""
 
-#: src/reference/build-script-examples.md:193
+#: src/reference/build-script-examples.md:200
 msgid ""
 "These commands do not take cross-compilation into account. If we’re cross "
 "compiling for a platform such as Android it’s unlikely that `gcc` will "
 "produce an ARM executable."
 msgstr ""
 
-#: src/reference/build-script-examples.md:197
+#: src/reference/build-script-examples.md:204
 msgid ""
 "Not to fear, though, this is where a `build-dependencies` entry would help! "
 "The Cargo ecosystem has a number of packages to make this sort of task much "
@@ -336,7 +347,7 @@ msgid ""
 "the `build-dependencies` in `Cargo.toml`:"
 msgstr ""
 
-#: src/reference/build-script-examples.md:203
+#: src/reference/build-script-examples.md:210
 msgid ""
 "```toml\n"
 "[build-dependencies]\n"
@@ -344,67 +355,67 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/build-script-examples.md:208
+#: src/reference/build-script-examples.md:215
 msgid "And rewrite the build script to use this crate:"
 msgstr ""
 
-#: src/reference/build-script-examples.md:216
-#: src/reference/build-script-examples.md:336
+#: src/reference/build-script-examples.md:223
+#: src/reference/build-script-examples.md:343
 msgid "\"hello\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:221
+#: src/reference/build-script-examples.md:228
 msgid ""
 "The [`cc` crate](https://crates.io/crates/cc) abstracts a range of build "
 "script requirements for C code:"
 msgstr ""
 
-#: src/reference/build-script-examples.md:223
+#: src/reference/build-script-examples.md:230
 msgid ""
 "It invokes the appropriate compiler (MSVC for windows, `gcc` for MinGW, `cc` "
 "for Unix platforms, etc.)."
 msgstr ""
 
-#: src/reference/build-script-examples.md:225
+#: src/reference/build-script-examples.md:232
 msgid ""
 "It takes the `TARGET` variable into account by passing appropriate flags to "
 "the compiler being used."
 msgstr ""
 
-#: src/reference/build-script-examples.md:227
+#: src/reference/build-script-examples.md:234
 msgid ""
 "Other environment variables, such as `OPT_LEVEL`, `DEBUG`, etc., are all "
 "handled automatically."
 msgstr ""
 
-#: src/reference/build-script-examples.md:229
+#: src/reference/build-script-examples.md:236
 msgid ""
 "The stdout output and `OUT_DIR` locations are also handled by the `cc` "
 "library."
 msgstr ""
 
-#: src/reference/build-script-examples.md:232
+#: src/reference/build-script-examples.md:239
 msgid ""
 "Here we can start to see some of the major benefits of farming as much "
 "functionality as possible out to common build dependencies rather than "
 "duplicating logic across all build scripts!"
 msgstr ""
 
-#: src/reference/build-script-examples.md:236
+#: src/reference/build-script-examples.md:243
 msgid ""
 "Back to the case study though, let’s take a quick look at the contents of "
 "the `src` directory:"
 msgstr ""
 
-#: src/reference/build-script-examples.md:240
+#: src/reference/build-script-examples.md:247
 msgid "// src/hello.c\n"
 msgstr ""
 
-#: src/reference/build-script-examples.md:245
+#: src/reference/build-script-examples.md:252
 msgid "\"Hello, World!\\n\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:251
+#: src/reference/build-script-examples.md:258
 msgid ""
 "// Note the lack of the `#[link]` attribute. We’re delegating the "
 "responsibility\n"
@@ -413,7 +424,7 @@ msgid ""
 "// it in the source file.\n"
 msgstr ""
 
-#: src/reference/build-script-examples.md:262
+#: src/reference/build-script-examples.md:269
 msgid ""
 "And there we go! This should complete our example of building some C code "
 "from a Cargo package using the build script itself. This also shows why "
@@ -421,24 +432,24 @@ msgid ""
 "more concise!"
 msgstr ""
 
-#: src/reference/build-script-examples.md:266
+#: src/reference/build-script-examples.md:273
 msgid ""
 "We’ve also seen a brief example of how a build script can use a crate as a "
 "dependency purely for the build process and not for the crate itself at "
 "runtime."
 msgstr ""
 
-#: src/reference/build-script-examples.md:271
+#: src/reference/build-script-examples.md:278
 msgid "Linking to system libraries"
 msgstr ""
 
-#: src/reference/build-script-examples.md:273
+#: src/reference/build-script-examples.md:280
 msgid ""
 "This example demonstrates how to link a system library and how the build "
 "script is used to support this use case."
 msgstr ""
 
-#: src/reference/build-script-examples.md:276
+#: src/reference/build-script-examples.md:283
 msgid ""
 "Quite frequently a Rust crate wants to link to a native library provided on "
 "the system to bind its functionality or just use it as part of an "
@@ -448,7 +459,7 @@ msgid ""
 "consumers."
 msgstr ""
 
-#: src/reference/build-script-examples.md:283
+#: src/reference/build-script-examples.md:290
 msgid ""
 "For this example, we will be creating a binding to the system's zlib "
 "library. This is a library that is commonly found on most Unix-like systems "
@@ -458,7 +469,7 @@ msgid ""
 "github.com/rust-lang/libz-sys) for the full example."
 msgstr ""
 
-#: src/reference/build-script-examples.md:289
+#: src/reference/build-script-examples.md:296
 msgid ""
 "To make it easy to find the location of the library, we will use the [`pkg-"
 "config` crate](https://crates.io/crates/pkg-config). This crate uses the "
@@ -468,7 +479,7 @@ msgid ""
 "start by setting up the manifest:"
 msgstr ""
 
-#: src/reference/build-script-examples.md:295
+#: src/reference/build-script-examples.md:302
 msgid ""
 "```toml\n"
 "# Cargo.toml\n"
@@ -484,7 +495,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/build-script-examples.md:308
+#: src/reference/build-script-examples.md:315
 msgid ""
 "Take note that we included the `links` key in the `package` table. This "
 "tells Cargo that we are linking to the `libz` library. See [\"Using another "
@@ -492,39 +503,39 @@ msgid ""
 "this."
 msgstr ""
 
-#: src/reference/build-script-examples.md:312
+#: src/reference/build-script-examples.md:319
 msgid "The build script is fairly simple:"
 msgstr ""
 
-#: src/reference/build-script-examples.md:318
+#: src/reference/build-script-examples.md:325
 msgid "\"zlib\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:323
+#: src/reference/build-script-examples.md:330
 msgid "Let's round out the example with a basic FFI binding:"
 msgstr ""
 
-#: src/reference/build-script-examples.md:326
+#: src/reference/build-script-examples.md:333
 msgid "// src/lib.rs\n"
 msgstr ""
 
-#: src/reference/build-script-examples.md:330
+#: src/reference/build-script-examples.md:337
 msgid "\"C\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:343
+#: src/reference/build-script-examples.md:350
 msgid ""
 "Run `cargo build -vv` to see the output from the build script. On a system "
 "with `libz` already installed, it may look something like this:"
 msgstr ""
 
-#: src/reference/build-script-examples.md:352
+#: src/reference/build-script-examples.md:359
 msgid ""
 "Nice! `pkg-config` did all the work of finding the library and telling Cargo "
 "where it is."
 msgstr ""
 
-#: src/reference/build-script-examples.md:355
+#: src/reference/build-script-examples.md:362
 msgid ""
 "It is not unusual for packages to include the source for the library, and "
 "build it statically if it is not found on the system, or if a feature or "
@@ -535,11 +546,11 @@ msgid ""
 "lang/libz-sys) for a more complete example."
 msgstr ""
 
-#: src/reference/build-script-examples.md:366
+#: src/reference/build-script-examples.md:373
 msgid "Using another `sys` crate"
 msgstr ""
 
-#: src/reference/build-script-examples.md:368
+#: src/reference/build-script-examples.md:375
 msgid ""
 "When using the `links` key, crates may set metadata that can be read by "
 "other crates that depend on it. This provides a mechanism to communicate "
@@ -548,7 +559,7 @@ msgid ""
 "crates/libz-sys)."
 msgstr ""
 
-#: src/reference/build-script-examples.md:373
+#: src/reference/build-script-examples.md:380
 msgid ""
 "If you have a C library that depends on zlib, you can leverage the [`libz-"
 "sys` crate](https://crates.io/crates/libz-sys) to automatically find it or "
@@ -561,7 +572,7 @@ msgid ""
 "example:"
 msgstr ""
 
-#: src/reference/build-script-examples.md:382
+#: src/reference/build-script-examples.md:389
 msgid ""
 "```toml\n"
 "# Cargo.toml\n"
@@ -579,53 +590,53 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/build-script-examples.md:397
+#: src/reference/build-script-examples.md:404
 msgid ""
 "Here we have included `libz-sys` which will ensure that there is only one "
 "`libz` used in the final library, and give us access to it from our build "
 "script:"
 msgstr ""
 
-#: src/reference/build-script-examples.md:406
+#: src/reference/build-script-examples.md:413
 msgid "\"src/z_user.c\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:407
+#: src/reference/build-script-examples.md:414
 msgid "\"DEP_Z_INCLUDE\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:410
+#: src/reference/build-script-examples.md:417
 msgid "\"z_user\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:411
+#: src/reference/build-script-examples.md:418
 msgid "\"cargo::rerun-if-changed=src/z_user.c\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:415
+#: src/reference/build-script-examples.md:422
 msgid ""
 "With `libz-sys` doing all the heavy lifting, the C source code may now "
 "include the zlib header, and it should find the header, even on systems "
 "where it isn't already installed."
 msgstr ""
 
-#: src/reference/build-script-examples.md:420
+#: src/reference/build-script-examples.md:427
 msgid "// src/z_user.c\n"
 msgstr ""
 
-#: src/reference/build-script-examples.md:422
+#: src/reference/build-script-examples.md:429
 msgid "\"zlib.h\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:423
+#: src/reference/build-script-examples.md:430
 msgid "// … rest of code that makes use of zlib.\n"
 msgstr ""
 
-#: src/reference/build-script-examples.md:427
+#: src/reference/build-script-examples.md:434
 msgid "Conditional compilation"
 msgstr ""
 
-#: src/reference/build-script-examples.md:429
+#: src/reference/build-script-examples.md:436
 msgid ""
 "A build script may emit [`rustc-cfg` instructions](build-scripts.md#rustc-"
 "cfg) which can enable conditions that can be checked at compile time. In "
@@ -634,7 +645,7 @@ msgid ""
 "library."
 msgstr ""
 
-#: src/reference/build-script-examples.md:434
+#: src/reference/build-script-examples.md:441
 msgid ""
 "The [`openssl-sys` crate](https://crates.io/crates/openssl-sys) implements "
 "building and linking the OpenSSL library. It supports multiple different "
@@ -646,17 +657,17 @@ msgid ""
 "dc72a8e2c429e46c275e528b61a733a66e7877fc/openssl-sys/build/main.rs#L216):"
 msgstr ""
 
-#: src/reference/build-script-examples.md:443
+#: src/reference/build-script-examples.md:450
 msgid "\"cargo::metadata=version_number={openssl_version:x}\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:446
+#: src/reference/build-script-examples.md:453
 msgid ""
 "This instruction causes the `DEP_OPENSSL_VERSION_NUMBER` environment "
 "variable to be set in any crates that directly depend on `openssl-sys`."
 msgstr ""
 
-#: src/reference/build-script-examples.md:449
+#: src/reference/build-script-examples.md:456
 msgid ""
 "The `openssl` crate, which provides the higher-level interface, specifies "
 "`openssl-sys` as a dependency. The `openssl` build script can read the "
@@ -666,43 +677,43 @@ msgid ""
 "dc72a8e2c429e46c275e528b61a733a66e7877fc/openssl/build.rs#L18-L36):"
 msgstr ""
 
-#: src/reference/build-script-examples.md:457
+#: src/reference/build-script-examples.md:464
 msgid "// (portion of build.rs)\n"
 msgstr ""
 
-#: src/reference/build-script-examples.md:459
+#: src/reference/build-script-examples.md:466
 msgid "\"cargo::rustc-check-cfg=cfg(ossl101,ossl102)\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:460
+#: src/reference/build-script-examples.md:467
 msgid "\"cargo::rustc-check-cfg=cfg(ossl110,ossl110g,ossl111)\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:462
+#: src/reference/build-script-examples.md:469
 msgid "\"DEP_OPENSSL_VERSION_NUMBER\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:466
+#: src/reference/build-script-examples.md:473
 msgid "\"cargo::rustc-cfg=ossl101\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:469
+#: src/reference/build-script-examples.md:476
 msgid "\"cargo::rustc-cfg=ossl102\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:472
+#: src/reference/build-script-examples.md:479
 msgid "\"cargo::rustc-cfg=ossl110\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:475
+#: src/reference/build-script-examples.md:482
 msgid "\"cargo::rustc-cfg=ossl110g\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:478
+#: src/reference/build-script-examples.md:485
 msgid "\"cargo::rustc-cfg=ossl111\""
 msgstr ""
 
-#: src/reference/build-script-examples.md:483
+#: src/reference/build-script-examples.md:490
 msgid ""
 "These `cfg` values can then be used with the [`cfg` attribute](../../"
 "reference/conditional-compilation.md#the-cfg-attribute) or the [`cfg` macro]"
@@ -713,11 +724,11 @@ msgid ""
 "older versions:"
 msgstr ""
 
-#: src/reference/build-script-examples.md:490
+#: src/reference/build-script-examples.md:497
 msgid "// (portion of openssl crate)\n"
 msgstr ""
 
-#: src/reference/build-script-examples.md:498
+#: src/reference/build-script-examples.md:505
 msgid ""
 "Of course, one should be careful when using this, since it makes the "
 "resulting binary even more dependent on the build environment. In this "

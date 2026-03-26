@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:36Z\n"
+"POT-Creation-Date: 2026-03-24T09:24:14Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -141,69 +141,69 @@ msgstr ""
 msgid "Manifest Options"
 msgstr ""
 
-#: src/commands/cargo-pkgid.md:145
+#: src/commands/cargo-pkgid.md:133
 msgid "Common Options"
 msgstr ""
 
-#: src/commands/cargo-pkgid.md:190
+#: src/commands/cargo-pkgid.md:178
 msgid "ENVIRONMENT"
 msgstr ""
 
-#: src/commands/cargo-pkgid.md:192
+#: src/commands/cargo-pkgid.md:180
 msgid ""
 "See [the reference](../reference/environment-variables.html) for details on "
 "environment variables that Cargo reads."
 msgstr ""
 
-#: src/commands/cargo-pkgid.md:195
+#: src/commands/cargo-pkgid.md:183
 msgid "EXIT STATUS"
 msgstr ""
 
-#: src/commands/cargo-pkgid.md:197
+#: src/commands/cargo-pkgid.md:185
 msgid "`0`: Cargo succeeded."
 msgstr ""
 
-#: src/commands/cargo-pkgid.md:198
+#: src/commands/cargo-pkgid.md:186
 msgid "`101`: Cargo failed to complete."
 msgstr ""
 
-#: src/commands/cargo-pkgid.md:200
+#: src/commands/cargo-pkgid.md:188
 msgid "EXAMPLES"
 msgstr ""
 
-#: src/commands/cargo-pkgid.md:202
+#: src/commands/cargo-pkgid.md:190
 msgid "Retrieve package specification for `foo` package:"
 msgstr ""
 
-#: src/commands/cargo-pkgid.md:206
+#: src/commands/cargo-pkgid.md:194
 msgid "Retrieve package specification for version 1.0.0 of `foo`:"
 msgstr ""
 
-#: src/commands/cargo-pkgid.md:210
+#: src/commands/cargo-pkgid.md:198
 msgid "Retrieve package specification for `foo` from crates.io:"
 msgstr ""
 
-#: src/commands/cargo-pkgid.md:212
+#: src/commands/cargo-pkgid.md:200
 msgid ""
 "    cargo pkgid https://github.com/rust-lang/crates.io-index#foo\n"
 "    "
 msgstr ""
 
-#: src/commands/cargo-pkgid.md:214
+#: src/commands/cargo-pkgid.md:202
 msgid "Retrieve package specification for `foo` from a local package:"
 msgstr ""
 
-#: src/commands/cargo-pkgid.md:216
+#: src/commands/cargo-pkgid.md:204
 msgid ""
 "    cargo pkgid file:///path/to/local/package#foo\n"
 "    "
 msgstr ""
 
-#: src/commands/cargo-pkgid.md:218
+#: src/commands/cargo-pkgid.md:206
 msgid "SEE ALSO"
 msgstr ""
 
-#: src/commands/cargo-pkgid.md:220
+#: src/commands/cargo-pkgid.md:208
 msgid ""
 "[cargo(1)](cargo.html), [cargo-generate-lockfile(1)](cargo-generate-lockfile."
 "html), [cargo-metadata(1)](cargo-metadata.html), [Package ID Specifications]"

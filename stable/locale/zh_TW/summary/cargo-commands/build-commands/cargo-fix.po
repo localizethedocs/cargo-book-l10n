@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:36Z\n"
+"POT-Creation-Date: 2026-03-24T09:24:14Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -193,68 +193,68 @@ msgstr ""
 msgid "Compilation Options"
 msgstr "編譯選項"
 
-#: src/commands/cargo-fix.md:326
+#: src/commands/cargo-fix.md:319
 msgid "Output Options"
 msgstr "輸出選項"
 
-#: src/commands/cargo-fix.md:338
+#: src/commands/cargo-fix.md:331
 msgid "Display Options"
 msgstr "顯示選項"
 
-#: src/commands/cargo-fix.md:396
+#: src/commands/cargo-fix.md:389
 msgid "Manifest Options"
 msgstr "清單選項"
 
-#: src/commands/cargo-fix.md:456
+#: src/commands/cargo-fix.md:437
 msgid "Common Options"
 msgstr "共用選項"
 
-#: src/commands/cargo-fix.md:501
+#: src/commands/cargo-fix.md:482
 msgid "Miscellaneous Options"
 msgstr ""
 
-#: src/commands/cargo-fix.md:526
+#: src/commands/cargo-fix.md:507
 msgid "ENVIRONMENT"
 msgstr "環境"
 
-#: src/commands/cargo-fix.md:528
+#: src/commands/cargo-fix.md:509
 msgid ""
 "See [the reference](../reference/environment-variables.html) for details on "
 "environment variables that Cargo reads."
 msgstr ""
 
-#: src/commands/cargo-fix.md:531
+#: src/commands/cargo-fix.md:512
 msgid "EXIT STATUS"
 msgstr "退出狀態"
 
-#: src/commands/cargo-fix.md:533
+#: src/commands/cargo-fix.md:514
 msgid "`0`: Cargo succeeded."
 msgstr "`0`：Cargo 執行成功。"
 
-#: src/commands/cargo-fix.md:534
+#: src/commands/cargo-fix.md:515
 msgid "`101`: Cargo failed to complete."
 msgstr "`101`：Cargo 未能完成執行。"
 
-#: src/commands/cargo-fix.md:536
+#: src/commands/cargo-fix.md:517
 msgid "EXAMPLES"
 msgstr "範例"
 
-#: src/commands/cargo-fix.md:538
+#: src/commands/cargo-fix.md:519
 msgid "Apply compiler suggestions to the local package:"
 msgstr ""
 
-#: src/commands/cargo-fix.md:542
+#: src/commands/cargo-fix.md:523
 msgid "Update a package to prepare it for the next edition:"
 msgstr ""
 
-#: src/commands/cargo-fix.md:546
+#: src/commands/cargo-fix.md:527
 msgid "Apply suggested idioms for the current edition:"
 msgstr ""
 
-#: src/commands/cargo-fix.md:550
+#: src/commands/cargo-fix.md:531
 msgid "SEE ALSO"
 msgstr "另請參見"
 
-#: src/commands/cargo-fix.md:551
+#: src/commands/cargo-fix.md:532
 msgid "[cargo(1)](cargo.html), [cargo-check(1)](cargo-check.html)"
 msgstr ""

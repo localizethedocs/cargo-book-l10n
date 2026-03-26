@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:35Z\n"
+"POT-Creation-Date: 2026-03-24T09:24:14Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -247,15 +247,16 @@ msgid ""
 "allows an integration test to execute the binary to exercise and test its "
 "behavior. The `CARGO_BIN_EXE_<name>` [environment variable](environment-"
 "variables.md#environment-variables-cargo-sets-for-crates) is set when the "
-"integration test is built so that it can use the [`env` macro](../../std/"
-"macro.env.html) to locate the executable."
+"integration test is built and run so that it can use the [`env` macro](../../"
+"std/macro.env.html) or [`var` function](../../std/env/fn.var.html) to locate "
+"the executable."
 msgstr ""
 
-#: src/reference/cargo-targets.md:143
+#: src/reference/cargo-targets.md:144
 msgid "Benchmarks"
 msgstr "基準測試"
 
-#: src/reference/cargo-targets.md:145
+#: src/reference/cargo-targets.md:146
 msgid ""
 "Benchmarks provide a way to test the performance of your code using the "
 "[`cargo bench`](../commands/cargo-bench.md) command. They follow the same "
@@ -263,33 +264,33 @@ msgid ""
 "the `#[bench]` attribute. Similarly to tests:"
 msgstr ""
 
-#: src/reference/cargo-targets.md:150
+#: src/reference/cargo-targets.md:151
 msgid ""
 "Benchmarks are placed in the [`benches` directory](../guide/project-layout."
 "md)."
 msgstr ""
 
-#: src/reference/cargo-targets.md:151
+#: src/reference/cargo-targets.md:152
 msgid ""
 "Benchmark functions defined in libraries and binaries have access to the "
 "_private_ API within the target they are defined in. Benchmarks in the "
 "`benches` directory may use the _public_ API."
 msgstr ""
 
-#: src/reference/cargo-targets.md:154
+#: src/reference/cargo-targets.md:155
 msgid ""
 "[The `bench` field](#the-bench-field) can be used to define which targets "
 "are benchmarked by default."
 msgstr ""
 "[`bench` 欄位](#bench-欄位)可用於定義預設情況下要對哪些目標進行基準測試。"
 
-#: src/reference/cargo-targets.md:156
+#: src/reference/cargo-targets.md:157
 msgid ""
 "[The `harness` field](#the-harness-field) can be used to disable the built-"
 "in harness."
 msgstr ""
 
-#: src/reference/cargo-targets.md:159
+#: src/reference/cargo-targets.md:160
 msgid ""
 "**Note**: The [`#[bench]` attribute](../../unstable-book/library-features/"
 "test.html) is currently unstable and only available on the [nightly channel]"
@@ -299,11 +300,11 @@ msgid ""
 "crates.io/crates/criterion)."
 msgstr ""
 
-#: src/reference/cargo-targets.md:166
+#: src/reference/cargo-targets.md:167
 msgid "Configuring a target"
 msgstr "組態目標"
 
-#: src/reference/cargo-targets.md:168
+#: src/reference/cargo-targets.md:169
 msgid ""
 "All of the  `[lib]`, `[[bin]]`, `[[example]]`, `[[test]]`, and `[[bench]]` "
 "sections in `Cargo.toml` support similar configuration for specifying how a "
@@ -314,13 +315,13 @@ msgid ""
 "normal TOML table."
 msgstr ""
 
-#: src/reference/cargo-targets.md:176
+#: src/reference/cargo-targets.md:177
 msgid ""
 "The following is an overview of the TOML settings for each target, with each "
 "field described in detail below."
 msgstr ""
 
-#: src/reference/cargo-targets.md:179
+#: src/reference/cargo-targets.md:180
 msgid ""
 "```toml\n"
 "[lib]\n"
@@ -338,18 +339,18 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/cargo-targets.md:193
+#: src/reference/cargo-targets.md:194
 msgid "The `name` field"
 msgstr "`name` 欄位"
 
-#: src/reference/cargo-targets.md:195
+#: src/reference/cargo-targets.md:196
 msgid ""
 "The `name` field specifies the name of the target, which corresponds to the "
 "filename of the artifact that will be generated. For a library, this is the "
 "crate name that dependencies will use to reference it."
 msgstr ""
 
-#: src/reference/cargo-targets.md:199
+#: src/reference/cargo-targets.md:200
 msgid ""
 "For the library target, this defaults to the name of the package , with any "
 "dashes replaced with underscores. For the default binary (`src/main.rs`), it "
@@ -358,38 +359,38 @@ msgid ""
 "directory or file name."
 msgstr ""
 
-#: src/reference/cargo-targets.md:205
+#: src/reference/cargo-targets.md:206
 msgid "This is required for all targets except `[lib]`."
 msgstr ""
 
-#: src/reference/cargo-targets.md:207
+#: src/reference/cargo-targets.md:208
 msgid "The `path` field"
 msgstr "`path` 欄位"
 
-#: src/reference/cargo-targets.md:209
+#: src/reference/cargo-targets.md:210
 msgid ""
 "The `path` field specifies where the source for the crate is located, "
 "relative to the `Cargo.toml` file."
 msgstr "`path` 欄位指定了該軟體箱的來源碼相對於 `Cargo.toml` 檔案所在的位置。"
 
-#: src/reference/cargo-targets.md:212
+#: src/reference/cargo-targets.md:213
 msgid ""
 "If not specified, the [inferred path](#target-auto-discovery) is used based "
 "on the target name."
 msgstr ""
 
-#: src/reference/cargo-targets.md:215
+#: src/reference/cargo-targets.md:216
 msgid "The `test` field"
 msgstr "`test` 欄位"
 
-#: src/reference/cargo-targets.md:217
+#: src/reference/cargo-targets.md:218
 msgid ""
 "The `test` field indicates whether or not the target is tested by default by "
 "[`cargo test`](../commands/cargo-test.md). The default is `true` for lib, "
 "bins, and tests."
 msgstr ""
 
-#: src/reference/cargo-targets.md:220
+#: src/reference/cargo-targets.md:221
 msgid ""
 "**Note**: Examples are built by [`cargo test`](../commands/cargo-test.md) by "
 "default to ensure they continue to compile, but they are not _tested_ by "
@@ -398,11 +399,11 @@ msgid ""
 "attribute) functions defined in the example."
 msgstr ""
 
-#: src/reference/cargo-targets.md:225
+#: src/reference/cargo-targets.md:226
 msgid "The `doctest` field"
 msgstr "`doctest` 欄位"
 
-#: src/reference/cargo-targets.md:227
+#: src/reference/cargo-targets.md:228
 msgid ""
 "The `doctest` field indicates whether or not [documentation examples](../../"
 "rustdoc/documentation-tests.html) are tested by default by [`cargo test`](../"
@@ -410,58 +411,58 @@ msgid ""
 "effect on other sections. The default is `true` for the library."
 msgstr ""
 
-#: src/reference/cargo-targets.md:231
+#: src/reference/cargo-targets.md:232
 msgid "The `bench` field"
 msgstr "`bench` 欄位"
 
-#: src/reference/cargo-targets.md:233
+#: src/reference/cargo-targets.md:234
 msgid ""
 "The `bench` field indicates whether or not the target is benchmarked by "
 "default by [`cargo bench`](../commands/cargo-bench.md). The default is "
 "`true` for lib, bins, and benchmarks."
 msgstr ""
 
-#: src/reference/cargo-targets.md:237
+#: src/reference/cargo-targets.md:238
 msgid "The `doc` field"
 msgstr "`doc` 欄位"
 
-#: src/reference/cargo-targets.md:239
+#: src/reference/cargo-targets.md:240
 msgid ""
 "The `doc` field indicates whether or not the target is included in the "
 "documentation generated by [`cargo doc`](../commands/cargo-doc.md) by "
 "default. The default is `true` for libraries and binaries."
 msgstr ""
 
-#: src/reference/cargo-targets.md:243
+#: src/reference/cargo-targets.md:244
 msgid ""
 "**Note**: The binary will be skipped if its name is the same as the lib "
 "target."
 msgstr ""
 
-#: src/reference/cargo-targets.md:246
+#: src/reference/cargo-targets.md:247
 msgid "The `plugin` field"
 msgstr "`plugin` 欄位"
 
-#: src/reference/cargo-targets.md:248
+#: src/reference/cargo-targets.md:249
 msgid "This option is deprecated and unused."
 msgstr "該選項已棄用且不再使用。"
 
-#: src/reference/cargo-targets.md:250
+#: src/reference/cargo-targets.md:251
 msgid "The `proc-macro` field"
 msgstr "`proc-macro` 欄位"
 
-#: src/reference/cargo-targets.md:252
+#: src/reference/cargo-targets.md:253
 msgid ""
 "The `proc-macro` field indicates that the library is a [procedural macro]"
 "(../../book/ch19-06-macros.html) ([reference](../../reference/procedural-"
 "macros.html)). This is only valid for the `[lib]` target."
 msgstr ""
 
-#: src/reference/cargo-targets.md:256
+#: src/reference/cargo-targets.md:257
 msgid "The `harness` field"
 msgstr "`harness` 欄位"
 
-#: src/reference/cargo-targets.md:258
+#: src/reference/cargo-targets.md:259
 msgid ""
 "The `harness` field indicates that the [`--test` flag](../../rustc/command-"
 "line-arguments.html#option-test) will be passed to `rustc` which will "
@@ -471,24 +472,24 @@ msgid ""
 "`#[bench]` attribute. The default is `true` for all targets."
 msgstr ""
 
-#: src/reference/cargo-targets.md:264
+#: src/reference/cargo-targets.md:265
 msgid ""
 "If set to `false`, then you are responsible for defining a `main()` function "
 "to run tests and benchmarks."
 msgstr ""
 
-#: src/reference/cargo-targets.md:267
+#: src/reference/cargo-targets.md:268
 msgid ""
 "Tests have the [`cfg(test)` conditional expression](../../reference/"
 "conditional-compilation.html#test) enabled whether or not the harness is "
 "enabled."
 msgstr ""
 
-#: src/reference/cargo-targets.md:270
+#: src/reference/cargo-targets.md:271
 msgid "The `crate-type` field"
 msgstr "`crate-type` 欄位"
 
-#: src/reference/cargo-targets.md:272
+#: src/reference/cargo-targets.md:273
 msgid ""
 "The `crate-type` field defines the [crate types](../../reference/linkage."
 "html) that will be generated by the target. It is an array of strings, "
@@ -497,39 +498,39 @@ msgid ""
 "benchmarks are always the \"bin\" crate type. The defaults are:"
 msgstr ""
 
-#: src/reference/cargo-targets.md:278
+#: src/reference/cargo-targets.md:279
 msgid "Target"
 msgstr "目標"
 
-#: src/reference/cargo-targets.md:278
+#: src/reference/cargo-targets.md:279
 msgid "Crate Type"
 msgstr "軟體箱型別"
 
-#: src/reference/cargo-targets.md:280
+#: src/reference/cargo-targets.md:281
 msgid "Normal library"
 msgstr "普通程式庫"
 
-#: src/reference/cargo-targets.md:280
+#: src/reference/cargo-targets.md:281
 msgid "`\"lib\"`"
 msgstr "`\"lib\"`"
 
-#: src/reference/cargo-targets.md:281
+#: src/reference/cargo-targets.md:282
 msgid "Proc-macro library"
 msgstr ""
 
-#: src/reference/cargo-targets.md:281
+#: src/reference/cargo-targets.md:282
 msgid "`\"proc-macro\"`"
 msgstr "`\"proc-macro\"`"
 
-#: src/reference/cargo-targets.md:282
+#: src/reference/cargo-targets.md:283
 msgid "Example"
 msgstr "範例"
 
-#: src/reference/cargo-targets.md:282
+#: src/reference/cargo-targets.md:283
 msgid "`\"bin\"`"
 msgstr "`\"bin\"`"
 
-#: src/reference/cargo-targets.md:284
+#: src/reference/cargo-targets.md:285
 msgid ""
 "The available options are `bin`, `lib`, `rlib`, `dylib`, `cdylib`, "
 "`staticlib`, and `proc-macro`. You can read more about the different crate "
@@ -539,11 +540,11 @@ msgstr ""
 "macro`。您可以在 [Rust 參考手冊](../../reference/linkage.html)中閱讀更多關於"
 "不同軟體箱型別的資訊。"
 
-#: src/reference/cargo-targets.md:288
+#: src/reference/cargo-targets.md:289
 msgid "The `required-features` field"
 msgstr "`required-features` 欄位"
 
-#: src/reference/cargo-targets.md:290
+#: src/reference/cargo-targets.md:291
 msgid ""
 "The `required-features` field specifies which [features](features.md) the "
 "target needs in order to be built. If any of the required features are not "
@@ -552,7 +553,7 @@ msgid ""
 "effect on `[lib]`."
 msgstr ""
 
-#: src/reference/cargo-targets.md:295
+#: src/reference/cargo-targets.md:296
 msgid ""
 "```toml\n"
 "[features]\n"
@@ -567,27 +568,27 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/cargo-targets.md:307
+#: src/reference/cargo-targets.md:308
 msgid "The `edition` field"
 msgstr "`edition` 欄位"
 
-#: src/reference/cargo-targets.md:309
+#: src/reference/cargo-targets.md:310
 msgid ""
 "The `edition` field defines the [Rust edition](../../edition-guide/index."
 "html) the target will use. If not specified, it defaults to the [`edition` "
 "field](manifest.md#the-edition-field) for the `[package]`."
 msgstr ""
 
-#: src/reference/cargo-targets.md:313
+#: src/reference/cargo-targets.md:314
 msgid ""
 "**Note:** This field is deprecated and will be removed in a future Edition"
 msgstr ""
 
-#: src/reference/cargo-targets.md:315
+#: src/reference/cargo-targets.md:316
 msgid "Target auto-discovery"
 msgstr "目標自動探索"
 
-#: src/reference/cargo-targets.md:317
+#: src/reference/cargo-targets.md:318
 msgid ""
 "By default, Cargo automatically determines the targets to build based on the "
 "[layout of the files](../guide/project-layout.md) on the filesystem. The "
@@ -596,7 +597,7 @@ msgid ""
 "don't follow the standard directory layout."
 msgstr ""
 
-#: src/reference/cargo-targets.md:323
+#: src/reference/cargo-targets.md:324
 msgid ""
 "The automatic target discovery can be disabled so that only manually "
 "configured targets will be built. Setting the keys `autolib`, `autobins`, "
@@ -604,7 +605,7 @@ msgid ""
 "section will disable auto-discovery of the corresponding target type."
 msgstr ""
 
-#: src/reference/cargo-targets.md:338
+#: src/reference/cargo-targets.md:339
 msgid ""
 "Disabling automatic discovery should only be needed for specialized "
 "situations. For example, if you have a library where you want a _module_ "
@@ -613,25 +614,25 @@ msgid ""
 "a sample layout of this scenario:"
 msgstr ""
 
-#: src/reference/cargo-targets.md:352
+#: src/reference/cargo-targets.md:353
 msgid ""
 "To prevent Cargo from inferring `src/bin/mod.rs` as an executable, set "
 "`autobins = false` in `Cargo.toml` to disable auto-discovery:"
 msgstr ""
 
-#: src/reference/cargo-targets.md:361
+#: src/reference/cargo-targets.md:362
 msgid ""
 "**Note**: For packages with the 2015 edition, the default for auto-discovery "
 "is `false` if at least one target is manually defined in `Cargo.toml`. "
 "Beginning with the 2018 edition, the default is always `true`."
 msgstr ""
 
-#: src/reference/cargo-targets.md:365
+#: src/reference/cargo-targets.md:366
 msgid ""
 "**MSRV:** Respected as of 1.27 for `autobins`, `autoexamples`, `autotests`, "
 "and `autobenches`"
 msgstr ""
 
-#: src/reference/cargo-targets.md:367
+#: src/reference/cargo-targets.md:368
 msgid "**MSRV:** Respected as of 1.83 for `autolib`"
 msgstr ""

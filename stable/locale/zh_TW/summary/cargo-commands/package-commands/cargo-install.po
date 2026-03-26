@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:36Z\n"
+"POT-Creation-Date: 2026-03-24T09:24:14Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -197,65 +197,65 @@ msgstr ""
 msgid "Compilation Options"
 msgstr "編譯選項"
 
-#: src/commands/cargo-install.md:295
+#: src/commands/cargo-install.md:288
 msgid "Manifest Options"
 msgstr "清單選項"
 
-#: src/commands/cargo-install.md:336
+#: src/commands/cargo-install.md:329
 msgid "Miscellaneous Options"
 msgstr ""
 
-#: src/commands/cargo-install.md:361
+#: src/commands/cargo-install.md:354
 msgid "Display Options"
 msgstr "顯示選項"
 
-#: src/commands/cargo-install.md:420
+#: src/commands/cargo-install.md:413
 msgid "Common Options"
 msgstr "共用選項"
 
-#: src/commands/cargo-install.md:465
+#: src/commands/cargo-install.md:458
 msgid "ENVIRONMENT"
 msgstr "環境"
 
-#: src/commands/cargo-install.md:467
+#: src/commands/cargo-install.md:460
 msgid ""
 "See [the reference](../reference/environment-variables.html) for details on "
 "environment variables that Cargo reads."
 msgstr ""
 
-#: src/commands/cargo-install.md:470
+#: src/commands/cargo-install.md:463
 msgid "EXIT STATUS"
 msgstr "退出狀態"
 
-#: src/commands/cargo-install.md:472
+#: src/commands/cargo-install.md:465
 msgid "`0`: Cargo succeeded."
 msgstr "`0`：Cargo 執行成功。"
 
-#: src/commands/cargo-install.md:473
+#: src/commands/cargo-install.md:466
 msgid "`101`: Cargo failed to complete."
 msgstr "`101`：Cargo 未能完成執行。"
 
-#: src/commands/cargo-install.md:475
+#: src/commands/cargo-install.md:468
 msgid "EXAMPLES"
 msgstr "範例"
 
-#: src/commands/cargo-install.md:477
+#: src/commands/cargo-install.md:470
 msgid "Install or upgrade a package from crates.io:"
 msgstr "從 crates.io 安裝或升級軟體包："
 
-#: src/commands/cargo-install.md:481
+#: src/commands/cargo-install.md:474
 msgid "Install or reinstall the package in the current directory:"
 msgstr "安裝或解除安裝當前目錄中的軟體包："
 
-#: src/commands/cargo-install.md:485
+#: src/commands/cargo-install.md:478
 msgid "View the list of installed packages:"
 msgstr ""
 
-#: src/commands/cargo-install.md:489
+#: src/commands/cargo-install.md:482
 msgid "SEE ALSO"
 msgstr "另請參見"
 
-#: src/commands/cargo-install.md:490
+#: src/commands/cargo-install.md:483
 msgid ""
 "[cargo(1)](cargo.html), [cargo-uninstall(1)](cargo-uninstall.html), [cargo-"
 "search(1)](cargo-search.html), [cargo-publish(1)](cargo-publish.html)"

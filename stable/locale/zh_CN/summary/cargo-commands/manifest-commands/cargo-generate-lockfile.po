@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:36Z\n"
+"POT-Creation-Date: 2026-03-24T09:24:14Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -61,44 +61,44 @@ msgstr ""
 msgid "Manifest Options"
 msgstr ""
 
-#: src/commands/cargo-generate-lockfile.md:127
+#: src/commands/cargo-generate-lockfile.md:115
 msgid "Common Options"
 msgstr ""
 
-#: src/commands/cargo-generate-lockfile.md:172
+#: src/commands/cargo-generate-lockfile.md:160
 msgid "ENVIRONMENT"
 msgstr ""
 
-#: src/commands/cargo-generate-lockfile.md:174
+#: src/commands/cargo-generate-lockfile.md:162
 msgid ""
 "See [the reference](../reference/environment-variables.html) for details on "
 "environment variables that Cargo reads."
 msgstr ""
 
-#: src/commands/cargo-generate-lockfile.md:177
+#: src/commands/cargo-generate-lockfile.md:165
 msgid "EXIT STATUS"
 msgstr ""
 
-#: src/commands/cargo-generate-lockfile.md:179
+#: src/commands/cargo-generate-lockfile.md:167
 msgid "`0`: Cargo succeeded."
 msgstr ""
 
-#: src/commands/cargo-generate-lockfile.md:180
+#: src/commands/cargo-generate-lockfile.md:168
 msgid "`101`: Cargo failed to complete."
 msgstr ""
 
-#: src/commands/cargo-generate-lockfile.md:182
+#: src/commands/cargo-generate-lockfile.md:170
 msgid "EXAMPLES"
 msgstr ""
 
-#: src/commands/cargo-generate-lockfile.md:184
+#: src/commands/cargo-generate-lockfile.md:172
 msgid "Create or update the lockfile for the current package or workspace:"
 msgstr ""
 
-#: src/commands/cargo-generate-lockfile.md:188
+#: src/commands/cargo-generate-lockfile.md:176
 msgid "SEE ALSO"
 msgstr ""
 
-#: src/commands/cargo-generate-lockfile.md:189
+#: src/commands/cargo-generate-lockfile.md:177
 msgid "[cargo(1)](cargo.html), [cargo-update(1)](cargo-update.html)"
 msgstr ""

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:35Z\n"
+"POT-Creation-Date: 2026-03-24T09:24:14Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -484,13 +484,35 @@ msgstr ""
 msgid "\"1.60\""
 msgstr ""
 
-#: src/reference/registry-index.md:225
+#: src/reference/registry-index.md:222
+msgid ""
+"// The publish time of this package version (optional).\n"
+"    //\n"
+"    // The format is a subset of ISO8601:\n"
+"    // - `yyyy-mm-ddThh:mm:ssZ`\n"
+"    // - no fractional seconds\n"
+"    // - always `Z` for UTC timezone, no timezone offsets supported\n"
+"    // - fields are 0-padded\n"
+"    //\n"
+"    // Example: 2025-11-12T19:30:12Z\n"
+"    //\n"
+"    // This should be the original publish time and not changed on any "
+"status changes,\n"
+"    // like `yanked`.\n"
+"    \"pubtime\""
+msgstr ""
+
+#: src/reference/registry-index.md:234
+msgid "\"2025-11-12T19:30:12Z\""
+msgstr ""
+
+#: src/reference/registry-index.md:238
 msgid ""
 "The JSON objects should not be modified after they are added except for the "
 "`yanked` field whose value may change at any time."
 msgstr ""
 
-#: src/reference/registry-index.md:228
+#: src/reference/registry-index.md:241
 msgid ""
 "**Note**: The index JSON format has subtle differences from the JSON format "
 "of the [Publish API](registry-web-api.md#publish) and [`cargo metadata`](../"
@@ -499,16 +521,16 @@ msgid ""
 "documentation differences between them."
 msgstr ""
 
-#: src/reference/registry-index.md:231
+#: src/reference/registry-index.md:244
 msgid ""
 "For the [Publish API](registry-web-api.md#publish), the differences are:"
 msgstr ""
 
-#: src/reference/registry-index.md:233 src/reference/registry-index.md:250
+#: src/reference/registry-index.md:246 src/reference/registry-index.md:263
 msgid "`deps`"
 msgstr ""
 
-#: src/reference/registry-index.md:234
+#: src/reference/registry-index.md:247
 msgid ""
 "`name` --- When the dependency is [renamed](specifying-dependencies."
 "md#renaming-dependencies-in-cargotoml) in `Cargo.toml`, the publish API puts "
@@ -517,17 +539,17 @@ msgid ""
 "`name` field, and the original package name in the `package` field."
 msgstr ""
 
-#: src/reference/registry-index.md:236
+#: src/reference/registry-index.md:249
 msgid "`req` --- The Publish API field is called `version_req`."
 msgstr ""
 
-#: src/reference/registry-index.md:237
+#: src/reference/registry-index.md:250
 msgid ""
 "`cksum` --- The publish API does not specify the checksum, it must be "
 "computed by the registry before adding to the index."
 msgstr ""
 
-#: src/reference/registry-index.md:238
+#: src/reference/registry-index.md:251
 msgid ""
 "`features` --- Some features may be placed in the `features2` field. Note: "
 "This is only a legacy requirement for [crates.io](https://crates.io/); other "
@@ -535,7 +557,7 @@ msgid ""
 "`v` field indicates the presence of the `features2` field."
 msgstr ""
 
-#: src/reference/registry-index.md:241
+#: src/reference/registry-index.md:254
 msgid ""
 "The publish API includes several other fields, such as `description` and "
 "`readme`, which don't appear in the index. These are intended to make it "
@@ -545,23 +567,23 @@ msgid ""
 "server."
 msgstr ""
 
-#: src/reference/registry-index.md:244
+#: src/reference/registry-index.md:257
 msgid ""
 "Although `rust_version` is included here, [crates.io](https://crates.io/) "
 "will ignore this field and instead read it from the `Cargo.toml` contained "
 "in the `.crate` file."
 msgstr ""
 
-#: src/reference/registry-index.md:247
+#: src/reference/registry-index.md:260
 msgid ""
 "For [`cargo metadata`](../commands/cargo-metadata.md), the differences are:"
 msgstr ""
 
-#: src/reference/registry-index.md:249
+#: src/reference/registry-index.md:262
 msgid "`vers` --- The `cargo metadata` field is called `version`."
 msgstr ""
 
-#: src/reference/registry-index.md:251
+#: src/reference/registry-index.md:264
 msgid ""
 "`name` --- When the dependency is [renamed](specifying-dependencies."
 "md#renaming-dependencies-in-cargotoml) in `Cargo.toml`, `cargo metadata` "
@@ -570,13 +592,13 @@ msgid ""
 "and the original package name in the `package` field."
 msgstr ""
 
-#: src/reference/registry-index.md:253
+#: src/reference/registry-index.md:266
 msgid ""
 "`default_features` --- The `cargo metadata` field is called "
 "`uses_default_features`."
 msgstr ""
 
-#: src/reference/registry-index.md:254
+#: src/reference/registry-index.md:267
 msgid ""
 "`registry` --- `cargo metadata` uses a value of `null` to indicate that the "
 "dependency comes from [crates.io](https://crates.io/). The index uses a "
@@ -587,56 +609,56 @@ msgid ""
 "current index to be `null`."
 msgstr ""
 
-#: src/reference/registry-index.md:257
+#: src/reference/registry-index.md:270
 msgid ""
 "`cargo metadata` includes some extra fields, such as `source` and `path`."
 msgstr ""
 
-#: src/reference/registry-index.md:258
+#: src/reference/registry-index.md:271
 msgid ""
 "The index includes additional fields such as `yanked`, `cksum`, and `v`."
 msgstr ""
 
-#: src/reference/registry-index.md:264
+#: src/reference/registry-index.md:277
 msgid "Index Protocols"
 msgstr ""
 
-#: src/reference/registry-index.md:265
+#: src/reference/registry-index.md:278
 msgid ""
 "Cargo supports two remote registry protocols: `git` and `sparse`. The `git` "
 "protocol stores index files in a git repository and the `sparse` protocol "
 "fetches individual files over HTTP."
 msgstr ""
 
-#: src/reference/registry-index.md:269
+#: src/reference/registry-index.md:282
 msgid "Git Protocol"
 msgstr ""
 
-#: src/reference/registry-index.md:270
+#: src/reference/registry-index.md:283
 msgid ""
 "The git protocol has no protocol prefix in the index url. For example the "
 "git index URL for [crates.io](https://crates.io/) is `https://github.com/"
 "rust-lang/crates.io-index`."
 msgstr ""
 
-#: src/reference/registry-index.md:273
+#: src/reference/registry-index.md:286
 msgid ""
 "Cargo caches the git repository on disk so that it can efficiently "
 "incrementally fetch updates."
 msgstr ""
 
-#: src/reference/registry-index.md:276
+#: src/reference/registry-index.md:289
 msgid "Sparse Protocol"
 msgstr ""
 
-#: src/reference/registry-index.md:277
+#: src/reference/registry-index.md:290
 msgid ""
 "The sparse protocol uses the `sparse+` protocol prefix in the registry URL. "
 "For example, the sparse index URL for [crates.io](https://crates.io/) is "
 "`sparse+https://index.crates.io/`."
 msgstr ""
 
-#: src/reference/registry-index.md:280
+#: src/reference/registry-index.md:293
 msgid ""
 "The sparse protocol downloads each index file using an individual HTTP "
 "request. Since this results in a large number of small HTTP requests, "
@@ -644,11 +666,11 @@ msgid ""
 "and HTTP/2."
 msgstr ""
 
-#: src/reference/registry-index.md:284
+#: src/reference/registry-index.md:297
 msgid "Sparse authentication"
 msgstr ""
 
-#: src/reference/registry-index.md:285
+#: src/reference/registry-index.md:298
 msgid ""
 "Cargo will attempt to fetch the `config.json` file before fetching any other "
 "files. If the server responds with an HTTP 401, then Cargo will assume that "
@@ -656,24 +678,24 @@ msgid ""
 "json` with the authentication token included."
 msgstr ""
 
-#: src/reference/registry-index.md:290
+#: src/reference/registry-index.md:303
 msgid ""
 "On authentication failure (or a missing authentication token) the server may "
 "include a `www-authenticate` header with a `Cargo login_url=\"<URL>\"` "
 "challenge to indicate where the user can go to get a token."
 msgstr ""
 
-#: src/reference/registry-index.md:294
+#: src/reference/registry-index.md:307
 msgid ""
 "Registries that require authentication must set `auth-required: true` in "
 "`config.json`."
 msgstr ""
 
-#: src/reference/registry-index.md:296
+#: src/reference/registry-index.md:309
 msgid "Caching"
 msgstr ""
 
-#: src/reference/registry-index.md:297
+#: src/reference/registry-index.md:310
 msgid ""
 "Cargo caches the crate metadata files, and captures the `ETag` or `Last-"
 "Modified` HTTP header from the server for each entry. When refreshing crate "
@@ -683,11 +705,11 @@ msgid ""
 "Modified` headers are present, Cargo uses the `ETag` only."
 msgstr ""
 
-#: src/reference/registry-index.md:303
+#: src/reference/registry-index.md:316
 msgid "Cache Invalidation"
 msgstr ""
 
-#: src/reference/registry-index.md:304
+#: src/reference/registry-index.md:317
 msgid ""
 "If a registry is using some kind of CDN or proxy which caches access to the "
 "index files, then it is recommended that registries implement some form of "
@@ -696,21 +718,21 @@ msgid ""
 "cleared."
 msgstr ""
 
-#: src/reference/registry-index.md:309
+#: src/reference/registry-index.md:322
 msgid "Nonexistent Crates"
 msgstr ""
 
-#: src/reference/registry-index.md:310
+#: src/reference/registry-index.md:323
 msgid ""
 "For crates that do not exist, the registry should respond with a 404 \"Not "
 "Found\", 410 \"Gone\" or 451 \"Unavailable For Legal Reasons\" code."
 msgstr ""
 
-#: src/reference/registry-index.md:313
+#: src/reference/registry-index.md:326
 msgid "Sparse Limitations"
 msgstr ""
 
-#: src/reference/registry-index.md:314
+#: src/reference/registry-index.md:327
 msgid ""
 "Since the URL of the registry is stored in the lockfile, it's not "
 "recommended to offer a registry with both protocols. Discussion about a "
@@ -720,7 +742,7 @@ msgid ""
 "the sparse protocol is used."
 msgstr ""
 
-#: src/reference/registry-index.md:319
+#: src/reference/registry-index.md:332
 msgid ""
 "If a registry does offer both protocols, it's currently recommended to "
 "choose one protocol as the canonical protocol and use [source replacement]"

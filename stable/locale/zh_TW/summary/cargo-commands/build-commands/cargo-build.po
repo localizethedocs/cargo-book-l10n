@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:36Z\n"
+"POT-Creation-Date: 2026-03-24T09:24:14Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -83,15 +83,16 @@ msgid ""
 "execute the binary to exercise and test its behavior. The "
 "`CARGO_BIN_EXE_<name>` [environment variable](../reference/environment-"
 "variables.html#environment-variables-cargo-sets-for-crates) is set when the "
-"integration test is built so that it can use the [`env` macro](https://doc."
-"rust-lang.org/std/macro.env.html) to locate the executable."
+"integration test is built and run so that it can use the [`env` macro]"
+"(https://doc.rust-lang.org/std/macro.env.html) or the [`var` function]"
+"(https://doc.rust-lang.org/std/env/fn.var.html) to locate the executable."
 msgstr ""
 
-#: src/commands/cargo-build.md:77
+#: src/commands/cargo-build.md:78
 msgid "Passing target selection flags will build only the specified targets."
 msgstr ""
 
-#: src/commands/cargo-build.md:80
+#: src/commands/cargo-build.md:81
 msgid ""
 "Note that `--bin`, `--example`, `--test` and `--bench` flags also support "
 "common Unix glob patterns like `*`, `?` and `[]`. However, to avoid your "
@@ -99,85 +100,85 @@ msgid ""
 "must use single quotes or double quotes around each glob pattern."
 msgstr ""
 
-#: src/commands/cargo-build.md:155
+#: src/commands/cargo-build.md:156
 msgid "Feature Selection"
 msgstr "功能選取"
 
-#: src/commands/cargo-build.md:157
+#: src/commands/cargo-build.md:158
 msgid ""
 "The feature flags allow you to control which features are enabled. When no "
 "feature options are given, the `default` feature is activated for every "
 "selected package."
 msgstr ""
 
-#: src/commands/cargo-build.md:161
+#: src/commands/cargo-build.md:162
 msgid ""
 "See [the features documentation](../reference/features.html#command-line-"
 "feature-options) for more details."
 msgstr ""
 
-#: src/commands/cargo-build.md:186
+#: src/commands/cargo-build.md:187
 msgid "Compilation Options"
 msgstr "編譯選項"
 
-#: src/commands/cargo-build.md:240
+#: src/commands/cargo-build.md:234
 msgid "Output Options"
 msgstr "輸出選項"
 
-#: src/commands/cargo-build.md:262
+#: src/commands/cargo-build.md:256
 msgid "Display Options"
 msgstr "顯示選項"
 
-#: src/commands/cargo-build.md:321
+#: src/commands/cargo-build.md:315
 msgid "Manifest Options"
 msgstr "清單選項"
 
-#: src/commands/cargo-build.md:381
+#: src/commands/cargo-build.md:363
 msgid "Common Options"
 msgstr "共用選項"
 
-#: src/commands/cargo-build.md:426
+#: src/commands/cargo-build.md:408
 msgid "Miscellaneous Options"
 msgstr ""
 
-#: src/commands/cargo-build.md:457
+#: src/commands/cargo-build.md:439
 msgid "ENVIRONMENT"
 msgstr "環境"
 
-#: src/commands/cargo-build.md:459
+#: src/commands/cargo-build.md:441
 msgid ""
 "See [the reference](../reference/environment-variables.html) for details on "
 "environment variables that Cargo reads."
 msgstr ""
 
-#: src/commands/cargo-build.md:462
+#: src/commands/cargo-build.md:444
 msgid "EXIT STATUS"
 msgstr "退出狀態"
 
-#: src/commands/cargo-build.md:464
+#: src/commands/cargo-build.md:446
 msgid "`0`: Cargo succeeded."
 msgstr "`0`：Cargo 執行成功。"
 
-#: src/commands/cargo-build.md:465
+#: src/commands/cargo-build.md:447
 msgid "`101`: Cargo failed to complete."
 msgstr "`101`：Cargo 未能完成執行。"
 
-#: src/commands/cargo-build.md:467
+#: src/commands/cargo-build.md:449
 msgid "EXAMPLES"
 msgstr "範例"
 
-#: src/commands/cargo-build.md:469
+#: src/commands/cargo-build.md:451
 msgid "Build the local package and all of its dependencies:"
 msgstr ""
 
-#: src/commands/cargo-build.md:473
+#: src/commands/cargo-build.md:455
 msgid "Build with optimizations:"
 msgstr ""
 
-#: src/commands/cargo-build.md:477
+#: src/commands/cargo-build.md:459
 msgid "SEE ALSO"
 msgstr "另請參見"
 
-#: src/commands/cargo-build.md:478
+#: src/commands/cargo-build.md:460
 msgid "[cargo(1)](cargo.html), [cargo-rustc(1)](cargo-rustc.html)"
 msgstr ""

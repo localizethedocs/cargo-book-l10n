@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:36Z\n"
+"POT-Creation-Date: 2026-03-24T09:24:14Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -71,48 +71,48 @@ msgstr "顯示選項"
 msgid "Manifest Options"
 msgstr "清單選項"
 
-#: src/commands/cargo-clean.md:181
+#: src/commands/cargo-clean.md:169
 msgid "Common Options"
 msgstr "共用選項"
 
-#: src/commands/cargo-clean.md:226
+#: src/commands/cargo-clean.md:214
 msgid "ENVIRONMENT"
 msgstr "環境"
 
-#: src/commands/cargo-clean.md:228
+#: src/commands/cargo-clean.md:216
 msgid ""
 "See [the reference](../reference/environment-variables.html) for details on "
 "environment variables that Cargo reads."
 msgstr ""
 
-#: src/commands/cargo-clean.md:231
+#: src/commands/cargo-clean.md:219
 msgid "EXIT STATUS"
 msgstr "退出狀態"
 
-#: src/commands/cargo-clean.md:233
+#: src/commands/cargo-clean.md:221
 msgid "`0`: Cargo succeeded."
 msgstr "`0`：Cargo 執行成功。"
 
-#: src/commands/cargo-clean.md:234
+#: src/commands/cargo-clean.md:222
 msgid "`101`: Cargo failed to complete."
 msgstr "`101`：Cargo 未能完成執行。"
 
-#: src/commands/cargo-clean.md:236
+#: src/commands/cargo-clean.md:224
 msgid "EXAMPLES"
 msgstr "範例"
 
-#: src/commands/cargo-clean.md:238
+#: src/commands/cargo-clean.md:226
 msgid "Remove the entire target directory:"
 msgstr ""
 
-#: src/commands/cargo-clean.md:242
+#: src/commands/cargo-clean.md:230
 msgid "Remove only the release artifacts:"
 msgstr ""
 
-#: src/commands/cargo-clean.md:246
+#: src/commands/cargo-clean.md:234
 msgid "SEE ALSO"
 msgstr "另請參見"
 
-#: src/commands/cargo-clean.md:247
+#: src/commands/cargo-clean.md:235
 msgid "[cargo(1)](cargo.html), [cargo-build(1)](cargo-build.html)"
 msgstr ""

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:36Z\n"
+"POT-Creation-Date: 2026-03-24T09:24:14Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -73,60 +73,60 @@ msgstr ""
 msgid "Manifest Options"
 msgstr "清單選項"
 
-#: src/commands/cargo-vendor.md:123
+#: src/commands/cargo-vendor.md:111
 msgid "Display Options"
 msgstr "顯示選項"
 
-#: src/commands/cargo-vendor.md:159
+#: src/commands/cargo-vendor.md:147
 msgid "Common Options"
 msgstr "共用選項"
 
-#: src/commands/cargo-vendor.md:204
+#: src/commands/cargo-vendor.md:192
 msgid "ENVIRONMENT"
 msgstr "環境"
 
-#: src/commands/cargo-vendor.md:206
+#: src/commands/cargo-vendor.md:194
 msgid ""
 "See [the reference](../reference/environment-variables.html) for details on "
 "environment variables that Cargo reads."
 msgstr ""
 
-#: src/commands/cargo-vendor.md:209
+#: src/commands/cargo-vendor.md:197
 msgid "EXIT STATUS"
 msgstr "退出狀態"
 
-#: src/commands/cargo-vendor.md:211
+#: src/commands/cargo-vendor.md:199
 msgid "`0`: Cargo succeeded."
 msgstr "`0`：Cargo 執行成功。"
 
-#: src/commands/cargo-vendor.md:212
+#: src/commands/cargo-vendor.md:200
 msgid "`101`: Cargo failed to complete."
 msgstr "`101`：Cargo 未能完成執行。"
 
-#: src/commands/cargo-vendor.md:214
+#: src/commands/cargo-vendor.md:202
 msgid "EXAMPLES"
 msgstr "範例"
 
-#: src/commands/cargo-vendor.md:216
+#: src/commands/cargo-vendor.md:204
 msgid "Vendor all dependencies into a local \"vendor\" folder"
 msgstr ""
 
-#: src/commands/cargo-vendor.md:220
+#: src/commands/cargo-vendor.md:208
 msgid "Vendor all dependencies into a local \"third-party/vendor\" folder"
 msgstr ""
 
-#: src/commands/cargo-vendor.md:224
+#: src/commands/cargo-vendor.md:212
 msgid "Vendor the current workspace as well as another to \"vendor\""
 msgstr ""
 
-#: src/commands/cargo-vendor.md:228
+#: src/commands/cargo-vendor.md:216
 msgid "Vendor and redirect the necessary vendor configs to a config file."
 msgstr ""
 
-#: src/commands/cargo-vendor.md:232
+#: src/commands/cargo-vendor.md:220
 msgid "SEE ALSO"
 msgstr "另請參見"
 
-#: src/commands/cargo-vendor.md:233
+#: src/commands/cargo-vendor.md:221
 msgid "[cargo(1)](cargo.html)"
 msgstr "[cargo(1)](cargo.html)"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:36Z\n"
+"POT-Creation-Date: 2026-03-24T09:24:14Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -141,93 +141,93 @@ msgstr ""
 msgid "Manifest Options"
 msgstr "清單選項"
 
-#: src/commands/cargo-tree.md:287
+#: src/commands/cargo-tree.md:275
 msgid "Feature Selection"
 msgstr "功能選取"
 
-#: src/commands/cargo-tree.md:289
+#: src/commands/cargo-tree.md:277
 msgid ""
 "The feature flags allow you to control which features are enabled. When no "
 "feature options are given, the `default` feature is activated for every "
 "selected package."
 msgstr ""
 
-#: src/commands/cargo-tree.md:293
+#: src/commands/cargo-tree.md:281
 msgid ""
 "See [the features documentation](../reference/features.html#command-line-"
 "feature-options) for more details."
 msgstr ""
 
-#: src/commands/cargo-tree.md:318
+#: src/commands/cargo-tree.md:306
 msgid "Display Options"
 msgstr "顯示選項"
 
-#: src/commands/cargo-tree.md:354
+#: src/commands/cargo-tree.md:342
 msgid "Common Options"
 msgstr "共用選項"
 
-#: src/commands/cargo-tree.md:399
+#: src/commands/cargo-tree.md:387
 msgid "ENVIRONMENT"
 msgstr "環境"
 
-#: src/commands/cargo-tree.md:401
+#: src/commands/cargo-tree.md:389
 msgid ""
 "See [the reference](../reference/environment-variables.html) for details on "
 "environment variables that Cargo reads."
 msgstr ""
 
-#: src/commands/cargo-tree.md:404
+#: src/commands/cargo-tree.md:392
 msgid "EXIT STATUS"
 msgstr "退出狀態"
 
-#: src/commands/cargo-tree.md:406
+#: src/commands/cargo-tree.md:394
 msgid "`0`: Cargo succeeded."
 msgstr "`0`：Cargo 執行成功。"
 
-#: src/commands/cargo-tree.md:407
+#: src/commands/cargo-tree.md:395
 msgid "`101`: Cargo failed to complete."
 msgstr "`101`：Cargo 未能完成執行。"
 
-#: src/commands/cargo-tree.md:409
+#: src/commands/cargo-tree.md:397
 msgid "EXAMPLES"
 msgstr "範例"
 
-#: src/commands/cargo-tree.md:411
+#: src/commands/cargo-tree.md:399
 msgid "Display the tree for the package in the current directory:"
 msgstr ""
 
-#: src/commands/cargo-tree.md:415
+#: src/commands/cargo-tree.md:403
 msgid "Display all the packages that depend on the `syn` package:"
 msgstr ""
 
-#: src/commands/cargo-tree.md:419
+#: src/commands/cargo-tree.md:407
 msgid "Show the features enabled on each package:"
 msgstr ""
 
-#: src/commands/cargo-tree.md:421
+#: src/commands/cargo-tree.md:409
 msgid ""
 "    cargo tree --format \"{p} {f}\"\n"
 "    "
 msgstr ""
 
-#: src/commands/cargo-tree.md:423
+#: src/commands/cargo-tree.md:411
 msgid ""
 "Show all packages that are built multiple times. This can happen if multiple "
 "semver-incompatible versions appear in the tree (like 1.0.0 and 2.0.0)."
 msgstr ""
 
-#: src/commands/cargo-tree.md:428
+#: src/commands/cargo-tree.md:416
 msgid "Explain why features are enabled for the `syn` package:"
 msgstr ""
 
-#: src/commands/cargo-tree.md:432
+#: src/commands/cargo-tree.md:420
 msgid ""
 "The `-e features` flag is used to show features. The `-i` flag is used to "
 "invert the graph so that it displays the packages that depend on `syn`. An "
 "example of what this would display:"
 msgstr ""
 
-#: src/commands/cargo-tree.md:436
+#: src/commands/cargo-tree.md:424
 msgid ""
 "```\n"
 "syn v1.0.17\n"
@@ -254,7 +254,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/commands/cargo-tree.md:460
+#: src/commands/cargo-tree.md:448
 msgid ""
 "To read this graph, you can follow the chain for each feature from the root "
 "to see why it is included. For example, the \"full\" feature is added by the "
@@ -265,16 +265,16 @@ msgid ""
 "features)."
 msgstr ""
 
-#: src/commands/cargo-tree.md:467
+#: src/commands/cargo-tree.md:455
 msgid ""
 "If you're having difficulty cross-referencing the de-duplicated `(*)` "
 "entries, try with the `--no-dedupe` flag to get the full output."
 msgstr ""
 
-#: src/commands/cargo-tree.md:470
+#: src/commands/cargo-tree.md:458
 msgid "SEE ALSO"
 msgstr "另請參見"
 
-#: src/commands/cargo-tree.md:471
+#: src/commands/cargo-tree.md:459
 msgid "[cargo(1)](cargo.html), [cargo-metadata(1)](cargo-metadata.html)"
 msgstr ""
