@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:57:13Z\n"
+"POT-Creation-Date: 2026-03-24T09:25:26Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -3984,7 +3984,7 @@ msgstr ""
 #: src/reference/unstable.md:1862
 msgid ""
 "`deny`: if warnings are emitted, an error will be raised at the end of the "
-"operation and the process will exit with a failure exit code."
+"current crate and the process. Use `--keep-going` to see all warnings."
 msgstr ""
 
 #: src/reference/unstable.md:1864

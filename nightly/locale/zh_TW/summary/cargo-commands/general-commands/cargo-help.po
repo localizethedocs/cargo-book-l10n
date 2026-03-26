@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:57:13Z\n"
+"POT-Creation-Date: 2026-03-24T09:25:26Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -40,59 +40,88 @@ msgid "Prints a help message for the given command."
 msgstr ""
 
 #: src/commands/cargo-help.md:15
+msgid ""
+"For commands with subcommands, separate the command levels with spaces. For "
+"example, `cargo help report future-incompatibilities` displays help for the "
+"`cargo report future-incompatibilities` command."
+msgstr ""
+
+#: src/commands/cargo-help.md:19
+msgid ""
+"Spaces separate hierarchy levels only between a parent command and its "
+"subcommands. Dashes that are part of a command's name, such as `generate-"
+"lockfile`, must always be preserved."
+msgstr ""
+
+#: src/commands/cargo-help.md:23
+msgid ""
+"Multiple command levels can also be written as a single dash-joined word. "
+"For example, `cargo help report-future-incompatibilities` is equivalent to "
+"`cargo help report future-incompatibilities`."
+msgstr ""
+
+#: src/commands/cargo-help.md:27
 msgid "OPTIONS"
 msgstr "選項"
 
-#: src/commands/cargo-help.md:17
+#: src/commands/cargo-help.md:29
 msgid "Display Options"
 msgstr "顯示選項"
 
-#: src/commands/cargo-help.md:51
+#: src/commands/cargo-help.md:63
 msgid "Manifest Options"
 msgstr "清單選項"
 
-#: src/commands/cargo-help.md:87
+#: src/commands/cargo-help.md:99
 msgid "Common Options"
 msgstr "共用選項"
 
-#: src/commands/cargo-help.md:132
+#: src/commands/cargo-help.md:144
 msgid "ENVIRONMENT"
 msgstr "環境"
 
-#: src/commands/cargo-help.md:134
+#: src/commands/cargo-help.md:146
 msgid ""
 "See [the reference](../reference/environment-variables.html) for details on "
 "environment variables that Cargo reads."
 msgstr ""
 
-#: src/commands/cargo-help.md:137
+#: src/commands/cargo-help.md:149
 msgid "EXIT STATUS"
 msgstr "退出狀態"
 
-#: src/commands/cargo-help.md:139
+#: src/commands/cargo-help.md:151
 msgid "`0`: Cargo succeeded."
 msgstr "`0`：Cargo 執行成功。"
 
-#: src/commands/cargo-help.md:140
+#: src/commands/cargo-help.md:152
 msgid "`101`: Cargo failed to complete."
 msgstr "`101`：Cargo 未能完成執行。"
 
-#: src/commands/cargo-help.md:142
+#: src/commands/cargo-help.md:154
 msgid "EXAMPLES"
 msgstr "範例"
 
-#: src/commands/cargo-help.md:144
+#: src/commands/cargo-help.md:156
 msgid "Get help for a command:"
 msgstr ""
 
-#: src/commands/cargo-help.md:148
+#: src/commands/cargo-help.md:160
+msgid "Get help for a nested command:"
+msgstr ""
+
+#: src/commands/cargo-help.md:164
+msgid "The dash-joined form also works:"
+msgstr ""
+
+#: src/commands/cargo-help.md:168
 msgid "Help is also available with the `--help` flag:"
 msgstr ""
 
-#: src/commands/cargo-help.md:152
+#: src/commands/cargo-help.md:172
 msgid "SEE ALSO"
 msgstr "另請參見"
 
-#: src/commands/cargo-help.md:153
+#: src/commands/cargo-help.md:173
 msgid "[cargo(1)](cargo.html)"
 msgstr "[cargo(1)](cargo.html)"
