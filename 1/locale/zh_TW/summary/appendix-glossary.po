@@ -5,19 +5,19 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/appendix/glossary.md:1
 msgid "Glossary"
-msgstr ""
+msgstr "詞彙表"
 
 #: src/appendix/glossary.md:3
 msgid "Artifact"
-msgstr ""
+msgstr "製品（Artifact）"
 
 #: src/appendix/glossary.md:5
 msgid ""
@@ -28,7 +28,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:9
 msgid "Cargo"
-msgstr ""
+msgstr "Cargo"
 
 #: src/appendix/glossary.md:11
 msgid ""
@@ -38,23 +38,23 @@ msgstr ""
 
 #: src/appendix/glossary.md:14
 msgid "Cargo.lock"
-msgstr ""
+msgstr "Cargo.lock"
 
 #: src/appendix/glossary.md:16
 msgid "See [_lock file_](#lock-file)."
-msgstr ""
+msgstr "請參見 [_鎖定檔_](#鎖定檔lock-file)。"
 
 #: src/appendix/glossary.md:18
 msgid "Cargo.toml"
-msgstr ""
+msgstr "Cargo.toml"
 
 #: src/appendix/glossary.md:20
 msgid "See [_manifest_](#manifest)."
-msgstr ""
+msgstr "請參見 [_清單_](#清單manifest)。"
 
 #: src/appendix/glossary.md:22
 msgid "Crate"
-msgstr ""
+msgstr "軟體箱（Crate）"
 
 #: src/appendix/glossary.md:24
 msgid ""
@@ -82,7 +82,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:35
 msgid "Edition"
-msgstr ""
+msgstr "版次（Edition）"
 
 #: src/appendix/glossary.md:37
 msgid ""
@@ -95,7 +95,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:42
 msgid "Feature"
-msgstr ""
+msgstr "功能（Feature）"
 
 #: src/appendix/glossary.md:44
 msgid "The meaning of _feature_ depends on the context:"
@@ -122,6 +122,9 @@ msgid ""
 "html) and [The Rustdoc Book](https://doc.rust-lang.org/nightly/rustdoc/"
 "unstable-features.html))."
 msgstr ""
+"Rust 編譯器與 Rustdoc 擁有各自的不穩定功能旗標（請參見《[不穩定手冊](https://"
+"doc.rust-lang.org/nightly/unstable-book/index.html)》與《[Rustdoc 手冊]"
+"(https://doc.rust-lang.org/nightly/rustdoc/unstable-features.html)》）。"
 
 #: src/appendix/glossary.md:58
 msgid ""
@@ -131,7 +134,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:61
 msgid "Index"
-msgstr ""
+msgstr "索引（Index）"
 
 #: src/appendix/glossary.md:63
 msgid ""
@@ -141,7 +144,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:66
 msgid "Lock file"
-msgstr ""
+msgstr "鎖定檔（Lock file）"
 
 #: src/appendix/glossary.md:68
 msgid ""
@@ -153,7 +156,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:73
 msgid "Manifest"
-msgstr ""
+msgstr "清單（Manifest）"
 
 #: src/appendix/glossary.md:75
 msgid ""
@@ -169,7 +172,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:81
 msgid "Member"
-msgstr ""
+msgstr "成員（Member）"
 
 #: src/appendix/glossary.md:83
 msgid ""
@@ -179,7 +182,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:86
 msgid "Module"
-msgstr ""
+msgstr "模組（Module）"
 
 #: src/appendix/glossary.md:88
 msgid ""
@@ -206,7 +209,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:101
 msgid "Package"
-msgstr ""
+msgstr "軟體包（Package）"
 
 #: src/appendix/glossary.md:103
 msgid ""
@@ -252,7 +255,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:126
 msgid "Package manager"
-msgstr ""
+msgstr "軟體包管理器（Package manager）"
 
 #: src/appendix/glossary.md:128
 msgid ""
@@ -276,23 +279,23 @@ msgstr ""
 
 #: src/appendix/glossary.md:142
 msgid "Package registry"
-msgstr ""
+msgstr "軟體包註冊表（Package registry）"
 
 #: src/appendix/glossary.md:144
 msgid "See [_registry_](#registry)."
-msgstr ""
+msgstr "請參見 [_註冊表_](#註冊表registry)。"
 
 #: src/appendix/glossary.md:146
 msgid "Project"
-msgstr ""
+msgstr "專案（Project）"
 
 #: src/appendix/glossary.md:148
 msgid "Another name for a [package](#package)."
-msgstr ""
+msgstr "[軟體包](#軟體包package)的另一個名稱。"
 
 #: src/appendix/glossary.md:150
 msgid "Registry"
-msgstr ""
+msgstr "註冊表（Registry）"
 
 #: src/appendix/glossary.md:152
 msgid ""
@@ -318,6 +321,7 @@ msgstr ""
 #: src/appendix/glossary.md:165
 msgid "**Registry source** --- See [registry](#registry)."
 msgstr ""
+"**註冊表來源（Registry source）** --- 請參見[註冊表](#註冊表registry)。"
 
 #: src/appendix/glossary.md:166
 msgid ""
@@ -356,19 +360,19 @@ msgstr ""
 
 #: src/appendix/glossary.md:177
 msgid "Spec"
-msgstr ""
+msgstr "規範（Spec）"
 
 #: src/appendix/glossary.md:179
 msgid "See [package ID specification](#package)."
-msgstr ""
+msgstr "請參見[軟體包 ID 規範](#軟體包package)。"
 
 #: src/appendix/glossary.md:181
 msgid "Target"
-msgstr ""
+msgstr "目標（Target）"
 
 #: src/appendix/glossary.md:183
 msgid "The meaning of the term _target_ depends on the context:"
-msgstr ""
+msgstr "_目標（target）_ 一詞的含義取決於上下文："
 
 #: src/appendix/glossary.md:185
 msgid ""
@@ -379,6 +383,11 @@ msgid ""
 "in the `Cargo.toml` [_manifest_](#manifest), often inferred automatically by "
 "the [directory layout](../guide/project-layout.md) of the source files."
 msgstr ""
+"**Cargo 目標（Cargo Target）** --- Cargo [_軟體包_](#軟體包package) 是由 _目"
+"標_ 組成的，這些目標對應到將會生成的 [_製品_](#製品artifact)。軟體包可以擁有"
+"程式庫、執行檔、範例、測試與基準測試目標。[目標列表](../reference/cargo-"
+"targets.md#configuring-a-target)是在 `Cargo.toml` [_清單_](#清單manifest) 中"
+"設定的，通常會根據來源檔的[_目錄配置_](../guide/project-layout.md)自動推斷。"
 
 #: src/appendix/glossary.md:191
 msgid ""
@@ -391,12 +400,20 @@ msgid ""
 "more information see the [build cache](../reference/build-cache.html) "
 "documentation."
 msgstr ""
+"**目標目錄（Target Directory）** --- Cargo 將建置製品放置在 _目標_ 目錄中。預"
+"設情況下，這是位於 [_工作空間_](#工作空間workspace) 根目錄下名為 `target` 的"
+"目錄，若未使用工作空間，則位於軟體包根目錄。此目錄可透過 `--target-dir` 命令"
+"行選項、`CARGO_TARGET_DIR` [環境變數](../reference/environment-variables.md)"
+"或 `build.target-dir` [組態選項](../reference/config.md)來變更。更多資訊請參"
+"見[建置快取](../reference/build-cache.html)文件。"
 
 #: src/appendix/glossary.md:197
 msgid ""
 "**Target Architecture** --- The OS and machine architecture for the built "
 "artifacts are typically referred to as a _target_."
 msgstr ""
+"**目標架構（Target Architecture）** --- 建置製品的作業系統與機器架構通常被稱"
+"為 _目標_ 。"
 
 #: src/appendix/glossary.md:199
 msgid ""
@@ -444,7 +461,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:219
 msgid "Test Targets"
-msgstr ""
+msgstr "測試目標（Test Target）"
 
 #: src/appendix/glossary.md:221
 msgid ""
@@ -473,7 +490,7 @@ msgstr ""
 
 #: src/appendix/glossary.md:235
 msgid "Workspace"
-msgstr ""
+msgstr "工作空間（Workspace）"
 
 #: src/appendix/glossary.md:237
 msgid ""
