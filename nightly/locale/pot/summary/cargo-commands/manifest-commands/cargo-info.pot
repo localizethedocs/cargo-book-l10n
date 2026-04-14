@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:57:13Z\n"
+"POT-Creation-Date: 2026-04-14T09:40:58Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -96,7 +96,7 @@ msgid "Inspect the `serde` package with version `1.0.0`:"
 msgstr ""
 
 #: src/commands/cargo-info.md:176
-msgid "Inspect the `serde` package form the local registry:"
+msgid "Inspect the `serde` package from the local registry:"
 msgstr ""
 
 #: src/commands/cargo-info.md:180
