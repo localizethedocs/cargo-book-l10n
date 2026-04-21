@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-03-26T11:44:34Z\n"
+"POT-Creation-Date: 2026-04-14T09:41:26Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -880,7 +880,7 @@ msgstr ""
 
 #: src/reference/config.md:516
 msgid "Possible values:"
-msgstr ""
+msgstr "可能值："
 
 #: src/reference/config.md:517
 msgid "Any supported target in `rustc --print target-list`."
