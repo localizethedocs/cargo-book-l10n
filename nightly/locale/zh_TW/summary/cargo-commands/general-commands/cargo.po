@@ -143,6 +143,8 @@ msgid ""
 "[cargo-test(1)](cargo-test.html)  \n"
 "    Execute unit and integration tests of a package."
 msgstr ""
+"[cargo-test(1)](cargo-test.html)  \n"
+"    執行軟體包的單元測試和整合測試。"
 
 #: src/commands/cargo.md:65
 msgid "Manifest Commands"

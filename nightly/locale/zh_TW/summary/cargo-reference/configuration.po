@@ -880,7 +880,7 @@ msgstr ""
 
 #: src/reference/config.md:516
 msgid "Possible values:"
-msgstr ""
+msgstr "可能值："
 
 #: src/reference/config.md:517
 msgid "Any supported target in `rustc --print target-list`."

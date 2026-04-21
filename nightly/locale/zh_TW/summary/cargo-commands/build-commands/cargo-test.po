@@ -21,7 +21,7 @@ msgstr "名稱"
 
 #: src/commands/cargo-test.md:4
 msgid "cargo-test --- Execute unit and integration tests of a package"
-msgstr ""
+msgstr "cargo-test --- 執行軟體包的單元測試和整合測試"
 
 #: src/commands/cargo-test.md:6
 msgid "SYNOPSIS"
