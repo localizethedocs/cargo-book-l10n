@@ -729,7 +729,7 @@ msgstr ""
 
 #: src/reference/lints.md:473
 msgid "Configuration"
-msgstr ""
+msgstr "組態"
 
 #: src/reference/lints.md:475
 msgid "`ignore`: a list of dependency names to allow the lint on"
