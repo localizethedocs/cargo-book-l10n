@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:57:13Z\n"
+"POT-Creation-Date: 2026-04-21T09:44:44Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -820,11 +820,10 @@ msgid ""
 "md), and certain kinds of change tracking (described below). The patterns "
 "specified in the `exclude` field identify a set of files that are not "
 "included, and the patterns in `include` specify files that are explicitly "
-"included. You may run [`cargo package --list`](../commands/cargo-package.md) "
-"to verify which files will be included in the package."
+"included."
 msgstr ""
 
-#: src/reference/manifest.md:378
+#: src/reference/manifest.md:376
 msgid ""
 "```toml\n"
 "[package]\n"
@@ -833,7 +832,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/manifest.md:384
+#: src/reference/manifest.md:382
 msgid ""
 "```toml\n"
 "[package]\n"
@@ -843,148 +842,160 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/manifest.md:390
+#: src/reference/manifest.md:388
+msgid ""
+"**Note:** Run [`cargo package --list`](../commands/cargo-package.md) to "
+"verify which files will be included in the package."
+msgstr ""
+
+#: src/reference/manifest.md:391
 msgid ""
 "The default if neither field is specified is to include all files from the "
 "root of the package, except for the exclusions listed below."
 msgstr ""
 
-#: src/reference/manifest.md:393
+#: src/reference/manifest.md:394
 msgid ""
 "If `include` is not specified, then the following files will be excluded:"
 msgstr ""
 
-#: src/reference/manifest.md:395
+#: src/reference/manifest.md:396
 msgid ""
 "If the package is not in a git repository, all \"hidden\" files starting "
 "with a dot will be skipped."
 msgstr ""
 
-#: src/reference/manifest.md:397
+#: src/reference/manifest.md:398
 msgid ""
 "If the package is in a git repository, any files that are ignored by the "
 "[gitignore](https://git-scm.com/docs/gitignore) rules of the repository and "
 "global git configuration will be skipped."
 msgstr ""
 
-#: src/reference/manifest.md:401
+#: src/reference/manifest.md:402
+msgid ""
+"If `include` is specified, gitignore rules of the repository and global git "
+"configuration are not applied."
+msgstr ""
+
+#: src/reference/manifest.md:405
 msgid ""
 "Regardless of whether `exclude` or `include` is specified, the following "
 "files are always excluded:"
 msgstr ""
 
-#: src/reference/manifest.md:404
+#: src/reference/manifest.md:408
 msgid ""
 "Any sub-packages will be skipped (any subdirectory that contains a `Cargo."
 "toml` file)."
 msgstr ""
 
-#: src/reference/manifest.md:406
+#: src/reference/manifest.md:410
 msgid "A directory named `target` in the root of the package will be skipped."
 msgstr ""
 
-#: src/reference/manifest.md:408
+#: src/reference/manifest.md:412
 msgid "The following files are always included:"
 msgstr ""
 
-#: src/reference/manifest.md:410
+#: src/reference/manifest.md:414
 msgid ""
 "The `Cargo.toml` file of the package itself is always included, it does not "
 "need to be listed in `include`."
 msgstr ""
 
-#: src/reference/manifest.md:412
+#: src/reference/manifest.md:416
 msgid ""
 "A minimized `Cargo.lock` is automatically included. See [`cargo package`](../"
 "commands/cargo-package.md) for more information."
 msgstr ""
 
-#: src/reference/manifest.md:414
+#: src/reference/manifest.md:418
 msgid ""
 "If a [`license-file`](#the-license-and-license-file-fields) is specified, it "
 "is always included."
 msgstr ""
 
-#: src/reference/manifest.md:417
+#: src/reference/manifest.md:421
 msgid ""
 "The options are mutually exclusive; setting `include` will override an "
 "`exclude`. If you need to have exclusions to a set of `include` files, use "
 "the `!` operator described below."
 msgstr ""
 
-#: src/reference/manifest.md:421
+#: src/reference/manifest.md:425
 msgid ""
 "The patterns should be [gitignore](https://git-scm.com/docs/gitignore)\\-"
 "style patterns. Briefly:"
 msgstr ""
 
-#: src/reference/manifest.md:423
+#: src/reference/manifest.md:427
 msgid ""
 "`foo` matches any file or directory with the name `foo` anywhere in the "
 "package. This is equivalent to the pattern `**/foo`."
 msgstr ""
 
-#: src/reference/manifest.md:425
+#: src/reference/manifest.md:429
 msgid ""
 "`/foo` matches any file or directory with the name `foo` only in the root of "
 "the package."
 msgstr ""
 
-#: src/reference/manifest.md:427
+#: src/reference/manifest.md:431
 msgid ""
 "`foo/` matches any _directory_ with the name `foo` anywhere in the package."
 msgstr ""
 
-#: src/reference/manifest.md:428
+#: src/reference/manifest.md:432
 msgid "Common glob patterns like `*`, `?`, and `[]` are supported:"
 msgstr ""
 
-#: src/reference/manifest.md:429
+#: src/reference/manifest.md:433
 msgid ""
 "`*` matches zero or more characters except `/`.  For example, `*.html` "
 "matches any file or directory with the `.html` extension anywhere in the "
 "package."
 msgstr ""
 
-#: src/reference/manifest.md:432
+#: src/reference/manifest.md:436
 msgid ""
 "`?` matches any character except `/`. For example, `foo?` matches `food`, "
 "but not `foo`."
 msgstr ""
 
-#: src/reference/manifest.md:434
+#: src/reference/manifest.md:438
 msgid ""
 "`[]` allows for matching a range of characters. For example, `[ab]` matches "
 "either `a` or `b`. `[a-z]` matches letters a through z."
 msgstr ""
 
-#: src/reference/manifest.md:436
+#: src/reference/manifest.md:440
 msgid ""
 "`**/` prefix matches in any directory. For example, `**/foo/bar` matches the "
 "file or directory `bar` anywhere that is directly under directory `foo`."
 msgstr ""
 
-#: src/reference/manifest.md:438
+#: src/reference/manifest.md:442
 msgid ""
 "`/**` suffix matches everything inside. For example, `foo/**` matches all "
 "files inside directory `foo`, including all files in subdirectories below "
 "`foo`."
 msgstr ""
 
-#: src/reference/manifest.md:441
+#: src/reference/manifest.md:445
 msgid ""
 "`/**/` matches zero or more directories. For example, `a/**/b` matches `a/"
 "b`, `a/x/b`, `a/x/y/b`, and so on."
 msgstr ""
 
-#: src/reference/manifest.md:443
+#: src/reference/manifest.md:447
 msgid ""
 "`!` prefix negates a pattern. For example, a pattern of `src/*.rs` and `!foo."
 "rs` would match all files with the `.rs` extension inside the `src` "
 "directory, except for any file named `foo.rs`."
 msgstr ""
 
-#: src/reference/manifest.md:447
+#: src/reference/manifest.md:451
 msgid ""
 "The include/exclude list is also used for change tracking in some "
 "situations. For targets built with `rustdoc`, it is used to determine the "
@@ -994,17 +1005,17 @@ msgid ""
 "build script should be re-run if any of those files change."
 msgstr ""
 
-#: src/reference/manifest.md:456
+#: src/reference/manifest.md:460
 msgid "The `publish` field"
 msgstr ""
 
-#: src/reference/manifest.md:458
+#: src/reference/manifest.md:462
 msgid ""
 "The `publish` field can be used to control which registries names the "
 "package may be published to:"
 msgstr ""
 
-#: src/reference/manifest.md:460
+#: src/reference/manifest.md:464
 msgid ""
 "```toml\n"
 "[package]\n"
@@ -1013,7 +1024,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/manifest.md:466
+#: src/reference/manifest.md:470
 msgid ""
 "To prevent a package from being published to a registry (like crates.io) by "
 "mistake, for instance to keep a package private in a company, you can omit "
@@ -1021,17 +1032,17 @@ msgid ""
 "explicit, you can disable publishing:"
 msgstr ""
 
-#: src/reference/manifest.md:476
+#: src/reference/manifest.md:480
 msgid ""
 "If publish array contains a single registry, `cargo publish` command will "
 "use it when `--registry` flag is not specified."
 msgstr ""
 
-#: src/reference/manifest.md:479
+#: src/reference/manifest.md:483
 msgid "The `metadata` table"
 msgstr ""
 
-#: src/reference/manifest.md:481
+#: src/reference/manifest.md:485
 msgid ""
 "Cargo by default will warn about unused keys in `Cargo.toml` to assist in "
 "detecting typos and such. The `package.metadata` table, however, is "
@@ -1040,7 +1051,7 @@ msgid ""
 "toml`. For example:"
 msgstr ""
 
-#: src/reference/manifest.md:487
+#: src/reference/manifest.md:491
 msgid ""
 "```toml\n"
 "[package]\n"
@@ -1054,17 +1065,17 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/manifest.md:498
+#: src/reference/manifest.md:502
 msgid ""
 "You'll need to look in the documentation for your tool to see how to use "
 "this field. For Rust Projects that use `package.metadata` tables, see:"
 msgstr ""
 
-#: src/reference/manifest.md:500
+#: src/reference/manifest.md:504
 msgid "[docs.rs](https://docs.rs/about/metadata)"
 msgstr ""
 
-#: src/reference/manifest.md:502
+#: src/reference/manifest.md:506
 msgid ""
 "There is a similar table at the workspace level at [`workspace.metadata`]"
 "(workspaces.md#the-metadata-table). While cargo does not specify a format "
@@ -1074,18 +1085,18 @@ msgid ""
 "that makes sense for the tool in question."
 msgstr ""
 
-#: src/reference/manifest.md:511
+#: src/reference/manifest.md:515
 msgid "The `default-run` field"
 msgstr "`default-run` 欄位"
 
-#: src/reference/manifest.md:513
+#: src/reference/manifest.md:517
 msgid ""
 "The `default-run` field in the `[package]` section of the manifest can be "
 "used to specify a default binary picked by [`cargo run`](../commands/cargo-"
 "run.md). For example, when there is both `src/bin/a.rs` and `src/bin/b.rs`:"
 msgstr ""
 
-#: src/reference/manifest.md:517
+#: src/reference/manifest.md:521
 msgid ""
 "```toml\n"
 "[package]\n"
@@ -1093,17 +1104,17 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/manifest.md:522
+#: src/reference/manifest.md:526
 msgid "The `[lints]` section"
 msgstr ""
 
-#: src/reference/manifest.md:524
+#: src/reference/manifest.md:528
 msgid ""
 "Override the default level of lints from different tools by assigning them "
 "to a new level in a table, for example:"
 msgstr ""
 
-#: src/reference/manifest.md:526
+#: src/reference/manifest.md:530
 msgid ""
 "```toml\n"
 "[lints.rust]\n"
@@ -1111,11 +1122,11 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/manifest.md:531
+#: src/reference/manifest.md:535
 msgid "This is short-hand for:"
 msgstr ""
 
-#: src/reference/manifest.md:532
+#: src/reference/manifest.md:536
 msgid ""
 "```toml\n"
 "[lints.rust]\n"
@@ -1123,42 +1134,42 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/manifest.md:537
+#: src/reference/manifest.md:541
 msgid ""
 "`level` corresponds to the [lint levels](https://doc.rust-lang.org/rustc/"
 "lints/levels.html) in `rustc`:"
 msgstr ""
 
-#: src/reference/manifest.md:538
+#: src/reference/manifest.md:542
 msgid "`forbid`"
 msgstr ""
 
-#: src/reference/manifest.md:539
+#: src/reference/manifest.md:543
 msgid "`deny`"
 msgstr ""
 
-#: src/reference/manifest.md:540
+#: src/reference/manifest.md:544
 msgid "`warn`"
 msgstr ""
 
-#: src/reference/manifest.md:541
+#: src/reference/manifest.md:545
 msgid "`allow`"
 msgstr ""
 
-#: src/reference/manifest.md:543
+#: src/reference/manifest.md:547
 msgid ""
 "`priority` is a signed integer that controls which lints or lint groups "
 "override other lint groups:"
 msgstr ""
 
-#: src/reference/manifest.md:544
+#: src/reference/manifest.md:548
 msgid ""
 "lower (particularly negative) numbers have lower priority, being overridden "
 "by higher numbers, and show up first on the command-line to tools like "
 "`rustc`"
 msgstr ""
 
-#: src/reference/manifest.md:548
+#: src/reference/manifest.md:552
 msgid ""
 "To know which table under `[lints]` a particular lint belongs under, it is "
 "the part before `::` in the lint name.  If there isn't a `::`, then the tool "
@@ -1167,11 +1178,11 @@ msgid ""
 "enum_glob_use`."
 msgstr ""
 
-#: src/reference/manifest.md:553
+#: src/reference/manifest.md:557
 msgid "For example:"
 msgstr ""
 
-#: src/reference/manifest.md:554
+#: src/reference/manifest.md:558
 msgid ""
 "```toml\n"
 "[lints.rust]\n"
@@ -1182,7 +1193,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/manifest.md:562
+#: src/reference/manifest.md:566
 msgid ""
 "Generally, these will only affect local development of the current package. "
 "Cargo only applies these to the current package and not to dependencies. As "
@@ -1190,15 +1201,15 @@ msgid ""
 "features like [`--cap-lints`](../../rustc/lints/levels.html#capping-lints)."
 msgstr ""
 
-#: src/reference/manifest.md:567
+#: src/reference/manifest.md:571
 msgid "**MSRV:** Respected as of 1.74"
 msgstr ""
 
-#: src/reference/manifest.md:569
+#: src/reference/manifest.md:573
 msgid "The `[hints]` section"
 msgstr ""
 
-#: src/reference/manifest.md:571
+#: src/reference/manifest.md:575
 msgid ""
 "The `[hints]` section allows specifying hints for compiling this package. "
 "Cargo will respect these hints by default when compiling this package, "
@@ -1210,7 +1221,7 @@ msgid ""
 "the crate."
 msgstr ""
 
-#: src/reference/manifest.md:579
+#: src/reference/manifest.md:583
 msgid ""
 "Individual hints may have an associated unstable feature gate that you need "
 "to pass in order to apply the configuration they specify, but if you don't "
@@ -1218,28 +1229,28 @@ msgid ""
 "an error."
 msgstr ""
 
-#: src/reference/manifest.md:583
+#: src/reference/manifest.md:587
 msgid ""
 "There are no stable hints at this time. See the [hint-mostly-unused "
 "documentation](unstable.md#profile-hint-mostly-unused-option) for "
 "information on an unstable hint."
 msgstr ""
 
-#: src/reference/manifest.md:587
+#: src/reference/manifest.md:591
 msgid "**MSRV:** Respected as of 1.90."
 msgstr ""
 
-#: src/reference/manifest.md:589
+#: src/reference/manifest.md:593
 msgid "The `[badges]` section"
 msgstr ""
 
-#: src/reference/manifest.md:591
+#: src/reference/manifest.md:595
 msgid ""
 "The `[badges]` section is for specifying status badges that can be displayed "
 "on a registry website when the package is published."
 msgstr ""
 
-#: src/reference/manifest.md:594
+#: src/reference/manifest.md:598
 msgid ""
 "Note: [crates.io](https://crates.io/) previously displayed badges next to a "
 "crate on its website, but that functionality has been removed. Packages "
@@ -1247,7 +1258,7 @@ msgid ""
 "(https://crates.io/) (see [the `readme` field](#the-readme-field))."
 msgstr ""
 
-#: src/reference/manifest.md:599
+#: src/reference/manifest.md:603
 msgid ""
 "```toml\n"
 "[badges]\n"
@@ -1285,22 +1296,22 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/manifest.md:624
+#: src/reference/manifest.md:628
 msgid "Dependency sections"
 msgstr ""
 
-#: src/reference/manifest.md:626
+#: src/reference/manifest.md:630
 msgid ""
 "See the [specifying dependencies page](specifying-dependencies.md) for "
 "information on the `[dependencies]`, `[dev-dependencies]`, `[build-"
 "dependencies]`, and target-specific `[target.*.dependencies]` sections."
 msgstr ""
 
-#: src/reference/manifest.md:630
+#: src/reference/manifest.md:634
 msgid "The `[profile.*]` sections"
 msgstr ""
 
-#: src/reference/manifest.md:632
+#: src/reference/manifest.md:636
 msgid ""
 "The `[profile]` tables provide a way to customize compiler settings such as "
 "optimizations and debug settings. See [the Profiles chapter](profiles.md) "
