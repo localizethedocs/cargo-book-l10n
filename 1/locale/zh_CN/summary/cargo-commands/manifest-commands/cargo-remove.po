@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-04-14T09:41:26Z\n"
+"POT-Creation-Date: 2026-04-21T09:53:19Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -102,7 +102,7 @@ msgid "Remove `trybuild` as a dev-dependency"
 msgstr ""
 
 #: src/commands/cargo-remove.md:203
-msgid "Remove `nom` from the `x86_64-pc-windows-gnu` dependencies table"
+msgid "Remove `nom` from the `wasm32-unknown-unknown` dependencies table"
 msgstr ""
 
 #: src/commands/cargo-remove.md:207
