@@ -449,6 +449,8 @@ msgid ""
 "`-Zcargo-lints`: new `implicit_minimum_version_req` lint. [\\#16321](https://"
 "github.com/rust-lang/cargo/pull/16321)"
 msgstr ""
+"`-Zcargo-lints`: 新的 `implicit_minimum_version_req` 梳理。 [\\#16321]"
+"(https://github.com/rust-lang/cargo/pull/16321)"
 
 #: src/CHANGELOG.md:161
 msgid ""

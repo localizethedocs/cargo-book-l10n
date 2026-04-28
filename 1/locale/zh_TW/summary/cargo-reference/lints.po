@@ -125,19 +125,19 @@ msgstr "[`implicit_minimum_version_req`](#implicit_minimum_version_req)"
 
 #: src/reference/lints.md:23
 msgid "[`non_kebab_case_features`](#non_kebab_case_features)"
-msgstr ""
+msgstr "[`non_kebab_case_features`](#non_kebab_case_features)"
 
 #: src/reference/lints.md:24
 msgid "[`non_kebab_case_packages`](#non_kebab_case_packages)"
-msgstr ""
+msgstr "[`non_kebab_case_packages`](#non_kebab_case_packages)"
 
 #: src/reference/lints.md:25
 msgid "[`non_snake_case_features`](#non_snake_case_features)"
-msgstr ""
+msgstr "[`non_snake_case_features`](#non_snake_case_features)"
 
 #: src/reference/lints.md:26
 msgid "[`non_snake_case_packages`](#non_snake_case_packages)"
-msgstr ""
+msgstr "[`non_snake_case_packages`](#non_snake_case_packages)"
 
 #: src/reference/lints.md:28
 msgid "Warn-by-default"
@@ -153,19 +153,19 @@ msgstr "[`blanket_hint_mostly_unused`](#blanket_hint_mostly_unused)"
 
 #: src/reference/lints.md:32
 msgid "[`missing_lints_inheritance`](#missing_lints_inheritance)"
-msgstr ""
+msgstr "[`missing_lints_inheritance`](#missing_lints_inheritance)"
 
 #: src/reference/lints.md:33
 msgid "[`non_kebab_case_bins`](#non_kebab_case_bins)"
-msgstr ""
+msgstr "[`non_kebab_case_bins`](#non_kebab_case_bins)"
 
 #: src/reference/lints.md:34
 msgid "[`redundant_homepage`](#redundant_homepage)"
-msgstr ""
+msgstr "[`redundant_homepage`](#redundant_homepage)"
 
 #: src/reference/lints.md:35
 msgid "[`redundant_readme`](#redundant_readme)"
-msgstr ""
+msgstr "[`redundant_readme`](#redundant_readme)"
 
 #: src/reference/lints.md:36
 msgid "[`unknown_lints`](#unknown_lints)"
@@ -423,6 +423,10 @@ msgid ""
 "name = \"foo_bar\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[[bin]]\n"
+"name = \"foo_bar\"\n"
+"```"
 
 #: src/reference/lints.md:188
 msgid ""
@@ -431,10 +435,14 @@ msgid ""
 "name = \"foo-bar\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[[bin]]\n"
+"name = \"foo-bar\"\n"
+"```"
 
 #: src/reference/lints.md:194
 msgid "`non_kebab_case_features`"
-msgstr ""
+msgstr "`non_kebab_case_features`"
 
 #: src/reference/lints.md:195 src/reference/lints.md:227
 #: src/reference/lints.md:259 src/reference/lints.md:291
@@ -458,7 +466,7 @@ msgstr ""
 
 #: src/reference/lints.md:226
 msgid "`non_kebab_case_packages`"
-msgstr ""
+msgstr "`non_kebab_case_packages`"
 
 #: src/reference/lints.md:233
 msgid "Detect package names that are not kebab-case."
@@ -475,6 +483,10 @@ msgid ""
 "name = \"foo_bar\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[package]\n"
+"name = \"foo_bar\"\n"
+"```"
 
 #: src/reference/lints.md:252 src/reference/lints.md:316
 msgid ""
@@ -483,10 +495,14 @@ msgid ""
 "name = \"foo-bar\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[package]\n"
+"name = \"foo-bar\"\n"
+"```"
 
 #: src/reference/lints.md:258
 msgid "`non_snake_case_features`"
-msgstr ""
+msgstr "`non_snake_case_features`"
 
 #: src/reference/lints.md:265
 msgid "Detect feature names that are not snake-case."
@@ -494,7 +510,7 @@ msgstr ""
 
 #: src/reference/lints.md:290
 msgid "`non_snake_case_packages`"
-msgstr ""
+msgstr "`non_snake_case_packages`"
 
 #: src/reference/lints.md:297
 msgid "Detect package names that are not snake-case."
@@ -502,7 +518,7 @@ msgstr ""
 
 #: src/reference/lints.md:322
 msgid "`redundant_homepage`"
-msgstr ""
+msgstr "`redundant_homepage`"
 
 #: src/reference/lints.md:331
 msgid ""
@@ -530,6 +546,12 @@ msgid ""
 "repository = \"https://github.com/rust-lang/cargo/\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[package]\n"
+"name = \"foo\"\n"
+"homepage = \"https://github.com/rust-lang/cargo/\"\n"
+"repository = \"https://github.com/rust-lang/cargo/\"\n"
+"```"
 
 #: src/reference/lints.md:352
 msgid ""
@@ -539,10 +561,15 @@ msgid ""
 "repository = \"https://github.com/rust-lang/cargo/\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[package]\n"
+"name = \"foo\"\n"
+"repository = \"https://github.com/rust-lang/cargo/\"\n"
+"```"
 
 #: src/reference/lints.md:359
 msgid "`redundant_readme`"
-msgstr ""
+msgstr "`redundant_readme`"
 
 #: src/reference/lints.md:368
 msgid "Checks for `package.readme` fields that can be inferred."
@@ -570,6 +597,11 @@ msgid ""
 "readme = \"README.md\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[package]\n"
+"name = \"foo\"\n"
+"readme = \"README.md\"\n"
+"```"
 
 #: src/reference/lints.md:390
 msgid ""
@@ -578,6 +610,10 @@ msgid ""
 "name = \"foo\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[package]\n"
+"name = \"foo\"\n"
+"```"
 
 #: src/reference/lints.md:396
 msgid "`unknown_lints`"
@@ -613,7 +649,7 @@ msgstr ""
 
 #: src/reference/lints.md:419
 msgid "`unused_workspace_dependencies`"
-msgstr ""
+msgstr "`unused_workspace_dependencies`"
 
 #: src/reference/lints.md:427
 msgid ""
@@ -634,6 +670,12 @@ msgid ""
 "[dependencies]\n"
 "```"
 msgstr ""
+"```toml\n"
+"[workspace.dependencies]\n"
+"regex = \"1\"\n"
+"\n"
+"[dependencies]\n"
+"```"
 
 #: src/reference/lints.md:441
 msgid "`unused_workspace_package_fields`"
@@ -658,3 +700,10 @@ msgid ""
 "name = \"foo\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[workspace.package]\n"
+"edition = \"2024\"\n"
+"\n"
+"[package]\n"
+"name = \"foo\"\n"
+"```"
