@@ -31,7 +31,7 @@ msgstr "描述"
 
 #: src/reference/lints.md:7
 msgid "Default level"
-msgstr ""
+msgstr "默認層級"
 
 #: src/reference/lints.md:9
 msgid "`cargo::complexity`"
@@ -726,6 +726,13 @@ msgid ""
 "unused = \"1\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[package]\n"
+"name = \"foo\"\n"
+"\n"
+"[dependencies]\n"
+"unused = \"1\"\n"
+"```"
 
 #: src/reference/lints.md:473
 msgid "Configuration"
