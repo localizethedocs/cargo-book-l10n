@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-04-21 05:35:16 +0000",
-      "hash" : "9ab01ae53c416f89fe256b79588a76dcbcdc9290",
-      "title" : "Auto merge of #155491 - ohadravid:faster-storage-in-copyprop-and-gvn, r=saethlin"
+      "date" : "2026-07-14 04:16:03 +0000",
+      "hash" : "da80ed0708a09dc096c184345d6eb42cbcd50a1e",
+      "title" : "Auto merge of #159263 - jhpratt:rollup-1gDsq5l, r=jhpratt"
     }
   },
   "type" : "branch",
