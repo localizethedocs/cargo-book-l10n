@@ -41,11 +41,11 @@ msgstr ""
 
 #: src/SUMMARY.md:11
 msgid "Creating a New Package"
-msgstr ""
+msgstr "创建新项目"
 
 #: src/SUMMARY.md:12
 msgid "Working on an Existing Package"
-msgstr ""
+msgstr "在已有的项目上工作"
 
 #: src/SUMMARY.md:13
 msgid "Dependencies"
