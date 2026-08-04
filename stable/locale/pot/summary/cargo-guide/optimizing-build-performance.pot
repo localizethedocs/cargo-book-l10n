@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-02-17T08:58:35Z\n"
+"POT-Creation-Date: 2026-08-04T10:42:56Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -156,8 +156,8 @@ msgstr ""
 
 #: src/guide/build-performance.md:50 src/guide/build-performance.md:74
 #: src/guide/build-performance.md:95 src/guide/build-performance.md:119
-#: src/guide/build-performance.md:141 src/guide/build-performance.md:164
-#: src/guide/build-performance.md:182
+#: src/guide/build-performance.md:141 src/guide/build-performance.md:175
+#: src/guide/build-performance.md:198
 msgid "Trade-offs:"
 msgstr ""
 
@@ -386,37 +386,84 @@ msgstr ""
 
 #: src/guide/build-performance.md:154
 msgid ""
-"Recommendation: Periodically review unused dependencies for removal using "
-"third-party tools like [cargo-machete](https://crates.io/crates/cargo-"
-"machete), [cargo-udeps](https://crates.io/crates/cargo-udeps), [cargo-shear]"
-"(https://crates.io/crates/cargo-shear)."
+"Recommendation: periodically review unused dependencies for removal using:"
+msgstr ""
+
+#: src/guide/build-performance.md:158
+msgid "This may have false positives from:"
 msgstr ""
 
 #: src/guide/build-performance.md:159
+msgid ""
+"when a dependency's use is dynamically controlled by a `build.rs` or "
+"`RUSTFLAGS`"
+msgstr ""
+
+#: src/guide/build-performance.md:161
+msgid ""
+"Also, periodically review hidden [`cargo::unused_dependencies`](../reference/"
+"lints.md#unused_dependencies) results:"
+msgstr ""
+
+#: src/guide/build-performance.md:165
+msgid "This will show potential unused dependencies for"
+msgstr ""
+
+#: src/guide/build-performance.md:166
+msgid "registry and git dependencies"
+msgstr ""
+
+#: src/guide/build-performance.md:167
+msgid ""
+"when your [`package.rust-version`](../reference/rust-version.md) is too old "
+"to use `[lints.cargo]`"
+msgstr ""
+
+#: src/guide/build-performance.md:168
+msgid ""
+"when your dependency _might_ be used to constrain a version on a transitive "
+"dependency (instead use `[target.\"cfg(false)\".dependencies]`)"
+msgstr ""
+
+#: src/guide/build-performance.md:169
+msgid ""
+"when your dependency _might_ be used to activate features on a transitive "
+"dependency"
+msgstr ""
+
+#: src/guide/build-performance.md:170
+msgid ""
+"your `[dev-dependencies]` as there is not a way yet to ensure all consumers "
+"of these are built"
+msgstr ""
+
+#: src/guide/build-performance.md:172
 msgid ""
 "When changing code, it can be easy to miss that a dependency is no longer "
 "used and can be removed."
 msgstr ""
 
-#: src/guide/build-performance.md:162
-msgid ""
-"**Note:** native support for this in Cargo is being tracked in [\\#15813]"
-"(https://github.com/rust-lang/cargo/issues/15813)."
-msgstr ""
-
-#: src/guide/build-performance.md:165 src/guide/build-performance.md:183
+#: src/guide/build-performance.md:176 src/guide/build-performance.md:199
 msgid "✅ Faster full build and link times"
 msgstr ""
 
-#: src/guide/build-performance.md:166
-msgid "❌ May incorrectly flag dependencies as unused or miss some"
+#: src/guide/build-performance.md:177
+msgid ""
+"❌ **Requires using nightly Rust and an [unstable Cargo feature](../"
+"reference/unstable.md#lintscargo) when reviewing unused dependencies**"
 msgstr ""
 
-#: src/guide/build-performance.md:168
+#: src/guide/build-performance.md:178
+msgid ""
+"❌ It takes effort to identify unused dependencies from among the false "
+"positives"
+msgstr ""
+
+#: src/guide/build-performance.md:184
 msgid "Removing unused features from dependencies"
 msgstr ""
 
-#: src/guide/build-performance.md:170
+#: src/guide/build-performance.md:186
 msgid ""
 "Recommendation: Periodically review unused features from dependencies for "
 "removal using third-party tools like [cargo-features-manager](https://crates."
@@ -424,7 +471,7 @@ msgid ""
 "crates/cargo-unused-features)."
 msgstr ""
 
-#: src/guide/build-performance.md:174
+#: src/guide/build-performance.md:190
 msgid ""
 "When changing code, it can be easy to miss that a dependency's feature is no "
 "longer used and can be removed. This can reduce the number of transitive "
@@ -434,6 +481,6 @@ msgid ""
 "always be obvious from compiling or testing."
 msgstr ""
 
-#: src/guide/build-performance.md:184
+#: src/guide/build-performance.md:200
 msgid "❌ May incorrectly flag features as unused"
 msgstr ""

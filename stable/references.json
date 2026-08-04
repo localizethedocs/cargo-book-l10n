@@ -37,9 +37,9 @@
     "branch" : "stable",
     "commit" : 
     {
-      "date" : "2026-04-13 00:01:55 +0000",
-      "hash" : "6efb623524553af1f2456642f069a6f5b8abc1dd",
-      "title" : "Auto merge of #155210 - Mark-Simulacrum:stable-next, r=Mark-Simulacrum"
+      "date" : "2026-07-14 15:13:08 +0000",
+      "hash" : "8bab26f4f68e0e26f0bb7960be334d5b520ea452",
+      "title" : "Auto merge of #159288 - Mark-Simulacrum:stable-next, r=Mark-Simulacrum"
     }
   },
   "type" : "branch",

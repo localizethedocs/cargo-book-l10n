@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-04-14T09:39:06Z\n"
+"POT-Creation-Date: 2026-08-04T10:42:56Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -138,7 +138,7 @@ msgstr ""
 #: src/reference/build-scripts.md:65
 msgid ""
 "In addition to environment variables, the build script’s current directory "
-"is the source directory of the build script’s package."
+"is the root directory of the build script’s package."
 msgstr ""
 
 #: src/reference/build-scripts.md:70
