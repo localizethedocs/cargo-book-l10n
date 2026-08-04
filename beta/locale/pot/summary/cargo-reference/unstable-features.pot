@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-04-14T09:32:53Z\n"
+"POT-Creation-Date: 2026-08-04T10:43:24Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -214,301 +214,299 @@ msgid ""
 msgstr ""
 
 #: src/reference/unstable.md:83
-msgid "Output behavior"
+msgid ""
+"[min-publish-age](#min-publish-age) --- Filters out dependency versions "
+"published more recently than a configured minimum age."
 msgstr ""
 
 #: src/reference/unstable.md:84
+msgid "Output behavior"
+msgstr ""
+
+#: src/reference/unstable.md:85
 msgid ""
 "[artifact-dir](#artifact-dir) --- Adds a directory where artifacts are "
 "copied to."
 msgstr ""
 
-#: src/reference/unstable.md:85
+#: src/reference/unstable.md:86
 msgid ""
 "[build-dir-new-layout](#build-dir-new-layout) --- Enables the new build-dir "
 "filesystem layout"
 msgstr ""
 
-#: src/reference/unstable.md:86
+#: src/reference/unstable.md:87
 msgid ""
 "[Different binary name](#different-binary-name) --- Assign a name to the "
 "built binary that is separate from the crate name."
 msgstr ""
 
-#: src/reference/unstable.md:87
+#: src/reference/unstable.md:88
 msgid ""
 "[root-dir](#root-dir) --- Controls the root directory relative to which "
 "paths are printed"
 msgstr ""
 
-#: src/reference/unstable.md:88
+#: src/reference/unstable.md:89
 msgid "Compile behavior"
 msgstr ""
 
-#: src/reference/unstable.md:89
+#: src/reference/unstable.md:90
 msgid ""
 "[mtime-on-use](#mtime-on-use) --- Updates the last-modified timestamp on "
 "every dependency every time it is used, to provide a mechanism to delete "
 "unused artifacts."
 msgstr ""
 
-#: src/reference/unstable.md:90
+#: src/reference/unstable.md:91
 msgid ""
 "[build-std](#build-std) --- Builds the standard library instead of using pre-"
 "built binaries."
 msgstr ""
 
-#: src/reference/unstable.md:91
+#: src/reference/unstable.md:92
 msgid ""
 "[build-std-features](#build-std-features) --- Sets features to use with the "
 "standard library."
 msgstr ""
 
-#: src/reference/unstable.md:92
+#: src/reference/unstable.md:93
 msgid ""
 "[binary-dep-depinfo](#binary-dep-depinfo) --- Causes the dep-info file to "
 "track binary dependencies."
 msgstr ""
 
-#: src/reference/unstable.md:93
+#: src/reference/unstable.md:94
 msgid ""
 "[checksum-freshness](#checksum-freshness) --- When passed, the decision as "
 "to whether a crate needs to be rebuilt is made using file checksums instead "
 "of the file mtime."
 msgstr ""
 
-#: src/reference/unstable.md:94
+#: src/reference/unstable.md:95
 msgid ""
 "[panic-abort-tests](#panic-abort-tests) --- Allows running tests with the "
 "\"abort\" panic strategy."
 msgstr ""
 
-#: src/reference/unstable.md:95
+#: src/reference/unstable.md:96
 msgid ""
 "[host-config](#host-config) --- Allows setting `[target]`\\-like "
 "configuration settings for host build targets."
 msgstr ""
 
-#: src/reference/unstable.md:96
+#: src/reference/unstable.md:97
 msgid ""
 "[no-embed-metadata](#no-embed-metadata) --- Passes `-Zembed-metadata=no` to "
 "the compiler, which avoid embedding metadata into rlib and dylib artifacts, "
 "to save disk space."
 msgstr ""
 
-#: src/reference/unstable.md:97
+#: src/reference/unstable.md:98
 msgid ""
 "[target-applies-to-host](#target-applies-to-host) --- Alters whether certain "
 "flags will be passed to host build targets."
 msgstr ""
 
-#: src/reference/unstable.md:98
+#: src/reference/unstable.md:99
 msgid "[gc](#gc) --- Global cache garbage collection."
 msgstr ""
 
-#: src/reference/unstable.md:99
+#: src/reference/unstable.md:100
 msgid ""
 "[open-namespaces](#open-namespaces) --- Allow multiple packages to "
 "participate in the same API namespace"
 msgstr ""
 
-#: src/reference/unstable.md:100
+#: src/reference/unstable.md:101
 msgid ""
 "[panic-immediate-abort](#panic-immediate-abort) --- Passes `-"
 "Cpanic=immediate-abort` to the compiler."
 msgstr ""
 
-#: src/reference/unstable.md:101
+#: src/reference/unstable.md:102
 msgid ""
 "[compile-time-deps](#compile-time-deps) --- Perma-unstable feature for rust-"
 "analyzer"
 msgstr ""
 
-#: src/reference/unstable.md:102
+#: src/reference/unstable.md:103
 msgid ""
 "[fine-grain-locking](#fine-grain-locking) --- Use fine grain locking instead "
 "of locking the entire build cache"
 msgstr ""
 
-#: src/reference/unstable.md:103
+#: src/reference/unstable.md:104
 msgid ""
-"[target-spec-json](#target-spec-json) --- Allows the use of `.json` custom "
+"[json-target-spec](#json-target-spec) --- Allows the use of `.json` custom "
 "target specs."
 msgstr ""
 
-#: src/reference/unstable.md:104
+#: src/reference/unstable.md:105
+msgid "[hint-msrv](#hint-msrv) --- Allows Cargo to set `-Zhint-msrv`"
+msgstr ""
+
+#: src/reference/unstable.md:106
 msgid "rustdoc"
 msgstr ""
 
-#: src/reference/unstable.md:105
+#: src/reference/unstable.md:107
 msgid ""
 "[rustdoc-map](#rustdoc-map) --- Provides mappings for documentation to link "
 "to external sites like [docs.rs](https://docs.rs/)."
 msgstr ""
 
-#: src/reference/unstable.md:106
+#: src/reference/unstable.md:108
 msgid ""
 "[scrape-examples](#scrape-examples) --- Shows examples within documentation."
 msgstr ""
 
-#: src/reference/unstable.md:107
+#: src/reference/unstable.md:109
 msgid ""
 "[output-format](#output-format-for-rustdoc) --- Allows documentation to also "
 "be emitted in the experimental [JSON format](https://doc.rust-lang.org/"
 "nightly/nightly-rustc/rustdoc_json_types/)."
 msgstr ""
 
-#: src/reference/unstable.md:108
+#: src/reference/unstable.md:110
 msgid ""
 "[rustdoc-depinfo](#rustdoc-depinfo) --- Use dep-info files in rustdoc "
 "rebuild detection."
 msgstr ""
 
-#: src/reference/unstable.md:109
+#: src/reference/unstable.md:111
 msgid ""
 "[rustdoc-mergeable-info](#rustdoc-mergeable-info) --- Use rustdoc mergeable "
 "cross-crate-info files."
 msgstr ""
 
-#: src/reference/unstable.md:110
+#: src/reference/unstable.md:112
 msgid "`Cargo.toml` extensions"
 msgstr ""
 
-#: src/reference/unstable.md:111
+#: src/reference/unstable.md:113
 msgid ""
 "[Profile `rustflags` option](#profile-rustflags-option) --- Passed directly "
 "to rustc."
 msgstr ""
 
-#: src/reference/unstable.md:112
+#: src/reference/unstable.md:114
 msgid ""
 "[Profile `hint-mostly-unused` option](#profile-hint-mostly-unused-option) "
 "--- Hint that a dependency is mostly unused, to optimize compilation time."
 msgstr ""
 
-#: src/reference/unstable.md:113
+#: src/reference/unstable.md:115
 msgid ""
 "[codegen-backend](#codegen-backend) --- Select the codegen backend used by "
 "rustc."
 msgstr ""
 
-#: src/reference/unstable.md:114
+#: src/reference/unstable.md:116
 msgid ""
 "[per-package-target](#per-package-target) --- Sets the `--target` to use for "
 "each individual package."
 msgstr ""
 
-#: src/reference/unstable.md:115
+#: src/reference/unstable.md:117
 msgid ""
 "[artifact dependencies](#artifact-dependencies) --- Allow build artifacts to "
 "be included into other build artifacts and build them for different targets."
 msgstr ""
 
-#: src/reference/unstable.md:116
+#: src/reference/unstable.md:118
 msgid ""
 "[Profile `trim-paths` option](#profile-trim-paths-option) --- Control the "
 "sanitization of file paths in build outputs."
 msgstr ""
 
-#: src/reference/unstable.md:117
+#: src/reference/unstable.md:119
 msgid "[`[lints.cargo]`](#lintscargo) --- Allows configuring lints for Cargo."
 msgstr ""
 
-#: src/reference/unstable.md:118
+#: src/reference/unstable.md:120
 msgid ""
 "[path bases](#path-bases) --- Named base directories for path dependencies."
 msgstr ""
 
-#: src/reference/unstable.md:119
+#: src/reference/unstable.md:121
 msgid ""
 "[`unstable-editions`](#unstable-editions) --- Allows use of editions that "
 "are not yet stable."
 msgstr ""
 
-#: src/reference/unstable.md:120
+#: src/reference/unstable.md:122
 msgid "Information and metadata"
 msgstr ""
 
-#: src/reference/unstable.md:121
+#: src/reference/unstable.md:123
 msgid ""
 "[unit-graph](#unit-graph) --- Emits JSON for Cargo's internal graph "
 "structure."
 msgstr ""
 
-#: src/reference/unstable.md:122
+#: src/reference/unstable.md:124
 msgid ""
 "[`cargo rustc --print`](#rustc---print) --- Calls rustc with `--print` to "
 "display information from rustc."
 msgstr ""
 
-#: src/reference/unstable.md:123
+#: src/reference/unstable.md:125
 msgid ""
 "[Build analysis](#build-analysis) --- Record and persist detailed build "
 "metrics across runs, with new commands to query past builds."
 msgstr ""
 
-#: src/reference/unstable.md:124
+#: src/reference/unstable.md:126
 msgid ""
 "[`rustc-unicode`](#rustc-unicode) --- Enables `rustc`'s unicode error format "
 "in Cargo's error messages"
 msgstr ""
 
-#: src/reference/unstable.md:125
+#: src/reference/unstable.md:127
 msgid "Configuration"
 msgstr ""
 
-#: src/reference/unstable.md:126
+#: src/reference/unstable.md:128
 msgid ""
 "[`cargo config`](#cargo-config) --- Adds a new subcommand for viewing config "
 "files."
 msgstr ""
 
-#: src/reference/unstable.md:127
+#: src/reference/unstable.md:129
 msgid "Registries"
 msgstr ""
 
-#: src/reference/unstable.md:128
+#: src/reference/unstable.md:130
 msgid ""
 "[publish-timeout](#publish-timeout) --- Controls the timeout between "
 "uploading the crate and being available in the index"
 msgstr ""
 
-#: src/reference/unstable.md:129
+#: src/reference/unstable.md:131
 msgid ""
 "[asymmetric-token](#asymmetric-token) --- Adds support for authentication "
 "tokens using asymmetric cryptography (`cargo:paseto` provider)."
 msgstr ""
 
-#: src/reference/unstable.md:130
+#: src/reference/unstable.md:132
 msgid "Other"
 msgstr ""
 
-#: src/reference/unstable.md:131
+#: src/reference/unstable.md:133
 msgid ""
 "[gitoxide](#gitoxide) --- Use `gitoxide` instead of `git2` for a set of "
 "operations."
 msgstr ""
 
-#: src/reference/unstable.md:132
-msgid "[script](#script) --- Enable support for single-file `.rs` packages."
-msgstr ""
-
-#: src/reference/unstable.md:133
-msgid ""
-"[lockfile-path](#lockfile-path) --- Allows to specify a path to lockfile "
-"other than the default path `<workspace_root>/Cargo.lock`."
-msgstr ""
-
 #: src/reference/unstable.md:134
-msgid ""
-"[native-completions](#native-completions) --- Move cargo shell completions "
-"to native completions."
+msgid "[script](#script) --- Enable support for single-file `.rs` packages."
 msgstr ""
 
 #: src/reference/unstable.md:135
 msgid ""
-"[warnings](#warnings) --- controls warning behavior; options for allowing or "
-"denying warnings."
+"[native-completions](#native-completions) --- Move cargo shell completions "
+"to native completions."
 msgstr ""
 
 #: src/reference/unstable.md:136
@@ -1228,7 +1226,7 @@ msgstr ""
 
 #: src/reference/unstable.md:522 src/reference/unstable.md:982
 #: src/reference/unstable.md:1019 src/reference/unstable.md:1034
-#: src/reference/unstable.md:1324 src/reference/unstable.md:2035
+#: src/reference/unstable.md:1324 src/reference/unstable.md:1982
 msgid "Example:"
 msgstr ""
 
@@ -3224,7 +3222,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/unstable.md:1515 src/reference/unstable.md:1786
+#: src/reference/unstable.md:1515
 msgid "Documentation updates"
 msgstr ""
 
@@ -3356,43 +3354,52 @@ msgstr ""
 
 #: src/reference/unstable.md:1571
 msgid ""
-"`CARGO_TRIM_PATHS` --- The value of `trim-paths` profile option. `false`, "
-"`\"none\"`, and empty arrays would be converted to `none`. `true` and "
-"`\"all\"` become `all`. Values in a non-empty array would be joined into a "
-"comma-separated list. If the build script introduces absolute paths to built "
-"artifacts (such as by invoking a compiler), the user may request them to be "
-"sanitized in different types of artifacts. Common paths requiring "
+"`CARGO_TRIM_PATHS_SCOPE` --- The value of `trim-paths` profile option. "
+"`false`, `\"none\"`, and empty arrays would be converted to `none`. `true` "
+"and `\"all\"` become `all`. Values in a non-empty array would be joined into "
+"a comma-separated list. If the build script introduces absolute paths to "
+"built artifacts (such as by invoking a compiler), the user may request them "
+"to be sanitized in different types of artifacts. Common paths requiring "
 "sanitization include `OUT_DIR`, `CARGO_MANIFEST_DIR` and "
 "`CARGO_MANIFEST_PATH`, plus any other introduced by the build script, such "
 "as include directories."
 msgstr ""
 
-#: src/reference/unstable.md:1580
+#: src/reference/unstable.md:1579
+msgid ""
+"`CARGO_TRIM_PATHS_REMAP` --- The `<from>=<to>` path remap pairs Cargo passes "
+"to the compiler, joined by the platform path separator. Only set when `trim-"
+"paths` profile is active. Build scripts can forward these mappings to C/C++ "
+"compilers and other tools, for example via `cc`'s `-ffile-prefix-map`, to "
+"sanitize paths consistently with the rest of the build."
+msgstr ""
+
+#: src/reference/unstable.md:1586
 msgid "gc"
 msgstr ""
 
-#: src/reference/unstable.md:1582
+#: src/reference/unstable.md:1588
 msgid ""
 "Tracking Issue: [\\#12633](https://github.com/rust-lang/cargo/issues/12633)"
 msgstr ""
 
-#: src/reference/unstable.md:1584
+#: src/reference/unstable.md:1590
 msgid ""
 "The `-Zgc` flag is used to enable certain features related to garbage-"
 "collection of cargo's global cache within the cargo home directory."
 msgstr ""
 
-#: src/reference/unstable.md:1586
+#: src/reference/unstable.md:1592
 msgid "Automatic gc configuration"
 msgstr ""
 
-#: src/reference/unstable.md:1588
+#: src/reference/unstable.md:1594
 msgid ""
 "The `-Zgc` flag will enable Cargo to read extra configuration options "
 "related to garbage collection. The settings available are:"
 msgstr ""
 
-#: src/reference/unstable.md:1591
+#: src/reference/unstable.md:1597
 msgid ""
 "```toml\n"
 "# Example config.toml file.\n"
@@ -3415,113 +3422,113 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/unstable.md:1608
+#: src/reference/unstable.md:1614
 msgid ""
 "Note that the [`cache.auto-clean-frequency`](config.md#cacheauto-clean-"
 "frequency) option was stabilized in Rust 1.88."
 msgstr ""
 
-#: src/reference/unstable.md:1612
+#: src/reference/unstable.md:1618
 msgid "Manual garbage collection with `cargo clean`"
 msgstr ""
 
-#: src/reference/unstable.md:1614
+#: src/reference/unstable.md:1620
 msgid ""
 "Manual deletion can be done with the `cargo clean gc -Zgc` command. Deletion "
 "of cache contents can be performed by passing one of the cache options:"
 msgstr ""
 
-#: src/reference/unstable.md:1617
+#: src/reference/unstable.md:1623
 msgid ""
 "`--max-src-age=DURATION` --- Deletes source cache files that have not been "
 "used since the given age."
 msgstr ""
 
-#: src/reference/unstable.md:1618
+#: src/reference/unstable.md:1624
 msgid ""
 "`--max-crate-age=DURATION` --- Deletes crate cache files that have not been "
 "used since the given age."
 msgstr ""
 
-#: src/reference/unstable.md:1619
+#: src/reference/unstable.md:1625
 msgid ""
 "`--max-index-age=DURATION` --- Deletes registry indexes that have not been "
 "used since then given age (including their `.crate` and `src` files)."
 msgstr ""
 
-#: src/reference/unstable.md:1620
+#: src/reference/unstable.md:1626
 msgid ""
 "`--max-git-co-age=DURATION` --- Deletes git dependency checkouts that have "
 "not been used since then given age."
 msgstr ""
 
-#: src/reference/unstable.md:1621
+#: src/reference/unstable.md:1627
 msgid ""
 "`--max-git-db-age=DURATION` --- Deletes git dependency clones that have not "
 "been used since then given age."
 msgstr ""
 
-#: src/reference/unstable.md:1622
+#: src/reference/unstable.md:1628
 msgid ""
 "`--max-download-age=DURATION` --- Deletes any downloaded cache data that has "
 "not been used since then given age."
 msgstr ""
 
-#: src/reference/unstable.md:1623
+#: src/reference/unstable.md:1629
 msgid ""
 "`--max-src-size=SIZE` --- Deletes the oldest source cache files until the "
 "cache is under the given size."
 msgstr ""
 
-#: src/reference/unstable.md:1624
+#: src/reference/unstable.md:1630
 msgid ""
 "`--max-crate-size=SIZE` --- Deletes the oldest crate cache files until the "
 "cache is under the given size."
 msgstr ""
 
-#: src/reference/unstable.md:1625
+#: src/reference/unstable.md:1631
 msgid ""
 "`--max-git-size=SIZE` --- Deletes the oldest git dependency caches until the "
 "cache is under the given size."
 msgstr ""
 
-#: src/reference/unstable.md:1626
+#: src/reference/unstable.md:1632
 msgid ""
 "`--max-download-size=SIZE` --- Deletes the oldest downloaded cache data "
 "until the cache is under the given size."
 msgstr ""
 
-#: src/reference/unstable.md:1628
+#: src/reference/unstable.md:1634
 msgid ""
 "A DURATION is specified in the form \"N seconds/minutes/days/weeks/months\" "
 "where N is an integer."
 msgstr ""
 
-#: src/reference/unstable.md:1630
+#: src/reference/unstable.md:1636
 msgid ""
 "A SIZE is specified in the form \"N _suffix_\" where _suffix_ is B, kB, MB, "
 "GB, kiB, MiB, or GiB, and N is an integer or floating point number. If no "
 "suffix is specified, the number is the number of bytes."
 msgstr ""
 
-#: src/reference/unstable.md:1638
+#: src/reference/unstable.md:1644
 msgid "open-namespaces"
 msgstr ""
 
-#: src/reference/unstable.md:1640
+#: src/reference/unstable.md:1646
 msgid ""
 "Tracking Issue: [\\#13576](https://github.com/rust-lang/cargo/issues/13576)"
 msgstr ""
 
-#: src/reference/unstable.md:1642
+#: src/reference/unstable.md:1648
 msgid "Allow multiple packages to participate in the same API namespace"
 msgstr ""
 
-#: src/reference/unstable.md:1644
+#: src/reference/unstable.md:1650
 msgid "This can be enabled like so:"
 msgstr ""
 
-#: src/reference/unstable.md:1645
+#: src/reference/unstable.md:1651
 msgid ""
 "```toml\n"
 "cargo-features = [\"open-namespaces\"]\n"
@@ -3531,29 +3538,29 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/unstable.md:1652
+#: src/reference/unstable.md:1658
 msgid "panic-immediate-abort"
 msgstr ""
 
-#: src/reference/unstable.md:1654
+#: src/reference/unstable.md:1660
 msgid ""
 "Tracking Issue: [\\#16042](https://github.com/rust-lang/cargo/issues/16042)"
 msgstr ""
 
-#: src/reference/unstable.md:1655
+#: src/reference/unstable.md:1661
 msgid ""
 "Upstream Tracking Issue: [rust-lang/rust#147286](https://github.com/rust-"
 "lang/rust/issues/147286)"
 msgstr ""
 
-#: src/reference/unstable.md:1657
+#: src/reference/unstable.md:1663
 msgid ""
 "Extends the `panic` profile setting to support the [`immediate-abort`](../../"
 "rustc/codegen-options/index.html#panic) panic strategy. This can be enabled "
 "like so:"
 msgstr ""
 
-#: src/reference/unstable.md:1661
+#: src/reference/unstable.md:1667
 msgid ""
 "```toml\n"
 "# Cargo.toml\n"
@@ -3567,14 +3574,14 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/unstable.md:1672
+#: src/reference/unstable.md:1678
 msgid ""
 "To set this in a profile in Cargo configuration, you need to use either `-Z "
 "panic-immediate-abort` CLI flag or the `[unstable]` table to enable it. For "
 "example,"
 msgstr ""
 
-#: src/reference/unstable.md:1677
+#: src/reference/unstable.md:1683
 msgid ""
 "```toml\n"
 "# .cargo/config.toml\n"
@@ -3586,41 +3593,41 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/unstable.md:1686
+#: src/reference/unstable.md:1692
 msgid "fine-grain-locking"
 msgstr ""
 
-#: src/reference/unstable.md:1688
+#: src/reference/unstable.md:1694
 msgid ""
 "Tracking Issue: [\\#4282](https://github.com/rust-lang/cargo/issues/4282)"
 msgstr ""
 
-#: src/reference/unstable.md:1690
+#: src/reference/unstable.md:1696
 msgid "Use fine grain locking instead of locking the entire build cache."
 msgstr ""
 
-#: src/reference/unstable.md:1692
+#: src/reference/unstable.md:1698
 msgid ""
 "Note: Fine grain locking implicitly enables [build-dir-new-layout](#build-"
 "dir-new-layout) as fine grain locking builds on that directory reoganization."
 msgstr ""
 
-#: src/reference/unstable.md:1694
+#: src/reference/unstable.md:1700
 msgid "`[lints.cargo]`"
 msgstr ""
 
-#: src/reference/unstable.md:1696
+#: src/reference/unstable.md:1702
 msgid ""
 "Tracking Issue: [\\#12235](https://github.com/rust-lang/cargo/issues/12235)"
 msgstr ""
 
-#: src/reference/unstable.md:1698
+#: src/reference/unstable.md:1704
 msgid ""
 "A new `lints` tool table for `cargo` that can be used to configure lints "
 "emitted by `cargo` itself when `-Zcargo-lints` is used"
 msgstr ""
 
-#: src/reference/unstable.md:1700
+#: src/reference/unstable.md:1706
 msgid ""
 "```toml\n"
 "[lints.cargo]\n"
@@ -3628,13 +3635,13 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/unstable.md:1705
+#: src/reference/unstable.md:1711
 msgid ""
 "This will work with [RFC 2906 `workspace-deduplicate`](https://rust-lang."
 "github.io/rfcs/2906-cargo-workspace-deduplicate.html):"
 msgstr ""
 
-#: src/reference/unstable.md:1707
+#: src/reference/unstable.md:1713
 msgid ""
 "```toml\n"
 "[workspace.lints.cargo]\n"
@@ -3645,16 +3652,16 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/unstable.md:1715
+#: src/reference/unstable.md:1721
 msgid "Path Bases"
 msgstr ""
 
-#: src/reference/unstable.md:1717
+#: src/reference/unstable.md:1723
 msgid ""
 "Tracking Issue: [\\#14355](https://github.com/rust-lang/cargo/issues/14355)"
 msgstr ""
 
-#: src/reference/unstable.md:1719
+#: src/reference/unstable.md:1725
 msgid ""
 "A `path` dependency may optionally specify a base by setting the `base` key "
 "to the name of a path base from the `[path-bases]` table in either the "
@@ -3664,11 +3671,11 @@ msgid ""
 "where Cargo will look for the dependency."
 msgstr ""
 
-#: src/reference/unstable.md:1726
+#: src/reference/unstable.md:1732
 msgid "For example, if the `Cargo.toml` contains:"
 msgstr ""
 
-#: src/reference/unstable.md:1728
+#: src/reference/unstable.md:1734
 msgid ""
 "```toml\n"
 "cargo-features = [\"path-bases\"]\n"
@@ -3678,11 +3685,11 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/unstable.md:1735
+#: src/reference/unstable.md:1741
 msgid "Given a `[path-bases]` table in the configuration that contains:"
 msgstr ""
 
-#: src/reference/unstable.md:1737
+#: src/reference/unstable.md:1743
 msgid ""
 "```toml\n"
 "[path-bases]\n"
@@ -3690,20 +3697,20 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/unstable.md:1742
+#: src/reference/unstable.md:1748
 msgid ""
 "This will produce a `path` dependency `foo` located at `/home/user/dev/rust/"
 "libraries/foo`."
 msgstr ""
 
-#: src/reference/unstable.md:1745
+#: src/reference/unstable.md:1751
 msgid ""
 "Path bases can be either absolute or relative. Relative path bases are "
 "relative to the parent directory of the configuration file that declared "
 "that path base."
 msgstr ""
 
-#: src/reference/unstable.md:1748
+#: src/reference/unstable.md:1754
 msgid ""
 "The name of a path base must use only [alphanumeric](https://doc.rust-lang."
 "org/std/primitive.char.html#method.is_alphanumeric) characters or `-` or "
@@ -3711,31 +3718,31 @@ msgid ""
 "char.html#method.is_alphabetic) character, and must not be empty."
 msgstr ""
 
-#: src/reference/unstable.md:1752
+#: src/reference/unstable.md:1758
 msgid ""
 "If the name of path base used in a dependency is neither in the "
 "configuration nor one of the built-in path base, then Cargo will raise an "
 "error."
 msgstr ""
 
-#: src/reference/unstable.md:1755
+#: src/reference/unstable.md:1761
 msgid "Built-in path bases"
 msgstr ""
 
-#: src/reference/unstable.md:1757
+#: src/reference/unstable.md:1763
 msgid ""
 "Cargo provides implicit path bases that can be used without the need to "
 "specify them in a `[path-bases]` table."
 msgstr ""
 
-#: src/reference/unstable.md:1760
+#: src/reference/unstable.md:1766
 msgid ""
 "`workspace` - If a project is [a workspace or workspace member](workspaces."
 "md) then this path base is defined as the parent directory of the root "
 "`Cargo.toml` of the workspace."
 msgstr ""
 
-#: src/reference/unstable.md:1764
+#: src/reference/unstable.md:1770
 msgid ""
 "If a built-in path base name is also declared in the configuration, then "
 "Cargo will prefer the value in the configuration. The allows Cargo to add "
@@ -3743,282 +3750,144 @@ msgid ""
 "shadow the built-in name)."
 msgstr ""
 
-#: src/reference/unstable.md:1769
-msgid "lockfile-path"
-msgstr ""
-
-#: src/reference/unstable.md:1771
-msgid ""
-"Original Issue: [\\#5707](https://github.com/rust-lang/cargo/issues/5707)"
-msgstr ""
-
-#: src/reference/unstable.md:1772
-msgid ""
-"Tracking Issue: [\\#14421](https://github.com/rust-lang/cargo/issues/14421)"
-msgstr ""
-
-#: src/reference/unstable.md:1774
-msgid ""
-"The `-Zlockfile-path` flag enables the `resolver.lockfile-path` "
-"configuration option, which allows you to specify the path of the lockfile "
-"`Cargo.lock`."
-msgstr ""
-
-#: src/reference/unstable.md:1777
-msgid ""
-"By default, lockfile is written into `<workspace_root>/Cargo.lock`. However, "
-"when sources are stored in read-only directory, most of the cargo commands "
-"would fail when trying to write a lockfile. This configuration makes it "
-"easier to work with readonly sources."
-msgstr ""
-
-#: src/reference/unstable.md:1782
-msgid ""
-"Note, that currently path must end with `Cargo.lock`. If you want to use "
-"this feature in multiple projects, lockfiles should be stored in different "
-"directories."
-msgstr ""
-
-#: src/reference/unstable.md:1788
-msgid "_as a new `resolver.lockfile-path` entry in config.md_"
-msgstr ""
-
-#: src/reference/unstable.md:1790
-msgid "_Keep in mind, the `[resolver]` section has this clarification:_"
-msgstr ""
-
-#: src/reference/unstable.md:1792
-msgid ""
-"_The `[resolver]` table overrides dependency resolution behavior for local "
-"development (e.g. excludes `cargo install`)._"
-msgstr ""
-
-#: src/reference/unstable.md:1794
-msgid "`resolver.lockfile-path`"
-msgstr ""
-
-#: src/reference/unstable.md:1796
-msgid "Type: string (path)"
-msgstr ""
-
-#: src/reference/unstable.md:1797
-msgid "Default: `<workspace_root>/Cargo.lock`"
-msgstr ""
-
-#: src/reference/unstable.md:1798
-msgid "Environment: `CARGO_RESOLVER_LOCKFILE_PATH`"
-msgstr ""
-
-#: src/reference/unstable.md:1800
-msgid ""
-"Specifies the path to the lockfile. By default, the lockfile is written to "
-"`<workspace_root>/Cargo.lock`. This option is useful when working with read-"
-"only source directories."
-msgstr ""
-
-#: src/reference/unstable.md:1804
-msgid "The path must end with `Cargo.lock`."
-msgstr ""
-
-#: src/reference/unstable.md:1806
+#: src/reference/unstable.md:1775
 msgid "native-completions"
 msgstr ""
 
-#: src/reference/unstable.md:1807
+#: src/reference/unstable.md:1776
 msgid ""
 "Original Issue: [\\#6645](https://github.com/rust-lang/cargo/issues/6645)"
 msgstr ""
 
-#: src/reference/unstable.md:1808
+#: src/reference/unstable.md:1777
 msgid ""
 "Tracking Issue: [\\#14520](https://github.com/rust-lang/cargo/issues/14520)"
 msgstr ""
 
-#: src/reference/unstable.md:1810
+#: src/reference/unstable.md:1779
 msgid ""
 "This feature moves the handwritten completion scripts to Rust native, making "
 "it easier for us to add, extend and test new completions. This feature is "
 "enabled with the nightly channel, without requiring additional `-Z` options."
 msgstr ""
 
-#: src/reference/unstable.md:1814
+#: src/reference/unstable.md:1783
 msgid "Areas of particular interest for feedback"
 msgstr ""
 
-#: src/reference/unstable.md:1815
+#: src/reference/unstable.md:1784
 msgid "Arguments that need escaping or quoting that aren't handled correctly"
 msgstr ""
 
-#: src/reference/unstable.md:1816
+#: src/reference/unstable.md:1785
 msgid "Inaccuracies in the information"
 msgstr ""
 
-#: src/reference/unstable.md:1817
+#: src/reference/unstable.md:1786
 msgid "Bugs in parsing of the command-line"
 msgstr ""
 
-#: src/reference/unstable.md:1818
+#: src/reference/unstable.md:1787
 msgid "Arguments that don't report their completions"
 msgstr ""
 
-#: src/reference/unstable.md:1819
+#: src/reference/unstable.md:1788
 msgid "If a known issue is being problematic"
 msgstr ""
 
-#: src/reference/unstable.md:1821
+#: src/reference/unstable.md:1790
 msgid "Feedback can be broken down into"
 msgstr ""
 
-#: src/reference/unstable.md:1822
+#: src/reference/unstable.md:1791
 msgid "What completion candidates are reported"
 msgstr ""
 
-#: src/reference/unstable.md:1823
+#: src/reference/unstable.md:1792
 msgid ""
 "Known issues: [\\#14520](https://github.com/rust-lang/cargo/issues/14520), "
 "[`A-completions`](https://github.com/rust-lang/cargo/labels/A-completions)"
 msgstr ""
 
-#: src/reference/unstable.md:1824
+#: src/reference/unstable.md:1793
 msgid ""
 "[Report an issue](https://github.com/rust-lang/cargo/issues/new) or [discuss "
 "the behavior](https://github.com/rust-lang/cargo/issues/14520)"
 msgstr ""
 
-#: src/reference/unstable.md:1825
+#: src/reference/unstable.md:1794
 msgid "Shell integration, command-line parsing, and completion filtering"
 msgstr ""
 
-#: src/reference/unstable.md:1826
+#: src/reference/unstable.md:1795
 msgid ""
 "Known issues: [clap#3166](https://github.com/clap-rs/clap/issues/3166), "
 "[clap's `A-completions`](https://github.com/clap-rs/clap/labels/A-completion)"
 msgstr ""
 
-#: src/reference/unstable.md:1827
+#: src/reference/unstable.md:1796
 msgid ""
 "[Report an issue](https://github.com/clap-rs/clap/issues/new/choose) or "
 "[discuss the behavior](https://github.com/clap-rs/clap/discussions/new/"
 "choose)"
 msgstr ""
 
-#: src/reference/unstable.md:1829
+#: src/reference/unstable.md:1798
 msgid ""
 "When in doubt, you can discuss this in [\\#14520](https://github.com/rust-"
 "lang/cargo/issues/14520) or on [zulip](https://rust-lang.zulipchat.com/"
 "#narrow/stream/246057-t-cargo)"
 msgstr ""
 
-#: src/reference/unstable.md:1831
+#: src/reference/unstable.md:1800
 msgid "How to use native-completions feature:"
 msgstr ""
 
-#: src/reference/unstable.md:1832
+#: src/reference/unstable.md:1801
 msgid ""
 "bash: Add `source <(CARGO_COMPLETE=bash cargo +nightly)` to `~/.local/share/"
 "bash-completion/completions/cargo`."
 msgstr ""
 
-#: src/reference/unstable.md:1835
+#: src/reference/unstable.md:1804
 msgid ""
 "zsh: Add `source <(CARGO_COMPLETE=zsh cargo +nightly)` to your `.zshrc`."
 msgstr ""
 
-#: src/reference/unstable.md:1838
+#: src/reference/unstable.md:1807
 msgid ""
 "fish: Add `source (CARGO_COMPLETE=fish cargo +nightly | psub)` to "
 "`$XDG_CONFIG_HOME/fish/completions/cargo.fish`"
 msgstr ""
 
-#: src/reference/unstable.md:1841
+#: src/reference/unstable.md:1810
 msgid ""
 "elvish: Add `eval (E:CARGO_COMPLETE=elvish cargo +nightly | slurp)` to "
 "`$XDG_CONFIG_HOME/elvish/rc.elv`"
 msgstr ""
 
-#: src/reference/unstable.md:1844
+#: src/reference/unstable.md:1813
 msgid ""
 "powershell: Add `CARGO_COMPLETE=powershell cargo +nightly | Invoke-"
 "Expression` to `$PROFILE`."
 msgstr ""
 
-#: src/reference/unstable.md:1847
-msgid "warnings"
-msgstr ""
-
-#: src/reference/unstable.md:1849
-msgid ""
-"Original Issue: [\\#8424](https://github.com/rust-lang/cargo/issues/8424)"
-msgstr ""
-
-#: src/reference/unstable.md:1850
-msgid ""
-"Tracking Issue: [\\#14802](https://github.com/rust-lang/cargo/issues/14802)"
-msgstr ""
-
-#: src/reference/unstable.md:1852
-msgid ""
-"The `-Z warnings` feature enables the `build.warnings` configuration option "
-"to control how Cargo handles warnings. If the `-Z warnings` unstable flag is "
-"not enabled, then the `build.warnings` config will be ignored."
-msgstr ""
-
-#: src/reference/unstable.md:1856
-msgid ""
-"This setting currently only applies to rustc warnings. It may apply to "
-"additional warnings (such as Cargo lints or Cargo warnings) in the future."
-msgstr ""
-
-#: src/reference/unstable.md:1859
-msgid "`build.warnings`"
-msgstr ""
-
-#: src/reference/unstable.md:1860 src/reference/unstable.md:1881
-msgid "Type: string"
-msgstr ""
-
-#: src/reference/unstable.md:1861
-msgid "Default: `warn`"
-msgstr ""
-
-#: src/reference/unstable.md:1862
-msgid "Environment: `CARGO_BUILD_WARNINGS`"
-msgstr ""
-
-#: src/reference/unstable.md:1864
-msgid "Controls how Cargo handles warnings. Allowed values are:"
-msgstr ""
-
-#: src/reference/unstable.md:1865
-msgid "`warn`: warnings are emitted as warnings (default)."
-msgstr ""
-
-#: src/reference/unstable.md:1866
-msgid "`allow`: warnings are hidden."
-msgstr ""
-
-#: src/reference/unstable.md:1867
-msgid ""
-"`deny`: if warnings are emitted, an error will be raised at the end of the "
-"current crate and the process. Use `--keep-going` to see all warnings."
-msgstr ""
-
-#: src/reference/unstable.md:1869
+#: src/reference/unstable.md:1816
 msgid "feature unification"
 msgstr ""
 
-#: src/reference/unstable.md:1871
+#: src/reference/unstable.md:1818
 msgid ""
 "RFC: [\\#3692](https://github.com/rust-lang/rfcs/blob/master/text/3692-"
 "feature-unification.md)"
 msgstr ""
 
-#: src/reference/unstable.md:1872
+#: src/reference/unstable.md:1819
 msgid ""
 "Tracking Issue: [\\#14774](https://github.com/rust-lang/cargo/issues/14774)"
 msgstr ""
 
-#: src/reference/unstable.md:1874
+#: src/reference/unstable.md:1821
 msgid ""
 "The `-Z feature-unification` enables the `resolver.feature-unification` "
 "configuration option to control how features are unified across a workspace. "
@@ -4026,79 +3895,83 @@ msgid ""
 "`resolver.feature-unification` configuration will be ignored."
 msgstr ""
 
-#: src/reference/unstable.md:1879
+#: src/reference/unstable.md:1826
 msgid "`resolver.feature-unification`"
 msgstr ""
 
-#: src/reference/unstable.md:1882
+#: src/reference/unstable.md:1828
+msgid "Type: string"
+msgstr ""
+
+#: src/reference/unstable.md:1829
 msgid "Default: `\"selected\"`"
 msgstr ""
 
-#: src/reference/unstable.md:1883
+#: src/reference/unstable.md:1830
 msgid "Environment: `CARGO_RESOLVER_FEATURE_UNIFICATION`"
 msgstr ""
 
-#: src/reference/unstable.md:1885
+#: src/reference/unstable.md:1832
 msgid ""
 "Specify which packages participate in [feature unification](../reference/"
 "features.html#feature-unification)."
 msgstr ""
 
-#: src/reference/unstable.md:1887
+#: src/reference/unstable.md:1834
 msgid ""
 "`selected`: Merge dependency features from all packages specified for the "
 "current build."
 msgstr ""
 
-#: src/reference/unstable.md:1888
+#: src/reference/unstable.md:1835
 msgid ""
 "`workspace`: Merge dependency features across all workspace members, "
 "regardless of which packages are specified for the current build."
 msgstr ""
 
-#: src/reference/unstable.md:1890
+#: src/reference/unstable.md:1837
 msgid ""
 "`package`: Dependency features are considered on a package-by-package basis, "
 "preferring duplicate builds of dependencies when different sets of features "
 "are activated by the packages."
 msgstr ""
 
-#: src/reference/unstable.md:1893
+#: src/reference/unstable.md:1840
 msgid "lockfile-publish-time"
 msgstr ""
 
-#: src/reference/unstable.md:1895
+#: src/reference/unstable.md:1842
 msgid ""
 "Original Issue: [\\#5221](https://github.com/rust-lang/cargo/issues/5221)"
 msgstr ""
 
-#: src/reference/unstable.md:1896
+#: src/reference/unstable.md:1843
 msgid ""
 "Tracking Issue: [\\#16271](https://github.com/rust-lang/cargo/issues/16271)"
 msgstr ""
 
-#: src/reference/unstable.md:1898
+#: src/reference/unstable.md:1845
 msgid ""
 "With `cargo generate-lockfile -Zunstable-options --publish-time <time>`, "
 "package resolution will not consider any package newer than the specified "
 "time."
 msgstr ""
 
-#: src/reference/unstable.md:1901
+#: src/reference/unstable.md:1848
 msgid "Package message format"
 msgstr ""
 
-#: src/reference/unstable.md:1903
+#: src/reference/unstable.md:1850
 msgid ""
 "Original Issue: [\\#11666](https://github.com/rust-lang/cargo/issues/11666)"
 msgstr ""
 
-#: src/reference/unstable.md:1904
+#: src/reference/unstable.md:1851
 msgid ""
 "Tracking Issue: [\\#15353](https://github.com/rust-lang/cargo/issues/15353)"
 msgstr ""
 
-#: src/reference/unstable.md:1906
+#: src/reference/unstable.md:1853
 msgid ""
 "The `--message-format` flag in `cargo package` controls the output message "
 "format. Currently, it only works with the `--list` flag and affects the file "
@@ -4107,21 +3980,21 @@ msgid ""
 "for more information."
 msgstr ""
 
-#: src/reference/unstable.md:1912
+#: src/reference/unstable.md:1859
 msgid "rustdoc depinfo"
 msgstr ""
 
-#: src/reference/unstable.md:1914
+#: src/reference/unstable.md:1861
 msgid ""
 "Original Issue: [\\#12266](https://github.com/rust-lang/cargo/issues/12266)"
 msgstr ""
 
-#: src/reference/unstable.md:1915
+#: src/reference/unstable.md:1862
 msgid ""
 "Tracking Issue: [\\#15370](https://github.com/rust-lang/cargo/issues/15370)"
 msgstr ""
 
-#: src/reference/unstable.md:1917
+#: src/reference/unstable.md:1864
 msgid ""
 "The `-Z rustdoc-depinfo` flag leverages rustdoc's dep-info files to "
 "determine whether documentations are required to re-generate. This can be "
@@ -4129,22 +4002,22 @@ msgid ""
 "file mtime."
 msgstr ""
 
-#: src/reference/unstable.md:1921
+#: src/reference/unstable.md:1868
 msgid "no-embed-metadata"
 msgstr ""
 
-#: src/reference/unstable.md:1922
+#: src/reference/unstable.md:1869
 msgid ""
 "Original Pull Request: [\\#15378](https://github.com/rust-lang/cargo/"
 "pull/15378)"
 msgstr ""
 
-#: src/reference/unstable.md:1923
+#: src/reference/unstable.md:1870
 msgid ""
 "Tracking Issue: [\\#15495](https://github.com/rust-lang/cargo/issues/15495)"
 msgstr ""
 
-#: src/reference/unstable.md:1925
+#: src/reference/unstable.md:1872
 msgid ""
 "The default behavior of Rust is to embed crate metadata into `rlib` and "
 "`dylib` artifacts. Since Cargo also passes `--emit=metadata` to these "
@@ -4153,24 +4026,24 @@ msgid ""
 "the target directory."
 msgstr ""
 
-#: src/reference/unstable.md:1930
+#: src/reference/unstable.md:1877
 msgid ""
 "This feature tells Cargo to pass the `-Zembed-metadata=no` flag to the "
 "compiler, which instructs it not to embed metadata within rlib and dylib "
 "artifacts. In this case, the metadata will only be stored in `.rmeta` files."
 msgstr ""
 
-#: src/reference/unstable.md:1938
+#: src/reference/unstable.md:1885
 msgid "`unstable-editions`"
 msgstr ""
 
-#: src/reference/unstable.md:1940
+#: src/reference/unstable.md:1887
 msgid ""
 "The `unstable-editions` value in the `cargo-features` list allows a `Cargo."
 "toml` manifest to specify an edition that is not yet stable."
 msgstr ""
 
-#: src/reference/unstable.md:1942
+#: src/reference/unstable.md:1889
 msgid ""
 "```toml\n"
 "cargo-features = [\"unstable-editions\"]\n"
@@ -4181,13 +4054,13 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/unstable.md:1950
+#: src/reference/unstable.md:1897
 msgid ""
 "When new editions are introduced, the `unstable-editions` feature is "
 "required until the edition is stabilized."
 msgstr ""
 
-#: src/reference/unstable.md:1952
+#: src/reference/unstable.md:1899
 msgid ""
 "The special \"future\" edition is a home for new features that are under "
 "development, and is permanently unstable. The \"future\" edition also has no "
@@ -4195,18 +4068,18 @@ msgid ""
 "such as a `#![feature(...)]` attribute."
 msgstr ""
 
-#: src/reference/unstable.md:1954
+#: src/reference/unstable.md:1901
 msgid "`fix-edition`"
 msgstr ""
 
-#: src/reference/unstable.md:1956
+#: src/reference/unstable.md:1903
 msgid ""
 "`-Zfix-edition` is a permanently unstable flag to assist with testing "
 "edition migrations, particularly with the use of crater. It only works with "
 "the `cargo fix` subcommand. It takes two different forms:"
 msgstr ""
 
-#: src/reference/unstable.md:1958
+#: src/reference/unstable.md:1905
 msgid ""
 "`-Zfix-edition=start=$INITIAL` --- This form checks if the current edition "
 "is equal to the given number. If not, it exits with success (because we want "
@@ -4215,7 +4088,7 @@ msgid ""
 "a baseline for the \"before\" toolchain."
 msgstr ""
 
-#: src/reference/unstable.md:1959
+#: src/reference/unstable.md:1906
 msgid ""
 "`-Zfix-edition=end=$INITIAL,$NEXT` --- This form checks if the current "
 "edition is equal to the given `$INITIAL` value. If not, it exits with "
@@ -4226,54 +4099,54 @@ msgid ""
 "works on the new edition."
 msgstr ""
 
-#: src/reference/unstable.md:1961
+#: src/reference/unstable.md:1908
 msgid "For example:"
 msgstr ""
 
-#: src/reference/unstable.md:1967
+#: src/reference/unstable.md:1914
 msgid "section-timings"
 msgstr ""
 
-#: src/reference/unstable.md:1968
+#: src/reference/unstable.md:1915
 msgid ""
 "Original Pull Request: [\\#15780](https://github.com/rust-lang/cargo/"
 "pull/15780)"
 msgstr ""
 
-#: src/reference/unstable.md:1969
+#: src/reference/unstable.md:1916
 msgid ""
 "Tracking Issue: [\\#15817](https://github.com/rust-lang/cargo/issues/15817)"
 msgstr ""
 
-#: src/reference/unstable.md:1971
+#: src/reference/unstable.md:1918
 msgid ""
 "This feature can be used to extend the output of `cargo build --timings`. It "
 "will tell rustc to produce timings of individual compilation sections, which "
 "will be then displayed in the timings HTML/JSON output."
 msgstr ""
 
-#: src/reference/unstable.md:1979
+#: src/reference/unstable.md:1926
 msgid "Build analysis"
 msgstr ""
 
-#: src/reference/unstable.md:1981
+#: src/reference/unstable.md:1928
 msgid ""
 "Original Issue: [rust-lang/rust-project-goals#332](https://github.com/rust-"
 "lang/rust-project-goals/pull/332)"
 msgstr ""
 
-#: src/reference/unstable.md:1982
+#: src/reference/unstable.md:1929
 msgid ""
 "Tracking Issue: [\\#15844](https://github.com/rust-lang/cargo/issues/15844)"
 msgstr ""
 
-#: src/reference/unstable.md:1984
+#: src/reference/unstable.md:1931
 msgid ""
 "The `-Zbuild-analysis` feature records and persists detailed build metrics "
 "on disk, with new commands to query past builds."
 msgstr ""
 
-#: src/reference/unstable.md:1987
+#: src/reference/unstable.md:1934
 msgid ""
 "When enabled, Cargo writes build logs in JSONL format to the `$CARGO_HOME/"
 "log/` directory Each cargo invocation produces a log file named with a "
@@ -4282,110 +4155,110 @@ msgid ""
 "subcommands."
 msgstr ""
 
-#: src/reference/unstable.md:1993
+#: src/reference/unstable.md:1940
 msgid ""
 "To enable build analysis, add the following [Cargo configuration](config.md):"
 msgstr ""
 
-#: src/reference/unstable.md:2006
+#: src/reference/unstable.md:1953
 msgid ""
 "Setting it on a stable toolchain only emits an unknown config warning, so "
 "it's safe to keep enabled in your Cargo configuration."
 msgstr ""
 
-#: src/reference/unstable.md:2009
+#: src/reference/unstable.md:1956
 msgid "`cargo report` commands"
 msgstr ""
 
-#: src/reference/unstable.md:2011
+#: src/reference/unstable.md:1958
 msgid "The following commands are available under `-Zbuild-analysis`:"
 msgstr ""
 
-#: src/reference/unstable.md:2013
+#: src/reference/unstable.md:1960
 msgid ""
 "`cargo report sessions` --- Lists previous build sessions. Use this to find "
 "session IDs for other report commands."
 msgstr ""
 
-#: src/reference/unstable.md:2015
+#: src/reference/unstable.md:1962
 msgid ""
 "`cargo report timings` --- Generates an HTML timing report from a previous "
 "session, similar to `cargo build --timings` but without rebuilding."
 msgstr ""
 
-#: src/reference/unstable.md:2017
+#: src/reference/unstable.md:1964
 msgid ""
 "`cargo report rebuilds` --- Reports why crates were rebuilt, helping "
 "diagnose unexpected recompilations."
 msgstr ""
 
-#: src/reference/unstable.md:2020
+#: src/reference/unstable.md:1967
 msgid "build-dir-new-layout"
 msgstr ""
 
-#: src/reference/unstable.md:2022
+#: src/reference/unstable.md:1969
 msgid ""
 "Tracking Issue: [\\#15010](https://github.com/rust-lang/cargo/issues/15010)"
 msgstr ""
 
-#: src/reference/unstable.md:2024
+#: src/reference/unstable.md:1971
 msgid ""
 "Enables the new build-dir filesystem layout. This layout change unblocks "
 "work towards caching and locking improvements."
 msgstr ""
 
-#: src/reference/unstable.md:2028
+#: src/reference/unstable.md:1975
 msgid "compile-time-deps"
 msgstr ""
 
-#: src/reference/unstable.md:2030
+#: src/reference/unstable.md:1977
 msgid ""
 "This permanently-unstable flag to only build proc-macros and build scripts "
 "(and their required dependencies), as well as run the build scripts."
 msgstr ""
 
-#: src/reference/unstable.md:2033
+#: src/reference/unstable.md:1980
 msgid ""
 "It is intended for use by tools like rust-analyzer and will never be "
 "stabilized."
 msgstr ""
 
-#: src/reference/unstable.md:2042
+#: src/reference/unstable.md:1989
 msgid "`rustc-unicode`"
 msgstr ""
 
-#: src/reference/unstable.md:2043
+#: src/reference/unstable.md:1990
 msgid ""
 "Tracking Issue: [rust#148607](https://github.com/rust-lang/rust/"
 "issues/148607)"
 msgstr ""
 
-#: src/reference/unstable.md:2045
+#: src/reference/unstable.md:1992
 msgid "Enable `rustc`'s unicode error format in Cargo's error messages"
 msgstr ""
 
-#: src/reference/unstable.md:2047
+#: src/reference/unstable.md:1994
 msgid "rustdoc mergeable info"
 msgstr ""
 
-#: src/reference/unstable.md:2049
+#: src/reference/unstable.md:1996
 msgid ""
 "Original Pull Request: [\\#16309](https://github.com/rust-lang/cargo/"
 "pull/16309)"
 msgstr ""
 
-#: src/reference/unstable.md:2050
+#: src/reference/unstable.md:1997
 msgid ""
 "Tracking issue: [\\#16306](https://github.com/rust-lang/cargo/issues/16306)"
 msgstr ""
 
-#: src/reference/unstable.md:2051
+#: src/reference/unstable.md:1998
 msgid ""
 "Tracking rustc issue: [rust-lang/rust#130676](https://github.com/rust-lang/"
 "rust/issues/130676)"
 msgstr ""
 
-#: src/reference/unstable.md:2053
+#: src/reference/unstable.md:2000
 msgid ""
 "The `-Z rustdoc-mergeable-info` leverage rustdoc's mergeable crate info, so "
 "that `cargo doc` can merge cross-crate information (like the search index, "
@@ -4393,58 +4266,278 @@ msgid ""
 "`rustdoc` in parallel."
 msgstr ""
 
-#: src/reference/unstable.md:2059
-msgid "target-spec-json"
+#: src/reference/unstable.md:2006
+msgid "json-target-spec"
 msgstr ""
 
-#: src/reference/unstable.md:2060
+#: src/reference/unstable.md:2007
 msgid ""
 "Tracking Issue: [rust-lang/rust#151528](https://github.com/rust-lang/rust/"
 "issues/151528)"
 msgstr ""
 
-#: src/reference/unstable.md:2062
+#: src/reference/unstable.md:2009
 msgid ""
-"The `-Z target-spec-json` CLI flag enables the ability to use [custom target "
+"The `-Z json-target-spec` CLI flag enables the ability to use [custom target "
 "spec JSON files](https://doc.rust-lang.org/nightly/rustc/targets/custom."
 "html) as a target."
 msgstr ""
 
-#: src/reference/unstable.md:2068
+#: src/reference/unstable.md:2015
 msgid "This usually must be combined with [build-std](#build-std)."
 msgstr ""
 
+#: src/reference/unstable.md:2017
+msgid "hint-msrv"
+msgstr ""
+
+#: src/reference/unstable.md:2018
+msgid ""
+"Tracking Issue: [rust-lang/rust#157574](https://github.com/rust-lang/rust/"
+"issues/157574)"
+msgstr ""
+
+#: src/reference/unstable.md:2020
+msgid ""
+"The -`Z hint-msrv` CLI flag enables Cargo to pass `package.rust-version` to "
+"rustc which can affect which lints are emitted."
+msgstr ""
+
+#: src/reference/unstable.md:2022
+msgid ""
+"You can set this via your global `~/.cargo/config.toml`, and nightly Cargo "
+"will automatically use it, while stable Cargo will silently ignore the "
+"unstable option:"
+msgstr ""
+
+#: src/reference/unstable.md:2031
+msgid "min-publish-age"
+msgstr ""
+
+#: src/reference/unstable.md:2033
+msgid ""
+"Tracking Issue: [\\#17009](https://github.com/rust-lang/cargo/issues/17009)"
+msgstr ""
+
+#: src/reference/unstable.md:2034
+msgid "RFC: [\\#3923](https://github.com/rust-lang/rfcs/pull/3923)"
+msgstr ""
+
+#: src/reference/unstable.md:2036
+msgid ""
+"The `-Zmin-publish-age` feature allows users to specify a minimum age for "
+"dependency versions. When specified, Cargo won't use a version of a registry "
+"crate that is newer than the minimum age, with a way to override for "
+"exceptions like urgent security fixes."
+msgstr ""
+
+#: src/reference/unstable.md:2041
+msgid "For example, in your `<repo>/.cargo/config.toml`:"
+msgstr ""
+
+#: src/reference/unstable.md:2043
+msgid ""
+"```toml\n"
+"[registry]\n"
+"global-min-publish-age = \"14 days\"\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:2048
+msgid "Added to Configuration"
+msgstr ""
+
+#: src/reference/unstable.md:2050
+msgid "The following will be added to Cargo's configuration format:"
+msgstr ""
+
+#: src/reference/unstable.md:2052
+msgid ""
+"```toml\n"
+"[resolver]\n"
+"incompatible-publish-age = \"deny\" # Specifies how resolver reacts to "
+"these\n"
+"\n"
+"[registries.<name>]\n"
+"min-publish-age = \"...\"  # Override `registry.global-min-publish-age` for "
+"this registry\n"
+"\n"
+"[registry]\n"
+"min-publish-age = \"...\"  # Override `registry.global-min-publish-age` for "
+"crates.io\n"
+"global-min-publish-age = \"0\"  # Minimum time span allowed for packages "
+"from this registry\n"
+"```"
+msgstr ""
+
+#: src/reference/unstable.md:2064
+msgid "`resolver.incompatible-publish-age`"
+msgstr ""
+
+#: src/reference/unstable.md:2066 src/reference/unstable.md:2080
+#: src/reference/unstable.md:2097 src/reference/unstable.md:2114
+msgid "Type: String"
+msgstr ""
+
+#: src/reference/unstable.md:2067
+msgid "Default: `\"deny\"`"
+msgstr ""
+
+#: src/reference/unstable.md:2068
+msgid "Environment: `CARGO_RESOLVER_INCOMPATIBLE_PUBLISH_AGE`"
+msgstr ""
+
 #: src/reference/unstable.md:2070
+msgid ""
+"When resolving the version of a dependency, specify the behavior for "
+"versions with a `pubtime` (if present) that is incompatible with `registry."
+"min-publish-age`. Values include:"
+msgstr ""
+
+#: src/reference/unstable.md:2075
+msgid "`allow`: treat pubtime-incompatible versions like any other version"
+msgstr ""
+
+#: src/reference/unstable.md:2076
+msgid ""
+"`deny`: ignore pubtime-incompatible versions unless they already exist in "
+"the lock file"
+msgstr ""
+
+#: src/reference/unstable.md:2078
+msgid "`registries.<name>.min-publish-age`"
+msgstr ""
+
+#: src/reference/unstable.md:2081 src/reference/unstable.md:2098
+msgid "Default: none"
+msgstr ""
+
+#: src/reference/unstable.md:2082
+msgid "Environment: `CARGO_REGISTRIES_<name>_MIN_PUBLISH_AGE`"
+msgstr ""
+
+#: src/reference/unstable.md:2084
+msgid ""
+"Specifies the minimum timespan since a version's `pubtime` that it may be "
+"considered for `resolver.incompatible-publish-age` for packages from this "
+"registry. If not set, `registry.global-min-publish-age` will be used."
+msgstr ""
+
+#: src/reference/unstable.md:2088
+msgid "Will be ignored if the registry does not support this."
+msgstr ""
+
+#: src/reference/unstable.md:2090 src/reference/unstable.md:2105
+#: src/reference/unstable.md:2123
+msgid "It supports the following values:"
+msgstr ""
+
+#: src/reference/unstable.md:2092 src/reference/unstable.md:2107
+#: src/reference/unstable.md:2125
+msgid ""
+"An integer followed by \"seconds\", \"minutes\", \"hours\", \"days\", "
+"\"weeks\", or \"months\""
+msgstr ""
+
+#: src/reference/unstable.md:2093 src/reference/unstable.md:2108
+#: src/reference/unstable.md:2126
+msgid "`\"0\"` to allow all packages"
+msgstr ""
+
+#: src/reference/unstable.md:2095
+msgid "`registry.min-publish-age`"
+msgstr ""
+
+#: src/reference/unstable.md:2099
+msgid "Environment: `CARGO_REGISTRY_MIN_PUBLISH_AGE`"
+msgstr ""
+
+#: src/reference/unstable.md:2101
+msgid ""
+"Specifies the minimum timespan since a version's `pubtime` that it may be "
+"considered for `resolver.incompatible-publish-age` for packages from crates."
+"io. If not set, `registry.global-min-publish-age` will be used."
+msgstr ""
+
+#: src/reference/unstable.md:2110
+msgid "Generally, `\"0\"`, `\"N days\"`, and `\"N weeks\"` will be used."
+msgstr ""
+
+#: src/reference/unstable.md:2112
+msgid "`registry.global-min-publish-age`"
+msgstr ""
+
+#: src/reference/unstable.md:2115
+msgid "Default: `\"0\"`"
+msgstr ""
+
+#: src/reference/unstable.md:2116
+msgid "Environment: `CARGO_REGISTRY_GLOBAL_MIN_PUBLISH_AGE`"
+msgstr ""
+
+#: src/reference/unstable.md:2118
+msgid ""
+"Specifies the global minimum timespan since a version's `pubtime` that it "
+"may be considered for `resolver.incompatible-publish-age` for packages. If "
+"`min-publish-age` is not set for a specific registry using `registries."
+"<name>.min-publish-age`, Cargo will use this minimum publish age."
+msgstr ""
+
+#: src/reference/unstable.md:2128
+msgid "Added to Resolver"
+msgstr ""
+
+#: src/reference/unstable.md:2130
+msgid ""
+"The following will be added to the [resolver chapter](../reference/resolver."
+"md) as a sibling section to \"Yanked versions\":"
+msgstr ""
+
+#: src/reference/unstable.md:2133
+msgid "\"Pubtime-incompatible versions\""
+msgstr ""
+
+#: src/reference/unstable.md:2135
+msgid ""
+"Versions with a publish time newer than the configured `min-publish-age` are "
+"considered pubtime-incompatible. When `resolver.incompatible-publish-age` is "
+"set to `deny`, the resolver will ignore these versions unless they already "
+"exist in the `Cargo.lock` file. Setting the config to `allow` would disable "
+"the check, which if combined with `cargo update --precise`, cargo would pull "
+"in a specific version and its transitive dependencies."
+msgstr ""
+
+#: src/reference/unstable.md:2146
 msgid "Stabilized and removed features"
 msgstr ""
 
-#: src/reference/unstable.md:2072
+#: src/reference/unstable.md:2148
 msgid "Compile progress"
 msgstr ""
 
-#: src/reference/unstable.md:2074
+#: src/reference/unstable.md:2150
 msgid ""
 "The compile-progress feature has been stabilized in the 1.30 release. "
 "Progress bars are now enabled by default. See [`term.progress`](config."
 "md#termprogresswhen) for more information about controlling this feature."
 msgstr ""
 
-#: src/reference/unstable.md:2079
+#: src/reference/unstable.md:2155
 msgid "Edition"
 msgstr ""
 
-#: src/reference/unstable.md:2081
+#: src/reference/unstable.md:2157
 msgid ""
 "Specifying the `edition` in `Cargo.toml` has been stabilized in the 1.31 "
 "release. See [the edition field](manifest.md#the-edition-field) for more "
 "information about specifying this field."
 msgstr ""
 
-#: src/reference/unstable.md:2085
+#: src/reference/unstable.md:2161
 msgid "rename-dependency"
 msgstr ""
 
-#: src/reference/unstable.md:2087
+#: src/reference/unstable.md:2163
 msgid ""
 "Specifying renamed dependencies in `Cargo.toml` has been stabilized in the "
 "1.31 release. See [renaming dependencies](specifying-dependencies."
@@ -4452,33 +4545,33 @@ msgid ""
 "dependencies."
 msgstr ""
 
-#: src/reference/unstable.md:2091
+#: src/reference/unstable.md:2167
 msgid "Alternate Registries"
 msgstr ""
 
-#: src/reference/unstable.md:2093
+#: src/reference/unstable.md:2169
 msgid ""
 "Support for alternate registries has been stabilized in the 1.34 release. "
 "See the [Registries chapter](registries.md) for more information about "
 "alternate registries."
 msgstr ""
 
-#: src/reference/unstable.md:2096
+#: src/reference/unstable.md:2172
 msgid "Offline Mode"
 msgstr ""
 
-#: src/reference/unstable.md:2098
+#: src/reference/unstable.md:2174
 msgid ""
 "The offline feature has been stabilized in the 1.36 release. See the [`--"
 "offline` flag](../commands/cargo.md#option-cargo---offline) for more "
 "information on using the offline mode."
 msgstr ""
 
-#: src/reference/unstable.md:2102
+#: src/reference/unstable.md:2178
 msgid "publish-lockfile"
 msgstr ""
 
-#: src/reference/unstable.md:2104
+#: src/reference/unstable.md:2180
 msgid ""
 "The `publish-lockfile` feature has been removed in the 1.37 release. The "
 "`Cargo.lock` file is always included when a package is published if the "
@@ -4488,33 +4581,33 @@ msgid ""
 "information."
 msgstr ""
 
-#: src/reference/unstable.md:2111
+#: src/reference/unstable.md:2187
 msgid "default-run"
 msgstr ""
 
-#: src/reference/unstable.md:2113
+#: src/reference/unstable.md:2189
 msgid ""
 "The `default-run` feature has been stabilized in the 1.37 release. See [the "
 "`default-run` field](manifest.md#the-default-run-field) for more information "
 "about specifying the default target to run."
 msgstr ""
 
-#: src/reference/unstable.md:2117
+#: src/reference/unstable.md:2193
 msgid "cache-messages"
 msgstr ""
 
-#: src/reference/unstable.md:2119
+#: src/reference/unstable.md:2195
 msgid ""
 "Compiler message caching has been stabilized in the 1.40 release. Compiler "
 "warnings are now cached by default and will be replayed automatically when "
 "re-running Cargo."
 msgstr ""
 
-#: src/reference/unstable.md:2123
+#: src/reference/unstable.md:2199
 msgid "install-upgrade"
 msgstr ""
 
-#: src/reference/unstable.md:2125
+#: src/reference/unstable.md:2201
 msgid ""
 "The `install-upgrade` feature has been stabilized in the 1.41 release. "
 "[`cargo install`](../commands/cargo-install.md) will now automatically "
@@ -4522,21 +4615,21 @@ msgid ""
 "(../commands/cargo-install.md) documentation for more information."
 msgstr ""
 
-#: src/reference/unstable.md:2131
+#: src/reference/unstable.md:2207
 msgid "Profile Overrides"
 msgstr ""
 
-#: src/reference/unstable.md:2133
+#: src/reference/unstable.md:2209
 msgid ""
 "Profile overrides have been stabilized in the 1.41 release. See [Profile "
 "Overrides](profiles.md#overrides) for more information on using overrides."
 msgstr ""
 
-#: src/reference/unstable.md:2137
+#: src/reference/unstable.md:2213
 msgid "Config Profiles"
 msgstr ""
 
-#: src/reference/unstable.md:2139
+#: src/reference/unstable.md:2215
 msgid ""
 "Specifying profiles in Cargo config files and environment variables has been "
 "stabilized in the 1.43 release. See the [config `[profile]` table](config."
@@ -4544,55 +4637,55 @@ msgid ""
 "config files."
 msgstr ""
 
-#: src/reference/unstable.md:2144
+#: src/reference/unstable.md:2220
 msgid "crate-versions"
 msgstr ""
 
-#: src/reference/unstable.md:2146
+#: src/reference/unstable.md:2222
 msgid ""
 "The `-Z crate-versions` flag has been stabilized in the 1.47 release. The "
 "crate version is now automatically included in the [`cargo doc`](../commands/"
 "cargo-doc.md) documentation sidebar."
 msgstr ""
 
-#: src/reference/unstable.md:2150
+#: src/reference/unstable.md:2226
 msgid "Features"
 msgstr ""
 
-#: src/reference/unstable.md:2152
+#: src/reference/unstable.md:2228
 msgid ""
 "The `-Z features` flag has been stabilized in the 1.51 release. See [feature "
 "resolver version 2](features.md#feature-resolver-version-2) for more "
 "information on using the new feature resolver."
 msgstr ""
 
-#: src/reference/unstable.md:2156
+#: src/reference/unstable.md:2232
 msgid "package-features"
 msgstr ""
 
-#: src/reference/unstable.md:2158
+#: src/reference/unstable.md:2234
 msgid ""
 "The `-Z package-features` flag has been stabilized in the 1.51 release. See "
 "the [resolver version 2 command-line flags](features.md#resolver-version-2-"
 "command-line-flags) for more information on using the features CLI options."
 msgstr ""
 
-#: src/reference/unstable.md:2162
+#: src/reference/unstable.md:2238
 msgid "Resolver"
 msgstr ""
 
-#: src/reference/unstable.md:2164
+#: src/reference/unstable.md:2240
 msgid ""
 "The `resolver` feature in `Cargo.toml` has been stabilized in the 1.51 "
 "release. See the [resolver versions](resolver.md#resolver-versions) for more "
 "information about specifying resolvers."
 msgstr ""
 
-#: src/reference/unstable.md:2168
+#: src/reference/unstable.md:2244
 msgid "extra-link-arg"
 msgstr ""
 
-#: src/reference/unstable.md:2170
+#: src/reference/unstable.md:2246
 msgid ""
 "The `extra-link-arg` feature to specify additional linker arguments in build "
 "scripts has been stabilized in the 1.56 release. See the [build script "
@@ -4600,11 +4693,11 @@ msgid ""
 "information on specifying extra linker arguments."
 msgstr ""
 
-#: src/reference/unstable.md:2175
+#: src/reference/unstable.md:2251
 msgid "configurable-env"
 msgstr ""
 
-#: src/reference/unstable.md:2177
+#: src/reference/unstable.md:2253
 msgid ""
 "The `configurable-env` feature to specify environment variables in Cargo "
 "configuration has been stabilized in the 1.56 release. See the [config "
@@ -4612,11 +4705,11 @@ msgid ""
 "environment variables."
 msgstr ""
 
-#: src/reference/unstable.md:2182
+#: src/reference/unstable.md:2258
 msgid "rust-version"
 msgstr ""
 
-#: src/reference/unstable.md:2184
+#: src/reference/unstable.md:2260
 msgid ""
 "The `rust-version` field in `Cargo.toml` has been stabilized in the 1.56 "
 "release. See the [rust-version field](manifest.html#the-rust-version-field) "
@@ -4624,22 +4717,22 @@ msgid ""
 "rust-version` option."
 msgstr ""
 
-#: src/reference/unstable.md:2188
+#: src/reference/unstable.md:2264
 msgid "patch-in-config"
 msgstr ""
 
-#: src/reference/unstable.md:2190
+#: src/reference/unstable.md:2266
 msgid ""
 "The `-Z patch-in-config` flag, and the corresponding support for `[patch]` "
 "section in Cargo configuration files has been stabilized in the 1.56 "
 "release. See the [patch field](config.html#patch) for more information."
 msgstr ""
 
-#: src/reference/unstable.md:2195
+#: src/reference/unstable.md:2271
 msgid "edition 2021"
 msgstr ""
 
-#: src/reference/unstable.md:2197
+#: src/reference/unstable.md:2273
 msgid ""
 "The 2021 edition has been stabilized in the 1.56 release. See the [`edition` "
 "field](manifest.md#the-edition-field) for more information on setting the "
@@ -4648,62 +4741,62 @@ msgid ""
 "migrating existing projects."
 msgstr ""
 
-#: src/reference/unstable.md:2202
+#: src/reference/unstable.md:2278
 msgid "Custom named profiles"
 msgstr ""
 
-#: src/reference/unstable.md:2204
+#: src/reference/unstable.md:2280
 msgid ""
 "Custom named profiles have been stabilized in the 1.57 release. See the "
 "[profiles chapter](profiles.md#custom-profiles) for more information."
 msgstr ""
 
-#: src/reference/unstable.md:2207
+#: src/reference/unstable.md:2283
 msgid "Profile `strip` option"
 msgstr ""
 
-#: src/reference/unstable.md:2209
+#: src/reference/unstable.md:2285
 msgid ""
 "The profile `strip` option has been stabilized in the 1.59 release. See the "
 "[profiles chapter](profiles.md#strip) for more information."
 msgstr ""
 
-#: src/reference/unstable.md:2212
+#: src/reference/unstable.md:2288
 msgid "Future incompat report"
 msgstr ""
 
-#: src/reference/unstable.md:2214
+#: src/reference/unstable.md:2290
 msgid ""
 "Support for generating a future-incompat report has been stabilized in the "
 "1.59 release. See the [future incompat report chapter](future-incompat-"
 "report.md) for more information."
 msgstr ""
 
-#: src/reference/unstable.md:2218
+#: src/reference/unstable.md:2294
 msgid "Namespaced features"
 msgstr ""
 
-#: src/reference/unstable.md:2220
+#: src/reference/unstable.md:2296
 msgid ""
 "Namespaced features has been stabilized in the 1.60 release. See the "
 "[Features chapter](features.md#optional-dependencies) for more information."
 msgstr ""
 
-#: src/reference/unstable.md:2223
+#: src/reference/unstable.md:2299
 msgid "Weak dependency features"
 msgstr ""
 
-#: src/reference/unstable.md:2225
+#: src/reference/unstable.md:2301
 msgid ""
 "Weak dependency features has been stabilized in the 1.60 release. See the "
 "[Features chapter](features.md#dependency-features) for more information."
 msgstr ""
 
-#: src/reference/unstable.md:2228
+#: src/reference/unstable.md:2304
 msgid "timings"
 msgstr ""
 
-#: src/reference/unstable.md:2230
+#: src/reference/unstable.md:2306
 msgid ""
 "The `-Ztimings` option has been stabilized as `--timings` in the 1.60 "
 "release. The timings output format option (e.g., the `--timings=html` and "
@@ -4711,22 +4804,22 @@ msgid ""
 "nightly."
 msgstr ""
 
-#: src/reference/unstable.md:2235
+#: src/reference/unstable.md:2311
 msgid "config-cli"
 msgstr ""
 
-#: src/reference/unstable.md:2237
+#: src/reference/unstable.md:2313
 msgid ""
 "The `--config` CLI option has been stabilized in the 1.63 release. See the "
 "[config documentation](config.html#command-line-overrides) for more "
 "information."
 msgstr ""
 
-#: src/reference/unstable.md:2241
+#: src/reference/unstable.md:2317
 msgid "multitarget"
 msgstr ""
 
-#: src/reference/unstable.md:2243
+#: src/reference/unstable.md:2319
 msgid ""
 "The `-Z multitarget` option has been stabilized in the 1.64 release. See "
 "[`build.target`](config.md#buildtarget) for more information about setting "
@@ -4734,22 +4827,22 @@ msgid ""
 "\"target\\\" (glossary)\")."
 msgstr ""
 
-#: src/reference/unstable.md:2247
+#: src/reference/unstable.md:2323
 msgid "crate-type"
 msgstr ""
 
-#: src/reference/unstable.md:2249
+#: src/reference/unstable.md:2325
 msgid ""
 "The `--crate-type` flag for `cargo rustc` has been stabilized in the 1.64 "
 "release. See the [`cargo rustc` documentation](../commands/cargo-rustc.md) "
 "for more information."
 msgstr ""
 
-#: src/reference/unstable.md:2254
+#: src/reference/unstable.md:2330
 msgid "Workspace Inheritance"
 msgstr ""
 
-#: src/reference/unstable.md:2256
+#: src/reference/unstable.md:2332
 msgid ""
 "Workspace Inheritance has been stabilized in the 1.64 release. See "
 "[workspace.package](workspaces.md#the-package-table), [workspace."
@@ -4758,42 +4851,42 @@ msgid ""
 "dependency-from-a-workspace) for more information."
 msgstr ""
 
-#: src/reference/unstable.md:2262
+#: src/reference/unstable.md:2338
 msgid "terminal-width"
 msgstr ""
 
-#: src/reference/unstable.md:2264
+#: src/reference/unstable.md:2340
 msgid ""
 "The `-Z terminal-width` option has been stabilized in the 1.68 release. The "
 "terminal width is always passed to the compiler when running from a terminal "
 "where Cargo can automatically detect the width."
 msgstr ""
 
-#: src/reference/unstable.md:2268
+#: src/reference/unstable.md:2344
 msgid "sparse-registry"
 msgstr ""
 
-#: src/reference/unstable.md:2270
+#: src/reference/unstable.md:2346
 msgid ""
 "Sparse registry support has been stabilized in the 1.68 release. See "
 "[Registry Protocols](registries.md#registry-protocols) for more information."
 msgstr ""
 
-#: src/reference/unstable.md:2273
+#: src/reference/unstable.md:2349
 msgid "`cargo logout`"
 msgstr ""
 
-#: src/reference/unstable.md:2275
+#: src/reference/unstable.md:2351
 msgid ""
 "The [`cargo logout`](../commands/cargo-logout.md) command has been "
 "stabilized in the 1.70 release."
 msgstr ""
 
-#: src/reference/unstable.md:2280
+#: src/reference/unstable.md:2356
 msgid "`doctest-in-workspace`"
 msgstr ""
 
-#: src/reference/unstable.md:2282
+#: src/reference/unstable.md:2358
 msgid ""
 "The `-Z doctest-in-workspace` option for `cargo test` has been stabilized "
 "and enabled by default in the 1.72 release. See the [`cargo test` "
@@ -4801,73 +4894,73 @@ msgid ""
 "more information about the working directory for compiling and running tests."
 msgstr ""
 
-#: src/reference/unstable.md:2287
+#: src/reference/unstable.md:2363
 msgid "keep-going"
 msgstr ""
 
-#: src/reference/unstable.md:2289
+#: src/reference/unstable.md:2365
 msgid ""
 "The `--keep-going` option has been stabilized in the 1.74 release. See the "
 "[`--keep-going` flag](../commands/cargo-build.html#option-cargo-build---keep-"
 "going) in `cargo build` as an example for more details."
 msgstr ""
 
-#: src/reference/unstable.md:2293
+#: src/reference/unstable.md:2369
 msgid "`[lints]`"
 msgstr ""
 
-#: src/reference/unstable.md:2295
+#: src/reference/unstable.md:2371
 msgid ""
 "[`[lints]`](manifest.html#the-lints-section) (enabled via `-Zlints`) has "
 "been stabilized in the 1.74 release."
 msgstr ""
 
-#: src/reference/unstable.md:2297
+#: src/reference/unstable.md:2373
 msgid "credential-process"
 msgstr ""
 
-#: src/reference/unstable.md:2299
+#: src/reference/unstable.md:2375
 msgid ""
 "The `-Z credential-process` feature has been stabilized in the 1.74 release."
 msgstr ""
 
-#: src/reference/unstable.md:2301 src/reference/unstable.md:2308
+#: src/reference/unstable.md:2377 src/reference/unstable.md:2384
 msgid ""
 "See [Registry Authentication](registry-authentication.md) documentation for "
 "details."
 msgstr ""
 
-#: src/reference/unstable.md:2303
+#: src/reference/unstable.md:2379
 msgid "registry-auth"
 msgstr ""
 
-#: src/reference/unstable.md:2305
+#: src/reference/unstable.md:2381
 msgid ""
 "The `-Z registry-auth` feature has been stabilized in the 1.74 release with "
 "the additional requirement that a credential-provider is configured."
 msgstr ""
 
-#: src/reference/unstable.md:2310
+#: src/reference/unstable.md:2386
 msgid "check-cfg"
 msgstr ""
 
-#: src/reference/unstable.md:2312
+#: src/reference/unstable.md:2388
 msgid ""
 "The `-Z check-cfg` feature has been stabilized in the 1.80 release by making "
 "it the default behavior."
 msgstr ""
 
-#: src/reference/unstable.md:2315
+#: src/reference/unstable.md:2391
 msgid ""
 "See the [build script documentation](build-scripts.md#rustc-check-cfg) for "
 "information about specifying custom cfgs."
 msgstr ""
 
-#: src/reference/unstable.md:2318
+#: src/reference/unstable.md:2394
 msgid "Edition 2024"
 msgstr ""
 
-#: src/reference/unstable.md:2320
+#: src/reference/unstable.md:2396
 msgid ""
 "The 2024 edition has been stabilized in the 1.85 release. See the [`edition` "
 "field](manifest.md#the-edition-field) for more information on setting the "
@@ -4876,71 +4969,89 @@ msgid ""
 "migrating existing projects."
 msgstr ""
 
-#: src/reference/unstable.md:2324
+#: src/reference/unstable.md:2400
 msgid "Automatic garbage collection"
 msgstr ""
 
-#: src/reference/unstable.md:2326
+#: src/reference/unstable.md:2402
 msgid ""
 "Support for automatically deleting old files was stabilized in Rust 1.88. "
 "More information can be found in the [config chapter](config.md#cache)."
 msgstr ""
 
-#: src/reference/unstable.md:2329
+#: src/reference/unstable.md:2405
 msgid "doctest-xcompile"
 msgstr ""
 
-#: src/reference/unstable.md:2331
+#: src/reference/unstable.md:2407
 msgid ""
 "Doctest cross-compiling is now unconditionally enabled starting in Rust "
 "1.89. Running doctests with `cargo test` will now honor the `--target` flag."
 msgstr ""
 
-#: src/reference/unstable.md:2333
+#: src/reference/unstable.md:2409
 msgid "package-workspace"
 msgstr ""
 
-#: src/reference/unstable.md:2335
+#: src/reference/unstable.md:2411
 msgid "Multi-package publishing has been stabilized in Rust 1.90.0."
 msgstr ""
 
-#: src/reference/unstable.md:2337
+#: src/reference/unstable.md:2413
 msgid "build-dir"
 msgstr ""
 
-#: src/reference/unstable.md:2339
+#: src/reference/unstable.md:2415
 msgid ""
 "Support for `build.build-dir` was stabilized in the 1.91 release. See the "
 "[config documentation](config.md#buildbuild-dir) for information about "
 "changing the build-dir"
 msgstr ""
 
-#: src/reference/unstable.md:2342
+#: src/reference/unstable.md:2418
 msgid "Build-plan"
 msgstr ""
 
-#: src/reference/unstable.md:2344
+#: src/reference/unstable.md:2420
 msgid ""
 "The `--build-plan` argument for the `build` command has been removed in "
 "1.93.0-nightly. See <https://github.com/rust-lang/cargo/issues/7614> for the "
 "reason for its removal."
 msgstr ""
 
-#: src/reference/unstable.md:2347
+#: src/reference/unstable.md:2423
 msgid "config-include"
 msgstr ""
 
-#: src/reference/unstable.md:2349
+#: src/reference/unstable.md:2425
 msgid ""
 "Support for including extra configuration files via the `include` config key "
 "has been stabilized in 1.93.0. See the [`include` config documentation]"
 "(config.md#include) for more."
 msgstr ""
 
-#: src/reference/unstable.md:2353
+#: src/reference/unstable.md:2429
 msgid "pubtime"
 msgstr ""
 
-#: src/reference/unstable.md:2355
+#: src/reference/unstable.md:2431
 msgid "The `pubtime` index field  has been stabilized in Rust 1.94.0."
+msgstr ""
+
+#: src/reference/unstable.md:2433
+msgid "lockfile-path"
+msgstr ""
+
+#: src/reference/unstable.md:2435
+msgid ""
+"Support for `resolver.lockfile-path` config field has been stabilized in "
+"Rust 1.97.0."
+msgstr ""
+
+#: src/reference/unstable.md:2437
+msgid "warnings"
+msgstr ""
+
+#: src/reference/unstable.md:2439
+msgid "The `build.warnings` config field has been stabilized in Rust 1.97."
 msgstr ""
