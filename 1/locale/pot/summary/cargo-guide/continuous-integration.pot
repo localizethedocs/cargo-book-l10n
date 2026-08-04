@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-04-14T09:41:26Z\n"
+"POT-Creation-Date: 2026-08-04T11:00:28Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -53,6 +53,7 @@ msgstr ""
 
 #: src/guide/continuous-integration.md:17
 #: src/guide/continuous-integration.md:168
+#: src/guide/continuous-integration.md:217
 msgid "env"
 msgstr ""
 
@@ -68,6 +69,7 @@ msgstr ""
 #: src/guide/continuous-integration.md:114
 #: src/guide/continuous-integration.md:163
 #: src/guide/continuous-integration.md:194
+#: src/guide/continuous-integration.md:214
 msgid "jobs"
 msgstr ""
 
@@ -82,12 +84,14 @@ msgstr ""
 #: src/guide/continuous-integration.md:24
 #: src/guide/continuous-integration.md:166
 #: src/guide/continuous-integration.md:196
+#: src/guide/continuous-integration.md:216
 msgid "runs-on"
 msgstr ""
 
 #: src/guide/continuous-integration.md:24
 #: src/guide/continuous-integration.md:166
 #: src/guide/continuous-integration.md:196
+#: src/guide/continuous-integration.md:216
 msgid "ubuntu-latest"
 msgstr ""
 
@@ -119,6 +123,7 @@ msgstr ""
 #: src/guide/continuous-integration.md:120
 #: src/guide/continuous-integration.md:170
 #: src/guide/continuous-integration.md:197
+#: src/guide/continuous-integration.md:219
 msgid "steps"
 msgstr ""
 
@@ -126,12 +131,14 @@ msgstr ""
 #: src/guide/continuous-integration.md:171
 #: src/guide/continuous-integration.md:198
 #: src/guide/continuous-integration.md:199
+#: src/guide/continuous-integration.md:220
 msgid "uses"
 msgstr ""
 
 #: src/guide/continuous-integration.md:32
 #: src/guide/continuous-integration.md:171
 #: src/guide/continuous-integration.md:198
+#: src/guide/continuous-integration.md:220
 msgid "actions/checkout@v4"
 msgstr ""
 
@@ -144,6 +151,9 @@ msgstr ""
 #: src/guide/continuous-integration.md:174
 #: src/guide/continuous-integration.md:175
 #: src/guide/continuous-integration.md:200
+#: src/guide/continuous-integration.md:221
+#: src/guide/continuous-integration.md:222
+#: src/guide/continuous-integration.md:223
 msgid "run"
 msgstr ""
 
@@ -468,6 +478,7 @@ msgid "allow"
 msgstr ""
 
 #: src/guide/continuous-integration.md:172
+#: src/guide/continuous-integration.md:221
 msgid "rustup update stable && rustup default stable"
 msgstr ""
 
@@ -553,4 +564,65 @@ msgstr ""
 msgid ""
 "Unpublished packages are skipped as this assumes only consumers of the "
 "verified project, through a registry, will care about `rust-version`."
+msgstr ""
+
+#: src/guide/continuous-integration.md:207
+msgid "Checking for warnings"
+msgstr ""
+
+#: src/guide/continuous-integration.md:209
+msgid ""
+"Customarily, projects want to be \"warnings clean\" on official branches "
+"while being lax for local development. [`build.warnings = \"deny\"`](../"
+"reference/config.md#buildwarnings) can be used to fail a CI job if warnings "
+"are present."
+msgstr ""
+
+#: src/guide/continuous-integration.md:212
+msgid "An example CI job to check for warnings using GitHub Actions:"
+msgstr ""
+
+#: src/guide/continuous-integration.md:215
+msgid "warnings"
+msgstr ""
+
+#: src/guide/continuous-integration.md:218
+msgid "CARGO_BUILD_WARNINGS"
+msgstr ""
+
+#: src/guide/continuous-integration.md:218
+msgid "deny"
+msgstr ""
+
+#: src/guide/continuous-integration.md:222
+msgid "rustup component add clippy"
+msgstr ""
+
+#: src/guide/continuous-integration.md:223
+msgid "cargo clippy --all-targets --all-features --keep-going"
+msgstr ""
+
+#: src/guide/continuous-integration.md:226
+msgid "Considerations:"
+msgstr ""
+
+#: src/guide/continuous-integration.md:227
+msgid ""
+"CI can fail due to new toolchain versions because there are limited "
+"compatibility guarantees around warnings. Consider pinning the toolchain "
+"version with an automated job that creates a PR to upgrade the toolchain on "
+"new releases."
+msgstr ""
+
+#: src/guide/continuous-integration.md:229
+msgid ""
+"Balance between exhaustiveness and turnaround time in selecting the "
+"combinations of platforms, features, and package/build-target combinations "
+"to check"
+msgstr ""
+
+#: src/guide/continuous-integration.md:230
+msgid ""
+"Some CI systems have direct integration for reporting lints, e.g. using "
+"[`clippy-sarif`](https://crates.io/crates/clippy-sarif) with GitHub"
 msgstr ""
