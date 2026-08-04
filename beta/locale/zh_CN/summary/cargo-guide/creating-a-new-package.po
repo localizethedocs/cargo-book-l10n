@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/guide/creating-a-new-project.md:1
 msgid "Creating a New Package"
-msgstr ""
+msgstr "创建新项目"
 
 #: src/guide/creating-a-new-project.md:3
 msgid ""
