@@ -37,9 +37,9 @@
     "branch" : "beta",
     "commit" : 
     {
-      "date" : "2026-04-13 07:14:26 +0000",
-      "hash" : "ef0fb8a2563200e322fa4419f09f65a63742038c",
-      "title" : "Auto merge of #155211 - Mark-Simulacrum:beta-next, r=Mark-Simulacrum"
+      "date" : "2026-07-25 03:55:53 +0000",
+      "hash" : "0c45ca314d60447c808f437c9df49ac81c0dc23d",
+      "title" : "Auto merge of #159791 - cuviper:beta-next, r=cuviper"
     }
   },
   "type" : "branch",

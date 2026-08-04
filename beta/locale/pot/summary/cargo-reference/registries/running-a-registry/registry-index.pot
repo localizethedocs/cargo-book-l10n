@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-03-24T09:22:37Z\n"
+"POT-Creation-Date: 2026-08-04T10:43:24Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -94,7 +94,8 @@ msgstr ""
 msgid ""
 "`api`: This is the base URL for the web API. This key is optional, but if it "
 "is not specified, commands such as [`cargo publish`](../commands/cargo-"
-"publish.md) will not work. The web API is described below."
+"publish.md) will not work. The web API is described below. This URL should "
+"not have a trailing slash."
 msgstr ""
 
 #: src/reference/registry-index.md:38
