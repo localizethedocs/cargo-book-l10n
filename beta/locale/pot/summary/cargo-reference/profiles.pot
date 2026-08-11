@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-04-14T09:32:53Z\n"
+"POT-Creation-Date: 2026-08-11T09:09:08Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -75,7 +75,7 @@ msgstr ""
 #: src/reference/profiles.md:42 src/reference/profiles.md:68
 #: src/reference/profiles.md:139 src/reference/profiles.md:154
 #: src/reference/profiles.md:169 src/reference/profiles.md:197
-#: src/reference/profiles.md:224 src/reference/profiles.md:272
+#: src/reference/profiles.md:224
 msgid "The valid options are:"
 msgstr ""
 
@@ -432,63 +432,25 @@ msgid ""
 msgstr ""
 
 #: src/reference/profiles.md:261
-msgid "frame-pointers"
-msgstr ""
-
-#: src/reference/profiles.md:263
-msgid ""
-"The `frame-pointers` setting controls the [`-C force-frame-pointers` flag]"
-"(../../rustc/codegen-options/index.html#force-frame-pointers) which controls "
-"whether frame pointers are forced in generated code. Frame pointers are "
-"useful for profiling as they enable reliable stack unwinding."
-msgstr ""
-
-#: src/reference/profiles.md:267
-msgid ""
-"```toml\n"
-"[profile.release]\n"
-"frame-pointers = \"force-on\"\n"
-"```"
-msgstr ""
-
-#: src/reference/profiles.md:273
-msgid "`\"force-on\"`: Force frame pointers to be enabled."
-msgstr ""
-
-#: src/reference/profiles.md:274
-msgid ""
-"`\"force-off\"`: Don't force frame pointers (the compiler may still emit "
-"them based on target defaults)."
-msgstr ""
-
-#: src/reference/profiles.md:275
-msgid "`\"default\"`: Use the compiler's target-specific default."
-msgstr ""
-
-#: src/reference/profiles.md:277
-msgid "When not specified, the compiler's target-specific default is used."
-msgstr ""
-
-#: src/reference/profiles.md:281
 msgid "Default profiles"
 msgstr ""
 
-#: src/reference/profiles.md:283
+#: src/reference/profiles.md:263
 msgid "dev"
 msgstr ""
 
-#: src/reference/profiles.md:285
+#: src/reference/profiles.md:265
 msgid ""
 "The `dev` profile is used for normal development and debugging. It is the "
 "default for build commands like [`cargo build`](../commands/cargo-build.md), "
 "and is used for `cargo install --debug`."
 msgstr ""
 
-#: src/reference/profiles.md:288
+#: src/reference/profiles.md:268
 msgid "The default settings for the `dev` profile are:"
 msgstr ""
 
-#: src/reference/profiles.md:290
+#: src/reference/profiles.md:270
 msgid ""
 "```toml\n"
 "[profile.dev]\n"
@@ -506,22 +468,22 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/profiles.md:305
+#: src/reference/profiles.md:285
 msgid "release"
 msgstr ""
 
-#: src/reference/profiles.md:307
+#: src/reference/profiles.md:287
 msgid ""
 "The `release` profile is intended for optimized artifacts used for releases "
 "and in production. This profile is used when the `--release` flag is used, "
 "and is the default for [`cargo install`](../commands/cargo-install.md)."
 msgstr ""
 
-#: src/reference/profiles.md:311
+#: src/reference/profiles.md:291
 msgid "The default settings for the `release` profile are:"
 msgstr ""
 
-#: src/reference/profiles.md:313
+#: src/reference/profiles.md:293
 msgid ""
 "```toml\n"
 "[profile.release]\n"
@@ -539,33 +501,33 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/profiles.md:328
+#: src/reference/profiles.md:308
 msgid "test"
 msgstr ""
 
-#: src/reference/profiles.md:330
+#: src/reference/profiles.md:310
 msgid ""
 "The `test` profile is the default profile used by [`cargo test`](../commands/"
 "cargo-test.md). The `test` profile inherits the settings from the [`dev`]"
 "(#dev) profile."
 msgstr ""
 
-#: src/reference/profiles.md:333
+#: src/reference/profiles.md:313
 msgid "bench"
 msgstr ""
 
-#: src/reference/profiles.md:335
+#: src/reference/profiles.md:315
 msgid ""
 "The `bench` profile is the default profile used by [`cargo bench`](../"
 "commands/cargo-bench.md). The `bench` profile inherits the settings from the "
 "[`release`](#release) profile."
 msgstr ""
 
-#: src/reference/profiles.md:338
+#: src/reference/profiles.md:318
 msgid "Build Dependencies"
 msgstr ""
 
-#: src/reference/profiles.md:340
+#: src/reference/profiles.md:320
 msgid ""
 "To compile quickly, all profiles, by default, do not optimize build "
 "dependencies (build scripts, proc macros, and their dependencies), and avoid "
@@ -573,23 +535,23 @@ msgid ""
 "dependency. The default settings for build overrides are:"
 msgstr ""
 
-#: src/reference/profiles.md:356
+#: src/reference/profiles.md:336
 msgid ""
 "However, if errors occur while running build dependencies, turning full "
 "debug info on will improve backtraces and debuggability when needed:"
 msgstr ""
 
-#: src/reference/profiles.md:363
+#: src/reference/profiles.md:343
 msgid ""
 "Build dependencies otherwise inherit settings from the active profile in "
 "use, as described in [Profile selection](#profile-selection)."
 msgstr ""
 
-#: src/reference/profiles.md:366
+#: src/reference/profiles.md:346
 msgid "Custom profiles"
 msgstr ""
 
-#: src/reference/profiles.md:368
+#: src/reference/profiles.md:348
 msgid ""
 "In addition to the built-in profiles, additional custom profiles can be "
 "defined. These may be useful for setting up multiple workflows and build "
@@ -598,14 +560,14 @@ msgid ""
 "setting is not specified."
 msgstr ""
 
-#: src/reference/profiles.md:374
+#: src/reference/profiles.md:354
 msgid ""
 "For example, let's say you want to compare a normal release build with a "
 "release build with [LTO](#lto) optimizations, you can specify something like "
 "the following in `Cargo.toml`:"
 msgstr ""
 
-#: src/reference/profiles.md:378
+#: src/reference/profiles.md:358
 msgid ""
 "```toml\n"
 "[profile.release-lto]\n"
@@ -614,79 +576,79 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/profiles.md:384
+#: src/reference/profiles.md:364
 msgid "The `--profile` flag can then be used to choose this custom profile:"
 msgstr ""
 
-#: src/reference/profiles.md:390
+#: src/reference/profiles.md:370
 msgid ""
 "The output for each profile will be placed in a directory of the same name "
 "as the profile in the [`target` directory](build-cache.md). As in the "
 "example above, the output would go into the `target/release-lto` directory."
 msgstr ""
 
-#: src/reference/profiles.md:396
+#: src/reference/profiles.md:376
 msgid "Profile selection"
 msgstr ""
 
-#: src/reference/profiles.md:398
+#: src/reference/profiles.md:378
 msgid ""
 "The profile used depends on the command, the command-line flags like `--"
 "release` or `--profile`, and the package (in the case of [overrides]"
 "(#overrides)). The default profile if none is specified is:"
 msgstr ""
 
-#: src/reference/profiles.md:402
+#: src/reference/profiles.md:382
 msgid "Command"
 msgstr ""
 
-#: src/reference/profiles.md:402
+#: src/reference/profiles.md:382
 msgid "Default Profile"
 msgstr ""
 
-#: src/reference/profiles.md:404
+#: src/reference/profiles.md:384
 msgid ""
 "[`cargo run`](../commands/cargo-run.md), [`cargo build`](../commands/cargo-"
 "build.md),<br>[`cargo check`](../commands/cargo-check.md), [`cargo rustc`]"
 "(../commands/cargo-rustc.md)"
 msgstr ""
 
-#: src/reference/profiles.md:404
+#: src/reference/profiles.md:384
 msgid "[`dev` profile](#dev)"
 msgstr ""
 
-#: src/reference/profiles.md:405
+#: src/reference/profiles.md:385
 msgid "[`cargo test`](../commands/cargo-test.md)"
 msgstr ""
 
-#: src/reference/profiles.md:405
+#: src/reference/profiles.md:385
 msgid "[`test` profile](#test)"
 msgstr ""
 
-#: src/reference/profiles.md:406
+#: src/reference/profiles.md:386
 msgid "[`cargo bench`](../commands/cargo-bench.md)"
 msgstr ""
 
-#: src/reference/profiles.md:406
+#: src/reference/profiles.md:386
 msgid "[`bench` profile](#bench)"
 msgstr ""
 
-#: src/reference/profiles.md:407
+#: src/reference/profiles.md:387
 msgid "[`cargo install`](../commands/cargo-install.md)"
 msgstr ""
 
-#: src/reference/profiles.md:407
+#: src/reference/profiles.md:387
 msgid "[`release` profile](#release)"
 msgstr ""
 
-#: src/reference/profiles.md:409
+#: src/reference/profiles.md:389
 msgid ""
 "You can switch to a different profile using the `--profile=NAME` option "
 "which will used the given profile. The `--release` flag is equivalent to `--"
 "profile=release`."
 msgstr ""
 
-#: src/reference/profiles.md:412
+#: src/reference/profiles.md:392
 msgid ""
 "The selected profile applies to all Cargo targets, including [library](./"
 "cargo-targets.md#library), [binary](./cargo-targets.md#binaries), [example]"
@@ -694,37 +656,37 @@ msgid ""
 "[benchmark](./cargo-targets.md#benchmarks)."
 msgstr ""
 
-#: src/reference/profiles.md:419
+#: src/reference/profiles.md:399
 msgid ""
 "The profile for specific packages can be specified with [overrides]"
 "(#overrides), described below."
 msgstr ""
 
-#: src/reference/profiles.md:430
+#: src/reference/profiles.md:410
 msgid "Overrides"
 msgstr ""
 
-#: src/reference/profiles.md:432
+#: src/reference/profiles.md:412
 msgid ""
 "Profile settings can be overridden for specific packages and build-time "
 "crates. To override the settings for a specific package, use the `package` "
 "table to change the settings for the named package:"
 msgstr ""
 
-#: src/reference/profiles.md:442
+#: src/reference/profiles.md:422
 msgid ""
 "The package name is actually a [Package ID Spec](pkgid-spec.md), so you can "
 "target individual versions of a package with syntax such as `[profile.dev."
 "package.\"foo:2.1.0\"]`."
 msgstr ""
 
-#: src/reference/profiles.md:446
+#: src/reference/profiles.md:426
 msgid ""
 "To override the settings for all dependencies (but not any workspace "
 "member), use the `\"*\"` package name:"
 msgstr ""
 
-#: src/reference/profiles.md:449
+#: src/reference/profiles.md:429
 msgid ""
 "```toml\n"
 "# Set the default for dependencies.\n"
@@ -733,13 +695,13 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/reference/profiles.md:455
+#: src/reference/profiles.md:435
 msgid ""
 "To override the settings for build scripts, proc macros, and their "
 "dependencies, use the `build-override` table:"
 msgstr ""
 
-#: src/reference/profiles.md:464
+#: src/reference/profiles.md:444
 msgid ""
 "Note: When a dependency is both a normal dependency and a build dependency, "
 "Cargo will try to only build it once when `--target` is not specified. When "
@@ -748,43 +710,43 @@ msgid ""
 "increase initial build times."
 msgstr ""
 
-#: src/reference/profiles.md:470
+#: src/reference/profiles.md:450
 msgid ""
 "The precedence for which value is used is done in the following order (first "
 "match wins):"
 msgstr ""
 
-#: src/reference/profiles.md:473
+#: src/reference/profiles.md:453
 msgid "`[profile.dev.package.name]` --- A named package."
 msgstr ""
 
-#: src/reference/profiles.md:474
+#: src/reference/profiles.md:454
 msgid "`[profile.dev.package.\"*\"]` --- For any non-workspace member."
 msgstr ""
 
-#: src/reference/profiles.md:475
+#: src/reference/profiles.md:455
 msgid ""
 "`[profile.dev.build-override]` --- Only for build scripts, proc macros, and "
 "their dependencies."
 msgstr ""
 
-#: src/reference/profiles.md:477
+#: src/reference/profiles.md:457
 msgid "`[profile.dev]` --- Settings in `Cargo.toml`."
 msgstr ""
 
-#: src/reference/profiles.md:478
+#: src/reference/profiles.md:458
 msgid "Default values built-in to Cargo."
 msgstr ""
 
-#: src/reference/profiles.md:480
+#: src/reference/profiles.md:460
 msgid "Overrides cannot specify the `panic`, `lto`, or `rpath` settings."
 msgstr ""
 
-#: src/reference/profiles.md:482
+#: src/reference/profiles.md:462
 msgid "Overrides and generics"
 msgstr ""
 
-#: src/reference/profiles.md:484
+#: src/reference/profiles.md:464
 msgid ""
 "The location where generic code is instantiated will influence the "
 "optimization settings used for that generic code. This can cause subtle "
@@ -796,7 +758,7 @@ msgid ""
 "optimization settings of that crate."
 msgstr ""
 
-#: src/reference/profiles.md:493
+#: src/reference/profiles.md:473
 msgid ""
 "For example, [nalgebra](https://crates.io/crates/nalgebra) is a library "
 "which defines vectors and matrices making heavy use of generic parameters. "
@@ -807,7 +769,7 @@ msgid ""
 "performance."
 msgstr ""
 
-#: src/reference/profiles.md:500
+#: src/reference/profiles.md:480
 msgid ""
 "Further complicating the issue, `rustc` has some optimizations where it will "
 "attempt to share monomorphized generics between crates. If the opt-level is "
