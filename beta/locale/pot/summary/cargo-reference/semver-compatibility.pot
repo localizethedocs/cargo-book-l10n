@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-03-24T09:22:38Z\n"
+"POT-Creation-Date: 2026-08-11T09:09:08Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -1437,7 +1437,7 @@ msgid "// An associated const makes the trait not object-safe.\n"
 msgstr ""
 
 #: src/reference/semver.md:1344
-msgid "// Error: the trait `Trait` is not dyn compatible\n"
+msgid "// Error: the trait `updated_crate::Trait` is not dyn compatible\n"
 msgstr ""
 
 #: src/reference/semver.md:1348
