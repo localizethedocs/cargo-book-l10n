@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: The Cargo Book\n"
-"POT-Creation-Date: 2026-04-14T09:41:26Z\n"
+"POT-Creation-Date: 2026-09-01T13:21:00Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -225,9 +225,9 @@ msgstr ""
 
 #: src/reference/source-replacement.md:148
 msgid ""
-"Each crate in a directory source also has an associated metadata file "
-"indicating the checksum of each file in the crate to protect against "
-"accidental modifications."
+"Each crate in a directory source also has an associated metadata file `."
+"cargo-checksum.json` to protect against accidental modifications. It is not "
+"a security mechanism and does not protect against malicious changes."
 msgstr ""
 
 #: src/reference/source-replacement.md:152
