@@ -1,0 +1,732 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-04-14T09:32:53Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/reference/lints.md:1
+msgid "Lints"
+msgstr ""
+
+#: src/reference/lints.md:3
+msgid ""
+"Note: [Cargo's linting system is unstable](unstable.md#lintscargo) and can "
+"only be used on nightly toolchains"
+msgstr ""
+
+#: src/reference/lints.md:7
+msgid "Group"
+msgstr ""
+
+#: src/reference/lints.md:7
+msgid "Description"
+msgstr ""
+
+#: src/reference/lints.md:7
+msgid "Default level"
+msgstr ""
+
+#: src/reference/lints.md:9
+msgid "`cargo::complexity`"
+msgstr ""
+
+#: src/reference/lints.md:9
+msgid "code that does something simple but in a complex way"
+msgstr ""
+
+#: src/reference/lints.md:9 src/reference/lints.md:13 src/reference/lints.md:15
+#: src/reference/lints.md:16
+msgid "warn"
+msgstr ""
+
+#: src/reference/lints.md:10
+msgid "`cargo::correctness`"
+msgstr ""
+
+#: src/reference/lints.md:10
+msgid "code that is outright wrong or useless"
+msgstr ""
+
+#: src/reference/lints.md:10
+msgid "deny"
+msgstr ""
+
+#: src/reference/lints.md:11
+msgid "`cargo::nursery`"
+msgstr ""
+
+#: src/reference/lints.md:11
+msgid "new lints that are still under development"
+msgstr ""
+
+#: src/reference/lints.md:11 src/reference/lints.md:12
+#: src/reference/lints.md:14
+msgid "allow"
+msgstr ""
+
+#: src/reference/lints.md:12
+msgid "`cargo::pedantic`"
+msgstr ""
+
+#: src/reference/lints.md:12
+msgid "lints which are rather strict or have occasional false positives"
+msgstr ""
+
+#: src/reference/lints.md:13
+msgid "`cargo::perf`"
+msgstr ""
+
+#: src/reference/lints.md:13
+msgid "code that can be written to run faster"
+msgstr ""
+
+#: src/reference/lints.md:14
+msgid "`cargo::restriction`"
+msgstr ""
+
+#: src/reference/lints.md:14
+msgid "lints which prevent the use of Cargo features"
+msgstr ""
+
+#: src/reference/lints.md:15
+msgid "`cargo::style`"
+msgstr ""
+
+#: src/reference/lints.md:15
+msgid "code that should be written in a more idiomatic way"
+msgstr ""
+
+#: src/reference/lints.md:16
+msgid "`cargo::suspicious`"
+msgstr ""
+
+#: src/reference/lints.md:16
+msgid "code that is most likely wrong or useless"
+msgstr ""
+
+#: src/reference/lints.md:19
+msgid "Allowed-by-default"
+msgstr ""
+
+#: src/reference/lints.md:21
+msgid "These lints are all set to the 'allow' level by default."
+msgstr ""
+
+#: src/reference/lints.md:22
+msgid "[`implicit_minimum_version_req`](#implicit_minimum_version_req)"
+msgstr ""
+
+#: src/reference/lints.md:23
+msgid "[`non_kebab_case_features`](#non_kebab_case_features)"
+msgstr ""
+
+#: src/reference/lints.md:24
+msgid "[`non_kebab_case_packages`](#non_kebab_case_packages)"
+msgstr ""
+
+#: src/reference/lints.md:25
+msgid "[`non_snake_case_features`](#non_snake_case_features)"
+msgstr ""
+
+#: src/reference/lints.md:26
+msgid "[`non_snake_case_packages`](#non_snake_case_packages)"
+msgstr ""
+
+#: src/reference/lints.md:28
+msgid "Warn-by-default"
+msgstr ""
+
+#: src/reference/lints.md:30
+msgid "These lints are all set to the 'warn' level by default."
+msgstr ""
+
+#: src/reference/lints.md:31
+msgid "[`blanket_hint_mostly_unused`](#blanket_hint_mostly_unused)"
+msgstr ""
+
+#: src/reference/lints.md:32
+msgid "[`missing_lints_inheritance`](#missing_lints_inheritance)"
+msgstr ""
+
+#: src/reference/lints.md:33
+msgid "[`non_kebab_case_bins`](#non_kebab_case_bins)"
+msgstr ""
+
+#: src/reference/lints.md:34
+msgid "[`redundant_homepage`](#redundant_homepage)"
+msgstr ""
+
+#: src/reference/lints.md:35
+msgid "[`redundant_readme`](#redundant_readme)"
+msgstr ""
+
+#: src/reference/lints.md:36
+msgid "[`unknown_lints`](#unknown_lints)"
+msgstr ""
+
+#: src/reference/lints.md:37
+msgid "[`unused_dependencies`](#unused_dependencies)"
+msgstr ""
+
+#: src/reference/lints.md:38
+msgid "[`unused_workspace_dependencies`](#unused_workspace_dependencies)"
+msgstr ""
+
+#: src/reference/lints.md:39
+msgid "[`unused_workspace_package_fields`](#unused_workspace_package_fields)"
+msgstr ""
+
+#: src/reference/lints.md:41
+msgid "`blanket_hint_mostly_unused`"
+msgstr ""
+
+#: src/reference/lints.md:42 src/reference/lints.md:125
+#: src/reference/lints.md:398 src/reference/lints.md:479
+#: src/reference/lints.md:501
+msgid "Group: `suspicious`"
+msgstr ""
+
+#: src/reference/lints.md:44 src/reference/lints.md:127
+#: src/reference/lints.md:160 src/reference/lints.md:326
+#: src/reference/lints.md:363 src/reference/lints.md:400
+#: src/reference/lints.md:423 src/reference/lints.md:481
+#: src/reference/lints.md:503
+msgid "Level: `warn`"
+msgstr ""
+
+#: src/reference/lints.md:46 src/reference/lints.md:129
+#: src/reference/lints.md:162 src/reference/lints.md:328
+#: src/reference/lints.md:365 src/reference/lints.md:402
+#: src/reference/lints.md:425 src/reference/lints.md:483
+#: src/reference/lints.md:505
+msgid "MSRV: `1.79.0`"
+msgstr ""
+
+#: src/reference/lints.md:48 src/reference/lints.md:78
+#: src/reference/lints.md:131 src/reference/lints.md:164
+#: src/reference/lints.md:200 src/reference/lints.md:232
+#: src/reference/lints.md:264 src/reference/lints.md:296
+#: src/reference/lints.md:330 src/reference/lints.md:367
+#: src/reference/lints.md:404 src/reference/lints.md:427
+#: src/reference/lints.md:485 src/reference/lints.md:507
+msgid "What it does"
+msgstr ""
+
+#: src/reference/lints.md:49
+msgid "Checks if `hint-mostly-unused` being applied to all dependencies."
+msgstr ""
+
+#: src/reference/lints.md:51 src/reference/lints.md:87
+#: src/reference/lints.md:135 src/reference/lints.md:168
+#: src/reference/lints.md:204 src/reference/lints.md:236
+#: src/reference/lints.md:268 src/reference/lints.md:300
+#: src/reference/lints.md:336 src/reference/lints.md:373
+#: src/reference/lints.md:407 src/reference/lints.md:431
+#: src/reference/lints.md:488 src/reference/lints.md:510
+msgid "Why it is bad"
+msgstr ""
+
+#: src/reference/lints.md:52
+msgid ""
+"`hint-mostly-unused` indicates that most of a crate's API surface will go "
+"unused by anything depending on it; this hint can speed up the build by "
+"attempting to minimize compilation time for items that aren't used at all. "
+"Misapplication to crates that don't fit that criteria will slow down the "
+"build rather than speeding it up. It should be selectively applied to "
+"dependencies that meet these criteria. Applying it globally is always a "
+"misapplication and will likely slow down the build."
+msgstr ""
+
+#: src/reference/lints.md:60 src/reference/lints.md:109
+#: src/reference/lints.md:141 src/reference/lints.md:180
+#: src/reference/lints.md:212 src/reference/lints.md:244
+#: src/reference/lints.md:276 src/reference/lints.md:308
+#: src/reference/lints.md:342 src/reference/lints.md:381
+#: src/reference/lints.md:413 src/reference/lints.md:456
+#: src/reference/lints.md:491 src/reference/lints.md:513
+msgid "Example"
+msgstr ""
+
+#: src/reference/lints.md:61
+msgid ""
+"```toml\n"
+"[profile.dev.package.\"*\"]\n"
+"hint-mostly-unused = true\n"
+"```"
+msgstr ""
+
+#: src/reference/lints.md:66
+msgid "Should instead be:"
+msgstr ""
+
+#: src/reference/lints.md:73
+msgid "`implicit_minimum_version_req`"
+msgstr ""
+
+#: src/reference/lints.md:74
+msgid "Group: `pedantic`"
+msgstr ""
+
+#: src/reference/lints.md:76 src/reference/lints.md:198
+#: src/reference/lints.md:230 src/reference/lints.md:262
+#: src/reference/lints.md:294
+msgid "Level: `allow`"
+msgstr ""
+
+#: src/reference/lints.md:80
+msgid ""
+"Checks for dependency version requirements that do not explicitly specify a "
+"full `major.minor.patch` version requirement, such as `serde = \"1\"` or "
+"`serde = \"1.0\"`."
+msgstr ""
+
+#: src/reference/lints.md:84
+msgid ""
+"This lint currently only applies to caret requirements (the [default "
+"requirements](specifying-dependencies.md#default-requirements))."
+msgstr ""
+
+#: src/reference/lints.md:89
+msgid ""
+"Version requirements without an explicit full version can be misleading "
+"about the actual minimum supported version. For example, `serde = \"1\"` has "
+"an implicit minimum bound of `1.0.0`. If your code actually requires "
+"features from `1.0.219`, the implicit minimum bound of `1.0.0` gives a false "
+"impression about compatibility."
+msgstr ""
+
+#: src/reference/lints.md:96
+msgid "Specifying the full version helps with:"
+msgstr ""
+
+#: src/reference/lints.md:98
+msgid "Accurate minimum version documentation"
+msgstr ""
+
+#: src/reference/lints.md:99
+msgid "Better compatibility with `-Z minimal-versions`"
+msgstr ""
+
+#: src/reference/lints.md:100
+msgid "Clearer dependency constraints for consumers"
+msgstr ""
+
+#: src/reference/lints.md:102 src/reference/lints.md:139
+#: src/reference/lints.md:172 src/reference/lints.md:208
+#: src/reference/lints.md:240 src/reference/lints.md:272
+#: src/reference/lints.md:304 src/reference/lints.md:340
+#: src/reference/lints.md:377 src/reference/lints.md:435
+msgid "Drawbacks"
+msgstr ""
+
+#: src/reference/lints.md:104
+msgid ""
+"Even with a fully specified version, the minimum bound might still be "
+"incorrect if untested. This lint helps make the minimum version requirement "
+"explicit but doesn't guarantee correctness."
+msgstr ""
+
+#: src/reference/lints.md:111
+msgid ""
+"```toml\n"
+"[dependencies]\n"
+"serde = \"1\"\n"
+"```"
+msgstr ""
+
+#: src/reference/lints.md:116
+msgid "Should be written as a full specific version:"
+msgstr ""
+
+#: src/reference/lints.md:118
+msgid ""
+"```toml\n"
+"[dependencies]\n"
+"serde = \"1.0.219\"\n"
+"```"
+msgstr ""
+
+#: src/reference/lints.md:124
+msgid "`missing_lints_inheritance`"
+msgstr ""
+
+#: src/reference/lints.md:133
+msgid ""
+"Checks for packages without a `lints` table while `workspace.lints` is "
+"present."
+msgstr ""
+
+#: src/reference/lints.md:137
+msgid ""
+"Many people mistakenly think that `workspace.lints` is implicitly inherited "
+"when it is not."
+msgstr ""
+
+#: src/reference/lints.md:147 src/reference/lints.md:187
+#: src/reference/lints.md:219 src/reference/lints.md:251
+#: src/reference/lints.md:283 src/reference/lints.md:315
+#: src/reference/lints.md:351 src/reference/lints.md:389
+#: src/reference/lints.md:466
+msgid "Should be written as:"
+msgstr ""
+
+#: src/reference/lints.md:157
+msgid "`non_kebab_case_bins`"
+msgstr ""
+
+#: src/reference/lints.md:158 src/reference/lints.md:324
+#: src/reference/lints.md:361 src/reference/lints.md:421
+msgid "Group: `style`"
+msgstr ""
+
+#: src/reference/lints.md:166
+msgid "Detect binary names, explicit and implicit, that are not kebab-case"
+msgstr ""
+
+#: src/reference/lints.md:170
+msgid ""
+"Kebab-case binary names is a common convention among command line tools."
+msgstr ""
+
+#: src/reference/lints.md:174
+msgid "It would be disruptive to existing users to change the binary name."
+msgstr ""
+
+#: src/reference/lints.md:176
+msgid ""
+"A binary may need to conform to externally controlled conventions which can "
+"include a different naming convention."
+msgstr ""
+
+#: src/reference/lints.md:178
+msgid ""
+"GUI applications may wish to choose a more user focused naming convention, "
+"like \"Title Case\" or \"Sentence case\"."
+msgstr ""
+
+#: src/reference/lints.md:182
+msgid ""
+"```toml\n"
+"[[bin]]\n"
+"name = \"foo_bar\"\n"
+"```"
+msgstr ""
+
+#: src/reference/lints.md:189
+msgid ""
+"```toml\n"
+"[[bin]]\n"
+"name = \"foo-bar\"\n"
+"```"
+msgstr ""
+
+#: src/reference/lints.md:195
+msgid "`non_kebab_case_features`"
+msgstr ""
+
+#: src/reference/lints.md:196 src/reference/lints.md:228
+#: src/reference/lints.md:260 src/reference/lints.md:292
+msgid "Group: `restriction`"
+msgstr ""
+
+#: src/reference/lints.md:202
+msgid "Detect feature names that are not kebab-case."
+msgstr ""
+
+#: src/reference/lints.md:206 src/reference/lints.md:238
+#: src/reference/lints.md:270 src/reference/lints.md:302
+msgid "Having multiple naming styles within a workspace can be confusing."
+msgstr ""
+
+#: src/reference/lints.md:210 src/reference/lints.md:274
+msgid ""
+"Users would expect that a feature tightly coupled to a dependency would "
+"match the dependency's name."
+msgstr ""
+
+#: src/reference/lints.md:227
+msgid "`non_kebab_case_packages`"
+msgstr ""
+
+#: src/reference/lints.md:234
+msgid "Detect package names that are not kebab-case."
+msgstr ""
+
+#: src/reference/lints.md:242 src/reference/lints.md:306
+msgid "Users have to mentally translate package names to namespaces in Rust."
+msgstr ""
+
+#: src/reference/lints.md:246 src/reference/lints.md:310
+msgid ""
+"```toml\n"
+"[package]\n"
+"name = \"foo_bar\"\n"
+"```"
+msgstr ""
+
+#: src/reference/lints.md:253 src/reference/lints.md:317
+msgid ""
+"```toml\n"
+"[package]\n"
+"name = \"foo-bar\"\n"
+"```"
+msgstr ""
+
+#: src/reference/lints.md:259
+msgid "`non_snake_case_features`"
+msgstr ""
+
+#: src/reference/lints.md:266
+msgid "Detect feature names that are not snake-case."
+msgstr ""
+
+#: src/reference/lints.md:291
+msgid "`non_snake_case_packages`"
+msgstr ""
+
+#: src/reference/lints.md:298
+msgid "Detect package names that are not snake-case."
+msgstr ""
+
+#: src/reference/lints.md:323
+msgid "`redundant_homepage`"
+msgstr ""
+
+#: src/reference/lints.md:332
+msgid ""
+"Checks if the value of `package.homepage` is already covered by another "
+"field."
+msgstr ""
+
+#: src/reference/lints.md:334
+msgid ""
+"See also [`package.homepage` reference documentation](manifest.md#the-"
+"homepage-field)."
+msgstr ""
+
+#: src/reference/lints.md:338
+msgid ""
+"When package browsers render each link, a redundant link adds visual noise."
+msgstr ""
+
+#: src/reference/lints.md:344
+msgid ""
+"```toml\n"
+"[package]\n"
+"name = \"foo\"\n"
+"homepage = \"https://github.com/rust-lang/cargo/\"\n"
+"repository = \"https://github.com/rust-lang/cargo/\"\n"
+"```"
+msgstr ""
+
+#: src/reference/lints.md:353
+msgid ""
+"```toml\n"
+"[package]\n"
+"name = \"foo\"\n"
+"repository = \"https://github.com/rust-lang/cargo/\"\n"
+"```"
+msgstr ""
+
+#: src/reference/lints.md:360
+msgid "`redundant_readme`"
+msgstr ""
+
+#: src/reference/lints.md:369
+msgid "Checks for `package.readme` fields that can be inferred."
+msgstr ""
+
+#: src/reference/lints.md:371
+msgid ""
+"See also [`package.readme` reference documentation](manifest.md#the-readme-"
+"field)."
+msgstr ""
+
+#: src/reference/lints.md:375
+msgid "Adds boilerplate."
+msgstr ""
+
+#: src/reference/lints.md:379
+msgid "It might not be obvious if they named their file correctly."
+msgstr ""
+
+#: src/reference/lints.md:383
+msgid ""
+"```toml\n"
+"[package]\n"
+"name = \"foo\"\n"
+"readme = \"README.md\"\n"
+"```"
+msgstr ""
+
+#: src/reference/lints.md:391 src/reference/lints.md:468
+msgid ""
+"```toml\n"
+"[package]\n"
+"name = \"foo\"\n"
+"```"
+msgstr ""
+
+#: src/reference/lints.md:397
+msgid "`unknown_lints`"
+msgstr ""
+
+#: src/reference/lints.md:405
+msgid "Checks for unknown lints in the `[lints.cargo]` table"
+msgstr ""
+
+#: src/reference/lints.md:408
+msgid ""
+"The lint name could be misspelled, leading to confusion as to why it is not "
+"working as expected"
+msgstr ""
+
+#: src/reference/lints.md:410
+msgid ""
+"The unknown lint could end up causing an error if `cargo` decides to make a "
+"lint with the same name in the future"
+msgstr ""
+
+#: src/reference/lints.md:414
+msgid ""
+"```toml\n"
+"[lints.cargo]\n"
+"this-lint-does-not-exist = \"warn\"\n"
+"```"
+msgstr ""
+
+#: src/reference/lints.md:420
+msgid "`unused_dependencies`"
+msgstr ""
+
+#: src/reference/lints.md:429
+msgid "Checks for dependencies that are not used by any of the cargo targets."
+msgstr ""
+
+#: src/reference/lints.md:433
+msgid "Slows down compilation time."
+msgstr ""
+
+#: src/reference/lints.md:437
+msgid ""
+"The lint is only emitted in specific circumstances as multiple cargo targets "
+"exist for the different dependencies tables and they must all be built to "
+"know if a dependency is unused. Currently, only the selected packages are "
+"checked and not all `path` dependencies like most lints. The cargo target "
+"selection flags, independent of which packages are selected, determine which "
+"dependencies tables are checked. As there is no way to select all cargo "
+"targets that use `[dev-dependencies]`, they are unchecked."
+msgstr ""
+
+#: src/reference/lints.md:445
+msgid "Examples:"
+msgstr ""
+
+#: src/reference/lints.md:446
+msgid "`cargo check` will lint `[build-dependencies]` and `[dependencies]`"
+msgstr ""
+
+#: src/reference/lints.md:447
+msgid ""
+"`cargo check --all-targets` will still only lint `[build-dependencies]` and "
+"`[dependencies]` and not `[dev-dependencoes]`"
+msgstr ""
+
+#: src/reference/lints.md:448
+msgid ""
+"`cargo check --bin foo` will not lint `[dependencies]` even if `foo` is the "
+"only bin though `[build-dependencies]` will be checked"
+msgstr ""
+
+#: src/reference/lints.md:449
+msgid ""
+"`cargo check -p foo` will not lint any dependencies tables for the `path` "
+"dependency `bar` even if `bar` only has a `[lib]`"
+msgstr ""
+
+#: src/reference/lints.md:451
+msgid ""
+"There can be false positives when depending on a transitive dependency to "
+"activate a feature."
+msgstr ""
+
+#: src/reference/lints.md:453
+msgid ""
+"For false positives from pinning the version of a transitive dependency in "
+"`Cargo.toml`, move the dependency to the `target.\"cfg(false)\"."
+"dependencies` table."
+msgstr ""
+
+#: src/reference/lints.md:458
+msgid ""
+"```toml\n"
+"[package]\n"
+"name = \"foo\"\n"
+"\n"
+"[dependencies]\n"
+"unused = \"1\"\n"
+"```"
+msgstr ""
+
+#: src/reference/lints.md:473
+msgid "Configuration"
+msgstr ""
+
+#: src/reference/lints.md:475
+msgid "`ignore`: a list of dependency names to allow the lint on"
+msgstr ""
+
+#: src/reference/lints.md:478
+msgid "`unused_workspace_dependencies`"
+msgstr ""
+
+#: src/reference/lints.md:486
+msgid ""
+"Checks for any entry in `[workspace.dependencies]` that has not been "
+"inherited"
+msgstr ""
+
+#: src/reference/lints.md:489
+msgid "They can give the false impression that these dependencies are used"
+msgstr ""
+
+#: src/reference/lints.md:492
+msgid ""
+"```toml\n"
+"[workspace.dependencies]\n"
+"regex = \"1\"\n"
+"\n"
+"[dependencies]\n"
+"```"
+msgstr ""
+
+#: src/reference/lints.md:500
+msgid "`unused_workspace_package_fields`"
+msgstr ""
+
+#: src/reference/lints.md:508
+msgid ""
+"Checks for any fields in `[workspace.package]` that has not been inherited"
+msgstr ""
+
+#: src/reference/lints.md:511
+msgid "They can give the false impression that these fields are used"
+msgstr ""
+
+#: src/reference/lints.md:514
+msgid ""
+"```toml\n"
+"[workspace.package]\n"
+"edition = \"2024\"\n"
+"\n"
+"[package]\n"
+"name = \"foo\"\n"
+"```"
+msgstr ""
