@@ -17,8 +17,8 @@ msgstr "创建新项目"
 
 #: src/guide/creating-a-new-project.md:3
 msgid ""
-"To start a new [package](../appendix/glossary.md#package \"\\\"package\\"
-"\" (glossary entry)\") with Cargo, use `cargo new`:"
+"To start a new [package](../appendix/glossary.md#package \"\\\"package\\\" "
+"(glossary entry)\") with Cargo, use `cargo new`:"
 msgstr ""
 
 #: src/guide/creating-a-new-project.md:9

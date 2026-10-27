@@ -38,8 +38,8 @@ msgid ""
 "display debug log messages. The `CARGO_LOG` environment variable can be set "
 "to enable debug logging, with a value such as `trace`, `debug`, or `warn`. "
 "Usually it is only used during debugging. For more details refer to the "
-"[Debug logging](https://doc.crates.io/contrib/implementation/debugging."
-"html#logging)."
+"[Debug logging](https://doc.crates.io/contrib/implementation/"
+"debugging.html#logging)."
 msgstr ""
 
 #: src/reference/environment-variables.md:17
@@ -54,8 +54,8 @@ msgstr ""
 #: src/reference/environment-variables.md:23
 msgid ""
 "`CARGO_TARGET_DIR` --- Location of where to place all generated artifacts, "
-"relative to the current working directory. See [`build.target-dir`](config."
-"md#buildtarget-dir) to set via config."
+"relative to the current working directory. See [`build.target-dir`]"
+"(config.md#buildtarget-dir) to set via config."
 msgstr ""
 
 #: src/reference/environment-variables.md:26
@@ -103,8 +103,8 @@ msgstr ""
 #: src/reference/environment-variables.md:49
 msgid ""
 "`RUSTDOC` --- Instead of running `rustdoc`, Cargo will execute this "
-"specified `rustdoc` instance instead. See [`build.rustdoc`](config."
-"md#buildrustdoc) to set via config."
+"specified `rustdoc` instance instead. See [`build.rustdoc`]"
+"(config.md#buildrustdoc) to set via config."
 msgstr ""
 
 #: src/reference/environment-variables.md:51
@@ -164,8 +164,8 @@ msgstr ""
 
 #: src/reference/environment-variables.md:75
 msgid ""
-"`HTTP_TIMEOUT` --- The HTTP timeout in seconds, see [`http.timeout`](config."
-"md#httptimeout) for more detail."
+"`HTTP_TIMEOUT` --- The HTTP timeout in seconds, see [`http.timeout`]"
+"(config.md#httptimeout) for more detail."
 msgstr ""
 
 #: src/reference/environment-variables.md:77
@@ -175,8 +175,8 @@ msgstr ""
 #: src/reference/environment-variables.md:78
 msgid ""
 "`BROWSER` --- The web browser to execute to open documentation with [`cargo "
-"doc`](../commands/cargo-doc.md)'s `--open` flag, see [`doc.browser`](config."
-"md#docbrowser) for more details."
+"doc`](../commands/cargo-doc.md)'s `--open` flag, see [`doc.browser`]"
+"(config.md#docbrowser) for more details."
 msgstr ""
 
 #: src/reference/environment-variables.md:80
@@ -203,14 +203,14 @@ msgstr ""
 
 #: src/reference/environment-variables.md:91
 msgid ""
-"`CARGO_BUILD_JOBS` --- Number of parallel jobs, see [`build.jobs`](config."
-"md#buildjobs)."
+"`CARGO_BUILD_JOBS` --- Number of parallel jobs, see [`build.jobs`]"
+"(config.md#buildjobs)."
 msgstr ""
 
 #: src/reference/environment-variables.md:92
 msgid ""
-"`CARGO_BUILD_RUSTC` --- The `rustc` executable, see [`build.rustc`](config."
-"md#buildrustc)."
+"`CARGO_BUILD_RUSTC` --- The `rustc` executable, see [`build.rustc`]"
+"(config.md#buildrustc)."
 msgstr ""
 
 #: src/reference/environment-variables.md:93
@@ -240,8 +240,8 @@ msgstr ""
 
 #: src/reference/environment-variables.md:97
 msgid ""
-"`CARGO_BUILD_TARGET_DIR` --- The default output directory, see [`build."
-"target-dir`](config.md#buildtarget-dir)."
+"`CARGO_BUILD_TARGET_DIR` --- The default output directory, see "
+"[`build.target-dir`](config.md#buildtarget-dir)."
 msgstr ""
 
 #: src/reference/environment-variables.md:98
@@ -258,20 +258,20 @@ msgstr ""
 
 #: src/reference/environment-variables.md:100
 msgid ""
-"`CARGO_BUILD_RUSTDOCFLAGS` --- Extra `rustdoc` flags, see [`build."
-"rustdocflags`](config.md#buildrustdocflags)."
+"`CARGO_BUILD_RUSTDOCFLAGS` --- Extra `rustdoc` flags, see "
+"[`build.rustdocflags`](config.md#buildrustdocflags)."
 msgstr ""
 
 #: src/reference/environment-variables.md:101
 msgid ""
-"`CARGO_BUILD_INCREMENTAL` --- Incremental compilation, see [`build."
-"incremental`](config.md#buildincremental)."
+"`CARGO_BUILD_INCREMENTAL` --- Incremental compilation, see "
+"[`build.incremental`](config.md#buildincremental)."
 msgstr ""
 
 #: src/reference/environment-variables.md:102
 msgid ""
-"`CARGO_BUILD_DEP_INFO_BASEDIR` --- Dep-info relative directory, see [`build."
-"dep-info-basedir`](config.md#builddep-info-basedir)."
+"`CARGO_BUILD_DEP_INFO_BASEDIR` --- Dep-info relative directory, see "
+"[`build.dep-info-basedir`](config.md#builddep-info-basedir)."
 msgstr ""
 
 #: src/reference/environment-variables.md:103
@@ -297,20 +297,20 @@ msgstr ""
 
 #: src/reference/environment-variables.md:106
 msgid ""
-"`CARGO_HTTP_DEBUG` --- Enables HTTP debugging, see [`http.debug`](config."
-"md#httpdebug)."
+"`CARGO_HTTP_DEBUG` --- Enables HTTP debugging, see [`http.debug`]"
+"(config.md#httpdebug)."
 msgstr ""
 
 #: src/reference/environment-variables.md:107
 msgid ""
-"`CARGO_HTTP_PROXY` --- Enables HTTP proxy, see [`http.proxy`](config."
-"md#httpproxy)."
+"`CARGO_HTTP_PROXY` --- Enables HTTP proxy, see [`http.proxy`]"
+"(config.md#httpproxy)."
 msgstr ""
 
 #: src/reference/environment-variables.md:108
 msgid ""
-"`CARGO_HTTP_TIMEOUT` --- The HTTP timeout, see [`http.timeout`](config."
-"md#httptimeout)."
+"`CARGO_HTTP_TIMEOUT` --- The HTTP timeout, see [`http.timeout`]"
+"(config.md#httptimeout)."
 msgstr ""
 
 #: src/reference/environment-variables.md:109
@@ -363,8 +363,8 @@ msgstr ""
 
 #: src/reference/environment-variables.md:117
 msgid ""
-"`CARGO_NET_RETRY` --- Number of times to retry network errors, see [`net."
-"retry`](config.md#netretry)."
+"`CARGO_NET_RETRY` --- Number of times to retry network errors, see "
+"[`net.retry`](config.md#netretry)."
 msgstr ""
 
 #: src/reference/environment-variables.md:118
@@ -375,8 +375,8 @@ msgstr ""
 
 #: src/reference/environment-variables.md:119
 msgid ""
-"`CARGO_NET_OFFLINE` --- Offline mode, see [`net.offline`](config."
-"md#netoffline)."
+"`CARGO_NET_OFFLINE` --- Offline mode, see [`net.offline`]"
+"(config.md#netoffline)."
 msgstr ""
 
 #: src/reference/environment-variables.md:120
@@ -408,14 +408,14 @@ msgstr ""
 #: src/reference/environment-variables.md:124
 msgid ""
 "`CARGO_PROFILE_<name>_INCREMENTAL` --- Enable/disable incremental "
-"compilation, see [`profile.<name>.incremental`](config."
-"md#profilenameincremental)."
+"compilation, see [`profile.<name>.incremental`]"
+"(config.md#profilenameincremental)."
 msgstr ""
 
 #: src/reference/environment-variables.md:125
 msgid ""
-"`CARGO_PROFILE_<name>_LTO` --- Link-time optimization, see [`profile.<name>."
-"lto`](config.md#profilenamelto)."
+"`CARGO_PROFILE_<name>_LTO` --- Link-time optimization, see [`profile."
+"<name>.lto`](config.md#profilenamelto)."
 msgstr ""
 
 #: src/reference/environment-variables.md:126
@@ -458,8 +458,8 @@ msgstr ""
 #: src/reference/environment-variables.md:132
 msgid ""
 "`CARGO_REGISTRIES_<name>_CREDENTIAL_PROVIDER` --- Credential provider for a "
-"registry, see [`registries.<name>.credential-provider`](config."
-"md#registriesnamecredential-provider)."
+"registry, see [`registries.<name>.credential-provider`]"
+"(config.md#registriesnamecredential-provider)."
 msgstr ""
 
 #: src/reference/environment-variables.md:133
@@ -477,8 +477,8 @@ msgstr ""
 #: src/reference/environment-variables.md:135
 msgid ""
 "`CARGO_REGISTRY_CREDENTIAL_PROVIDER` --- Credential provider for [crates.io]"
-"(https://crates.io/), see [`registry.credential-provider`](config."
-"md#registrycredential-provider)."
+"(https://crates.io/), see [`registry.credential-provider`]"
+"(config.md#registrycredential-provider)."
 msgstr ""
 
 #: src/reference/environment-variables.md:136
@@ -490,8 +490,9 @@ msgstr ""
 #: src/reference/environment-variables.md:137
 msgid ""
 "`CARGO_REGISTRY_GLOBAL_CREDENTIAL_PROVIDERS` --- Credential providers for "
-"registries that do not have a specific provider defined. See [`registry."
-"global-credential-providers`](config.md#registryglobal-credential-providers)."
+"registries that do not have a specific provider defined. See "
+"[`registry.global-credential-providers`](config.md#registryglobal-credential-"
+"providers)."
 msgstr ""
 
 #: src/reference/environment-variables.md:138
@@ -502,9 +503,9 @@ msgstr ""
 
 #: src/reference/environment-variables.md:139
 msgid ""
-"`CARGO_TARGET_<triple>_LINKER` --- The linker to use, see [`target.<triple>."
-"linker`](config.md#targettriplelinker). The triple must be [converted to "
-"uppercase and underscores](config.md#environment-variables)."
+"`CARGO_TARGET_<triple>_LINKER` --- The linker to use, see [`target."
+"<triple>.linker`](config.md#targettriplelinker). The triple must be "
+"[converted to uppercase and underscores](config.md#environment-variables)."
 msgstr ""
 
 #: src/reference/environment-variables.md:140
@@ -532,8 +533,8 @@ msgstr ""
 
 #: src/reference/environment-variables.md:144
 msgid ""
-"`CARGO_TERM_COLOR` --- The default color mode, see [`term.color`](config."
-"md#termcolor)."
+"`CARGO_TERM_COLOR` --- The default color mode, see [`term.color`]"
+"(config.md#termcolor)."
 msgstr ""
 
 #: src/reference/environment-variables.md:145
@@ -544,8 +545,8 @@ msgstr ""
 
 #: src/reference/environment-variables.md:146
 msgid ""
-"`CARGO_TERM_PROGRESS_WIDTH` --- The default progress bar width, see [`term."
-"progress.width`](config.md#termprogresswidth)."
+"`CARGO_TERM_PROGRESS_WIDTH` --- The default progress bar width, see "
+"[`term.progress.width`](config.md#termprogresswidth)."
 msgstr ""
 
 #: src/reference/environment-variables.md:217
@@ -989,8 +990,8 @@ msgstr ""
 #: src/reference/environment-variables.md:396
 msgid ""
 "`DEP_<links>_<key>` --- For more information about this set of environment "
-"variables, see build script documentation about [`links`](build-scripts."
-"md#the-links-manifest-key)."
+"variables, see build script documentation about [`links`](build-"
+"scripts.md#the-links-manifest-key)."
 msgstr ""
 
 #: src/reference/environment-variables.md:398
@@ -1008,8 +1009,8 @@ msgstr ""
 #: src/reference/environment-variables.md:401
 msgid ""
 "`RUSTC_WORKSPACE_WRAPPER` --- the `rustc` wrapper, if any, that Cargo is "
-"using for workspace members. See [`build.rustc-workspace-wrapper`](config."
-"md#buildrustc-workspace-wrapper)."
+"using for workspace members. See [`build.rustc-workspace-wrapper`]"
+"(config.md#buildrustc-workspace-wrapper)."
 msgstr ""
 
 #: src/reference/environment-variables.md:403
@@ -1023,8 +1024,8 @@ msgstr ""
 #: src/reference/environment-variables.md:407
 msgid ""
 "`CARGO_ENCODED_RUSTFLAGS` --- extra flags that Cargo invokes `rustc` with, "
-"separated by a `0x1f` character (ASCII Unit Separator). See [`build."
-"rustflags`](config.md#buildrustflags). Note that since Rust 1.55, "
+"separated by a `0x1f` character (ASCII Unit Separator). See "
+"[`build.rustflags`](config.md#buildrustflags). Note that since Rust 1.55, "
 "`RUSTFLAGS` is removed from the environment; scripts should use "
 "`CARGO_ENCODED_RUSTFLAGS` instead."
 msgstr ""

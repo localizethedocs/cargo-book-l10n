@@ -48,9 +48,10 @@ msgstr ""
 
 #: src/commands/cargo-run.md:18
 msgid ""
-"Unlike [cargo-test(1)](cargo-test.html) and [cargo-bench(1)](cargo-bench."
-"html), `cargo run` sets the working directory of the binary executed to the "
-"current working directory, same as if it was executed in the shell directly."
+"Unlike [cargo-test(1)](cargo-test.html) and [cargo-bench(1)](cargo-"
+"bench.html), `cargo run` sets the working directory of the binary executed "
+"to the current working directory, same as if it was executed in the shell "
+"directly."
 msgstr ""
 
 #: src/commands/cargo-run.md:22

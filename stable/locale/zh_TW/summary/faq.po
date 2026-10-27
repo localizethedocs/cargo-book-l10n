@@ -237,16 +237,16 @@ msgstr ""
 
 #: src/faq.md:127
 msgid ""
-"Verifying human readable output which won't have compatibility guarantees (e."
-"g. snapshot testing error messages to ensure they are \"understandable\", a "
-"metric too fuzzy to automate)"
+"Verifying human readable output which won't have compatibility guarantees "
+"(e.g. snapshot testing error messages to ensure they are \"understandable\", "
+"a metric too fuzzy to automate)"
 msgstr ""
 
 #: src/faq.md:131
 msgid ""
-"However, this determinism can give a false sense of security because `Cargo."
-"lock` does not affect the consumers of your package, only `Cargo.toml` does "
-"that. For example:"
+"However, this determinism can give a false sense of security because "
+"`Cargo.lock` does not affect the consumers of your package, only "
+"`Cargo.toml` does that. For example:"
 msgstr ""
 
 #: src/faq.md:134
@@ -260,8 +260,8 @@ msgstr ""
 
 #: src/faq.md:136
 msgid ""
-"New dependencies, like those added with [`cargo add`](commands/cargo-add."
-"md), will be locked to the latest version"
+"New dependencies, like those added with [`cargo add`](commands/cargo-"
+"add.md), will be locked to the latest version"
 msgstr ""
 
 #: src/faq.md:138
@@ -333,8 +333,8 @@ msgid ""
 "the network. It returns an error in case it would access the network. You "
 "can use [`cargo fetch`](commands/cargo-fetch.md) in one project to download "
 "dependencies before going offline, and then use those same dependencies in "
-"another project. Refer to [configuration value](reference/config."
-"md#netoffline)) to set via Cargo configuration."
+"another project. Refer to [configuration value](reference/"
+"config.md#netoffline)) to set via Cargo configuration."
 msgstr ""
 
 #: src/faq.md:187
@@ -357,11 +357,11 @@ msgstr ""
 
 #: src/faq.md:201
 msgid ""
-"We've long [wanted to provide better diagnostics about this](https://github."
-"com/rust-lang/cargo/issues/2904) but unfortunately haven't been able to make "
-"progress on that issue in quite some time. In the meantime, however, you can "
-"debug a rebuild at least a little by setting the `CARGO_LOG` environment "
-"variable:"
+"We've long [wanted to provide better diagnostics about this](https://"
+"github.com/rust-lang/cargo/issues/2904) but unfortunately haven't been able "
+"to make progress on that issue in quite some time. In the meantime, however, "
+"you can debug a rebuild at least a little by setting the `CARGO_LOG` "
+"environment variable:"
 msgstr ""
 
 #: src/faq.md:211

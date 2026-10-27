@@ -301,12 +301,12 @@ msgstr ""
 #: src/reference/config.md:212
 msgid ""
 "Cargo can also be configured through environment variables in addition to "
-"the TOML configuration files. For each configuration key of the form `foo."
-"bar` the environment variable `CARGO_FOO_BAR` can also be used to define the "
-"value. Keys are converted to uppercase, dots and dashes are converted to "
-"underscores. For example the `target.x86_64-unknown-linux-gnu.runner` key "
-"can also be defined by the `CARGO_TARGET_X86_64_UNKNOWN_LINUX_GNU_RUNNER` "
-"environment variable."
+"the TOML configuration files. For each configuration key of the form "
+"`foo.bar` the environment variable `CARGO_FOO_BAR` can also be used to "
+"define the value. Keys are converted to uppercase, dots and dashes are "
+"converted to underscores. For example the `target.x86_64-unknown-linux-"
+"gnu.runner` key can also be defined by the "
+"`CARGO_TARGET_X86_64_UNKNOWN_LINUX_GNU_RUNNER` environment variable."
 msgstr ""
 
 #: src/reference/config.md:220
@@ -366,8 +366,8 @@ msgid ""
 "cargo --config \"net.git-fetch-with-cli = true\" …\n"
 "\n"
 "# TOML array example. Single quotes make it easier to read and write.\n"
-"cargo --config 'build.rustdocflags = [\"--html-in-header\", \"header."
-"html\"]' …\n"
+"cargo --config 'build.rustdocflags = [\"--html-in-header\", "
+"\"header.html\"]' …\n"
 "\n"
 "# Example of a complex TOML key.\n"
 "cargo --config \"target.'cfg(all(target_arch = \\\"arm\\\", target_os = \\"
@@ -664,9 +664,9 @@ msgstr ""
 msgid ""
 "This section documents all configuration keys. The description for keys with "
 "variable parts are annotated with angled brackets like `target.<triple>` "
-"where the `<triple>` part can be any [target triple](../appendix/glossary."
-"md#target \"\\\"target\\\" (glossary)\") like `target.x86_64-pc-windows-"
-"msvc`."
+"where the `<triple>` part can be any [target triple](../appendix/"
+"glossary.md#target \"\\\"target\\\" (glossary)\") like `target.x86_64-pc-"
+"windows-msvc`."
 msgstr ""
 
 #: src/reference/config.md:415
@@ -813,8 +813,8 @@ msgstr ""
 #: src/reference/config.md:484
 msgid ""
 "Sets a wrapper to execute instead of `rustc`. The first argument passed to "
-"the wrapper is the path to the actual executable to use (i.e., `build."
-"rustc`, if that is set, or `\"rustc\"` otherwise)."
+"the wrapper is the path to the actual executable to use (i.e., "
+"`build.rustc`, if that is set, or `\"rustc\"` otherwise)."
 msgstr ""
 
 #: src/reference/config.md:488
@@ -1118,10 +1118,10 @@ msgstr ""
 
 #: src/reference/config.md:624
 msgid ""
-"Whether or not to perform [incremental compilation](profiles."
-"md#incremental). The default if not set is to use the value from the "
-"[profile](profiles.md#incremental). Otherwise this overrides the setting of "
-"all profiles."
+"Whether or not to perform [incremental compilation]"
+"(profiles.md#incremental). The default if not set is to use the value from "
+"the [profile](profiles.md#incremental). Otherwise this overrides the setting "
+"of all profiles."
 msgstr ""
 
 #: src/reference/config.md:628
@@ -1149,8 +1149,8 @@ msgstr ""
 #: src/reference/config.md:642
 msgid ""
 "The setting itself is a config-relative path. So, for example, a value of "
-"`\".\"` would strip all paths starting with the parent directory of the `."
-"cargo` directory."
+"`\".\"` would strip all paths starting with the parent directory of the "
+"`.cargo` directory."
 msgstr ""
 
 #: src/reference/config.md:646
@@ -1528,10 +1528,10 @@ msgstr ""
 msgid ""
 "Sets an HTTP and HTTPS proxy to use. The format is in [libcurl format]"
 "(https://everything.curl.dev/transfers/conn/proxies#proxy-types) as in "
-"`[protocol://]host[:port]`. If not set, Cargo will also check the `http."
-"proxy` setting in your global git configuration. If none of those are set, "
-"the `HTTPS_PROXY` or `https_proxy` environment variables set the proxy for "
-"HTTPS requests, and `http_proxy` sets it for HTTP requests."
+"`[protocol://]host[:port]`. If not set, Cargo will also check the "
+"`http.proxy` setting in your global git configuration. If none of those are "
+"set, the `HTTPS_PROXY` or `https_proxy` environment variables set the proxy "
+"for HTTPS requests, and `http_proxy` sets it for HTTP requests."
 msgstr ""
 
 #: src/reference/config.md:808
@@ -1654,9 +1654,9 @@ msgstr ""
 #: src/reference/config.md:860
 msgid ""
 "This setting controls timeout behavior for slow connections. If the average "
-"transfer speed in bytes per second is below the given value for [`http."
-"timeout`](#httptimeout) seconds (default 30 seconds), then the connection is "
-"considered too slow and Cargo will abort and retry."
+"transfer speed in bytes per second is below the given value for "
+"[`http.timeout`](#httptimeout) seconds (default 30 seconds), then the "
+"connection is considered too slow and Cargo will abort and retry."
 msgstr ""
 
 #: src/reference/config.md:865
@@ -1728,8 +1728,8 @@ msgstr ""
 
 #: src/reference/config.md:895
 msgid ""
-"To track information of installed executables, some extra files, such as `."
-"crates.toml` and `.crates2.json`, are also created under this root."
+"To track information of installed executables, some extra files, such as "
+"`.crates.toml` and `.crates2.json`, are also created under this root."
 msgstr ""
 
 #: src/reference/config.md:898
@@ -2101,8 +2101,8 @@ msgstr ""
 
 #: src/reference/config.md:1101
 msgid ""
-"The `[resolver]` table overrides [dependency resolution behavior](resolver."
-"md) for local development (e.g. excludes `cargo install`)."
+"The `[resolver]` table overrides [dependency resolution behavior]"
+"(resolver.md) for local development (e.g. excludes `cargo install`)."
 msgstr ""
 
 #: src/reference/config.md:1103
@@ -2267,10 +2267,10 @@ msgstr ""
 #: src/reference/config.md:1170
 msgid ""
 "`git` causes Cargo to clone the entire index of all packages ever published "
-"to [crates.io](https://crates.io/) from <https://github.com/rust-lang/crates."
-"io-index/>. This can have performance implications due to the size of the "
-"index. `sparse` is a newer protocol which uses HTTPS to download only what "
-"is necessary from <https://index.crates.io/>. This can result in a "
+"to [crates.io](https://crates.io/) from <https://github.com/rust-lang/"
+"crates.io-index/>. This can have performance implications due to the size of "
+"the index. `sparse` is a newer protocol which uses HTTPS to download only "
+"what is necessary from <https://index.crates.io/>. This can result in a "
 "significant performance improvement for resolving new dependencies in most "
 "situations."
 msgstr ""
@@ -2355,8 +2355,8 @@ msgstr ""
 msgid ""
 "Specifies the authentication token for [crates.io](https://crates.io/). This "
 "value should only appear in the [credentials](#credentials) file. This is "
-"used for registry commands like [`cargo publish`](../commands/cargo-publish."
-"md) that require authentication."
+"used for registry commands like [`cargo publish`](../commands/cargo-"
+"publish.md) that require authentication."
 msgstr ""
 
 #: src/reference/config.md:1223
@@ -2514,9 +2514,9 @@ msgstr ""
 
 #: src/reference/config.md:1331
 msgid ""
-"If using a target spec JSON file, the [`<triple>`](../appendix/glossary."
-"md#target \"\\\"target\\\" (glossary)\") value is the filename stem. For "
-"example `--target foo/bar.json` would match `[target.bar]`."
+"If using a target spec JSON file, the [`<triple>`](../appendix/"
+"glossary.md#target \"\\\"target\\\" (glossary)\") value is the filename "
+"stem. For example `--target foo/bar.json` would match `[target.bar]`."
 msgstr ""
 
 #: src/reference/config.md:1334

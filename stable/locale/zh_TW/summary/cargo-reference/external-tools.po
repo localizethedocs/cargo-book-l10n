@@ -425,8 +425,8 @@ msgstr ""
 
 #: src/reference/external-tools.md:193
 msgid ""
-"\"/path/to/my-package/target/debug/deps/libmy_package-be9f3faac0a26ef0."
-"rmeta\""
+"\"/path/to/my-package/target/debug/deps/libmy_package-"
+"be9f3faac0a26ef0.rmeta\""
 msgstr ""
 
 #: src/reference/external-tools.md:195
