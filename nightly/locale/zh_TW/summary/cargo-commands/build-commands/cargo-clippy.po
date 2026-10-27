@@ -48,6 +48,7 @@ msgstr "另請參見"
 
 #: src/commands/cargo-clippy.md:17
 msgid ""
-"[cargo(1)](cargo.md), [cargo-fix(1)](cargo-fix.md), [cargo-fmt(1)](cargo-fmt."
-"md), [Custom subcommands](../reference/external-tools.md#custom-subcommands)"
+"[cargo(1)](cargo.md), [cargo-fix(1)](cargo-fix.md), [cargo-fmt(1)](cargo-"
+"fmt.md), [Custom subcommands](../reference/external-tools.md#custom-"
+"subcommands)"
 msgstr ""

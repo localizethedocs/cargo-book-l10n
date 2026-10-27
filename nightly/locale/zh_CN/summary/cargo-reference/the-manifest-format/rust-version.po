@@ -331,11 +331,11 @@ msgstr ""
 
 #: src/reference/rust-version.md:137
 msgid ""
-"When using [`incompatible-rust-versions = \"fallback\"`](config."
-"md#resolverincompatible-rust-versions), the Rust version of one package can "
-"affect dependency versions selected for another package with a different "
-"Rust version. See the [resolver](resolver.md#rust-version) chapter for more "
-"details."
+"When using [`incompatible-rust-versions = \"fallback\"`]"
+"(config.md#resolverincompatible-rust-versions), the Rust version of one "
+"package can affect dependency versions selected for another package with a "
+"different Rust version. See the [resolver](resolver.md#rust-version) chapter "
+"for more details."
 msgstr ""
 
 #: src/reference/rust-version.md:141

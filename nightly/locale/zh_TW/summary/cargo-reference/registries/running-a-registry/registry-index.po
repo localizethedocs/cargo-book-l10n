@@ -192,8 +192,9 @@ msgstr ""
 msgid ""
 "Registries should consider enforcing limitations on package names added to "
 "their index. Cargo itself allows names with any [alphanumeric](../../std/"
-"primitive.char.html#method.is_alphanumeric), `-`, or `_` characters. [crates."
-"io](https://crates.io/) imposes its own limitations, including the following:"
+"primitive.char.html#method.is_alphanumeric), `-`, or `_` characters. "
+"[crates.io](https://crates.io/) imposes its own limitations, including the "
+"following:"
 msgstr ""
 
 #: src/reference/registry-index.md:94
@@ -227,8 +228,8 @@ msgstr ""
 #: src/reference/registry-index.md:102
 msgid ""
 "Registries should consider incorporating similar restrictions, and consider "
-"the security implications, such as [IDN homograph attacks](https://en."
-"wikipedia.org/wiki/IDN_homograph_attack) and other concerns in [UTR36]"
+"the security implications, such as [IDN homograph attacks](https://"
+"en.wikipedia.org/wiki/IDN_homograph_attack) and other concerns in [UTR36]"
 "(https://www.unicode.org/reports/tr36/) and [UTS39](https://www.unicode.org/"
 "reports/tr39/)."
 msgstr ""
@@ -533,11 +534,12 @@ msgstr ""
 
 #: src/reference/registry-index.md:247
 msgid ""
-"`name` --- When the dependency is [renamed](specifying-dependencies."
-"md#renaming-dependencies-in-cargotoml) in `Cargo.toml`, the publish API puts "
-"the original package name in the `name` field and the aliased name in the "
-"`explicit_name_in_toml` field. The index places the aliased name in the "
-"`name` field, and the original package name in the `package` field."
+"`name` --- When the dependency is [renamed](specifying-"
+"dependencies.md#renaming-dependencies-in-cargotoml) in `Cargo.toml`, the "
+"publish API puts the original package name in the `name` field and the "
+"aliased name in the `explicit_name_in_toml` field. The index places the "
+"aliased name in the `name` field, and the original package name in the "
+"`package` field."
 msgstr ""
 
 #: src/reference/registry-index.md:249
@@ -586,11 +588,11 @@ msgstr ""
 
 #: src/reference/registry-index.md:264
 msgid ""
-"`name` --- When the dependency is [renamed](specifying-dependencies."
-"md#renaming-dependencies-in-cargotoml) in `Cargo.toml`, `cargo metadata` "
-"puts the original package name in the `name` field and the aliased name in "
-"the `rename` field. The index places the aliased name in the `name` field, "
-"and the original package name in the `package` field."
+"`name` --- When the dependency is [renamed](specifying-"
+"dependencies.md#renaming-dependencies-in-cargotoml) in `Cargo.toml`, `cargo "
+"metadata` puts the original package name in the `name` field and the aliased "
+"name in the `rename` field. The index places the aliased name in the `name` "
+"field, and the original package name in the `package` field."
 msgstr ""
 
 #: src/reference/registry-index.md:266
@@ -675,8 +677,8 @@ msgstr ""
 msgid ""
 "Cargo will attempt to fetch the `config.json` file before fetching any other "
 "files. If the server responds with an HTTP 401, then Cargo will assume that "
-"the registry requires authentication and re-attempt the request for `config."
-"json` with the authentication token included."
+"the registry requires authentication and re-attempt the request for "
+"`config.json` with the authentication token included."
 msgstr ""
 
 #: src/reference/registry-index.md:303

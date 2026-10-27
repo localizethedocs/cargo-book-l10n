@@ -33,8 +33,8 @@ msgstr ""
 
 #: src/reference/workspaces.md:9
 msgid ""
-"All packages share a common [`Cargo.lock`](../guide/cargo-toml-vs-cargo-lock."
-"md) file which resides in the _workspace root_."
+"All packages share a common [`Cargo.lock`](../guide/cargo-toml-vs-cargo-"
+"lock.md) file which resides in the _workspace root_."
 msgstr ""
 
 #: src/reference/workspaces.md:11
@@ -145,9 +145,9 @@ msgstr ""
 
 #: src/reference/workspaces.md:46
 msgid ""
-"If the [`[workspace]` section](#the-workspace-section) is added to a `Cargo."
-"toml` that already defines a `[package]`, the package is the _root package_ "
-"of the workspace. The _workspace root_ is the directory where the "
+"If the [`[workspace]` section](#the-workspace-section) is added to a "
+"`Cargo.toml` that already defines a `[package]`, the package is the _root "
+"package_ of the workspace. The _workspace root_ is the directory where the "
 "workspace's `Cargo.toml` is located."
 msgstr ""
 

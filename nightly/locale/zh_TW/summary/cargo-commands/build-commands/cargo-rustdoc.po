@@ -64,8 +64,9 @@ msgstr ""
 #: src/commands/cargo-rustdoc.md:27
 msgid ""
 "To pass flags to all rustdoc processes spawned by Cargo, use the "
-"`RUSTDOCFLAGS` [environment variable](../reference/environment-variables."
-"html) or the `build.rustdocflags` [config value](../reference/config.html)."
+"`RUSTDOCFLAGS` [environment variable](../reference/environment-"
+"variables.html) or the `build.rustdocflags` [config value](../reference/"
+"config.html)."
 msgstr ""
 
 #: src/commands/cargo-rustdoc.md:31

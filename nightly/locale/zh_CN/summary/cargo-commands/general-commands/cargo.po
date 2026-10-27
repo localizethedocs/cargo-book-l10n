@@ -373,8 +373,8 @@ msgstr ""
 #: src/commands/cargo.md:315
 msgid ""
 "`$CARGO_HOME/config.toml`  \n"
-"    The global configuration file. See [the reference](../reference/config."
-"html) for more information about configuration files."
+"    The global configuration file. See [the reference](../reference/"
+"config.html) for more information about configuration files."
 msgstr ""
 
 #: src/commands/cargo.md:319

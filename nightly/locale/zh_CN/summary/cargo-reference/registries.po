@@ -145,8 +145,8 @@ msgstr ""
 #: src/reference/registries.md:75
 msgid ""
 "Instead of always passing the `--registry` command-line option, the default "
-"registry may be set in [`.cargo/config.toml`](config.md) with the `registry."
-"default` key. For example:"
+"registry may be set in [`.cargo/config.toml`](config.md) with the "
+"`registry.default` key. For example:"
 msgstr ""
 
 #: src/reference/registries.md:79
@@ -223,6 +223,6 @@ msgstr ""
 #: src/reference/registries.md:119
 msgid ""
 "The [crates.io](https://crates.io/) registry supports both protocols. The "
-"protocol for crates.io is controlled via the [`registries.crates-io."
-"protocol`](config.md#registriescrates-ioprotocol) config key."
+"protocol for crates.io is controlled via the [`registries.crates-"
+"io.protocol`](config.md#registriescrates-ioprotocol) config key."
 msgstr ""
