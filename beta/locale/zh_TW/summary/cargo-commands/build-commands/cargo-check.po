@@ -65,10 +65,10 @@ msgstr ""
 
 #: src/commands/cargo-check.md:29
 msgid ""
-"The default members of a workspace can be set explicitly with the `workspace."
-"default-members` key in the root manifest. If this is not set, a virtual "
-"workspace will include all workspace members (equivalent to passing `--"
-"workspace`), and a non-virtual workspace will include only the root crate "
+"The default members of a workspace can be set explicitly with the "
+"`workspace.default-members` key in the root manifest. If this is not set, a "
+"virtual workspace will include all workspace members (equivalent to passing "
+"`--workspace`), and a non-virtual workspace will include only the root crate "
 "itself."
 msgstr ""
 

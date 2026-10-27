@@ -21,8 +21,8 @@ msgstr ""
 
 #: src/commands/cargo-search.md:5
 msgid ""
-"cargo-search --- Search packages in the registry. Default registry is crates."
-"io"
+"cargo-search --- Search packages in the registry. Default registry is "
+"crates.io"
 msgstr ""
 
 #: src/commands/cargo-search.md:7

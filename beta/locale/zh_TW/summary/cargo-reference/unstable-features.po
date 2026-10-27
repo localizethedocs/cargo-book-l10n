@@ -28,9 +28,10 @@ msgstr ""
 #: src/reference/unstable.md:9
 msgid ""
 "After some period of time, if the feature does not have any major concerns, "
-"it can be [stabilized](https://doc.crates.io/contrib/process/unstable."
-"html#stabilization), which will make it available on stable once the current "
-"nightly release reaches the stable channel (anywhere from 6 to 12 weeks)."
+"it can be [stabilized](https://doc.crates.io/contrib/process/"
+"unstable.html#stabilization), which will make it available on stable once "
+"the current nightly release reaches the stable channel (anywhere from 6 to "
+"12 weeks)."
 msgstr ""
 
 #: src/reference/unstable.md:13
@@ -612,10 +613,10 @@ msgid ""
 "The `-Z mtime-on-use` flag is an experiment to have Cargo update the mtime "
 "of used files to make it easier for tools like cargo-sweep to detect which "
 "files are stale. For many workflows this needs to be set on _all_ "
-"invocations of cargo. To make this more practical setting the `unstable."
-"mtime_on_use` flag in `.cargo/config.toml` or the corresponding ENV variable "
-"will apply the `-Z mtime-on-use` to all invocations of nightly cargo. (the "
-"config flag is ignored by stable)"
+"invocations of cargo. To make this more practical setting the "
+"`unstable.mtime_on_use` flag in `.cargo/config.toml` or the corresponding "
+"ENV variable will apply the `-Z mtime-on-use` to all invocations of nightly "
+"cargo. (the config flag is ignored by stable)"
 msgstr ""
 
 #: src/reference/unstable.md:186
@@ -824,8 +825,8 @@ msgstr ""
 
 #: src/reference/unstable.md:298
 msgid ""
-"Original Pull Request: [\\#15630](https://github.com/rust-lang/cargo/"
-"pull/15630)"
+"Original Pull Request: [\\#15630](https://github.com/rust-lang/cargo/pull/"
+"15630)"
 msgstr ""
 
 #: src/reference/unstable.md:300
@@ -1047,8 +1048,8 @@ msgstr ""
 
 #: src/reference/unstable.md:409
 msgid ""
-"It's possible to update `my-dependency` to a pre-release with `update -"
-"Zunstable-options my-dependency --precise 0.1.2-pre.0`. This is because "
+"It's possible to update `my-dependency` to a pre-release with `update "
+"-Zunstable-options my-dependency --precise 0.1.2-pre.0`. This is because "
 "`0.1.2-pre.0` is considered compatible with `0.1.1`. It would not be "
 "possible to upgrade to `0.2.0-pre.0` from `0.1.1` in the same way."
 msgstr ""
@@ -1077,8 +1078,8 @@ msgstr ""
 
 #: src/reference/unstable.md:422
 msgid ""
-"To enable this feature either set the `sbom` field in the `.cargo/config."
-"toml`"
+"To enable this feature either set the `sbom` field in the `.cargo/"
+"config.toml`"
 msgstr ""
 
 #: src/reference/unstable.md:432
@@ -1107,8 +1108,8 @@ msgstr ""
 #: src/reference/unstable.md:444
 msgid ""
 "`CARGO_SBOM_PATH` -- a list of generated SBOM precursor files, separated by "
-"the platform PATH separator. The list can be split with `std::env::"
-"split_paths`."
+"the platform PATH separator. The list can be split with "
+"`std::env::split_paths`."
 msgstr ""
 
 #: src/reference/unstable.md:446
@@ -1366,8 +1367,8 @@ msgstr ""
 
 #: src/reference/unstable.md:616
 msgid ""
-"Tracking rustc issue: [\\#63012](https://github.com/rust-lang/rust/"
-"issues/63012)"
+"Tracking rustc issue: [\\#63012](https://github.com/rust-lang/rust/issues/"
+"63012)"
 msgstr ""
 
 #: src/reference/unstable.md:618
@@ -1417,8 +1418,8 @@ msgstr ""
 
 #: src/reference/unstable.md:639
 msgid ""
-"Original Pull Request: [\\#7460](https://github.com/rust-lang/cargo/"
-"pull/7460)"
+"Original Pull Request: [\\#7460](https://github.com/rust-lang/cargo/pull/"
+"7460)"
 msgstr ""
 
 #: src/reference/unstable.md:641
@@ -1444,8 +1445,8 @@ msgstr ""
 
 #: src/reference/unstable.md:654 src/reference/unstable.md:696
 msgid ""
-"Original Pull Request: [\\#9322](https://github.com/rust-lang/cargo/"
-"pull/9322)"
+"Original Pull Request: [\\#9322](https://github.com/rust-lang/cargo/pull/"
+"9322)"
 msgstr ""
 
 #: src/reference/unstable.md:655
@@ -1456,17 +1457,17 @@ msgstr ""
 #: src/reference/unstable.md:657
 msgid ""
 "Historically, Cargo's behavior for whether the `linker` and `rustflags` "
-"configuration options from environment variables and [`[target]`](config."
-"md#target) are respected for build scripts, plugins, and other artifacts "
-"that are _always_ built for the host platform has been somewhat "
+"configuration options from environment variables and [`[target]`]"
+"(config.md#target) are respected for build scripts, plugins, and other "
+"artifacts that are _always_ built for the host platform has been somewhat "
 "inconsistent. When `--target` is _not_ passed, Cargo respects the same "
 "`linker` and `rustflags` for build scripts as for all other compile "
 "artifacts. When `--target` _is_ passed, however, Cargo respects `linker` "
 "from [`[target.<host triple>]`](config.md#targettriplelinker), and does not "
 "pick up any `rustflags` configuration. This dual behavior is confusing, but "
 "also makes it difficult to correctly configure builds where the host triple "
-"and the [target triple](../appendix/glossary.md#target \"\\\"target\\"
-"\" (glossary)\") happen to be the same, but artifacts intended to run on the "
+"and the [target triple](../appendix/glossary.md#target \"\\\"target\\\" "
+"(glossary)\") happen to be the same, but artifacts intended to run on the "
 "build host should still be configured differently."
 msgstr ""
 
@@ -2088,8 +2089,8 @@ msgstr ""
 
 #: src/reference/unstable.md:973
 msgid ""
-"Original Pull Request: [\\#9030](https://github.com/rust-lang/cargo/"
-"pull/9030)"
+"Original Pull Request: [\\#9030](https://github.com/rust-lang/cargo/pull/"
+"9030)"
 msgstr ""
 
 #: src/reference/unstable.md:974
@@ -2098,10 +2099,11 @@ msgstr ""
 
 #: src/reference/unstable.md:976
 msgid ""
-"The `per-package-target` feature adds two keys to the manifest: `package."
-"default-target` and `package.forced-target`. The first makes the package be "
-"compiled by default (ie. when no `--target` argument is passed) for some "
-"target. The second one makes the package always be compiled for the target."
+"The `per-package-target` feature adds two keys to the manifest: "
+"`package.default-target` and `package.forced-target`. The first makes the "
+"package be compiled by default (ie. when no `--target` argument is passed) "
+"for some target. The second one makes the package always be compiled for the "
+"target."
 msgstr ""
 
 #: src/reference/unstable.md:984
@@ -2129,8 +2131,8 @@ msgstr ""
 
 #: src/reference/unstable.md:997
 msgid ""
-"Original Pull Request: [\\#9992](https://github.com/rust-lang/cargo/"
-"pull/9992)"
+"Original Pull Request: [\\#9992](https://github.com/rust-lang/cargo/pull/"
+"9992)"
 msgstr ""
 
 #: src/reference/unstable.md:999
@@ -2326,16 +2328,16 @@ msgstr ""
 #: src/reference/unstable.md:1078
 msgid ""
 "For build-dependencies, these variables are supplied to the `build.rs` "
-"script, and can be accessed using [`std::env::var_os`](https://doc.rust-lang."
-"org/std/env/fn.var_os.html). (As with any OS file path, these may or may not "
-"be valid UTF-8.)"
+"script, and can be accessed using [`std::env::var_os`](https://doc.rust-"
+"lang.org/std/env/fn.var_os.html). (As with any OS file path, these may or "
+"may not be valid UTF-8.)"
 msgstr ""
 
 #: src/reference/unstable.md:1080
 msgid ""
 "For normal dependencies, these variables are supplied during the compilation "
-"of the crate, and can be accessed using the [`env!`](https://doc.rust-lang."
-"org/std/macro.env.html) macro."
+"of the crate, and can be accessed using the [`env!`](https://doc.rust-"
+"lang.org/std/macro.env.html) macro."
 msgstr ""
 
 #: src/reference/unstable.md:1081
@@ -3016,8 +3018,8 @@ msgstr ""
 
 #: src/reference/unstable.md:1427
 msgid ""
-"In addition to today's multi-file packages (`Cargo.toml` file with other `."
-"rs` files), we are adding the concept of single-file packages which may "
+"In addition to today's multi-file packages (`Cargo.toml` file with other "
+"`.rs` files), we are adding the concept of single-file packages which may "
 "contain an embedded manifest.  There is no required distinguishment for a "
 "single-file `.rs` package from any other `.rs` file."
 msgstr ""
@@ -3066,8 +3068,8 @@ msgstr ""
 #: src/reference/unstable.md:1447
 msgid ""
 "`package.workspace`, `package.build`, `package.links`, `package.autolib`, "
-"`package.autobins`, `package.autoexamples`, `package.autotests`, `package."
-"autobenches`"
+"`package.autobins`, `package.autoexamples`, `package.autotests`, "
+"`package.autobenches`"
 msgstr ""
 
 #: src/reference/unstable.md:1449
@@ -3324,8 +3326,8 @@ msgstr ""
 #: src/reference/unstable.md:1556
 msgid ""
 "Path to dependency packages will be replaced with `[package name]-"
-"[version]`. E.g. `/home/username/deps/foo/src/lib.rs` -> `foo-0.1.0/src/lib."
-"rs`"
+"[version]`. E.g. `/home/username/deps/foo/src/lib.rs` -> `foo-0.1.0/src/"
+"lib.rs`"
 msgstr ""
 
 #: src/reference/unstable.md:1558
@@ -3630,8 +3632,8 @@ msgstr ""
 
 #: src/reference/unstable.md:1705
 msgid ""
-"This will work with [RFC 2906 `workspace-deduplicate`](https://rust-lang."
-"github.io/rfcs/2906-cargo-workspace-deduplicate.html):"
+"This will work with [RFC 2906 `workspace-deduplicate`](https://rust-"
+"lang.github.io/rfcs/2906-cargo-workspace-deduplicate.html):"
 msgstr ""
 
 #: src/reference/unstable.md:1707
@@ -3705,10 +3707,10 @@ msgstr ""
 
 #: src/reference/unstable.md:1748
 msgid ""
-"The name of a path base must use only [alphanumeric](https://doc.rust-lang."
-"org/std/primitive.char.html#method.is_alphanumeric) characters or `-` or "
-"`_`, must start with an [alphabetic](https://doc.rust-lang.org/std/primitive."
-"char.html#method.is_alphabetic) character, and must not be empty."
+"The name of a path base must use only [alphanumeric](https://doc.rust-"
+"lang.org/std/primitive.char.html#method.is_alphanumeric) characters or `-` "
+"or `_`, must start with an [alphabetic](https://doc.rust-lang.org/std/"
+"primitive.char.html#method.is_alphabetic) character, and must not be empty."
 msgstr ""
 
 #: src/reference/unstable.md:1752
@@ -3730,9 +3732,9 @@ msgstr ""
 
 #: src/reference/unstable.md:1760
 msgid ""
-"`workspace` - If a project is [a workspace or workspace member](workspaces."
-"md) then this path base is defined as the parent directory of the root "
-"`Cargo.toml` of the workspace."
+"`workspace` - If a project is [a workspace or workspace member]"
+"(workspaces.md) then this path base is defined as the parent directory of "
+"the root `Cargo.toml` of the workspace."
 msgstr ""
 
 #: src/reference/unstable.md:1764
@@ -4135,8 +4137,8 @@ msgstr ""
 
 #: src/reference/unstable.md:1922
 msgid ""
-"Original Pull Request: [\\#15378](https://github.com/rust-lang/cargo/"
-"pull/15378)"
+"Original Pull Request: [\\#15378](https://github.com/rust-lang/cargo/pull/"
+"15378)"
 msgstr ""
 
 #: src/reference/unstable.md:1923
@@ -4166,8 +4168,8 @@ msgstr ""
 
 #: src/reference/unstable.md:1940
 msgid ""
-"The `unstable-editions` value in the `cargo-features` list allows a `Cargo."
-"toml` manifest to specify an edition that is not yet stable."
+"The `unstable-editions` value in the `cargo-features` list allows a "
+"`Cargo.toml` manifest to specify an edition that is not yet stable."
 msgstr ""
 
 #: src/reference/unstable.md:1942
@@ -4236,8 +4238,8 @@ msgstr ""
 
 #: src/reference/unstable.md:1968
 msgid ""
-"Original Pull Request: [\\#15780](https://github.com/rust-lang/cargo/"
-"pull/15780)"
+"Original Pull Request: [\\#15780](https://github.com/rust-lang/cargo/pull/"
+"15780)"
 msgstr ""
 
 #: src/reference/unstable.md:1969
@@ -4356,8 +4358,8 @@ msgstr ""
 
 #: src/reference/unstable.md:2043
 msgid ""
-"Tracking Issue: [rust#148607](https://github.com/rust-lang/rust/"
-"issues/148607)"
+"Tracking Issue: [rust#148607](https://github.com/rust-lang/rust/issues/"
+"148607)"
 msgstr ""
 
 #: src/reference/unstable.md:2045
@@ -4370,8 +4372,8 @@ msgstr ""
 
 #: src/reference/unstable.md:2049
 msgid ""
-"Original Pull Request: [\\#16309](https://github.com/rust-lang/cargo/"
-"pull/16309)"
+"Original Pull Request: [\\#16309](https://github.com/rust-lang/cargo/pull/"
+"16309)"
 msgstr ""
 
 #: src/reference/unstable.md:2050
@@ -4406,8 +4408,8 @@ msgstr ""
 #: src/reference/unstable.md:2062
 msgid ""
 "The `-Z target-spec-json` CLI flag enables the ability to use [custom target "
-"spec JSON files](https://doc.rust-lang.org/nightly/rustc/targets/custom."
-"html) as a target."
+"spec JSON files](https://doc.rust-lang.org/nightly/rustc/targets/"
+"custom.html) as a target."
 msgstr ""
 
 #: src/reference/unstable.md:2068
@@ -4425,8 +4427,9 @@ msgstr ""
 #: src/reference/unstable.md:2074
 msgid ""
 "The compile-progress feature has been stabilized in the 1.30 release. "
-"Progress bars are now enabled by default. See [`term.progress`](config."
-"md#termprogresswhen) for more information about controlling this feature."
+"Progress bars are now enabled by default. See [`term.progress`]"
+"(config.md#termprogresswhen) for more information about controlling this "
+"feature."
 msgstr ""
 
 #: src/reference/unstable.md:2079
@@ -4447,9 +4450,9 @@ msgstr ""
 #: src/reference/unstable.md:2087
 msgid ""
 "Specifying renamed dependencies in `Cargo.toml` has been stabilized in the "
-"1.31 release. See [renaming dependencies](specifying-dependencies."
-"md#renaming-dependencies-in-cargotoml) for more information about renaming "
-"dependencies."
+"1.31 release. See [renaming dependencies](specifying-"
+"dependencies.md#renaming-dependencies-in-cargotoml) for more information "
+"about renaming dependencies."
 msgstr ""
 
 #: src/reference/unstable.md:2091
@@ -4539,9 +4542,9 @@ msgstr ""
 #: src/reference/unstable.md:2139
 msgid ""
 "Specifying profiles in Cargo config files and environment variables has been "
-"stabilized in the 1.43 release. See the [config `[profile]` table](config."
-"md#profile) for more information about specifying [profiles](profiles.md) in "
-"config files."
+"stabilized in the 1.43 release. See the [config `[profile]` table]"
+"(config.md#profile) for more information about specifying [profiles]"
+"(profiles.md) in config files."
 msgstr ""
 
 #: src/reference/unstable.md:2144
@@ -4752,10 +4755,11 @@ msgstr ""
 #: src/reference/unstable.md:2256
 msgid ""
 "Workspace Inheritance has been stabilized in the 1.64 release. See "
-"[workspace.package](workspaces.md#the-package-table), [workspace."
-"dependencies](workspaces.md#the-dependencies-table), and [inheriting-a-"
-"dependency-from-a-workspace](specifying-dependencies.md#inheriting-a-"
-"dependency-from-a-workspace) for more information."
+"[workspace.package](workspaces.md#the-package-table), "
+"[workspace.dependencies](workspaces.md#the-dependencies-table), and "
+"[inheriting-a-dependency-from-a-workspace](specifying-"
+"dependencies.md#inheriting-a-dependency-from-a-workspace) for more "
+"information."
 msgstr ""
 
 #: src/reference/unstable.md:2262

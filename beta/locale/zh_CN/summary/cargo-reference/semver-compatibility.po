@@ -89,11 +89,11 @@ msgstr ""
 #: src/reference/semver.md:47
 msgid ""
 "This guide uses the terms \"major\" and \"minor\" assuming this relates to a "
-"\"1.0.0\" release or later. Initial development releases starting with \"0.y."
-"z\" can treat changes in \"y\" as a major release, and \"z\" as a minor "
-"release. \"0.0.z\" releases are always major changes. This is because Cargo "
-"uses the convention that only changes in the left-most non-zero component "
-"are considered incompatible."
+"\"1.0.0\" release or later. Initial development releases starting with "
+"\"0.y.z\" can treat changes in \"y\" as a major release, and \"z\" as a "
+"minor release. \"0.0.z\" releases are always major changes. This is because "
+"Cargo uses the convention that only changes in the left-most non-zero "
+"component are considered incompatible."
 msgstr ""
 
 #: src/reference/semver.md:54 src/reference/semver.md:107
@@ -468,9 +468,9 @@ msgstr ""
 
 #: src/reference/semver.md:143
 msgid ""
-"Mark renamed items as [deprecated](../../reference/attributes/diagnostics."
-"html#the-deprecated-attribute), and use a [`pub use`](../../reference/items/"
-"use-declarations.html) item to re-export to the old name."
+"Mark renamed items as [deprecated](../../reference/attributes/"
+"diagnostics.html#the-deprecated-attribute), and use a [`pub use`](../../"
+"reference/items/use-declarations.html) item to re-export to the old name."
 msgstr ""
 
 #: src/reference/semver.md:146
@@ -643,9 +643,9 @@ msgstr ""
 
 #: src/reference/semver.md:229
 msgid ""
-"Adding `repr(<int>)` [primitive representation](../../reference/type-layout."
-"html#primitive-representations) to an enum. See [repr-int-enum-add](#repr-"
-"int-enum-add)."
+"Adding `repr(<int>)` [primitive representation](../../reference/type-"
+"layout.html#primitive-representations) to an enum. See [repr-int-enum-add]"
+"(#repr-int-enum-add)."
 msgstr ""
 
 #: src/reference/semver.md:231
@@ -656,10 +656,10 @@ msgstr ""
 
 #: src/reference/semver.md:234
 msgid ""
-"Types that use the [`repr` attribute](../../reference/type-layout."
-"html#representations) can be said to have an alignment and layout that is "
-"defined in some way that code may make some assumptions about that may break "
-"as a result of changing that type."
+"Types that use the [`repr` attribute](../../reference/type-"
+"layout.html#representations) can be said to have an alignment and layout "
+"that is defined in some way that code may make some assumptions about that "
+"may break as a result of changing that type."
 msgstr ""
 
 #: src/reference/semver.md:236
@@ -1147,8 +1147,8 @@ msgstr ""
 msgid ""
 "It is a breaking change to change the primitive representation of a "
 "`repr(<int>)` enum. External crates may be assuming that the discriminant is "
-"a specific size. For example, [`std::mem::transmute`](../../std/mem/fn."
-"transmute.html) of an enum may fail."
+"a specific size. For example, [`std::mem::transmute`](../../std/mem/"
+"fn.transmute.html) of an enum may fail."
 msgstr ""
 
 #: src/reference/semver.md:905
@@ -1204,11 +1204,11 @@ msgstr ""
 
 #: src/reference/semver.md:981 src/reference/semver.md:1015
 msgid ""
-"Mark structs as [`#[non_exhaustive]`](../../reference/attributes/type_system."
-"html#the-non_exhaustive-attribute) when first introducing a struct to "
-"prevent users from using struct literal syntax, and instead provide a "
-"constructor method and/or [Default](../../std/default/trait.Default.html) "
-"implementation."
+"Mark structs as [`#[non_exhaustive]`](../../reference/attributes/"
+"type_system.html#the-non_exhaustive-attribute) when first introducing a "
+"struct to prevent users from using struct literal syntax, and instead "
+"provide a constructor method and/or [Default](../../std/default/"
+"trait.Default.html) implementation."
 msgstr ""
 
 #: src/reference/semver.md:985
@@ -1350,10 +1350,10 @@ msgstr ""
 
 #: src/reference/semver.md:1225 src/reference/semver.md:1264
 msgid ""
-"When introducing the trait, use the [sealed trait](https://rust-lang.github."
-"io/api-guidelines/future-proofing.html#sealed-traits-protect-against-"
-"downstream-implementations-c-sealed) technique to prevent users outside of "
-"the crate from implementing the trait."
+"When introducing the trait, use the [sealed trait](https://rust-"
+"lang.github.io/api-guidelines/future-proofing.html#sealed-traits-protect-"
+"against-downstream-implementations-c-sealed) technique to prevent users "
+"outside of the crate from implementing the trait."
 msgstr ""
 
 #: src/reference/semver.md:1228
@@ -1611,9 +1611,9 @@ msgstr ""
 
 #: src/reference/semver.md:1653
 msgid ""
-"See the [edition guide](../../edition-guide/rust-2024/rpit-lifetime-capture."
-"html) and the [reference](../../reference/types/impl-trait.md#capturing) for "
-"more information on RPIT capturing."
+"See the [edition guide](../../edition-guide/rust-2024/rpit-lifetime-"
+"capture.html) and the [reference](../../reference/types/impl-"
+"trait.md#capturing) for more information on RPIT capturing."
 msgstr ""
 
 #: src/reference/semver.md:1655
@@ -1795,9 +1795,9 @@ msgstr ""
 
 #: src/reference/semver.md:1917
 msgid ""
-"A common idiom to avoid this is to include a `std` [Cargo feature](features."
-"md) that optionally enables `std` support, and when the feature is off, the "
-"library can be used in a `no_std` environment."
+"A common idiom to avoid this is to include a `std` [Cargo feature]"
+"(features.md) that optionally enables `std` support, and when the feature is "
+"off, the library can be used in a `no_std` environment."
 msgstr ""
 
 #: src/reference/semver.md:1921
@@ -1808,17 +1808,17 @@ msgstr ""
 
 #: src/reference/semver.md:1923
 msgid ""
-"Making items [`#[non_exhaustive]`](../../reference/attributes/type_system."
-"html#the-non_exhaustive-attribute) changes how they may be used outside the "
-"crate where they are defined:"
+"Making items [`#[non_exhaustive]`](../../reference/attributes/"
+"type_system.html#the-non_exhaustive-attribute) changes how they may be used "
+"outside the crate where they are defined:"
 msgstr ""
 
 #: src/reference/semver.md:1926
 msgid ""
 "Non-exhaustive structs and enum variants cannot be constructed using [struct "
 "literal](../../reference/expressions/struct-expr.html) syntax, including "
-"[functional update syntax](../../reference/expressions/struct-expr."
-"html#functional-update-syntax)."
+"[functional update syntax](../../reference/expressions/struct-"
+"expr.html#functional-update-syntax)."
 msgstr ""
 
 #: src/reference/semver.md:1928
@@ -1895,11 +1895,11 @@ msgstr ""
 
 #: src/reference/semver.md:2021
 msgid ""
-"Document your package’s minimum-supported Rust version by setting [`package."
-"rust-version`](rust-version.md), allowing Cargo’s dependency resolution to "
-"attempt to [select older versions of your package](resolver.md#rust-version) "
-"when needed. Be sure to consider the [support expectations](rust-version."
-"md#support-expectations) when doing so."
+"Document your package’s minimum-supported Rust version by setting "
+"[`package.rust-version`](rust-version.md), allowing Cargo’s dependency "
+"resolution to attempt to [select older versions of your package]"
+"(resolver.md#rust-version) when needed. Be sure to consider the [support "
+"expectations](rust-version.md#support-expectations) when doing so."
 msgstr ""
 
 #: src/reference/semver.md:2025
@@ -2025,8 +2025,8 @@ msgstr ""
 #: src/reference/semver.md:2096
 msgid ""
 "Transitive dependencies which introduce new lints should not usually cause a "
-"failure because Cargo uses [`--cap-lints`](../../rustc/lints/levels."
-"html#capping-lints) to suppress all lints in dependencies."
+"failure because Cargo uses [`--cap-lints`](../../rustc/lints/"
+"levels.html#capping-lints) to suppress all lints in dependencies."
 msgstr ""
 
 #: src/reference/semver.md:2099
@@ -2134,9 +2134,9 @@ msgid ""
 "When there is an optional dependency, cargo implicitly defines a feature of "
 "the same name to provide a mechanism to enable the dependency and to check "
 "when it is enabled. This problem can be avoided by using the `dep:` syntax "
-"in the `[features]` table, which disables this implicit feature. Using `dep:"
-"` makes it possible to hide the existence of optional dependencies under "
-"more semantically-relevant names which can be more safely modified."
+"in the `[features]` table, which disables this implicit feature. Using "
+"`dep:` makes it possible to hide the existence of optional dependencies "
+"under more semantically-relevant names which can be more safely modified."
 msgstr ""
 
 #: src/reference/semver.md:2195
@@ -2186,8 +2186,8 @@ msgstr ""
 #: src/reference/semver.md:2233
 msgid ""
 "Use the `dep:` syntax in the `[features]` table to avoid exposing optional "
-"dependencies in the first place. See [optional dependencies](features."
-"md#optional-dependencies) for more information."
+"dependencies in the first place. See [optional dependencies]"
+"(features.md#optional-dependencies) for more information."
 msgstr ""
 
 #: src/reference/semver.md:2236

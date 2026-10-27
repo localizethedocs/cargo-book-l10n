@@ -712,8 +712,8 @@ msgstr ""
 #: src/reference/lints.md:453
 msgid ""
 "For false positives from pinning the version of a transitive dependency in "
-"`Cargo.toml`, move the dependency to the `target.\"cfg(false)\"."
-"dependencies` table."
+"`Cargo.toml`, move the dependency to the `target.\"cfg(false)"
+"\".dependencies` table."
 msgstr ""
 
 #: src/reference/lints.md:458

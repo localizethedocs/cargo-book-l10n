@@ -43,9 +43,9 @@ msgstr "組態"
 
 #: src/reference/future-incompat-report.md:26
 msgid ""
-"This feature can be configured through a [`[future-incompat-report]`](config."
-"md#future-incompat-report) section in `.cargo/config.toml`. Currently, the "
-"supported options are:"
+"This feature can be configured through a [`[future-incompat-report]`]"
+"(config.md#future-incompat-report) section in `.cargo/config.toml`. "
+"Currently, the supported options are:"
 msgstr ""
 
 #: src/reference/future-incompat-report.md:29

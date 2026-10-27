@@ -27,8 +27,8 @@ msgid ""
 "Using alternative registries with authentication _requires_ a credential "
 "provider to be configured to avoid unknowingly storing unencrypted "
 "credentials on disk. For historical reasons, public (non-authenticated) "
-"registries do not require credential provider configuration, and the `cargo:"
-"token` provider is used if no providers are configured."
+"registries do not require credential provider configuration, and the "
+"`cargo:token` provider is used if no providers are configured."
 msgstr ""
 
 #: src/reference/registry-authentication.md:11
@@ -60,8 +60,8 @@ msgstr "Unix：`~/.cargo/config.toml`"
 #: src/reference/registry-authentication.md:21
 msgid ""
 "This recommended configuration uses the operating system provider, with a "
-"fallback to `cargo:token` to look in Cargo's [credentials](config."
-"md#credentials) file or environment variables:"
+"fallback to `cargo:token` to look in Cargo's [credentials]"
+"(config.md#credentials) file or environment variables:"
 msgstr ""
 
 #: src/reference/registry-authentication.md:23
@@ -69,8 +69,8 @@ msgid ""
 "```toml\n"
 "# ~/.cargo/config.toml\n"
 "[registry]\n"
-"global-credential-providers = [\"cargo:token\", \"cargo:libsecret\", \"cargo:"
-"macos-keychain\", \"cargo:wincred\"]\n"
+"global-credential-providers = [\"cargo:token\", \"cargo:libsecret\", "
+"\"cargo:macos-keychain\", \"cargo:wincred\"]\n"
 "```"
 msgstr ""
 

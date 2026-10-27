@@ -48,8 +48,8 @@ msgstr ""
 msgid ""
 "The configuration necessary to use the vendored sources would be printed to "
 "stdout after `cargo vendor` completes the vendoring process. You will need "
-"to add or redirect it to your Cargo configuration file, which is usually `."
-"cargo/config.toml` locally for the current package."
+"to add or redirect it to your Cargo configuration file, which is usually "
+"`.cargo/config.toml` locally for the current package."
 msgstr ""
 
 #: src/commands/cargo-vendor.md:24

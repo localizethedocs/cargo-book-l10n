@@ -311,8 +311,9 @@ msgstr ""
 
 #: src/reference/manifest.md:80
 msgid ""
-"The name must use only [alphanumeric](../../std/primitive.char.html#method."
-"is_alphanumeric) characters or `-` or `_`, and cannot be empty."
+"The name must use only [alphanumeric](../../std/"
+"primitive.char.html#method.is_alphanumeric) characters or `-` or `_`, and "
+"cannot be empty."
 msgstr ""
 
 #: src/reference/manifest.md:82
@@ -346,8 +347,8 @@ msgstr ""
 
 #: src/reference/manifest.md:95
 msgid ""
-"The `version` field is formatted according to the [SemVer](https://semver."
-"org) specification:"
+"The `version` field is formatted according to the [SemVer](https://"
+"semver.org) specification:"
 msgstr ""
 
 #: src/reference/manifest.md:97
@@ -714,8 +715,8 @@ msgstr ""
 #: src/reference/manifest.md:307
 msgid ""
 "**Note**: [crates.io](https://crates.io/) has a maximum of 5 categories. "
-"Each category should match one of the strings available at <https://crates."
-"io/category_slugs>, and must match exactly."
+"Each category should match one of the strings available at <https://"
+"crates.io/category_slugs>, and must match exactly."
 msgstr ""
 
 #: src/reference/manifest.md:311
@@ -774,9 +775,9 @@ msgstr ""
 #: src/reference/manifest.md:345
 msgid ""
 "The default is `\"build.rs\"`, which loads the script from a file named "
-"`build.rs` in the root of the package. Use `build = \"custom_build_name."
-"rs\"` to specify a path to a different file or `build = false` to disable "
-"automatic detection of the build script."
+"`build.rs` in the root of the package. Use `build = "
+"\"custom_build_name.rs\"` to specify a path to a different file or `build = "
+"false` to disable automatic detection of the build script."
 msgstr ""
 
 #: src/reference/manifest.md:350
@@ -786,8 +787,8 @@ msgstr ""
 #: src/reference/manifest.md:352
 msgid ""
 "The `links` field specifies the name of a native library that is being "
-"linked to. More information can be found in the [`links`](build-scripts."
-"md#the-links-manifest-key) section of the build script guide."
+"linked to. More information can be found in the [`links`](build-"
+"scripts.md#the-links-manifest-key) section of the build script guide."
 msgstr ""
 
 #: src/reference/manifest.md:358
@@ -812,12 +813,12 @@ msgstr ""
 #: src/reference/manifest.md:369
 msgid ""
 "The `exclude` and `include` fields can be used to explicitly specify which "
-"files are included when packaging a project to be [published](publishing."
-"md), and certain kinds of change tracking (described below). The patterns "
-"specified in the `exclude` field identify a set of files that are not "
-"included, and the patterns in `include` specify files that are explicitly "
-"included. You may run [`cargo package --list`](../commands/cargo-package.md) "
-"to verify which files will be included in the package."
+"files are included when packaging a project to be [published]"
+"(publishing.md), and certain kinds of change tracking (described below). The "
+"patterns specified in the `exclude` field identify a set of files that are "
+"not included, and the patterns in `include` specify files that are "
+"explicitly included. You may run [`cargo package --list`](../commands/cargo-"
+"package.md) to verify which files will be included in the package."
 msgstr ""
 
 #: src/reference/manifest.md:378
@@ -871,8 +872,8 @@ msgstr ""
 
 #: src/reference/manifest.md:404
 msgid ""
-"Any sub-packages will be skipped (any subdirectory that contains a `Cargo."
-"toml` file)."
+"Any sub-packages will be skipped (any subdirectory that contains a "
+"`Cargo.toml` file)."
 msgstr ""
 
 #: src/reference/manifest.md:406
@@ -975,8 +976,8 @@ msgstr ""
 
 #: src/reference/manifest.md:443
 msgid ""
-"`!` prefix negates a pattern. For example, a pattern of `src/*.rs` and `!foo."
-"rs` would match all files with the `.rs` extension inside the `src` "
+"`!` prefix negates a pattern. For example, a pattern of `src/*.rs` and `!"
+"foo.rs` would match all files with the `.rs` extension inside the `src` "
 "directory, except for any file named `foo.rs`."
 msgstr ""
 
@@ -1032,8 +1033,8 @@ msgid ""
 "Cargo by default will warn about unused keys in `Cargo.toml` to assist in "
 "detecting typos and such. The `package.metadata` table, however, is "
 "completely ignored by Cargo and will not be warned about. This section can "
-"be used for tools which would like to store package configuration in `Cargo."
-"toml`. For example:"
+"be used for tools which would like to store package configuration in "
+"`Cargo.toml`. For example:"
 msgstr ""
 
 #: src/reference/manifest.md:487
@@ -1158,9 +1159,9 @@ msgstr ""
 msgid ""
 "To know which table under `[lints]` a particular lint belongs under, it is "
 "the part before `::` in the lint name.  If there isn't a `::`, then the tool "
-"is `rust`.  For example a warning about `unsafe_code` would be `lints.rust."
-"unsafe_code` but a lint about `clippy::enum_glob_use` would be `lints.clippy."
-"enum_glob_use`."
+"is `rust`.  For example a warning about `unsafe_code` would be "
+"`lints.rust.unsafe_code` but a lint about `clippy::enum_glob_use` would be "
+"`lints.clippy.enum_glob_use`."
 msgstr ""
 
 #: src/reference/manifest.md:553

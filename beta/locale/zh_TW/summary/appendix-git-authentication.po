@@ -100,9 +100,9 @@ msgstr ""
 
 #: src/appendix/git-authentication.md:57
 msgid ""
-"**Note:** Cargo does not support git's shorthand SSH URLs like `git@example."
-"com:user/repo.git`. Use a full SSH URL like `ssh://git@example.com/user/repo."
-"git`."
+"**Note:** Cargo does not support git's shorthand SSH URLs like "
+"`git@example.com:user/repo.git`. Use a full SSH URL like `ssh://"
+"git@example.com/user/repo.git`."
 msgstr ""
 
 #: src/appendix/git-authentication.md:61
@@ -126,8 +126,8 @@ msgid ""
 "\\ssh\\ssh_known_hosts` on Windows). More information about these files can "
 "be found in the [sshd man page](https://man.openbsd.org/"
 "sshd#SSH_KNOWN_HOSTS_FILE_FORMAT). Alternatively, keys may be configured in "
-"a Cargo configuration file with [`net.ssh.known-hosts`](../reference/config."
-"md#netsshknown-hosts)."
+"a Cargo configuration file with [`net.ssh.known-hosts`](../reference/"
+"config.md#netsshknown-hosts)."
 msgstr ""
 
 #: src/appendix/git-authentication.md:76

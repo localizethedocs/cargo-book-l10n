@@ -106,6 +106,6 @@ msgstr "另請參見"
 
 #: src/commands/cargo-update.md:240
 msgid ""
-"[cargo(1)](cargo.html), [cargo-generate-lockfile(1)](cargo-generate-lockfile."
-"html)"
+"[cargo(1)](cargo.html), [cargo-generate-lockfile(1)](cargo-generate-"
+"lockfile.html)"
 msgstr ""

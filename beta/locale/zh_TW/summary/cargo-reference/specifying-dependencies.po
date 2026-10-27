@@ -17,9 +17,9 @@ msgstr ""
 
 #: src/reference/specifying-dependencies.md:3
 msgid ""
-"Your crates can depend on other libraries from [crates.io](https://crates."
-"io/) or other registries, `git` repositories, or subdirectories on your "
-"local file system. You can also temporarily override the location of a "
+"Your crates can depend on other libraries from [crates.io](https://"
+"crates.io/) or other registries, `git` repositories, or subdirectories on "
+"your local file system. You can also temporarily override the location of a "
 "dependency --- for example, to be able to test out a bug fix in the "
 "dependency that you are working on locally. You can have different "
 "dependencies for different platforms, and dependencies that are only used "
@@ -32,10 +32,10 @@ msgstr ""
 
 #: src/reference/specifying-dependencies.md:13
 msgid ""
-"Cargo is configured to look for dependencies on [crates.io](https://crates."
-"io/) by default. Only the name and a version string are required in this "
-"case. In [the cargo guide](../guide/index.md), we specified a dependency on "
-"the `time` crate:"
+"Cargo is configured to look for dependencies on [crates.io](https://"
+"crates.io/) by default. Only the name and a version string are required in "
+"this case. In [the cargo guide](../guide/index.md), we specified a "
+"dependency on the `time` crate:"
 msgstr ""
 
 #: src/reference/specifying-dependencies.md:17
@@ -467,8 +467,8 @@ msgstr ""
 msgid ""
 "```toml\n"
 "[dependencies]\n"
-"regex = { version = \"1.10.3\", git = \"https://github.com/rust-lang/regex."
-"git\", branch = \"next\" }\n"
+"regex = { version = \"1.10.3\", git = \"https://github.com/rust-lang/"
+"regex.git\", branch = \"next\" }\n"
 "```"
 msgstr ""
 
@@ -565,10 +565,11 @@ msgstr ""
 
 #: src/reference/specifying-dependencies.md:352
 msgid ""
-"The local paths must point to the exact folder with the dependency's `Cargo."
-"toml`. Unlike with `git` dependencies, Cargo does not traverse local paths. "
-"For example, if `regex-lite` and `regex-syntax` are members of a locally "
-"cloned `rust-lang/regex` repo, they have to be referred to by the full path:"
+"The local paths must point to the exact folder with the dependency's "
+"`Cargo.toml`. Unlike with `git` dependencies, Cargo does not traverse local "
+"paths. For example, if `regex-lite` and `regex-syntax` are members of a "
+"locally cloned `rust-lang/regex` repo, they have to be referred to by the "
+"full path:"
 msgstr ""
 
 #: src/reference/specifying-dependencies.md:357
@@ -621,10 +622,10 @@ msgstr ""
 #: src/reference/specifying-dependencies.md:385
 msgid ""
 "**Note**: [crates.io](https://crates.io/) does not allow packages to be "
-"published with dependencies on code outside of [crates.io](https://crates."
-"io/), except for [dev-dependencies](#development-dependencies). See the "
-"[Multiple locations](#multiple-locations) section for a fallback alternative "
-"for `git` and `path` dependencies."
+"published with dependencies on code outside of [crates.io](https://"
+"crates.io/), except for [dev-dependencies](#development-dependencies). See "
+"the [Multiple locations](#multiple-locations) section for a fallback "
+"alternative for `git` and `path` dependencies."
 msgstr ""
 
 #: src/reference/specifying-dependencies.md:390
@@ -760,8 +761,8 @@ msgstr ""
 
 #: src/reference/specifying-dependencies.md:480
 msgid ""
-"If you’re using a custom target specification (such as `--target foo/bar."
-"json`), use the base filename without the `.json` extension:"
+"If you’re using a custom target specification (such as `--target foo/"
+"bar.json`), use the base filename without the `.json` extension:"
 msgstr ""
 
 #: src/reference/specifying-dependencies.md:483
@@ -978,11 +979,11 @@ msgstr ""
 
 #: src/reference/specifying-dependencies.md:608
 msgid ""
-"All three of these crates have the package name of `foo` in their own `Cargo."
-"toml`, so we're explicitly using the `package` key to inform Cargo that we "
-"want the `foo` package even though we're calling it something else locally. "
-"The `package` key, if not specified, defaults to the name of the dependency "
-"being requested."
+"All three of these crates have the package name of `foo` in their own "
+"`Cargo.toml`, so we're explicitly using the `package` key to inform Cargo "
+"that we want the `foo` package even though we're calling it something else "
+"locally. The `package` key, if not specified, defaults to the name of the "
+"dependency being requested."
 msgstr ""
 
 #: src/reference/specifying-dependencies.md:614
@@ -1029,8 +1030,8 @@ msgstr ""
 
 #: src/reference/specifying-dependencies.md:640
 msgid ""
-"[`optional`](features.md#optional-dependencies): Note that the`[workspace."
-"dependencies]` table is not allowed to specify `optional`."
+"[`optional`](features.md#optional-dependencies): Note that "
+"the`[workspace.dependencies]` table is not allowed to specify `optional`."
 msgstr ""
 
 #: src/reference/specifying-dependencies.md:641
