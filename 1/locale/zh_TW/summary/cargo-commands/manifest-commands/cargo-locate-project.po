@@ -40,8 +40,8 @@ msgstr "描述"
 #: src/commands/cargo-locate-project.md:13
 msgid ""
 "This command will print a JSON object to stdout with the full path to the "
-"manifest. The manifest is found by searching upward for a file named `Cargo."
-"toml` starting from the current working directory."
+"manifest. The manifest is found by searching upward for a file named "
+"`Cargo.toml` starting from the current working directory."
 msgstr ""
 
 #: src/commands/cargo-locate-project.md:17

@@ -149,8 +149,8 @@ msgstr ""
 
 #: src/guide/continuous-integration.md:33
 msgid ""
-"rustup update ${{ matrix.toolchain }} && rustup default ${{ matrix."
-"toolchain }}"
+"rustup update ${{ matrix.toolchain }} && rustup default $"
+"{{ matrix.toolchain }}"
 msgstr ""
 
 #: src/guide/continuous-integration.md:34
@@ -173,8 +173,8 @@ msgid ""
 "version will fail the entire job). You can also click `\"Actions\" > \"new "
 "workflow\"` in the GitHub UI and select Rust to add the [default "
 "configuration](https://github.com/actions/starter-workflows/blob/main/ci/"
-"rust.yml) to your repo. See [GitHub Actions documentation](https://docs."
-"github.com/en/actions) for more information."
+"rust.yml) to your repo. See [GitHub Actions documentation](https://"
+"docs.github.com/en/actions) for more information."
 msgstr ""
 
 #: src/guide/continuous-integration.md:41
@@ -341,8 +341,8 @@ msgid ""
 "When [specifying dependencies](../reference/specifying-dependencies.md) in "
 "`Cargo.toml`, they generally match a range of versions. Exhaustively testing "
 "all version combination would be unwieldy. Verifying the latest versions "
-"would at least test for users who run [`cargo add`](../commands/cargo-add."
-"md) or [`cargo install`](../commands/cargo-install.md)."
+"would at least test for users who run [`cargo add`](../commands/cargo-"
+"add.md) or [`cargo install`](../commands/cargo-install.md)."
 msgstr ""
 
 #: src/guide/continuous-integration.md:135
@@ -481,10 +481,10 @@ msgstr ""
 
 #: src/guide/continuous-integration.md:178
 msgid ""
-"[`CARGO_RESOLVER_INCOMPATIBLE_RUST_VERSIONS`](../reference/config."
-"md#resolverincompatible-rust-versions) is set to ensure the [resolver](../"
-"reference/resolver.md) doesn't limit selected dependencies because of your "
-"project's [Rust version](../reference/rust-version.md)."
+"[`CARGO_RESOLVER_INCOMPATIBLE_RUST_VERSIONS`](../reference/"
+"config.md#resolverincompatible-rust-versions) is set to ensure the [resolver]"
+"(../reference/resolver.md) doesn't limit selected dependencies because of "
+"your project's [Rust version](../reference/rust-version.md)."
 msgstr ""
 
 #: src/guide/continuous-integration.md:180
@@ -499,9 +499,9 @@ msgstr ""
 
 #: src/guide/continuous-integration.md:185
 msgid ""
-"When publishing packages that specify [`rust-version`](../reference/manifest."
-"md#the-rust-version-field), it is important to verify the correctness of "
-"that field."
+"When publishing packages that specify [`rust-version`](../reference/"
+"manifest.md#the-rust-version-field), it is important to verify the "
+"correctness of that field."
 msgstr ""
 
 #: src/guide/continuous-integration.md:188

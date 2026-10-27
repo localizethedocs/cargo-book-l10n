@@ -74,8 +74,8 @@ msgstr ""
 
 #: src/guide/build-performance.md:19
 msgid ""
-"Limited in what configuration is supported (see [\\#12738](https://github."
-"com/rust-lang/cargo/issues/12738) for expanding this)"
+"Limited in what configuration is supported (see [\\#12738](https://"
+"github.com/rust-lang/cargo/issues/12738) for expanding this)"
 msgstr ""
 
 #: src/guide/build-performance.md:20
@@ -358,13 +358,13 @@ msgstr ""
 
 #: src/guide/build-performance.md:132
 msgid ""
-"When invoking `cargo`, [features get activated](../reference/resolver."
-"md#features) based on which workspace members you have selected. However, "
-"when contributing to an application, you may need to build and test various "
-"packages within the application, which can cause extraneous rebuilds because "
-"different sets of features may be activated for common dependencies. With "
-"[`feature-unification`](../reference/unstable.md#feature-unification), you "
-"can reuse more dependency builds by ensuring the same set of dependency "
+"When invoking `cargo`, [features get activated](../reference/"
+"resolver.md#features) based on which workspace members you have selected. "
+"However, when contributing to an application, you may need to build and test "
+"various packages within the application, which can cause extraneous rebuilds "
+"because different sets of features may be activated for common dependencies. "
+"With [`feature-unification`](../reference/unstable.md#feature-unification), "
+"you can reuse more dependency builds by ensuring the same set of dependency "
 "features are activated, independent of which package you are currently "
 "building and testing."
 msgstr ""
@@ -434,9 +434,9 @@ msgstr ""
 #: src/guide/build-performance.md:170
 msgid ""
 "Recommendation: Periodically review unused features from dependencies for "
-"removal using third-party tools like [cargo-features-manager](https://crates."
-"io/crates/cargo-features-manager), [cargo-unused-features](https://crates.io/"
-"crates/cargo-unused-features)."
+"removal using third-party tools like [cargo-features-manager](https://"
+"crates.io/crates/cargo-features-manager), [cargo-unused-features](https://"
+"crates.io/crates/cargo-unused-features)."
 msgstr ""
 
 #: src/guide/build-performance.md:174

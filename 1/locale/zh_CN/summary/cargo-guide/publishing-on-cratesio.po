@@ -19,8 +19,8 @@ msgstr ""
 msgid ""
 "Once you've got a library that you'd like to share with the world, it's time "
 "to publish it on [crates.io](https://crates.io/)! Publishing a crate is when "
-"a specific version is uploaded to be hosted on [crates.io](https://crates."
-"io/)."
+"a specific version is uploaded to be hosted on [crates.io](https://"
+"crates.io/)."
 msgstr ""
 
 #: src/reference/publishing.md:7
@@ -36,13 +36,13 @@ msgstr ""
 
 #: src/reference/publishing.md:13
 msgid ""
-"First things first, you’ll need an account on [crates.io](https://crates."
-"io/) to acquire an API token. To do so, [visit the home page](https://crates."
-"io/) and log in via a GitHub account (required for now). You will also need "
-"to provide and verify your email address on the [Account Settings](https://"
-"crates.io/settings/profile) page. Once that is done [create an API token]"
-"(https://crates.io/settings/tokens), make sure you copy it. Once you leave "
-"the page you will not be able to see it again."
+"First things first, you’ll need an account on [crates.io](https://"
+"crates.io/) to acquire an API token. To do so, [visit the home page](https://"
+"crates.io/) and log in via a GitHub account (required for now). You will "
+"also need to provide and verify your email address on the [Account Settings]"
+"(https://crates.io/settings/profile) page. Once that is done [create an API "
+"token](https://crates.io/settings/tokens), make sure you copy it. Once you "
+"leave the page you will not be able to see it again."
 msgstr ""
 
 #: src/reference/publishing.md:20
@@ -241,11 +241,11 @@ msgstr ""
 
 #: src/reference/publishing.md:133
 msgid ""
-"In order to release a new version, change [the `version` value](manifest."
-"md#the-version-field) specified in your `Cargo.toml` manifest. Keep in mind "
-"[the SemVer rules](semver.md) which provide guidelines on what is a "
-"compatible change. Then run [`cargo publish`](../commands/cargo-publish.md) "
-"as described above to upload the new version."
+"In order to release a new version, change [the `version` value]"
+"(manifest.md#the-version-field) specified in your `Cargo.toml` manifest. "
+"Keep in mind [the SemVer rules](semver.md) which provide guidelines on what "
+"is a compatible change. Then run [`cargo publish`](../commands/cargo-"
+"publish.md) as described above to upload the new version."
 msgstr ""
 
 #: src/reference/publishing.md:137
@@ -392,8 +392,9 @@ msgstr ""
 #: src/reference/publishing.md:217
 msgid ""
 "It looks like you don’t have permission to query a necessary property from "
-"GitHub to complete this request. You may need to re-authenticate on [crates."
-"io](https://crates.io/) to grant permission to read GitHub org memberships."
+"GitHub to complete this request. You may need to re-authenticate on "
+"[crates.io](https://crates.io/) to grant permission to read GitHub org "
+"memberships."
 msgstr ""
 
 #: src/reference/publishing.md:221
@@ -409,8 +410,9 @@ msgid ""
 "feature was added. We originally requested _no_ permissions from GitHub when "
 "authenticating users, because we didn’t actually ever use the user’s token "
 "for anything other than logging them in. However to query team membership on "
-"your behalf, we now require [the `read:org` scope](https://developer.github."
-"com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/)."
+"your behalf, we now require [the `read:org` scope](https://"
+"developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-"
+"apps/)."
 msgstr ""
 
 #: src/reference/publishing.md:231
@@ -426,9 +428,9 @@ msgstr ""
 #: src/reference/publishing.md:237
 msgid ""
 "If you ever change your mind, or just aren’t sure if [crates.io](https://"
-"crates.io/) has sufficient permission, you can always go to <https://crates."
-"io/> and re-authenticate, which will prompt you for permission if [crates.io]"
-"(https://crates.io/) doesn’t have all the scopes it would like to."
+"crates.io/) has sufficient permission, you can always go to <https://"
+"crates.io/> and re-authenticate, which will prompt you for permission if "
+"[crates.io](https://crates.io/) doesn’t have all the scopes it would like to."
 msgstr ""
 
 #: src/reference/publishing.md:242

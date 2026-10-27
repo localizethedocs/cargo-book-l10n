@@ -20,9 +20,8 @@ msgid ""
 "[crates.io](https://crates.io/) is the Rust community's central [_package "
 "registry_](../appendix/glossary.md#package-registry \"\\\"package-registry\\"
 "\" (glossary entry)\") that serves as a location to discover and download "
-"[packages](../appendix/glossary.md#package \"\\\"package\\\" (glossary "
-"entry)\"). `cargo` is configured to use it by default to find requested "
-"packages."
+"[packages](../appendix/glossary.md#package \"\\\"package\\\" (glossary entry)"
+"\"). `cargo` is configured to use it by default to find requested packages."
 msgstr ""
 
 #: src/guide/dependencies.md:8
@@ -38,8 +37,8 @@ msgstr ""
 #: src/guide/dependencies.md:14
 msgid ""
 "If your `Cargo.toml` doesn't already have a `[dependencies]` section, add "
-"that, then list the [crate](../appendix/glossary.md#crate \"\\\"crate\\"
-"\" (glossary entry)\") name and version that you would like to use. This "
+"that, then list the [crate](../appendix/glossary.md#crate \"\\\"crate\\\" "
+"(glossary entry)\") name and version that you would like to use. This "
 "example adds a dependency on the `time` crate:"
 msgstr ""
 
