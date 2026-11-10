@@ -1,0 +1,127 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Cargo Book\n"
+"POT-Creation-Date: 2026-04-14T09:32:53Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/commands/cargo-help.md:1
+msgid "cargo-help(1)"
+msgstr ""
+
+#: src/commands/cargo-help.md:3
+msgid "NAME"
+msgstr ""
+
+#: src/commands/cargo-help.md:5
+msgid "cargo-help --- Get help for a Cargo command"
+msgstr ""
+
+#: src/commands/cargo-help.md:7
+msgid "SYNOPSIS"
+msgstr ""
+
+#: src/commands/cargo-help.md:9
+msgid "`cargo help` \\[_subcommand_\\]"
+msgstr ""
+
+#: src/commands/cargo-help.md:11
+msgid "DESCRIPTION"
+msgstr ""
+
+#: src/commands/cargo-help.md:13
+msgid "Prints a help message for the given command."
+msgstr ""
+
+#: src/commands/cargo-help.md:15
+msgid ""
+"For commands with subcommands, separate the command levels with spaces. For "
+"example, `cargo help report future-incompatibilities` displays help for the "
+"`cargo report future-incompatibilities` command."
+msgstr ""
+
+#: src/commands/cargo-help.md:19
+msgid ""
+"Spaces separate hierarchy levels only between a parent command and its "
+"subcommands. Dashes that are part of a command's name, such as `generate-"
+"lockfile`, must always be preserved."
+msgstr ""
+
+#: src/commands/cargo-help.md:23
+msgid ""
+"Multiple command levels can also be written as a single dash-joined word. "
+"For example, `cargo help report-future-incompatibilities` is equivalent to "
+"`cargo help report future-incompatibilities`."
+msgstr ""
+
+#: src/commands/cargo-help.md:27
+msgid "OPTIONS"
+msgstr ""
+
+#: src/commands/cargo-help.md:29
+msgid "Display Options"
+msgstr ""
+
+#: src/commands/cargo-help.md:63
+msgid "Manifest Options"
+msgstr ""
+
+#: src/commands/cargo-help.md:99
+msgid "Common Options"
+msgstr ""
+
+#: src/commands/cargo-help.md:144
+msgid "ENVIRONMENT"
+msgstr ""
+
+#: src/commands/cargo-help.md:146
+msgid ""
+"See [the reference](../reference/environment-variables.html) for details on "
+"environment variables that Cargo reads."
+msgstr ""
+
+#: src/commands/cargo-help.md:149
+msgid "EXIT STATUS"
+msgstr ""
+
+#: src/commands/cargo-help.md:151
+msgid "`0`: Cargo succeeded."
+msgstr ""
+
+#: src/commands/cargo-help.md:152
+msgid "`101`: Cargo failed to complete."
+msgstr ""
+
+#: src/commands/cargo-help.md:154
+msgid "EXAMPLES"
+msgstr ""
+
+#: src/commands/cargo-help.md:156
+msgid "Get help for a command:"
+msgstr ""
+
+#: src/commands/cargo-help.md:160
+msgid "Get help for a nested command:"
+msgstr ""
+
+#: src/commands/cargo-help.md:164
+msgid "The dash-joined form also works:"
+msgstr ""
+
+#: src/commands/cargo-help.md:168
+msgid "Help is also available with the `--help` flag:"
+msgstr ""
+
+#: src/commands/cargo-help.md:172
+msgid "SEE ALSO"
+msgstr ""
+
+#: src/commands/cargo-help.md:173
+msgid "[cargo(1)](cargo.html)"
+msgstr ""
