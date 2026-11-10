@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:1
 msgid "cargo-metadata(1)"
-msgstr ""
+msgstr "cargo-metadata(1)"
 
 #: src/commands/cargo-metadata.md:3
 msgid "NAME"
@@ -29,7 +29,7 @@ msgstr "概要"
 
 #: src/commands/cargo-metadata.md:9
 msgid "`cargo metadata` \\[_options_\\]"
-msgstr ""
+msgstr "`cargo metadata` \\[_選項_\\]"
 
 #: src/commands/cargo-metadata.md:11
 msgid "DESCRIPTION"
@@ -117,23 +117,23 @@ msgstr ""
 #: src/commands/cargo-metadata.md:53 src/commands/cargo-metadata.md:91
 #: src/commands/cargo-metadata.md:162 src/commands/cargo-metadata.md:291
 msgid "\"name\""
-msgstr ""
+msgstr "\"name\""
 
 #: src/commands/cargo-metadata.md:53 src/commands/cargo-metadata.md:162
 msgid "\"my-package\""
-msgstr ""
+msgstr "\"my-package\""
 
 #: src/commands/cargo-metadata.md:54
 msgid "/* The version of the package. */"
-msgstr ""
+msgstr "/* 軟體包的版本。 */"
 
 #: src/commands/cargo-metadata.md:55 src/commands/cargo-metadata.md:328
 msgid "\"version\""
-msgstr ""
+msgstr "\"version\""
 
 #: src/commands/cargo-metadata.md:55
 msgid "\"0.1.0\""
-msgstr ""
+msgstr "\"0.1.0\""
 
 #: src/commands/cargo-metadata.md:56
 msgid ""
@@ -151,7 +151,7 @@ msgstr ""
 #: src/commands/cargo-metadata.md:258 src/commands/cargo-metadata.md:276
 #: src/commands/cargo-metadata.md:319
 msgid "\"file:///path/to/my-package#0.1.0\""
-msgstr ""
+msgstr "\"file:///path/to/my-package#0.1.0\""
 
 #: src/commands/cargo-metadata.md:60
 msgid "/* The license value from the manifest, or null. */"
@@ -431,7 +431,7 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:164
 msgid "\"/path/to/my-package/src/main.rs\""
-msgstr ""
+msgstr "\"/path/to/my-package/src/main.rs\""
 
 #: src/commands/cargo-metadata.md:165
 msgid ""
@@ -662,11 +662,11 @@ msgstr ""
 
 #: src/commands/cargo-metadata.md:237
 msgid "\"documentation\""
-msgstr ""
+msgstr "\"documentation\""
 
 #: src/commands/cargo-metadata.md:237
 msgid "\"https://doc.rust-lang.org/stable/std\""
-msgstr ""
+msgstr "\"https://doc.rust-lang.org/stable/std\""
 
 #: src/commands/cargo-metadata.md:238
 msgid ""

@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/commands/cargo-bench.md:1
 msgid "cargo-bench(1)"
-msgstr ""
+msgstr "cargo-bench(1)"
 
 #: src/commands/cargo-bench.md:2
 msgid "NAME"
@@ -31,6 +31,7 @@ msgstr "概要"
 msgid ""
 "`cargo bench` \\[_options_\\] \\[_benchname_\\] \\[`--` _bench-options_\\]"
 msgstr ""
+"`cargo bench` \\[_options_\\] \\[_benchname_\\] \\[`--` _bench-options_\\]"
 
 #: src/commands/cargo-bench.md:10
 msgid "DESCRIPTION"
@@ -149,7 +150,7 @@ msgstr ""
 
 #: src/commands/cargo-bench.md:135
 msgid "lib --- used to link with binaries and benchmarks"
-msgstr ""
+msgstr "lib --- 用來與二進位檔和基準測試連結"
 
 #: src/commands/cargo-bench.md:136
 msgid ""
@@ -184,6 +185,8 @@ msgid ""
 "example foo`) ignore the `bench` flag and will always benchmark the given "
 "target."
 msgstr ""
+"將目標設為 `bench = false`，即可停止默認的基準測試。以名稱指定目標的選項（例"
+"如 `--example foo`）會忽略 `bench` 旗標，並一律對指定的目標進行基準測試。"
 
 #: src/commands/cargo-bench.md:152
 msgid ""

@@ -1595,7 +1595,7 @@ msgstr ""
 
 #: src/reference/unstable.md:765
 msgid "\"version\""
-msgstr ""
+msgstr "\"version\""
 
 #: src/reference/unstable.md:766
 msgid "/* Array of all build units. */"
@@ -1647,11 +1647,11 @@ msgstr ""
 
 #: src/reference/unstable.md:780 src/reference/unstable.md:793
 msgid "\"name\""
-msgstr ""
+msgstr "\"name\""
 
 #: src/reference/unstable.md:780
 msgid "\"my_package\""
-msgstr ""
+msgstr "\"my_package\""
 
 #: src/reference/unstable.md:781
 msgid "\"src_path\""

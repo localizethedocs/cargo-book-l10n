@@ -100,7 +100,7 @@ msgstr ""
 
 #: src/reference/registry-authentication.md:39
 msgid "`cargo:token`"
-msgstr ""
+msgstr "`cargo:token`"
 
 #: src/reference/registry-authentication.md:40
 msgid ""
@@ -127,7 +127,7 @@ msgstr ""
 
 #: src/reference/registry-authentication.md:50
 msgid "`cargo:macos-keychain`"
-msgstr ""
+msgstr "`cargo:macos-keychain`"
 
 #: src/reference/registry-authentication.md:51
 msgid "Uses the macOS Keychain to store tokens."

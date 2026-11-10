@@ -29,7 +29,7 @@ msgstr "概要"
 
 #: src/commands/cargo-help.md:9
 msgid "`cargo help` \\[_subcommand_\\]"
-msgstr ""
+msgstr "`cargo help` \\[_子命令_\\]"
 
 #: src/commands/cargo-help.md:11
 msgid "DESCRIPTION"

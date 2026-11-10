@@ -210,7 +210,7 @@ msgstr ""
 
 #: src/reference/manifest.md:45
 msgid "Dependency tables:"
-msgstr ""
+msgstr "依賴表："
 
 #: src/reference/manifest.md:46
 msgid ""
@@ -343,7 +343,7 @@ msgstr ""
 
 #: src/reference/manifest.md:93
 msgid "The `version` field"
-msgstr ""
+msgstr "`version` 欄位"
 
 #: src/reference/manifest.md:95
 msgid ""
@@ -620,6 +620,11 @@ msgid ""
 "license = \"MIT OR Apache-2.0\"\n"
 "```"
 msgstr ""
+"```toml\n"
+"[package]\n"
+"# ...\n"
+"license = \"MIT OR Apache-2.0\"\n"
+"```"
 
 #: src/reference/manifest.md:260
 msgid ""
