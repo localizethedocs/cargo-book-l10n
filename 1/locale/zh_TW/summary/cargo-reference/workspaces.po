@@ -106,7 +106,7 @@ msgstr ""
 #: src/reference/workspaces.md:28
 msgid ""
 "[`metadata`](#the-metadata-table) --- Extra settings for external tools."
-msgstr ""
+msgstr "[`metadata`](#the-metadata-table) --- 外部工具的額外設定。"
 
 #: src/reference/workspaces.md:29
 msgid ""

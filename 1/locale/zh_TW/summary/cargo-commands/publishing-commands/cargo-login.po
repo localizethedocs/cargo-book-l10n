@@ -29,7 +29,7 @@ msgstr "概要"
 
 #: src/commands/cargo-login.md:9
 msgid "`cargo login` \\[_options_\\] \\[`--` _args_\\]"
-msgstr ""
+msgstr "`cargo login` \\[_選項_\\] \\[`--` _引數_\\]"
 
 #: src/commands/cargo-login.md:11
 msgid "DESCRIPTION"

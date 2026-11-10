@@ -276,7 +276,7 @@ msgstr ""
 
 #: src/reference/registry-index.md:128
 msgid "\"0.1.0\""
-msgstr ""
+msgstr "\"0.1.0\""
 
 #: src/reference/registry-index.md:129
 msgid ""

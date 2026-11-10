@@ -60,7 +60,7 @@ msgstr ""
 
 #: src/commands/cargo.md:23
 msgid "[external tools](../reference/external-tools.html#custom-subcommands)"
-msgstr ""
+msgstr "[外部工具](../reference/external-tools.html#custom-subcommands)"
 
 #: src/commands/cargo.md:28
 msgid "COMMANDS"

@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:1
 msgid "cargo-package(1)"
-msgstr ""
+msgstr "cargo-package(1)"
 
 #: src/commands/cargo-package.md:2
 msgid "NAME"
@@ -30,7 +30,7 @@ msgstr "概要"
 
 #: src/commands/cargo-package.md:8
 msgid "`cargo package` \\[_options_\\]"
-msgstr ""
+msgstr "`cargo package` \\[_選項_\\]"
 
 #: src/commands/cargo-package.md:10
 msgid "DESCRIPTION"
@@ -123,7 +123,7 @@ msgstr ""
 
 #: src/commands/cargo-package.md:46
 msgid ".cargo_vcs_info.json format"
-msgstr ""
+msgstr ".cargo_vcs_info.json 格式"
 
 #: src/commands/cargo-package.md:48
 msgid "Will generate a `.cargo_vcs_info.json` in the following format"
