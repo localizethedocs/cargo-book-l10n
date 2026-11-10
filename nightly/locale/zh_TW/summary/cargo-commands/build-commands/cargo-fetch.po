@@ -29,7 +29,7 @@ msgstr "概要"
 
 #: src/commands/cargo-fetch.md:8
 msgid "`cargo fetch` \\[_options_\\]"
-msgstr ""
+msgstr "`cargo fetch` \\[_選項_\\]"
 
 #: src/commands/cargo-fetch.md:10
 msgid "DESCRIPTION"

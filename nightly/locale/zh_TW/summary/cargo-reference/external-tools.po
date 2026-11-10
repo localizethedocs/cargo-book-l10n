@@ -65,7 +65,7 @@ msgstr ""
 
 #: src/reference/external-tools.md:32
 msgid "JSON messages"
-msgstr ""
+msgstr "JSON 訊息"
 
 #: src/reference/external-tools.md:34
 msgid ""
@@ -125,7 +125,7 @@ msgstr ""
 
 #: src/reference/external-tools.md:69
 msgid "Compiler messages"
-msgstr ""
+msgstr "編譯器訊息"
 
 #: src/reference/external-tools.md:71
 msgid ""
@@ -143,11 +143,11 @@ msgstr ""
 #: src/reference/external-tools.md:79 src/reference/external-tools.md:150
 #: src/reference/external-tools.md:219 src/reference/external-tools.md:257
 msgid "\"reason\""
-msgstr ""
+msgstr "\"reason\""
 
 #: src/reference/external-tools.md:79
 msgid "\"compiler-message\""
-msgstr ""
+msgstr "\"compiler-message\""
 
 #: src/reference/external-tools.md:80 src/reference/external-tools.md:151
 #: src/reference/external-tools.md:220
@@ -162,7 +162,7 @@ msgstr ""
 #: src/reference/external-tools.md:81 src/reference/external-tools.md:152
 #: src/reference/external-tools.md:221
 msgid "\"file:///path/to/my-package#0.1.0\""
-msgstr ""
+msgstr "\"file:///path/to/my-package#0.1.0\""
 
 #: src/reference/external-tools.md:82 src/reference/external-tools.md:153
 msgid "/* Absolute path to the package manifest. */"
@@ -170,11 +170,11 @@ msgstr ""
 
 #: src/reference/external-tools.md:83 src/reference/external-tools.md:154
 msgid "\"manifest_path\""
-msgstr ""
+msgstr "\"manifest_path\""
 
 #: src/reference/external-tools.md:83 src/reference/external-tools.md:154
 msgid "\"/path/to/my-package/Cargo.toml\""
-msgstr ""
+msgstr "\"/path/to/my-package/Cargo.toml\""
 
 #: src/reference/external-tools.md:84
 msgid ""
@@ -231,11 +231,11 @@ msgstr ""
 
 #: src/reference/external-tools.md:111 src/reference/external-tools.md:165
 msgid "\"name\""
-msgstr ""
+msgstr "\"name\""
 
 #: src/reference/external-tools.md:111 src/reference/external-tools.md:165
 msgid "\"my_package\""
-msgstr ""
+msgstr "\"my_package\""
 
 #: src/reference/external-tools.md:112
 msgid "/* Absolute path to the root source file of the target. */"
@@ -456,7 +456,7 @@ msgstr ""
 
 #: src/reference/external-tools.md:209
 msgid "Build script output"
-msgstr ""
+msgstr "建置腳本輸出"
 
 #: src/reference/external-tools.md:211
 msgid ""
@@ -481,15 +481,15 @@ msgstr ""
 
 #: src/reference/external-tools.md:226
 msgid "\"linked_libs\""
-msgstr ""
+msgstr "\"linked_libs\""
 
 #: src/reference/external-tools.md:226
 msgid "\"foo\""
-msgstr ""
+msgstr "\"foo\""
 
 #: src/reference/external-tools.md:226
 msgid "\"static=bar\""
-msgstr ""
+msgstr "\"static=bar\""
 
 #: src/reference/external-tools.md:227
 msgid ""
@@ -540,23 +540,23 @@ msgstr ""
 
 #: src/reference/external-tools.md:239
 msgid "\"env\""
-msgstr ""
+msgstr "\"env\""
 
 #: src/reference/external-tools.md:240
 msgid "\"SOME_KEY\""
-msgstr ""
+msgstr "\"SOME_KEY\""
 
 #: src/reference/external-tools.md:240
 msgid "\"some value\""
-msgstr ""
+msgstr "\"some value\""
 
 #: src/reference/external-tools.md:241
 msgid "\"ANOTHER_KEY\""
-msgstr ""
+msgstr "\"ANOTHER_KEY\""
 
 #: src/reference/external-tools.md:241
 msgid "\"another value\""
-msgstr ""
+msgstr "\"another value\""
 
 #: src/reference/external-tools.md:243
 msgid ""

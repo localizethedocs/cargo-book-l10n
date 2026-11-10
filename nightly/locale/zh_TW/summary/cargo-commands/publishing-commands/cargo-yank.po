@@ -21,7 +21,7 @@ msgstr "名稱"
 
 #: src/commands/cargo-yank.md:5
 msgid "cargo-yank --- Remove a pushed crate from the index"
-msgstr ""
+msgstr "cargo-yank --- 將已推送的軟體箱從索引中移除"
 
 #: src/commands/cargo-yank.md:7
 msgid "SYNOPSIS"
@@ -32,6 +32,8 @@ msgid ""
 "`cargo yank` \\[_options_\\] _crate_@_version_  \n"
 "`cargo yank` \\[_options_\\] `--version` _version_ \\[_crate_\\]"
 msgstr ""
+"`cargo yank` \\[_options_\\] _crate_@_version_  \n"
+"`cargo yank` \\[_options_\\] `--version` _version_ \\[_crate_\\]"
 
 #: src/commands/cargo-yank.md:12
 msgid "DESCRIPTION"
@@ -121,11 +123,11 @@ msgstr ""
 
 #: src/commands/cargo-yank.md:47 src/commands/cargo-yank.md:48
 msgid "Use `2.0.0`"
-msgstr ""
+msgstr "使用 `2.0.0`"
 
 #: src/commands/cargo-yank.md:48
 msgid "`1.5.1`"
-msgstr ""
+msgstr "`1.5.1`"
 
 #: src/commands/cargo-yank.md:48
 msgid "Use either `1.5.0` or `1.5.2`"
@@ -133,11 +135,11 @@ msgstr "使用 `1.5.0` 或 `1.5.2`"
 
 #: src/commands/cargo-yank.md:48 src/commands/cargo-yank.md:49
 msgid "Use `1.5.0`"
-msgstr ""
+msgstr "使用 `1.5.0`"
 
 #: src/commands/cargo-yank.md:49
 msgid "`2.0.0`"
-msgstr ""
+msgstr "`2.0.0`"
 
 #: src/commands/cargo-yank.md:49
 msgid "Use either `1.5.0`, `1.5.1` or `1.5.2`"

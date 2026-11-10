@@ -191,7 +191,7 @@ msgstr ""
 
 #: src/reference/registry-web-api.md:82
 msgid "\"0.1.0\""
-msgstr ""
+msgstr "\"0.1.0\""
 
 #: src/reference/registry-web-api.md:83
 msgid ""
@@ -390,11 +390,11 @@ msgstr ""
 
 #: src/reference/registry-web-api.md:158
 msgid "\"travis-ci\""
-msgstr ""
+msgstr "\"travis-ci\""
 
 #: src/reference/registry-web-api.md:159
 msgid "\"branch\""
-msgstr ""
+msgstr "\"branch\""
 
 #: src/reference/registry-web-api.md:159
 msgid "\"master\""

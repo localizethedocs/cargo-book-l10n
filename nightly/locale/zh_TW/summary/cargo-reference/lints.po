@@ -23,7 +23,7 @@ msgstr ""
 
 #: src/reference/lints.md:7
 msgid "Group"
-msgstr ""
+msgstr "群組"
 
 #: src/reference/lints.md:7
 msgid "Description"
@@ -169,23 +169,23 @@ msgstr "[`redundant_readme`](#redundant_readme)"
 
 #: src/reference/lints.md:36
 msgid "[`unknown_lints`](#unknown_lints)"
-msgstr ""
+msgstr "[`unknown_lints`](#unknown_lints)"
 
 #: src/reference/lints.md:37
 msgid "[`unused_dependencies`](#unused_dependencies)"
-msgstr ""
+msgstr "[`unused_dependencies`](#unused_dependencies)"
 
 #: src/reference/lints.md:38
 msgid "[`unused_workspace_dependencies`](#unused_workspace_dependencies)"
-msgstr ""
+msgstr "[`unused_workspace_dependencies`](#unused_workspace_dependencies)"
 
 #: src/reference/lints.md:39
 msgid "[`unused_workspace_package_fields`](#unused_workspace_package_fields)"
-msgstr ""
+msgstr "[`unused_workspace_package_fields`](#unused_workspace_package_fields)"
 
 #: src/reference/lints.md:41
 msgid "`blanket_hint_mostly_unused`"
-msgstr ""
+msgstr "`blanket_hint_mostly_unused`"
 
 #: src/reference/lints.md:42 src/reference/lints.md:125
 #: src/reference/lints.md:398 src/reference/lints.md:479
@@ -679,7 +679,7 @@ msgstr ""
 
 #: src/reference/lints.md:445
 msgid "Examples:"
-msgstr ""
+msgstr "範例："
 
 #: src/reference/lints.md:446
 msgid "`cargo check` will lint `[build-dependencies]` and `[dependencies]`"
@@ -740,7 +740,7 @@ msgstr "組態"
 
 #: src/reference/lints.md:475
 msgid "`ignore`: a list of dependency names to allow the lint on"
-msgstr ""
+msgstr "`ignore`：允許該梳理檢查的依賴名稱列表"
 
 #: src/reference/lints.md:478
 msgid "`unused_workspace_dependencies`"
@@ -774,7 +774,7 @@ msgstr ""
 
 #: src/reference/lints.md:500
 msgid "`unused_workspace_package_fields`"
-msgstr ""
+msgstr "`unused_workspace_package_fields`"
 
 #: src/reference/lints.md:508
 msgid ""
@@ -783,7 +783,7 @@ msgstr ""
 
 #: src/reference/lints.md:511
 msgid "They can give the false impression that these fields are used"
-msgstr ""
+msgstr "它們可能會造成這些欄位有被使用的錯誤印象"
 
 #: src/reference/lints.md:514
 msgid ""

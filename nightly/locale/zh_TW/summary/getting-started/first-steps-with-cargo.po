@@ -105,7 +105,7 @@ msgstr ""
 #: src/getting-started/first-steps.md:67
 msgid ""
 "We can also use `cargo run` to compile and then run it, all in one step:"
-msgstr ""
+msgstr "我們也可以使用 `cargo run` 一次完成編譯與執行："
 
 #: src/getting-started/first-steps.md:69
 msgid ""
@@ -125,7 +125,7 @@ msgstr ""
 
 #: src/getting-started/first-steps.md:76
 msgid "Going further"
-msgstr ""
+msgstr "更進一步"
 
 #: src/getting-started/first-steps.md:78
 msgid ""
