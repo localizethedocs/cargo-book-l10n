@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/reference/publishing.md:1
 msgid "Publishing on crates.io"
-msgstr "在 creates.io 上發佈"
+msgstr "在 crates.io 上發佈"
 
 #: src/reference/publishing.md:3
 msgid ""

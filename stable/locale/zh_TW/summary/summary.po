@@ -49,7 +49,7 @@ msgstr ""
 
 #: src/SUMMARY.md:13
 msgid "Dependencies"
-msgstr ""
+msgstr "依賴項目"
 
 #: src/SUMMARY.md:14
 msgid "Package Layout"
@@ -69,7 +69,7 @@ msgstr "持續整合"
 
 #: src/SUMMARY.md:18
 msgid "Publishing on crates.io"
-msgstr "在 creates.io 上發佈"
+msgstr "在 crates.io 上發佈"
 
 #: src/SUMMARY.md:19
 msgid "Cargo Home"
@@ -101,11 +101,11 @@ msgstr "工作空間"
 
 #: src/SUMMARY.md:27
 msgid "Specifying Dependencies"
-msgstr ""
+msgstr "指定依賴項目"
 
 #: src/SUMMARY.md:28
 msgid "Overriding Dependencies"
-msgstr ""
+msgstr "覆蓋依賴項目"
 
 #: src/SUMMARY.md:29
 msgid "Source Replacement"

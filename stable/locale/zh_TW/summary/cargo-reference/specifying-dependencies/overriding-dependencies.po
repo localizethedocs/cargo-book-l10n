@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/reference/overriding-dependencies.md:1
 msgid "Overriding Dependencies"
-msgstr ""
+msgstr "覆蓋依賴項目"
 
 #: src/reference/overriding-dependencies.md:3
 msgid ""
@@ -94,11 +94,11 @@ msgstr ""
 
 #: src/reference/overriding-dependencies.md:32
 msgid "[The `[patch]` section](#the-patch-section)"
-msgstr ""
+msgstr "[`[patch]` 區段](#the-patch-section)"
 
 #: src/reference/overriding-dependencies.md:33
 msgid "[The `[replace]` section](#the-replace-section)"
-msgstr ""
+msgstr "[`[replace]` 區段](#the-replace-section)"
 
 #: src/reference/overriding-dependencies.md:34
 msgid "[`paths` overrides](#paths-overrides)"
@@ -113,7 +113,7 @@ msgstr ""
 
 #: src/reference/overriding-dependencies.md:40
 msgid "Testing a bugfix"
-msgstr ""
+msgstr "測試臭蟲修正"
 
 #: src/reference/overriding-dependencies.md:42
 msgid ""

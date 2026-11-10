@@ -102,6 +102,7 @@ msgstr ""
 msgid ""
 "![cargo-concurrency-over-time](../images/cargo-concurrency-over-time.png)"
 msgstr ""
+"![cargo-concurrency-over-time](../images/cargo-concurrency-over-time.png)"
 
 #: src/reference/timings.md:51
 msgid ""

@@ -17,40 +17,40 @@ msgstr "清單命令"
 
 #: src/commands/manifest-commands.md:3
 msgid "[cargo add](cargo-add.md)"
-msgstr ""
+msgstr "[cargo add](cargo-add.md)"
 
 #: src/commands/manifest-commands.md:4
 msgid "[cargo_info](cargo-info.md)"
-msgstr ""
+msgstr "[cargo_info](cargo-info.md)"
 
 #: src/commands/manifest-commands.md:5
 msgid "[cargo generate-lockfile](cargo-generate-lockfile.md)"
-msgstr ""
+msgstr "[cargo generate-lockfile](cargo-generate-lockfile.md)"
 
 #: src/commands/manifest-commands.md:6
 msgid "[cargo locate-project](cargo-locate-project.md)"
-msgstr ""
+msgstr "[cargo locate-project](cargo-locate-project.md)"
 
 #: src/commands/manifest-commands.md:7
 msgid "[cargo metadata](cargo-metadata.md)"
-msgstr ""
+msgstr "[cargo metadata](cargo-metadata.md)"
 
 #: src/commands/manifest-commands.md:8
 msgid "[cargo pkgid](cargo-pkgid.md)"
-msgstr ""
+msgstr "[cargo pkgid](cargo-pkgid.md)"
 
 #: src/commands/manifest-commands.md:9
 msgid "[cargo remove](cargo-remove.md)"
-msgstr ""
+msgstr "[cargo remove](cargo-remove.md)"
 
 #: src/commands/manifest-commands.md:10
 msgid "[cargo tree](cargo-tree.md)"
-msgstr ""
+msgstr "[cargo tree](cargo-tree.md)"
 
 #: src/commands/manifest-commands.md:11
 msgid "[cargo update](cargo-update.md)"
-msgstr ""
+msgstr "[cargo update](cargo-update.md)"
 
 #: src/commands/manifest-commands.md:12
 msgid "[cargo vendor](cargo-vendor.md)"
-msgstr ""
+msgstr "[cargo vendor](cargo-vendor.md)"

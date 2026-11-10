@@ -101,7 +101,7 @@ msgstr ""
 
 #: src/reference/build-cache.md:29
 msgid "<code style=\"white-space: nowrap\">target/release/</code>"
-msgstr ""
+msgstr "<code style=\"white-space: nowrap\">target/release/</code>"
 
 #: src/reference/build-cache.md:29
 msgid ""
@@ -110,7 +110,7 @@ msgstr ""
 
 #: src/reference/build-cache.md:30
 msgid "<code style=\"white-space: nowrap\">target/foo/</code>"
-msgstr ""
+msgstr "<code style=\"white-space: nowrap\">target/foo/</code>"
 
 #: src/reference/build-cache.md:30
 msgid ""
@@ -139,23 +139,28 @@ msgstr "範例"
 
 #: src/reference/build-cache.md:42
 msgid "<code style=\"white-space: nowrap\">target/\\<triple\\>/debug/</code>"
-msgstr ""
+msgstr "<code style=\"white-space: nowrap\">target/\\<triple\\>/debug/</code>"
 
 #: src/reference/build-cache.md:42
 msgid ""
 "<code style=\"white-space: nowrap\">target/thumbv7em-none-eabihf/debug/</"
 "code>"
 msgstr ""
+"<code style=\"white-space: nowrap\">target/thumbv7em-none-eabihf/debug/</"
+"code>"
 
 #: src/reference/build-cache.md:43
 msgid "<code style=\"white-space: nowrap\">target/\\<triple\\>/release/</code>"
 msgstr ""
+"<code style=\"white-space: nowrap\">target/\\<triple\\>/release/</code>"
 
 #: src/reference/build-cache.md:43
 msgid ""
 "<code style=\"white-space: nowrap\">target/thumbv7em-none-eabihf/release/</"
 "code>"
 msgstr ""
+"<code style=\"white-space: nowrap\">target/thumbv7em-none-eabihf/release/</"
+"code>"
 
 #: src/reference/build-cache.md:45
 msgid ""
@@ -181,7 +186,7 @@ msgstr ""
 
 #: src/reference/build-cache.md:57
 msgid "<code style=\"white-space: nowrap\">target/debug/examples/</code>"
-msgstr ""
+msgstr "<code style=\"white-space: nowrap\">target/debug/examples/</code>"
 
 #: src/reference/build-cache.md:57
 msgid "Contains [example targets](../reference/cargo-targets.md#examples)."
@@ -195,7 +200,7 @@ msgstr ""
 
 #: src/reference/build-cache.md:64
 msgid "<code style=\"white-space: nowrap\">target/doc/</code>"
-msgstr ""
+msgstr "<code style=\"white-space: nowrap\">target/doc/</code>"
 
 #: src/reference/build-cache.md:64
 msgid ""
@@ -204,7 +209,7 @@ msgstr ""
 
 #: src/reference/build-cache.md:65
 msgid "<code style=\"white-space: nowrap\">target/package/</code>"
-msgstr ""
+msgstr "<code style=\"white-space: nowrap\">target/package/</code>"
 
 #: src/reference/build-cache.md:65
 msgid ""
@@ -220,7 +225,7 @@ msgstr ""
 
 #: src/reference/build-cache.md:73
 msgid "<code style=\"white-space: nowrap\">\\<build-dir>/debug/deps/</code>"
-msgstr ""
+msgstr "<code style=\"white-space: nowrap\">\\<build-dir>/debug/deps/</code>"
 
 #: src/reference/build-cache.md:73
 msgid "Dependencies and other artifacts."
@@ -230,6 +235,7 @@ msgstr ""
 msgid ""
 "<code style=\"white-space: nowrap\">\\<build-dir>/debug/incremental/</code>"
 msgstr ""
+"<code style=\"white-space: nowrap\">\\<build-dir>/debug/incremental/</code>"
 
 #: src/reference/build-cache.md:74
 msgid ""
@@ -239,7 +245,7 @@ msgstr ""
 
 #: src/reference/build-cache.md:75
 msgid "<code style=\"white-space: nowrap\">\\<build-dir>/debug/build/</code>"
-msgstr ""
+msgstr "<code style=\"white-space: nowrap\">\\<build-dir>/debug/build/</code>"
 
 #: src/reference/build-cache.md:75
 msgid "Output from [build scripts](../reference/build-scripts.md)."
